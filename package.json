@@ -1,0 +1,57 @@
+{
+  "name": "enterprise-policy-generator",
+  "version": "0.1.0",
+  "description": "Generates Enterprise Policies for Firefox.",
+  "author": {
+    "name": "Sören Hentzschel",
+    "email": "kontakt@agenedia.com",
+    "url": "https://agenedia.com"
+  },
+  "homepage": "https://www.soeren-hentzschel.at/firefox-webextensions/enterprise-policy-generator/",
+  "bugs": {
+    "email": "kontakt@agenedia.com"
+  },
+  "license": "MPL 2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cadeyrn/enterprise-policy-generator/"
+  },
+  "private": true,
+  "browserslist": [
+    "Firefox >= 60"
+  ],
+  "devDependencies": {
+    "chalk": "1.1.3",
+    "eslint": "4.19.1",
+    "eslint-plugin-compat": "2.2.0",
+    "eslint-plugin-no-unsanitized": "3.0.0",
+    "eslint-plugin-sort-requires": "2.1.0",
+    "eslint-plugin-xss": "0.1.9",
+    "gulp": "3.9.1",
+    "gulp-eslint": "4.0.2",
+    "gulp-html-lint": "0.0.2",
+    "gulp-jsdoc3": "2.0.0",
+    "gulp-stylelint": "7.0.0",
+    "htmllint": "0.7.2",
+    "jsdoc": "3.5.5",
+    "jsdoc-strip-async-await": "0.1.0",
+    "npm-run-all": "4.1.2",
+    "stylelint": "9.2.0",
+    "stylelint-csstree-validator": "1.2.2",
+    "stylelint-order": "0.8.1",
+    "web-ext": "2.6.0"
+  },
+  "scripts": {
+    "build": "cd src && web-ext build -a ../dist",
+    "docs": "gulp docs",
+    "lint": "npm-run-all lint:*",
+    "lint:html": "gulp lint-html",
+    "lint:js": "gulp lint-js",
+    "lint:css": "gulp lint-css",
+    "lint:webext": "cd src && web-ext lint",
+    "run:nightly": "cd src && web-ext run --firefox=\"/Applications/Firefox Nightly.app\"",
+    "run:beta": "cd src && web-ext run --firefox=\"/Applications/Firefox Beta.app\"",
+    "run:stable": "cd src && web-ext run --firefox=\"/Applications/Firefox Stable.app\"",
+    "run:esr": "cd src && web-ext run --firefox=\"/Applications/Firefox ESR.app\""
+  }
+}
