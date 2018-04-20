@@ -1,0 +1,8 @@
+{
+  "extension_description": {
+    "message": "Generates Enterprise Policies for Firefox."
+  },
+  "extension_name": {
+    "message": "Enterprise Policy Generator"
+  }
+}
