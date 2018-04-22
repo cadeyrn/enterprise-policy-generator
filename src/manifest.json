@@ -18,6 +18,13 @@
     "default_icon": "images/icon.svg",
     "default_title": "__MSG_extension_name__"
   },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Shift+F10"
+      }
+    }
+  },
   "options_ui": {
     "page": "html/configurator.html",
     "open_in_tab": true
