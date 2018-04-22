@@ -10,6 +10,14 @@
     "name": "Sören Hentzschel",
     "url": "https://www.soeren-hentzschel.at/firefox-webextensions/enterprise-policy-generator/"
   },
+  "background": {
+    "scripts": ["js/core/background.js"]
+  },
+  "browser_action": {
+    "browser_style": false,
+    "default_icon": "images/icon.svg",
+    "default_title": "__MSG_extension_name__"
+  },
   "options_ui": {
     "page": "html/configurator.html",
     "open_in_tab": true
