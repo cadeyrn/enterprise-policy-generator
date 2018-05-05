@@ -4,5 +4,32 @@
   },
   "extension_name": {
     "message": "Enterprise Policy Generator"
+  },
+  "generate_button": {
+    "message": "Generate Policies"
+  },
+  "policy_category_block_access": {
+    "message": "Block Access"
+  },
+  "policy_category_disable_features": {
+    "message": "Disable Features"
+  },
+  "policy_category_customization": {
+    "message": "Customization"
+  },
+  "policy_category_network": {
+    "message": "Network"
+  },
+  "policy_category_privacy": {
+    "message": "Privacy"
+  },
+  "policy_category_security": {
+    "message": "Security"
+  },
+  "policy_category_update_and_data": {
+    "message": "Updates & Data Collection"
+  },
+  "policy_category_others": {
+    "message": "Other Policies"
   }
 }
