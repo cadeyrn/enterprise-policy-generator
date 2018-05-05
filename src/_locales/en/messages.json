@@ -34,5 +34,17 @@
   },
   "policy_category_others": {
     "message": "Other Policies"
+  },
+  "policy_description_BlockAboutAddons": {
+    "message": "Block access to the add-ons manager (about:addons)"
+  },
+  "policy_description_BlockAboutConfig": {
+    "message": "Block access to the browser configuration (about:config)"
+  },
+  "policy_description_BlockAboutProfiles": {
+    "message": "Block access to the in-content profile manager (about:profiles)"
+  },
+  "policy_description_BlockAboutSupport": {
+    "message": "Block access to the troubleshooting information page (about:support)"
   }
 }

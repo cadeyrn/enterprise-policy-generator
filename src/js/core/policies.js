@@ -7,7 +7,7 @@ const policies = {
   // block access
 
   BlockAboutAddons : {
-    description : 'Block access to the add-ons mananger (about:addons)',
+    description : browser.i18n.getMessage('policy_description_BlockAboutAddons'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'block-access',
@@ -15,7 +15,7 @@ const policies = {
   },
 
   BlockAboutConfig : {
-    description : 'Block access to the browser configuration (about:config)',
+    description : browser.i18n.getMessage('policy_description_BlockAboutConfig'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'block-access',
@@ -23,7 +23,7 @@ const policies = {
   },
 
   BlockAboutProfiles : {
-    description : 'Block access to the in-content profile manager (about:profiles)',
+    description : browser.i18n.getMessage('policy_description_BlockAboutProfiles'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'block-access',
@@ -31,7 +31,7 @@ const policies = {
   },
 
   BlockAboutSupport : {
-    description : 'Block access to the troubleshooting information page (about:support)',
+    description : browser.i18n.getMessage('policy_description_BlockAboutSupport'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'block-access',
