@@ -333,7 +333,7 @@ const policies = {
   // privacy
 
   Cookies : {
-    description : 'Allow or deny websites to set cookies',
+    description : browser.i18n.getMessage('policy_description_Cookies'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'privacy',
@@ -341,72 +341,72 @@ const policies = {
     properties : [
       {
         name : 'Allow',
-        label : 'Domains where cookies are always allowed',
+        label : browser.i18n.getMessage('policy_description_Cookies_Allow'),
         mandatory : false,
         type : 'array',
         items: {
-          label : 'Domain',
+          label : browser.i18n.getMessage('policy_description_Cookies_Allow_Domain'),
           type : 'string'
         }
       },
       {
         name : 'Block',
-        label : 'Domains where cookies are always blocked',
+        label : browser.i18n.getMessage('policy_description_Cookies_Block'),
         mandatory : false,
         type : 'array',
         items: {
-          label : 'Domain',
+          label : browser.i18n.getMessage('policy_description_Cookies_Block_Domain'),
           type : 'string'
         }
       },
       {
         name : 'Default',
-        label : 'The default value for "Accept cookies from websites"',
+        label : browser.i18n.getMessage('policy_description_Cookies_Default'),
         mandatory : false,
         type : 'enum',
         options : [
           {
-            label : 'accept cookies',
+            label : browser.i18n.getMessage('policy_description_Cookies_Default_true'),
             value : 'true'
           },
           {
-            label : 'don\'t accept cookies',
+            label : browser.i18n.getMessage('policy_description_Cookies_Default_false'),
             value : 'false'
           }
         ]
       },
       {
         name : 'AcceptThirdParty',
-        label : 'The default value for "Accept third-party cookies"',
+        label : browser.i18n.getMessage('policy_description_Cookies_AcceptThirdParty'),
         mandatory : false,
         type : 'enum',
         options : [
           {
-            label : 'always',
+            label : browser.i18n.getMessage('policy_description_Cookies_AcceptThirdParty_always'),
             value : 'always'
           },
           {
-            label : 'never',
+            label : browser.i18n.getMessage('policy_description_Cookies_AcceptThirdParty_never'),
             value : 'never'
           },
           {
-            label : 'from visited',
+            label : browser.i18n.getMessage('policy_description_Cookies_AcceptThirdParty_from_visited'),
             value : 'from-visited'
           }
         ]
       },
       {
         name : 'ExpireAtSessionEnd',
-        label : 'This determines when cookies expire',
+        label : browser.i18n.getMessage('policy_description_Cookies_ExpireAtSessionEnd'),
         mandatory : false,
         type : 'enum',
         options : [
           {
-            label : 'expire at session end',
+            label : browser.i18n.getMessage('policy_description_Cookies_ExpireAtSessionEnd_true'),
             value : 'true'
           },
           {
-            label : 'don\'t expire at session end',
+            label : browser.i18n.getMessage('policy_description_Cookies_ExpireAtSessionEnd_false'),
             value : 'false'
           }
         ]
@@ -415,7 +415,7 @@ const policies = {
   },
 
   SanitizeOnShutdown : {
-    description : 'Clear all browser data on shutdown',
+    description : browser.i18n.getMessage('policy_description_SanitizeOnShutdown'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'privacy',
@@ -423,7 +423,7 @@ const policies = {
   },
 
   EnableTrackingProtection : {
-    description : 'Enable or disables tracking protection',
+    description : browser.i18n.getMessage('policy_description_EnableTrackingProtection'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'privacy',
@@ -431,16 +431,16 @@ const policies = {
     properties : [
       {
         name : 'Value',
-        label : 'Enable or disables tracking protection',
+        label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Value'),
         mandatory : true,
         type : 'enum',
         options : [
           {
-            label : 'enable',
+            label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Value_true'),
             value : 'true'
           },
           {
-            label : 'disable',
+            label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Value_false'),
             value : 'false'
           }
         ]

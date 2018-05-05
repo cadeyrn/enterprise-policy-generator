@@ -71,6 +71,51 @@
   "policy_description_Bookmarks_URL": {
     "message": "URL"
   },
+  "policy_description_Cookies": {
+    "message": "Webseiten erlauben oder verbieten, Cookies zu setzen"
+  },
+  "policy_description_Cookies_AcceptThirdParty": {
+    "message": "Der Standard-Wert für \"Cookies und Website-Daten von Drittanbietern akzeptieren\""
+  },
+  "policy_description_Cookies_AcceptThirdParty_always": {
+    "message": "immer"
+  },
+  "policy_description_Cookies_AcceptThirdParty_from_visited": {
+    "message": "nur von besuchten Drittanbietern"
+  },
+  "policy_description_Cookies_AcceptThirdParty_never": {
+    "message": "nie"
+  },
+  "policy_description_Cookies_Allow": {
+    "message": "Domains, welche Cookies immer verwenden dürfen"
+  },
+  "policy_description_Cookies_Allow_Domain": {
+    "message": "Domain"
+  },
+  "policy_description_Cookies_Block": {
+    "message": "Domains, auf welchen Cookies blockiert werden"
+  },
+  "policy_description_Cookies_Block_Domain": {
+    "message": "Domain"
+  },
+  "policy_description_Cookies_Default": {
+    "message": "Der Standard-Wert für \"Cookies und Website-Daten annehmen\""
+  },
+  "policy_description_Cookies_Default_true": {
+    "message": "Cookies akzeptieren"
+  },
+  "policy_description_Cookies_Default_false": {
+    "message": "Cookies nicht akzeptieren"
+  },
+  "policy_description_Cookies_ExpireAtSessionEnd": {
+    "message": "Behalte Cookies…"
+  },
+  "policy_description_Cookies_ExpireAtSessionEnd_true": {
+    "message": "behalte Cookies, bis Firefox geschlossen wird"
+  },
+  "policy_description_Cookies_ExpireAtSessionEnd_false": {
+    "message": "behalte Cookies, bis sie nicht mehr gültig sind"
+  },
   "policy_description_DisableBuiltinPDFViewer": {
     "message": "Deaktiviere den eingebauten PDF-Betrachter (pdf.js)"
   },
@@ -118,6 +163,18 @@
   },
   "policy_description_DisplayMenuBar": {
     "message": "Zeige die Menüleiste standardmäßig"
+  },
+  "policy_description_EnableTrackingProtection": {
+    "message": "Schutz vor Aktivitätenverfolgung aktivieren oder deaktivieren"
+  },
+  "policy_description_EnableTrackingProtection_Value": {
+    "message": "Aktiviere Schutz vor Aktivitätenverfolgung"
+  },
+  "policy_description_EnableTrackingProtection_Value_true": {
+    "message": "Schutz vor Aktivitätenverfolgung immer aktivieren"
+  },
+  "policy_description_EnableTrackingProtection_Value_false": {
+    "message": "Schutz vor Aktivitätenverfolgung deaktivieren"
   },
   "policy_description_Extensions": {
     "message": "Erweiterungen installieren, deinstallieren oder sperren"
@@ -169,5 +226,8 @@
   },
   "policy_description_NoDefaultBookmarks": {
     "message": "Keine Standard-Lesezeichen, einschließlich der intelligenten Lesezeichen (Meistbesuchte Seiten, Kürzlich verwendete Schlagwörter), erstellen. Hinweis: diese Richtlinie ist nur wirksam, wenn sie vor der ersten Benutzung des Firefox-Profils angewendet wird"
+  },
+  "policy_description_SanitizeOnShutdown": {
+    "message": "Lösche alle Browsing-Daten, wenn Firefox geschlossen wird"
   }
 }

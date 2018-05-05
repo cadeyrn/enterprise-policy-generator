@@ -71,6 +71,51 @@
   "policy_description_Bookmarks_URL": {
     "message": "URL"
   },
+  "policy_description_Cookies": {
+    "message": "Allow or deny websites to set cookies"
+  },
+  "policy_description_Cookies_AcceptThirdParty": {
+    "message": "The default value for \"Accept third-party cookies and site data\""
+  },
+  "policy_description_Cookies_AcceptThirdParty_always": {
+    "message": "always"
+  },
+  "policy_description_Cookies_AcceptThirdParty_from_visited": {
+    "message": "from visited"
+  },
+  "policy_description_Cookies_AcceptThirdParty_never": {
+    "message": "never"
+  },
+  "policy_description_Cookies_Allow": {
+    "message": "Domains where cookies are always allowed"
+  },
+  "policy_description_Cookies_Allow_Domain": {
+    "message": "Domain"
+  },
+  "policy_description_Cookies_Block": {
+    "message": "Domains where cookies are always blocked"
+  },
+  "policy_description_Cookies_Block_Domain": {
+    "message": "Domain"
+  },
+  "policy_description_Cookies_Default": {
+    "message": "The default value for \"Accept cookies and site data from websites\""
+  },
+  "policy_description_Cookies_Default_true": {
+    "message": "accept cookies"
+  },
+  "policy_description_Cookies_Default_false": {
+    "message": "don't accept cookies"
+  },
+  "policy_description_Cookies_ExpireAtSessionEnd": {
+    "message": "Keep cookies until…"
+  },
+  "policy_description_Cookies_ExpireAtSessionEnd_true": {
+    "message": "keep cookies until Firefox is closed"
+  },
+  "policy_description_Cookies_ExpireAtSessionEnd_false": {
+    "message": "keep cookies until they expire"
+  },
   "policy_description_DisableBuiltinPDFViewer": {
     "message": "Disable the built-in PDF viewer (pdf.js)"
   },
@@ -118,6 +163,18 @@
   },
   "policy_description_DisplayMenuBar": {
     "message": "Show the menu bar by default"
+  },
+  "policy_description_EnableTrackingProtection": {
+    "message": "Enable or disable tracking protection"
+  },
+  "policy_description_EnableTrackingProtection_Value": {
+    "message": "Enable or disable tracking protection"
+  },
+  "policy_description_EnableTrackingProtection_Value_true": {
+    "message": "enable tracking protection"
+  },
+  "policy_description_EnableTrackingProtection_Value_false": {
+    "message": "disable tracking protection"
   },
   "policy_description_Extensions": {
     "message": "Install, uninstall or lock extensions"
@@ -169,5 +226,8 @@
   },
   "policy_description_NoDefaultBookmarks": {
     "message": "Don't create the default bookmarks bundled with Firefox, including the smart bookmarks (most visited, recent tags). Note: this policy is only effective if used before the first run of the profile"
+  },
+  "policy_description_SanitizeOnShutdown": {
+    "message": "Clear all browser data on shutdown"
   }
 }
