@@ -11,6 +11,11 @@ body {
   opacity: .2;
 }
 
+.disabled-link {
+  cursor: not-allowed;
+  opacity: .2;
+}
+
 #header {
   position: fixed;
   z-index: 10;

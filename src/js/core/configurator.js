@@ -16,6 +16,10 @@ const configurator = {
 
     switch (e.target.getAttribute('data-action')) {
       case 'add':
+        if (e.target.parentNode.parentNode.querySelector('.disabled-link')) {
+          e.target.parentNode.parentNode.querySelector('.disabled-link').classList.remove('disabled-link');
+        }
+
         const addedNode = e.target.parentNode.cloneNode(true);
 
         addedNode.querySelectorAll('input').forEach((el) => {
@@ -33,7 +37,17 @@ const configurator = {
         e.target.parentNode.after(addedNode);
         break;
       case 'remove':
-        e.target.parentNode.remove();
+        const elGrandParent = e.target.parentNode.parentNode;
+        const newLength = elGrandParent.querySelectorAll('.input').length - 1
+
+        if (!e.target.classList.contains('disabled-link')) {
+          e.target.parentNode.remove();
+        }
+
+        if (newLength === 1) {
+          elGrandParent.querySelector('[data-action="remove"]').classList.add('disabled-link')
+        }
+
         break;
       default:
       // do nothing
@@ -306,6 +320,7 @@ const configurator = {
       elRemoveIcon.setAttribute('href', '#');
       elRemoveIcon.setAttribute('data-action', 'remove');
       elRemoveIcon.classList.add('array-action');
+      elRemoveIcon.classList.add('disabled-link');
       elObjectWrapper.appendChild(elRemoveIcon);
 
       const elAddIconText = document.createTextNode('[+]');
@@ -351,6 +366,7 @@ const configurator = {
       elRemoveIcon.setAttribute('href', '#');
       elRemoveIcon.setAttribute('data-action', 'remove');
       elRemoveIcon.classList.add('array-action');
+      elRemoveIcon.classList.add('disabled-link');
       elObjectWrapper.appendChild(elRemoveIcon);
 
       const elAddIconText = document.createTextNode('[+]');
