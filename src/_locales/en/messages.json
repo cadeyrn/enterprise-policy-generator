@@ -1,4 +1,7 @@
 {
+  "enterprise_only_label": {
+    "message": "works only in Firefox ESR"
+  },
   "extension_description": {
     "message": "Generates Enterprise Policies for Firefox."
   },

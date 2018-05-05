@@ -421,7 +421,7 @@ const configurator = {
     if (policy.enterprise_only) {
       const elESRNotice = document.createElement('span');
       elESRNotice.classList.add('esr-only');
-      elESRNotice.textContent += ' (!) works only in Firefox ESR';
+      elESRNotice.textContent += ' (!) ' + browser.i18n.getMessage('enterprise_only_label');
       elLabel.appendChild(elESRNotice);
     }
 
@@ -479,7 +479,7 @@ const configurator = {
     if (policy.enterprise_only) {
       const elESRNotice = document.createElement('span');
       elESRNotice.classList.add('esr-only');
-      elESRNotice.textContent += ' (!) works only in Firefox ESR';
+      elESRNotice.textContent += ' (!) ' + browser.i18n.getMessage('enterprise_only_label');
       elLabel.appendChild(elESRNotice);
     }
 
@@ -507,7 +507,7 @@ const configurator = {
     if (policy.enterprise_only) {
       const elESRNotice = document.createElement('span');
       elESRNotice.classList.add('esr-only');
-      elESRNotice.textContent += ' (!) works only in Firefox ESR';
+      elESRNotice.textContent += ' (!) ' + browser.i18n.getMessage('enterprise_only_label');
       elLabel.appendChild(elESRNotice);
     }
 
@@ -554,7 +554,7 @@ const configurator = {
     if (policy.enterprise_only) {
       const elESRNotice = document.createElement('span');
       elESRNotice.classList.add('esr-only');
-      elESRNotice.textContent += ' (!) works only in Firefox ESR';
+      elESRNotice.textContent += ' (!) ' + browser.i18n.getMessage('enterprise_only_label');
       elLabel.appendChild(elESRNotice);
     }
 
