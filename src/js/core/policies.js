@@ -155,7 +155,7 @@ const policies = {
   // customization
 
   DisplayMenuBar : {
-    description : 'Show the menu bar by default',
+    description : browser.i18n.getMessage('policy_description_DisplayMenuBar'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'customization',
@@ -163,7 +163,7 @@ const policies = {
   },
 
   DisplayBookmarksToolbar : {
-    description : 'Show the bookmarks toolbar by default',
+    description : browser.i18n.getMessage('policy_description_DisplayBookmarksToolbar'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'customization',
@@ -171,7 +171,7 @@ const policies = {
   },
 
   Homepage : {
-    description : 'Set the homepage',
+    description : browser.i18n.getMessage('policy_description_Homepage'),
     enterprise_only : true,
     first_available : '60.0',
     ui_category : 'customization',
@@ -179,17 +179,17 @@ const policies = {
     properties : [
       {
         name : 'URL',
-        label : 'URL',
+        label : browser.i18n.getMessage('policy_description_Homepage_URL'),
         mandatory: true,
         type : 'url'
       },
       {
         name : 'Additional',
-        label : 'Additional URLs',
+        label : browser.i18n.getMessage('policy_description_Homepage_Additional'),
         mandatory : false,
         type : 'array',
         items: {
-          label : 'URL',
+          label : browser.i18n.getMessage('policy_description_Homepage_URL'),
           type : 'url'
         }
       }
@@ -197,7 +197,7 @@ const policies = {
   },
 
   NoDefaultBookmarks : {
-    description : 'Don\'t create the default bookmarks bundled with Firefox, including the smart mookmarks (most visited and recent tags). Note: this policy is only effective if used before the first run of the profile',
+    description : browser.i18n.getMessage('policy_description_Homepage_URL'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'customization',
@@ -205,7 +205,7 @@ const policies = {
   },
 
   Bookmarks : {
-    description : 'Create default bookmarks',
+    description : browser.i18n.getMessage('policy_description_Bookmarks'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'customization',
@@ -213,41 +213,41 @@ const policies = {
     items : [
       {
         name : 'Title',
-        label : 'Title',
+        label : browser.i18n.getMessage('policy_description_Bookmarks_Title'),
         mandatory : true,
         type : 'string'
       },
       {
         name : 'URL',
-        label : 'URL',
+        label : browser.i18n.getMessage('policy_description_Bookmarks_URL'),
         mandatory : true,
         type : 'url'
       },
       {
         name : 'Favicon',
-        label : 'Favicon',
+        label : browser.i18n.getMessage('policy_description_Bookmarks_Favicon'),
         mandatory : false,
         type : 'url'
       },
       {
         name : 'Placement',
-        label : 'Placement',
+        label : browser.i18n.getMessage('policy_description_Bookmarks_Placement'),
         mandatory : false,
         type : 'enum',
         options : [
           {
-            label : 'Toolbar',
+            label : browser.i18n.getMessage('policy_description_Bookmarks_Placement_Toolbar'),
             value : 'toolbar'
           },
           {
-            label : 'Menu',
+            label : browser.i18n.getMessage('policy_description_Bookmarks_Placement_Menu'),
             value : 'menu'
           }
         ]
       },
       {
         name : 'Folder',
-        label : 'Folder',
+        label : browser.i18n.getMessage('policy_description_Bookmarks_Folder'),
         mandatory : false,
         type : 'string'
       }
@@ -255,7 +255,7 @@ const policies = {
   },
 
   InstallAddonsPermission : {
-    description : 'Allow webites to install add-ons',
+    description : browser.i18n.getMessage('policy_description_InstallAddonsPermission'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'customization',
@@ -263,27 +263,27 @@ const policies = {
     properties : [
       {
         name : 'Default',
-        label : 'If this is set to false, add-ons cannot be installed by the user',
+        label : browser.i18n.getMessage('policy_description_InstallAddonsPermission_Default'),
         mandatory : false,
         type : 'enum',
         options : [
           {
-            label : 'add-ons can be installed by the user',
+            label : browser.i18n.getMessage('policy_description_InstallAddonsPermission_Default_true'),
             value : 'true'
           },
           {
-            label : 'add-ons can\'t be installed by the user',
+            label : browser.i18n.getMessage('policy_description_InstallAddonsPermission_Default_false'),
             value : 'false'
           }
         ]
       },
       {
         name : 'Allow',
-        label : 'Websites that can install extensions (unless the installation of add-ons is disabled)',
+        label : browser.i18n.getMessage('policy_description_InstallAddonsPermission_Allow'),
         mandatory : false,
         type : 'array',
         items: {
-          label : 'URL',
+          label : browser.i18n.getMessage('policy_description_InstallAddonsPermission_Allow_URL'),
           type : 'url'
         }
       }
@@ -291,7 +291,7 @@ const policies = {
   },
 
   Extensions : {
-    description : 'Install, uninstall or lock extensions',
+    description : browser.i18n.getMessage('policy_description_Extensions'),
     enterprise_only : true,
     first_available : '60.0',
     ui_category : 'customization',
@@ -299,31 +299,31 @@ const policies = {
     properties : [
       {
         name : 'Install',
-        label : 'You can specify a list of URLs or paths',
+        label : browser.i18n.getMessage('policy_description_Extensions_Install'),
         mandatory: false,
         type : 'array',
         items: {
-          label : 'Path',
+          label : browser.i18n.getMessage('policy_description_Extensions_Install_Path'),
           type : 'string'
         }
       },
       {
         name : 'Uninstall',
-        label : 'Please specify extension IDs',
+        label : browser.i18n.getMessage('policy_description_Extensions_Uninstall'),
         mandatory: false,
         type : 'array',
         items: {
-          label : 'Add-on ID',
+          label : browser.i18n.getMessage('policy_description_Extensions_Uninstall_ID'),
           type : 'string'
         }
       },
       {
         name : 'Locked',
-        label : 'Locked extensions cannot be disabled or uninstalled. Please specify extension IDs',
+        label : browser.i18n.getMessage('policy_description_Extensions_Locked'),
         mandatory: false,
         type : 'array',
         items: {
-          label : 'Add-on ID',
+          label : browser.i18n.getMessage('policy_description_Extensions_Locked_ID'),
           type : 'string'
         }
       }

@@ -47,6 +47,30 @@
   "policy_description_BlockAboutSupport": {
     "message": "Blockiere Zugang zu den Informationen zur Fehlerbehebung (about:support)"
   },
+  "policy_description_Bookmarks": {
+    "message": "Erstelle Standard-Lesezeichen"
+  },
+  "policy_description_Bookmarks_Favicon": {
+    "message": "Favicon"
+  },
+  "policy_description_Bookmarks_Folder": {
+    "message": "Ordner"
+  },
+  "policy_description_Bookmarks_Placement": {
+    "message": "Platzierung"
+  },
+  "policy_description_Bookmarks_Placement_Menu": {
+    "message": "Lesezeichen-Menü"
+  },
+  "policy_description_Bookmarks_Placement_Toolbar": {
+    "message": "Lesezeichen-Symbolleiste"
+  },
+  "policy_description_Bookmarks_Title": {
+    "message": "Titel"
+  },
+  "policy_description_Bookmarks_URL": {
+    "message": "URL"
+  },
   "policy_description_DisableBuiltinPDFViewer": {
     "message": "Deaktiviere den eingebauten PDF-Betrachter (pdf.js)"
   },
@@ -88,5 +112,62 @@
   },
   "policy_description_DisableSetDesktopBackground": {
     "message": "Deaktiviere die Funktion, eine Grafik als Hintergrundbild zu verwenden"
+  },
+  "policy_description_DisplayBookmarksToolbar": {
+    "message": "Zeige die Lesezeichen-Symbolleiste standardmäßig"
+  },
+  "policy_description_DisplayMenuBar": {
+    "message": "Zeige die Menüleiste standardmäßig"
+  },
+  "policy_description_Extensions": {
+    "message": "Erweiterungen installieren, deinstallieren oder sperren"
+  },
+  "policy_description_Extensions_Install": {
+    "message": "Es können URLs oder Pfade angegeben werden"
+  },
+  "policy_description_Extensions_Install_URL_or_Path": {
+    "message": "URL oder Pfad"
+  },
+  "policy_description_Extensions_Locked": {
+    "message": "Gesperrte Erweiterungen können weder deaktiviert noch deinstalliert werden. Bitte Add-on IDs angeben"
+  },
+  "policy_description_Extensions_Locked_ID": {
+    "message": "Add-on ID"
+  },
+  "policy_description_Extensions_Uninstall": {
+    "message": "Bitte Add-on IDs angeben"
+  },
+  "policy_description_Extensions_Uninstall_ID": {
+    "message": "Add-on ID"
+  },
+  "policy_description_Homepage": {
+    "message": "Startseite festlegen"
+  },
+  "policy_description_Homepage_Additional": {
+    "message": "Zusätzliche URLs"
+  },
+  "policy_description_Homepage_URL": {
+    "message": "URL"
+  },
+  "policy_description_InstallAddonsPermission": {
+    "message": "Webseiten erlauben, Erweiterungen zu installieren"
+  },
+  "policy_description_InstallAddonsPermission_Allow": {
+    "message": "Webseiten, welche Erweiterungen installieren können (sofern die Installation von Erweiterungen nicht deaktiviert ist)"
+  },
+  "policy_description_InstallAddonsPermission_Allow_URL": {
+    "message": "URL"
+  },
+  "policy_description_InstallAddonsPermission_Default": {
+    "message": "Legt fest, ob Erweiterungen vom Nutzer installiert werden können"
+  },
+  "policy_description_InstallAddonsPermission_Default_true": {
+    "message": "Erweiterungen können vom Nutzer installiert werden"
+  },
+  "policy_description_InstallAddonsPermission_Default_false": {
+    "message": "Erweiterungen können vom Nutzer nicht installiert werden"
+  },
+  "policy_description_NoDefaultBookmarks": {
+    "message": "Keine Standard-Lesezeichen, einschließlich der intelligenten Lesezeichen (Meistbesuchte Seiten, Kürzlich verwendete Schlagwörter), erstellen. Hinweis: diese Richtlinie ist nur wirksam, wenn sie vor der ersten Benutzung des Firefox-Profils angewendet wird"
   }
 }

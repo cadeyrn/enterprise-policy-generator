@@ -47,6 +47,30 @@
   "policy_description_BlockAboutSupport": {
     "message": "Block access to the troubleshooting information page (about:support)"
   },
+  "policy_description_Bookmarks": {
+    "message": "Create default bookmarks"
+  },
+  "policy_description_Bookmarks_Favicon": {
+    "message": "Favicon"
+  },
+  "policy_description_Bookmarks_Folder": {
+    "message": "Folder"
+  },
+  "policy_description_Bookmarks_Placement": {
+    "message": "Placement"
+  },
+  "policy_description_Bookmarks_Placement_Menu": {
+    "message": "Bookmarks Menu"
+  },
+  "policy_description_Bookmarks_Placement_Toolbar": {
+    "message": "Bookmarks Toolbar"
+  },
+  "policy_description_Bookmarks_Title": {
+    "message": "Title"
+  },
+  "policy_description_Bookmarks_URL": {
+    "message": "URL"
+  },
   "policy_description_DisableBuiltinPDFViewer": {
     "message": "Disable the built-in PDF viewer (pdf.js)"
   },
@@ -88,5 +112,62 @@
   },
   "policy_description_DisableSetDesktopBackground": {
     "message": "Disable the feature to set an image as desktop background"
+  },
+  "policy_description_DisplayBookmarksToolbar": {
+    "message": "Show the bookmarks toolbar by default"
+  },
+  "policy_description_DisplayMenuBar": {
+    "message": "Show the menu bar by default"
+  },
+  "policy_description_Extensions": {
+    "message": "Install, uninstall or lock extensions"
+  },
+  "policy_description_Extensions_Install": {
+    "message": "You can specify URLs or paths"
+  },
+  "policy_description_Extensions_Install_URL_or_Path": {
+    "message": "URL or Path"
+  },
+  "policy_description_Extensions_Locked": {
+    "message": "Locked extensions cannot be disabled or uninstalled. Please specify extension IDs"
+  },
+  "policy_description_Extensions_Locked_ID": {
+    "message": "Add-on ID"
+  },
+  "policy_description_Extensions_Uninstall": {
+    "message": "Please specify extension IDs"
+  },
+  "policy_description_Extensions_Uninstall_ID": {
+    "message": "Add-on ID"
+  },
+  "policy_description_Homepage": {
+    "message": "Set the homepage"
+  },
+  "policy_description_Homepage_Additional": {
+    "message": "Additional URLs"
+  },
+  "policy_description_Homepage_URL": {
+    "message": "URL"
+  },
+  "policy_description_InstallAddonsPermission": {
+    "message": "Allow webites to install add-ons"
+  },
+  "policy_description_InstallAddonsPermission_Allow": {
+    "message": "Websites that can install extensions (unless the installation of add-ons is disabled)"
+  },
+  "policy_description_InstallAddonsPermission_Allow_URL": {
+    "message": "URL"
+  },
+  "policy_description_InstallAddonsPermission_Default": {
+    "message": "Whether add-ons can be installed by the user or not"
+  },
+  "policy_description_InstallAddonsPermission_Default_true": {
+    "message": "add-ons can be installed by the user"
+  },
+  "policy_description_InstallAddonsPermission_Default_false": {
+    "message": "add-ons can't be installed by the user"
+  },
+  "policy_description_NoDefaultBookmarks": {
+    "message": "Don't create the default bookmarks bundled with Firefox, including the smart bookmarks (most visited, recent tags). Note: this policy is only effective if used before the first run of the profile"
   }
 }
