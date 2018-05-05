@@ -41,7 +41,7 @@ const policies = {
   // disable features
 
   DisablePrivateBrowsing : {
-    description : 'Disable the private browsing mode',
+    description : browser.i18n.getMessage('policy_description_DisablePrivateBrowsing'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'disable-features',
@@ -49,7 +49,7 @@ const policies = {
   },
 
   DisableFormHistory : {
-    description : 'Disable the form and search bar history',
+    description : browser.i18n.getMessage('policy_description_DisableFormHistory'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'disable-features',
@@ -57,7 +57,7 @@ const policies = {
   },
 
   DisableBuiltinPDFViewer : {
-    description : 'Disable the built-in PDF viewer (PDF.js)',
+    description : browser.i18n.getMessage('policy_description_DisableBuiltinPDFViewer'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'disable-features',
@@ -65,7 +65,7 @@ const policies = {
   },
 
   DisableFirefoxScreenshots : {
-    description : 'Disable the built-in screenshot tool (Firefox Screenshots)',
+    description : browser.i18n.getMessage('policy_description_DisableFirefoxScreenshots'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'disable-features',
@@ -73,7 +73,7 @@ const policies = {
   },
 
   DisableDeveloperTools : {
-    description : 'Disable the built-in developer tools',
+    description : browser.i18n.getMessage('policy_description_DisableDeveloperTools'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'disable-features',
@@ -81,7 +81,7 @@ const policies = {
   },
 
   DisablePocket : {
-    description : 'Disable the integration of Pocket, a service by Mozilla',
+    description : browser.i18n.getMessage('policy_description_DisablePocket'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'disable-features',
@@ -89,7 +89,7 @@ const policies = {
   },
 
   DisableFirefoxAccounts : {
-    description : 'Disable Firefox Account based services, including Firefox Sync',
+    description : browser.i18n.getMessage('policy_description_DisableFirefoxAccounts'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'disable-features',
@@ -97,7 +97,7 @@ const policies = {
   },
 
   DisableMasterPasswordCreation : {
-    description : 'Disable the master password feature',
+    description : browser.i18n.getMessage('policy_description_DisableMasterPasswordCreation'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'disable-features',
@@ -105,7 +105,7 @@ const policies = {
   },
 
   DisableSetDesktopBackground : {
-    description : 'Disable the feature to set an image as desktop background',
+    description : browser.i18n.getMessage('policy_description_DisableSetDesktopBackground'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'disable-features',
@@ -113,7 +113,7 @@ const policies = {
   },
 
   DisableForgetButton : {
-    description : 'Disable the "Forget" toolbar button which can be used to forget the last browsing history',
+    description : browser.i18n.getMessage('policy_description_DisableForgetButton'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'disable-features',
@@ -121,7 +121,7 @@ const policies = {
   },
 
   DisableProfileImport : {
-    description : 'Disable the "Import data from another browser" menu item in the library',
+    description : browser.i18n.getMessage('policy_description_DisableProfileImport'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'disable-features',
@@ -129,7 +129,7 @@ const policies = {
   },
 
   DisableProfileRefresh : {
-    description : 'Disable the "Refresh Firefox" button in about:support',
+    description : browser.i18n.getMessage('policy_description_DisableProfileRefresh'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'disable-features',
@@ -137,7 +137,7 @@ const policies = {
   },
 
   DisableSafeMode : {
-    description : 'Disable the ability to restart Firefox with add-ons disabled (safe mode)',
+    description : browser.i18n.getMessage('policy_description_DisableSafeMode'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'disable-features',
@@ -145,7 +145,7 @@ const policies = {
   },
 
   DisableFeedbackCommands : {
-    description : 'Disable the menu items "Submit Feedback" and "Report Deceptive Site" in the help menu',
+    description : browser.i18n.getMessage('policy_description_DisableFeedbackCommands'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'disable-features',

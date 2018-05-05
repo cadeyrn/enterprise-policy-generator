@@ -46,5 +46,47 @@
   },
   "policy_description_BlockAboutSupport": {
     "message": "Blockiere Zugang zu den Informationen zur Fehlerbehebung (about:support)"
+  },
+  "policy_description_DisableBuiltinPDFViewer": {
+    "message": "Deaktiviere den eingebauten PDF-Betrachter (pdf.js)"
+  },
+  "policy_description_DisableDeveloperTools": {
+    "message": "Deaktiviere die eingebauten Entwickler-Werkzeuge"
+  },
+  "policy_description_DisableFeedbackCommands": {
+    "message": "Deaktiviere die Menü-Einträge \"Feedback senden\" und \"Betrügerische Website melden\" im Hilfe-Menü"
+  },
+  "policy_description_DisableFirefoxAccounts": {
+    "message": "Deaktiviere Firefox Account basierende Dienste, einschließlich Firefox Sync"
+  },
+  "policy_description_DisableFirefoxScreenshots": {
+    "message": "Deaktiviere die eingebaute Funktion für Bildschirmfotos (Firefox Screenshots)"
+  },
+  "policy_description_DisableForgetButton": {
+    "message": "Deaktiviere die \"Vergessen\" Schaltfläche, welche benutzt werden kann, um die Chronik zu löschen"
+  },
+  "policy_description_DisableFormHistory": {
+    "message": "Deaktiviere die Formular- und Such-Chronik"
+  },
+  "policy_description_DisableMasterPasswordCreation": {
+    "message": "Deaktiviere die Master-Passwort-Funktion"
+  },
+  "policy_description_DisablePocket": {
+    "message": "Deaktiviere die Integration von Pocket, einem Dienst von Mozilla"
+  },
+  "policy_description_DisablePrivateBrowsing": {
+    "message": "Deaktiviere den Private Browsing-Modus"
+  },
+  "policy_description_DisableProfileImport": {
+    "message": "Deaktiviere den Menü-Eintrag \"Daten von einem anderen Browser importieren\" in der Bibliothek"
+  },
+  "policy_description_DisableProfileRefresh": {
+    "message": "Deaktiviere die \"Firefox bereinigen\"-Schaltfläche in about:support"
+  },
+  "policy_description_DisableSafeMode": {
+    "message": "Deaktiviere die Möglichkeit, Firefox mit deaktivierten Add-ons neu zu starten (Abgesicherter Modus)"
+  },
+  "policy_description_DisableSetDesktopBackground": {
+    "message": "Deaktiviere die Funktion, eine Grafik als Hintergrundbild zu verwenden"
   }
 }

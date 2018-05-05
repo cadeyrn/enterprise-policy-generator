@@ -46,5 +46,47 @@
   },
   "policy_description_BlockAboutSupport": {
     "message": "Block access to the troubleshooting information page (about:support)"
+  },
+  "policy_description_DisableBuiltinPDFViewer": {
+    "message": "Disable the built-in PDF viewer (pdf.js)"
+  },
+  "policy_description_DisableDeveloperTools": {
+    "message": "Disable the built-in developer tools"
+  },
+  "policy_description_DisableFeedbackCommands": {
+    "message": "Disable the menu items \"Submit Feedback\" and \"Report Deceptive Site\" in the help menu"
+  },
+  "policy_description_DisableFirefoxAccounts": {
+    "message": "Disable Firefox Account based services, including Firefox Sync"
+  },
+  "policy_description_DisableFirefoxScreenshots": {
+    "message": "Disable the built-in screenshot tool (Firefox Screenshots)"
+  },
+  "policy_description_DisableForgetButton": {
+    "message": "Disable the \"Forget\" toolbar button which can be used to forget the last browsing history"
+  },
+  "policy_description_DisableFormHistory": {
+    "message": "Disable the form and search bar history"
+  },
+  "policy_description_DisableMasterPasswordCreation": {
+    "message": "Disable the master password feature"
+  },
+  "policy_description_DisablePocket": {
+    "message": "Disable the integration of Pocket, a service by Mozilla"
+  },
+  "policy_description_DisablePrivateBrowsing": {
+    "message": "Disable the private browsing mode"
+  },
+  "policy_description_DisableProfileImport": {
+    "message": "Disable the \"Import data from another browser\" menu item in the library"
+  },
+  "policy_description_DisableProfileRefresh": {
+    "message": "Disable the \"Refresh Firefox\" button in about:support"
+  },
+  "policy_description_DisableSafeMode": {
+    "message": "Disable the ability to restart Firefox with add-ons disabled (safe mode)"
+  },
+  "policy_description_DisableSetDesktopBackground": {
+    "message": "Disable the feature to set an image as desktop background"
   }
 }
