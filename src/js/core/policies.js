@@ -303,7 +303,7 @@ const policies = {
         mandatory: false,
         type : 'array',
         items: {
-          label : browser.i18n.getMessage('policy_description_Extensions_Install_Path'),
+          label : browser.i18n.getMessage('policy_description_Extensions_Install_URL_or_Path'),
           type : 'string'
         }
       },
