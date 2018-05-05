@@ -330,124 +330,6 @@ const policies = {
     ]
   },
 
-  // privacy
-
-  Cookies : {
-    description : browser.i18n.getMessage('policy_description_Cookies'),
-    enterprise_only : false,
-    first_available : '60.0',
-    ui_category : 'privacy',
-    type : 'object',
-    properties : [
-      {
-        name : 'Allow',
-        label : browser.i18n.getMessage('policy_description_Cookies_Allow'),
-        mandatory : false,
-        type : 'array',
-        items: {
-          label : browser.i18n.getMessage('policy_description_Cookies_Allow_Domain'),
-          type : 'string'
-        }
-      },
-      {
-        name : 'Block',
-        label : browser.i18n.getMessage('policy_description_Cookies_Block'),
-        mandatory : false,
-        type : 'array',
-        items: {
-          label : browser.i18n.getMessage('policy_description_Cookies_Block_Domain'),
-          type : 'string'
-        }
-      },
-      {
-        name : 'Default',
-        label : browser.i18n.getMessage('policy_description_Cookies_Default'),
-        mandatory : false,
-        type : 'enum',
-        options : [
-          {
-            label : browser.i18n.getMessage('policy_description_Cookies_Default_true'),
-            value : 'true'
-          },
-          {
-            label : browser.i18n.getMessage('policy_description_Cookies_Default_false'),
-            value : 'false'
-          }
-        ]
-      },
-      {
-        name : 'AcceptThirdParty',
-        label : browser.i18n.getMessage('policy_description_Cookies_AcceptThirdParty'),
-        mandatory : false,
-        type : 'enum',
-        options : [
-          {
-            label : browser.i18n.getMessage('policy_description_Cookies_AcceptThirdParty_always'),
-            value : 'always'
-          },
-          {
-            label : browser.i18n.getMessage('policy_description_Cookies_AcceptThirdParty_never'),
-            value : 'never'
-          },
-          {
-            label : browser.i18n.getMessage('policy_description_Cookies_AcceptThirdParty_from_visited'),
-            value : 'from-visited'
-          }
-        ]
-      },
-      {
-        name : 'ExpireAtSessionEnd',
-        label : browser.i18n.getMessage('policy_description_Cookies_ExpireAtSessionEnd'),
-        mandatory : false,
-        type : 'enum',
-        options : [
-          {
-            label : browser.i18n.getMessage('policy_description_Cookies_ExpireAtSessionEnd_true'),
-            value : 'true'
-          },
-          {
-            label : browser.i18n.getMessage('policy_description_Cookies_ExpireAtSessionEnd_false'),
-            value : 'false'
-          }
-        ]
-      }
-    ]
-  },
-
-  SanitizeOnShutdown : {
-    description : browser.i18n.getMessage('policy_description_SanitizeOnShutdown'),
-    enterprise_only : false,
-    first_available : '60.0',
-    ui_category : 'privacy',
-    type : 'boolean'
-  },
-
-  EnableTrackingProtection : {
-    description : browser.i18n.getMessage('policy_description_EnableTrackingProtection'),
-    enterprise_only : false,
-    first_available : '60.0',
-    ui_category : 'privacy',
-    type : 'object',
-    properties : [
-      {
-        name : 'Value',
-        label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Value'),
-        mandatory : true,
-        type : 'enum',
-        options : [
-          {
-            label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Value_true'),
-            value : 'true'
-          },
-          {
-            label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Value_false'),
-            value : 'false'
-          }
-        ]
-      }
-    ]
-  },
-
   // network
 
   WebsiteFilter : {
@@ -650,6 +532,124 @@ const policies = {
           label : 'URL',
           type : 'string'
         }
+      }
+    ]
+  },
+
+  // privacy
+
+  Cookies : {
+    description : browser.i18n.getMessage('policy_description_Cookies'),
+    enterprise_only : false,
+    first_available : '60.0',
+    ui_category : 'privacy',
+    type : 'object',
+    properties : [
+      {
+        name : 'Allow',
+        label : browser.i18n.getMessage('policy_description_Cookies_Allow'),
+        mandatory : false,
+        type : 'array',
+        items: {
+          label : browser.i18n.getMessage('policy_description_Cookies_Allow_Domain'),
+          type : 'string'
+        }
+      },
+      {
+        name : 'Block',
+        label : browser.i18n.getMessage('policy_description_Cookies_Block'),
+        mandatory : false,
+        type : 'array',
+        items: {
+          label : browser.i18n.getMessage('policy_description_Cookies_Block_Domain'),
+          type : 'string'
+        }
+      },
+      {
+        name : 'Default',
+        label : browser.i18n.getMessage('policy_description_Cookies_Default'),
+        mandatory : false,
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('policy_description_Cookies_Default_true'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Cookies_Default_false'),
+            value : 'false'
+          }
+        ]
+      },
+      {
+        name : 'AcceptThirdParty',
+        label : browser.i18n.getMessage('policy_description_Cookies_AcceptThirdParty'),
+        mandatory : false,
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('policy_description_Cookies_AcceptThirdParty_always'),
+            value : 'always'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Cookies_AcceptThirdParty_never'),
+            value : 'never'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Cookies_AcceptThirdParty_from_visited'),
+            value : 'from-visited'
+          }
+        ]
+      },
+      {
+        name : 'ExpireAtSessionEnd',
+        label : browser.i18n.getMessage('policy_description_Cookies_ExpireAtSessionEnd'),
+        mandatory : false,
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('policy_description_Cookies_ExpireAtSessionEnd_true'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Cookies_ExpireAtSessionEnd_false'),
+            value : 'false'
+          }
+        ]
+      }
+    ]
+  },
+
+  SanitizeOnShutdown : {
+    description : browser.i18n.getMessage('policy_description_SanitizeOnShutdown'),
+    enterprise_only : false,
+    first_available : '60.0',
+    ui_category : 'privacy',
+    type : 'boolean'
+  },
+
+  EnableTrackingProtection : {
+    description : browser.i18n.getMessage('policy_description_EnableTrackingProtection'),
+    enterprise_only : false,
+    first_available : '60.0',
+    ui_category : 'privacy',
+    type : 'object',
+    properties : [
+      {
+        name : 'Value',
+        label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Value'),
+        mandatory : true,
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Value_true'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Value_false'),
+            value : 'false'
+          }
+        ]
       }
     ]
   },
