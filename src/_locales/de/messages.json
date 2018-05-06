@@ -92,6 +92,18 @@
   "policy_description_Bookmarks_URL": {
     "message": "URL"
   },
+  "policy_description_Certificates": {
+    "message": "Zertifikate aus dem Windows-Zertifikatspeicher lesen (nur Windows)"
+  },
+  "policy_description_Certificates_ImportEnterpriseRoots": {
+    "message": "Zertifikate aus dem Windows-Zertifikatspeicher lesen"
+  },
+  "policy_description_Certificates_ImportEnterpriseRoots_false": {
+    "message": "Zertifikate nicht aus dem Windows-Zertifikatspeicher lesen"
+  },
+  "policy_description_Certificates_ImportEnterpriseRoots_true": {
+    "message": "Zertifikate aus dem Windows-Zertifikatspeicher lesen"
+  },
   "policy_description_Cookies": {
     "message": "Webseiten erlauben oder verbieten, Cookies zu setzen"
   },
@@ -176,6 +188,27 @@
   "policy_description_DisableSafeMode": {
     "message": "Deaktiviere die Möglichkeit, Firefox mit deaktivierten Add-ons neu zu starten (Abgesicherter Modus)"
   },
+  "policy_description_DisableSecurityBypass": {
+    "message": "Bestimmte Sicherheitswarnungen umgehen"
+  },
+  "policy_description_DisableSecurityBypass_InvalidCertificate": {
+    "message": "Das Hinzufügen einer Ausnahme verhindern, wenn ein ungültiges Zertifikat angezeigt wird"
+  },
+  "policy_description_DisableSecurityBypass_InvalidCertificate_false": {
+    "message": "nicht verhindern"
+  },
+  "policy_description_DisableSecurityBypass_InvalidCertificate_true": {
+    "message": "verhindern"
+  },
+  "policy_description_DisableSecurityBypass_SafeBrowsing": {
+    "message": "Verhindern der Auswahl \"das Risiko ignorieren\" und damit das Besuchen einer schädlichen Webseite"
+  },
+  "policy_description_DisableSecurityBypass_SafeBrowsing_false": {
+    "message": "nicht verhindern"
+  },
+  "policy_description_DisableSecurityBypass_SafeBrowsing_true": {
+    "message": "verhindern"
+  },
   "policy_description_DisableSetDesktopBackground": {
     "message": "Deaktiviere die Funktion, eine Grafik als Hintergrundbild zu verwenden"
   },
@@ -217,6 +250,33 @@
   },
   "policy_description_Extensions_Uninstall_ID": {
     "message": "Add-on ID"
+  },
+  "policy_description_FlashPlugin": {
+    "message": "Die Verwendung des Flash-Plugins erlauben oder verbieten"
+  },
+  "policy_description_FlashPlugin_Allow": {
+    "message": "Für diese URLs ist Flash standardmäßig aktiviert, außer wenn Flash vollständig deaktiviert ist"
+  },
+  "policy_description_FlashPlugin_Allow_URL": {
+    "message": "URL"
+  },
+  "policy_description_FlashPlugin_Block": {
+    "message": "Für diese URLs ist Flash blockiert"
+  },
+  "policy_description_FlashPlugin_Block_URL": {
+    "message": "URL"
+  },
+  "policy_description_FlashPlugin_Default": {
+    "message": "Flash immer aktivieren oder deaktivieren"
+  },
+  "policy_description_FlashPlugin_Default_false": {
+    "message": "Flash ist immer deaktiviert"
+  },
+  "policy_description_FlashPlugin_Default_null": {
+    "message": "keine Voreinstellung"
+  },
+  "policy_description_FlashPlugin_Default_true": {
+    "message": "Flash ist immer aktiviert"
   },
   "policy_description_Homepage": {
     "message": "Startseite festlegen"

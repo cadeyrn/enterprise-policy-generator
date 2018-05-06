@@ -92,6 +92,18 @@
   "policy_description_Bookmarks_URL": {
     "message": "URL"
   },
+  "policy_description_Certificates": {
+    "message": "Read certificates from the Windows certificate store (Windows only)"
+  },
+  "policy_description_Certificates_ImportEnterpriseRoots": {
+    "message": "read certificates from the Windows certificate store"
+  },
+  "policy_description_Certificates_ImportEnterpriseRoots_false": {
+    "message": "don't read certificates from the Windows certificate store"
+  },
+  "policy_description_Certificates_ImportEnterpriseRoots_true": {
+    "message": "read certificates from the Windows certificate store"
+  },
   "policy_description_Cookies": {
     "message": "Allow or deny websites to set cookies"
   },
@@ -176,6 +188,27 @@
   "policy_description_DisableSafeMode": {
     "message": "Disable the ability to restart Firefox with add-ons disabled (safe mode)"
   },
+  "policy_description_DisableSecurityBypass": {
+    "message": "Bypass certain security warnings"
+  },
+  "policy_description_DisableSecurityBypass_InvalidCertificate": {
+    "message": "Prevent adding an exception when an invalid certificate is shown"
+  },
+  "policy_description_DisableSecurityBypass_InvalidCertificate_false": {
+    "message": "don't prevent"
+  },
+  "policy_description_DisableSecurityBypass_InvalidCertificate_true": {
+    "message": "prevent"
+  },
+  "policy_description_DisableSecurityBypass_SafeBrowsing": {
+    "message": "Prevent selecting \"ignore the risk\" and visiting a harmful site anyway"
+  },
+  "policy_description_DisableSecurityBypass_SafeBrowsing_false": {
+    "message": "don't prevent"
+  },
+  "policy_description_DisableSecurityBypass_SafeBrowsing_true": {
+    "message": "prevent"
+  },
   "policy_description_DisableSetDesktopBackground": {
     "message": "Disable the feature to set an image as desktop background"
   },
@@ -217,6 +250,33 @@
   },
   "policy_description_Extensions_Uninstall_ID": {
     "message": "Add-on ID"
+  },
+  "policy_description_FlashPlugin": {
+    "message": "Allow or deny flash plugin usage"
+  },
+  "policy_description_FlashPlugin_Allow": {
+    "message": "For these URLs Flash is enabled by default unless Flash is completely disabled"
+  },
+  "policy_description_FlashPlugin_Allow_URL": {
+    "message": "URL"
+  },
+  "policy_description_FlashPlugin_Block": {
+    "message": "For these URLs Flash is blocked"
+  },
+  "policy_description_FlashPlugin_Block_URL": {
+    "message": "URL"
+  },
+  "policy_description_FlashPlugin_Default": {
+    "message": "Always enable or disable Flash"
+  },
+  "policy_description_FlashPlugin_Default_false": {
+    "message": "Flash is always disabled"
+  },
+  "policy_description_FlashPlugin_Default_null": {
+    "message": "no preference"
+  },
+  "policy_description_FlashPlugin_Default_true": {
+    "message": "Flash is always enabled"
   },
   "policy_description_Homepage": {
     "message": "Set the homepage"

@@ -657,7 +657,7 @@ const policies = {
   // security
 
   FlashPlugin : {
-    description : 'Allow or deny flash plugin usage',
+    description : browser.i18n.getMessage('policy_description_FlashPlugin'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'security',
@@ -665,40 +665,40 @@ const policies = {
     properties : [
       {
         name : 'Allow',
-        label : 'For these URLs Flash is enabled by default unless Flash is completely disabled',
+        label : browser.i18n.getMessage('policy_description_FlashPlugin_Allow'),
         mandatory: false,
         type : 'array',
         items: {
-          label : 'URL',
+          label : browser.i18n.getMessage('policy_description_FlashPlugin_Allow_URL'),
           type : 'string'
         }
       },
       {
         name : 'Block',
-        label : 'For these URLs Flash is blocked',
+        label : browser.i18n.getMessage('policy_description_FlashPlugin_Block'),
         mandatory: false,
         type : 'array',
         items: {
-          label : 'URL',
+          label : browser.i18n.getMessage('policy_description_FlashPlugin_Block_URL'),
           type : 'string'
         }
       },
       {
         name : 'Default',
-        label : 'Always enable or disable Flash',
+        label : browser.i18n.getMessage('policy_description_FlashPlugin_Default'),
         mandatory : false,
         type : 'enum',
         options : [
           {
-            label : 'No preference',
+            label : browser.i18n.getMessage('policy_description_FlashPlugin_Default_null'),
             value : null
           },
           {
-            label : 'Flash is always enabled',
+            label : browser.i18n.getMessage('policy_description_FlashPlugin_Default_true'),
             value : 'true'
           },
           {
-            label : 'Flash is always disabled',
+            label : browser.i18n.getMessage('policy_description_FlashPlugin_Default_false'),
             value : 'false'
           }
         ]
@@ -707,7 +707,7 @@ const policies = {
   },
 
   DisableSecurityBypass : {
-    description : 'Bypass certain security warnings',
+    description : browser.i18n.getMessage('policy_description_DisableSecurityBypass'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'security',
@@ -715,32 +715,32 @@ const policies = {
     properties : [
       {
         name : 'InvalidCertificate',
-        label : 'Prevent adding an exception when an invalid certificate is shown',
+        label : browser.i18n.getMessage('policy_description_DisableSecurityBypass_InvalidCertificate'),
         mandatory : false,
         type : 'enum',
         options : [
           {
-            label : 'prevent',
+            label : browser.i18n.getMessage('policy_description_DisableSecurityBypass_InvalidCertificate_true'),
             value : 'true'
           },
           {
-            label : 'don\'t prevent',
+            label : browser.i18n.getMessage('policy_description_DisableSecurityBypass_InvalidCertificate_false'),
             value : 'false'
           }
         ]
       },
       {
         name : 'SafeBrowsing',
-        label : 'Prevent selecting "ignore the risk" and visiting a harmful site anyway',
+        label : browser.i18n.getMessage('policy_description_DisableSecurityBypass_SafeBrowsing'),
         mandatory : false,
         type : 'enum',
         options : [
           {
             label : 'prevent',
-            value : 'true'
+            value : browser.i18n.getMessage('policy_description_DisableSecurityBypass_SafeBrowsing_true')
           },
           {
-            label : 'don\'t prevent',
+            label : browser.i18n.getMessage('policy_description_DisableSecurityBypass_SafeBrowsing_false'),
             value : 'false'
           }
         ]
@@ -749,7 +749,7 @@ const policies = {
   },
 
   Certificates : {
-    description : 'Whether or not to use built in certs. This policy is Windows only',
+    description : browser.i18n.getMessage('policy_description_Certificates'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'security',
@@ -757,16 +757,16 @@ const policies = {
     properties : [
       {
         name : 'ImportEnterpriseRoots',
-        label : 'Import enterprise roots',
+        label : browser.i18n.getMessage('policy_description_Certificates_ImportEnterpriseRoots'),
         mandatory : false,
         type : 'enum',
         options : [
           {
-            label : 'import',
+            label : browser.i18n.getMessage('policy_description_Certificates_ImportEnterpriseRoots_true'),
             value : 'true'
           },
           {
-            label : 'don\'t import',
+            label : browser.i18n.getMessage('policy_description_Certificates_ImportEnterpriseRoots_false'),
             value : 'false'
           }
         ]
