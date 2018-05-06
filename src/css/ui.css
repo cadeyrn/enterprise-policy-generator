@@ -7,7 +7,7 @@ body {
   overflow-x: hidden;
 }
 
-.checkbox {
+.array, .checkbox {
   position: relative;
   margin-bottom: 5px;
   padding-left: 30px;
