@@ -22,6 +22,10 @@ a:hover {
   color: rgb(0, 102, 225);
 }
 
+label {
+  cursor: pointer;
+}
+
 .array, .checkbox {
   position: relative;
   margin-bottom: 5px;
