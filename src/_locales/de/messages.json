@@ -35,6 +35,27 @@
   "policy_category_others": {
     "message": "Sonstige Richtlinien"
   },
+  "policy_description_Authentication": {
+    "message": "Webseiten, welche eine integrierte Authentifizierung unterstützen"
+  },
+  "policy_description_Authentication_Delegated": {
+    "message": "Delegiert"
+  },
+  "policy_description_Authentication_Delegated_URL": {
+    "message": "URL"
+  },
+  "policy_description_Authentication_NTLM": {
+    "message": "NTLM"
+  },
+  "policy_description_Authentication_NTLM_URL": {
+    "message": "URL"
+  },
+  "policy_description_Authentication_SPNEGO": {
+    "message": "SPNEGO"
+  },
+  "policy_description_Authentication_SPNEGO_URL": {
+    "message": "URL"
+  },
   "policy_description_BlockAboutAddons": {
     "message": "Blockiere Zugang zur Add-ons-Verwaltung (about:addons)"
   },
@@ -227,7 +248,97 @@
   "policy_description_NoDefaultBookmarks": {
     "message": "Keine Standard-Lesezeichen, einschließlich der intelligenten Lesezeichen (Meistbesuchte Seiten, Kürzlich verwendete Schlagwörter), erstellen. Hinweis: diese Richtlinie ist nur wirksam, wenn sie vor der ersten Benutzung des Firefox-Profils angewendet wird"
   },
+  "policy_description_Proxy": {
+    "message": "Proxy-Zugriff auf das Internet konfigurieren"
+  },
+  "policy_description_Proxy_AutoConfigURL": {
+    "message": "Automatische Proxy-Konfigurations-Adresse"
+  },
+  "policy_description_Proxy_AutoLogin": {
+    "message": "Keine Authentifizierungsanfrage bei gespeichertem Passwort"
+  },
+  "policy_description_Proxy_AutoLogin_true": {
+    "message": "Keine Authentifizierungsanfrage anzeigen"
+  },
+  "policy_description_Proxy_AutoLogin_false": {
+    "message": "Authentifizierungsanfrage anzeigen"
+  },
+  "policy_description_Proxy_HTTPProxy": {
+    "message": "HTTP-Proxy. Um eine Port-Nummer festzulegen bitte \":\" gefolgt von der Portnummer ergänzen"
+  },
+  "policy_description_Proxy_Mode": {
+    "message": "Proxy-Modus"
+  },
+  "policy_description_Proxy_Mode_autoConfig": {
+    "message": "Automatische Proxy-Konfigurations-Adresse"
+  },
+  "policy_description_Proxy_Mode_autoDetect": {
+    "message": "Die Proxy-Einstellungen für dieses Netzwerk automatisch erkennen"
+  },
+  "policy_description_Proxy_Mode_manual": {
+    "message": "Manuelle Proxy-Konfiguration"
+  },
+  "policy_description_Proxy_Mode_none": {
+    "message": "Kein Proxy"
+  },
+  "policy_description_Proxy_Mode_system": {
+    "message": "Proxy-Einstellungen des Systems verwenden"
+  },
+  "policy_description_Proxy_FTPProxy": {
+    "message": "FTP-Proxy. Um eine Port-Nummer festzulegen bitte \":\" gefolgt von der Portnummer ergänzen"
+  },
+  "policy_description_Proxy_Passthrough": {
+    "message": "Kein Proxy für…"
+  },
+  "policy_description_Proxy_SOCKSProxy": {
+    "message": "SOCKS-Host. Um eine Port-Nummer festzulegen bitte \":\" gefolgt von der Portnummer ergänzen"
+  },
+  "policy_description_Proxy_SOCKSVersion": {
+    "message": "SOCKS Version"
+  },
+  "policy_description_Proxy_SOCKSVersion_v4": {
+    "message": "SOCKS v4"
+  },
+  "policy_description_Proxy_SOCKSVersion_v5": {
+    "message": "SOCKS v5"
+  },
+  "policy_description_Proxy_SSLProxy": {
+    "message": "SSL-Proxy. Um eine Port-Nummer festzulegen bitte \":\" gefolgt von der Portnummer ergänzen"
+  },
+  "policy_description_Proxy_UseHTTPProxyForAllProtocols": {
+    "message": "Diesen Proxy-Server für alle Protokolle verwenden"
+  },
+  "policy_description_Proxy_UseHTTPProxyForAllProtocols_true": {
+    "message": "für alle Protokolle verwenden"
+  },
+  "policy_description_Proxy_UseHTTPProxyForAllProtocols_false": {
+    "message": "nicht für alle Protokolle verwenden"
+  },
+  "policy_description_Proxy_UseProxyForDNS": {
+    "message": "Bei Verwendung von SOCKS v5 den Proxy für DNS-Anfragen verwenden"
+  },
+  "policy_description_Proxy_UseProxyForDNS_true": {
+    "message": "Proxy-DNS verwenden"
+  },
+  "policy_description_Proxy_UseProxyForDNS_false": {
+    "message": "Proxy-DNS nicht verwenden"
+  },
   "policy_description_SanitizeOnShutdown": {
     "message": "Lösche alle Browsing-Daten, wenn Firefox geschlossen wird"
+  },
+  "policy_description_WebsiteFilter": {
+    "message": "Blockiere Besuche von Webseiten. Nur HTTPS und HTTP werden unterstützt, es kann außerdem \"<all_urls>\" verwendet werden, um alle URLs zu blockieren"
+  },
+  "policy_description_WebsiteFilter_Block": {
+    "message": "Blockiere die folgenden URLs"
+  },
+  "policy_description_WebsiteFilter_Block_URL": {
+    "message": "URL"
+  },
+  "policy_description_WebsiteFilter_Exceptions": {
+    "message": "Ausnahmen"
+  },
+  "policy_description_WebsiteFilter_Exceptions_URL": {
+    "message": "URL"
   }
 }

@@ -35,6 +35,27 @@
   "policy_category_others": {
     "message": "Other Policies"
   },
+  "policy_description_Authentication": {
+    "message": "Sites that support integrated authentication"
+  },
+  "policy_description_Authentication_Delegated": {
+    "message": "Delegated"
+  },
+  "policy_description_Authentication_Delegated_URL": {
+    "message": "URL"
+  },
+  "policy_description_Authentication_NTLM": {
+    "message": "NTLM"
+  },
+  "policy_description_Authentication_NTLM_URL": {
+    "message": "URL"
+  },
+  "policy_description_Authentication_SPNEGO": {
+    "message": "SPNEGO"
+  },
+  "policy_description_Authentication_SPNEGO_URL": {
+    "message": "URL"
+  },
   "policy_description_BlockAboutAddons": {
     "message": "Block access to the add-ons manager (about:addons)"
   },
@@ -227,7 +248,97 @@
   "policy_description_NoDefaultBookmarks": {
     "message": "Don't create the default bookmarks bundled with Firefox, including the smart bookmarks (most visited, recent tags). Note: this policy is only effective if used before the first run of the profile"
   },
+  "policy_description_Proxy": {
+    "message": "Configure proxy access to the internet"
+  },
+  "policy_description_Proxy_AutoConfigURL": {
+    "message": "Automatic proxy configuration URL"
+  },
+  "policy_description_Proxy_AutoLogin": {
+    "message": "Do not prompt for authentication"
+  },
+  "policy_description_Proxy_AutoLogin_true": {
+    "message": "Don't prompt for authentication"
+  },
+  "policy_description_Proxy_AutoLogin_false": {
+    "message": "prompt for authentication"
+  },
+  "policy_description_Proxy_HTTPProxy": {
+    "message": "HTTP Proxy. To configure port numbers please add a \":\" followed by the port number"
+  },
+  "policy_description_Proxy_Mode": {
+    "message": "Proxy Mode"
+  },
+  "policy_description_Proxy_Mode_autoConfig": {
+    "message": "automatic proxy configuration url"
+  },
+  "policy_description_Proxy_Mode_autoDetect": {
+    "message": "auto-detect proxy settings for this network"
+  },
+  "policy_description_Proxy_Mode_manual": {
+    "message": "manual proxy configuration"
+  },
+  "policy_description_Proxy_Mode_none": {
+    "message": "no proxy"
+  },
+  "policy_description_Proxy_Mode_system": {
+    "message": "use system proxy settings"
+  },
+  "policy_description_Proxy_FTPProxy": {
+    "message": "FTP Proxy. To configure port numbers please add a \":\" followed by the port number"
+  },
+  "policy_description_Proxy_Passthrough": {
+    "message": "No proxy for…"
+  },
+  "policy_description_Proxy_SOCKSProxy": {
+    "message": "SOCKS Host. To configure port numbers please add a \":\" followed by the port number"
+  },
+  "policy_description_Proxy_SOCKSVersion": {
+    "message": "SOCKS Version"
+  },
+  "policy_description_Proxy_SOCKSVersion_v4": {
+    "message": "SOCKS v4"
+  },
+  "policy_description_Proxy_SOCKSVersion_v5": {
+    "message": "SOCKS v5"
+  },
+  "policy_description_Proxy_SSLProxy": {
+    "message": "SSL Proxy. To configure port numbers please add a \":\" followed by the port number"
+  },
+  "policy_description_Proxy_UseHTTPProxyForAllProtocols": {
+    "message": "Use this proxy server for all protocols"
+  },
+  "policy_description_Proxy_UseHTTPProxyForAllProtocols_true": {
+    "message": "use for all protocols"
+  },
+  "policy_description_Proxy_UseHTTPProxyForAllProtocols_false": {
+    "message": "don't use for all protocols"
+  },
+  "policy_description_Proxy_UseProxyForDNS": {
+    "message": "Proxy DNS when using SOCKS v5"
+  },
+  "policy_description_Proxy_UseProxyForDNS_true": {
+    "message": "use Proxy DNS"
+  },
+  "policy_description_Proxy_UseProxyForDNS_false": {
+    "message": "don't use Proxy DNS"
+  },
   "policy_description_SanitizeOnShutdown": {
     "message": "Clear all browser data on shutdown"
+  },
+  "policy_description_WebsiteFilter": {
+    "message": "Blocks websites from being visited. Only HTTPS and HTTP are supported and you can use \"<all_urls>\" for blocking all URLs"
+  },
+  "policy_description_WebsiteFilter_Block": {
+    "message": "Block the following URLs"
+  },
+  "policy_description_WebsiteFilter_Block_URL": {
+    "message": "URL"
+  },
+  "policy_description_WebsiteFilter_Exceptions": {
+    "message": "Exceptions"
+  },
+  "policy_description_WebsiteFilter_Exceptions_URL": {
+    "message": "URL"
   }
 }

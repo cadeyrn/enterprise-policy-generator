@@ -333,7 +333,7 @@ const policies = {
   // network
 
   WebsiteFilter : {
-    description : 'Blocks websites from being visited. Only http/https accesses are supported at the moment, you can also use "<all_urls>"',
+    description : browser.i18n.getMessage('policy_description_WebsiteFilter'),
     enterprise_only : true,
     first_available : '60.0',
     ui_category : 'network',
@@ -341,21 +341,21 @@ const policies = {
     properties : [
       {
         name : 'Block',
-        label : 'Block the following URLs',
+        label : browser.i18n.getMessage('policy_description_WebsiteFilter_Block'),
         mandatory: false,
         type : 'array',
         items: {
-          label : 'URL',
+          label : browser.i18n.getMessage('policy_description_WebsiteFilter_Block_URL'),
           type : 'string'
         }
       },
       {
         name : 'Exceptions',
-        label : 'Exceptions',
+        label : browser.i18n.getMessage('policy_description_WebsiteFilter_Exceptions'),
         mandatory : false,
         type : 'array',
         items: {
-          label : 'URL',
+          label : browser.i18n.getMessage('policy_description_WebsiteFilter_Exceptions_URL'),
           type : 'string'
         }
       }
@@ -363,7 +363,7 @@ const policies = {
   },
 
   Proxy : {
-    description : 'Configure proxy settings.',
+    description : browser.i18n.getMessage('policy_description_Proxy'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'network',
@@ -371,124 +371,124 @@ const policies = {
     properties : [
       {
         name : 'Mode',
-        label : 'Configure proxy access to the internet',
+        label : browser.i18n.getMessage('policy_description_Proxy_Mode'),
         mandatory : false,
         type : 'enum',
         options : [
           {
-            label : 'no proxy',
+            label : browser.i18n.getMessage('policy_description_Proxy_Mode_none'),
             value : 'none'
           },
           {
-            label : 'use system proxy settings',
+            label : browser.i18n.getMessage('policy_description_Proxy_Mode_system'),
             value : 'system'
           },
           {
-            label : 'auto-detect proxy settings for this network',
+            label : browser.i18n.getMessage('policy_description_Proxy_Mode_autoDetect'),
             value : 'autoDetect'
           },
           {
-            label : 'manual proxy configuration',
+            label : browser.i18n.getMessage('policy_description_Proxy_Mode_manual'),
             value : 'manual'
           },
           {
-            label : 'automatic proxy configuration url',
+            label : browser.i18n.getMessage('policy_description_Proxy_Mode_autoConfig'),
             value : 'autoConfig'
           }
         ]
       },
       {
         name : 'HTTPProxy',
-        label : 'HTTP Proxy. To configure port numbers please add a ":" followed by the port number',
+        label : browser.i18n.getMessage('policy_description_Proxy_HTTPProxy'),
         mandatory : false,
         type : 'string'
       },
       {
         name : 'UseHTTPProxyForAllProtocols',
-        label : 'Use this proxy server for all protocols',
+        label : browser.i18n.getMessage('policy_description_Proxy_UseHTTPProxyForAllProtocols'),
         type : 'enum',
         options : [
           {
-            label : 'use for all',
+            label : browser.i18n.getMessage('policy_description_Proxy_UseHTTPProxyForAllProtocols_true'),
             value : 'true'
           },
           {
-            label : 'don\'t use for all',
+            label : browser.i18n.getMessage('policy_description_Proxy_UseHTTPProxyForAllProtocols_false'),
             value : 'false'
           }
         ]
       },
       {
         name : 'SSLProxy',
-        label : 'SSL Proxy. To configure port numbers please add a ":" followed by the port number',
+        label : browser.i18n.getMessage('policy_description_Proxy_SSLProxy'),
         mandatory : false,
         type : 'string'
       },
       {
         name : 'FTPProxy',
-        label : 'FTP Proxy. To configure port numbers please add a ":" followed by the port number',
+        label : browser.i18n.getMessage('policy_description_Proxy_FTPProxy'),
         mandatory : false,
         type : 'string'
       },
       {
         name : 'SOCKSProxy',
-        label : 'SOCKS Host. To configure port numbers please add a ":" followed by the port number',
+        label : browser.i18n.getMessage('policy_description_Proxy_SOCKSProxy'),
         mandatory : false,
         type : 'string'
       },
       {
         name : 'SOCKSVersion',
-        label : 'SOCKS Version',
+        label : browser.i18n.getMessage('policy_description_Proxy_SOCKSVersion'),
         type : 'enum',
         options : [
           {
-            label : 'SOCKS v4',
+            label : browser.i18n.getMessage('policy_description_Proxy_SOCKSVersion_v4'),
             value : '4'
           },
           {
-            label : 'SOCKS v5',
+            label : browser.i18n.getMessage('policy_description_Proxy_SOCKSVersion_v5'),
             value : '5'
           }
         ]
       },
       {
         name : 'Passthrough',
-        label : 'List of passthrough addresses / domains',
+        label : browser.i18n.getMessage('policy_description_Proxy_Passthrough'),
         mandatory : false,
         type : 'string'
       },
       {
         name : 'AutoConfigURL',
-        label : 'Automatic proxy configuration URL',
+        label : browser.i18n.getMessage('policy_description_Proxy_AutoConfigURL'),
         mandatory : false,
         type : 'string'
       },
       {
         name : 'AutoLogin',
-        label : 'AutoLogin',
+        label : browser.i18n.getMessage('policy_description_Proxy_AutoLogin'),
         type : 'enum',
         options : [
           {
-            label : 'true',
+            label : browser.i18n.getMessage('policy_description_Proxy_AutoLogin_true'),
             value : 'true'
           },
           {
-            label : 'false',
+            label : browser.i18n.getMessage('policy_description_Proxy_AutoLogin_false'),
             value : 'false'
           }
         ]
       },
       {
         name : 'UseProxyForDNS',
-        label : 'Use proxy for DNS',
+        label : browser.i18n.getMessage('policy_description_Proxy_UseProxyForDNS'),
         type : 'enum',
         options : [
           {
-            label : 'true',
+            label : browser.i18n.getMessage('policy_description_Proxy_UseProxyForDNS_true'),
             value : 'true'
           },
           {
-            label : 'false',
+            label : browser.i18n.getMessage('policy_description_Proxy_UseProxyForDNS_false'),
             value : 'false'
           }
         ]
@@ -497,7 +497,7 @@ const policies = {
   },
 
   Authentication : {
-    description : 'Sites that support integrated authentication',
+    description : browser.i18n.getMessage('policy_description_Authentication'),
     enterprise_only : true,
     first_available : '60.0',
     ui_category : 'network',
@@ -505,31 +505,31 @@ const policies = {
     properties : [
       {
         name : 'SPNEGO',
-        label : 'SPNEGO',
+        label : browser.i18n.getMessage('policy_description_Authentication_SPNEGO'),
         mandatory : false,
         type : 'array',
         items: {
-          label : 'URL',
+          label : browser.i18n.getMessage('policy_description_Authentication_SPNEGO_URL'),
           type : 'string'
         }
       },
       {
         name : 'Delegated',
-        label : 'Delegated',
+        label : browser.i18n.getMessage('policy_description_Authentication_Delegated'),
         mandatory : false,
         type : 'array',
         items: {
-          label : 'URL',
+          label : browser.i18n.getMessage('policy_description_Authentication_Delegated_URL'),
           type : 'string'
         }
       },
       {
         name : 'NTLM',
-        label : 'NTLM',
+        label : browser.i18n.getMessage('policy_description_Authentication_NTLM'),
         mandatory : false,
         type : 'array',
         items: {
-          label : 'URL',
+          label : browser.i18n.getMessage('policy_description_Authentication_NTLM_URL'),
           type : 'string'
         }
       }
