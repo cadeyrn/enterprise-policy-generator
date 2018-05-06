@@ -777,7 +777,7 @@ const policies = {
   // udpates and data collection
 
   DisableAppUpdate : {
-    description : 'Prevent Firefox from updating',
+    description : browser.i18n.getMessage('policy_description_DisableAppUpdate'),
     enterprise_only : true,
     first_available : '60.0',
     ui_category : 'updates-and-data',
@@ -785,7 +785,7 @@ const policies = {
   },
 
   DisableSystemAddonUpdate : {
-    description : 'Prevent Firefox from installing and updating system add-ons',
+    description : browser.i18n.getMessage('policy_description_DisableSystemAddonUpdate'),
     enterprise_only : true,
     first_available : '60.0',
     ui_category : 'updates-and-data',
@@ -793,7 +793,7 @@ const policies = {
   },
 
   DisableTelemetry : {
-    description : 'Prevent Firefox from sending technical and interaction data to Mozilla (telemetry)',
+    description : browser.i18n.getMessage('policy_description_DisableTelemetry'),
     enterprise_only : true,
     first_available : '60.0',
     ui_category : 'updates-and-data',
@@ -801,7 +801,7 @@ const policies = {
   },
 
   DisableFirefoxStudies : {
-    description : 'Prevent Firefox from installing and running studies (SHIELD studies)',
+    description : browser.i18n.getMessage('policy_description_DisableFirefoxStudies'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'updates-and-data',

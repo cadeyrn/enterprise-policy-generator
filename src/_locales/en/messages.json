@@ -149,6 +149,9 @@
   "policy_description_Cookies_ExpireAtSessionEnd_false": {
     "message": "keep cookies until they expire"
   },
+  "policy_description_DisableAppUpdate": {
+    "message": "Prevent Firefox from updating"
+  },
   "policy_description_DisableBuiltinPDFViewer": {
     "message": "Disable the built-in PDF viewer (pdf.js)"
   },
@@ -163,6 +166,9 @@
   },
   "policy_description_DisableFirefoxScreenshots": {
     "message": "Disable the built-in screenshot tool (Firefox Screenshots)"
+  },
+  "policy_description_DisableFirefoxStudies": {
+    "message": "Prevent Firefox from installing and running studies (SHIELD studies)"
   },
   "policy_description_DisableForgetButton": {
     "message": "Disable the \"Forget\" toolbar button which can be used to forget the last browsing history"
@@ -211,6 +217,12 @@
   },
   "policy_description_DisableSetDesktopBackground": {
     "message": "Disable the feature to set an image as desktop background"
+  },
+  "policy_description_DisableSystemAddonUpdate": {
+    "message": "Prevent Firefox from installing and updating system add-ons"
+  },
+  "policy_description_DisableTelemetry": {
+    "message": "Prevent Firefox from sending technical and interaction data to Mozilla (telemetry)"
   },
   "policy_description_DisplayBookmarksToolbar": {
     "message": "Show the bookmarks toolbar by default"

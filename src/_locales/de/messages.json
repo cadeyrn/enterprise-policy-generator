@@ -149,6 +149,9 @@
   "policy_description_Cookies_ExpireAtSessionEnd_false": {
     "message": "behalte Cookies, bis sie nicht mehr gültig sind"
   },
+  "policy_description_DisableAppUpdate": {
+    "message": "Firefox am Aktualisieren hindern"
+  },
   "policy_description_DisableBuiltinPDFViewer": {
     "message": "Deaktiviere den eingebauten PDF-Betrachter (pdf.js)"
   },
@@ -163,6 +166,9 @@
   },
   "policy_description_DisableFirefoxScreenshots": {
     "message": "Deaktiviere die eingebaute Funktion für Bildschirmfotos (Firefox Screenshots)"
+  },
+  "policy_description_DisableFirefoxStudies": {
+    "message": "Firefox an der Installation und Ausführung von Studien hindern (SHIELD-Studien)"
   },
   "policy_description_DisableForgetButton": {
     "message": "Deaktiviere die \"Vergessen\" Schaltfläche, welche benutzt werden kann, um die Chronik zu löschen"
@@ -214,6 +220,12 @@
   },
   "policy_description_DisplayBookmarksToolbar": {
     "message": "Zeige die Lesezeichen-Symbolleiste standardmäßig"
+  },
+  "policy_description_DisableSystemAddonUpdate": {
+    "message": "Firefox an der Installation und am Aktualisieren von System-Add-ons hindern"
+  },
+  "policy_description_DisableTelemetry": {
+    "message": "Firefox hindern, Daten zu technischen Details und Interaktionen an Mozilla zu senden (Telemetrie)"
   },
   "policy_description_DisplayMenuBar": {
     "message": "Zeige die Menüleiste standardmäßig"
