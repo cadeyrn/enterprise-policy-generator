@@ -811,7 +811,7 @@ const policies = {
   // others
 
   PopupBlocking : {
-    description : 'Allow or deny popup usage',
+    description : browser.i18n.getMessage('policy_description_PopupBlocking'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'others',
@@ -819,27 +819,27 @@ const policies = {
     properties : [
       {
         name : 'Default',
-        label : 'Block pop-up windows',
+        label : browser.i18n.getMessage('policy_description_PopupBlocking_Default'),
         mandatory : false,
         type : 'enum',
         options : [
           {
-            label : 'pop-ups are blocked by default',
+            label : browser.i18n.getMessage('policy_description_PopupBlocking_Default_true'),
             value : 'true'
           },
           {
-            label : 'pop-ups are not blocked by default when pop-ups are blocked',
+            label : browser.i18n.getMessage('policy_description_PopupBlocking_Default_false'),
             value : 'false'
           }
         ]
       },
       {
         name : 'Allow',
-        label : 'Domains for which pop-up windows are allowed',
+        label : browser.i18n.getMessage('policy_description_PopupBlocking_Allow'),
         mandatory : false,
         type : 'array',
         items: {
-          label : 'URL',
+          label : browser.i18n.getMessage('policy_description_PopupBlocking_Allow_URL'),
           type : 'url'
         }
       }
@@ -847,7 +847,7 @@ const policies = {
   },
 
   OfferToSaveLogins : {
-    description : 'Enforce the setting to allow Firefox to offer to remember saved logins and passwords',
+    description : browser.i18n.getMessage('policy_description_OfferToSaveLogins'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'others',
@@ -855,7 +855,7 @@ const policies = {
   },
 
   DontCheckDefaultBrowser : {
-    description : 'Don\'t check for the default browser on startup',
+    description : browser.i18n.getMessage('policy_description_DontCheckDefaultBrowser'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'others',
@@ -863,7 +863,7 @@ const policies = {
   },
 
   OverrideFirstRunPage : {
-    description : 'Override the first run page. Set this policy to blank if you want to disable the first run page',
+    description : browser.i18n.getMessage('policy_description_OverrideFirstRunPage'),
     enterprise_only : true,
     first_available : '60.0',
     ui_category : 'others',
@@ -872,7 +872,7 @@ const policies = {
   },
 
   OverridePostUpdatePage : {
-    description: 'Override the post-update "What\'s New" page. Set this policy to blank if you want to disable the post-update page',
+    description: browser.i18n.getMessage('policy_description_OverridePostUpdatePage'),
     enterprise_only: true,
     first_available: '60.0',
     ui_category: 'others',

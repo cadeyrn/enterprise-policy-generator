@@ -230,6 +230,9 @@
   "policy_description_DisplayMenuBar": {
     "message": "Zeige die Menüleiste standardmäßig"
   },
+  "policy_description_DontCheckDefaultBrowser": {
+    "message": "Beim Start nicht den Standard-Browser überprüfen"
+  },
   "policy_description_EnableTrackingProtection": {
     "message": "Schutz vor Aktivitätenverfolgung aktivieren oder deaktivieren"
   },
@@ -319,6 +322,33 @@
   },
   "policy_description_NoDefaultBookmarks": {
     "message": "Keine Standard-Lesezeichen, einschließlich der intelligenten Lesezeichen (Meistbesuchte Seiten, Kürzlich verwendete Schlagwörter), erstellen. Hinweis: diese Richtlinie ist nur wirksam, wenn sie vor der ersten Benutzung des Firefox-Profils angewendet wird"
+  },
+  "policy_description_OfferToSaveLogins": {
+    "message": "Die Einstellung erzwingen, dass sich Firefox gespeicherte Logins und Passwörter merken kann"
+  },
+  "policy_description_OverrideFirstRunPage": {
+    "message": "Die Seite überschreiben, die beim ersten Start erscheint. Ein leeres Eingabefeld deaktiviert die Seite vollständig"
+  },
+  "policy_description_OverridePostUpdatePage": {
+    "message": "Die Seite mit den Neuerungen überschreiben, die nach einem Update erscheinen kann. Ein leeres Eingabefeld deaktiviert die Seite vollständig"
+  },
+  "policy_description_PopupBlocking": {
+    "message": "Die Verwendung von Pop-ups erlauben oder verbieten"
+  },
+  "policy_description_PopupBlocking_Allow": {
+    "message": "Domains, für welche Pop-up-Fenster erlaubt sind"
+  },
+  "policy_description_PopupBlocking_Allow_URL": {
+    "message": "URL"
+  },
+  "policy_description_PopupBlocking_Default": {
+    "message": "Pop-up-Fenster blockieren"
+  },
+  "policy_description_PopupBlocking_Default_false": {
+    "message": "Pop-ups werden standardmäßig nicht blockiert"
+  },
+  "policy_description_PopupBlocking_Default_true": {
+    "message": "Pop-ups werden standardmäßig blockiert"
   },
   "policy_description_Proxy": {
     "message": "Proxy-Zugriff auf das Internet konfigurieren"
