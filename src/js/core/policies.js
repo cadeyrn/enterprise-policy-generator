@@ -196,6 +196,25 @@ const policies = {
     ]
   },
 
+  SearchBar : {
+    description : browser.i18n.getMessage('policy_description_SearchBar'),
+    enterprise_only : true,
+    first_available : '60.0',
+    ui_category : 'customization',
+    type : 'enum',
+    label : browser.i18n.getMessage('policy_description_SearchBar_label'),
+    options : [
+      {
+        label : browser.i18n.getMessage('policy_description_SearchBar_options_unified'),
+        value : 'unified'
+      },
+      {
+        label : browser.i18n.getMessage('policy_description_SearchBar_options_separate'),
+        value : 'separate'
+      }
+    ]
+  },
+
   NoDefaultBookmarks : {
     description : browser.i18n.getMessage('policy_description_Homepage_URL'),
     enterprise_only : false,

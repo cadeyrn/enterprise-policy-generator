@@ -437,6 +437,18 @@
   "policy_description_SanitizeOnShutdown": {
     "message": "Lösche alle Browsing-Daten, wenn Firefox geschlossen wird"
   },
+  "policy_description_SearchBar": {
+    "message": "Legt fest, ob die Suchleiste mit der Adressleiste kombiniert oder separat ist"
+  },
+  "policy_description_SearchBar_label": {
+    "message": "Suchleiste"
+  },
+  "policy_description_SearchBar_options_separate": {
+    "message": "es gibt eine separate Suchleiste"
+  },
+  "policy_description_SearchBar_options_unified": {
+    "message": "Die Suchleiste ist mit der Adressleiste kombiniert"
+  },
   "policy_description_WebsiteFilter": {
     "message": "Blockiere Besuche von Webseiten. Nur HTTPS und HTTP werden unterstützt, es kann außerdem \"<all_urls>\" verwendet werden, um alle URLs zu blockieren"
   },

@@ -437,6 +437,18 @@
   "policy_description_SanitizeOnShutdown": {
     "message": "Clear all browser data on shutdown"
   },
+  "policy_description_SearchBar": {
+    "message": "Whether the search bar is unified or separate"
+  },
+  "policy_description_SearchBar_label": {
+    "message": "Search bar"
+  },
+  "policy_description_SearchBar_options_separate": {
+    "message": "there is a separate search bar"
+  },
+  "policy_description_SearchBar_options_unified": {
+    "message": "the search and the address bar are unified"
+  },
   "policy_description_WebsiteFilter": {
     "message": "Blocks websites from being visited. Only HTTPS and HTTP are supported and you can use \"<all_urls>\" for blocking all URLs"
   },
