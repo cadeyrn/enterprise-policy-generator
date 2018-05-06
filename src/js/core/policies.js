@@ -851,7 +851,18 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'others',
-    type : 'boolean'
+    type : 'enum',
+    label : browser.i18n.getMessage('policy_description_OfferToSaveLogins_label'),
+    options : [
+      {
+        label : browser.i18n.getMessage('policy_description_OfferToSaveLogins_options_true'),
+        value : 'true'
+      },
+      {
+        label : browser.i18n.getMessage('policy_description_OfferToSaveLogins_options_false'),
+        value : 'false'
+      }
+    ]
   },
 
   DontCheckDefaultBrowser : {

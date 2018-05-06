@@ -326,6 +326,15 @@
   "policy_description_OfferToSaveLogins": {
     "message": "Die Einstellung erzwingen, dass sich Firefox gespeicherte Logins und Passwörter merken kann"
   },
+  "policy_description_OfferToSaveLogins_label": {
+    "message": "Firefox erlauben, sich gespeicherte Logins und Passwörter zu merken"
+  },
+  "policy_description_OfferToSaveLogins_options_false": {
+    "message": "gespeicherte Logins und Passwörter nicht merken"
+  },
+  "policy_description_OfferToSaveLogins_options_true": {
+    "message": "gespeicherte Logins und Passwörter merken"
+  },
   "policy_description_OverrideFirstRunPage": {
     "message": "Die Seite überschreiben, die beim ersten Start erscheint. Ein leeres Eingabefeld deaktiviert die Seite vollständig"
   },

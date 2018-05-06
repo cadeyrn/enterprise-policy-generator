@@ -326,6 +326,15 @@
   "policy_description_OfferToSaveLogins": {
     "message": "Enforce the setting to allow Firefox to offer to remember saved logins and passwords"
   },
+  "policy_description_OfferToSaveLogins_label": {
+    "message": "allow Firefox to offer to remember saved logins and passwords"
+  },
+  "policy_description_OfferToSaveLogins_options_false": {
+    "message": "don't offer to remember saved logins and passwords"
+  },
+  "policy_description_OfferToSaveLogins_options_true": {
+    "message": "offer to remember saved logins and passwords"
+  },
   "policy_description_OverrideFirstRunPage": {
     "message": "Override the first run page. Set this policy to blank if you want to disable the first run page"
   },
