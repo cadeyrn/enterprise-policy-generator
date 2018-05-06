@@ -12,6 +12,16 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  color: rgb(10, 132, 255);
+  text-decoration: none;
+  transition: color ease 250ms;
+}
+
+a:hover {
+  color: rgb(0, 102, 225);
+}
+
 .array, .checkbox {
   position: relative;
   margin-bottom: 5px;
