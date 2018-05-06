@@ -216,7 +216,7 @@ const policies = {
   },
 
   NoDefaultBookmarks : {
-    description : browser.i18n.getMessage('policy_description_Homepage_URL'),
+    description : browser.i18n.getMessage('policy_description_NoDefaultBookmarks'),
     enterprise_only : false,
     first_available : '60.0',
     ui_category : 'customization',
