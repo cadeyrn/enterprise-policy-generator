@@ -4,6 +4,7 @@
 
 const elPolicyGeneratorButton = document.getElementById('generate');
 const elPolicyOutput = document.getElementById('policy-output');
+const elSelectAllLink = document.getElementById('select-all');
 
 /**
  * @exports configurator
@@ -59,6 +60,17 @@ const configurator = {
       e.preventDefault();
 
       elPolicyOutput.innerText = configurator.generatePoliciesOutput();
+      elSelectAllLink.classList.remove('hidden');
+    };
+
+    elSelectAllLink.onclick = function (e) {
+      e.preventDefault();
+
+      const selection = window.getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(elPolicyOutput);
+      selection.removeAllRanges();
+      selection.addRange(range);
     };
   },
 
