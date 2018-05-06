@@ -442,5 +442,11 @@
   },
   "policy_description_WebsiteFilter_Exceptions_URL": {
     "message": "URL"
+  },
+  "title_add_row": {
+    "message": "add row"
+  },
+  "title_remove_row": {
+    "message": "remove row"
   }
 }

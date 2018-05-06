@@ -327,6 +327,7 @@ const configurator = {
       elRemoveIcon.appendChild(elRemoveIconText);
       elRemoveIcon.setAttribute('href', '#');
       elRemoveIcon.setAttribute('data-action', 'remove');
+      elRemoveIcon.setAttribute('title', browser.i18n.getMessage('title_remove_row'));
       elRemoveIcon.classList.add('array-action');
       elRemoveIcon.classList.add('disabled-link');
       elObjectWrapper.appendChild(elRemoveIcon);
@@ -336,6 +337,7 @@ const configurator = {
       elAddIcon.appendChild(elAddIconText);
       elAddIcon.setAttribute('href', '#');
       elAddIcon.setAttribute('data-action', 'add');
+      elAddIcon.setAttribute('title', browser.i18n.getMessage('title_add_row'));
       elAddIcon.classList.add('array-action');
       elObjectWrapper.appendChild(elAddIcon);
     }
@@ -373,6 +375,7 @@ const configurator = {
       elRemoveIcon.appendChild(elRemoveIconText);
       elRemoveIcon.setAttribute('href', '#');
       elRemoveIcon.setAttribute('data-action', 'remove');
+      elRemoveIcon.setAttribute('title', browser.i18n.getMessage('title_remove_row'));
       elRemoveIcon.classList.add('array-action');
       elRemoveIcon.classList.add('disabled-link');
       elObjectWrapper.appendChild(elRemoveIcon);
@@ -382,6 +385,7 @@ const configurator = {
       elAddIcon.appendChild(elAddIconText);
       elAddIcon.setAttribute('href', '#');
       elAddIcon.setAttribute('data-action', 'add');
+      elAddIcon.setAttribute('title', browser.i18n.getMessage('title_add_row'));
       elAddIcon.classList.add('array-action');
       elObjectWrapper.appendChild(elAddIcon);
     }
@@ -448,6 +452,7 @@ const configurator = {
     elRemoveIcon.appendChild(elRemoveIconText);
     elRemoveIcon.setAttribute('href', '#');
     elRemoveIcon.setAttribute('data-action', 'remove');
+    elRemoveIcon.setAttribute('title', browser.i18n.getMessage('title_remove_row'));
     elRemoveIcon.classList.add('array-action');
     elRemoveIcon.classList.add('disabled-link');
     elSubOptions.appendChild(elRemoveIcon);
@@ -457,6 +462,7 @@ const configurator = {
     elAddIcon.appendChild(elAddIconText);
     elAddIcon.setAttribute('href', '#');
     elAddIcon.setAttribute('data-action', 'add');
+    elAddIcon.setAttribute('title', browser.i18n.getMessage('title_add_row'));
     elAddIcon.classList.add('array-action');
     elSubOptions.appendChild(elAddIcon);
 
