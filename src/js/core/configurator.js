@@ -31,6 +31,9 @@ const configurator = {
       else if (policies[key].type === 'boolean-inverse') {
         configurator.addBooleanOption(key, policies[key], true);
       }
+      else if (policies[key].type === 'enum') {
+        configurator.addEnumOption(key, policies[key]);
+      }
       else if (policies[key].type === 'object') {
         configurator.addObjectOption(key, policies[key]);
       }
@@ -391,6 +394,59 @@ const configurator = {
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
   },
 
+  addEnumOption (key, policy) {
+    const elObjectWrapper = document.createElement('div');
+    elObjectWrapper.classList.add('checkbox');
+
+    const elCheckbox = document.createElement('input');
+    elCheckbox.setAttribute('type', 'checkbox');
+    elCheckbox.setAttribute('name', key);
+    elCheckbox.setAttribute('id', key);
+    elCheckbox.setAttribute('data-type', 'enum');
+    elCheckbox.classList.add('primary-checkbox');
+
+    elObjectWrapper.appendChild(elCheckbox);
+
+    const elLabel = document.createElement('label');
+    elLabel.setAttribute('for', key);
+    elLabel.textContent = policy.description;
+    elObjectWrapper.appendChild(elLabel);
+
+    if (policy.enterprise_only) {
+      const elESRNotice = document.createElement('span');
+      elESRNotice.classList.add('esr-only');
+      elESRNotice.textContent += ' (!) ' + browser.i18n.getMessage('enterprise_only_label');
+      elLabel.appendChild(elESRNotice);
+    }
+
+    const elSelectWrapper = document.createElement('div');
+    elSelectWrapper.classList.add('enum', 'sub-options', 'disabled');
+
+    const elSelect = document.createElement('select');
+    elSelect.setAttribute('name', key + '_select');
+    elSelect.setAttribute('id', key + '_select');
+
+    elSelectWrapper.appendChild(elSelect);
+    elObjectWrapper.appendChild(elSelectWrapper);
+
+    for (const key in policy.options) {
+      if ({}.hasOwnProperty.call(policy.options, key)) {
+        const elOptionLabel = document.createTextNode(policy.options[key].label);
+        const elOption = document.createElement('option');
+        elOption.setAttribute('value', policy.options[key].value);
+        elOption.appendChild(elOptionLabel);
+        elSelect.appendChild(elOption);
+      }
+    }
+
+    const elSelectLabel = document.createElement('label');
+    elSelectLabel.setAttribute('for', key + '_select');
+    elSelectLabel.textContent = policy.label;
+    elSelectWrapper.appendChild(elSelectLabel);
+
+    configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
+  },
+
   addStringOption (key, policy) {
     const elObjectWrapper = document.createElement('div');
     elObjectWrapper.classList.add('checkbox');
@@ -521,6 +577,36 @@ const configurator = {
         }
         else if (el.getAttribute('data-type') === 'boolean') {
           policymanager.add(el.name, !el.getAttribute('data-inverse'));
+        }
+        else if (el.getAttribute('data-type') === 'enum') {
+          const name = el.name;
+
+          [...el.parentNode.querySelectorAll(':scope > .enum select')].forEach((el) => {
+            let { value } = el.options[el.selectedIndex];
+
+            // null represents an empty state, there is nothing to do
+            if (value === 'null') {
+              return;
+            }
+
+            // if the value is a number treat it as number
+            if (!isNaN(value)) {
+              value = parseInt(value);
+            }
+
+            switch (value) {
+              case 'true':
+                value = true;
+                break;
+              case 'false':
+                value = false;
+                break;
+              default:
+              // do nothing
+            }
+
+            policymanager.add(name, value);
+          });
         }
         else if (el.getAttribute('data-type') === 'object') {
           const policy = { };
