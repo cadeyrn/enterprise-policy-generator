@@ -48,6 +48,39 @@ body {
   backface-visibility: hidden;
 }
 
+button {
+  position: relative;
+  padding: 8px 15px;
+  transform: perspective(1px) translateZ(0);
+  font-size: 16px;
+  border: none;
+  background: rgb(10, 132, 255);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: color ease 500ms;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+  background: rgb(0, 102, 225);
+  transform-origin: 0 50%;
+  transition-property: transform;
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+}
+
+button:hover::before {
+  transform: scaleX(1);
+  transition-timing-function: cubic-bezier(.52, 1.64, .37, .66);
+}
+
 .disabled {
   opacity: .2;
   pointer-events: none;
