@@ -9,6 +9,7 @@ body {
 
 .disabled {
   opacity: .2;
+  pointer-events: none;
 }
 
 .disabled-link {
