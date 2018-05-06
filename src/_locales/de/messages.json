@@ -2,11 +2,38 @@
   "enterprise_only_label": {
     "message": "funktioniert nur in Firefox ESR"
   },
+  "explanation_headline_usage": {
+    "message": "Anwendung"
+  },
+  "explanation_intro": {
+    "message": "Per Klick auf den Button wird ein Code generiert. Dieser muss in einer Datei „policies.js“ gespeichert werden, welche im Distributionsverzeichnis abgelegt werden muss."
+  },
+  "explanation_intro_macos": {
+    "message": "erstellen Sie ein Verzeichnis mit dem Namen „distribution“ in Firefox.app/Contents/Resources/ und platzieren Sie die Datei „policies.js“ dort."
+  },
+  "explanation_intro_windows": {
+    "message": "erstellen Sie ein Verzeichnis mit dem Namen „distribution“ in dem Verzeichnis, in welchem sich die Datei firefox.exe befindet und platzieren sie Datei „policies.js“ dort."
+  },
   "extension_description": {
     "message": "Generiert Enterprise Policies für Firefox."
   },
   "extension_name": {
     "message": "Enterprise Policy Generator"
+  },
+  "future_feature_a": {
+    "message": "Konfigurationen speichern und laden"
+  },
+  "future_feature_b": {
+    "message": "Anzeige der erforderlichen Firefox-Version für jede Richtlinie, sobald weitere Richtlinien in späteren Versionen von Firefox unterstützt werden"
+  },
+  "future_feature_c": {
+    "message": "eine noch bessere Bedienbarkeit"
+  },
+  "future_feature_github": {
+    "message": "… und vielleicht Ihr Vorschlag??"
+  },
+  "future_headline": {
+    "message": "Weitere Funktionen sind für die Zukunft bereits geplant!"
   },
   "generate_button": {
     "message": "Richtlinien generieren"
