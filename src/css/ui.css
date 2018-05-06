@@ -181,8 +181,18 @@ button:hover::before {
 }
 
 .esr-only {
+  margin-top: 2px;
   font-size: small;
-  color: rgb(255, 0, 0);
+  color: rgb(10, 132, 255);
+}
+
+.esr-only img {
+  position: relative;
+  top: -1px;
+  margin-right: 2px;
+  width: auto;
+  height: 20px;
+  vertical-align: middle;
 }
 
 @media screen and (max-width: 1199px) {

@@ -324,10 +324,16 @@ const configurator = {
     elObjectWrapper.appendChild(elLabel);
 
     if (policy.enterprise_only) {
-      const elESRNotice = document.createElement('span');
+      const elESRNotice = document.createElement('div');
       elESRNotice.classList.add('esr-only');
-      elESRNotice.textContent += ' (!) ' + browser.i18n.getMessage('enterprise_only_label');
       elLabel.appendChild(elESRNotice);
+
+      const elESRImage = document.createElement('img');
+      elESRImage.src = '/images/warning.svg';
+      elESRNotice.appendChild(elESRImage);
+
+      const elESRText = document.createTextNode(browser.i18n.getMessage('enterprise_only_label'));
+      elESRNotice.appendChild(elESRText);
     }
 
     const elSubOptions = document.createElement('div');
@@ -385,10 +391,16 @@ const configurator = {
     elObjectWrapper.appendChild(elLabel);
 
     if (policy.enterprise_only) {
-      const elESRNotice = document.createElement('span');
+      const elESRNotice = document.createElement('div');
       elESRNotice.classList.add('esr-only');
-      elESRNotice.textContent += ' (!) ' + browser.i18n.getMessage('enterprise_only_label');
       elLabel.appendChild(elESRNotice);
+
+      const elESRImage = document.createElement('img');
+      elESRImage.src = '/images/warning.svg';
+      elESRNotice.appendChild(elESRImage);
+
+      const elESRText = document.createTextNode(browser.i18n.getMessage('enterprise_only_label'));
+      elESRNotice.appendChild(elESRText);
     }
 
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
@@ -413,10 +425,16 @@ const configurator = {
     elObjectWrapper.appendChild(elLabel);
 
     if (policy.enterprise_only) {
-      const elESRNotice = document.createElement('span');
+      const elESRNotice = document.createElement('div');
       elESRNotice.classList.add('esr-only');
-      elESRNotice.textContent += ' (!) ' + browser.i18n.getMessage('enterprise_only_label');
       elLabel.appendChild(elESRNotice);
+
+      const elESRImage = document.createElement('img');
+      elESRImage.src = '/images/warning.svg';
+      elESRNotice.appendChild(elESRImage);
+
+      const elESRText = document.createTextNode(browser.i18n.getMessage('enterprise_only_label'));
+      elESRNotice.appendChild(elESRText);
     }
 
     const elSelectWrapper = document.createElement('div');
@@ -466,10 +484,16 @@ const configurator = {
     elObjectWrapper.appendChild(elLabel);
 
     if (policy.enterprise_only) {
-      const elESRNotice = document.createElement('span');
+      const elESRNotice = document.createElement('div');
       elESRNotice.classList.add('esr-only');
-      elESRNotice.textContent += ' (!) ' + browser.i18n.getMessage('enterprise_only_label');
       elLabel.appendChild(elESRNotice);
+
+      const elESRImage = document.createElement('img');
+      elESRImage.src = '/images/warning.svg';
+      elESRNotice.appendChild(elESRImage);
+
+      const elESRText = document.createTextNode(browser.i18n.getMessage('enterprise_only_label'));
+      elESRNotice.appendChild(elESRText);
     }
 
     const elSubOptions = document.createElement('div');
@@ -513,10 +537,16 @@ const configurator = {
     elObjectWrapper.appendChild(elLabel);
 
     if (policy.enterprise_only) {
-      const elESRNotice = document.createElement('span');
+      const elESRNotice = document.createElement('div');
       elESRNotice.classList.add('esr-only');
-      elESRNotice.textContent += ' (!) ' + browser.i18n.getMessage('enterprise_only_label');
       elLabel.appendChild(elESRNotice);
+
+      const elESRImage = document.createElement('img');
+      elESRImage.src = '/images/warning.svg';
+      elESRNotice.appendChild(elESRImage);
+
+      const elESRText = document.createTextNode(browser.i18n.getMessage('enterprise_only_label'));
+      elESRNotice.appendChild(elESRText);
     }
 
     const elSubOptions = document.createElement('div');
