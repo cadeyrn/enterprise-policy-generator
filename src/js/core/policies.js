@@ -180,7 +180,7 @@ const policies = {
       {
         name : 'URL',
         label : browser.i18n.getMessage('policy_description_Homepage_URL'),
-        mandatory: true,
+        mandatory : true,
         type : 'url'
       },
       {
@@ -188,7 +188,7 @@ const policies = {
         label : browser.i18n.getMessage('policy_description_Homepage_Additional'),
         mandatory : false,
         type : 'array',
-        items: {
+        items : {
           label : browser.i18n.getMessage('policy_description_Homepage_URL'),
           type : 'url'
         }
@@ -301,7 +301,7 @@ const policies = {
         label : browser.i18n.getMessage('policy_description_InstallAddonsPermission_Allow'),
         mandatory : false,
         type : 'array',
-        items: {
+        items : {
           label : browser.i18n.getMessage('policy_description_InstallAddonsPermission_Allow_URL'),
           type : 'url'
         }
@@ -319,9 +319,9 @@ const policies = {
       {
         name : 'Install',
         label : browser.i18n.getMessage('policy_description_Extensions_Install'),
-        mandatory: false,
+        mandatory : false,
         type : 'array',
-        items: {
+        items : {
           label : browser.i18n.getMessage('policy_description_Extensions_Install_URL_or_Path'),
           type : 'string'
         }
@@ -329,9 +329,9 @@ const policies = {
       {
         name : 'Uninstall',
         label : browser.i18n.getMessage('policy_description_Extensions_Uninstall'),
-        mandatory: false,
+        mandatory : false,
         type : 'array',
-        items: {
+        items : {
           label : browser.i18n.getMessage('policy_description_Extensions_Uninstall_ID'),
           type : 'string'
         }
@@ -339,9 +339,9 @@ const policies = {
       {
         name : 'Locked',
         label : browser.i18n.getMessage('policy_description_Extensions_Locked'),
-        mandatory: false,
+        mandatory : false,
         type : 'array',
-        items: {
+        items : {
           label : browser.i18n.getMessage('policy_description_Extensions_Locked_ID'),
           type : 'string'
         }
@@ -361,9 +361,9 @@ const policies = {
       {
         name : 'Block',
         label : browser.i18n.getMessage('policy_description_WebsiteFilter_Block'),
-        mandatory: false,
+        mandatory : false,
         type : 'array',
-        items: {
+        items : {
           label : browser.i18n.getMessage('policy_description_WebsiteFilter_Block_URL'),
           type : 'string'
         }
@@ -373,7 +373,7 @@ const policies = {
         label : browser.i18n.getMessage('policy_description_WebsiteFilter_Exceptions'),
         mandatory : false,
         type : 'array',
-        items: {
+        items : {
           label : browser.i18n.getMessage('policy_description_WebsiteFilter_Exceptions_URL'),
           type : 'string'
         }
@@ -527,7 +527,7 @@ const policies = {
         label : browser.i18n.getMessage('policy_description_Authentication_SPNEGO'),
         mandatory : false,
         type : 'array',
-        items: {
+        items : {
           label : browser.i18n.getMessage('policy_description_Authentication_SPNEGO_URL'),
           type : 'string'
         }
@@ -537,7 +537,7 @@ const policies = {
         label : browser.i18n.getMessage('policy_description_Authentication_Delegated'),
         mandatory : false,
         type : 'array',
-        items: {
+        items : {
           label : browser.i18n.getMessage('policy_description_Authentication_Delegated_URL'),
           type : 'string'
         }
@@ -547,7 +547,7 @@ const policies = {
         label : browser.i18n.getMessage('policy_description_Authentication_NTLM'),
         mandatory : false,
         type : 'array',
-        items: {
+        items : {
           label : browser.i18n.getMessage('policy_description_Authentication_NTLM_URL'),
           type : 'string'
         }
@@ -569,7 +569,7 @@ const policies = {
         label : browser.i18n.getMessage('policy_description_Cookies_Allow'),
         mandatory : false,
         type : 'array',
-        items: {
+        items : {
           label : browser.i18n.getMessage('policy_description_Cookies_Allow_Domain'),
           type : 'string'
         }
@@ -579,7 +579,7 @@ const policies = {
         label : browser.i18n.getMessage('policy_description_Cookies_Block'),
         mandatory : false,
         type : 'array',
-        items: {
+        items : {
           label : browser.i18n.getMessage('policy_description_Cookies_Block_Domain'),
           type : 'string'
         }
@@ -685,9 +685,9 @@ const policies = {
       {
         name : 'Allow',
         label : browser.i18n.getMessage('policy_description_FlashPlugin_Allow'),
-        mandatory: false,
+        mandatory : false,
         type : 'array',
-        items: {
+        items : {
           label : browser.i18n.getMessage('policy_description_FlashPlugin_Allow_URL'),
           type : 'string'
         }
@@ -695,9 +695,9 @@ const policies = {
       {
         name : 'Block',
         label : browser.i18n.getMessage('policy_description_FlashPlugin_Block'),
-        mandatory: false,
+        mandatory : false,
         type : 'array',
-        items: {
+        items : {
           label : browser.i18n.getMessage('policy_description_FlashPlugin_Block_URL'),
           type : 'string'
         }
@@ -857,7 +857,7 @@ const policies = {
         label : browser.i18n.getMessage('policy_description_PopupBlocking_Allow'),
         mandatory : false,
         type : 'array',
-        items: {
+        items : {
           label : browser.i18n.getMessage('policy_description_PopupBlocking_Allow_URL'),
           type : 'url'
         }
@@ -902,11 +902,11 @@ const policies = {
   },
 
   OverridePostUpdatePage : {
-    description: browser.i18n.getMessage('policy_description_OverridePostUpdatePage'),
-    enterprise_only: true,
-    first_available: '60.0',
-    ui_category: 'others',
-    type: 'string',
-    label: 'URL'
+    description : browser.i18n.getMessage('policy_description_OverridePostUpdatePage'),
+    enterprise_only : true,
+    first_available : '60.0',
+    ui_category : 'others',
+    type : 'string',
+    label : 'URL'
   }
 };

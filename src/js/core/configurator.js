@@ -90,7 +90,7 @@ const configurator = {
       case 'remove':
         const elGrandParent = e.target.parentNode.parentNode;
         const hasSubOptions = elGrandParent.querySelectorAll('.sub-options').length > 0;
-        let newLength;
+        let newLength = 0;
 
         if (hasSubOptions) {
           newLength = elGrandParent.querySelectorAll('.sub-options').length - 1;
@@ -104,7 +104,7 @@ const configurator = {
         }
 
         if (newLength === 1) {
-          elGrandParent.querySelector('[data-action="remove"]').classList.add('disabled-link')
+          elGrandParent.querySelector('[data-action="remove"]').classList.add('disabled-link');
         }
 
         break;
@@ -579,7 +579,7 @@ const configurator = {
           policymanager.add(el.name, !el.getAttribute('data-inverse'));
         }
         else if (el.getAttribute('data-type') === 'enum') {
-          const name = el.name;
+          const { name } = el;
 
           [...el.parentNode.querySelectorAll(':scope > .enum select')].forEach((el) => {
             let { value } = el.options[el.selectedIndex];
