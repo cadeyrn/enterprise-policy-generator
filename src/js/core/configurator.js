@@ -2,6 +2,7 @@
 
 /* global policies, policymanager */
 
+const elActionLinks = document.getElementById('action-links');
 const elDownloadLink = document.getElementById('download');
 const elPolicyGeneratorButton = document.getElementById('generate');
 const elPolicyOutput = document.getElementById('policy-output');
@@ -61,8 +62,7 @@ const configurator = {
       e.preventDefault();
 
       elPolicyOutput.innerText = configurator.generatePoliciesOutput();
-      elSelectAllLink.classList.remove('hidden');
-      elDownloadLink.classList.remove('hidden');
+      elActionLinks.classList.remove('hidden');
     };
 
     elSelectAllLink.onclick = function (e) {
