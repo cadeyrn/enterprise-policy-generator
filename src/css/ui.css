@@ -118,13 +118,8 @@ button:hover::before {
   transition-timing-function: cubic-bezier(.52, 1.64, .37, .66);
 }
 
-.hidden {
+.hidden, .disabled {
   display: none;
-}
-
-.disabled {
-  opacity: .2;
-  pointer-events: none;
 }
 
 .disabled-link {
