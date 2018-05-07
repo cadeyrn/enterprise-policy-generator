@@ -102,7 +102,6 @@ const configurator = {
 
           el.value = '';
           el.setAttribute('id', randomId);
-          el.parentNode.querySelector('label').setAttribute('for', randomId);
         });
 
         addedNode.querySelectorAll('a').forEach((el) => {
@@ -226,17 +225,13 @@ const configurator = {
     elInput.setAttribute('type', 'text');
     elInput.setAttribute('name', policy.name);
     elInput.setAttribute('id', policy.name);
+    elInput.setAttribute('placeholder', policy.label);
 
     if (policy.mandatory) {
       elInput.setAttribute('data-mandatory', 'true');
     }
 
     elObjectWrapper.appendChild(elInput);
-
-    const elLabel = document.createElement('label');
-    elLabel.setAttribute('for', policy.name);
-    elLabel.textContent = policy.label;
-    elObjectWrapper.appendChild(elLabel);
 
     if (isArrayProperty) {
       const elRemoveIconText = document.createTextNode('[-]');
@@ -274,17 +269,13 @@ const configurator = {
     elInput.setAttribute('type', 'url');
     elInput.setAttribute('name', policy.name);
     elInput.setAttribute('id', policy.name);
+    elInput.setAttribute('placeholder', policy.label);
 
     if (policy.mandatory) {
       elInput.setAttribute('data-mandatory', 'true');
     }
 
     elObjectWrapper.appendChild(elInput);
-
-    const elLabel = document.createElement('label');
-    elLabel.setAttribute('for', policy.name);
-    elLabel.textContent = policy.label;
-    elObjectWrapper.appendChild(elLabel);
 
     if (isArrayProperty) {
       const elRemoveIconText = document.createTextNode('[-]');
