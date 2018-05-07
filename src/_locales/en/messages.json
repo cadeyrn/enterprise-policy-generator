@@ -38,6 +38,9 @@
   "generate_button": {
     "message": "Generate Policies"
   },
+  "link_download": {
+    "message": "download policies.js"
+  },
   "link_select_all": {
     "message": "select all"
   },

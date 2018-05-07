@@ -29,6 +29,9 @@
     "page": "html/configurator.html",
     "open_in_tab": true
   },
+  "permissions": [
+    "downloads"
+  ],
   "default_locale": "en",
   "applications": {
     "gecko": {

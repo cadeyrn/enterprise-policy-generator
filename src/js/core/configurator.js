@@ -2,6 +2,7 @@
 
 /* global policies, policymanager */
 
+const elDownloadLink = document.getElementById('download');
 const elPolicyGeneratorButton = document.getElementById('generate');
 const elPolicyOutput = document.getElementById('policy-output');
 const elSelectAllLink = document.getElementById('select-all');
@@ -61,6 +62,7 @@ const configurator = {
 
       elPolicyOutput.innerText = configurator.generatePoliciesOutput();
       elSelectAllLink.classList.remove('hidden');
+      elDownloadLink.classList.remove('hidden');
     };
 
     elSelectAllLink.onclick = function (e) {
@@ -71,6 +73,16 @@ const configurator = {
       range.selectNodeContents(elPolicyOutput);
       selection.removeAllRanges();
       selection.addRange(range);
+    };
+
+    elDownloadLink.onclick = function (e) {
+      e.preventDefault();
+
+      browser.downloads.download({
+        'saveAs' : true,
+        'url' : URL.createObjectURL(new Blob([elPolicyOutput.innerText])),
+        'filename' : 'policies.js',
+      });
     };
   },
 

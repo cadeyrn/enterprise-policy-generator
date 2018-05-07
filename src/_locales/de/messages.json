@@ -38,6 +38,9 @@
   "generate_button": {
     "message": "Richtlinien generieren"
   },
+  "link_download": {
+    "message": "policies.js herunterladen"
+  },
   "link_select_all": {
     "message": "alles markieren"
   },
