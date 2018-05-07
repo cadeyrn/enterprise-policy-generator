@@ -522,13 +522,9 @@ const configurator = {
     elInput.setAttribute('type', 'text');
     elInput.setAttribute('name', key + 'Text');
     elInput.setAttribute('id', key + 'Text');
+    elInput.setAttribute('placeholder', policy.label);
 
     elSubOptions.appendChild(elInput);
-
-    const elInputLabel = document.createElement('label');
-    elInputLabel.setAttribute('for', key + 'Text');
-    elInputLabel.textContent = policy.label;
-    elSubOptions.appendChild(elInputLabel);
 
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
   },
