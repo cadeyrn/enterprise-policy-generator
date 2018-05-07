@@ -26,6 +26,24 @@ label {
   cursor: pointer;
 }
 
+input[type='text'], input[type='url'] {
+  box-sizing: border-box;
+  padding: 0 10px;
+  width: calc(100% - 50px);
+  height: 30px;
+  border: 2px solid rgb(54, 57, 89);
+  border-radius: 2px;
+  transition: border ease 250ms;
+}
+
+input[type='text']:focus, input[type='url']:focus {
+  border-color: rgb(0, 102, 225);
+}
+
+.input + .input > input {
+  margin-top: 2px;
+}
+
 .checkbox {
   position: relative;
   margin-bottom: 5px;
