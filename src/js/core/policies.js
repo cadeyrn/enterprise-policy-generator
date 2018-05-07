@@ -755,8 +755,8 @@ const policies = {
         type : 'enum',
         options : [
           {
-            label : 'prevent',
-            value : browser.i18n.getMessage('policy_description_DisableSecurityBypass_SafeBrowsing_true')
+            label : browser.i18n.getMessage('policy_description_DisableSecurityBypass_SafeBrowsing_true'),
+            value : 'true'
           },
           {
             label : browser.i18n.getMessage('policy_description_DisableSecurityBypass_SafeBrowsing_false'),
