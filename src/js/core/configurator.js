@@ -331,7 +331,7 @@ const configurator = {
 
   addArrayOption (key, policy) {
     const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('array');
+    elObjectWrapper.classList.add('checkbox');
 
     const elCheckbox = document.createElement('input');
     elCheckbox.setAttribute('type', 'checkbox');
