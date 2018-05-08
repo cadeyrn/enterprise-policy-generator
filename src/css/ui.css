@@ -127,6 +127,17 @@ button:hover::before {
   opacity: .2;
 }
 
+.action-img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+.array-action + .array-action {
+  margin-left: -3px;
+}
+
 #header {
   position: fixed;
   z-index: 10;

@@ -234,24 +234,32 @@ const configurator = {
     elObjectWrapper.appendChild(elInput);
 
     if (isArrayProperty) {
-      const elRemoveIconText = document.createTextNode('[-]');
-      const elRemoveIcon = document.createElement('a');
-      elRemoveIcon.appendChild(elRemoveIconText);
-      elRemoveIcon.setAttribute('href', '#');
-      elRemoveIcon.setAttribute('data-action', 'remove');
-      elRemoveIcon.setAttribute('title', browser.i18n.getMessage('title_remove_row'));
-      elRemoveIcon.classList.add('array-action');
-      elRemoveIcon.classList.add('disabled-link');
-      elObjectWrapper.appendChild(elRemoveIcon);
+      const elRemoveLink = document.createElement('a');
+      elRemoveLink.setAttribute('href', '#');
+      elRemoveLink.setAttribute('data-action', 'remove');
+      elRemoveLink.setAttribute('title', browser.i18n.getMessage('title_remove_row'));
+      elRemoveLink.classList.add('array-action');
+      elRemoveLink.classList.add('disabled-link');
+      elObjectWrapper.appendChild(elRemoveLink);
 
-      const elAddIconText = document.createTextNode('[+]');
-      const elAddIcon = document.createElement('a');
-      elAddIcon.appendChild(elAddIconText);
-      elAddIcon.setAttribute('href', '#');
-      elAddIcon.setAttribute('data-action', 'add');
-      elAddIcon.setAttribute('title', browser.i18n.getMessage('title_add_row'));
-      elAddIcon.classList.add('array-action');
-      elObjectWrapper.appendChild(elAddIcon);
+      const elRemoveIcon = document.createElement('img');
+      elRemoveIcon.src = '/images/minus.svg';
+      elRemoveIcon.classList.add('action-img');
+      elRemoveIcon.setAttribute('alt', browser.i18n.getMessage('title_remove_row'));
+      elRemoveLink.appendChild(elRemoveIcon);
+
+      const elAddLink = document.createElement('a');
+      elAddLink.setAttribute('href', '#');
+      elAddLink.setAttribute('data-action', 'add');
+      elAddLink.setAttribute('title', browser.i18n.getMessage('title_add_row'));
+      elAddLink.classList.add('array-action');
+      elObjectWrapper.appendChild(elAddLink);
+
+      const elAddIcon = document.createElement('img');
+      elAddIcon.src = '/images/plus.svg';
+      elAddIcon.classList.add('action-img');
+      elAddIcon.setAttribute('alt', browser.i18n.getMessage('title_add_row'));
+      elAddLink.appendChild(elAddIcon);
     }
 
     el.appendChild(elObjectWrapper);
@@ -278,24 +286,32 @@ const configurator = {
     elObjectWrapper.appendChild(elInput);
 
     if (isArrayProperty) {
-      const elRemoveIconText = document.createTextNode('[-]');
-      const elRemoveIcon = document.createElement('a');
-      elRemoveIcon.appendChild(elRemoveIconText);
-      elRemoveIcon.setAttribute('href', '#');
-      elRemoveIcon.setAttribute('data-action', 'remove');
-      elRemoveIcon.setAttribute('title', browser.i18n.getMessage('title_remove_row'));
-      elRemoveIcon.classList.add('array-action');
-      elRemoveIcon.classList.add('disabled-link');
-      elObjectWrapper.appendChild(elRemoveIcon);
+      const elRemoveLink = document.createElement('a');
+      elRemoveLink.setAttribute('href', '#');
+      elRemoveLink.setAttribute('data-action', 'remove');
+      elRemoveLink.setAttribute('title', browser.i18n.getMessage('title_remove_row'));
+      elRemoveLink.classList.add('array-action');
+      elRemoveLink.classList.add('disabled-link');
+      elObjectWrapper.appendChild(elRemoveLink);
 
-      const elAddIconText = document.createTextNode('[+]');
-      const elAddIcon = document.createElement('a');
-      elAddIcon.appendChild(elAddIconText);
-      elAddIcon.setAttribute('href', '#');
-      elAddIcon.setAttribute('data-action', 'add');
-      elAddIcon.setAttribute('title', browser.i18n.getMessage('title_add_row'));
-      elAddIcon.classList.add('array-action');
-      elObjectWrapper.appendChild(elAddIcon);
+      const elRemoveIcon = document.createElement('img');
+      elRemoveIcon.src = '/images/minus.svg';
+      elRemoveIcon.classList.add('action-img');
+      elRemoveIcon.setAttribute('alt', browser.i18n.getMessage('title_remove_row'));
+      elRemoveLink.appendChild(elRemoveIcon);
+
+      const elAddLink = document.createElement('a');
+      elAddLink.setAttribute('href', '#');
+      elAddLink.setAttribute('data-action', 'add');
+      elAddLink.setAttribute('title', browser.i18n.getMessage('title_add_row'));
+      elAddLink.classList.add('array-action');
+      elObjectWrapper.appendChild(elAddLink);
+
+      const elAddIcon = document.createElement('img');
+      elAddIcon.src = '/images/plus.svg';
+      elAddIcon.classList.add('action-img');
+      elAddIcon.setAttribute('alt', browser.i18n.getMessage('title_add_row'));
+      elAddLink.appendChild(elAddIcon);
     }
 
     el.appendChild(elObjectWrapper);
@@ -361,24 +377,32 @@ const configurator = {
       }
     }
 
-    const elRemoveIconText = document.createTextNode('[-]');
-    const elRemoveIcon = document.createElement('a');
-    elRemoveIcon.appendChild(elRemoveIconText);
-    elRemoveIcon.setAttribute('href', '#');
-    elRemoveIcon.setAttribute('data-action', 'remove');
-    elRemoveIcon.setAttribute('title', browser.i18n.getMessage('title_remove_row'));
-    elRemoveIcon.classList.add('array-action');
-    elRemoveIcon.classList.add('disabled-link');
-    elSubOptions.appendChild(elRemoveIcon);
+    const elRemoveLink = document.createElement('a');
+    elRemoveLink.setAttribute('href', '#');
+    elRemoveLink.setAttribute('data-action', 'remove');
+    elRemoveLink.setAttribute('title', browser.i18n.getMessage('title_remove_row'));
+    elRemoveLink.classList.add('array-action');
+    elRemoveLink.classList.add('disabled-link');
+    elObjectWrapper.appendChild(elRemoveLink);
 
-    const elAddIconText = document.createTextNode('[+]');
-    const elAddIcon = document.createElement('a');
-    elAddIcon.appendChild(elAddIconText);
-    elAddIcon.setAttribute('href', '#');
-    elAddIcon.setAttribute('data-action', 'add');
-    elAddIcon.setAttribute('title', browser.i18n.getMessage('title_add_row'));
-    elAddIcon.classList.add('array-action');
-    elSubOptions.appendChild(elAddIcon);
+    const elRemoveIcon = document.createElement('img');
+    elRemoveIcon.src = '/images/minus.svg';
+    elRemoveIcon.classList.add('action-img');
+    elRemoveIcon.setAttribute('alt', browser.i18n.getMessage('title_remove_row'));
+    elRemoveLink.appendChild(elRemoveIcon);
+
+    const elAddLink = document.createElement('a');
+    elAddLink.setAttribute('href', '#');
+    elAddLink.setAttribute('data-action', 'add');
+    elAddLink.setAttribute('title', browser.i18n.getMessage('title_add_row'));
+    elAddLink.classList.add('array-action');
+    elObjectWrapper.appendChild(elAddLink);
+
+    const elAddIcon = document.createElement('img');
+    elAddIcon.src = '/images/plus.svg';
+    elAddIcon.classList.add('action-img');
+    elAddIcon.setAttribute('alt', browser.i18n.getMessage('title_add_row'));
+    elAddLink.appendChild(elAddIcon);
 
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
   },
