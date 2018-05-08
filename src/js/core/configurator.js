@@ -383,7 +383,7 @@ const configurator = {
     elRemoveLink.setAttribute('title', browser.i18n.getMessage('title_remove_row'));
     elRemoveLink.classList.add('array-action');
     elRemoveLink.classList.add('disabled-link');
-    elObjectWrapper.appendChild(elRemoveLink);
+    elSubOptions.appendChild(elRemoveLink);
 
     const elRemoveIcon = document.createElement('img');
     elRemoveIcon.src = '/images/minus.svg';
@@ -396,7 +396,7 @@ const configurator = {
     elAddLink.setAttribute('data-action', 'add');
     elAddLink.setAttribute('title', browser.i18n.getMessage('title_add_row'));
     elAddLink.classList.add('array-action');
-    elObjectWrapper.appendChild(elAddLink);
+    elSubOptions.appendChild(elAddLink);
 
     const elAddIcon = document.createElement('img');
     elAddIcon.src = '/images/plus.svg';
