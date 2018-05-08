@@ -211,15 +211,16 @@ button:hover::before {
 .esr-only {
   margin-top: 2px;
   font-size: small;
-  color: rgb(10, 132, 255);
+  color: rgb(19, 69, 99);
+  opacity: .8;
 }
 
 .esr-only img {
   position: relative;
   top: -1px;
   margin-right: 2px;
-  width: auto;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   vertical-align: middle;
 }
 
