@@ -81,7 +81,7 @@ const configurator = {
       browser.downloads.download({
         'saveAs' : true,
         'url' : URL.createObjectURL(new Blob([elPolicyOutput.innerText])),
-        'filename' : 'policies.js',
+        'filename' : 'policies.json',
       });
     };
   },

@@ -6,13 +6,13 @@
     "message": "Anwendung"
   },
   "explanation_intro": {
-    "message": "Per Klick auf den Button wird ein Code generiert. Dieser muss in einer Datei „policies.js“ gespeichert werden, welche im Distributionsverzeichnis abgelegt werden muss."
+    "message": "Per Klick auf den Button wird ein Code generiert. Dieser muss in einer Datei „policies.json“ gespeichert werden, welche im Distributionsverzeichnis abgelegt werden muss."
   },
   "explanation_intro_macos": {
-    "message": "erstellen Sie ein Verzeichnis mit dem Namen „distribution“ in Firefox.app/Contents/Resources/ und platzieren Sie die Datei „policies.js“ dort."
+    "message": "erstellen Sie ein Verzeichnis mit dem Namen „distribution“ in Firefox.app/Contents/Resources/ und platzieren Sie die Datei „policies.json“ dort."
   },
   "explanation_intro_windows": {
-    "message": "erstellen Sie ein Verzeichnis mit dem Namen „distribution“ in dem Verzeichnis, in welchem sich die Datei firefox.exe befindet und platzieren sie Datei „policies.js“ dort."
+    "message": "erstellen Sie ein Verzeichnis mit dem Namen „distribution“ in dem Verzeichnis, in welchem sich die Datei firefox.exe befindet und platzieren sie Datei „policies.json“ dort."
   },
   "extension_description": {
     "message": "Generiert Enterprise Policies für Firefox."
@@ -39,7 +39,7 @@
     "message": "Richtlinien generieren"
   },
   "link_download": {
-    "message": "policies.js herunterladen"
+    "message": "policies.json herunterladen"
   },
   "link_select_all": {
     "message": "alles markieren"
