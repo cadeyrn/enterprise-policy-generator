@@ -138,6 +138,27 @@ button:hover::before {
   margin-left: -3px;
 }
 
+input[data-type='array'] ~ .sub-options {
+  position: relative;
+}
+
+input[data-type='array'] ~ .sub-options + .sub-options {
+  margin-top: 30px;
+}
+
+input[data-type='array'] ~ .sub-options .array-action {
+  position: absolute;
+  top: 3px;
+}
+
+input[data-type='array'] ~ .sub-options .array-action[data-action='remove'] {
+  right: 26px;
+}
+
+input[data-type='array'] ~ .sub-options .array-action[data-action='add'] {
+  right: 5px;
+}
+
 #header {
   position: fixed;
   z-index: 10;
