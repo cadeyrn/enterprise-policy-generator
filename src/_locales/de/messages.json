@@ -8,6 +8,9 @@
   "explanation_intro": {
     "message": "Per Klick auf den Button wird ein Code generiert. Dieser muss in einer Datei „policies.json“ gespeichert werden, welche im Distributionsverzeichnis abgelegt werden muss."
   },
+  "explanation_intro_linux": {
+    "message": "erstellen Sie ein Verzeichnis mit dem Namen „distribution“ in dem Verzeichnis, in welchem sich Firefox befindet und platzieren sie Datei „policies.json“ dort."
+  },
   "explanation_intro_macos": {
     "message": "erstellen Sie ein Verzeichnis mit dem Namen „distribution“ in Firefox.app/Contents/Resources/ und platzieren Sie die Datei „policies.json“ dort."
   },

@@ -8,6 +8,9 @@
   "explanation_intro": {
     "message": "By clicking on the button a code will be generated. This code must be stored in a file “policies.json” which must be stored in the distribution directory."
   },
+  "explanation_intro_linux": {
+    "message": "create a directory called “distribution” in the directory where Firefox is located and place the file “policies.json” there."
+  },
   "explanation_intro_macos": {
     "message": "create a directory called “distribution” in Firefox.app/Contents/Resources/ and place the file “policies.json” there."
   },
