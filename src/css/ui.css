@@ -159,6 +159,22 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'] {
   right: 5px;
 }
 
+.label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.select-label {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.select-label + select {
+  margin-bottom: 5px;
+}
+
 #header {
   position: fixed;
   z-index: 10;

@@ -185,6 +185,12 @@ const configurator = {
     const elObjectWrapper = document.createElement('div');
     elObjectWrapper.classList.add('enum');
 
+    const elLabel = document.createElement('label');
+    elLabel.setAttribute('for', policy.name);
+    elLabel.classList.add('select-label');
+    elLabel.textContent = policy.label;
+    elObjectWrapper.appendChild(elLabel);
+
     const elSelect = document.createElement('select');
     elSelect.setAttribute('name', policy.name);
     elSelect.setAttribute('id', policy.name);
@@ -204,11 +210,6 @@ const configurator = {
     }
 
     elObjectWrapper.appendChild(elSelect);
-
-    const elLabel = document.createElement('label');
-    elLabel.setAttribute('for', policy.name);
-    elLabel.textContent = policy.label;
-    elObjectWrapper.appendChild(elLabel);
 
     el.appendChild(elObjectWrapper);
   },
@@ -322,8 +323,12 @@ const configurator = {
     elObjectWrapper.classList.add('array');
     elObjectWrapper.setAttribute('data-name', policy.name);
 
+    const elCaptionWrapper = document.createElement('div');
+    elCaptionWrapper.classList.add('label');
+    elObjectWrapper.appendChild(elCaptionWrapper);
+
     const elCaption = document.createTextNode(policy.label);
-    elObjectWrapper.appendChild(elCaption);
+    elCaptionWrapper.appendChild(elCaption);
 
     if (policy.items) {
       configurator.addProperty(elObjectWrapper, policy.items, true);
@@ -479,6 +484,12 @@ const configurator = {
     const elSelectWrapper = document.createElement('div');
     elSelectWrapper.classList.add('enum', 'sub-options', 'disabled');
 
+    const elSelectLabel = document.createElement('label');
+    elSelectLabel.setAttribute('for', key + '_select');
+    elSelectLabel.classList.add('select-label');
+    elSelectLabel.textContent = policy.label;
+    elSelectWrapper.appendChild(elSelectLabel);
+
     const elSelect = document.createElement('select');
     elSelect.setAttribute('name', key + '_select');
     elSelect.setAttribute('id', key + '_select');
@@ -495,11 +506,6 @@ const configurator = {
         elSelect.appendChild(elOption);
       }
     }
-
-    const elSelectLabel = document.createElement('label');
-    elSelectLabel.setAttribute('for', key + '_select');
-    elSelectLabel.textContent = policy.label;
-    elSelectWrapper.appendChild(elSelectLabel);
 
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
   },
