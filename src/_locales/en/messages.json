@@ -228,7 +228,7 @@
     "message": "Disable the ability to restart Firefox with add-ons disabled (safe mode)"
   },
   "policy_description_DisableSecurityBypass": {
-    "message": "Bypass certain security warnings"
+    "message": "Prevent certain security warnings from being bypassed"
   },
   "policy_description_DisableSecurityBypass_InvalidCertificate": {
     "message": "Prevent adding an exception when an invalid certificate is shown"
@@ -336,7 +336,7 @@
     "message": "Allow webites to install add-ons"
   },
   "policy_description_InstallAddonsPermission_Allow": {
-    "message": "Websites that can install extensions (unless the installation of add-ons is disabled)"
+    "message": "Websites that can install extensions unless the installation of add-ons is disabled (addons.mozilla.org is already allowed)"
   },
   "policy_description_InstallAddonsPermission_Allow_URL": {
     "message": "URL"
@@ -459,7 +459,7 @@
     "message": "the search and the address bar are unified"
   },
   "policy_description_WebsiteFilter": {
-    "message": "Blocks websites from being visited. Only HTTPS and HTTP are supported and you can use \"<all_urls>\" for blocking all URLs"
+    "message": "Blocks websites from being visited. Only HTTPS and HTTP are supported and you can use \"<all_urls>\" for blocking all URLs."
   },
   "policy_description_WebsiteFilter_Block": {
     "message": "Block the following URLs"
