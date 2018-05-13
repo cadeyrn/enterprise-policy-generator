@@ -374,6 +374,25 @@ const configurator = {
       elESRNotice.appendChild(elESRText);
     }
 
+    if (policy.info_link) {
+      const elInfoLinkWrapper = document.createElement('div');
+      elInfoLinkWrapper.classList.add('info-link');
+      elLabel.appendChild(elInfoLinkWrapper);
+
+      const elInfoLink = document.createElement('a');
+      elInfoLink.setAttribute('href', policy.info_link);
+      elInfoLink.setAttribute('target', '_blank');
+      elInfoLink.setAttribute('rel', 'noopener');
+      elInfoLinkWrapper.appendChild(elInfoLink);
+
+      const elInfoLinkImage = document.createElement('img');
+      elInfoLinkImage.src = '/images/link.svg';
+      elInfoLink.appendChild(elInfoLinkImage);
+
+      const elInfoLinkText = document.createTextNode(browser.i18n.getMessage('link_learn_more'));
+      elInfoLink.appendChild(elInfoLinkText);
+    }
+
     const elSubOptions = document.createElement('div');
     elSubOptions.classList.add('sub-options', 'disabled');
     elObjectWrapper.appendChild(elSubOptions);
@@ -449,6 +468,25 @@ const configurator = {
       elESRNotice.appendChild(elESRText);
     }
 
+    if (policy.info_link) {
+      const elInfoLinkWrapper = document.createElement('div');
+      elInfoLinkWrapper.classList.add('info-link');
+      elLabel.appendChild(elInfoLinkWrapper);
+
+      const elInfoLink = document.createElement('a');
+      elInfoLink.setAttribute('href', policy.info_link);
+      elInfoLink.setAttribute('target', '_blank');
+      elInfoLink.setAttribute('rel', 'noopener');
+      elInfoLinkWrapper.appendChild(elInfoLink);
+
+      const elInfoLinkImage = document.createElement('img');
+      elInfoLinkImage.src = '/images/link.svg';
+      elInfoLink.appendChild(elInfoLinkImage);
+
+      const elInfoLinkText = document.createTextNode(browser.i18n.getMessage('link_learn_more'));
+      elInfoLink.appendChild(elInfoLinkText);
+    }
+
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
   },
 
@@ -481,6 +519,25 @@ const configurator = {
 
       const elESRText = document.createTextNode(browser.i18n.getMessage('enterprise_only_label'));
       elESRNotice.appendChild(elESRText);
+    }
+
+    if (policy.info_link) {
+      const elInfoLinkWrapper = document.createElement('div');
+      elInfoLinkWrapper.classList.add('info-link');
+      elLabel.appendChild(elInfoLinkWrapper);
+
+      const elInfoLink = document.createElement('a');
+      elInfoLink.setAttribute('href', policy.info_link);
+      elInfoLink.setAttribute('target', '_blank');
+      elInfoLink.setAttribute('rel', 'noopener');
+      elInfoLinkWrapper.appendChild(elInfoLink);
+
+      const elInfoLinkImage = document.createElement('img');
+      elInfoLinkImage.src = '/images/link.svg';
+      elInfoLink.appendChild(elInfoLinkImage);
+
+      const elInfoLinkText = document.createTextNode(browser.i18n.getMessage('link_learn_more'));
+      elInfoLink.appendChild(elInfoLinkText);
     }
 
     const elSelectWrapper = document.createElement('div');
@@ -545,6 +602,25 @@ const configurator = {
       elESRNotice.appendChild(elESRText);
     }
 
+    if (policy.info_link) {
+      const elInfoLinkWrapper = document.createElement('div');
+      elInfoLinkWrapper.classList.add('info-link');
+      elLabel.appendChild(elInfoLinkWrapper);
+
+      const elInfoLink = document.createElement('a');
+      elInfoLink.setAttribute('href', policy.info_link);
+      elInfoLink.setAttribute('target', '_blank');
+      elInfoLink.setAttribute('rel', 'noopener');
+      elInfoLinkWrapper.appendChild(elInfoLink);
+
+      const elInfoLinkImage = document.createElement('img');
+      elInfoLinkImage.src = '/images/link.svg';
+      elInfoLink.appendChild(elInfoLinkImage);
+
+      const elInfoLinkText = document.createTextNode(browser.i18n.getMessage('link_learn_more'));
+      elInfoLink.appendChild(elInfoLinkText);
+    }
+
     const elSubOptions = document.createElement('div');
     elSubOptions.classList.add('sub-options', 'disabled');
     elObjectWrapper.appendChild(elSubOptions);
@@ -592,6 +668,25 @@ const configurator = {
 
       const elESRText = document.createTextNode(browser.i18n.getMessage('enterprise_only_label'));
       elESRNotice.appendChild(elESRText);
+    }
+
+    if (policy.info_link) {
+      const elInfoLinkWrapper = document.createElement('div');
+      elInfoLinkWrapper.classList.add('info-link');
+      elLabel.appendChild(elInfoLinkWrapper);
+
+      const elInfoLink = document.createElement('a');
+      elInfoLink.setAttribute('href', policy.info_link);
+      elInfoLink.setAttribute('target', '_blank');
+      elInfoLink.setAttribute('rel', 'noopener');
+      elInfoLinkWrapper.appendChild(elInfoLink);
+
+      const elInfoLinkImage = document.createElement('img');
+      elInfoLinkImage.src = '/images/link.svg';
+      elInfoLink.appendChild(elInfoLinkImage);
+
+      const elInfoLinkText = document.createTextNode(browser.i18n.getMessage('link_learn_more'));
+      elInfoLink.appendChild(elInfoLinkText);
     }
 
     const elSubOptions = document.createElement('div');

@@ -44,6 +44,9 @@
   "link_download": {
     "message": "download policies.json"
   },
+  "link_learn_more": {
+    "message": "more information"
+  },
   "link_select_all": {
     "message": "select all"
   },
