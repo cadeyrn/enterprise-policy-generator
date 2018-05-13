@@ -287,11 +287,16 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'] {
   text-decoration: none;
 }
 
-.esr-only, .info-link {
+.esr-only {
   margin-top: 2px;
   font-size: small;
   color: rgb(19, 69, 99);
   opacity: .8;
+}
+
+.info-link {
+  margin-top: 2px;
+  font-size: small;
 }
 
 .esr-only img, .info-link img {
