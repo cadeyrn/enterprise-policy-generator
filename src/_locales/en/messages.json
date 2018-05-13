@@ -201,7 +201,7 @@
     "message": "Disable the menu items “Submit Feedback” and “Report Deceptive Site” in the help menu"
   },
   "policy_description_DisableFirefoxAccounts": {
-    "message": "Disable Firefox Account based services, including Firefox Sync"
+    "message": "Disable Firefox Account based services like Firefox Sync"
   },
   "policy_description_DisableFirefoxScreenshots": {
     "message": "Disable the built-in screenshot tool (Firefox Screenshots)"
