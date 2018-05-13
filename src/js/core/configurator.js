@@ -693,6 +693,20 @@ const configurator = {
     elSubOptions.classList.add('sub-options', 'disabled');
     elObjectWrapper.appendChild(elSubOptions);
 
+    if (policy.is_lockable) {
+      const elLockCheckbox = document.createElement('input');
+      elLockCheckbox.setAttribute('type', 'checkbox');
+      elLockCheckbox.setAttribute('name', key + '_Locked');
+      elLockCheckbox.setAttribute('id', key + '_Locked');
+      elLockCheckbox.classList.add('lock-checkbox');
+      elSubOptions.appendChild(elLockCheckbox);
+
+      const elLockLabel = document.createElement('label');
+      elLockLabel.setAttribute('for', key + '_Locked');
+      elLockLabel.textContent = browser.i18n.getMessage('lock_preference');
+      elSubOptions.appendChild(elLockLabel);
+    }
+
     if (policy.properties) {
       for (const key in policy.properties) {
         if ({}.hasOwnProperty.call(policy.properties, key)) {
@@ -833,6 +847,11 @@ const configurator = {
               policy[el.name] = el.value;
             }
           });
+
+          const lockable = el.parentNode.querySelector('.lock-checkbox');
+          if (lockable && lockable.checked) {
+            policy['Locked'] = true;
+          }
 
           // only add non-empty policies
           if (Object.keys(policy).length > 0) {

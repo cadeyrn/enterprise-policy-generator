@@ -50,6 +50,9 @@
   "link_select_all": {
     "message": "select all"
   },
+  "lock_preference": {
+    "message": "Protect preference from change"
+  },
   "policy_category_block_access": {
     "message": "Block Access"
   },

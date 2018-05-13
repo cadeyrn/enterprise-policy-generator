@@ -50,6 +50,9 @@
   "link_select_all": {
     "message": "alles markieren"
   },
+  "lock_preference": {
+    "message": "Einstellung vor Veränderung schützen"
+  },
   "policy_category_block_access": {
     "message": "Zugang blockieren"
   },
