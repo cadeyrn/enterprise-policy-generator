@@ -290,8 +290,7 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'] {
 .esr-only {
   margin-top: 2px;
   font-size: small;
-  color: rgb(19, 69, 99);
-  opacity: .8;
+  color: rgba(19, 69, 99, .8);
 }
 
 .info-link {
