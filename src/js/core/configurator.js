@@ -185,11 +185,13 @@ const configurator = {
     const elObjectWrapper = document.createElement('div');
     elObjectWrapper.classList.add('enum');
 
-    const elLabel = document.createElement('label');
-    elLabel.setAttribute('for', policy.name);
-    elLabel.classList.add('select-label');
-    elLabel.textContent = policy.label;
-    elObjectWrapper.appendChild(elLabel);
+    if (policy.label) {
+      const elLabel = document.createElement('label');
+      elLabel.setAttribute('for', policy.name);
+      elLabel.classList.add('select-label');
+      elLabel.textContent = policy.label;
+      elObjectWrapper.appendChild(elLabel);
+    }
 
     const elSelect = document.createElement('select');
     elSelect.setAttribute('name', policy.name);
@@ -484,11 +486,13 @@ const configurator = {
     const elSelectWrapper = document.createElement('div');
     elSelectWrapper.classList.add('enum', 'sub-options', 'disabled');
 
-    const elSelectLabel = document.createElement('label');
-    elSelectLabel.setAttribute('for', key + '_select');
-    elSelectLabel.classList.add('select-label');
-    elSelectLabel.textContent = policy.label;
-    elSelectWrapper.appendChild(elSelectLabel);
+    if (policy.label) {
+      const elSelectLabel = document.createElement('label');
+      elSelectLabel.setAttribute('for', key + '_select');
+      elSelectLabel.classList.add('select-label');
+      elSelectLabel.textContent = policy.label;
+      elSelectWrapper.appendChild(elSelectLabel);
+    }
 
     const elSelect = document.createElement('select');
     elSelect.setAttribute('name', key + '_select');

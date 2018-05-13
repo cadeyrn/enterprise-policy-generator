@@ -202,7 +202,7 @@ const policies = {
     first_available : '60.0',
     ui_category : 'customization',
     type : 'enum',
-    label : browser.i18n.getMessage('policy_description_SearchBar_label'),
+    label : null,
     options : [
       {
         label : browser.i18n.getMessage('policy_description_SearchBar_options_unified'),
@@ -249,6 +249,12 @@ const policies = {
         type : 'url'
       },
       {
+        name : 'Folder',
+        label : browser.i18n.getMessage('policy_description_Bookmarks_Folder'),
+        mandatory : false,
+        type : 'string'
+      },
+      {
         name : 'Placement',
         label : browser.i18n.getMessage('policy_description_Bookmarks_Placement'),
         mandatory : false,
@@ -263,12 +269,6 @@ const policies = {
             value : 'menu'
           }
         ]
-      },
-      {
-        name : 'Folder',
-        label : browser.i18n.getMessage('policy_description_Bookmarks_Folder'),
-        mandatory : false,
-        type : 'string'
       }
     ]
   },
@@ -282,7 +282,7 @@ const policies = {
     properties : [
       {
         name : 'Default',
-        label : browser.i18n.getMessage('policy_description_InstallAddonsPermission_Default'),
+        label : null,
         mandatory : false,
         type : 'enum',
         options : [
@@ -390,7 +390,7 @@ const policies = {
     properties : [
       {
         name : 'Mode',
-        label : browser.i18n.getMessage('policy_description_Proxy_Mode'),
+        label : null,
         mandatory : false,
         type : 'enum',
         options : [
@@ -424,7 +424,7 @@ const policies = {
       },
       {
         name : 'UseHTTPProxyForAllProtocols',
-        label : browser.i18n.getMessage('policy_description_Proxy_UseHTTPProxyForAllProtocols'),
+        label : null,
         type : 'enum',
         options : [
           {
@@ -457,7 +457,7 @@ const policies = {
       },
       {
         name : 'SOCKSVersion',
-        label : browser.i18n.getMessage('policy_description_Proxy_SOCKSVersion'),
+        label : null,
         type : 'enum',
         options : [
           {
@@ -656,7 +656,7 @@ const policies = {
     properties : [
       {
         name : 'Value',
-        label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Value'),
+        label : null,
         mandatory : true,
         type : 'enum',
         options : [
@@ -683,26 +683,6 @@ const policies = {
     type : 'object',
     properties : [
       {
-        name : 'Allow',
-        label : browser.i18n.getMessage('policy_description_FlashPlugin_Allow'),
-        mandatory : false,
-        type : 'array',
-        items : {
-          label : browser.i18n.getMessage('policy_description_FlashPlugin_Allow_URL'),
-          type : 'string'
-        }
-      },
-      {
-        name : 'Block',
-        label : browser.i18n.getMessage('policy_description_FlashPlugin_Block'),
-        mandatory : false,
-        type : 'array',
-        items : {
-          label : browser.i18n.getMessage('policy_description_FlashPlugin_Block_URL'),
-          type : 'string'
-        }
-      },
-      {
         name : 'Default',
         label : browser.i18n.getMessage('policy_description_FlashPlugin_Default'),
         mandatory : false,
@@ -721,6 +701,26 @@ const policies = {
             value : 'false'
           }
         ]
+      },
+      {
+        name : 'Allow',
+        label : browser.i18n.getMessage('policy_description_FlashPlugin_Allow'),
+        mandatory : false,
+        type : 'array',
+        items : {
+          label : browser.i18n.getMessage('policy_description_FlashPlugin_Allow_URL'),
+          type : 'string'
+        }
+      },
+      {
+        name : 'Block',
+        label : browser.i18n.getMessage('policy_description_FlashPlugin_Block'),
+        mandatory : false,
+        type : 'array',
+        items : {
+          label : browser.i18n.getMessage('policy_description_FlashPlugin_Block_URL'),
+          type : 'string'
+        }
       }
     ]
   },
@@ -776,7 +776,7 @@ const policies = {
     properties : [
       {
         name : 'ImportEnterpriseRoots',
-        label : browser.i18n.getMessage('policy_description_Certificates_ImportEnterpriseRoots'),
+        label : null,
         mandatory : false,
         type : 'enum',
         options : [
@@ -838,7 +838,7 @@ const policies = {
     properties : [
       {
         name : 'Default',
-        label : browser.i18n.getMessage('policy_description_PopupBlocking_Default'),
+        label : null,
         mandatory : false,
         type : 'enum',
         options : [
@@ -871,7 +871,7 @@ const policies = {
     first_available : '60.0',
     ui_category : 'others',
     type : 'enum',
-    label : browser.i18n.getMessage('policy_description_OfferToSaveLogins_label'),
+    label : null,
     options : [
       {
         label : browser.i18n.getMessage('policy_description_OfferToSaveLogins_options_true'),
