@@ -277,7 +277,7 @@ const configurator = {
     }
 
     const elInput = document.createElement('input');
-    elInput.setAttribute('type', 'url');
+    elInput.setAttribute('type', 'text');
     elInput.setAttribute('name', policy.name);
     elInput.setAttribute('id', policy.name);
     elInput.setAttribute('placeholder', policy.label);
