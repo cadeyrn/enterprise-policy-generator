@@ -245,14 +245,14 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'] {
   text-decoration: none;
 }
 
-.esr-only {
+.esr-only, .info-link {
   margin-top: 2px;
   font-size: small;
   color: rgb(19, 69, 99);
   opacity: .8;
 }
 
-.esr-only img {
+.esr-only img, .info-link img {
   position: relative;
   top: -1px;
   margin-right: 2px;
