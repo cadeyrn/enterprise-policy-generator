@@ -11,6 +11,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'block-access',
     type : 'boolean'
   },
@@ -20,6 +21,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'block-access',
     type : 'boolean'
   },
@@ -29,6 +31,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'block-access',
     type : 'boolean'
   },
@@ -38,6 +41,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'block-access',
     type : 'boolean'
   },
@@ -49,6 +53,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -58,6 +63,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -67,6 +73,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -76,6 +83,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -85,6 +93,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -94,6 +103,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : 'https://blog.mozilla.org/blog/2017/02/27/mozilla-acquires-pocket/',
+    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -103,6 +113,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -112,6 +123,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -121,6 +133,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -130,6 +143,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -139,6 +153,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -148,6 +163,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -157,6 +173,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -166,6 +183,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -177,6 +195,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'customization',
     type : 'boolean'
   },
@@ -186,6 +205,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'customization',
     type : 'boolean'
   },
@@ -195,6 +215,7 @@ const policies = {
     enterprise_only : true,
     first_available : '60.0',
     info_link : null,
+    is_lockable : true,
     ui_category : 'customization',
     type : 'object',
     properties : [
@@ -222,6 +243,7 @@ const policies = {
     enterprise_only : true,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'customization',
     type : 'enum',
     label : null,
@@ -242,6 +264,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'customization',
     type : 'boolean'
   },
@@ -251,6 +274,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'customization',
     type : 'array',
     items : [
@@ -302,6 +326,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'customization',
     type : 'object',
     properties : [
@@ -339,6 +364,7 @@ const policies = {
     enterprise_only : true,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'customization',
     type : 'object',
     properties : [
@@ -382,6 +408,7 @@ const policies = {
     enterprise_only : true,
     first_available : '60.0',
     info_link : 'https://developer.mozilla.org/Add-ons/WebExtensions/Match_patterns',
+    is_lockable : false,
     ui_category : 'network',
     type : 'object',
     properties : [
@@ -413,6 +440,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : true,
     ui_category : 'network',
     type : 'object',
     properties : [
@@ -548,6 +576,7 @@ const policies = {
     enterprise_only : true,
     first_available : '60.0',
     info_link : 'https://developer.mozilla.org/docs/Mozilla/Integrated_authentication',
+    is_lockable : false,
     ui_category : 'network',
     type : 'object',
     properties : [
@@ -591,6 +620,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : true,
     ui_category : 'privacy',
     type : 'object',
     properties : [
@@ -674,6 +704,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'privacy',
     type : 'boolean'
   },
@@ -683,6 +714,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : true,
     ui_category : 'privacy',
     type : 'object',
     properties : [
@@ -712,6 +744,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : true,
     ui_category : 'security',
     type : 'object',
     properties : [
@@ -763,6 +796,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'security',
     type : 'object',
     properties : [
@@ -814,6 +848,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'security',
     type : 'object',
     properties : [
@@ -843,6 +878,7 @@ const policies = {
     enterprise_only : true,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
@@ -852,6 +888,7 @@ const policies = {
     enterprise_only : true,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
@@ -861,6 +898,7 @@ const policies = {
     enterprise_only : true,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
@@ -870,6 +908,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
@@ -881,6 +920,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : true,
     ui_category : 'others',
     type : 'object',
     properties : [
@@ -918,6 +958,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'others',
     type : 'enum',
     label : null,
@@ -938,6 +979,7 @@ const policies = {
     enterprise_only : false,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'others',
     type : 'boolean'
   },
@@ -947,6 +989,7 @@ const policies = {
     enterprise_only : true,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'others',
     type : 'string',
     label : 'URL'
@@ -957,6 +1000,7 @@ const policies = {
     enterprise_only : true,
     first_available : '60.0',
     info_link : null,
+    is_lockable : false,
     ui_category : 'others',
     type : 'string',
     label : 'URL'
