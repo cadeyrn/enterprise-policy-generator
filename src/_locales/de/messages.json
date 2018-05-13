@@ -144,7 +144,7 @@
     "message": "Webseiten erlauben oder verbieten, Cookies zu setzen"
   },
   "policy_description_Cookies_AcceptThirdParty": {
-    "message": "Der Standard-Wert für \"Cookies und Website-Daten von Drittanbietern akzeptieren\""
+    "message": "Der Standard-Wert für „Cookies und Website-Daten von Drittanbietern akzeptieren“"
   },
   "policy_description_Cookies_AcceptThirdParty_always": {
     "message": "immer"
@@ -168,7 +168,7 @@
     "message": "Domain"
   },
   "policy_description_Cookies_Default": {
-    "message": "Der Standard-Wert für \"Cookies und Website-Daten annehmen\""
+    "message": "Der Standard-Wert für „Cookies und Website-Daten annehmen“"
   },
   "policy_description_Cookies_Default_false": {
     "message": "Cookies nicht akzeptieren"
@@ -195,7 +195,7 @@
     "message": "Deaktiviere die eingebauten Entwickler-Werkzeuge"
   },
   "policy_description_DisableFeedbackCommands": {
-    "message": "Deaktiviere die Menü-Einträge \"Feedback senden\" und \"Betrügerische Website melden\" im Hilfe-Menü"
+    "message": "Deaktiviere die Menü-Einträge „Feedback senden“ und „Betrügerische Website melden“ im Hilfe-Menü"
   },
   "policy_description_DisableFirefoxAccounts": {
     "message": "Deaktiviere Firefox Account basierende Dienste, einschließlich Firefox Sync"
@@ -207,7 +207,7 @@
     "message": "Firefox an der Installation und Ausführung von Studien hindern (SHIELD-Studien)"
   },
   "policy_description_DisableForgetButton": {
-    "message": "Deaktiviere die \"Vergessen\" Schaltfläche, welche benutzt werden kann, um die Chronik zu löschen"
+    "message": "Deaktiviere die „Vergessen“ Schaltfläche, welche benutzt werden kann, um die Chronik zu löschen"
   },
   "policy_description_DisableFormHistory": {
     "message": "Deaktiviere die Formular- und Such-Chronik"
@@ -222,10 +222,10 @@
     "message": "Deaktiviere den Private Browsing-Modus"
   },
   "policy_description_DisableProfileImport": {
-    "message": "Deaktiviere den Menü-Eintrag \"Daten von einem anderen Browser importieren\" in der Bibliothek"
+    "message": "Deaktiviere den Menü-Eintrag „Daten von einem anderen Browser importieren“ in der Bibliothek"
   },
   "policy_description_DisableProfileRefresh": {
-    "message": "Deaktiviere die \"Firefox bereinigen\"-Schaltfläche in about:support"
+    "message": "Deaktiviere die „Firefox bereinigen“-Schaltfläche in about:support"
   },
   "policy_description_DisableSafeMode": {
     "message": "Deaktiviere die Möglichkeit, Firefox mit deaktivierten Add-ons neu zu starten (Abgesicherter Modus)"
@@ -243,7 +243,7 @@
     "message": "verhindern"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing": {
-    "message": "Verhindern der Auswahl \"das Risiko ignorieren\" und damit das Besuchen einer schädlichen Webseite"
+    "message": "Verhindern der Auswahl „das Risiko ignorieren“ und damit das Besuchen einer schädlichen Webseite"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_false": {
     "message": "nicht verhindern"
@@ -399,7 +399,7 @@
     "message": "Keine Authentifizierungsanfrage anzeigen"
   },
   "policy_description_Proxy_HTTPProxy": {
-    "message": "HTTP-Proxy. Um eine Port-Nummer festzulegen bitte \":\" gefolgt von der Portnummer ergänzen"
+    "message": "HTTP-Proxy. Um eine Port-Nummer festzulegen bitte „:“ gefolgt von der Portnummer ergänzen"
   },
   "policy_description_Proxy_Mode_autoConfig": {
     "message": "Automatische Proxy-Konfigurations-Adresse"
@@ -417,13 +417,13 @@
     "message": "Proxy-Einstellungen des Systems verwenden"
   },
   "policy_description_Proxy_FTPProxy": {
-    "message": "FTP-Proxy. Um eine Port-Nummer festzulegen bitte \":\" gefolgt von der Portnummer ergänzen"
+    "message": "FTP-Proxy. Um eine Port-Nummer festzulegen bitte „:“ gefolgt von der Portnummer ergänzen"
   },
   "policy_description_Proxy_Passthrough": {
     "message": "Kein Proxy für…"
   },
   "policy_description_Proxy_SOCKSProxy": {
-    "message": "SOCKS-Host. Um eine Port-Nummer festzulegen bitte \":\" gefolgt von der Portnummer ergänzen"
+    "message": "SOCKS-Host. Um eine Port-Nummer festzulegen bitte „:“ gefolgt von der Portnummer ergänzen"
   },
   "policy_description_Proxy_SOCKSVersion_v4": {
     "message": "SOCKS v4"
@@ -432,7 +432,7 @@
     "message": "SOCKS v5"
   },
   "policy_description_Proxy_SSLProxy": {
-    "message": "SSL-Proxy. Um eine Port-Nummer festzulegen bitte \":\" gefolgt von der Portnummer ergänzen"
+    "message": "SSL-Proxy. Um eine Port-Nummer festzulegen bitte „:“ gefolgt von der Portnummer ergänzen"
   },
   "policy_description_Proxy_UseHTTPProxyForAllProtocols_false": {
     "message": "diesen Proxy-Server nicht für alle Protokolle verwenden"
@@ -462,7 +462,7 @@
     "message": "die Suchleiste ist mit der Adressleiste kombiniert"
   },
   "policy_description_WebsiteFilter": {
-    "message": "Blockiere Besuche von Webseiten. Nur HTTPS und HTTP werden unterstützt, es kann außerdem \"<all_urls>\" verwendet werden, um alle URLs zu blockieren."
+    "message": "Blockiere Besuche von Webseiten. Es kann „<all_urls>“ verwendet werden, um alle URLs zu blockieren. Siehe Info-Link für alle gültigen Eingaben, es werden jedoch nur HTTPS und HTTP unterstützt."
   },
   "policy_description_WebsiteFilter_Block": {
     "message": "Blockiere die folgenden URLs"

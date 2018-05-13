@@ -144,7 +144,7 @@
     "message": "Allow or deny websites to set cookies"
   },
   "policy_description_Cookies_AcceptThirdParty": {
-    "message": "The default value for \"Accept third-party cookies and site data\""
+    "message": "The default value for “Accept third-party cookies and site data”"
   },
   "policy_description_Cookies_AcceptThirdParty_always": {
     "message": "always"
@@ -168,7 +168,7 @@
     "message": "Domain"
   },
   "policy_description_Cookies_Default": {
-    "message": "The default value for \"Accept cookies and site data from websites\""
+    "message": "The default value for “Accept cookies and site data from websites”"
   },
   "policy_description_Cookies_Default_false": {
     "message": "don't accept cookies"
@@ -195,7 +195,7 @@
     "message": "Disable the built-in developer tools"
   },
   "policy_description_DisableFeedbackCommands": {
-    "message": "Disable the menu items \"Submit Feedback\" and \"Report Deceptive Site\" in the help menu"
+    "message": "Disable the menu items “Submit Feedback” and “Report Deceptive Site” in the help menu"
   },
   "policy_description_DisableFirefoxAccounts": {
     "message": "Disable Firefox Account based services, including Firefox Sync"
@@ -207,7 +207,7 @@
     "message": "Prevent Firefox from installing and running studies (SHIELD studies)"
   },
   "policy_description_DisableForgetButton": {
-    "message": "Disable the \"Forget\" toolbar button which can be used to forget the last browsing history"
+    "message": "Disable the “Forget” toolbar button which can be used to forget the last browsing history"
   },
   "policy_description_DisableFormHistory": {
     "message": "Disable the form and search bar history"
@@ -222,10 +222,10 @@
     "message": "Disable the private browsing mode"
   },
   "policy_description_DisableProfileImport": {
-    "message": "Disable the \"Import data from another browser\" menu item in the library"
+    "message": "Disable the “Import data from another browser” menu item in the library"
   },
   "policy_description_DisableProfileRefresh": {
-    "message": "Disable the \"Refresh Firefox\" button in about:support"
+    "message": "Disable the “Refresh Firefox” button in about:support"
   },
   "policy_description_DisableSafeMode": {
     "message": "Disable the ability to restart Firefox with add-ons disabled (safe mode)"
@@ -243,7 +243,7 @@
     "message": "prevent"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing": {
-    "message": "Prevent selecting \"ignore the risk\" and visiting a harmful site anyway"
+    "message": "Prevent selecting “ignore the risk and visiting a harmful site anyway"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_false": {
     "message": "don't prevent"
@@ -366,7 +366,7 @@
     "message": "Override the first run page. Set this policy to blank if you want to disable the first run page."
   },
   "policy_description_OverridePostUpdatePage": {
-    "message": "Override the post-update \"What's New\" page. Set this policy to blank if you want to disable the post-update page."
+    "message": "Override the post-update “What's New” page. Set this policy to blank if you want to disable the post-update page."
   },
   "policy_description_PopupBlocking": {
     "message": "Allow or deny pop-up usage"
@@ -399,7 +399,7 @@
     "message": "Don't prompt for authentication"
   },
   "policy_description_Proxy_HTTPProxy": {
-    "message": "HTTP Proxy. To configure port numbers please add a \":\" followed by the port number"
+    "message": "HTTP Proxy. To configure port numbers please add a “:” followed by the port number"
   },
   "policy_description_Proxy_Mode_autoConfig": {
     "message": "automatic proxy configuration url"
@@ -417,13 +417,13 @@
     "message": "use system proxy settings"
   },
   "policy_description_Proxy_FTPProxy": {
-    "message": "FTP Proxy. To configure port numbers please add a \":\" followed by the port number"
+    "message": "FTP Proxy. To configure port numbers please add a “:” followed by the port number"
   },
   "policy_description_Proxy_Passthrough": {
     "message": "No proxy for…"
   },
   "policy_description_Proxy_SOCKSProxy": {
-    "message": "SOCKS Host. To configure port numbers please add a \":\" followed by the port number"
+    "message": "SOCKS Host. To configure port numbers please add a “:” followed by the port number"
   },
   "policy_description_Proxy_SOCKSVersion_v4": {
     "message": "SOCKS v4"
@@ -432,7 +432,7 @@
     "message": "SOCKS v5"
   },
   "policy_description_Proxy_SSLProxy": {
-    "message": "SSL Proxy. To configure port numbers please add a \":\" followed by the port number"
+    "message": "SSL Proxy. To configure port numbers please add a “:” followed by the port number"
   },
   "policy_description_Proxy_UseHTTPProxyForAllProtocols_false": {
     "message": "don't use this proxy server  for all protocols"
@@ -462,7 +462,7 @@
     "message": "the search and the address bar are unified"
   },
   "policy_description_WebsiteFilter": {
-    "message": "Blocks websites from being visited. Only HTTPS and HTTP are supported and you can use \"<all_urls>\" for blocking all URLs."
+    "message": "Blocks websites from being visited. You can use “<all_urls>” for blocking all URLs. See info link for all valid entries, but only HTTPS and HTTP are supported."
   },
   "policy_description_WebsiteFilter_Block": {
     "message": "Block the following URLs"
