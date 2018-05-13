@@ -773,6 +773,10 @@ const policies = {
         type : 'enum',
         options : [
           {
+            label : browser.i18n.getMessage('policy_description_DisableSecurityBypass_InvalidCertificate_null'),
+            value : null
+          },
+          {
             label : browser.i18n.getMessage('policy_description_DisableSecurityBypass_InvalidCertificate_true'),
             value : 'true'
           },
@@ -788,6 +792,10 @@ const policies = {
         mandatory : false,
         type : 'enum',
         options : [
+          {
+            label : browser.i18n.getMessage('policy_description_DisableSecurityBypass_SafeBrowsing_null'),
+            value : null
+          },
           {
             label : browser.i18n.getMessage('policy_description_DisableSecurityBypass_SafeBrowsing_true'),
             value : 'true'
