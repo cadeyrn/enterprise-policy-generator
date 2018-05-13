@@ -222,7 +222,7 @@
     "message": "Deaktiviere die Integration von Pocket, einem Dienst von Mozilla"
   },
   "policy_description_DisablePrivateBrowsing": {
-    "message": "Deaktiviere den Private Browsing-Modus"
+    "message": "Deaktiviere den Privaten Modus"
   },
   "policy_description_DisableProfileImport": {
     "message": "Deaktiviere den Menü-Eintrag „Daten von einem anderen Browser importieren“ in der Bibliothek"
