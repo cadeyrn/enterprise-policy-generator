@@ -10,6 +10,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_BlockAboutAddons'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'block-access',
     type : 'boolean'
   },
@@ -18,6 +19,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_BlockAboutConfig'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'block-access',
     type : 'boolean'
   },
@@ -26,6 +28,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_BlockAboutProfiles'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'block-access',
     type : 'boolean'
   },
@@ -34,6 +37,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_BlockAboutSupport'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'block-access',
     type : 'boolean'
   },
@@ -44,6 +48,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_DisablePrivateBrowsing'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -52,6 +57,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_DisableFormHistory'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -60,6 +66,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_DisableBuiltinPDFViewer'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -68,6 +75,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_DisableFirefoxScreenshots'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -76,6 +84,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_DisableDeveloperTools'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -84,6 +93,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_DisablePocket'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : 'https://blog.mozilla.org/blog/2017/02/27/mozilla-acquires-pocket/',
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -92,6 +102,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_DisableFirefoxAccounts'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -100,6 +111,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_DisableMasterPasswordCreation'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -108,6 +120,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_DisableSetDesktopBackground'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -116,6 +129,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_DisableForgetButton'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -124,6 +138,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_DisableProfileImport'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -132,6 +147,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_DisableProfileRefresh'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -140,6 +156,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_DisableSafeMode'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -148,6 +165,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_DisableFeedbackCommands'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -158,6 +176,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_DisplayMenuBar'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'customization',
     type : 'boolean'
   },
@@ -166,6 +185,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_DisplayBookmarksToolbar'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'customization',
     type : 'boolean'
   },
@@ -174,6 +194,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_Homepage'),
     enterprise_only : true,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'customization',
     type : 'object',
     properties : [
@@ -200,6 +221,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_SearchBar'),
     enterprise_only : true,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'customization',
     type : 'enum',
     label : null,
@@ -219,6 +241,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_NoDefaultBookmarks'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'customization',
     type : 'boolean'
   },
@@ -227,6 +250,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_Bookmarks'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'customization',
     type : 'array',
     items : [
@@ -277,6 +301,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_InstallAddonsPermission'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'customization',
     type : 'object',
     properties : [
@@ -313,6 +338,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_Extensions'),
     enterprise_only : true,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'customization',
     type : 'object',
     properties : [
@@ -355,6 +381,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_WebsiteFilter'),
     enterprise_only : true,
     first_available : '60.0',
+    info_link : 'https://developer.mozilla.org/Add-ons/WebExtensions/Match_patterns',
     ui_category : 'network',
     type : 'object',
     properties : [
@@ -385,6 +412,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_Proxy'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'network',
     type : 'object',
     properties : [
@@ -519,6 +547,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_Authentication'),
     enterprise_only : true,
     first_available : '60.0',
+    info_link : 'https://developer.mozilla.org/docs/Mozilla/Integrated_authentication',
     ui_category : 'network',
     type : 'object',
     properties : [
@@ -561,6 +590,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_Cookies'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'privacy',
     type : 'object',
     properties : [
@@ -643,6 +673,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_SanitizeOnShutdown'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'privacy',
     type : 'boolean'
   },
@@ -651,6 +682,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_EnableTrackingProtection'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'privacy',
     type : 'object',
     properties : [
@@ -679,6 +711,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_FlashPlugin'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'security',
     type : 'object',
     properties : [
@@ -729,6 +762,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_DisableSecurityBypass'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'security',
     type : 'object',
     properties : [
@@ -771,6 +805,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_Certificates'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'security',
     type : 'object',
     properties : [
@@ -799,6 +834,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_DisableAppUpdate'),
     enterprise_only : true,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
@@ -807,6 +843,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_DisableSystemAddonUpdate'),
     enterprise_only : true,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
@@ -815,6 +852,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_DisableTelemetry'),
     enterprise_only : true,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
@@ -823,6 +861,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_DisableFirefoxStudies'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
@@ -833,6 +872,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_PopupBlocking'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'others',
     type : 'object',
     properties : [
@@ -869,6 +909,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_OfferToSaveLogins'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'others',
     type : 'enum',
     label : null,
@@ -888,6 +929,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_DontCheckDefaultBrowser'),
     enterprise_only : false,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'others',
     type : 'boolean'
   },
@@ -896,6 +938,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_OverrideFirstRunPage'),
     enterprise_only : true,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'others',
     type : 'string',
     label : 'URL'
@@ -905,6 +948,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_OverridePostUpdatePage'),
     enterprise_only : true,
     first_available : '60.0',
+    info_link : null,
     ui_category : 'others',
     type : 'string',
     label : 'URL'
