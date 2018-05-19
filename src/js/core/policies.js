@@ -259,6 +259,104 @@ const policies = {
     ]
   },
 
+  SearchEngines : {
+    description : browser.i18n.getMessage('policy_description_SearchEngines'),
+    enterprise_only : true,
+    first_available : '60.0',
+    info_link : null,
+    is_lockable : false,
+    ui_category : 'customization',
+    type : 'object',
+    properties : [
+      {
+        name : 'Default',
+        label : browser.i18n.getMessage('policy_description_SearchEngines_Default'),
+        mandatory : false,
+        type : 'string'
+      },
+      {
+        name : 'PreventInstalls',
+        label : browser.i18n.getMessage('policy_description_SearchEngines_PreventInstalls'),
+        mandatory : false,
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('policy_description_SearchEngines_PreventInstalls_null'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_SearchEngines_PreventInstalls_true'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_SearchEngines_PreventInstalls_false'),
+            value : 'false'
+          }
+        ]
+      },
+      {
+        name : 'Add',
+        label : browser.i18n.getMessage('policy_description_SearchEngines_Add'),
+        mandatory : false,
+        type : 'object-array',
+        items : [
+          {
+            name : 'Name',
+            label : browser.i18n.getMessage('policy_description_SearchEngines_Add_Name'),
+            mandatory : true,
+            type : 'string'
+          },
+          {
+            name : 'URLTemplate',
+            label : browser.i18n.getMessage('policy_description_SearchEngines_Add_URL'),
+            mandatory : true,
+            type : 'string'
+          },
+          {
+            name : 'IconURL',
+            label : browser.i18n.getMessage('policy_description_SearchEngines_Add_IconURL'),
+            mandatory : false,
+            type : 'string'
+          },
+          {
+            name : 'Alias',
+            label : browser.i18n.getMessage('policy_description_SearchEngines_Add_Alias'),
+            mandatory : false,
+            type : 'string'
+          },
+          {
+            name : 'Description',
+            label : browser.i18n.getMessage('policy_description_SearchEngines_Add_Description'),
+            mandatory : false,
+            type : 'string'
+          },
+          {
+            name : 'SuggestURLTemplate',
+            label : browser.i18n.getMessage('policy_description_SearchEngines_Add_SuggestURLTemplate'),
+            mandatory : false,
+            type : 'string'
+          },
+          {
+            name : 'Method',
+            label : browser.i18n.getMessage('policy_description_SearchEngines_Add_Method'),
+            mandatory : false,
+            type : 'enum',
+            options : [
+              {
+                label : browser.i18n.getMessage('policy_description_SearchEngines_Add_Method_GET'),
+                value : 'GET'
+              },
+              {
+                label : browser.i18n.getMessage('policy_description_SearchEngines_Add_Method_POST'),
+                value : 'POST'
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
   NoDefaultBookmarks : {
     description : browser.i18n.getMessage('policy_description_NoDefaultBookmarks'),
     enterprise_only : false,

@@ -470,6 +470,54 @@
   "policy_description_SearchBar_options_unified": {
     "message": "the search and the address bar are unified"
   },
+  "policy_description_SearchEngines": {
+    "message": "Modifies the list of search engines built into Firefox"
+  },
+  "policy_description_SearchEngines_Add": {
+    "message": "Add search engine(s)"
+  },
+  "policy_description_SearchEngines_Add_Alias": {
+    "message": "Alias that can be used to access the engine"
+  },
+  "policy_description_SearchEngines_Add_Description": {
+    "message": "Description"
+  },
+  "policy_description_SearchEngines_Add_IconURL": {
+    "message": "Icon URL"
+  },
+  "policy_description_SearchEngines_Add_Method": {
+    "message": "Request Method"
+  },
+  "policy_description_SearchEngines_Add_Method_GET": {
+    "message": "GET"
+  },
+  "policy_description_SearchEngines_Add_Method_POST": {
+    "message": "POST"
+  },
+  "policy_description_SearchEngines_Add_Name": {
+    "message": "Name"
+  },
+  "policy_description_SearchEngines_Add_SuggestURLTemplate": {
+    "message": "URL for suggestions. Please use {searchTerms} as placeholder for the search term"
+  },
+  "policy_description_SearchEngines_Add_URL": {
+    "message": "URL for searches. Please use {searchTerms} as placeholder for the search term"
+  },
+  "policy_description_SearchEngines_Default": {
+    "message": "Name of the default search engine"
+  },
+  "policy_description_SearchEngines_PreventInstalls": {
+    "message": "Prevent the installation of new search engines"
+  },
+  "policy_description_SearchEngines_PreventInstalls_false": {
+    "message": "don't prevent installs"
+  },
+  "policy_description_SearchEngines_PreventInstalls_null": {
+    "message": "no preference"
+  },
+  "policy_description_SearchEngines_PreventInstalls_true": {
+    "message": "prevent installs"
+  },
   "policy_description_WebsiteFilter": {
     "message": "Blocks websites from being visited. You can use “<all_urls>” for blocking all URLs. See info link for all valid entries, but only HTTPS and HTTP are supported."
   },

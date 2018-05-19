@@ -470,6 +470,54 @@
   "policy_description_SearchBar_options_unified": {
     "message": "die Suchleiste ist mit der Adressleiste kombiniert"
   },
+  "policy_description_SearchEngines": {
+    "message": "Ändere die Liste der in Firefox eingebauten Suchmaschinen"
+  },
+  "policy_description_SearchEngines_Add": {
+    "message": "Suchmaschine(n) hinzufügen"
+  },
+  "policy_description_SearchEngines_Add_Alias": {
+    "message": "Alias, welcher genutzt werden kann, um auf die Suchmaschine zuzugreifen"
+  },
+  "policy_description_SearchEngines_Add_Description": {
+    "message": "Beschreibung"
+  },
+  "policy_description_SearchEngines_Add_IconURL": {
+    "message": "Icon-URL"
+  },
+  "policy_description_SearchEngines_Add_Method": {
+    "message": "Anfrage-Methode"
+  },
+  "policy_description_SearchEngines_Add_Method_GET": {
+    "message": "GET"
+  },
+  "policy_description_SearchEngines_Add_Method_POST": {
+    "message": "POST"
+  },
+  "policy_description_SearchEngines_Add_Name": {
+    "message": "Name"
+  },
+  "policy_description_SearchEngines_Add_SuggestURLTemplate": {
+    "message": "URL für Vorschläge. Bitte {searchTerms} als Platzhalter für den Suchbegriff verwenden"
+  },
+  "policy_description_SearchEngines_Add_URL": {
+    "message": "URL für Suchen. Bitte {searchTerms} als Platzhalter für den Suchbegriff verwenden"
+  },
+  "policy_description_SearchEngines_Default": {
+    "message": "Name der Standard-Suchmaschine"
+  },
+  "policy_description_SearchEngines_PreventInstalls": {
+    "message": "Die Installation neuer Suchmaschinen verhindern"
+  },
+  "policy_description_SearchEngines_PreventInstalls_false": {
+    "message": "Installation nicht verhindern"
+  },
+  "policy_description_SearchEngines_PreventInstalls_null": {
+    "message": "keine Voreinstellung"
+  },
+  "policy_description_SearchEngines_PreventInstalls_true": {
+    "message": "Installation nicht verhindern"
+  },
   "policy_description_WebsiteFilter": {
     "message": "Blockiere Besuche von Webseiten. Es kann „<all_urls>“ verwendet werden, um alle URLs zu blockieren. Siehe Info-Link für alle gültigen Eingaben, es werden jedoch nur HTTPS und HTTP unterstützt."
   },
