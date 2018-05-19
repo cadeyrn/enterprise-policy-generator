@@ -112,10 +112,14 @@ const configurator = {
         break;
       case 'remove':
         const elGrandParent = e.target.parentNode.parentNode;
+        const isObjectArray = elGrandParent.classList.contains('object-array');
         const hasSubOptions = elGrandParent.querySelectorAll('.sub-options').length > 0;
         let newLength = 0;
 
-        if (hasSubOptions) {
+        if (isObjectArray) {
+          newLength = elGrandParent.querySelectorAll(':scope > div').length - 2;
+        }
+        else if (hasSubOptions) {
           newLength = elGrandParent.querySelectorAll('.sub-options').length - 1;
         }
         else {
@@ -138,6 +142,9 @@ const configurator = {
 
   addProperty (el, policy, isArrayProperty) {
     switch (policy.type) {
+      case 'object-array':
+        configurator.addObjectArrayProperty(el, policy);
+        break;
       case 'array':
         configurator.addArrayProperty(el, policy);
         break;
@@ -318,6 +325,57 @@ const configurator = {
     }
 
     el.appendChild(elObjectWrapper);
+  },
+
+  addObjectArrayProperty (el, policy) {
+    const elObjectWrapper = document.createElement('div');
+    elObjectWrapper.classList.add('object-array');
+    elObjectWrapper.setAttribute('data-name', policy.name);
+
+    const elCaptionWrapper = document.createElement('div');
+    elCaptionWrapper.classList.add('label');
+    elObjectWrapper.appendChild(elCaptionWrapper);
+
+    const elCaption = document.createTextNode(policy.label);
+    elCaptionWrapper.appendChild(elCaption);
+
+    el.appendChild(elObjectWrapper);
+
+    const elSubOptions = document.createElement('div');
+    elObjectWrapper.appendChild(elSubOptions);
+
+    for (const key in policy.items) {
+      if ({}.hasOwnProperty.call(policy.items, key)) {
+        configurator.addProperty(elSubOptions, policy.items[key]);
+      }
+    }
+
+    const elRemoveLink = document.createElement('a');
+    elRemoveLink.setAttribute('href', '#');
+    elRemoveLink.setAttribute('data-action', 'remove');
+    elRemoveLink.setAttribute('title', browser.i18n.getMessage('title_remove_row'));
+    elRemoveLink.classList.add('array-action');
+    elRemoveLink.classList.add('disabled-link');
+    elSubOptions.appendChild(elRemoveLink);
+
+    const elRemoveIcon = document.createElement('img');
+    elRemoveIcon.src = '/images/minus.svg';
+    elRemoveIcon.classList.add('action-img');
+    elRemoveIcon.setAttribute('alt', browser.i18n.getMessage('title_remove_row'));
+    elRemoveLink.appendChild(elRemoveIcon);
+
+    const elAddLink = document.createElement('a');
+    elAddLink.setAttribute('href', '#');
+    elAddLink.setAttribute('data-action', 'add');
+    elAddLink.setAttribute('title', browser.i18n.getMessage('title_add_row'));
+    elAddLink.classList.add('array-action');
+    elSubOptions.appendChild(elAddLink);
+
+    const elAddIcon = document.createElement('img');
+    elAddIcon.src = '/images/plus.svg';
+    elAddIcon.classList.add('action-img');
+    elAddIcon.setAttribute('alt', browser.i18n.getMessage('title_add_row'));
+    elAddLink.appendChild(elAddIcon);
   },
 
   addArrayProperty (el, policy) {
@@ -794,6 +852,56 @@ const configurator = {
         }
         else if (el.getAttribute('data-type') === 'object') {
           const policy = { };
+
+          [...el.parentNode.querySelectorAll(':scope > div > .object-array')].forEach((el) => {
+            const items = [];
+
+            [...el.querySelectorAll(':scope > div:not(.label)')].forEach((el) => {
+              const obj = {};
+
+              [...el.querySelectorAll(':scope > .input input')].forEach((arrEl) => {
+                if (arrEl.value) {
+                  obj[arrEl.name] = arrEl.value;
+                }
+              });
+
+              [...el.querySelectorAll(':scope > .enum select')].forEach((el) => {
+                let { value } = el.options[el.selectedIndex];
+
+                // null represents an empty state, there is nothing to do
+                if (value === 'null') {
+                  return;
+                }
+
+                // if the value is a number treat it as number
+                if (!isNaN(value)) {
+                  value = parseInt(value);
+                }
+
+                switch (value) {
+                  case 'true':
+                    value = true;
+                    break;
+                  case 'false':
+                    value = false;
+                    break;
+                  default:
+                  // do nothing
+                }
+
+                obj[el.name] = value;
+              });
+
+              // only add non-empty object
+              if (Object.keys(obj).length > 0) {
+                items.push(obj);
+              }
+            });
+
+            if (items.length > 0) {
+              policy[el.getAttribute('data-name')] = items;
+            }
+          });
 
           [...el.parentNode.querySelectorAll(':scope > div > .array')].forEach((el) => {
             const items = [];
