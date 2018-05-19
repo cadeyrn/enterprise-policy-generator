@@ -102,7 +102,7 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_DisablePocket'),
     enterprise_only : false,
     first_available : '60.0',
-    info_link : 'https://blog.mozilla.org/blog/2017/02/27/mozilla-acquires-pocket/',
+    info_link : null,
     is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
