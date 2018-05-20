@@ -55,7 +55,7 @@ const configurator = {
     });
 
     [...document.querySelectorAll('.array-action')].forEach((el) => {
-      el.addEventListener('click', configurator.addArrayActionListenerns);
+      el.addEventListener('click', configurator.addArrayActionListeners);
     });
 
     elPolicyGeneratorButton.onclick = function (e) {
@@ -86,7 +86,7 @@ const configurator = {
     };
   },
 
-  addArrayActionListenerns (e) {
+  addArrayActionListeners (e) {
     e.preventDefault();
 
     switch (e.target.getAttribute('data-action')) {
@@ -105,7 +105,7 @@ const configurator = {
         });
 
         addedNode.querySelectorAll('a').forEach((el) => {
-          el.addEventListener('click', configurator.addArrayActionListenerns);
+          el.addEventListener('click', configurator.addArrayActionListeners);
         });
 
         e.target.parentNode.after(addedNode);
