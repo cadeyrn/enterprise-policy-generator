@@ -501,7 +501,7 @@
     "message": "Name"
   },
   "policy_description_SearchEngines_Add_SuggestURLTemplate": {
-    "message": "URL für Vorschläge. "
+    "message": "URL für Vorschläge. Bitte {searchTerms} als Platzhalter für den Suchbegriff verwenden"
   },
   "policy_description_SearchEngines_Add_URL": {
     "message": "URL für Suchen. Bitte {searchTerms} als Platzhalter für den Suchbegriff verwenden"
