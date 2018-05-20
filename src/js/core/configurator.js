@@ -112,6 +112,12 @@ const configurator = {
           el.addEventListener('click', configurator.addArrayActionListeners);
         });
 
+        addedNode.querySelectorAll('input[data-mandatory]').forEach((el) => {
+          el.addEventListener('input', configurator.validateMandatoryFields);
+          el.classList.add('mandatory-style');
+          el.parentNode.querySelector('.mandatory-label').classList.remove('hidden');
+        });
+
         e.target.parentNode.after(addedNode);
         break;
       case 'remove':
