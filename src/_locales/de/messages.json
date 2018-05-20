@@ -519,7 +519,7 @@
     "message": "keine Voreinstellung"
   },
   "policy_description_SearchEngines_PreventInstalls_true": {
-    "message": "Installation nicht verhindern"
+    "message": "Installation verhindern"
   },
   "policy_description_WebsiteFilter": {
     "message": "Blockiere Besuche von Webseiten. Es kann „<all_urls>“ verwendet werden, um alle URLs zu blockieren. Siehe Info-Link für alle gültigen Eingaben, es werden jedoch nur HTTPS und HTTP unterstützt."
