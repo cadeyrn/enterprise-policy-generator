@@ -249,7 +249,7 @@
     "message": "verhindern"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing": {
-    "message": "Verhindern der Auswahl „das Risiko ignorieren“ und damit das Besuchen einer schädlichen Webseite"
+    "message": "Das Umgehen der Warnung und Besuchen einer schädlichen Webseite verhindern"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_false": {
     "message": "nicht verhindern"
@@ -498,7 +498,7 @@
     "message": "Name"
   },
   "policy_description_SearchEngines_Add_SuggestURLTemplate": {
-    "message": "URL für Vorschläge. Bitte {searchTerms} als Platzhalter für den Suchbegriff verwenden"
+    "message": "URL für Vorschläge. "
   },
   "policy_description_SearchEngines_Add_URL": {
     "message": "URL für Suchen. Bitte {searchTerms} als Platzhalter für den Suchbegriff verwenden"

@@ -249,7 +249,7 @@
     "message": "prevent"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing": {
-    "message": "Prevent selecting “ignore the risk and visiting a harmful site anyway"
+    "message": "Prevent the warning from being bypassed and a malicious website from being visited"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_false": {
     "message": "don't prevent"
