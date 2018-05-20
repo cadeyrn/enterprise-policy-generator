@@ -515,9 +515,6 @@
   "policy_description_SearchEngines_PreventInstalls_false": {
     "message": "don't prevent installs"
   },
-  "policy_description_SearchEngines_PreventInstalls_null": {
-    "message": "no preference"
-  },
   "policy_description_SearchEngines_PreventInstalls_true": {
     "message": "prevent installs"
   },

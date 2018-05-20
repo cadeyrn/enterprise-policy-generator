@@ -281,16 +281,12 @@ const policies = {
         type : 'enum',
         options : [
           {
-            label : browser.i18n.getMessage('policy_description_SearchEngines_PreventInstalls_null'),
-            value : null
+            label : browser.i18n.getMessage('policy_description_SearchEngines_PreventInstalls_false'),
+            value : 'false'
           },
           {
             label : browser.i18n.getMessage('policy_description_SearchEngines_PreventInstalls_true'),
             value : 'true'
-          },
-          {
-            label : browser.i18n.getMessage('policy_description_SearchEngines_PreventInstalls_false'),
-            value : 'false'
           }
         ]
       },
