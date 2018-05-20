@@ -834,32 +834,40 @@ const configurator = {
           const items = [];
 
           [...el.parentNode.querySelectorAll(':scope > div')].forEach((el) => {
-            const item = { };
+            let hasInvalidFields = false;
 
-            [...el.querySelectorAll(':scope input')].forEach((el) => {
-              if (el.value) {
-                item[el.name] = el.value;
-              }
-            });
+            if (el.querySelectorAll(':scope .mandatory-style').length > 0) {
+              hasInvalidFields = true;
+            }
 
-            [...el.querySelectorAll(':scope select')].forEach((el) => {
-              let { value } = el.options[el.selectedIndex];
+            if (!hasInvalidFields) {
+              const item = { };
 
-              switch (value) {
-                case 'true':
-                  value = true;
-                  break;
-                case 'false':
-                  value = false;
-                  break;
-                default:
-                // do nothing
-              }
+              [...el.querySelectorAll(':scope input')].forEach((el) => {
+                if (el.value) {
+                  item[el.name] = el.value;
+                }
+              });
 
-              item[el.name] = value;
-            });
+              [...el.querySelectorAll(':scope select')].forEach((el) => {
+                let { value } = el.options[el.selectedIndex];
 
-            items.push(item);
+                switch (value) {
+                  case 'true':
+                    value = true;
+                    break;
+                  case 'false':
+                    value = false;
+                    break;
+                  default:
+                  // do nothing
+                }
+
+                item[el.name] = value;
+              });
+
+              items.push(item);
+            }
           });
 
           if (items.length > 0) {
@@ -906,44 +914,52 @@ const configurator = {
             const items = [];
 
             [...el.querySelectorAll(':scope > div:not(.label)')].forEach((el) => {
-              const obj = {};
+              let hasInvalidFields = false;
 
-              [...el.querySelectorAll(':scope > .input input')].forEach((arrEl) => {
-                if (arrEl.value) {
-                  obj[arrEl.name] = arrEl.value;
+              if (el.querySelectorAll(':scope .mandatory-style').length > 0) {
+                hasInvalidFields = true;
+              }
+
+              if (!hasInvalidFields) {
+                const obj = {};
+
+                [...el.querySelectorAll(':scope > .input input')].forEach((arrEl) => {
+                  if (arrEl.value) {
+                    obj[arrEl.name] = arrEl.value;
+                  }
+                });
+
+                [...el.querySelectorAll(':scope > .enum select')].forEach((el) => {
+                  let { value } = el.options[el.selectedIndex];
+
+                  // null represents an empty state, there is nothing to do
+                  if (value === 'null') {
+                    return;
+                  }
+
+                  // if the value is a number treat it as number
+                  if (!isNaN(value)) {
+                    value = parseInt(value);
+                  }
+
+                  switch (value) {
+                    case 'true':
+                      value = true;
+                      break;
+                    case 'false':
+                      value = false;
+                      break;
+                    default:
+                    // do nothing
+                  }
+
+                  obj[el.name] = value;
+                });
+
+                // only add non-empty object
+                if (Object.keys(obj).length > 0) {
+                  items.push(obj);
                 }
-              });
-
-              [...el.querySelectorAll(':scope > .enum select')].forEach((el) => {
-                let { value } = el.options[el.selectedIndex];
-
-                // null represents an empty state, there is nothing to do
-                if (value === 'null') {
-                  return;
-                }
-
-                // if the value is a number treat it as number
-                if (!isNaN(value)) {
-                  value = parseInt(value);
-                }
-
-                switch (value) {
-                  case 'true':
-                    value = true;
-                    break;
-                  case 'false':
-                    value = false;
-                    break;
-                  default:
-                  // do nothing
-                }
-
-                obj[el.name] = value;
-              });
-
-              // only add non-empty object
-              if (Object.keys(obj).length > 0) {
-                items.push(obj);
               }
             });
 
