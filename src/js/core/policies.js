@@ -819,7 +819,7 @@ const policies = {
       {
         name : 'Value',
         label : null,
-        mandatory : true,
+        mandatory : false,
         type : 'enum',
         options : [
           {

@@ -58,6 +58,10 @@ const configurator = {
       el.addEventListener('click', configurator.addArrayActionListeners);
     });
 
+    [...document.querySelectorAll('input[data-mandatory]')].forEach((el) => {
+      el.addEventListener('input', configurator.validateMandatoryFields);
+    });
+
     elPolicyGeneratorButton.onclick = function (e) {
       e.preventDefault();
 
@@ -140,6 +144,17 @@ const configurator = {
     }
   },
 
+  validateMandatoryFields (e) {
+    if (e.target.value) {
+      e.target.classList.remove('mandatory-style');
+      e.target.parentNode.querySelector('.mandatory-label').classList.add('hidden');
+    }
+    else {
+      e.target.classList.add('mandatory-style');
+      e.target.parentNode.querySelector('.mandatory-label').classList.remove('hidden');
+    }
+  },
+
   addProperty (el, policy, isArrayProperty) {
     switch (policy.type) {
       case 'object-array':
@@ -176,6 +191,12 @@ const configurator = {
 
     if (policy.mandatory) {
       elInput.setAttribute('data-mandatory', 'true');
+      elInput.classList.add('mandatory-style');
+
+      const elMandatoryLabel = document.createElement('div');
+      elMandatoryLabel.classList.add('mandatory-label');
+      elMandatoryLabel.innerText = browser.i18n.getMessage('mandatory-label');
+      elObjectWrapper.appendChild(elMandatoryLabel);
     }
 
     elObjectWrapper.appendChild(elInput);
@@ -210,6 +231,12 @@ const configurator = {
 
     if (policy.mandatory) {
       elSelect.setAttribute('data-mandatory', 'true');
+      elSelect.classList.add('mandatory-style');
+
+      const elMandatoryLabel = document.createElement('div');
+      elMandatoryLabel.classList.add('mandatory-label');
+      elMandatoryLabel.innerText = browser.i18n.getMessage('mandatory-label');
+      elSelectWrapper.appendChild(elMandatoryLabel);
     }
 
     for (const key in policy.options) {
@@ -243,6 +270,12 @@ const configurator = {
 
     if (policy.mandatory) {
       elInput.setAttribute('data-mandatory', 'true');
+      elInput.classList.add('mandatory-style');
+
+      const elMandatoryLabel = document.createElement('div');
+      elMandatoryLabel.classList.add('mandatory-label');
+      elMandatoryLabel.innerText = browser.i18n.getMessage('mandatory-label');
+      elObjectWrapper.appendChild(elMandatoryLabel);
     }
 
     elObjectWrapper.appendChild(elInput);
@@ -295,6 +328,12 @@ const configurator = {
 
     if (policy.mandatory) {
       elInput.setAttribute('data-mandatory', 'true');
+      elInput.classList.add('mandatory-style');
+
+      const elMandatoryLabel = document.createElement('div');
+      elMandatoryLabel.classList.add('mandatory-label');
+      elMandatoryLabel.innerText = browser.i18n.getMessage('mandatory-label');
+      elObjectWrapper.appendChild(elMandatoryLabel);
     }
 
     elObjectWrapper.appendChild(elInput);

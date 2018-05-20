@@ -53,6 +53,9 @@
   "lock_preference": {
     "message": "Einstellung vor Veränderung schützen"
   },
+  "mandatory-label": {
+    "message": "erforderlich"
+  },
   "policy_category_block_access": {
     "message": "Zugang blockieren"
   },
