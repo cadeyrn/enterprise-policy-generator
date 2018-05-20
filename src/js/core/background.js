@@ -15,3 +15,9 @@ const background = {
 };
 
 browser.browserAction.onClicked.addListener(background.openUserInterface);
+
+browser.menus.create({
+  title : browser.i18n.getMessage('extension_name'),
+  contexts : ['tools_menu'],
+  command : '_execute_browser_action'
+});
