@@ -36,12 +36,35 @@ input[type='text'], input[type='url'] {
   transition: border ease 250ms;
 }
 
+input[type='text'].mandatory-style, input[type='url'].mandatory-style {
+  border-color: rgb(215, 0, 34);
+}
+
 input[type='text']:focus, input[type='url']:focus {
   border-color: rgb(0, 102, 225);
 }
 
+.input {
+  position: relative;
+}
+
 .input + .input > input {
   margin-top: 2px;
+}
+
+.mandatory-label {
+  position: absolute;
+  top: 4px;
+  right: 54px;
+  padding: 2px 5px;
+  height: 18px;
+  font-size: 14px;
+  background: rgb(215, 0, 34);
+  color: rgb(255, 255, 255);
+}
+
+.input + .input .mandatory-label {
+  top: 6px;
 }
 
 .select-wrapper {
@@ -68,6 +91,10 @@ input[type='text']:focus, input[type='url']:focus {
   transition: .25s all ease;
 }
 
+.select-wrapper .mandatory-label {
+  right: 46px;
+}
+
 select {
   margin: 0;
   width: 100%;
@@ -76,6 +103,10 @@ select {
   outline: 0;
   box-shadow: none;
   cursor: pointer;
+}
+
+select.mandatory-style {
+  border-color: rgb(215, 0, 34);
 }
 
 option {
