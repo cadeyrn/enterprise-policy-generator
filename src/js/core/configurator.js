@@ -200,6 +200,10 @@ const configurator = {
       elObjectWrapper.appendChild(elLabel);
     }
 
+    const elSelectWrapper = document.createElement('div');
+    elSelectWrapper.classList.add('select-wrapper');
+    elObjectWrapper.appendChild(elSelectWrapper);
+
     const elSelect = document.createElement('select');
     elSelect.setAttribute('name', policy.name);
     elSelect.setAttribute('id', policy.name);
@@ -218,7 +222,7 @@ const configurator = {
       }
     }
 
-    elObjectWrapper.appendChild(elSelect);
+    elSelectWrapper.appendChild(elSelect);
 
     el.appendChild(elObjectWrapper);
   },
@@ -599,7 +603,7 @@ const configurator = {
     }
 
     const elSelectWrapper = document.createElement('div');
-    elSelectWrapper.classList.add('enum', 'sub-options', 'disabled');
+    elSelectWrapper.classList.add('enum', 'sub-options', 'select-wrapper', 'disabled');
 
     if (policy.label) {
       const elSelectLabel = document.createElement('label');

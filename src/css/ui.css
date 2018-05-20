@@ -44,6 +44,44 @@ input[type='text']:focus, input[type='url']:focus {
   margin-top: 2px;
 }
 
+.select-wrapper {
+  display: block;
+  position: relative;
+  margin: 5px 0;
+  width: calc(100% - 50px);
+  height: 30px;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.select-wrapper::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 2px 12px;
+  border: 2px solid rgb(54, 57, 89);
+  background: rgb(10, 132, 255);
+  color: rgb(255, 255, 255);
+  pointer-events: none;
+  transition: .25s all ease;
+}
+
+select {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgb(54, 57, 89);
+  outline: 0;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+option {
+  padding: 5px;
+}
+
 .checkbox {
   position: relative;
   margin-bottom: 5px;
@@ -212,6 +250,7 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
 .select-label {
   display: block;
   margin-top: 5px;
+  margin-bottom: 5px;
   font-size: 14px;
 }
 
