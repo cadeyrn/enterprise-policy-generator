@@ -105,7 +105,7 @@ option {
   width: 18px;
   height: 18px;
   border: 2px solid rgb(54, 57, 89);
-  border-radius: 1px;
+  border-radius: 2px;
   cursor: pointer;
   transition: all 250ms ease;
 }
@@ -171,6 +171,7 @@ button {
   transform: perspective(1px) translateZ(0);
   font-size: 16px;
   border: none;
+  border-radius: 2px;
   background: rgb(10, 132, 255);
   color: rgb(255, 255, 255);
   cursor: pointer;
@@ -186,6 +187,7 @@ button::before {
   left: 0;
   right: 0;
   transform: scaleX(0);
+  border-radius: 2px;
   background: rgb(0, 102, 225);
   transform-origin: 0 50%;
   transition-property: transform;
