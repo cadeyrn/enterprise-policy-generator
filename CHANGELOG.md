@@ -20,7 +20,7 @@
 
 ---
 
-### Version 1.0.0 (2018-05-20)
+### [Version 1.0.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v1.0.0) (2018-05-20)
 
 - initial release for [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/)
 
