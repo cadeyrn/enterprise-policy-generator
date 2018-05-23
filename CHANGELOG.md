@@ -9,6 +9,10 @@
 - added Upper Sorbian translation (Thanks, milupo!)
 - added Lower Sorbian translation (Thanks, milupo!)
 
+#### Dependencies
+
+- updated eslint-plugin-no-unsanitized from version 3.0.1 to 3.0.2
+
 ---
 
 ### [Version 1.0.1](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v1.0.1) (2018-05-20)
