@@ -2,6 +2,13 @@
 
 ## Release Notes
 
+### (Work in Progress) Version 1.1.0
+
+#### Translations
+
+- added Upper Sorbian translation (Thanks, milupo!)
+- added Lower Sorbian translation (Thanks, milupo!)
+
 ### [Version 1.0.1](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v1.0.1) (2018-05-20)
 
 #### Translations

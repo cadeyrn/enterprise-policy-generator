@@ -1,0 +1,542 @@
+{
+  "enterprise_only_label": {
+    "message": "funguje jenož w Firefox ESR"
+  },
+  "explanation_headline_usage": {
+    "message": "Nałoženje"
+  },
+  "explanation_intro": {
+    "message": "Z kliknjenjom na tłóčatko so kod generuje. Tutón kod dyrbi so w dataji \"policies.json\" do rjadowaka \"distribution\" składować."
+  },
+  "explanation_intro_linux": {
+    "message": "Wutworće rjadowak z mjenom \"distribution\" w rjadowaku, w kotrymž je Firefox a składujće tam dataju \"policies.json\"."
+  },
+  "explanation_intro_macos": {
+    "message": "Wutworće rjadowak z mjenom \"distribution\" w Firefox.app/Contents/Resources/ a składujće tam dataju \"policies.json\"."
+  },
+  "explanation_intro_windows": {
+    "message": "Wutworće rjadowak z mjenom \"distribution\" w tym rjadowaku, hdźež je dataja firefox.exe a składujće tam dataju \"policies.json\"."
+  },
+  "extension_description": {
+    "message": "Generuje předewzaćelske směrnicy za Firefox."
+  },
+  "extension_name": {
+    "message": "Enterprise Policy Generator"
+  },
+  "future_feature_a": {
+    "message": "Konfiguracije składować a začitać"
+  },
+  "future_feature_b": {
+    "message": "Pokazowanje trěbneje wersije Firefox za kóždu směrnicu, hdyž so dalše směrnicy w pozdźišich wersijach Firefox podpěruja"
+  },
+  "future_feature_c": {
+    "message": "hišće lěpša wobsłužujomnosć"
+  },
+  "future_feature_github": {
+    "message": "… a snano waš namjet?"
+  },
+  "future_headline": {
+    "message": "Dalše funkcije su hižo za přichod planowane!"
+  },
+  "generate_button": {
+    "message": "Směrnicy generować"
+  },
+  "link_download": {
+    "message": "policies.json sćahnyć"
+  },
+  "link_learn_more": {
+    "message": "dalše informacije"
+  },
+  "link_select_all": {
+    "message": "wšě markěrować"
+  },
+    "lock_preference": {
+    "message": "Nastajenje přećiwo změnje škitać"
+  },
+   "mandatory-label": {
+    "message": "obligatoriski"
+  },
+  "policy_category_block_access": {
+    "message": "Přistup blokować"
+  },
+  "policy_category_disable_features": {
+    "message": "Funkcije znjemóžnić"
+  },
+  "policy_category_customization": {
+    "message": "Přiměrjenje"
+  },
+  "policy_category_network": {
+    "message": "Syć"
+  },
+  "policy_category_privacy": {
+    "message": "Priwatnosć"
+  },
+  "policy_category_security": {
+    "message": "Wěstota"
+  },
+  "policy_category_update_and_data": {
+    "message": "Aktualizacije a zběranje datow"
+  },
+  "policy_category_others": {
+    "message": "Druhe směrnicy"
+  },
+  "policy_description_Authentication": {
+    "message": "Webstrony, kotrež integrowanu awtentifikaciju podpěruja"
+  },
+  "policy_description_Authentication_Delegated": {
+    "message": "Delegowany"
+  },
+  "policy_description_Authentication_Delegated_URL": {
+    "message": "URL"
+  },
+  "policy_description_Authentication_NTLM": {
+    "message": "NTLM"
+  },
+  "policy_description_Authentication_NTLM_URL": {
+    "message": "URL"
+  },
+  "policy_description_Authentication_SPNEGO": {
+    "message": "SPNEGO"
+  },
+  "policy_description_Authentication_SPNEGO_URL": {
+    "message": "URL"
+  },
+  "policy_description_BlockAboutAddons": {
+    "message": "Přistup k zrjadowakej přidatkow (about:addons) blokować"
+  },
+  "policy_description_BlockAboutConfig": {
+    "message": "Přistup ke konfiguraciji wobhladowaka (about:config) blokować"
+  },
+  "policy_description_BlockAboutProfiles": {
+    "message": "Přistup k zrjadowakej profilow (about:profiles) blokować"
+  },
+  "policy_description_BlockAboutSupport": {
+    "message": "Přistup k informacijam za rozrisowanje problemow (about:support) blokować"
+  },
+  "policy_description_Bookmarks": {
+    "message": "Standardne zapołožki wutworić"
+  },
+  "policy_description_Bookmarks_Favicon": {
+    "message": "Favicon"
+  },
+  "policy_description_Bookmarks_Folder": {
+    "message": "Rjadowak"
+  },
+  "policy_description_Bookmarks_Placement": {
+    "message": "Składowanje"
+  },
+  "policy_description_Bookmarks_Placement_Menu": {
+    "message": "Meni zapołožkow"
+  },
+  "policy_description_Bookmarks_Placement_Toolbar": {
+    "message": "Lajsta zapołožkow"
+  },
+  "policy_description_Bookmarks_Title": {
+    "message": "Titul"
+  },
+  "policy_description_Bookmarks_URL": {
+    "message": "URL"
+  },
+  "policy_description_Certificates": {
+    "message": "Certifikaty z certifikatoweho składowaka Windows čitać (jenož Windows)"
+  },
+  "policy_description_Certificates_ImportEnterpriseRoots_false": {
+    "message": "Certifikaty z certifikatoweho składowaka Windows nječitać"
+  },
+  "policy_description_Certificates_ImportEnterpriseRoots_true": {
+    "message": "Certifikaty z certifikatoweho składowaka Window čitać"
+  },
+  "policy_description_Cookies": {
+    "message": "Webstronam dowolić abo zakazać, placki stajić"
+  },
+  "policy_description_Cookies_AcceptThirdParty": {
+    "message": "Standardna hódnota za \"Placki a sydłowe daty třećich poskićowarjow akceptować\""
+  },
+  "policy_description_Cookies_AcceptThirdParty_always": {
+    "message": "přeco"
+  },
+  "policy_description_Cookies_AcceptThirdParty_from_visited": {
+    "message": "jenož wot wopytanych třećich"
+  },
+  "policy_description_Cookies_AcceptThirdParty_never": {
+    "message": "ženje"
+  },
+  "policy_description_Cookies_Allow": {
+    "message": "Domeny, kotrež přeco smědźa placki wužiwać"
+  },
+  "policy_description_Cookies_Allow_Domain": {
+    "message": "Domena"
+  },
+  "policy_description_Cookies_Block": {
+    "message": "Domeny, na kotrychž so placki blokuja"
+  },
+  "policy_description_Cookies_Block_Domain": {
+    "message": "Domena"
+  },
+  "policy_description_Cookies_Default": {
+    "message": "Standardna hódnota za \"Placki a sydłowe daty z websydłow akceptować\""
+  },
+  "policy_description_Cookies_Default_false": {
+    "message": "Placki njeakceptować"
+  },
+  "policy_description_Cookies_Default_true": {
+    "message": "Placki akceptować"
+  },
+  "policy_description_Cookies_ExpireAtSessionEnd": {
+    "message": "Placki wobchować…"
+  },
+  "policy_description_Cookies_ExpireAtSessionEnd_false": {
+    "message": "… doniž njespadnu"
+  },
+  "policy_description_Cookies_ExpireAtSessionEnd_true": {
+    "message": "… doniž Firefox so njezačini"
+  },
+  "policy_description_DisableAppUpdate": {
+    "message": "Firefox při aktualizowanju haćić"
+  },
+  "policy_description_DisableBuiltinPDFViewer": {
+    "message": "Zatwarjeny PDF-wobhladowak (pdf.js) znjemóžnić"
+  },
+  "policy_description_DisableDeveloperTools": {
+    "message": "Zatwarjene wuwiwarske nastroje znjemóžnić"
+  },
+  "policy_description_DisableFeedbackCommands": {
+    "message": "Menijowej zapiskaj \"Posudk pósłać\" a \"Wobšudne websydło zdźělić\" w meniju Pomoc znjemóžnić"
+  },
+  "policy_description_DisableFirefoxAccounts": {
+    "message": "Słužby, kotrež na Firefox Accounts bazěruja, kaž na přikład Firefox Sync, znjemóžnić"
+  },
+  "policy_description_DisableFirefoxScreenshots": {
+    "message": "Zatwarjenu funkciju za fota wobrazowki (Firefox Screenshots) znjemóžnić"
+  },
+  "policy_description_DisableFirefoxStudies": {
+    "message": "Firefox při instalowanju a wuwjedźenju studijow haćić (studije SHIELD)"
+  },
+  "policy_description_DisableForgetButton": {
+    "message": "Tłóčatko \"Zabyć\" znjemóžnić, kotrež so ma wužiwać, zo by historiju zhašało"
+  },
+  "policy_description_DisableFormHistory": {
+    "message": "Formularnu a pytansku historiju znjemóžnić"
+  },
+  "policy_description_DisableMasterPasswordCreation": {
+    "message": "Funkciju hłowneho hesła znjemóžnić"
+  },
+  "policy_description_DisablePocket": {
+    "message": "Integraciju słužby Mozilla Pocket znjemóžnić"
+  },
+  "policy_description_DisablePrivateBrowsing": {
+    "message": "Priwatny modus znjemóžnić"
+  },
+  "policy_description_DisableProfileImport": {
+    "message": "Menijowy zapisk \"daty z druheho wobhladowaka importować\" w bibliotece znjemóžnić"
+  },
+  "policy_description_DisableProfileRefresh": {
+    "message": "Tłóčatko \"Firefox wobnowić\" w about:support znjemóžnić"
+  },
+  "policy_description_DisableSafeMode": {
+    "message": "Móžnosć znjemóžnić, Firefox ze znjemóžnjenymi přidatkami znowa startować (wěsty modus)"
+  },
+  "policy_description_DisableSecurityBypass": {
+    "message": "Zadźěwać, zo so wěstotne warnowanja wobeńdu"
+  },
+  "policy_description_DisableSecurityBypass_InvalidCertificate": {
+    "message": "Přidawanju wuwzaća zadźěwać, hdyž so njepłaćiwy certifikat pokazuje"
+  },
+  "policy_description_DisableSecurityBypass_InvalidCertificate_false": {
+    "message": "njezadźěwać"
+  },
+  "policy_description_DisableSecurityBypass_InvalidCertificate_null": {
+    "message": "žane nastajenje"
+  },
+  "policy_description_DisableSecurityBypass_InvalidCertificate_true": {
+    "message": "zadźěwać"
+  },
+  "policy_description_DisableSecurityBypass_SafeBrowsing": {
+    "message": "Zadźěwać, zo so warnowanje wobeńdźe a so škódne websydło wopytuje"
+  },
+  "policy_description_DisableSecurityBypass_SafeBrowsing_false": {
+    "message": "njezadźěwać"
+  },
+    "policy_description_DisableSecurityBypass_SafeBrowsing_null": {
+    "message": "žane nastajenje"
+  },
+  "policy_description_DisableSecurityBypass_SafeBrowsing_true": {
+    "message": "zadźěwać"
+  },
+  "policy_description_DisableSetDesktopBackground": {
+    "message": "Funkciju znjemóžnić, wobraz jako pozadk wužiwać"
+  },
+   "policy_description_DisableSystemAddonUpdate": {
+    "message": "Firefox při instalowanju a aktualizowanju systemowych přidatkow haćić"
+  },
+  "policy_description_DisableTelemetry": {
+    "message": "Firefox při słanju datow k techniskim podrobnosćam a interakcijam do Mozilla haćić (telemetrija)"
+  },
+   "policy_description_DisplayBookmarksToolbar": {
+    "message": "Lajstu zapołožkow po standardźe pokazać"
+  },
+  "policy_description_DisplayMenuBar": {
+    "message": "Menijowu lajstu po standardźe pokazać"
+  },
+  "policy_description_DontCheckDefaultBrowser": {
+    "message": "Při starće njekontrolować, hač Firefox je standardny wobhladowak"
+  },
+  "policy_description_EnableTrackingProtection": {
+    "message": "Slědowanski škit zmóžnić abo znjemóžnić"
+  },
+  "policy_description_EnableTrackingProtection_Value_false": {
+    "message": "Slědowanski škit znjemóžnić"
+  },
+  "policy_description_EnableTrackingProtection_Value_true": {
+    "message": "Slědowanski škit zmóžnić"
+  },
+  "policy_description_Extensions": {
+    "message": "Rozšěrjenja instalować, wotinstalować abo zawrěć"
+  },
+  "policy_description_Extensions_Install": {
+    "message": "Přidatki instalować. Móžeće URL abo šćežki podać."
+  },
+  "policy_description_Extensions_Install_URL_or_Path": {
+    "message": "URL abo šćežka"
+  },
+  "policy_description_Extensions_Locked": {
+    "message": "Zawrjene rozšěrjenja njedadźa so ani znjemóžnić ani wotinstalować. Podajće prošu ID."
+  },
+  "policy_description_Extensions_Locked_ID": {
+    "message": "ID přidatka"
+  },
+  "policy_description_Extensions_Uninstall": {
+    "message": "Přidatki wotinstalować. Podajće prošu ID přidatka."
+  },
+  "policy_description_Extensions_Uninstall_ID": {
+    "message": "ID přidatka"
+  },
+  "policy_description_FlashPlugin": {
+    "message": "Wužiwanje tykača Flash dowolić abo zakazać"
+  },
+  "policy_description_FlashPlugin_Allow": {
+    "message": "Za tute URL tykač Flash po standardźe zmóžnić, chibazo Flash je dospołnje znjemóžnjeny"
+  },
+  "policy_description_FlashPlugin_Allow_URL": {
+    "message": "URL"
+  },
+  "policy_description_FlashPlugin_Block": {
+    "message": "Tykač Flash za tute URL blokować"
+  },
+  "policy_description_FlashPlugin_Block_URL": {
+    "message": "URL"
+  },
+  "policy_description_FlashPlugin_Default": {
+    "message": "Flash přeco zmóžnić abo znjemóžnić"
+  },
+  "policy_description_FlashPlugin_Default_false": {
+    "message": "Flash je přeco znjemóžnjeny"
+  },
+  "policy_description_FlashPlugin_Default_null": {
+    "message": "žane nastajenje"
+  },
+  "policy_description_FlashPlugin_Default_true": {
+    "message": "Flash je přeco zmóžnjeny"
+  },
+  "policy_description_Homepage": {
+    "message": "Startowu stronu nastajić"
+  },
+  "policy_description_Homepage_Additional": {
+    "message": "Přidatne URL"
+  },
+  "policy_description_Homepage_URL": {
+    "message": "URL"
+  },
+  "policy_description_InstallAddonsPermission": {
+    "message": "Websydłam dowolić, rozšěrjenja instalować"
+  },
+  "policy_description_InstallAddonsPermission_Allow": {
+    "message": "Websydła, kotrež móža rozšěrjenja instalować, chibazo instalacija přidatkow je znjemóžnjena (addons.mozilla.org je přeco dowoleny)"
+  },
+  "policy_description_InstallAddonsPermission_Allow_URL": {
+    "message": "URL"
+  },
+  "policy_description_InstallAddonsPermission_Default_false": {
+    "message": "Rozšěrjenja njedadźa so wot wužiwarja instalować"
+  },
+  "policy_description_InstallAddonsPermission_Default_true": {
+    "message": "Rozšěrjenja dadźa so wot wužiwarja instalować"
+  },
+  "policy_description_NoDefaultBookmarks": {
+    "message": "Žane standardne zapołožki inkluziwnje inteligentne zapołožki (najhusćišo wopytane strony, njedawno wužite klučowe słowa) wutworić. Pokazka: tuta směrnica je jenož skutkowna, hdyž so před prěnim wužiwanjom profila Firefox nałožuje"
+  },
+  "policy_description_OfferToSaveLogins": {
+    "message": "Firefox dowolić abo zakazać, sej składowane přizjewjenja a hesła spomjatkować"
+  },
+  "policy_description_OfferToSaveLogins_options_false": {
+    "message": "wužite přizjewjenja a hesła sej njespomjatkować"
+  },
+  "policy_description_OfferToSaveLogins_options_true": {
+    "message": "wužite přizjewjenja a hesła sej spomjatkować"
+  },
+  "policy_description_OverrideFirstRunPage": {
+    "message": "Stronu přepisać, kotraž so při prěnim starće jewi. Prózdne zapodawanske polo stronu dospołnje znjemóžnja."
+  },
+  "policy_description_OverridePostUpdatePage": {
+    "message": "Stronu z nowosćemi přepisać, kotraž so móže po aktualizaciji jewić. Prózdne zapodawanske polo stronu dospołnje znjemóžnja."
+  },
+  "policy_description_PopupBlocking": {
+    "message": "Wužiwanje wuskakowacych woknow dowolić abo zakazać"
+  },
+  "policy_description_PopupBlocking_Allow": {
+    "message": "Domeny, za kotrež wuskakowace wokna su dowolene"
+  },
+  "policy_description_PopupBlocking_Allow_URL": {
+    "message": "URL"
+  },
+  "policy_description_PopupBlocking_Default_false": {
+    "message": "Wuskakowace wokna so po standardźe njeblokuja"
+  },
+  "policy_description_PopupBlocking_Default_true": {
+    "message": "Wuskakowace wokna so po standardźe blokuja"
+  },
+  "policy_description_Proxy": {
+    "message": "Přistup proksy na internet konfigurować"
+  },
+  "policy_description_Proxy_AutoConfigURL": {
+    "message": "Awotmatiska adresa konfiguracije proksy"
+  },
+  "policy_description_Proxy_AutoLogin": {
+    "message": "Awtentifikowanske naprašowanje ze składowanym hesłom"
+  },
+  "policy_description_Proxy_AutoLogin_false": {
+    "message": "Awtentifikowanske naprašowanje pokazać"
+  },
+  "policy_description_Proxy_AutoLogin_true": {
+    "message": "Awtentifikowanske naprašowanje njepokazać"
+  },
+  "policy_description_Proxy_HTTPProxy": {
+    "message": "HTTP-proksy. Zo byšće portowe čisło konfigurował, přidajće prošu \":\" slědowany přez portowe čisło"
+  },
+  "policy_description_Proxy_Mode_autoConfig": {
+    "message": "Awotmatiska adresa konfiguracije proksy"
+  },
+  "policy_description_Proxy_Mode_autoDetect": {
+    "message": "Nastajenja proksy za tutu syć awtomatisce spóznać"
+  },
+  "policy_description_Proxy_Mode_manual": {
+    "message": "Manuelna konfiguracija proksy"
+  },
+  "policy_description_Proxy_Mode_none": {
+    "message": "Žadyn proksy"
+  },
+  "policy_description_Proxy_Mode_system": {
+    "message": "Nastajenja proksy systema wužiwać"
+  },
+  "policy_description_Proxy_FTPProxy": {
+    "message": "FTP-proksy. Zo byšće portowe čisło konfigurował, přidajće prošu \":\" slědowany přez portowe čisło"
+  },
+  "policy_description_Proxy_Passthrough": {
+    "message": "Žadyn proksy za…"
+  },
+  "policy_description_Proxy_SOCKSProxy": {
+    "message": "SOCKS-host. Zo byšće portowe čisło konfigurował, přidajće prošu \":\" slědowany přez portowe čisło"
+  },
+  "policy_description_Proxy_SOCKSVersion_v4": {
+    "message": "SOCKS v4"
+  },
+  "policy_description_Proxy_SOCKSVersion_v5": {
+    "message": "SOCKS v5"
+  },
+  "policy_description_Proxy_SSLProxy": {
+    "message": "SSL-Proxy. Zo byšće portowe čisło konfigurował, přidajće prošu \":\" slědowany přez portowe čisło"
+  },
+  "policy_description_Proxy_UseHTTPProxyForAllProtocols_false": {
+    "message": "tutón proksy-serwer nic za wšě protokole wužiwać"
+  },
+  "policy_description_Proxy_UseHTTPProxyForAllProtocols_true": {
+    "message": "tutón proksy-serwer za wšě protokole wužiwać"
+  },
+  "policy_description_Proxy_UseProxyForDNS": {
+    "message": "Při wužiwanju SOCKS v5 proksy za DNS-naprašowanja wužiwać"
+  },
+  "policy_description_Proxy_UseProxyForDNS_false": {
+    "message": "Proksy-DNS njewužiwać"
+  },
+  "policy_description_Proxy_UseProxyForDNS_true": {
+    "message": "Proksy-DNS wužiwać"
+  },
+  "policy_description_SanitizeOnShutdown": {
+    "message": "Wšě přehladowanske daty zhašeć, hdyž so Firefox začini"
+  },
+  "policy_description_SearchBar": {
+    "message": "Postaja, hač pytanske polo je kombinowane z adresowym polom abo separatne"
+  },
+  "policy_description_SearchBar_options_separate": {
+    "message": "je separatne pytanske polo"
+  },
+  "policy_description_SearchBar_options_unified": {
+    "message": "pytanske polo je kombinowane z adresowym polom"
+  },
+    "policy_description_SearchEngines": {
+    "message": "Změni lisćinu pytawow zatwarjenych do Firefox"
+  },
+  "policy_description_SearchEngines_Add": {
+    "message": "Pytawy přidać"
+  },
+  "policy_description_SearchEngines_Add_Alias": {
+    "message": "Alias, kotryž so da za přistup na pytawu wužiwać"
+  },
+  "policy_description_SearchEngines_Add_Description": {
+    "message": "Wopisanje"
+  },
+  "policy_description_SearchEngines_Add_IconURL": {
+    "message": "Symbolowy URL"
+  },
+  "policy_description_SearchEngines_Add_Method": {
+    "message": "Naprašowanska metoda"
+  },
+  "policy_description_SearchEngines_Add_Method_GET": {
+    "message": "GET"
+  },
+  "policy_description_SearchEngines_Add_Method_POST": {
+    "message": "POST"
+  },
+  "policy_description_SearchEngines_Add_Name": {
+    "message": "Mjeno"
+  },
+  "policy_description_SearchEngines_Add_SuggestURLTemplate": {
+    "message": "URL za namjety. Prošu wužiwajće {searchTerms} jako wariablu za pytanski wuraz"
+  },
+  "policy_description_SearchEngines_Add_URL": {
+    "message": "URL za pytanja. Prošu wužiwajće {searchTerms} jako wariablu za pytanski wuraz"
+  },
+  "policy_description_SearchEngines_Default": {
+    "message": "Mjeno standardneje pytawy"
+  },
+  "policy_description_SearchEngines_PreventInstalls": {
+    "message": "Instalaciji nowych pytawow zadźěwać"
+  },
+  "policy_description_SearchEngines_PreventInstalls_false": {
+    "message": "instalacijam njezadźěwać"
+  },
+  "policy_description_SearchEngines_PreventInstalls_true": {
+    "message": "instalacijam zadźěwać"
+  },
+  "policy_description_WebsiteFilter": {
+    "message": "Zadźěwa, zo so websydła wopytuja. Móžeće \"<all_urls>\" za blokowanje wšěch URL wužiwać. Hlejće informaciski wotkaz za wšě płaćiwe zapiski, ale jenož HTTPS a HTTP so podpěrujetej."
+  },
+  "policy_description_WebsiteFilter_Block": {
+    "message": "Slědowace URL blokować"
+  },
+  "policy_description_WebsiteFilter_Block_URL": {
+    "message": "URL"
+  },
+  "policy_description_WebsiteFilter_Exceptions": {
+    "message": "Wuwzaća"
+  },
+  "policy_description_WebsiteFilter_Exceptions_URL": {
+    "message": "URL"
+  },
+  "title_add_row": {
+    "message": "Linku přidać"
+  },
+  "title_remove_row": {
+    "message": "Linku wotstronić"
+  }
+}
