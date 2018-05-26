@@ -15,6 +15,11 @@
 - added Upper Sorbian translation (Thanks, milupo!)
 - added Lower Sorbian translation (Thanks, milupo!)
 
+#### Code Quality
+
+- a lot of code refactoring to improve code maintainability and to make it easier for others to contribute to the
+  code base, fixes [#8](https://github.com/cadeyrn/enterprise-policy-generator/issues/8)
+
 #### Dependencies
 
 - updated eslint-plugin-compat from version 2.2.0 to 2.3.0
