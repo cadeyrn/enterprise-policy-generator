@@ -99,6 +99,7 @@ const configurator = {
 
       const granted = await browser.permissions.request(DOWNLOAD_PERMISSION);
 
+      // immediately prompt for download after the downloads permission has been granted
       if (granted) {
         configurator.downloadPolicy();
       }
@@ -221,18 +222,23 @@ const configurator = {
     const elObjectWrapper = configurator.addPolicyNode(key, policy, 'array');
     const elSubOptions = configurator.addSubOptions(elObjectWrapper);
 
+    // add array properties
     const optionsLength = policy.items.length;
     for (let i = 0; i < optionsLength; i++) {
       configurator.addProperty(elSubOptions, policy.items[i]);
     }
 
+    // add array field action links
     configurator.addArrayFieldActionLinks(elSubOptions);
+
+    // add option to UI
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
   },
 
   addBooleanOption (key, policy, inverse) {
     const elObjectWrapper = configurator.addPolicyNode(key, policy, 'boolean', true);
 
+    // add option to UI
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
   },
 
@@ -242,6 +248,7 @@ const configurator = {
     const elSelectWrapper = document.createElement('div');
     elSelectWrapper.classList.add('enum', 'sub-options', 'select-wrapper', 'disabled');
 
+    // label
     if (policy.label) {
       const elSelectLabel = document.createElement('label');
       elSelectLabel.setAttribute('for', key + '_select');
@@ -250,6 +257,7 @@ const configurator = {
       elSelectWrapper.appendChild(elSelectLabel);
     }
 
+    // add options to select element
     const elSelect = document.createElement('select');
     elSelect.setAttribute('name', key + '_select');
     elSelect.setAttribute('id', key + '_select');
@@ -266,6 +274,7 @@ const configurator = {
       elSelect.appendChild(elOption);
     }
 
+    // add option to UI
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
   },
 
@@ -273,10 +282,12 @@ const configurator = {
     const elObjectWrapper = configurator.addPolicyNode(key, policy, 'object');
     const elSubOptions = configurator.addSubOptions(elObjectWrapper);
 
+    // policy can be locked
     if (policy.is_lockable) {
       configurator.addLockableLink(elSubOptions, key);
     }
 
+    // add properties
     if (policy.properties) {
       const optionsLength = policy.properties.length;
       for (let i = 0; i < optionsLength; i++) {
@@ -284,6 +295,7 @@ const configurator = {
       }
     }
 
+    // add option to UI
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
   },
 
@@ -291,6 +303,7 @@ const configurator = {
     const elObjectWrapper = configurator.addPolicyNode(key, policy, 'string');
     const elSubOptions = configurator.addSubOptions(elObjectWrapper);
 
+    // input field
     const elInputWrapper = document.createElement('div');
     elInputWrapper.classList.add('input');
 
@@ -302,6 +315,7 @@ const configurator = {
 
     elSubOptions.appendChild(elInput);
 
+    // add option to UI
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
   },
 
@@ -342,6 +356,7 @@ const configurator = {
     const elCaption = document.createTextNode(policy.label);
     elCaptionWrapper.appendChild(elCaption);
 
+    // add array items
     if (policy.items) {
       configurator.addProperty(elObjectWrapper, policy.items, true);
     }
@@ -353,17 +368,20 @@ const configurator = {
     const elObjectWrapper = document.createElement('div');
     elObjectWrapper.classList.add('checkbox');
 
+    // checkbox
     const elInput = document.createElement('input');
     elInput.setAttribute('type', 'checkbox');
     elInput.setAttribute('name', policy.name);
     elInput.setAttribute('id', policy.name);
 
+    // mandatory field
     if (policy.mandatory) {
       configurator.addMandatoryLabel(elInput, elObjectWrapper);
     }
 
     elObjectWrapper.appendChild(elInput);
 
+    // label
     const elLabel = document.createElement('label');
     elLabel.setAttribute('for', policy.name);
     elLabel.textContent = policy.label;
@@ -376,6 +394,7 @@ const configurator = {
     const elObjectWrapper = document.createElement('div');
     elObjectWrapper.classList.add('enum');
 
+    // label
     if (policy.label) {
       const elLabel = document.createElement('label');
       elLabel.setAttribute('for', policy.name);
@@ -384,6 +403,7 @@ const configurator = {
       elObjectWrapper.appendChild(elLabel);
     }
 
+    // add select element
     const elSelectWrapper = document.createElement('div');
     elSelectWrapper.classList.add('select-wrapper');
     elObjectWrapper.appendChild(elSelectWrapper);
@@ -392,10 +412,12 @@ const configurator = {
     elSelect.setAttribute('name', policy.name);
     elSelect.setAttribute('id', policy.name);
 
+    // mandatory field
     if (policy.mandatory) {
       configurator.addMandatoryLabel(elSelect, elSelectWrapper);
     }
 
+    // add options to select element
     const optionsLength = policy.options.length;
     for (let i = 0; i < optionsLength; i++) {
       const elOptionLabel = document.createTextNode(policy.options[i].label);
@@ -415,6 +437,7 @@ const configurator = {
     elObjectWrapper.classList.add('object-array');
     elObjectWrapper.setAttribute('data-name', policy.name);
 
+    // label
     const elCaptionWrapper = document.createElement('div');
     elCaptionWrapper.classList.add('label');
     elObjectWrapper.appendChild(elCaptionWrapper);
@@ -424,6 +447,7 @@ const configurator = {
 
     el.appendChild(elObjectWrapper);
 
+    // add array items
     const elSubOptions = document.createElement('div');
     elObjectWrapper.appendChild(elSubOptions);
 
@@ -432,6 +456,7 @@ const configurator = {
       configurator.addProperty(elSubOptions, policy.items[i]);
     }
 
+    // add array field action links
     configurator.addArrayFieldActionLinks(elSubOptions);
   },
 
@@ -439,22 +464,26 @@ const configurator = {
     const elObjectWrapper = document.createElement('div');
     elObjectWrapper.classList.add('input');
 
+    // set different DOM name and ID if property of an array
     if (isArrayProperty) {
       policy.name = configurator.generateRandomDomId();
     }
 
+    // input field
     const elInput = document.createElement('input');
     elInput.setAttribute('type', 'text');
     elInput.setAttribute('name', policy.name);
     elInput.setAttribute('id', policy.name);
     elInput.setAttribute('placeholder', policy.label);
 
+    // mandatory field
     if (policy.mandatory) {
       configurator.addMandatoryLabel(elInput, elObjectWrapper);
     }
 
     elObjectWrapper.appendChild(elInput);
 
+    // add array field action links if property of an array
     if (isArrayProperty) {
       configurator.addArrayFieldActionLinks(elObjectWrapper);
     }
@@ -467,9 +496,11 @@ const configurator = {
   },
 
   addPolicyNode (key, policy, type, inverse) {
+    // start node for each policy
     const elObjectWrapper = document.createElement('div');
     elObjectWrapper.classList.add('checkbox');
 
+    // checkbox
     const elCheckbox = document.createElement('input');
     elCheckbox.setAttribute('type', 'checkbox');
     elCheckbox.setAttribute('name', key);
@@ -477,17 +508,20 @@ const configurator = {
     elCheckbox.setAttribute('data-type', type);
     elCheckbox.classList.add('primary-checkbox');
 
+    // set reverse attribute, can be used for boolean options with false instead of true as value
     if (inverse) {
       elCheckbox.setAttribute('data-inverse', 'true');
     }
 
     elObjectWrapper.appendChild(elCheckbox);
 
+    // label
     const elLabel = document.createElement('label');
     elLabel.setAttribute('for', key);
     elLabel.textContent = policy.description;
     elObjectWrapper.appendChild(elLabel);
 
+    // esr only notice
     if (policy.enterprise_only) {
       const elESRNotice = document.createElement('div');
       elESRNotice.classList.add('esr-only');
@@ -501,6 +535,7 @@ const configurator = {
       elESRNotice.appendChild(elESRText);
     }
 
+    // info link
     if (policy.info_link) {
       const elInfoLinkWrapper = document.createElement('div');
       elInfoLinkWrapper.classList.add('info-link');
@@ -524,6 +559,7 @@ const configurator = {
   },
 
   addArrayFieldActionLinks (elSubOptions) {
+    // remove link
     const elRemoveLink = document.createElement('a');
     elRemoveLink.setAttribute('href', '#');
     elRemoveLink.setAttribute('data-action', 'remove');
@@ -538,6 +574,7 @@ const configurator = {
     elRemoveIcon.setAttribute('alt', browser.i18n.getMessage('title_remove_row'));
     elRemoveLink.appendChild(elRemoveIcon);
 
+    // add link
     const elAddLink = document.createElement('a');
     elAddLink.setAttribute('href', '#');
     elAddLink.setAttribute('data-action', 'add');
