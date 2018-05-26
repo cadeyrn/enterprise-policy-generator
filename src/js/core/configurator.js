@@ -320,10 +320,10 @@ const configurator = {
         configurator.addObjectArrayProperty(el, policy);
         break;
       case 'string':
-        configurator.addStringProperty(el, policy, isArrayProperty);
+        configurator.addStringProperty(el, policy, false, isArrayProperty);
         break;
       case 'url':
-        configurator.addUrlProperty(el, policy, isArrayProperty);
+        configurator.addStringProperty(el, policy, true, isArrayProperty);
         break;
       default:
       // do nothing
@@ -447,40 +447,7 @@ const configurator = {
     configurator.addArrayFieldActionLinks(elSubOptions);
   },
 
-  addStringProperty (el, policy, isArrayProperty) {
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('input');
-
-    if (isArrayProperty) {
-      policy.name = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
-    }
-
-    const elInput = document.createElement('input');
-    elInput.setAttribute('type', 'text');
-    elInput.setAttribute('name', policy.name);
-    elInput.setAttribute('id', policy.name);
-    elInput.setAttribute('placeholder', policy.label);
-
-    if (policy.mandatory) {
-      elInput.setAttribute('data-mandatory', 'true');
-      elInput.classList.add('mandatory-style');
-
-      const elMandatoryLabel = document.createElement('div');
-      elMandatoryLabel.classList.add('mandatory-label');
-      elMandatoryLabel.innerText = browser.i18n.getMessage('mandatory-label');
-      elObjectWrapper.appendChild(elMandatoryLabel);
-    }
-
-    elObjectWrapper.appendChild(elInput);
-
-    if (isArrayProperty) {
-      configurator.addArrayFieldActionLinks(elObjectWrapper);
-    }
-
-    el.appendChild(elObjectWrapper);
-  },
-
-  addUrlProperty (el, policy, isArrayProperty) {
+  addStringProperty (el, policy, isUrl, isArrayProperty) {
     const elObjectWrapper = document.createElement('div');
     elObjectWrapper.classList.add('input');
 
