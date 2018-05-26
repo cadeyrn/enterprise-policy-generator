@@ -163,7 +163,7 @@ const output = {
 
     // null represents an empty state, there is nothing to do
     if (value === 'null') {
-      return;
+      return void 0;
     }
 
     // if the value is a number treat it as number
