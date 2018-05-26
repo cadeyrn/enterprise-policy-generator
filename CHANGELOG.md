@@ -4,6 +4,12 @@
 
 ### (Work in Progress) Version 1.1.0
 
+#### Enhancements
+
+- **the downloads permission is no longer mandatory!** This means that the extension can now be used completely
+  without any special permission. If you want to download the “policies.json” file, you can easily grant the
+  permission at runtime, fixes [#5](https://github.com/cadeyrn/enterprise-policy-generator/issues/5)
+
 #### Translations
 
 - added Upper Sorbian translation (Thanks, milupo!)

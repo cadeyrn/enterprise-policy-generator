@@ -2,8 +2,11 @@
 
 /* global policies, policymanager */
 
+const DOWNLOAD_PERMISSION = { permissions: ['downloads'] };
+
 const elActionLinks = document.getElementById('action-links');
 const elDownloadLink = document.getElementById('download');
+const elGrantDownloadPermissionLink = document.getElementById('grant-download-permission');
 const elPolicyGeneratorButton = document.getElementById('generate');
 const elPolicyOutput = document.getElementById('policy-output');
 const elSelectAllLink = document.getElementById('select-all');
@@ -69,6 +72,8 @@ const configurator = {
       elActionLinks.classList.remove('hidden');
     };
 
+    configurator.testDownloadPermission();
+
     elSelectAllLink.onclick = function (e) {
       e.preventDefault();
 
@@ -79,15 +84,38 @@ const configurator = {
       selection.addRange(range);
     };
 
-    elDownloadLink.onclick = function (e) {
+    elGrantDownloadPermissionLink.addEventListener('click', async (e) => {
       e.preventDefault();
 
-      browser.downloads.download({
-        saveAs : true,
-        url : URL.createObjectURL(new Blob([elPolicyOutput.innerText])),
-        filename : 'policies.json'
-      });
-    };
+      const granted = await browser.permissions.request(DOWNLOAD_PERMISSION);
+
+      if (granted) {
+        configurator.downloadPolicy();
+      }
+    });
+
+    elDownloadLink.addEventListener('click', async (e) => {
+      e.preventDefault();
+
+      configurator.downloadPolicy();
+    });
+  },
+
+  async testDownloadPermission() {
+    const isAllowed = await browser.permissions.contains(DOWNLOAD_PERMISSION);
+
+    if (isAllowed) {
+      elGrantDownloadPermissionLink.classList.add('hidden');
+      elDownloadLink.classList.remove('hidden');
+    }
+  },
+
+  downloadPolicy () {
+    browser.downloads.download({
+      saveAs : true,
+      url : URL.createObjectURL(new Blob([elPolicyOutput.innerText])),
+      filename : 'policies.json'
+    });
   },
 
   addArrayActionListeners (e) {

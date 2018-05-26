@@ -56,7 +56,12 @@ Enterprise Policy Generator needs several permissions to work properly.
 
 #### mandatory permissions
 
-Enterprise Policy Generator does not work without the following permission:
+**No special permissions are needed to install and use Enterprise Policy Generator!**
+
+#### optional permissions
+
+This permission is not needed to install and use Enterprise Policy Generator but Enterprise Policy Generator will
+ask you at runtime once the following permissions is needed:
 
 ##### download files and read and modify the browser's download history
 

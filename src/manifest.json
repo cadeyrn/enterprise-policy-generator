@@ -30,8 +30,10 @@
     "open_in_tab": true
   },
   "permissions": [
-    "downloads",
     "menus"
+  ],
+  "optional_permissions": [
+    "downloads"
   ],
   "default_locale": "en",
   "applications": {
