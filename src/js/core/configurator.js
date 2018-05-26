@@ -591,9 +591,6 @@ const configurator = {
 
   addProperty (el, policy, isArrayProperty) {
     switch (policy.type) {
-      case 'object-array':
-        configurator.addObjectArrayProperty(el, policy);
-        break;
       case 'array':
         configurator.addArrayProperty(el, policy);
         break;
@@ -602,6 +599,9 @@ const configurator = {
         break;
       case 'enum':
         configurator.addEnumProperty(el, policy);
+        break;
+      case 'object-array':
+        configurator.addObjectArrayProperty(el, policy);
         break;
       case 'string':
         configurator.addStringProperty(el, policy, isArrayProperty);
