@@ -113,11 +113,11 @@ const configurator = {
   },
 
   async testDownloadPermission () {
-    const isGranted = await browser.permissions.contains(DOWNLOAD_PERMISSION);
+    const granted = await browser.permissions.contains(DOWNLOAD_PERMISSION);
 
     // if the downloads permission is granted hide the link for granting permission and show the
     // real download link instead
-    if (isGranted) {
+    if (granted) {
       elGrantDownloadPermissionLink.classList.add('hidden');
       elDownloadLink.classList.remove('hidden');
     }
