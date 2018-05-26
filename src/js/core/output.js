@@ -123,14 +123,17 @@ const output = {
       }
     });
 
+    // checkboxes
     [...el.parentNode.querySelectorAll(':scope > div > .checkbox input')].forEach((el) => {
       output.addCheckboxValue(el, policy);
     });
 
+    // enum fields
     [...el.parentNode.querySelectorAll(':scope > div > .enum select')].forEach((el) => {
       policy[el.name] = output.parseEnumContent(el);
     });
 
+    // input fields
     [...el.parentNode.querySelectorAll(':scope > div > .input input')].forEach((el) => {
       output.addInputValue(el, policy);
     });
