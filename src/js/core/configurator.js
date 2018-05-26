@@ -146,7 +146,7 @@ const configurator = {
 
         // we want an empty input field for the copied array item, we also need a new DOM ID
         addedNode.querySelectorAll('input').forEach((el) => {
-          const randomId = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
+          const randomId = configurator.generateRandomDomId();
 
           el.value = '';
           el.setAttribute('id', randomId);
@@ -440,7 +440,7 @@ const configurator = {
     elObjectWrapper.classList.add('input');
 
     if (isArrayProperty) {
-      policy.name = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
+      policy.name = configurator.generateRandomDomId();
     }
 
     const elInput = document.createElement('input');
@@ -460,6 +460,10 @@ const configurator = {
     }
 
     el.appendChild(elObjectWrapper);
+  },
+
+  generateRandomDomId() {
+    return Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
   },
 
   addPolicyNode (key, policy, type, inverse) {
