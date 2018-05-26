@@ -59,7 +59,7 @@ const i18n = {
   },
 
   /**
-   * Translates all strings in text nodes, placeholders and title attributes.
+   * Translates all strings in text nodes.
    *
    * @returns {void}
    */
