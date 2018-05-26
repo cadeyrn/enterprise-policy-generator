@@ -564,8 +564,7 @@ const configurator = {
     elRemoveLink.setAttribute('href', '#');
     elRemoveLink.setAttribute('data-action', 'remove');
     elRemoveLink.setAttribute('title', browser.i18n.getMessage('title_remove_row'));
-    elRemoveLink.classList.add('array-action');
-    elRemoveLink.classList.add('disabled-link');
+    elRemoveLink.classList.add('array-action', 'disabled-link');
     elSubOptions.appendChild(elRemoveLink);
 
     const elRemoveIcon = document.createElement('img');
