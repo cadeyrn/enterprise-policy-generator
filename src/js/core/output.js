@@ -112,9 +112,7 @@ const output = {
     });
 
     [...el.parentNode.querySelectorAll(':scope > div > .checkbox input')].forEach((el) => {
-      if (el.checked) {
-        policy[el.name] = true;
-      }
+      output.addCheckboxValue(el, policy);
     });
 
     [...el.parentNode.querySelectorAll(':scope > div > .enum select')].forEach((el) => {
@@ -172,6 +170,12 @@ const output = {
   addInputValue (el, policy) {
     if (el.value) {
       policy[el.name] = el.value;
+    }
+  },
+
+  addCheckboxValue (el, policy) {
+    if (el.checked) {
+      policy[el.name] = true;
     }
   },
 
