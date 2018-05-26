@@ -171,15 +171,8 @@ const output = {
       value = parseInt(value);
     }
 
-    switch (value) {
-      case 'true':
-        value = true;
-        break;
-      case 'false':
-        value = false;
-        break;
-      default:
-      // do nothing
+    if (value === 'true' || value === 'false') {
+      value = JSON.parse(value);
     }
 
     return value;
