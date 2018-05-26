@@ -218,54 +218,7 @@ const configurator = {
   },
 
   addArrayOption (key, policy) {
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('checkbox');
-
-    const elCheckbox = document.createElement('input');
-    elCheckbox.setAttribute('type', 'checkbox');
-    elCheckbox.setAttribute('name', key);
-    elCheckbox.setAttribute('id', key);
-    elCheckbox.setAttribute('data-type', 'array');
-    elCheckbox.classList.add('primary-checkbox');
-
-    elObjectWrapper.appendChild(elCheckbox);
-
-    const elLabel = document.createElement('label');
-    elLabel.setAttribute('for', key);
-    elLabel.textContent = policy.description;
-    elObjectWrapper.appendChild(elLabel);
-
-    if (policy.enterprise_only) {
-      const elESRNotice = document.createElement('div');
-      elESRNotice.classList.add('esr-only');
-      elLabel.appendChild(elESRNotice);
-
-      const elESRImage = document.createElement('img');
-      elESRImage.src = '/images/warning.svg';
-      elESRNotice.appendChild(elESRImage);
-
-      const elESRText = document.createTextNode(browser.i18n.getMessage('enterprise_only_label'));
-      elESRNotice.appendChild(elESRText);
-    }
-
-    if (policy.info_link) {
-      const elInfoLinkWrapper = document.createElement('div');
-      elInfoLinkWrapper.classList.add('info-link');
-      elLabel.appendChild(elInfoLinkWrapper);
-
-      const elInfoLink = document.createElement('a');
-      elInfoLink.setAttribute('href', policy.info_link);
-      elInfoLink.setAttribute('target', '_blank');
-      elInfoLink.setAttribute('rel', 'noopener');
-      elInfoLinkWrapper.appendChild(elInfoLink);
-
-      const elInfoLinkImage = document.createElement('img');
-      elInfoLinkImage.src = '/images/link.svg';
-      elInfoLink.appendChild(elInfoLinkImage);
-
-      const elInfoLinkText = document.createTextNode(browser.i18n.getMessage('link_learn_more'));
-      elInfoLink.appendChild(elInfoLinkText);
-    }
+    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'array');
 
     const elSubOptions = document.createElement('div');
     elSubOptions.classList.add('sub-options', 'disabled');
@@ -307,111 +260,13 @@ const configurator = {
   },
 
   addBooleanOption (key, policy, inverse) {
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('checkbox');
-
-    const elCheckbox = document.createElement('input');
-    elCheckbox.setAttribute('type', 'checkbox');
-    elCheckbox.setAttribute('name', key);
-    elCheckbox.setAttribute('id', key);
-    elCheckbox.setAttribute('data-type', 'boolean');
-    elCheckbox.classList.add('primary-checkbox');
-
-    if (inverse) {
-      elCheckbox.setAttribute('data-inverse', 'true');
-    }
-
-    elObjectWrapper.appendChild(elCheckbox);
-
-    const elLabel = document.createElement('label');
-    elLabel.setAttribute('for', key);
-    elLabel.textContent = policy.description;
-    elObjectWrapper.appendChild(elLabel);
-
-    if (policy.enterprise_only) {
-      const elESRNotice = document.createElement('div');
-      elESRNotice.classList.add('esr-only');
-      elLabel.appendChild(elESRNotice);
-
-      const elESRImage = document.createElement('img');
-      elESRImage.src = '/images/warning.svg';
-      elESRNotice.appendChild(elESRImage);
-
-      const elESRText = document.createTextNode(browser.i18n.getMessage('enterprise_only_label'));
-      elESRNotice.appendChild(elESRText);
-    }
-
-    if (policy.info_link) {
-      const elInfoLinkWrapper = document.createElement('div');
-      elInfoLinkWrapper.classList.add('info-link');
-      elLabel.appendChild(elInfoLinkWrapper);
-
-      const elInfoLink = document.createElement('a');
-      elInfoLink.setAttribute('href', policy.info_link);
-      elInfoLink.setAttribute('target', '_blank');
-      elInfoLink.setAttribute('rel', 'noopener');
-      elInfoLinkWrapper.appendChild(elInfoLink);
-
-      const elInfoLinkImage = document.createElement('img');
-      elInfoLinkImage.src = '/images/link.svg';
-      elInfoLink.appendChild(elInfoLinkImage);
-
-      const elInfoLinkText = document.createTextNode(browser.i18n.getMessage('link_learn_more'));
-      elInfoLink.appendChild(elInfoLinkText);
-    }
+    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'boolean', true);
 
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
   },
 
   addEnumOption (key, policy) {
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('checkbox');
-
-    const elCheckbox = document.createElement('input');
-    elCheckbox.setAttribute('type', 'checkbox');
-    elCheckbox.setAttribute('name', key);
-    elCheckbox.setAttribute('id', key);
-    elCheckbox.setAttribute('data-type', 'enum');
-    elCheckbox.classList.add('primary-checkbox');
-
-    elObjectWrapper.appendChild(elCheckbox);
-
-    const elLabel = document.createElement('label');
-    elLabel.setAttribute('for', key);
-    elLabel.textContent = policy.description;
-    elObjectWrapper.appendChild(elLabel);
-
-    if (policy.enterprise_only) {
-      const elESRNotice = document.createElement('div');
-      elESRNotice.classList.add('esr-only');
-      elLabel.appendChild(elESRNotice);
-
-      const elESRImage = document.createElement('img');
-      elESRImage.src = '/images/warning.svg';
-      elESRNotice.appendChild(elESRImage);
-
-      const elESRText = document.createTextNode(browser.i18n.getMessage('enterprise_only_label'));
-      elESRNotice.appendChild(elESRText);
-    }
-
-    if (policy.info_link) {
-      const elInfoLinkWrapper = document.createElement('div');
-      elInfoLinkWrapper.classList.add('info-link');
-      elLabel.appendChild(elInfoLinkWrapper);
-
-      const elInfoLink = document.createElement('a');
-      elInfoLink.setAttribute('href', policy.info_link);
-      elInfoLink.setAttribute('target', '_blank');
-      elInfoLink.setAttribute('rel', 'noopener');
-      elInfoLinkWrapper.appendChild(elInfoLink);
-
-      const elInfoLinkImage = document.createElement('img');
-      elInfoLinkImage.src = '/images/link.svg';
-      elInfoLink.appendChild(elInfoLinkImage);
-
-      const elInfoLinkText = document.createTextNode(browser.i18n.getMessage('link_learn_more'));
-      elInfoLink.appendChild(elInfoLinkText);
-    }
+    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'enum');
 
     const elSelectWrapper = document.createElement('div');
     elSelectWrapper.classList.add('enum', 'sub-options', 'select-wrapper', 'disabled');
@@ -444,54 +299,7 @@ const configurator = {
   },
 
   addObjectOption (key, policy) {
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('checkbox');
-
-    const elCheckbox = document.createElement('input');
-    elCheckbox.setAttribute('type', 'checkbox');
-    elCheckbox.setAttribute('name', key);
-    elCheckbox.setAttribute('id', key);
-    elCheckbox.setAttribute('data-type', 'object');
-    elCheckbox.classList.add('primary-checkbox');
-
-    elObjectWrapper.appendChild(elCheckbox);
-
-    const elLabel = document.createElement('label');
-    elLabel.setAttribute('for', key);
-    elLabel.textContent = policy.description;
-    elObjectWrapper.appendChild(elLabel);
-
-    if (policy.enterprise_only) {
-      const elESRNotice = document.createElement('div');
-      elESRNotice.classList.add('esr-only');
-      elLabel.appendChild(elESRNotice);
-
-      const elESRImage = document.createElement('img');
-      elESRImage.src = '/images/warning.svg';
-      elESRNotice.appendChild(elESRImage);
-
-      const elESRText = document.createTextNode(browser.i18n.getMessage('enterprise_only_label'));
-      elESRNotice.appendChild(elESRText);
-    }
-
-    if (policy.info_link) {
-      const elInfoLinkWrapper = document.createElement('div');
-      elInfoLinkWrapper.classList.add('info-link');
-      elLabel.appendChild(elInfoLinkWrapper);
-
-      const elInfoLink = document.createElement('a');
-      elInfoLink.setAttribute('href', policy.info_link);
-      elInfoLink.setAttribute('target', '_blank');
-      elInfoLink.setAttribute('rel', 'noopener');
-      elInfoLinkWrapper.appendChild(elInfoLink);
-
-      const elInfoLinkImage = document.createElement('img');
-      elInfoLinkImage.src = '/images/link.svg';
-      elInfoLink.appendChild(elInfoLinkImage);
-
-      const elInfoLinkText = document.createTextNode(browser.i18n.getMessage('link_learn_more'));
-      elInfoLink.appendChild(elInfoLinkText);
-    }
+    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'object');
 
     const elSubOptions = document.createElement('div');
     elSubOptions.classList.add('sub-options', 'disabled');
@@ -522,54 +330,7 @@ const configurator = {
   },
 
   addStringOption (key, policy) {
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('checkbox');
-
-    const elCheckbox = document.createElement('input');
-    elCheckbox.setAttribute('type', 'checkbox');
-    elCheckbox.setAttribute('name', key);
-    elCheckbox.setAttribute('id', key);
-    elCheckbox.setAttribute('data-type', 'string');
-    elCheckbox.classList.add('primary-checkbox');
-
-    elObjectWrapper.appendChild(elCheckbox);
-
-    const elLabel = document.createElement('label');
-    elLabel.setAttribute('for', key);
-    elLabel.textContent = policy.description;
-    elObjectWrapper.appendChild(elLabel);
-
-    if (policy.enterprise_only) {
-      const elESRNotice = document.createElement('div');
-      elESRNotice.classList.add('esr-only');
-      elLabel.appendChild(elESRNotice);
-
-      const elESRImage = document.createElement('img');
-      elESRImage.src = '/images/warning.svg';
-      elESRNotice.appendChild(elESRImage);
-
-      const elESRText = document.createTextNode(browser.i18n.getMessage('enterprise_only_label'));
-      elESRNotice.appendChild(elESRText);
-    }
-
-    if (policy.info_link) {
-      const elInfoLinkWrapper = document.createElement('div');
-      elInfoLinkWrapper.classList.add('info-link');
-      elLabel.appendChild(elInfoLinkWrapper);
-
-      const elInfoLink = document.createElement('a');
-      elInfoLink.setAttribute('href', policy.info_link);
-      elInfoLink.setAttribute('target', '_blank');
-      elInfoLink.setAttribute('rel', 'noopener');
-      elInfoLinkWrapper.appendChild(elInfoLink);
-
-      const elInfoLinkImage = document.createElement('img');
-      elInfoLinkImage.src = '/images/link.svg';
-      elInfoLink.appendChild(elInfoLinkImage);
-
-      const elInfoLinkText = document.createTextNode(browser.i18n.getMessage('link_learn_more'));
-      elInfoLink.appendChild(elInfoLinkText);
-    }
+    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'string');
 
     const elSubOptions = document.createElement('div');
     elSubOptions.classList.add('sub-options', 'disabled');
@@ -870,6 +631,63 @@ const configurator = {
     }
 
     el.appendChild(elObjectWrapper);
+  },
+
+  addPolicyNode (key, policy, type, inverse) {
+    const elObjectWrapper = document.createElement('div');
+    elObjectWrapper.classList.add('checkbox');
+
+    const elCheckbox = document.createElement('input');
+    elCheckbox.setAttribute('type', 'checkbox');
+    elCheckbox.setAttribute('name', key);
+    elCheckbox.setAttribute('id', key);
+    elCheckbox.setAttribute('data-type', type);
+    elCheckbox.classList.add('primary-checkbox');
+
+    if (inverse) {
+      elCheckbox.setAttribute('data-inverse', 'true');
+    }
+
+    elObjectWrapper.appendChild(elCheckbox);
+
+    const elLabel = document.createElement('label');
+    elLabel.setAttribute('for', key);
+    elLabel.textContent = policy.description;
+    elObjectWrapper.appendChild(elLabel);
+
+    if (policy.enterprise_only) {
+      const elESRNotice = document.createElement('div');
+      elESRNotice.classList.add('esr-only');
+      elLabel.appendChild(elESRNotice);
+
+      const elESRImage = document.createElement('img');
+      elESRImage.src = '/images/warning.svg';
+      elESRNotice.appendChild(elESRImage);
+
+      const elESRText = document.createTextNode(browser.i18n.getMessage('enterprise_only_label'));
+      elESRNotice.appendChild(elESRText);
+    }
+
+    if (policy.info_link) {
+      const elInfoLinkWrapper = document.createElement('div');
+      elInfoLinkWrapper.classList.add('info-link');
+      elLabel.appendChild(elInfoLinkWrapper);
+
+      const elInfoLink = document.createElement('a');
+      elInfoLink.setAttribute('href', policy.info_link);
+      elInfoLink.setAttribute('target', '_blank');
+      elInfoLink.setAttribute('rel', 'noopener');
+      elInfoLinkWrapper.appendChild(elInfoLink);
+
+      const elInfoLinkImage = document.createElement('img');
+      elInfoLinkImage.src = '/images/link.svg';
+      elInfoLink.appendChild(elInfoLinkImage);
+
+      const elInfoLinkText = document.createTextNode(browser.i18n.getMessage('link_learn_more'));
+      elInfoLink.appendChild(elInfoLinkText);
+    }
+
+    return elObjectWrapper;
   }
 };
 
