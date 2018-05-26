@@ -2,7 +2,7 @@
 
 /* global policies, policymanager */
 
-const DOWNLOAD_PERMISSION = { permissions: ['downloads'] };
+const DOWNLOAD_PERMISSION = { permissions : ['downloads'] };
 
 const elActionLinks = document.getElementById('action-links');
 const elDownloadLink = document.getElementById('download');
@@ -95,14 +95,14 @@ const configurator = {
       }
     });
 
-    elDownloadLink.addEventListener('click', async (e) => {
+    elDownloadLink.addEventListener('click', (e) => {
       e.preventDefault();
 
       configurator.downloadPolicy();
     });
   },
 
-  async testDownloadPermission() {
+  async testDownloadPermission () {
     const isAllowed = await browser.permissions.contains(DOWNLOAD_PERMISSION);
 
     if (isAllowed) {
