@@ -133,10 +133,8 @@ const output = {
       }
     });
 
-    const lockable = el.parentNode.querySelector('.lock-checkbox');
-    if (lockable && lockable.checked) {
-      policy['Locked'] = true;
-    }
+    // set "Locked" field
+    output.addLockedField(el, policy);
 
     // only add non-empty policies
     if (Object.keys(policy).length > 0) {
@@ -177,5 +175,13 @@ const output = {
     }
 
     return value;
+  },
+
+  addLockedField (el, policy) {
+    const lockable = el.parentNode.querySelector('.lock-checkbox');
+
+    if (lockable && lockable.checked) {
+      policy['Locked'] = true;
+    }
   }
 };
