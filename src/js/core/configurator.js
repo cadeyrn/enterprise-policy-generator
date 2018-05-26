@@ -250,11 +250,7 @@ const configurator = {
 
     // label
     if (policy.label) {
-      const elSelectLabel = document.createElement('label');
-      elSelectLabel.setAttribute('for', key + '_select');
-      elSelectLabel.classList.add('select-label');
-      elSelectLabel.textContent = policy.label;
-      elSelectWrapper.appendChild(elSelectLabel);
+      configurator.addSelectLabel(elSelectWrapper, key + '_select', policy);
     }
 
     // add options to select element
@@ -396,11 +392,7 @@ const configurator = {
 
     // label
     if (policy.label) {
-      const elLabel = document.createElement('label');
-      elLabel.setAttribute('for', policy.name);
-      elLabel.classList.add('select-label');
-      elLabel.textContent = policy.label;
-      elObjectWrapper.appendChild(elLabel);
+      configurator.addSelectLabel(elObjectWrapper, policy.name, policy);
     }
 
     // add select element
@@ -556,6 +548,14 @@ const configurator = {
     }
 
     return elObjectWrapper;
+  },
+
+  addSelectLabel (elSelectWrapper, name, policy) {
+    const elSelectLabel = document.createElement('label');
+    elSelectLabel.setAttribute('for', name);
+    elSelectLabel.classList.add('select-label');
+    elSelectLabel.textContent = policy.label;
+    elSelectWrapper.appendChild(elSelectLabel);
   },
 
   addArrayFieldActionLinks (elSubOptions) {
