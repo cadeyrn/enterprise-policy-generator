@@ -61,7 +61,7 @@ const configurator = {
     });
 
     [...document.querySelectorAll('.array-action')].forEach((el) => {
-      el.addEventListener('click', configurator.arrayFieldActions);
+      el.addEventListener('click', configurator.executeArrayFieldActions);
     });
 
     [...document.querySelectorAll('input[data-mandatory]')].forEach((el) => {
@@ -119,7 +119,7 @@ const configurator = {
     });
   },
 
-  arrayFieldActions (e) {
+  executeArrayFieldActions (e) {
     e.preventDefault();
 
     switch (e.target.getAttribute('data-action')) {
@@ -138,7 +138,7 @@ const configurator = {
         });
 
         addedNode.querySelectorAll('a').forEach((el) => {
-          el.addEventListener('click', configurator.arrayFieldActions);
+          el.addEventListener('click', configurator.executeArrayFieldActions);
         });
 
         addedNode.querySelectorAll('input[data-mandatory]').forEach((el) => {
