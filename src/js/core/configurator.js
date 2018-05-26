@@ -65,16 +65,16 @@ const configurator = {
       el.addEventListener('input', configurator.validateMandatoryFields);
     });
 
-    elPolicyGeneratorButton.onclick = function (e) {
+    elPolicyGeneratorButton.addEventListener('click', (e) => {
       e.preventDefault();
 
       elPolicyOutput.innerText = configurator.generatePoliciesOutput();
       elActionLinks.classList.remove('hidden');
-    };
+    });
 
     configurator.testDownloadPermission();
 
-    elSelectAllLink.onclick = function (e) {
+    elSelectAllLink.addEventListener('click', (e) => {
       e.preventDefault();
 
       const selection = window.getSelection();
@@ -82,7 +82,7 @@ const configurator = {
       range.selectNodeContents(elPolicyOutput);
       selection.removeAllRanges();
       selection.addRange(range);
-    };
+    });
 
     elGrantDownloadPermissionLink.addEventListener('click', async (e) => {
       e.preventDefault();
