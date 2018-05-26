@@ -64,7 +64,7 @@ const configurator = {
       });
     });
 
-    // add event listener for array actions (plus / minus icons)
+    // add event listener for array field actions (plus / minus icons)
     [...document.querySelectorAll('.array-action')].forEach((el) => {
       el.addEventListener('click', configurator.executeArrayFieldActions);
     });
@@ -82,7 +82,7 @@ const configurator = {
       elActionLinks.classList.remove('hidden');
     });
 
-    // action for the "select all" link
+    // action for clicking the "select all" link
     elSelectAllLink.addEventListener('click', (e) => {
       e.preventDefault();
 
@@ -93,7 +93,7 @@ const configurator = {
       selection.addRange(range);
     });
 
-    // action for the "download policies.json" link if downloads permission is not granted
+    // action for clicking the "download policies.json" link if downloads permission is not granted
     elGrantDownloadPermissionLink.addEventListener('click', async (e) => {
       e.preventDefault();
 
@@ -104,7 +104,7 @@ const configurator = {
       }
     });
 
-    // action for the "download policies.json" link if downloads permission is granted
+    // action for clicking the "download policies.json" link if downloads permission is granted
     elDownloadLink.addEventListener('click', (e) => {
       e.preventDefault();
 
@@ -136,15 +136,15 @@ const configurator = {
 
     switch (e.target.getAttribute('data-action')) {
       case 'add':
-        // after adding a new field the remove link of the first one shouldn't be disabled
+        // after adding a new array item the remove link of the first one shouldn't be disabled
         if (e.target.parentNode.parentNode.querySelector('.disabled-link')) {
           e.target.parentNode.parentNode.querySelector('.disabled-link').classList.remove('disabled-link');
         }
 
-        // copy the field
+        // copy the array item
         const addedNode = e.target.parentNode.cloneNode(true);
 
-        // we want an empty input field for the copied field, we also need a new ID
+        // we want an empty input field for the copied array item, we also need a new DOM ID
         addedNode.querySelectorAll('input').forEach((el) => {
           const randomId = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
 
@@ -164,7 +164,7 @@ const configurator = {
           el.parentNode.querySelector('.mandatory-label').classList.remove('hidden');
         });
 
-        // add the copied field to the DOM
+        // add the copied array item to the DOM
         e.target.parentNode.after(addedNode);
         break;
       case 'remove':
@@ -184,12 +184,12 @@ const configurator = {
           newLength = elGrandParent.querySelectorAll('.input').length - 1;
         }
 
-        // remove the field
+        // remove the array item from the DOM
         if (!e.target.classList.contains('disabled-link')) {
           e.target.parentNode.remove();
         }
 
-        // if there is only one field after removing another field the remove link should be disabled
+        // if there is only one array item after removing another array item the remove link should be disabled
         if (newLength === 1) {
           elGrandParent.querySelector('[data-action="remove"]').classList.add('disabled-link');
         }
