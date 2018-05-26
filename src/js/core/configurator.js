@@ -213,289 +213,6 @@ const configurator = {
     }
   },
 
-  addProperty (el, policy, isArrayProperty) {
-    switch (policy.type) {
-      case 'object-array':
-        configurator.addObjectArrayProperty(el, policy);
-        break;
-      case 'array':
-        configurator.addArrayProperty(el, policy);
-        break;
-      case 'boolean':
-        configurator.addBooleanProperty(el, policy);
-        break;
-      case 'enum':
-        configurator.addEnumProperty(el, policy);
-        break;
-      case 'string':
-        configurator.addStringProperty(el, policy, isArrayProperty);
-        break;
-      case 'url':
-        configurator.addUrlProperty(el, policy, isArrayProperty);
-        break;
-      default:
-      // do nothing
-    }
-  },
-
-  addBooleanProperty (el, policy) {
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('checkbox');
-
-    const elInput = document.createElement('input');
-    elInput.setAttribute('type', 'checkbox');
-    elInput.setAttribute('name', policy.name);
-    elInput.setAttribute('id', policy.name);
-
-    if (policy.mandatory) {
-      elInput.setAttribute('data-mandatory', 'true');
-      elInput.classList.add('mandatory-style');
-
-      const elMandatoryLabel = document.createElement('div');
-      elMandatoryLabel.classList.add('mandatory-label');
-      elMandatoryLabel.innerText = browser.i18n.getMessage('mandatory-label');
-      elObjectWrapper.appendChild(elMandatoryLabel);
-    }
-
-    elObjectWrapper.appendChild(elInput);
-
-    const elLabel = document.createElement('label');
-    elLabel.setAttribute('for', policy.name);
-    elLabel.textContent = policy.label;
-    elObjectWrapper.appendChild(elLabel);
-
-    el.appendChild(elObjectWrapper);
-  },
-
-  addEnumProperty (el, policy) {
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('enum');
-
-    if (policy.label) {
-      const elLabel = document.createElement('label');
-      elLabel.setAttribute('for', policy.name);
-      elLabel.classList.add('select-label');
-      elLabel.textContent = policy.label;
-      elObjectWrapper.appendChild(elLabel);
-    }
-
-    const elSelectWrapper = document.createElement('div');
-    elSelectWrapper.classList.add('select-wrapper');
-    elObjectWrapper.appendChild(elSelectWrapper);
-
-    const elSelect = document.createElement('select');
-    elSelect.setAttribute('name', policy.name);
-    elSelect.setAttribute('id', policy.name);
-
-    if (policy.mandatory) {
-      elSelect.setAttribute('data-mandatory', 'true');
-      elSelect.classList.add('mandatory-style');
-
-      const elMandatoryLabel = document.createElement('div');
-      elMandatoryLabel.classList.add('mandatory-label');
-      elMandatoryLabel.innerText = browser.i18n.getMessage('mandatory-label');
-      elSelectWrapper.appendChild(elMandatoryLabel);
-    }
-
-    const optionsLength = policy.options.length;
-    for (let i = 0; i < optionsLength; i++) {
-      const elOptionLabel = document.createTextNode(policy.options[i].label);
-      const elOption = document.createElement('option');
-      elOption.setAttribute('value', policy.options[i].value);
-      elOption.appendChild(elOptionLabel);
-      elSelect.appendChild(elOption);
-    }
-
-    elSelectWrapper.appendChild(elSelect);
-
-    el.appendChild(elObjectWrapper);
-  },
-
-  addStringProperty (el, policy, isArrayProperty) {
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('input');
-
-    if (isArrayProperty) {
-      policy.name = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
-    }
-
-    const elInput = document.createElement('input');
-    elInput.setAttribute('type', 'text');
-    elInput.setAttribute('name', policy.name);
-    elInput.setAttribute('id', policy.name);
-    elInput.setAttribute('placeholder', policy.label);
-
-    if (policy.mandatory) {
-      elInput.setAttribute('data-mandatory', 'true');
-      elInput.classList.add('mandatory-style');
-
-      const elMandatoryLabel = document.createElement('div');
-      elMandatoryLabel.classList.add('mandatory-label');
-      elMandatoryLabel.innerText = browser.i18n.getMessage('mandatory-label');
-      elObjectWrapper.appendChild(elMandatoryLabel);
-    }
-
-    elObjectWrapper.appendChild(elInput);
-
-    if (isArrayProperty) {
-      const elRemoveLink = document.createElement('a');
-      elRemoveLink.setAttribute('href', '#');
-      elRemoveLink.setAttribute('data-action', 'remove');
-      elRemoveLink.setAttribute('title', browser.i18n.getMessage('title_remove_row'));
-      elRemoveLink.classList.add('array-action');
-      elRemoveLink.classList.add('disabled-link');
-      elObjectWrapper.appendChild(elRemoveLink);
-
-      const elRemoveIcon = document.createElement('img');
-      elRemoveIcon.src = '/images/minus.svg';
-      elRemoveIcon.classList.add('action-img');
-      elRemoveIcon.setAttribute('alt', browser.i18n.getMessage('title_remove_row'));
-      elRemoveLink.appendChild(elRemoveIcon);
-
-      const elAddLink = document.createElement('a');
-      elAddLink.setAttribute('href', '#');
-      elAddLink.setAttribute('data-action', 'add');
-      elAddLink.setAttribute('title', browser.i18n.getMessage('title_add_row'));
-      elAddLink.classList.add('array-action');
-      elObjectWrapper.appendChild(elAddLink);
-
-      const elAddIcon = document.createElement('img');
-      elAddIcon.src = '/images/plus.svg';
-      elAddIcon.classList.add('action-img');
-      elAddIcon.setAttribute('alt', browser.i18n.getMessage('title_add_row'));
-      elAddLink.appendChild(elAddIcon);
-    }
-
-    el.appendChild(elObjectWrapper);
-  },
-
-  addUrlProperty (el, policy, isArrayProperty) {
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('input');
-
-    if (isArrayProperty) {
-      policy.name = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
-    }
-
-    const elInput = document.createElement('input');
-    elInput.setAttribute('type', 'text');
-    elInput.setAttribute('name', policy.name);
-    elInput.setAttribute('id', policy.name);
-    elInput.setAttribute('placeholder', policy.label);
-
-    if (policy.mandatory) {
-      elInput.setAttribute('data-mandatory', 'true');
-      elInput.classList.add('mandatory-style');
-
-      const elMandatoryLabel = document.createElement('div');
-      elMandatoryLabel.classList.add('mandatory-label');
-      elMandatoryLabel.innerText = browser.i18n.getMessage('mandatory-label');
-      elObjectWrapper.appendChild(elMandatoryLabel);
-    }
-
-    elObjectWrapper.appendChild(elInput);
-
-    if (isArrayProperty) {
-      const elRemoveLink = document.createElement('a');
-      elRemoveLink.setAttribute('href', '#');
-      elRemoveLink.setAttribute('data-action', 'remove');
-      elRemoveLink.setAttribute('title', browser.i18n.getMessage('title_remove_row'));
-      elRemoveLink.classList.add('array-action');
-      elRemoveLink.classList.add('disabled-link');
-      elObjectWrapper.appendChild(elRemoveLink);
-
-      const elRemoveIcon = document.createElement('img');
-      elRemoveIcon.src = '/images/minus.svg';
-      elRemoveIcon.classList.add('action-img');
-      elRemoveIcon.setAttribute('alt', browser.i18n.getMessage('title_remove_row'));
-      elRemoveLink.appendChild(elRemoveIcon);
-
-      const elAddLink = document.createElement('a');
-      elAddLink.setAttribute('href', '#');
-      elAddLink.setAttribute('data-action', 'add');
-      elAddLink.setAttribute('title', browser.i18n.getMessage('title_add_row'));
-      elAddLink.classList.add('array-action');
-      elObjectWrapper.appendChild(elAddLink);
-
-      const elAddIcon = document.createElement('img');
-      elAddIcon.src = '/images/plus.svg';
-      elAddIcon.classList.add('action-img');
-      elAddIcon.setAttribute('alt', browser.i18n.getMessage('title_add_row'));
-      elAddLink.appendChild(elAddIcon);
-    }
-
-    el.appendChild(elObjectWrapper);
-  },
-
-  addObjectArrayProperty (el, policy) {
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('object-array');
-    elObjectWrapper.setAttribute('data-name', policy.name);
-
-    const elCaptionWrapper = document.createElement('div');
-    elCaptionWrapper.classList.add('label');
-    elObjectWrapper.appendChild(elCaptionWrapper);
-
-    const elCaption = document.createTextNode(policy.label);
-    elCaptionWrapper.appendChild(elCaption);
-
-    el.appendChild(elObjectWrapper);
-
-    const elSubOptions = document.createElement('div');
-    elObjectWrapper.appendChild(elSubOptions);
-
-    const optionsLength = policy.items.length;
-    for (let i = 0; i < optionsLength; i++) {
-      configurator.addProperty(elSubOptions, policy.items[i]);
-    }
-
-    const elRemoveLink = document.createElement('a');
-    elRemoveLink.setAttribute('href', '#');
-    elRemoveLink.setAttribute('data-action', 'remove');
-    elRemoveLink.setAttribute('title', browser.i18n.getMessage('title_remove_row'));
-    elRemoveLink.classList.add('array-action');
-    elRemoveLink.classList.add('disabled-link');
-    elSubOptions.appendChild(elRemoveLink);
-
-    const elRemoveIcon = document.createElement('img');
-    elRemoveIcon.src = '/images/minus.svg';
-    elRemoveIcon.classList.add('action-img');
-    elRemoveIcon.setAttribute('alt', browser.i18n.getMessage('title_remove_row'));
-    elRemoveLink.appendChild(elRemoveIcon);
-
-    const elAddLink = document.createElement('a');
-    elAddLink.setAttribute('href', '#');
-    elAddLink.setAttribute('data-action', 'add');
-    elAddLink.setAttribute('title', browser.i18n.getMessage('title_add_row'));
-    elAddLink.classList.add('array-action');
-    elSubOptions.appendChild(elAddLink);
-
-    const elAddIcon = document.createElement('img');
-    elAddIcon.src = '/images/plus.svg';
-    elAddIcon.classList.add('action-img');
-    elAddIcon.setAttribute('alt', browser.i18n.getMessage('title_add_row'));
-    elAddLink.appendChild(elAddIcon);
-  },
-
-  addArrayProperty (el, policy) {
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('array');
-    elObjectWrapper.setAttribute('data-name', policy.name);
-
-    const elCaptionWrapper = document.createElement('div');
-    elCaptionWrapper.classList.add('label');
-    elObjectWrapper.appendChild(elCaptionWrapper);
-
-    const elCaption = document.createTextNode(policy.label);
-    elCaptionWrapper.appendChild(elCaption);
-
-    if (policy.items) {
-      configurator.addProperty(elObjectWrapper, policy.items, true);
-    }
-
-    el.appendChild(elObjectWrapper);
-  },
-
   addOptionToUi (el, category) {
     configurator.uiCategoryElements[category].appendChild(el);
   },
@@ -726,74 +443,6 @@ const configurator = {
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
   },
 
-  addStringOption (key, policy) {
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('checkbox');
-
-    const elCheckbox = document.createElement('input');
-    elCheckbox.setAttribute('type', 'checkbox');
-    elCheckbox.setAttribute('name', key);
-    elCheckbox.setAttribute('id', key);
-    elCheckbox.setAttribute('data-type', 'string');
-    elCheckbox.classList.add('primary-checkbox');
-
-    elObjectWrapper.appendChild(elCheckbox);
-
-    const elLabel = document.createElement('label');
-    elLabel.setAttribute('for', key);
-    elLabel.textContent = policy.description;
-    elObjectWrapper.appendChild(elLabel);
-
-    if (policy.enterprise_only) {
-      const elESRNotice = document.createElement('div');
-      elESRNotice.classList.add('esr-only');
-      elLabel.appendChild(elESRNotice);
-
-      const elESRImage = document.createElement('img');
-      elESRImage.src = '/images/warning.svg';
-      elESRNotice.appendChild(elESRImage);
-
-      const elESRText = document.createTextNode(browser.i18n.getMessage('enterprise_only_label'));
-      elESRNotice.appendChild(elESRText);
-    }
-
-    if (policy.info_link) {
-      const elInfoLinkWrapper = document.createElement('div');
-      elInfoLinkWrapper.classList.add('info-link');
-      elLabel.appendChild(elInfoLinkWrapper);
-
-      const elInfoLink = document.createElement('a');
-      elInfoLink.setAttribute('href', policy.info_link);
-      elInfoLink.setAttribute('target', '_blank');
-      elInfoLink.setAttribute('rel', 'noopener');
-      elInfoLinkWrapper.appendChild(elInfoLink);
-
-      const elInfoLinkImage = document.createElement('img');
-      elInfoLinkImage.src = '/images/link.svg';
-      elInfoLink.appendChild(elInfoLinkImage);
-
-      const elInfoLinkText = document.createTextNode(browser.i18n.getMessage('link_learn_more'));
-      elInfoLink.appendChild(elInfoLinkText);
-    }
-
-    const elSubOptions = document.createElement('div');
-    elSubOptions.classList.add('sub-options', 'disabled');
-    elObjectWrapper.appendChild(elSubOptions);
-
-    const elInputWrapper = document.createElement('div');
-    elInputWrapper.classList.add('input');
-
-    const elInput = document.createElement('input');
-    elInput.setAttribute('type', 'text');
-    elInput.setAttribute('name', key + 'Text');
-    elInput.setAttribute('id', key + 'Text');
-    elInput.setAttribute('placeholder', policy.label);
-
-    elSubOptions.appendChild(elInput);
-
-    configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
-  },
-
   addObjectOption (key, policy) {
     const elObjectWrapper = document.createElement('div');
     elObjectWrapper.classList.add('checkbox');
@@ -870,6 +519,357 @@ const configurator = {
     }
 
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
+  },
+
+  addStringOption (key, policy) {
+    const elObjectWrapper = document.createElement('div');
+    elObjectWrapper.classList.add('checkbox');
+
+    const elCheckbox = document.createElement('input');
+    elCheckbox.setAttribute('type', 'checkbox');
+    elCheckbox.setAttribute('name', key);
+    elCheckbox.setAttribute('id', key);
+    elCheckbox.setAttribute('data-type', 'string');
+    elCheckbox.classList.add('primary-checkbox');
+
+    elObjectWrapper.appendChild(elCheckbox);
+
+    const elLabel = document.createElement('label');
+    elLabel.setAttribute('for', key);
+    elLabel.textContent = policy.description;
+    elObjectWrapper.appendChild(elLabel);
+
+    if (policy.enterprise_only) {
+      const elESRNotice = document.createElement('div');
+      elESRNotice.classList.add('esr-only');
+      elLabel.appendChild(elESRNotice);
+
+      const elESRImage = document.createElement('img');
+      elESRImage.src = '/images/warning.svg';
+      elESRNotice.appendChild(elESRImage);
+
+      const elESRText = document.createTextNode(browser.i18n.getMessage('enterprise_only_label'));
+      elESRNotice.appendChild(elESRText);
+    }
+
+    if (policy.info_link) {
+      const elInfoLinkWrapper = document.createElement('div');
+      elInfoLinkWrapper.classList.add('info-link');
+      elLabel.appendChild(elInfoLinkWrapper);
+
+      const elInfoLink = document.createElement('a');
+      elInfoLink.setAttribute('href', policy.info_link);
+      elInfoLink.setAttribute('target', '_blank');
+      elInfoLink.setAttribute('rel', 'noopener');
+      elInfoLinkWrapper.appendChild(elInfoLink);
+
+      const elInfoLinkImage = document.createElement('img');
+      elInfoLinkImage.src = '/images/link.svg';
+      elInfoLink.appendChild(elInfoLinkImage);
+
+      const elInfoLinkText = document.createTextNode(browser.i18n.getMessage('link_learn_more'));
+      elInfoLink.appendChild(elInfoLinkText);
+    }
+
+    const elSubOptions = document.createElement('div');
+    elSubOptions.classList.add('sub-options', 'disabled');
+    elObjectWrapper.appendChild(elSubOptions);
+
+    const elInputWrapper = document.createElement('div');
+    elInputWrapper.classList.add('input');
+
+    const elInput = document.createElement('input');
+    elInput.setAttribute('type', 'text');
+    elInput.setAttribute('name', key + 'Text');
+    elInput.setAttribute('id', key + 'Text');
+    elInput.setAttribute('placeholder', policy.label);
+
+    elSubOptions.appendChild(elInput);
+
+    configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
+  },
+
+  addProperty (el, policy, isArrayProperty) {
+    switch (policy.type) {
+      case 'object-array':
+        configurator.addObjectArrayProperty(el, policy);
+        break;
+      case 'array':
+        configurator.addArrayProperty(el, policy);
+        break;
+      case 'boolean':
+        configurator.addBooleanProperty(el, policy);
+        break;
+      case 'enum':
+        configurator.addEnumProperty(el, policy);
+        break;
+      case 'string':
+        configurator.addStringProperty(el, policy, isArrayProperty);
+        break;
+      case 'url':
+        configurator.addUrlProperty(el, policy, isArrayProperty);
+        break;
+      default:
+      // do nothing
+    }
+  },
+
+  addArrayProperty (el, policy) {
+    const elObjectWrapper = document.createElement('div');
+    elObjectWrapper.classList.add('array');
+    elObjectWrapper.setAttribute('data-name', policy.name);
+
+    const elCaptionWrapper = document.createElement('div');
+    elCaptionWrapper.classList.add('label');
+    elObjectWrapper.appendChild(elCaptionWrapper);
+
+    const elCaption = document.createTextNode(policy.label);
+    elCaptionWrapper.appendChild(elCaption);
+
+    if (policy.items) {
+      configurator.addProperty(elObjectWrapper, policy.items, true);
+    }
+
+    el.appendChild(elObjectWrapper);
+  },
+
+  addBooleanProperty (el, policy) {
+    const elObjectWrapper = document.createElement('div');
+    elObjectWrapper.classList.add('checkbox');
+
+    const elInput = document.createElement('input');
+    elInput.setAttribute('type', 'checkbox');
+    elInput.setAttribute('name', policy.name);
+    elInput.setAttribute('id', policy.name);
+
+    if (policy.mandatory) {
+      elInput.setAttribute('data-mandatory', 'true');
+      elInput.classList.add('mandatory-style');
+
+      const elMandatoryLabel = document.createElement('div');
+      elMandatoryLabel.classList.add('mandatory-label');
+      elMandatoryLabel.innerText = browser.i18n.getMessage('mandatory-label');
+      elObjectWrapper.appendChild(elMandatoryLabel);
+    }
+
+    elObjectWrapper.appendChild(elInput);
+
+    const elLabel = document.createElement('label');
+    elLabel.setAttribute('for', policy.name);
+    elLabel.textContent = policy.label;
+    elObjectWrapper.appendChild(elLabel);
+
+    el.appendChild(elObjectWrapper);
+  },
+
+  addEnumProperty (el, policy) {
+    const elObjectWrapper = document.createElement('div');
+    elObjectWrapper.classList.add('enum');
+
+    if (policy.label) {
+      const elLabel = document.createElement('label');
+      elLabel.setAttribute('for', policy.name);
+      elLabel.classList.add('select-label');
+      elLabel.textContent = policy.label;
+      elObjectWrapper.appendChild(elLabel);
+    }
+
+    const elSelectWrapper = document.createElement('div');
+    elSelectWrapper.classList.add('select-wrapper');
+    elObjectWrapper.appendChild(elSelectWrapper);
+
+    const elSelect = document.createElement('select');
+    elSelect.setAttribute('name', policy.name);
+    elSelect.setAttribute('id', policy.name);
+
+    if (policy.mandatory) {
+      elSelect.setAttribute('data-mandatory', 'true');
+      elSelect.classList.add('mandatory-style');
+
+      const elMandatoryLabel = document.createElement('div');
+      elMandatoryLabel.classList.add('mandatory-label');
+      elMandatoryLabel.innerText = browser.i18n.getMessage('mandatory-label');
+      elSelectWrapper.appendChild(elMandatoryLabel);
+    }
+
+    const optionsLength = policy.options.length;
+    for (let i = 0; i < optionsLength; i++) {
+      const elOptionLabel = document.createTextNode(policy.options[i].label);
+      const elOption = document.createElement('option');
+      elOption.setAttribute('value', policy.options[i].value);
+      elOption.appendChild(elOptionLabel);
+      elSelect.appendChild(elOption);
+    }
+
+    elSelectWrapper.appendChild(elSelect);
+
+    el.appendChild(elObjectWrapper);
+  },
+
+  addObjectArrayProperty (el, policy) {
+    const elObjectWrapper = document.createElement('div');
+    elObjectWrapper.classList.add('object-array');
+    elObjectWrapper.setAttribute('data-name', policy.name);
+
+    const elCaptionWrapper = document.createElement('div');
+    elCaptionWrapper.classList.add('label');
+    elObjectWrapper.appendChild(elCaptionWrapper);
+
+    const elCaption = document.createTextNode(policy.label);
+    elCaptionWrapper.appendChild(elCaption);
+
+    el.appendChild(elObjectWrapper);
+
+    const elSubOptions = document.createElement('div');
+    elObjectWrapper.appendChild(elSubOptions);
+
+    const optionsLength = policy.items.length;
+    for (let i = 0; i < optionsLength; i++) {
+      configurator.addProperty(elSubOptions, policy.items[i]);
+    }
+
+    const elRemoveLink = document.createElement('a');
+    elRemoveLink.setAttribute('href', '#');
+    elRemoveLink.setAttribute('data-action', 'remove');
+    elRemoveLink.setAttribute('title', browser.i18n.getMessage('title_remove_row'));
+    elRemoveLink.classList.add('array-action');
+    elRemoveLink.classList.add('disabled-link');
+    elSubOptions.appendChild(elRemoveLink);
+
+    const elRemoveIcon = document.createElement('img');
+    elRemoveIcon.src = '/images/minus.svg';
+    elRemoveIcon.classList.add('action-img');
+    elRemoveIcon.setAttribute('alt', browser.i18n.getMessage('title_remove_row'));
+    elRemoveLink.appendChild(elRemoveIcon);
+
+    const elAddLink = document.createElement('a');
+    elAddLink.setAttribute('href', '#');
+    elAddLink.setAttribute('data-action', 'add');
+    elAddLink.setAttribute('title', browser.i18n.getMessage('title_add_row'));
+    elAddLink.classList.add('array-action');
+    elSubOptions.appendChild(elAddLink);
+
+    const elAddIcon = document.createElement('img');
+    elAddIcon.src = '/images/plus.svg';
+    elAddIcon.classList.add('action-img');
+    elAddIcon.setAttribute('alt', browser.i18n.getMessage('title_add_row'));
+    elAddLink.appendChild(elAddIcon);
+  },
+
+  addStringProperty (el, policy, isArrayProperty) {
+    const elObjectWrapper = document.createElement('div');
+    elObjectWrapper.classList.add('input');
+
+    if (isArrayProperty) {
+      policy.name = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
+    }
+
+    const elInput = document.createElement('input');
+    elInput.setAttribute('type', 'text');
+    elInput.setAttribute('name', policy.name);
+    elInput.setAttribute('id', policy.name);
+    elInput.setAttribute('placeholder', policy.label);
+
+    if (policy.mandatory) {
+      elInput.setAttribute('data-mandatory', 'true');
+      elInput.classList.add('mandatory-style');
+
+      const elMandatoryLabel = document.createElement('div');
+      elMandatoryLabel.classList.add('mandatory-label');
+      elMandatoryLabel.innerText = browser.i18n.getMessage('mandatory-label');
+      elObjectWrapper.appendChild(elMandatoryLabel);
+    }
+
+    elObjectWrapper.appendChild(elInput);
+
+    if (isArrayProperty) {
+      const elRemoveLink = document.createElement('a');
+      elRemoveLink.setAttribute('href', '#');
+      elRemoveLink.setAttribute('data-action', 'remove');
+      elRemoveLink.setAttribute('title', browser.i18n.getMessage('title_remove_row'));
+      elRemoveLink.classList.add('array-action');
+      elRemoveLink.classList.add('disabled-link');
+      elObjectWrapper.appendChild(elRemoveLink);
+
+      const elRemoveIcon = document.createElement('img');
+      elRemoveIcon.src = '/images/minus.svg';
+      elRemoveIcon.classList.add('action-img');
+      elRemoveIcon.setAttribute('alt', browser.i18n.getMessage('title_remove_row'));
+      elRemoveLink.appendChild(elRemoveIcon);
+
+      const elAddLink = document.createElement('a');
+      elAddLink.setAttribute('href', '#');
+      elAddLink.setAttribute('data-action', 'add');
+      elAddLink.setAttribute('title', browser.i18n.getMessage('title_add_row'));
+      elAddLink.classList.add('array-action');
+      elObjectWrapper.appendChild(elAddLink);
+
+      const elAddIcon = document.createElement('img');
+      elAddIcon.src = '/images/plus.svg';
+      elAddIcon.classList.add('action-img');
+      elAddIcon.setAttribute('alt', browser.i18n.getMessage('title_add_row'));
+      elAddLink.appendChild(elAddIcon);
+    }
+
+    el.appendChild(elObjectWrapper);
+  },
+
+  addUrlProperty (el, policy, isArrayProperty) {
+    const elObjectWrapper = document.createElement('div');
+    elObjectWrapper.classList.add('input');
+
+    if (isArrayProperty) {
+      policy.name = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
+    }
+
+    const elInput = document.createElement('input');
+    elInput.setAttribute('type', 'text');
+    elInput.setAttribute('name', policy.name);
+    elInput.setAttribute('id', policy.name);
+    elInput.setAttribute('placeholder', policy.label);
+
+    if (policy.mandatory) {
+      elInput.setAttribute('data-mandatory', 'true');
+      elInput.classList.add('mandatory-style');
+
+      const elMandatoryLabel = document.createElement('div');
+      elMandatoryLabel.classList.add('mandatory-label');
+      elMandatoryLabel.innerText = browser.i18n.getMessage('mandatory-label');
+      elObjectWrapper.appendChild(elMandatoryLabel);
+    }
+
+    elObjectWrapper.appendChild(elInput);
+
+    if (isArrayProperty) {
+      const elRemoveLink = document.createElement('a');
+      elRemoveLink.setAttribute('href', '#');
+      elRemoveLink.setAttribute('data-action', 'remove');
+      elRemoveLink.setAttribute('title', browser.i18n.getMessage('title_remove_row'));
+      elRemoveLink.classList.add('array-action');
+      elRemoveLink.classList.add('disabled-link');
+      elObjectWrapper.appendChild(elRemoveLink);
+
+      const elRemoveIcon = document.createElement('img');
+      elRemoveIcon.src = '/images/minus.svg';
+      elRemoveIcon.classList.add('action-img');
+      elRemoveIcon.setAttribute('alt', browser.i18n.getMessage('title_remove_row'));
+      elRemoveLink.appendChild(elRemoveIcon);
+
+      const elAddLink = document.createElement('a');
+      elAddLink.setAttribute('href', '#');
+      elAddLink.setAttribute('data-action', 'add');
+      elAddLink.setAttribute('title', browser.i18n.getMessage('title_add_row'));
+      elAddLink.classList.add('array-action');
+      elObjectWrapper.appendChild(elAddLink);
+
+      const elAddIcon = document.createElement('img');
+      elAddIcon.src = '/images/plus.svg';
+      elAddIcon.classList.add('action-img');
+      elAddIcon.setAttribute('alt', browser.i18n.getMessage('title_add_row'));
+      elAddLink.appendChild(elAddIcon);
+    }
+
+    el.appendChild(elObjectWrapper);
   }
 };
 
