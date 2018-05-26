@@ -103,9 +103,9 @@ const configurator = {
   },
 
   async testDownloadPermission () {
-    const isAllowed = await browser.permissions.contains(DOWNLOAD_PERMISSION);
+    const isGranted = await browser.permissions.contains(DOWNLOAD_PERMISSION);
 
-    if (isAllowed) {
+    if (isGranted) {
       elGrantDownloadPermissionLink.classList.add('hidden');
       elDownloadLink.classList.remove('hidden');
     }
