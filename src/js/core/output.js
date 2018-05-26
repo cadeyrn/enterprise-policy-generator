@@ -47,20 +47,7 @@ const output = {
         });
 
         [...el.querySelectorAll(':scope select')].forEach((el) => {
-          let { value } = el.options[el.selectedIndex];
-
-          switch (value) {
-            case 'true':
-              value = true;
-              break;
-            case 'false':
-              value = false;
-              break;
-            default:
-            // do nothing
-          }
-
-          item[el.name] = value;
+          item[el.name] = output.parseEnumContent(el);
         });
 
         items.push(item);
@@ -80,30 +67,7 @@ const output = {
     const { name } = el;
 
     [...el.parentNode.querySelectorAll(':scope > .enum select')].forEach((el) => {
-      let { value } = el.options[el.selectedIndex];
-
-      // null represents an empty state, there is nothing to do
-      if (value === 'null') {
-        return;
-      }
-
-      // if the value is a number treat it as number
-      if (!isNaN(value)) {
-        value = parseInt(value);
-      }
-
-      switch (value) {
-        case 'true':
-          value = true;
-          break;
-        case 'false':
-          value = false;
-          break;
-        default:
-        // do nothing
-      }
-
-      policymanager.add(name, value);
+      policymanager.add(name, output.parseEnumContent(el));
     });
   },
 
@@ -124,30 +88,7 @@ const output = {
           });
 
           [...el.querySelectorAll(':scope > .enum select')].forEach((el) => {
-            let { value } = el.options[el.selectedIndex];
-
-            // null represents an empty state, there is nothing to do
-            if (value === 'null') {
-              return;
-            }
-
-            // if the value is a number treat it as number
-            if (!isNaN(value)) {
-              value = parseInt(value);
-            }
-
-            switch (value) {
-              case 'true':
-                value = true;
-                break;
-              case 'false':
-                value = false;
-                break;
-              default:
-              // do nothing
-            }
-
-            obj[el.name] = value;
+            obj[el.name] = output.parseEnumContent(el);
           });
 
           // only add non-empty object
@@ -183,30 +124,7 @@ const output = {
     });
 
     [...el.parentNode.querySelectorAll(':scope > div > .enum select')].forEach((el) => {
-      let { value } = el.options[el.selectedIndex];
-
-      // null represents an empty state, there is nothing to do
-      if (value === 'null') {
-        return;
-      }
-
-      // if the value is a number treat it as number
-      if (!isNaN(value)) {
-        value = parseInt(value);
-      }
-
-      switch (value) {
-        case 'true':
-          value = true;
-          break;
-        case 'false':
-          value = false;
-          break;
-        default:
-        // do nothing
-      }
-
-      policy[el.name] = value;
+      policy[el.name] = output.parseEnumContent(el);
     });
 
     [...el.parentNode.querySelectorAll(':scope > div > .input input')].forEach((el) => {
@@ -238,5 +156,32 @@ const output = {
     }
 
     return hasInvalidFields;
+  },
+
+  parseEnumContent (el) {
+    let { value } = el.options[el.selectedIndex];
+
+    // null represents an empty state, there is nothing to do
+    if (value === 'null') {
+      return;
+    }
+
+    // if the value is a number treat it as number
+    if (!isNaN(value)) {
+      value = parseInt(value);
+    }
+
+    switch (value) {
+      case 'true':
+        value = true;
+        break;
+      case 'false':
+        value = false;
+        break;
+      default:
+      // do nothing
+    }
+
+    return value;
   }
 };
