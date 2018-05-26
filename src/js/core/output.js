@@ -171,6 +171,7 @@ const output = {
       value = parseInt(value);
     }
 
+    // if the value is a boolean treat it as boolean
     if (value === 'true' || value === 'false') {
       value = JSON.parse(value);
     }
