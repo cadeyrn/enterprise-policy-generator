@@ -4,6 +4,11 @@
  * @exports policymanager
  */
 const policymanager = {
+  /**
+   * The data property contains the JSON object
+   *
+   * @type {Object}
+   */
   data : null,
 
   /**
