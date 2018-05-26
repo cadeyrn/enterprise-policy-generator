@@ -18,6 +18,7 @@ const configurator = {
   uiCategoryElements : [],
 
   init () {
+    // define ui categories
     const categories = [
       'block-access', 'disable-features', 'customization', 'network', 'privacy', 'security',
       'updates-and-data', 'others'
@@ -28,6 +29,7 @@ const configurator = {
       configurator.uiCategoryElements[categories[i]] = document.getElementById('options-' + categories[i]);
     }
 
+    // iterate over polices from policies.js and call the appropriate option type for each policy
     for (const key in policies) {
       if (policies[key].type === 'array') {
         configurator.addArrayOption(key, policies[key]);
@@ -49,8 +51,10 @@ const configurator = {
       }
     }
 
+    // test if the download permission is granted or not
     configurator.testDownloadPermission();
 
+    // show suboptions for enabled policies and hide suboptions for disabled policies
     [...document.querySelectorAll('.primary-checkbox')].forEach((el) => {
       el.addEventListener('change', () => {
         const elSubOptions = el.parentNode.getElementsByClassName('sub-options');
@@ -60,14 +64,17 @@ const configurator = {
       });
     });
 
+    // add event listener for array actions (plus / minus icons)
     [...document.querySelectorAll('.array-action')].forEach((el) => {
       el.addEventListener('click', configurator.executeArrayFieldActions);
     });
 
+    // add event listener for mandatory field validation
     [...document.querySelectorAll('input[data-mandatory]')].forEach((el) => {
       el.addEventListener('input', configurator.validateMandatoryFields);
     });
 
+    // action for clicking the "generate policies" button
     elPolicyGeneratorButton.addEventListener('click', (e) => {
       e.preventDefault();
 
@@ -75,6 +82,7 @@ const configurator = {
       elActionLinks.classList.remove('hidden');
     });
 
+    // action for the "select all" link
     elSelectAllLink.addEventListener('click', (e) => {
       e.preventDefault();
 
@@ -85,6 +93,7 @@ const configurator = {
       selection.addRange(range);
     });
 
+    // action for the "download policies.json" link if downloads permission is not granted
     elGrantDownloadPermissionLink.addEventListener('click', async (e) => {
       e.preventDefault();
 
@@ -95,6 +104,7 @@ const configurator = {
       }
     });
 
+    // action for the "download policies.json" link if downloads permission is granted
     elDownloadLink.addEventListener('click', (e) => {
       e.preventDefault();
 
@@ -105,6 +115,8 @@ const configurator = {
   async testDownloadPermission () {
     const isGranted = await browser.permissions.contains(DOWNLOAD_PERMISSION);
 
+    // if the downloads permission is granted hide the link for granting permission and show the
+    // real download link instead
     if (isGranted) {
       elGrantDownloadPermissionLink.classList.add('hidden');
       elDownloadLink.classList.remove('hidden');
@@ -124,12 +136,15 @@ const configurator = {
 
     switch (e.target.getAttribute('data-action')) {
       case 'add':
+        // after adding a new field the remove link of the first one shouldn't be disabled
         if (e.target.parentNode.parentNode.querySelector('.disabled-link')) {
           e.target.parentNode.parentNode.querySelector('.disabled-link').classList.remove('disabled-link');
         }
 
+        // copy the field
         const addedNode = e.target.parentNode.cloneNode(true);
 
+        // we want an empty input field for the copied field, we also need a new ID
         addedNode.querySelectorAll('input').forEach((el) => {
           const randomId = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
 
@@ -137,19 +152,23 @@ const configurator = {
           el.setAttribute('id', randomId);
         });
 
+        // we have to re-add our event listener for executing the array field actions
         addedNode.querySelectorAll('a').forEach((el) => {
           el.addEventListener('click', configurator.executeArrayFieldActions);
         });
 
+        // we also have to re-add the event listener for the validation of mandatory fields
         addedNode.querySelectorAll('input[data-mandatory]').forEach((el) => {
           el.addEventListener('input', configurator.validateMandatoryFields);
           el.classList.add('mandatory-style');
           el.parentNode.querySelector('.mandatory-label').classList.remove('hidden');
         });
 
+        // add the copied field to the DOM
         e.target.parentNode.after(addedNode);
         break;
       case 'remove':
+        // different object types have different DOM structures, we need to know the number of total array items
         const elGrandParent = e.target.parentNode.parentNode;
         const isObjectArray = elGrandParent.classList.contains('object-array');
         const hasSubOptions = elGrandParent.querySelectorAll('.sub-options').length > 0;
@@ -165,10 +184,12 @@ const configurator = {
           newLength = elGrandParent.querySelectorAll('.input').length - 1;
         }
 
+        // remove the field
         if (!e.target.classList.contains('disabled-link')) {
           e.target.parentNode.remove();
         }
 
+        // if there is only one field after removing another field the remove link should be disabled
         if (newLength === 1) {
           elGrandParent.querySelector('[data-action="remove"]').classList.add('disabled-link');
         }
@@ -180,10 +201,12 @@ const configurator = {
   },
 
   validateMandatoryFields (e) {
+    // the mandatory field has a value, hide visual indication
     if (e.target.value) {
       e.target.classList.remove('mandatory-style');
       e.target.parentNode.querySelector('.mandatory-label').classList.add('hidden');
     }
+    // the mandatory field is empty, add visual indication
     else {
       e.target.classList.add('mandatory-style');
       e.target.parentNode.querySelector('.mandatory-label').classList.remove('hidden');
