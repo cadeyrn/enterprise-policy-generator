@@ -359,13 +359,7 @@ const configurator = {
     elInput.setAttribute('id', policy.name);
 
     if (policy.mandatory) {
-      elInput.setAttribute('data-mandatory', 'true');
-      elInput.classList.add('mandatory-style');
-
-      const elMandatoryLabel = document.createElement('div');
-      elMandatoryLabel.classList.add('mandatory-label');
-      elMandatoryLabel.innerText = browser.i18n.getMessage('mandatory-label');
-      elObjectWrapper.appendChild(elMandatoryLabel);
+      configurator.addMandatoryLabel(elInput, elObjectWrapper);
     }
 
     elObjectWrapper.appendChild(elInput);
@@ -399,13 +393,7 @@ const configurator = {
     elSelect.setAttribute('id', policy.name);
 
     if (policy.mandatory) {
-      elSelect.setAttribute('data-mandatory', 'true');
-      elSelect.classList.add('mandatory-style');
-
-      const elMandatoryLabel = document.createElement('div');
-      elMandatoryLabel.classList.add('mandatory-label');
-      elMandatoryLabel.innerText = browser.i18n.getMessage('mandatory-label');
-      elSelectWrapper.appendChild(elMandatoryLabel);
+      configurator.addMandatoryLabel(elSelect, elSelectWrapper);
     }
 
     const optionsLength = policy.options.length;
@@ -462,13 +450,7 @@ const configurator = {
     elInput.setAttribute('placeholder', policy.label);
 
     if (policy.mandatory) {
-      elInput.setAttribute('data-mandatory', 'true');
-      elInput.classList.add('mandatory-style');
-
-      const elMandatoryLabel = document.createElement('div');
-      elMandatoryLabel.classList.add('mandatory-label');
-      elMandatoryLabel.innerText = browser.i18n.getMessage('mandatory-label');
-      elObjectWrapper.appendChild(elMandatoryLabel);
+      configurator.addMandatoryLabel(elInput, elObjectWrapper);
     }
 
     elObjectWrapper.appendChild(elInput);
@@ -586,6 +568,16 @@ const configurator = {
     elLockLabel.setAttribute('for', key + '_Locked');
     elLockLabel.textContent = browser.i18n.getMessage('lock_preference');
     elSubOptions.appendChild(elLockLabel);
+  },
+
+  addMandatoryLabel (elMandatory, elMandatoryWrapper) {
+    elMandatory.setAttribute('data-mandatory', 'true');
+    elMandatory.classList.add('mandatory-style');
+
+    const elMandatoryLabel = document.createElement('div');
+    elMandatoryLabel.classList.add('mandatory-label');
+    elMandatoryLabel.innerText = browser.i18n.getMessage('mandatory-label');
+    elMandatoryWrapper.appendChild(elMandatoryLabel);
   }
 };
 
