@@ -18,14 +18,14 @@ const configurator = {
   uiCategoryElements : [],
 
   init () {
-    configurator.uiCategoryElements['block-access'] = document.getElementById('options-block-access');
-    configurator.uiCategoryElements['disable-features'] = document.getElementById('options-disable-features');
-    configurator.uiCategoryElements['customization'] = document.getElementById('options-customization');
-    configurator.uiCategoryElements['network'] = document.getElementById('options-network');
-    configurator.uiCategoryElements['privacy'] = document.getElementById('options-privacy');
-    configurator.uiCategoryElements['security'] = document.getElementById('options-security');
-    configurator.uiCategoryElements['updates-and-data'] = document.getElementById('options-updates-and-data');
-    configurator.uiCategoryElements['others'] = document.getElementById('options-others');
+    const categories = [
+      'block-access', 'disable-features', 'customization', 'network', 'privacy', 'security',
+      'updates-and-data', 'others'
+    ];
+
+    for (const key of categories) {
+      configurator.uiCategoryElements[key] = document.getElementById('options-' + key);
+    }
 
     for (const key in policies) {
       if (policies[key].type === 'array') {
