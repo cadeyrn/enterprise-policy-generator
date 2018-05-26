@@ -236,7 +236,7 @@ const configurator = {
   },
 
   addBooleanOption (key, policy, inverse) {
-    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'boolean', true);
+    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'boolean', inverse);
 
     // add option to UI
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
