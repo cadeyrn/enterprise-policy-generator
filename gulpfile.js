@@ -29,6 +29,6 @@ gulp.task('lint-css', () => gulp.src(['./src/css/*.css'])
 );
 
 const jsdocsConfig = require('./jsdoc.json');
-gulp.task('docs', () => gulp.src(['CHANGELOG.md', 'README.md', './src/js/*.js'], { read : false })
+gulp.task('docs', () => gulp.src(['CHANGELOG.md', 'README.md', './src/js/*/*.js'], { read : false })
   .pipe(jsdoc(jsdocsConfig))
 );
