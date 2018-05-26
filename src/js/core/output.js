@@ -103,9 +103,7 @@ const output = {
       const items = [];
 
       [...el.querySelectorAll(':scope > .input input')].forEach((arrEl) => {
-        if (arrEl.value) {
-          items.push(arrEl.value);
-        }
+        output.addInputValue(arrEl, items);
       });
 
       if (items.length > 0) {
