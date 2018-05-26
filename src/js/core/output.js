@@ -112,7 +112,9 @@ const output = {
 
       // input fields
       [...el.querySelectorAll(':scope > .input input')].forEach((arrEl) => {
-        output.addInputValue(arrEl, items);
+        if (arrEl.value) {
+          items.push(arrEl.value);
+        }
       });
 
       // only add non-empty arrays
