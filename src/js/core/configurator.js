@@ -219,10 +219,7 @@ const configurator = {
 
   addArrayOption (key, policy) {
     const elObjectWrapper = configurator.addPolicyNode(key, policy, 'array');
-
-    const elSubOptions = document.createElement('div');
-    elSubOptions.classList.add('sub-options', 'disabled');
-    elObjectWrapper.appendChild(elSubOptions);
+    const elSubOptions = configurator.addSubOptions(elObjectWrapper);
 
     const optionsLength = policy.items.length;
     for (let i = 0; i < optionsLength; i++) {
@@ -274,10 +271,7 @@ const configurator = {
 
   addObjectOption (key, policy) {
     const elObjectWrapper = configurator.addPolicyNode(key, policy, 'object');
-
-    const elSubOptions = document.createElement('div');
-    elSubOptions.classList.add('sub-options', 'disabled');
-    elObjectWrapper.appendChild(elSubOptions);
+    const elSubOptions = configurator.addSubOptions(elObjectWrapper);
 
     if (policy.is_lockable) {
       configurator.addLockableLink(elSubOptions, key);
@@ -295,10 +289,7 @@ const configurator = {
 
   addStringOption (key, policy) {
     const elObjectWrapper = configurator.addPolicyNode(key, policy, 'string');
-
-    const elSubOptions = document.createElement('div');
-    elSubOptions.classList.add('sub-options', 'disabled');
-    elObjectWrapper.appendChild(elSubOptions);
+    const elSubOptions = configurator.addSubOptions(elObjectWrapper);
 
     const elInputWrapper = document.createElement('div');
     elInputWrapper.classList.add('input');
@@ -606,6 +597,14 @@ const configurator = {
     elAddIcon.classList.add('action-img');
     elAddIcon.setAttribute('alt', browser.i18n.getMessage('title_add_row'));
     elAddLink.appendChild(elAddIcon);
+  },
+
+  addSubOptions (elObjectWrapper) {
+    const elSubOptions = document.createElement('div');
+    elSubOptions.classList.add('sub-options', 'disabled');
+    elObjectWrapper.appendChild(elSubOptions);
+
+    return elSubOptions;
   },
 
   addLockableLink (elSubOptions, key) {
