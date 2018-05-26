@@ -40,10 +40,12 @@ const output = {
       if (!output.hasInvalidFields(el)) {
         const item = { };
 
+        // input fields
         [...el.querySelectorAll(':scope input')].forEach((el) => {
           output.addInputValue(el, item);
         });
 
+        // enum fields
         [...el.querySelectorAll(':scope select')].forEach((el) => {
           item[el.name] = output.parseEnumContent(el);
         });
@@ -52,6 +54,7 @@ const output = {
       }
     });
 
+    // only add non-empty arrays
     if (items.length > 0) {
       policymanager.add(el.name, items);
     }
@@ -72,6 +75,7 @@ const output = {
   generateOutputForObjects (el) {
     const policy = { };
 
+    // object arrays
     [...el.parentNode.querySelectorAll(':scope > div > .object-array')].forEach((el) => {
       const items = [];
 
@@ -79,33 +83,39 @@ const output = {
         if (!output.hasInvalidFields(el)) {
           const obj = {};
 
+          // input fields
           [...el.querySelectorAll(':scope > .input input')].forEach((arrEl) => {
             output.addInputValue(arrEl, obj);
           });
 
+          // enum fields
           [...el.querySelectorAll(':scope > .enum select')].forEach((el) => {
             obj[el.name] = output.parseEnumContent(el);
           });
 
-          // only add non-empty object
+          // only add non-empty objects
           if (Object.keys(obj).length > 0) {
             items.push(obj);
           }
         }
       });
 
+      // only add non-empty arrays
       if (items.length > 0) {
         policy[el.getAttribute('data-name')] = items;
       }
     });
 
+    // simple arrays
     [...el.parentNode.querySelectorAll(':scope > div > .array')].forEach((el) => {
       const items = [];
 
+      // input fields
       [...el.querySelectorAll(':scope > .input input')].forEach((arrEl) => {
         output.addInputValue(arrEl, items);
       });
 
+      // only add non-empty arrays
       if (items.length > 0) {
         policy[el.getAttribute('data-name')] = items;
       }
