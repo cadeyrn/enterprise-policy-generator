@@ -23,8 +23,9 @@ const configurator = {
       'updates-and-data', 'others'
     ];
 
-    for (const key of categories) {
-      configurator.uiCategoryElements[key] = document.getElementById('options-' + key);
+    const categoriesLength = categories.length;
+    for (let i = 0; i < categoriesLength; i++) {
+      configurator.uiCategoryElements[categories[i]] = document.getElementById('options-' + categories[i]);
     }
 
     for (const key in policies) {
@@ -273,14 +274,13 @@ const configurator = {
       elSelectWrapper.appendChild(elMandatoryLabel);
     }
 
-    for (const key in policy.options) {
-      if ({}.hasOwnProperty.call(policy.options, key)) {
-        const elOptionLabel = document.createTextNode(policy.options[key].label);
-        const elOption = document.createElement('option');
-        elOption.setAttribute('value', policy.options[key].value);
-        elOption.appendChild(elOptionLabel);
-        elSelect.appendChild(elOption);
-      }
+    const optionsLength = policy.options.length;
+    for (let i = 0; i < optionsLength; i++) {
+      const elOptionLabel = document.createTextNode(policy.options[i].label);
+      const elOption = document.createElement('option');
+      elOption.setAttribute('value', policy.options[i].value);
+      elOption.appendChild(elOptionLabel);
+      elSelect.appendChild(elOption);
     }
 
     elSelectWrapper.appendChild(elSelect);
@@ -421,10 +421,9 @@ const configurator = {
     const elSubOptions = document.createElement('div');
     elObjectWrapper.appendChild(elSubOptions);
 
-    for (const key in policy.items) {
-      if ({}.hasOwnProperty.call(policy.items, key)) {
-        configurator.addProperty(elSubOptions, policy.items[key]);
-      }
+    const optionsLength = policy.items.length;
+    for (let i = 0; i < optionsLength; i++) {
+      configurator.addProperty(elSubOptions, policy.items[i]);
     }
 
     const elRemoveLink = document.createElement('a');
@@ -532,10 +531,9 @@ const configurator = {
     elSubOptions.classList.add('sub-options', 'disabled');
     elObjectWrapper.appendChild(elSubOptions);
 
-    for (const key in policy.items) {
-      if ({}.hasOwnProperty.call(policy.items, key)) {
-        configurator.addProperty(elSubOptions, policy.items[key]);
-      }
+    const optionsLength = policy.items.length;
+    for (let i = 0; i < optionsLength; i++) {
+      configurator.addProperty(elSubOptions, policy.items[i]);
     }
 
     const elRemoveLink = document.createElement('a');
@@ -693,14 +691,13 @@ const configurator = {
     elSelectWrapper.appendChild(elSelect);
     elObjectWrapper.appendChild(elSelectWrapper);
 
-    for (const key in policy.options) {
-      if ({}.hasOwnProperty.call(policy.options, key)) {
-        const elOptionLabel = document.createTextNode(policy.options[key].label);
-        const elOption = document.createElement('option');
-        elOption.setAttribute('value', policy.options[key].value);
-        elOption.appendChild(elOptionLabel);
-        elSelect.appendChild(elOption);
-      }
+    const optionsLength = policy.options.length;
+    for (let i = 0; i < optionsLength; i++) {
+      const elOptionLabel = document.createTextNode(policy.options[i].label);
+      const elOption = document.createElement('option');
+      elOption.setAttribute('value', policy.options[i].value);
+      elOption.appendChild(elOptionLabel);
+      elSelect.appendChild(elOption);
     }
 
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
@@ -843,10 +840,9 @@ const configurator = {
     }
 
     if (policy.properties) {
-      for (const key in policy.properties) {
-        if ({}.hasOwnProperty.call(policy.properties, key)) {
-          configurator.addProperty(elSubOptions, policy.properties[key]);
-        }
+      const optionsLength = policy.properties.length;
+      for (let i = 0; i < optionsLength; i++) {
+        configurator.addProperty(elSubOptions, policy.properties[i]);
       }
     }
 
