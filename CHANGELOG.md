@@ -17,6 +17,7 @@
 
 #### Dependencies
 
+- updated eslint-plugin-compat from version 2.2.0 to 2.3.0
 - updated eslint-plugin-no-unsanitized from version 3.0.1 to 3.0.2
 - updated web-ext from version 2.6.0 to 2.7.0
 
