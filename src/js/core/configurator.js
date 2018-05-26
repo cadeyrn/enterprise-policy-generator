@@ -280,17 +280,7 @@ const configurator = {
     elObjectWrapper.appendChild(elSubOptions);
 
     if (policy.is_lockable) {
-      const elLockCheckbox = document.createElement('input');
-      elLockCheckbox.setAttribute('type', 'checkbox');
-      elLockCheckbox.setAttribute('name', key + '_Locked');
-      elLockCheckbox.setAttribute('id', key + '_Locked');
-      elLockCheckbox.classList.add('lock-checkbox');
-      elSubOptions.appendChild(elLockCheckbox);
-
-      const elLockLabel = document.createElement('label');
-      elLockLabel.setAttribute('for', key + '_Locked');
-      elLockLabel.textContent = browser.i18n.getMessage('lock_preference');
-      elSubOptions.appendChild(elLockLabel);
+      configurator.addLockableLink(elSubOptions, key);
     }
 
     if (policy.properties) {
@@ -616,6 +606,20 @@ const configurator = {
     elAddIcon.classList.add('action-img');
     elAddIcon.setAttribute('alt', browser.i18n.getMessage('title_add_row'));
     elAddLink.appendChild(elAddIcon);
+  },
+
+  addLockableLink (elSubOptions, key) {
+    const elLockCheckbox = document.createElement('input');
+    elLockCheckbox.setAttribute('type', 'checkbox');
+    elLockCheckbox.setAttribute('name', key + '_Locked');
+    elLockCheckbox.setAttribute('id', key + '_Locked');
+    elLockCheckbox.classList.add('lock-checkbox');
+    elSubOptions.appendChild(elLockCheckbox);
+
+    const elLockLabel = document.createElement('label');
+    elLockLabel.setAttribute('for', key + '_Locked');
+    elLockLabel.textContent = browser.i18n.getMessage('lock_preference');
+    elSubOptions.appendChild(elLockLabel);
   }
 };
 
