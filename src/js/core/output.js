@@ -37,13 +37,7 @@ const output = {
     const items = [];
 
     [...el.parentNode.querySelectorAll(':scope > div')].forEach((el) => {
-      let hasInvalidFields = false;
-
-      if (el.querySelectorAll(':scope .mandatory-style').length > 0) {
-        hasInvalidFields = true;
-      }
-
-      if (!hasInvalidFields) {
+      if (!output.hasInvalidFields(el)) {
         const item = { };
 
         [...el.querySelectorAll(':scope input')].forEach((el) => {
@@ -120,13 +114,7 @@ const output = {
       const items = [];
 
       [...el.querySelectorAll(':scope > div:not(.label)')].forEach((el) => {
-        let hasInvalidFields = false;
-
-        if (el.querySelectorAll(':scope .mandatory-style').length > 0) {
-          hasInvalidFields = true;
-        }
-
-        if (!hasInvalidFields) {
+        if (!output.hasInvalidFields(el)) {
           const obj = {};
 
           [...el.querySelectorAll(':scope > .input input')].forEach((arrEl) => {
@@ -240,5 +228,15 @@ const output = {
 
   generateOutputForStrings (el) {
     policymanager.add(el.name, el.parentNode.querySelector('input[type=text]').value);
+  },
+
+  hasInvalidFields (el) {
+    let hasInvalidFields = false;
+
+    if (el.querySelectorAll(':scope .mandatory-style').length > 0) {
+      hasInvalidFields = true;
+    }
+
+    return hasInvalidFields;
   }
 };
