@@ -49,6 +49,8 @@ const configurator = {
       }
     }
 
+    configurator.testDownloadPermission();
+
     [...document.querySelectorAll('.primary-checkbox')].forEach((el) => {
       el.addEventListener('change', () => {
         const elSubOptions = el.parentNode.getElementsByClassName('sub-options');
@@ -72,8 +74,6 @@ const configurator = {
       elPolicyOutput.innerText = configurator.generatePoliciesOutput();
       elActionLinks.classList.remove('hidden');
     });
-
-    configurator.testDownloadPermission();
 
     elSelectAllLink.addEventListener('click', (e) => {
       e.preventDefault();
