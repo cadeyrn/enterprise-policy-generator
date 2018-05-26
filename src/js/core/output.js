@@ -41,9 +41,7 @@ const output = {
         const item = { };
 
         [...el.querySelectorAll(':scope input')].forEach((el) => {
-          if (el.value) {
-            item[el.name] = el.value;
-          }
+          output.addInputValue(el, item);
         });
 
         [...el.querySelectorAll(':scope select')].forEach((el) => {
@@ -82,9 +80,7 @@ const output = {
           const obj = {};
 
           [...el.querySelectorAll(':scope > .input input')].forEach((arrEl) => {
-            if (arrEl.value) {
-              obj[arrEl.name] = arrEl.value;
-            }
+            output.addInputValue(arrEl, obj);
           });
 
           [...el.querySelectorAll(':scope > .enum select')].forEach((el) => {
@@ -128,9 +124,7 @@ const output = {
     });
 
     [...el.parentNode.querySelectorAll(':scope > div > .input input')].forEach((el) => {
-      if (el.value) {
-        policy[el.name] = el.value;
-      }
+      output.addInputValue(el, policy);
     });
 
     // set "Locked" field
@@ -175,6 +169,12 @@ const output = {
     }
 
     return value;
+  },
+
+  addInputValue (el, policy) {
+    if (el.value) {
+      policy[el.name] = el.value;
+    }
   },
 
   addLockedField (el, policy) {
