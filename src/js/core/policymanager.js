@@ -5,7 +5,7 @@
  */
 const policymanager = {
   /**
-   * The data property contains the JSON object
+   * Contains the policy object.
    *
    * @type {Object}
    */
