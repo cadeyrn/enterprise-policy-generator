@@ -6,6 +6,11 @@
  * @exports output
  */
 const output = {
+  /**
+   * Generates the JSON output for the selected polices, calls the appropriate method.
+   *
+   * @returns {string} - the JSON output
+   */
   generatePoliciesOutput () {
     policymanager.init();
 
@@ -33,6 +38,13 @@ const output = {
     return policymanager.getConfiguration();
   },
 
+  /**
+   * Generates output for policies of type "array".
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   *
+   * @returns {void}
+   */
   generateOutputForArrays (el) {
     const items = [];
 
@@ -60,10 +72,24 @@ const output = {
     }
   },
 
+  /**
+   * Generates output for policies of type "boolean".
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   *
+   * @returns {void}
+   */
   generateOutputForBooleans (el) {
     policymanager.add(el.name, !el.getAttribute('data-inverse'));
   },
 
+  /**
+   * Generates output for policies of type "enum".
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   *
+   * @returns {void}
+   */
   generateOutputForEnums (el) {
     const { name } = el;
 
@@ -72,6 +98,13 @@ const output = {
     });
   },
 
+  /**
+   * Generates output for policies of type "object".
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   *
+   * @returns {void}
+   */
   generateOutputForObjects (el) {
     const policy = { };
 
@@ -147,10 +180,24 @@ const output = {
     }
   },
 
+  /**
+   * Generates output for policies of type "string" or "url".
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   *
+   * @returns {void}
+   */
   generateOutputForStrings (el) {
     policymanager.add(el.name, el.parentNode.querySelector('input[type=text]').value);
   },
 
+  /**
+   * Checks if a policy has invalid values.
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   *
+   * @returns {boolean} - whether the policy has invalid values or not
+   */
   hasInvalidFields (el) {
     let hasInvalidFields = false;
 
@@ -161,6 +208,13 @@ const output = {
     return hasInvalidFields;
   },
 
+  /**
+   * Parses enum fields, there are a few special values.
+   *
+   * @param {HTMLSelectElement} el - the DOM element of the policy
+   *
+   * @returns {string} - the parsed value of the enum field
+   */
   parseEnumContent (el) {
     let { value } = el.options[el.selectedIndex];
 
@@ -182,18 +236,42 @@ const output = {
     return value;
   },
 
+  /**
+   * Adds the value of an input field to the output.
+   *
+   * @param {HTMLInputElement} el - the DOM element of the policy
+   * @param {Object} policy - the policy object
+   *
+   * @returns {void}
+   */
   addInputValue (el, policy) {
     if (el.value) {
       policy[el.name] = el.value;
     }
   },
 
+  /**
+   * Adds the value of a checkbox field to the output.
+   *
+   * @param {HTMLInputElement} el - the DOM element of the policy
+   * @param {Object} policy - the policy object
+   *
+   * @returns {void}
+   */
   addCheckboxValue (el, policy) {
     if (el.checked) {
       policy[el.name] = true;
     }
   },
 
+  /**
+   * Adds the value of the "Locked" field to the output.
+   *
+   * @param {HTMLInputElement} el - the DOM element of the policy
+   * @param {Object} policy - the policy object
+   *
+   * @returns {void}
+   */
   addLockedField (el, policy) {
     const lockable = el.parentNode.querySelector('.lock-checkbox');
 
