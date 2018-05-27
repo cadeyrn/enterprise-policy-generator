@@ -15,8 +15,18 @@ const elSelectAllLink = document.getElementById('select-all');
  * @exports configurator
  */
 const configurator = {
+  /**
+   * Contains the UI categories.
+   *
+   * @type {Array.<string>}
+   */
   uiCategoryElements : [],
 
+  /**
+   * The init() method. Defines UI categories, adds policies to UI, setup all the event listeners.
+   *
+   * @returns {void}
+   */
   init () {
     // define ui categories
     const categories = [
@@ -113,6 +123,12 @@ const configurator = {
     });
   },
 
+  /**
+   * Tests if the downloads permission has been granted or not. If granted, the link for granting the permission
+   * will be hidden and the real download link will be shown.
+   *
+   * @returns {void}
+   */
   async testDownloadPermission () {
     const granted = await browser.permissions.contains(DOWNLOAD_PERMISSION);
 
@@ -124,6 +140,11 @@ const configurator = {
     }
   },
 
+  /**
+   * Method for downloading the "policies.json" file.
+   *
+   * @returns {void}
+   */
   downloadPolicy () {
     browser.downloads.download({
       saveAs : true,
@@ -132,6 +153,13 @@ const configurator = {
     });
   },
 
+  /**
+   * Executes the add and remove actions for array fields.
+   *
+   * @param {MouseEvent} e - event
+   *
+   * @returns {void}
+   */
   executeArrayFieldActions (e) {
     e.preventDefault();
 
@@ -201,6 +229,13 @@ const configurator = {
     }
   },
 
+  /**
+   * Validation for mandatory fields.
+   *
+   * @param {InputEvent} e - event
+   *
+   * @returns {void}
+   */
   validateMandatoryFields (e) {
     // the mandatory field has a value, hide visual indication
     if (e.target.value) {
@@ -214,10 +249,26 @@ const configurator = {
     }
   },
 
+  /**
+   * Appends policy element to the appropriate UI category in the DOM.
+   *
+   * @param {HTMLElement} el - the DOM element
+   * @param {string} category - the name of the category
+   *
+   * @returns {void}
+   */
   addOptionToUi (el, category) {
     configurator.uiCategoryElements[category].appendChild(el);
   },
 
+  /**
+   * Adds policy of the type "array" to the DOM.
+   *
+   * @param {string} key - the name of the policy
+   * @param {Object} policy - the policy object
+   *
+   * @returns {void}
+   */
   addArrayOption (key, policy) {
     const elObjectWrapper = configurator.addPolicyNode(key, policy, 'array');
     const elSubOptions = configurator.addSubOptions(elObjectWrapper);
@@ -235,6 +286,15 @@ const configurator = {
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
   },
 
+  /**
+   * Adds policy of the type "boolean" to the DOM.
+   *
+   * @param {string} key - the name of the policy
+   * @param {Object} policy - the policy object
+   * @param {boolean} inverse - if true, the value for the policy will be false instead of true
+   *
+   * @returns {void}
+   */
   addBooleanOption (key, policy, inverse) {
     const elObjectWrapper = configurator.addPolicyNode(key, policy, 'boolean', inverse);
 
@@ -242,6 +302,14 @@ const configurator = {
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
   },
 
+  /**
+   * Adds policy of the type "enum" to the DOM.
+   *
+   * @param {string} key - the name of the policy
+   * @param {Object} policy - the policy object
+   *
+   * @returns {void}
+   */
   addEnumOption (key, policy) {
     const elObjectWrapper = configurator.addPolicyNode(key, policy, 'enum');
 
@@ -274,6 +342,14 @@ const configurator = {
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
   },
 
+  /**
+   * Adds policy of the type "object" to the DOM.
+   *
+   * @param {string} key - the name of the policy
+   * @param {Object} policy - the policy object
+   *
+   * @returns {void}
+   */
   addObjectOption (key, policy) {
     const elObjectWrapper = configurator.addPolicyNode(key, policy, 'object');
     const elSubOptions = configurator.addSubOptions(elObjectWrapper);
@@ -295,6 +371,14 @@ const configurator = {
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
   },
 
+  /**
+   * Adds policy of the type "string" to the DOM.
+   *
+   * @param {string} key - the name of the policy
+   * @param {Object} policy - the policy object
+   *
+   * @returns {void}
+   */
   addStringOption (key, policy) {
     const elObjectWrapper = configurator.addPolicyNode(key, policy, 'string');
     const elSubOptions = configurator.addSubOptions(elObjectWrapper);
@@ -315,6 +399,15 @@ const configurator = {
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
   },
 
+  /**
+   * Adds a property to a policy field, calls the appropriate method.
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   * @param {Object} policy - the policy object
+   * @param {boolean} isArrayProperty - whether this call is within an array field or not
+   *
+   * @returns {void}
+   */
   addProperty (el, policy, isArrayProperty) {
     switch (policy.type) {
       case 'array':
@@ -340,6 +433,14 @@ const configurator = {
     }
   },
 
+  /**
+   * Adds property of the type "array" to a policy.
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   * @param {Object} policy - the policy object
+   *
+   * @returns {void}
+   */
   addArrayProperty (el, policy) {
     const elObjectWrapper = document.createElement('div');
     elObjectWrapper.classList.add('array');
@@ -360,6 +461,14 @@ const configurator = {
     el.appendChild(elObjectWrapper);
   },
 
+  /**
+   * Adds property of the type "boolean" to a policy.
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   * @param {Object} policy - the policy object
+   *
+   * @returns {void}
+   */
   addBooleanProperty (el, policy) {
     const elObjectWrapper = document.createElement('div');
     elObjectWrapper.classList.add('checkbox');
@@ -386,6 +495,14 @@ const configurator = {
     el.appendChild(elObjectWrapper);
   },
 
+  /**
+   * Adds property of the type "enum" to a policy.
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   * @param {Object} policy - the policy object
+   *
+   * @returns {void}
+   */
   addEnumProperty (el, policy) {
     const elObjectWrapper = document.createElement('div');
     elObjectWrapper.classList.add('enum');
@@ -424,6 +541,14 @@ const configurator = {
     el.appendChild(elObjectWrapper);
   },
 
+  /**
+   * Adds property of the type "object-array" to a policy.
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   * @param {Object} policy - the policy object
+   *
+   * @returns {void}
+   */
   addObjectArrayProperty (el, policy) {
     const elObjectWrapper = document.createElement('div');
     elObjectWrapper.classList.add('object-array');
@@ -452,6 +577,16 @@ const configurator = {
     configurator.addArrayFieldActionLinks(elSubOptions);
   },
 
+  /**
+   * Adds property of the type "string" or "url" to a policy.
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   * @param {Object} policy - the policy object
+   * @param {boolean} isUrl - if true, the property is of the type "url", otherwise it's of the type "string"
+   * @param {boolean} isArrayProperty - whether this call is within an array field or not
+   *
+   * @returns {void}
+   */
   addStringProperty (el, policy, isUrl, isArrayProperty) {
     const elObjectWrapper = document.createElement('div');
     elObjectWrapper.classList.add('input');
@@ -483,10 +618,25 @@ const configurator = {
     el.appendChild(elObjectWrapper);
   },
 
+  /**
+   * Returns a random string which can be used as DOM name and ID.
+   *
+   * @returns {string} - a random string
+   */
   generateRandomDomId () {
     return Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
   },
 
+  /**
+   * Adds a policy node the DOM. This method generates the common code which is the same for all object types.
+   *
+   * @param {string} key - the name of the policy
+   * @param {Object} policy - the policy object
+   * @param {string} type - the type of the policy
+   * @param {boolean} inverse - if true, the value for the policy will be false instead of true
+   *
+   * @returns {HTMLElement} - the DOM node containing the policy option
+   */
   addPolicyNode (key, policy, type, inverse) {
     // start node for each policy
     const elObjectWrapper = document.createElement('div');
@@ -550,6 +700,15 @@ const configurator = {
     return elObjectWrapper;
   },
 
+  /**
+   * Adds a label for select elements.
+   *
+   * @param {HTMLElement} elSelectWrapper - the DOM node of the wrapping element
+   * @param {string} name - the name of the policy
+   * @param {Object} policy - the policy object
+   *
+   * @returns {void}
+   */
   addSelectLabel (elSelectWrapper, name, policy) {
     const elSelectLabel = document.createElement('label');
     elSelectLabel.setAttribute('for', name);
@@ -558,6 +717,13 @@ const configurator = {
     elSelectWrapper.appendChild(elSelectLabel);
   },
 
+  /**
+   * Adds a remove and an add link for array fields to a policy node.
+   *
+   * @param {HTMLElement} elSubOptions - the DOM node of the wrapping element
+   *
+   * @returns {void}
+   */
   addArrayFieldActionLinks (elSubOptions) {
     // remove link
     const elRemoveLink = document.createElement('a');
@@ -588,6 +754,13 @@ const configurator = {
     elAddLink.appendChild(elAddIcon);
   },
 
+  /**
+   * Adds a wrapper node for suboptions.
+   *
+   * @param {HTMLElement} elObjectWrapper - the DOM node of the wrapping element
+   *
+   * @returns {HTMLElement} - the DOM node of the wrapper for suboptions
+   */
   addSubOptions (elObjectWrapper) {
     const elSubOptions = document.createElement('div');
     elSubOptions.classList.add('sub-options', 'disabled');
@@ -596,6 +769,14 @@ const configurator = {
     return elSubOptions;
   },
 
+  /**
+   * Adds a link for the "Locked" property.
+   *
+   * @param {HTMLElement} elSubOptions - the DOM node of the wrapping element
+   * @param {string} key - the name of the policy
+   *
+   * @returns {void}
+   */
   addLockableLink (elSubOptions, key) {
     const elLockCheckbox = document.createElement('input');
     elLockCheckbox.setAttribute('type', 'checkbox');
@@ -610,6 +791,14 @@ const configurator = {
     elSubOptions.appendChild(elLockLabel);
   },
 
+  /**
+   * Adds a label for mandatory fields.
+   *
+   * @param {HTMLElement} elMandatory - the DOM node of the mandatory field
+   * @param {HTMLElement} elMandatoryWrapper - the DOM node of the wrapping element
+   *
+   * @returns {void}
+   */
   addMandatoryLabel (elMandatory, elMandatoryWrapper) {
     elMandatory.setAttribute('data-mandatory', 'true');
     elMandatory.classList.add('mandatory-style');
