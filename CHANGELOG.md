@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### (Work in Progress) Version 1.1.0
+### [Version 1.1.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v1.1.0) (2018-05-27)
 
 #### Enhancements
 
@@ -25,6 +25,9 @@
 - updated eslint-plugin-compat from version 2.2.0 to 2.3.0
 - updated eslint-plugin-no-unsanitized from version 3.0.1 to 3.0.2
 - updated web-ext from version 2.6.0 to 2.7.0
+
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v1.0.1...v1.1.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-1.1.0)
 
 ---
 
