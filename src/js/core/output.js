@@ -59,7 +59,7 @@ const output = {
 
         // enum fields
         [...el.querySelectorAll(':scope select')].forEach((el) => {
-          item[el.name] = output.parseEnumContent(el);
+          item[el.getAttribute('data-name')] = output.parseEnumContent(el);
         });
 
         items.push(item);
@@ -68,7 +68,7 @@ const output = {
 
     // only add non-empty arrays
     if (items.length > 0) {
-      policymanager.add(el.name, items);
+      policymanager.add(el.getAttribute('data-name'), items);
     }
   },
 
@@ -80,7 +80,7 @@ const output = {
    * @returns {void}
    */
   generateOutputForBooleans (el) {
-    policymanager.add(el.name, !el.getAttribute('data-inverse'));
+    policymanager.add(el.getAttribute('data-name'), !el.getAttribute('data-inverse'));
   },
 
   /**
@@ -91,10 +91,8 @@ const output = {
    * @returns {void}
    */
   generateOutputForEnums (el) {
-    const { name } = el;
-
     [...el.parentNode.querySelectorAll(':scope > .enum select')].forEach((el) => {
-      policymanager.add(name, output.parseEnumContent(el));
+      policymanager.add(el.getAttribute('data-name'), output.parseEnumContent(el));
     });
   },
 
@@ -123,7 +121,7 @@ const output = {
 
           // enum fields
           [...el.querySelectorAll(':scope > .enum select')].forEach((el) => {
-            obj[el.name] = output.parseEnumContent(el);
+            obj[el.getAttribute('data-name')] = output.parseEnumContent(el);
           });
 
           // only add non-empty objects
@@ -163,7 +161,7 @@ const output = {
 
     // enum fields
     [...el.parentNode.querySelectorAll(':scope > div > .enum select')].forEach((el) => {
-      policy[el.name] = output.parseEnumContent(el);
+      policy[el.getAttribute('data-name')] = output.parseEnumContent(el);
     });
 
     // input fields
@@ -176,7 +174,7 @@ const output = {
 
     // only add non-empty policies
     if (Object.keys(policy).length > 0) {
-      policymanager.add(el.name, policy);
+      policymanager.add(el.getAttribute('data-name'), policy);
     }
   },
 
@@ -188,7 +186,7 @@ const output = {
    * @returns {void}
    */
   generateOutputForStrings (el) {
-    policymanager.add(el.name, el.parentNode.querySelector('input[type=text]').value);
+    policymanager.add(el.getAttribute('data-name'), el.parentNode.querySelector('input[type=text]').value);
   },
 
   /**
@@ -246,7 +244,7 @@ const output = {
    */
   addInputValue (el, policy) {
     if (el.value) {
-      policy[el.name] = el.value;
+      policy[el.getAttribute('data-name')] = el.value;
     }
   },
 
@@ -260,7 +258,7 @@ const output = {
    */
   addCheckboxValue (el, policy) {
     if (el.checked) {
-      policy[el.name] = true;
+      policy[el.getAttribute('data-name')] = true;
     }
   },
 

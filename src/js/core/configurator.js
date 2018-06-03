@@ -323,8 +323,9 @@ const configurator = {
 
     // add options to select element
     const elSelect = document.createElement('select');
-    elSelect.setAttribute('name', key + '_select');
     elSelect.setAttribute('id', key + '_select');
+    elSelect.setAttribute('name', key + '_select');
+    elSelect.setAttribute('data-name', key);
 
     elSelectWrapper.appendChild(elSelect);
     elObjectWrapper.appendChild(elSelectWrapper);
@@ -389,8 +390,9 @@ const configurator = {
 
     const elInput = document.createElement('input');
     elInput.setAttribute('type', 'text');
-    elInput.setAttribute('name', key + 'Text');
     elInput.setAttribute('id', key + 'Text');
+    elInput.setAttribute('name', key + 'Text');
+    elInput.setAttribute('data-name', key + 'Text');
     elInput.setAttribute('placeholder', policy.label);
 
     elSubOptions.appendChild(elInput);
@@ -476,8 +478,9 @@ const configurator = {
     // checkbox
     const elInput = document.createElement('input');
     elInput.setAttribute('type', 'checkbox');
-    elInput.setAttribute('name', policy.name);
     elInput.setAttribute('id', policy.name);
+    elInput.setAttribute('name', policy.name);
+    elInput.setAttribute('data-name', policy.name);
 
     // mandatory field
     if (policy.mandatory) {
@@ -518,8 +521,9 @@ const configurator = {
     elObjectWrapper.appendChild(elSelectWrapper);
 
     const elSelect = document.createElement('select');
-    elSelect.setAttribute('name', policy.name);
     elSelect.setAttribute('id', policy.name);
+    elSelect.setAttribute('name', policy.name);
+    elSelect.setAttribute('data-name', policy.name);
 
     // mandatory field
     if (policy.mandatory) {
@@ -599,9 +603,13 @@ const configurator = {
     // input field
     const elInput = document.createElement('input');
     elInput.setAttribute('type', 'text');
-    elInput.setAttribute('name', policy.name);
     elInput.setAttribute('id', policy.name);
+    elInput.setAttribute('name', policy.name);
     elInput.setAttribute('placeholder', policy.label);
+
+    if (!isArrayProperty) {
+      elInput.setAttribute('data-name', policy.name);
+    }
 
     // mandatory field
     if (policy.mandatory) {
@@ -636,8 +644,9 @@ const configurator = {
     // checkbox
     const elCheckbox = document.createElement('input');
     elCheckbox.setAttribute('type', 'checkbox');
-    elCheckbox.setAttribute('name', key);
     elCheckbox.setAttribute('id', key);
+    elCheckbox.setAttribute('name', key);
+    elCheckbox.setAttribute('data-name', key);
     elCheckbox.setAttribute('data-type', type);
     elCheckbox.classList.add('primary-checkbox');
 
