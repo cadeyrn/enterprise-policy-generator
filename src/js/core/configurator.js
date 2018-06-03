@@ -179,12 +179,14 @@ const configurator = {
 
           el.value = '';
           el.setAttribute('id', id);
+          el.setAttribute('name', id);
         });
 
         // for select fields we also need a new DOM ID
         addedNode.querySelectorAll('select').forEach((el) => {
           const id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name, idx) => name + '_' + (Number(idx) + 1));
           el.setAttribute('id', id);
+          el.setAttribute('name', id);
         });
 
         // we have to re-add our event listener for executing the array field actions
