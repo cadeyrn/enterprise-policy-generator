@@ -175,10 +175,10 @@ const configurator = {
 
         // we want an empty input field for the copied array item, we also need a new DOM ID
         addedNode.querySelectorAll('input').forEach((el) => {
-          const randomId = configurator.generateRandomDomId();
+          const id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name, idx) => name + '_' + (Number(idx) + 1));
 
           el.value = '';
-          el.setAttribute('id', randomId);
+          el.setAttribute('id', id);
         });
 
         // we have to re-add our event listener for executing the array field actions
@@ -593,7 +593,7 @@ const configurator = {
 
     // set different DOM name and ID if property of an array
     if (isArrayProperty) {
-      policy.name = configurator.generateRandomDomId();
+      policy.name = policy.label + '_1';
     }
 
     // input field
@@ -616,15 +616,6 @@ const configurator = {
     }
 
     el.appendChild(elObjectWrapper);
-  },
-
-  /**
-   * Returns a random string which can be used as DOM name and ID.
-   *
-   * @returns {string} - a random string
-   */
-  generateRandomDomId () {
-    return Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
   },
 
   /**
