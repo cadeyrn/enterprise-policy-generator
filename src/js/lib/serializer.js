@@ -35,5 +35,29 @@ const serializer = {
     }
 
     return data;
+  },
+
+  unserialize (data) {
+    // checkboxes
+    Object.keys(data.checkboxes).forEach((name) => {
+      document.getElementById(name).checked = true;
+    });
+
+    // select fields
+    Object.keys(data.select).forEach((name) => {
+      document.querySelector('#' + name + ' [value="' + data.select[name] + '"]').selected = true;
+    });
+
+    // text fields
+    Object.keys(data.input).forEach((name) => {
+      const el = document.getElementById(name);
+
+      el.value = data.input[name];
+
+      if (el.hasAttribute('data-mandatory')) {
+        el.classList.remove('mandatory-style');
+        el.parentNode.querySelector('.mandatory-label').classList.add('hidden');
+      }
+    });
   }
 };
