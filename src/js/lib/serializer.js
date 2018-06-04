@@ -54,6 +54,7 @@ const serializer = {
 
       el.value = data.input[name];
 
+      // remove validation hint, because it's guaranteed that the element has a value
       if (el.hasAttribute('data-mandatory')) {
         el.classList.remove('mandatory-style');
         el.parentNode.querySelector('.mandatory-label').classList.add('hidden');
