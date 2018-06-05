@@ -25,7 +25,10 @@ const serializer = {
       }
       // select fields
       else if (node.type === 'select-one') {
-        data.select[node.id] = node.value;
+        // only if the policy is enabled
+        if (node.closest('.checkbox').querySelector(':scope > .primary-checkbox').checked) {
+          data.select[node.id] = node.value;
+        }
       }
       // text fields
       else if (node.type === 'text') {
