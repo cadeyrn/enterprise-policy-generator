@@ -19,17 +19,17 @@ const serializer = {
       // checkboxes
       if (node.type === 'checkbox') {
         if (node.checked) {
-          data.checkboxes[node.name] = node.value;
+          data.checkboxes[node.id] = node.value;
         }
       }
       // select fields
       else if (node.type === 'select-one') {
-        data.select[node.name] = node.value;
+        data.select[node.id] = node.value;
       }
       // text fields
       else if (node.type === 'text') {
         if (node.value) {
-          data.input[node.name] = node.value;
+          data.input[node.id] = node.value;
         }
       }
     }
@@ -39,20 +39,20 @@ const serializer = {
 
   unserialize (data) {
     // checkboxes
-    Object.keys(data.checkboxes).forEach((name) => {
-      document.getElementById(name).checked = true;
+    Object.keys(data.checkboxes).forEach((id) => {
+      document.getElementById(id).checked = true;
     });
 
     // select fields
-    Object.keys(data.select).forEach((name) => {
-      document.querySelector('#' + name + ' [value="' + data.select[name] + '"]').selected = true;
+    Object.keys(data.select).forEach((id) => {
+      document.querySelector('#' + id + ' [value="' + data.select[id] + '"]').selected = true;
     });
 
     // text fields
-    Object.keys(data.input).forEach((name) => {
-      const el = document.getElementById(name);
+    Object.keys(data.input).forEach((id) => {
+      const el = document.getElementById(id);
 
-      el.value = data.input[name];
+      el.value = data.input[id];
 
       // remove validation hint, because it's guaranteed that the element has a value
       if (el.hasAttribute('data-mandatory')) {
