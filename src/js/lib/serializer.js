@@ -9,6 +9,7 @@ const serializer = {
     const { length } = elements;
     const data = { };
 
+    data.arrayfields = { };
     data.checkboxes = { };
     data.input = { };
     data.select = { };
@@ -52,12 +53,14 @@ const serializer = {
     Object.keys(data.input).forEach((id) => {
       const el = document.getElementById(id);
 
-      el.value = data.input[id];
+      if (el) {
+        el.value = data.input[id];
 
-      // remove validation hint, because it's guaranteed by the serializer that the element has a value
-      if (el.hasAttribute('data-mandatory')) {
-        el.classList.remove('mandatory-style');
-        el.parentNode.querySelector('.mandatory-label').classList.add('hidden');
+        // remove validation hint, because it's guaranteed by the serializer that the element has a value
+        if (el.hasAttribute('data-mandatory')) {
+          el.classList.remove('mandatory-style');
+          el.parentNode.querySelector('.mandatory-label').classList.add('hidden');
+        }
       }
     });
   }
