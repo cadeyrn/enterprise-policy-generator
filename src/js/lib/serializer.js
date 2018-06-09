@@ -43,12 +43,20 @@ const serializer = {
   unserialize (data) {
     // checkboxes
     Object.keys(data.checkboxes).forEach((id) => {
-      document.getElementById(id).checked = true;
+      const el = document.getElementById(id);
+
+      if (el) {
+        el.checked = true;
+      }
     });
 
     // select fields
     Object.keys(data.select).forEach((id) => {
-      document.querySelector('#' + id + ' [value="' + data.select[id] + '"]').selected = true;
+      const el = document.querySelector('#' + id + ' [value="' + data.select[id] + '"]');
+
+      if (el) {
+        el.selected = true;
+      }
     });
 
     // text fields
