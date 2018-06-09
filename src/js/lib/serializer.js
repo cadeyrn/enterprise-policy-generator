@@ -19,20 +19,19 @@ const serializer = {
 
       // checkboxes
       if (node.type === 'checkbox') {
-        if (node.checked) {
+        if (serializer.isPolicyEnabled(node) && node.checked) {
           data.checkboxes[node.id] = true;
         }
       }
       // select fields
       else if (node.type === 'select-one') {
-        // only if the policy is enabled
-        if (node.closest('.checkbox').querySelector(':scope > .primary-checkbox').checked) {
+        if (serializer.isPolicyEnabled(node)) {
           data.select[node.id] = node.value;
         }
       }
       // text fields
       else if (node.type === 'text') {
-        if (node.value) {
+        if (serializer.isPolicyEnabled(node) && node.value) {
           data.input[node.id] = node.value;
         }
       }
@@ -66,5 +65,9 @@ const serializer = {
         }
       }
     });
+  },
+
+  isPolicyEnabled (el) {
+    return el.closest('.checkbox').querySelector(':scope > .primary-checkbox').checked;
   }
 };
