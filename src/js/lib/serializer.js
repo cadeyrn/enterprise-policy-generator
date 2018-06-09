@@ -20,7 +20,7 @@ const serializer = {
       // checkboxes
       if (node.type === 'checkbox') {
         if (node.checked) {
-          data.checkboxes[node.id] = node.value;
+          data.checkboxes[node.id] = true;
         }
       }
       // select fields
