@@ -1,5 +1,7 @@
 'use strict';
 
+/* global configurator */
+
 /**
  * @exports serializer
  */
@@ -16,6 +18,19 @@ const serializer = {
 
     for (let i = 0; i < length; i++) {
       const node = elements[i];
+
+      // array fields
+      const result = node.id.match(/^(\w+)_(\d+)$/i);
+
+      if (result) {
+        if (result[2] > 1) {
+          if (!data.arrayfields[result[1]]) {
+            data.arrayfields[result[1]] = [];
+          }
+
+          data.arrayfields[result[1]].push(result[2]);
+        }
+      }
 
       // checkboxes
       if (node.type === 'checkbox') {
@@ -41,6 +56,15 @@ const serializer = {
   },
 
   unserialize (data) {
+    // array fields
+    Object.keys(data.arrayfields).forEach((id) => {
+      const length = data.arrayfields[id].length + 1;
+
+      data.arrayfields[id].forEach((key) => {
+        configurator.addArrayField(document.getElementById(id + '_1'), key, length);
+      });
+    });
+
     // checkboxes
     Object.keys(data.checkboxes).forEach((id) => {
       const el = document.getElementById(id);
