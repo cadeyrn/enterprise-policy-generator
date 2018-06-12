@@ -165,75 +165,89 @@ const configurator = {
 
     switch (e.target.getAttribute('data-action')) {
       case 'add':
-        // after adding a new array item the remove link of the first one shouldn't be disabled
-        if (e.target.parentNode.parentNode.querySelector('.disabled-link')) {
-          e.target.parentNode.parentNode.querySelector('.disabled-link').classList.remove('disabled-link');
-        }
-
-        // copy the array item
-        const addedNode = e.target.parentNode.cloneNode(true);
-
-        // we want an empty input field for the copied array item, we also need a new DOM ID
-        addedNode.querySelectorAll('input').forEach((el) => {
-          const id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name, idx) => name + '_' + (Number(idx) + 1));
-
-          el.value = '';
-          el.setAttribute('id', id);
-          el.setAttribute('name', id);
-        });
-
-        // for select fields we also need a new DOM ID
-        addedNode.querySelectorAll('select').forEach((el) => {
-          const id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name, idx) => name + '_' + (Number(idx) + 1));
-          el.setAttribute('id', id);
-          el.setAttribute('name', id);
-        });
-
-        // we have to re-add our event listener for executing the array field actions
-        addedNode.querySelectorAll('a').forEach((el) => {
-          el.addEventListener('click', configurator.executeArrayFieldActions);
-        });
-
-        // we also have to re-add the event listener for the validation of mandatory fields
-        addedNode.querySelectorAll('input[data-mandatory]').forEach((el) => {
-          el.addEventListener('input', configurator.validateMandatoryFields);
-          el.classList.add('mandatory-style');
-          el.parentNode.querySelector('.mandatory-label').classList.remove('hidden');
-        });
-
-        // add the copied array item to the DOM
-        e.target.parentNode.after(addedNode);
+        configurator.addArrayField(e.target);
         break;
       case 'remove':
-        // different object types have different DOM structures, we need to know the number of total array items
-        const elGrandParent = e.target.parentNode.parentNode;
-        const isObjectArray = elGrandParent.classList.contains('object-array');
-        const hasSubOptions = elGrandParent.querySelectorAll('.sub-options').length > 0;
-        let newLength = 0;
-
-        if (isObjectArray) {
-          newLength = elGrandParent.querySelectorAll(':scope > div').length - 2;
-        }
-        else if (hasSubOptions) {
-          newLength = elGrandParent.querySelectorAll('.sub-options').length - 1;
-        }
-        else {
-          newLength = elGrandParent.querySelectorAll('.input').length - 1;
-        }
-
-        // remove the array item from the DOM
-        if (!e.target.classList.contains('disabled-link')) {
-          e.target.parentNode.remove();
-        }
-
-        // if there is only one array item after removing another array item the remove link should be disabled
-        if (newLength === 1) {
-          elGrandParent.querySelector('[data-action="remove"]').classList.add('disabled-link');
-        }
-
+        configurator.removeArrayField(e.target);
         break;
       default:
       // do nothing
+    }
+  },
+
+  addArrayField (el, i, overrideCount) {
+    // after adding a new array item the remove link of the first one shouldn't be disabled
+    if (el.parentNode.parentNode.querySelector('.disabled-link')) {
+      el.parentNode.parentNode.querySelector('.disabled-link').classList.remove('disabled-link');
+    }
+
+    // increment array field counter
+    const count = (overrideCount ? overrideCount : parseInt(el.getAttribute('data-count'))) + 1;
+
+    el.closest('.checkbox').querySelectorAll('[data-count]').forEach((el) => {
+      el.setAttribute('data-count', count);
+    });
+
+    // copy the array item
+    const addedNode = el.parentNode.cloneNode(true);
+
+    // we want an empty input field for the copied array item, we also need a new DOM ID
+    addedNode.querySelectorAll('input').forEach((el) => {
+      const id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (i ? i : count));
+
+      el.value = '';
+      el.setAttribute('id', id);
+      el.setAttribute('name', id);
+    });
+
+    // for select fields we also need a new DOM ID
+    addedNode.querySelectorAll('select').forEach((el) => {
+      const id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (i ? i : count));
+      el.setAttribute('id', id);
+      el.setAttribute('name', id);
+    });
+
+    // we have to re-add our event listener for executing the array field actions
+    addedNode.querySelectorAll('a').forEach((el) => {
+      el.addEventListener('click', configurator.executeArrayFieldActions);
+    });
+
+    // we also have to re-add the event listener for the validation of mandatory fields
+    addedNode.querySelectorAll('input[data-mandatory]').forEach((el) => {
+      el.addEventListener('input', configurator.validateMandatoryFields);
+      el.classList.add('mandatory-style');
+      el.parentNode.querySelector('.mandatory-label').classList.remove('hidden');
+    });
+
+    // add the copied array item to the DOM
+    el.parentNode.after(addedNode);
+  },
+
+  removeArrayField (el) {
+    // different object types have different DOM structures, we need to know the number of total array items
+    const elGrandParent = el.parentNode.parentNode;
+    const isObjectArray = elGrandParent.classList.contains('object-array');
+    const hasSubOptions = elGrandParent.querySelectorAll('.sub-options').length > 0;
+    let newLength = 0;
+
+    if (isObjectArray) {
+      newLength = elGrandParent.querySelectorAll(':scope > div').length - 2;
+    }
+    else if (hasSubOptions) {
+      newLength = elGrandParent.querySelectorAll('.sub-options').length - 1;
+    }
+    else {
+      newLength = elGrandParent.querySelectorAll('.input').length - 1;
+    }
+
+    // remove the array item from the DOM
+    if (!el.classList.contains('disabled-link')) {
+      el.parentNode.remove();
+    }
+
+    // if there is only one array item after removing another array item the remove link should be disabled
+    if (newLength === 1) {
+      elGrandParent.querySelector('[data-action="remove"]').classList.add('disabled-link');
     }
   },
 
@@ -761,6 +775,7 @@ const configurator = {
     const elAddLink = document.createElement('a');
     elAddLink.setAttribute('href', '#');
     elAddLink.setAttribute('data-action', 'add');
+    elAddLink.setAttribute('data-count', '1');
     elAddLink.setAttribute('title', browser.i18n.getMessage('title_add_row'));
     elAddLink.classList.add('array-action');
     elSubOptions.appendChild(elAddLink);
