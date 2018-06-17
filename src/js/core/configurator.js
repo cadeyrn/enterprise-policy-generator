@@ -69,7 +69,9 @@ const configurator = {
       if (el.checked) {
         const elSubOptions = el.parentNode.getElementsByClassName('sub-options');
         if (elSubOptions.length > 0) {
-          elSubOptions[0].classList.remove('disabled');
+          [...elSubOptions].forEach((el) => {
+            el.classList.remove('disabled');
+          });
         }
       }
     });
@@ -185,7 +187,7 @@ const configurator = {
     }
   },
 
-  addArrayField (el, i, overrideCount) {
+  addArrayField (el, key, overrideCount) {
     // after adding a new array item the remove link of the first one shouldn't be disabled
     if (el.parentNode.parentNode.querySelector('.disabled-link')) {
       el.parentNode.parentNode.querySelector('.disabled-link').classList.remove('disabled-link');
@@ -203,7 +205,7 @@ const configurator = {
 
     // we want an empty input field for the copied array item, we also need a new DOM ID
     addedNode.querySelectorAll('input').forEach((el) => {
-      const id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (i ? i : count));
+      const id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (key ? key : count));
 
       el.value = '';
       el.setAttribute('id', id);
@@ -212,13 +214,15 @@ const configurator = {
 
     // for select fields we also need a new DOM ID
     addedNode.querySelectorAll('select').forEach((el) => {
-      const id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (i ? i : count));
+      const id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (key ? key : count));
       el.setAttribute('id', id);
       el.setAttribute('name', id);
     });
 
     // we have to re-add our event listener for executing the array field actions
     addedNode.querySelectorAll('a').forEach((el) => {
+      const id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name, idx) => name + '_' + count);
+      el.setAttribute('id', id);
       el.addEventListener('click', configurator.executeArrayFieldActions);
     });
 
@@ -312,7 +316,7 @@ const configurator = {
     }
 
     // add array field action links
-    configurator.addArrayFieldActionLinks(elSubOptions);
+    configurator.addArrayFieldActionLinks(elSubOptions, 'array-option', key + '_1');
 
     // add option to UI
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
@@ -620,7 +624,8 @@ const configurator = {
     }
 
     // add array field action links
-    configurator.addArrayFieldActionLinks(elSubOptions);
+    const arrayAddName = parentName + '_' + policy.name + '_1';
+    configurator.addArrayFieldActionLinks(elSubOptions, 'object-array', arrayAddName);
   },
 
   /**
@@ -662,7 +667,7 @@ const configurator = {
 
     // add array field action links if property of an array
     if (isArrayProperty && !hideArrayActionLinks) {
-      configurator.addArrayFieldActionLinks(elObjectWrapper);
+      configurator.addArrayFieldActionLinks(elObjectWrapper, 'array-property', domName);
     }
 
     el.appendChild(elObjectWrapper);
@@ -766,7 +771,7 @@ const configurator = {
    *
    * @returns {void}
    */
-  addArrayFieldActionLinks (elSubOptions) {
+  addArrayFieldActionLinks (elSubOptions, arrayType, id) {
     // remove link
     const elRemoveLink = document.createElement('a');
     elRemoveLink.setAttribute('href', '#');
@@ -783,8 +788,10 @@ const configurator = {
 
     // add link
     const elAddLink = document.createElement('a');
+    elAddLink.setAttribute('id', 'Array_Add_' + id);
     elAddLink.setAttribute('href', '#');
     elAddLink.setAttribute('data-action', 'add');
+    elAddLink.setAttribute('data-array-type', arrayType);
     elAddLink.setAttribute('data-count', '1');
     elAddLink.setAttribute('title', browser.i18n.getMessage('title_add_row'));
     elAddLink.classList.add('array-action');

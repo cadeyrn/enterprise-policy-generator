@@ -16,21 +16,24 @@ const serializer = {
     data.input = { };
     data.select = { };
 
+    document.querySelectorAll('.primary-checkbox:checked').forEach((el) => {
+      el.closest('.checkbox').querySelectorAll('[data-array-type]').forEach((el) => {
+        const result = el.id.match(/^Array_Add_(\w+)_(\d+)$/i);
+
+        if (result) {
+          if (result[2] > 1) {
+            if (!data.arrayfields[result[1]]) {
+              data.arrayfields[result[1]] = [];
+            }
+
+            data.arrayfields[result[1]].push(result[2]);
+          }
+        }
+      });
+    });
+
     for (let i = 0; i < length; i++) {
       const node = elements[i];
-
-      // array fields
-      const result = node.id.match(/^(\w+)_(\d+)$/i);
-
-      if (result) {
-        if (result[2] > 1) {
-          if (!data.arrayfields[result[1]]) {
-            data.arrayfields[result[1]] = [];
-          }
-
-          data.arrayfields[result[1]].push(result[2]);
-        }
-      }
 
       // checkboxes
       if (node.type === 'checkbox') {
@@ -61,7 +64,7 @@ const serializer = {
       const length = data.arrayfields[id].length + 1;
 
       data.arrayfields[id].forEach((key) => {
-        configurator.addArrayField(document.getElementById(id + '_1'), key, length);
+        configurator.addArrayField(document.getElementById('Array_Add_' + id + '_1'), key, length);
       });
     });
 
