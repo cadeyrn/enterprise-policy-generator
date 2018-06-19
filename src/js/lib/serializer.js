@@ -61,10 +61,10 @@ const serializer = {
   unserialize (data) {
     // array fields
     Object.keys(data.arrayfields).forEach((id) => {
-      const length = data.arrayfields[id].length + 1;
+      const newCountValue = Math.max(...data.arrayfields[id]);
 
       data.arrayfields[id].forEach((key) => {
-        configurator.addArrayField(document.getElementById('Array_Add_' + id + '_1'), key, length);
+        configurator.addArrayField(document.getElementById('Array_Add_' + id + '_1'), key, newCountValue);
       });
     });
 

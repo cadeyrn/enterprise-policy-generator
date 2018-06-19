@@ -187,14 +187,14 @@ const configurator = {
     }
   },
 
-  addArrayField (el, key, overrideCount) {
+  addArrayField (el, key, overrideCountValue) {
     // after adding a new array item the remove link of the first one shouldn't be disabled
     if (el.parentNode.parentNode.querySelector('.disabled-link')) {
       el.parentNode.parentNode.querySelector('.disabled-link').classList.remove('disabled-link');
     }
 
     // increment array field counter
-    const count = (overrideCount ? overrideCount : parseInt(el.getAttribute('data-count'))) + 1;
+    const count = overrideCountValue ? parseInt(overrideCountValue) : parseInt(el.getAttribute('data-count')) + 1;
 
     el.closest('.checkbox').querySelectorAll('[data-count]').forEach((el) => {
       el.setAttribute('data-count', count);
@@ -221,7 +221,7 @@ const configurator = {
 
     // we have to re-add our event listener for executing the array field actions
     addedNode.querySelectorAll('a').forEach((el) => {
-      const id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name, idx) => name + '_' + count);
+      const id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name, idx) => name + '_' + (key ? key : count));
       el.setAttribute('id', id);
       el.addEventListener('click', configurator.executeArrayFieldActions);
     });
