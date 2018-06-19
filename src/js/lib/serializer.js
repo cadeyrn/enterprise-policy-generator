@@ -17,7 +17,7 @@ const serializer = {
     data.select = { };
 
     document.querySelectorAll('.primary-checkbox:checked').forEach((el) => {
-      el.closest('.checkbox').querySelectorAll('[data-array-type]').forEach((el) => {
+      el.closest('.checkbox').querySelectorAll('[data-count]').forEach((el) => {
         const result = el.id.match(/^Array_Add_(\w+)_(\d+)$/i);
 
         if (result) {

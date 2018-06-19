@@ -316,7 +316,7 @@ const configurator = {
     }
 
     // add array field action links
-    configurator.addArrayFieldActionLinks(elSubOptions, 'array-option', key + '_1');
+    configurator.addArrayFieldActionLinks(elSubOptions, key + '_1');
 
     // add option to UI
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
@@ -625,7 +625,7 @@ const configurator = {
 
     // add array field action links
     const arrayAddName = parentName + '_' + policy.name + '_1';
-    configurator.addArrayFieldActionLinks(elSubOptions, 'object-array', arrayAddName);
+    configurator.addArrayFieldActionLinks(elSubOptions, arrayAddName);
   },
 
   /**
@@ -667,7 +667,7 @@ const configurator = {
 
     // add array field action links if property of an array
     if (isArrayProperty && !hideArrayActionLinks) {
-      configurator.addArrayFieldActionLinks(elObjectWrapper, 'array-property', domName);
+      configurator.addArrayFieldActionLinks(elObjectWrapper, domName);
     }
 
     el.appendChild(elObjectWrapper);
@@ -771,7 +771,7 @@ const configurator = {
    *
    * @returns {void}
    */
-  addArrayFieldActionLinks (elSubOptions, arrayType, id) {
+  addArrayFieldActionLinks (elSubOptions, id) {
     // remove link
     const elRemoveLink = document.createElement('a');
     elRemoveLink.setAttribute('href', '#');
@@ -791,7 +791,6 @@ const configurator = {
     elAddLink.setAttribute('id', 'Array_Add_' + id);
     elAddLink.setAttribute('href', '#');
     elAddLink.setAttribute('data-action', 'add');
-    elAddLink.setAttribute('data-array-type', arrayType);
     elAddLink.setAttribute('data-count', '1');
     elAddLink.setAttribute('title', browser.i18n.getMessage('title_add_row'));
     elAddLink.classList.add('array-action');
