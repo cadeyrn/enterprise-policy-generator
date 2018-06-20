@@ -27,7 +27,7 @@ const configurator = {
    *
    * @returns {void}
    */
-  init () {
+  init (unserializeStep) {
     // define ui categories
     const categories = [
       'block-access', 'disable-features', 'customization', 'network', 'privacy', 'security',
@@ -35,7 +35,16 @@ const configurator = {
     ];
 
     const categoriesLength = categories.length;
+
     for (let i = 0; i < categoriesLength; i++) {
+      if (unserializeStep) {
+        const node = document.getElementById('options-' + categories[i]);
+
+        while (node.firstChild) {
+          node.removeChild(node.firstChild);
+        }
+      }
+
       configurator.uiCategoryElements[categories[i]] = document.getElementById('options-' + categories[i]);
     }
 

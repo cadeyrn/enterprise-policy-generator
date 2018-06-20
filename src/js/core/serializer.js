@@ -59,6 +59,8 @@ const serializer = {
   },
 
   unserialize (data) {
+    configurator.init(true);
+
     // array fields
     Object.keys(data.arrayfields).forEach((id) => {
       const newCountValue = Math.max(...data.arrayfields[id]);
