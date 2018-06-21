@@ -73,18 +73,6 @@ const configurator = {
     // test if the download permission is granted or not
     configurator.testDownloadPermission();
 
-    // remove "hidden" state from enabled policies
-    [...document.querySelectorAll('.primary-checkbox')].forEach((el) => {
-      if (el.checked) {
-        const elSubOptions = el.parentNode.getElementsByClassName('sub-options');
-        if (elSubOptions.length > 0) {
-          [...elSubOptions].forEach((el) => {
-            el.classList.remove('disabled');
-          });
-        }
-      }
-    });
-
     // show suboptions for enabled policies and hide suboptions for disabled policies
     [...document.querySelectorAll('.primary-checkbox')].forEach((el) => {
       el.addEventListener('change', () => {

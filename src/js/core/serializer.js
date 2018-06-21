@@ -102,6 +102,18 @@ const serializer = {
         }
       }
     });
+
+    // remove "hidden" state from enabled policies
+    [...document.querySelectorAll('.primary-checkbox')].forEach((el) => {
+      if (el.checked) {
+        const elSubOptions = el.parentNode.getElementsByClassName('sub-options');
+        if (elSubOptions.length > 0) {
+          [...elSubOptions].forEach((el) => {
+            el.classList.remove('disabled');
+          });
+        }
+      }
+    });
   },
 
   isPolicyEnabled (el) {
