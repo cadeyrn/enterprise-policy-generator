@@ -25,6 +25,8 @@ const configurator = {
   /**
    * The init() method. Defines UI categories, adds policies to UI, setup all the event listeners.
    *
+   * @param {boolean} unserializeStep - (optional) whether the extra step for the unserializer should be executed or not
+   *
    * @returns {void}
    */
   init (unserializeStep) {
@@ -37,6 +39,7 @@ const configurator = {
     const categoriesLength = categories.length;
 
     for (let i = 0; i < categoriesLength; i++) {
+      // remove all policies from generator so that it can be re-added (used by unserializer)
       if (unserializeStep) {
         const node = document.getElementById('options-' + categories[i]);
 
@@ -184,6 +187,15 @@ const configurator = {
     }
   },
 
+  /**
+   * Executes the add action for array fields, called by executeArrayFieldActions().
+   *
+   * @param {HTMLElement} el - the DOM element of the array field which should be duplicated
+   * @param {string} key - (optional) the array field index which should be used for DOM IDs and names
+   * @param {number} (optional) overrideCountValue - use this value for the data-count attribute
+   *
+   * @returns {void}
+   */
   addArrayField (el, key, overrideCountValue) {
     // after adding a new array item the remove link of the first one shouldn't be disabled
     if (el.parentNode.parentNode.querySelector('.disabled-link')) {
@@ -234,6 +246,13 @@ const configurator = {
     el.parentNode.after(addedNode);
   },
 
+  /**
+   * Executes the remove action for array fields, called by executeArrayFieldActions().
+   *
+   * @param {HTMLElement} el - the DOM element of the array field which should be removed
+   *
+   * @returns {void}
+   */
   removeArrayField (el) {
     // different object types have different DOM structures, we need to know the number of total array items
     const elGrandParent = el.parentNode.parentNode;
@@ -241,12 +260,15 @@ const configurator = {
     const hasSubOptions = elGrandParent.querySelectorAll('.sub-options').length > 0;
     let newLength = 0;
 
+    // object-array property of object type
     if (isObjectArray) {
       newLength = elGrandParent.querySelectorAll(':scope > div').length - 2;
     }
+    // array type
     else if (hasSubOptions) {
       newLength = elGrandParent.querySelectorAll('.sub-options').length - 1;
     }
+    // array property of object type
     else {
       newLength = elGrandParent.querySelectorAll('.input').length - 1;
     }

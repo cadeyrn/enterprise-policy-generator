@@ -6,6 +6,11 @@
  * @exports serializer
  */
 const serializer = {
+  /**
+   * The serializer stores all the array fields and form values in an object.
+   *
+   * @returns {Object} - the serialized form as object
+   */
   serialize () {
     const { elements } = document.getElementById('generator-form');
     const { length } = elements;
@@ -16,11 +21,13 @@ const serializer = {
     data.input = { };
     data.select = { };
 
+    // array fields
     document.querySelectorAll('.primary-checkbox:checked').forEach((el) => {
       el.closest('.checkbox').querySelectorAll('[data-count]').forEach((el) => {
         const result = el.id.match(/^Array_Add_(\w+)_(\d+)$/i);
 
         if (result) {
+          // we don't need to store the first array field because there is always at least one array field visible
           if (result[2] > 1) {
             if (!data.arrayfields[result[1]]) {
               data.arrayfields[result[1]] = [];
@@ -58,7 +65,15 @@ const serializer = {
     return data;
   },
 
+  /**
+   * The unserializer applies the values of a stored configuration on the generator form.
+   *
+   * @param {Object} data - the serialized form as object
+   *
+   * @returns {void}
+   */
   unserialize (data) {
+    // reset the configuration form
     configurator.init(true);
 
     // array fields
@@ -116,6 +131,13 @@ const serializer = {
     });
   },
 
+  /**
+   * Checks whether a policy is enabled or not.
+   *
+   * @param {HTMLElement} el - the DOM element of the policy to be checked
+   *
+   * @returns {boolean} - whether the policy is enabled or not
+   */
   isPolicyEnabled (el) {
     return el.closest('.checkbox').querySelector(':scope > .primary-checkbox').checked;
   }
