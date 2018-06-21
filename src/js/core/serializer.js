@@ -6,8 +6,8 @@
  * @exports serializer
  */
 const serializer = {
-  serialize (form) {
-    const { elements } = form;
+  serialize () {
+    const { elements } = document.getElementById('generator-form');
     const { length } = elements;
     const data = { };
 
