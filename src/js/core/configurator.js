@@ -192,7 +192,7 @@ const configurator = {
    *
    * @param {HTMLElement} el - the DOM element of the array field which should be duplicated
    * @param {string} key - (optional) the array field index which should be used for DOM IDs and names
-   * @param {number} (optional) overrideCountValue - use this value for the data-count attribute
+   * @param {number} overrideCountValue - (optional) use this value for the data-count attribute
    *
    * @returns {void}
    */
@@ -787,6 +787,7 @@ const configurator = {
    * Adds a remove and an add link for array fields to a policy node.
    *
    * @param {HTMLElement} elSubOptions - the DOM node of the wrapping element
+   * @param {string} id - the policy key used as part of the DOM id for the add link
    *
    * @returns {void}
    */
