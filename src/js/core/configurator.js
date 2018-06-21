@@ -230,7 +230,7 @@ const configurator = {
 
     // we have to re-add our event listener for executing the array field actions
     addedNode.querySelectorAll('a').forEach((el) => {
-      const id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name, idx) => name + '_' + (key ? key : count));
+      const id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (key ? key : count));
       el.setAttribute('id', id);
       el.addEventListener('click', configurator.executeArrayFieldActions);
     });
