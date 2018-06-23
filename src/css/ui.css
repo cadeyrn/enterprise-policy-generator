@@ -434,7 +434,7 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
 }
 
 .modal-dialog > div {
-  width: 500px;
+  width: 550px;
   max-width: 98%;
   max-height: 90vh;
   overflow: scroll;
@@ -527,7 +527,7 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
 }
 
 #list-configurations-table .time {
-  width: 190px;
+  width: 220px;
 }
 
 #list-configurations-table .actions {
