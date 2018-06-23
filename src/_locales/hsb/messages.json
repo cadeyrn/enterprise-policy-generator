@@ -559,5 +559,11 @@
   },
   "title_remove_row": {
     "message": "Linku wotstronić"
+  },
+  "version_or_higher": {
+    "message": "or higher"
+  },
+  "version_required": {
+    "message": "requires at least"
   }
 }

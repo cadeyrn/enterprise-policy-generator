@@ -559,5 +559,11 @@
   },
   "title_remove_row": {
     "message": "Zeile entfernen"
+  },
+  "version_or_higher": {
+    "message": "oder höher"
+  },
+  "version_required": {
+    "message": "erfordert mindestens"
   }
 }

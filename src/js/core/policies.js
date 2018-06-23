@@ -9,7 +9,7 @@ const policies = {
   BlockAboutAddons : {
     description : browser.i18n.getMessage('policy_description_BlockAboutAddons'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'block-access',
@@ -19,7 +19,7 @@ const policies = {
   BlockAboutConfig : {
     description : browser.i18n.getMessage('policy_description_BlockAboutConfig'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'block-access',
@@ -29,7 +29,7 @@ const policies = {
   BlockAboutProfiles : {
     description : browser.i18n.getMessage('policy_description_BlockAboutProfiles'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'block-access',
@@ -39,7 +39,7 @@ const policies = {
   BlockAboutSupport : {
     description : browser.i18n.getMessage('policy_description_BlockAboutSupport'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'block-access',
@@ -51,7 +51,7 @@ const policies = {
   DisablePrivateBrowsing : {
     description : browser.i18n.getMessage('policy_description_DisablePrivateBrowsing'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'disable-features',
@@ -61,7 +61,7 @@ const policies = {
   DisableFormHistory : {
     description : browser.i18n.getMessage('policy_description_DisableFormHistory'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'disable-features',
@@ -71,7 +71,7 @@ const policies = {
   DisableBuiltinPDFViewer : {
     description : browser.i18n.getMessage('policy_description_DisableBuiltinPDFViewer'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'disable-features',
@@ -81,7 +81,7 @@ const policies = {
   DisableFirefoxScreenshots : {
     description : browser.i18n.getMessage('policy_description_DisableFirefoxScreenshots'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'disable-features',
@@ -91,7 +91,7 @@ const policies = {
   DisableDeveloperTools : {
     description : browser.i18n.getMessage('policy_description_DisableDeveloperTools'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'disable-features',
@@ -101,7 +101,7 @@ const policies = {
   DisablePocket : {
     description : browser.i18n.getMessage('policy_description_DisablePocket'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'disable-features',
@@ -111,7 +111,7 @@ const policies = {
   DisableFirefoxAccounts : {
     description : browser.i18n.getMessage('policy_description_DisableFirefoxAccounts'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'disable-features',
@@ -121,7 +121,7 @@ const policies = {
   DisableMasterPasswordCreation : {
     description : browser.i18n.getMessage('policy_description_DisableMasterPasswordCreation'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'disable-features',
@@ -131,7 +131,7 @@ const policies = {
   DisableSetDesktopBackground : {
     description : browser.i18n.getMessage('policy_description_DisableSetDesktopBackground'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'disable-features',
@@ -141,7 +141,7 @@ const policies = {
   DisableForgetButton : {
     description : browser.i18n.getMessage('policy_description_DisableForgetButton'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'disable-features',
@@ -151,7 +151,7 @@ const policies = {
   DisableProfileImport : {
     description : browser.i18n.getMessage('policy_description_DisableProfileImport'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'disable-features',
@@ -161,7 +161,7 @@ const policies = {
   DisableProfileRefresh : {
     description : browser.i18n.getMessage('policy_description_DisableProfileRefresh'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'disable-features',
@@ -171,7 +171,7 @@ const policies = {
   DisableSafeMode : {
     description : browser.i18n.getMessage('policy_description_DisableSafeMode'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'disable-features',
@@ -181,7 +181,7 @@ const policies = {
   DisableFeedbackCommands : {
     description : browser.i18n.getMessage('policy_description_DisableFeedbackCommands'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'disable-features',
@@ -193,7 +193,7 @@ const policies = {
   DisplayMenuBar : {
     description : browser.i18n.getMessage('policy_description_DisplayMenuBar'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'customization',
@@ -203,7 +203,7 @@ const policies = {
   DisplayBookmarksToolbar : {
     description : browser.i18n.getMessage('policy_description_DisplayBookmarksToolbar'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'customization',
@@ -213,7 +213,7 @@ const policies = {
   Homepage : {
     description : browser.i18n.getMessage('policy_description_Homepage'),
     enterprise_only : true,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : true,
     ui_category : 'customization',
@@ -241,7 +241,7 @@ const policies = {
   SearchBar : {
     description : browser.i18n.getMessage('policy_description_SearchBar'),
     enterprise_only : true,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'customization',
@@ -262,7 +262,7 @@ const policies = {
   SearchEngines : {
     description : browser.i18n.getMessage('policy_description_SearchEngines'),
     enterprise_only : true,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'customization',
@@ -356,7 +356,7 @@ const policies = {
   NoDefaultBookmarks : {
     description : browser.i18n.getMessage('policy_description_NoDefaultBookmarks'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'customization',
@@ -366,7 +366,7 @@ const policies = {
   Bookmarks : {
     description : browser.i18n.getMessage('policy_description_Bookmarks'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'customization',
@@ -418,7 +418,7 @@ const policies = {
   InstallAddonsPermission : {
     description : browser.i18n.getMessage('policy_description_InstallAddonsPermission'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'customization',
@@ -456,7 +456,7 @@ const policies = {
   Extensions : {
     description : browser.i18n.getMessage('policy_description_Extensions'),
     enterprise_only : true,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'customization',
@@ -500,7 +500,7 @@ const policies = {
   WebsiteFilter : {
     description : browser.i18n.getMessage('policy_description_WebsiteFilter'),
     enterprise_only : true,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : 'https://developer.mozilla.org/Add-ons/WebExtensions/Match_patterns',
     is_lockable : false,
     ui_category : 'network',
@@ -532,7 +532,7 @@ const policies = {
   Proxy : {
     description : browser.i18n.getMessage('policy_description_Proxy'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : true,
     ui_category : 'network',
@@ -668,7 +668,7 @@ const policies = {
   Authentication : {
     description : browser.i18n.getMessage('policy_description_Authentication'),
     enterprise_only : true,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : 'https://developer.mozilla.org/docs/Mozilla/Integrated_authentication',
     is_lockable : false,
     ui_category : 'network',
@@ -712,7 +712,7 @@ const policies = {
   Cookies : {
     description : browser.i18n.getMessage('policy_description_Cookies'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : true,
     ui_category : 'privacy',
@@ -796,7 +796,7 @@ const policies = {
   SanitizeOnShutdown : {
     description : browser.i18n.getMessage('policy_description_SanitizeOnShutdown'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'privacy',
@@ -806,7 +806,7 @@ const policies = {
   EnableTrackingProtection : {
     description : browser.i18n.getMessage('policy_description_EnableTrackingProtection'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : true,
     ui_category : 'privacy',
@@ -836,7 +836,7 @@ const policies = {
   FlashPlugin : {
     description : browser.i18n.getMessage('policy_description_FlashPlugin'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : true,
     ui_category : 'security',
@@ -888,7 +888,7 @@ const policies = {
   DisableSecurityBypass : {
     description : browser.i18n.getMessage('policy_description_DisableSecurityBypass'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'security',
@@ -940,7 +940,7 @@ const policies = {
   Certificates : {
     description : browser.i18n.getMessage('policy_description_Certificates'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'security',
@@ -970,7 +970,7 @@ const policies = {
   DisableAppUpdate : {
     description : browser.i18n.getMessage('policy_description_DisableAppUpdate'),
     enterprise_only : true,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'updates-and-data',
@@ -980,7 +980,7 @@ const policies = {
   DisableSystemAddonUpdate : {
     description : browser.i18n.getMessage('policy_description_DisableSystemAddonUpdate'),
     enterprise_only : true,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'updates-and-data',
@@ -990,7 +990,7 @@ const policies = {
   DisableTelemetry : {
     description : browser.i18n.getMessage('policy_description_DisableTelemetry'),
     enterprise_only : true,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'updates-and-data',
@@ -1000,7 +1000,7 @@ const policies = {
   DisableFirefoxStudies : {
     description : browser.i18n.getMessage('policy_description_DisableFirefoxStudies'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'updates-and-data',
@@ -1012,7 +1012,7 @@ const policies = {
   PopupBlocking : {
     description : browser.i18n.getMessage('policy_description_PopupBlocking'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : true,
     ui_category : 'others',
@@ -1050,7 +1050,7 @@ const policies = {
   OfferToSaveLogins : {
     description : browser.i18n.getMessage('policy_description_OfferToSaveLogins'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'others',
@@ -1071,7 +1071,7 @@ const policies = {
   DontCheckDefaultBrowser : {
     description : browser.i18n.getMessage('policy_description_DontCheckDefaultBrowser'),
     enterprise_only : false,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'others',
@@ -1081,7 +1081,7 @@ const policies = {
   OverrideFirstRunPage : {
     description : browser.i18n.getMessage('policy_description_OverrideFirstRunPage'),
     enterprise_only : true,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'others',
@@ -1092,7 +1092,7 @@ const policies = {
   OverridePostUpdatePage : {
     description : browser.i18n.getMessage('policy_description_OverridePostUpdatePage'),
     enterprise_only : true,
-    first_available : '60.0',
+    first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'others',

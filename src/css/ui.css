@@ -373,7 +373,7 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
   text-decoration: none;
 }
 
-.esr-only {
+.esr-only, .versions-info {
   margin-top: 2px;
   font-size: small;
   color: rgba(19, 69, 99, .8);
@@ -391,6 +391,17 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
   width: 24px;
   height: 24px;
   vertical-align: middle;
+}
+
+.versions-info img {
+  position: relative;
+  top: -1px;
+  left: 2px;
+  margin-right: 6px;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  opacity: .5;
 }
 
 .modal-dialog {
