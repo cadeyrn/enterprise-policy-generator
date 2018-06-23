@@ -13,6 +13,7 @@
 #### Dependencies
 
 - updated eslint from version 4.19.1 to 5.0.0
+- updated eslint-plugin-compat from version 2.3.0 to 2.4.0
 
 ---
 
