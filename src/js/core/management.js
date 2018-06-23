@@ -95,21 +95,17 @@ const management = {
    * @returns {void}
    */
   async saveConfiguration (name) {
-    const { configurations } = await browser.storage.local.get({
-      configurations : []
-    });
+    const { configurations } = await browser.storage.local.get({ configurations : [] });
 
     const configuration = {
       name : name,
       time : new Date(),
       configuration : serializer.serialize()
-    }
+    };
 
     configurations.push(configuration);
 
-    browser.storage.local.set({
-      configurations : configurations
-    });
+    browser.storage.local.set({ configurations : configurations });
   },
 
   /**
