@@ -189,7 +189,9 @@ const management = {
       const elRemoveLink = document.createElement('a');
       elRemoveLink.setAttribute('href', '#');
       elRemoveLink.setAttribute('title', browser.i18n.getMessage('title_remove_configuration'));
+      elRemoveLink.setAttribute('data-idx', i);
       elRemoveLink.classList.add('icon');
+      elRemoveLink.addEventListener('click', management.removeConfiguration);
       elIconColumn.appendChild(elRemoveLink);
 
       const elRemoveIcon = document.createElement('img');
@@ -214,7 +216,7 @@ const management = {
   },
 
   /**
-   * Apply the selected configuration.
+   * Applies the selected configuration.
    *
    * @param {MouseEvent} e - event
    *
@@ -226,6 +228,22 @@ const management = {
     const { configurations } = await browser.storage.local.get({ configurations : [] });
     serializer.unserialize(configurations[e.target.parentNode.getAttribute('data-idx')].configuration);
     management.closeListConfigurationsDialog(document.getElementById('modal-list-dialog'));
+  },
+
+  /**
+   * Removes the selected configuration.
+   *
+   * @param {MouseEvent} e - event
+   *
+   * @returns {void}
+   */
+  async removeConfiguration (e) {
+    e.preventDefault();
+
+    const { configurations } = await browser.storage.local.get({ configurations : [] });
+    configurations.splice(e.target.parentNode.getAttribute('data-idx'), 1);
+    browser.storage.local.set({ configurations : configurations });
+    e.target.closest('tr').remove();
   }
 };
 
