@@ -165,19 +165,20 @@ const management = {
     }
 
     // add configurations to table
-    for (const configuration of configurations) {
+    const configurationLength = configurations.length;
+    for (let i = 0; i < configurationLength; i++) {
       // row
       const elRow = document.createElement('tr');
       elTableBody.appendChild(elRow);
 
       // name column
       const elNameColumn = document.createElement('td');
-      elNameColumn.textContent = configuration.name;
+      elNameColumn.textContent = configurations[i].name;
       elRow.appendChild(elNameColumn);
 
       // time column
       const elTimeColumn = document.createElement('td');
-      elTimeColumn.textContent = configuration.time.toLocaleString();
+      elTimeColumn.textContent = configurations[i].time.toLocaleString();
       elRow.appendChild(elTimeColumn);
 
       // icon column
@@ -200,7 +201,9 @@ const management = {
       const elLoadLink = document.createElement('a');
       elLoadLink.setAttribute('href', '#');
       elLoadLink.setAttribute('title', browser.i18n.getMessage('title_apply_configuration'));
+      elLoadLink.setAttribute('data-idx', i);
       elLoadLink.classList.add('icon');
+      elLoadLink.addEventListener('click', management.applyConfiguration);
       elIconColumn.appendChild(elLoadLink);
 
       const elLoadIcon = document.createElement('img');
@@ -208,6 +211,21 @@ const management = {
       elLoadIcon.setAttribute('alt', browser.i18n.getMessage('title_apply_configuration'));
       elLoadLink.appendChild(elLoadIcon);
     }
+  },
+
+  /**
+   * Apply the selected configuration.
+   *
+   * @param {MouseEvent} e - event
+   *
+   * @returns {void}
+   */
+  async applyConfiguration (e) {
+    e.preventDefault();
+
+    const { configurations } = await browser.storage.local.get({ configurations : [] });
+    serializer.unserialize(configurations[e.target.parentNode.getAttribute('data-idx')].configuration);
+    management.closeListConfigurationsDialog(document.getElementById('modal-list-dialog'));
   }
 };
 
