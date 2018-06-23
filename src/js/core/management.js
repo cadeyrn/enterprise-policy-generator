@@ -22,7 +22,7 @@ const management = {
   },
 
   /**
-   * Defines the behaviour of the "save configuration" dialog.
+   * Show the "save configuration" dialog. This method also defines the behaviour of the dialog.
    *
    * @returns {void}
    */
