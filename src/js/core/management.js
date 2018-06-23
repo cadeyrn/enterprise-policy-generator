@@ -34,13 +34,13 @@ const management = {
     // close dialog by clicking the cancel button
     const closeButton = document.getElementById('button-save-dialog-cancel');
     closeButton.addEventListener('click', () => {
-      modal.classList.remove('visible');
+      management.closeSaveConfigurationDialog(modal);
     });
 
     // close dialog by pressing ESC
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
-        modal.classList.remove('visible');
+        management.closeSaveConfigurationDialog(modal);
       }
     });
 
@@ -53,9 +53,21 @@ const management = {
     submitButton.onclick = function (e) {
       e.preventDefault();
 
-      modal.classList.remove('visible');
+      management.closeSaveConfigurationDialog(modal);
       management.saveConfiguration(elName.value);
     };
+  },
+
+  /**
+   * Close the "save configuration" dialog.
+   *
+   * @param {HTMLElement} modal - the DOM element of the modal dialog
+   *
+   * @returns {void}
+   */
+  closeSaveConfigurationDialog (modal) {
+    modal.classList.remove('visible');
+    document.getElementById('save-dialog-name').value = '';
   },
 
   /**
