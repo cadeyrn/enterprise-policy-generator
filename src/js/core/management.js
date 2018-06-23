@@ -32,16 +32,16 @@ const management = {
     elModal.classList.add('visible');
 
     // submit button
-    const elSubmitButton = document.getElementById('button-save-dialog-ok');
-    elSubmitButton.onclick = function (e) {
+    const elSubmitButton = elModal.querySelector('#button-save-dialog-ok');
+    elSubmitButton.addEventListener('click', (e) => {
       e.preventDefault();
 
       management.closeSaveConfigurationDialog(elModal, elSubmitButton);
       management.saveConfiguration(elName.value);
-    };
+    });
 
     // close dialog by clicking the cancel button
-    const elCloseButton = document.getElementById('button-save-dialog-cancel');
+    const elCloseButton = elModal.querySelector('#button-save-dialog-cancel');
     elCloseButton.addEventListener('click', () => {
       management.closeSaveConfigurationDialog(elModal, elSubmitButton);
     });
@@ -71,15 +71,15 @@ const management = {
   /**
    * Close the "save configuration" dialog.
    *
-   * @param {HTMLElement} modal - the DOM element of the modal dialog
-   * @param {HTMLElement} submitButton - the DOM element of the submit button
+   * @param {HTMLElement} elModal - the DOM element of the modal dialog
+   * @param {HTMLElement} elSubmitButton - the DOM element of the submit button
    *
    * @returns {void}
    */
-  closeSaveConfigurationDialog (modal, submitButton) {
-    modal.classList.remove('visible');
-    document.getElementById('save-dialog-name').value = '';
-    submitButton.setAttribute('disabled', true);
+  closeSaveConfigurationDialog (elModal, elSubmitButton) {
+    elModal.classList.remove('visible');
+    elModal.querySelector('#save-dialog-name').value = '';
+    elSubmitButton.setAttribute('disabled', true);
   },
 
   /**
