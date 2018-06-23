@@ -524,6 +524,12 @@
   "policy_description_SearchEngines_PreventInstalls_true": {
     "message": "instalacijam zajźowaś"
   },
+  "policy_description_SearchEngines_Remove": {
+    "message": "Remove search engine(s)"
+  },
+  "policy_description_SearchEngines_Remove_Name": {
+    "message": "Name"
+  },
   "policy_description_WebsiteFilter": {
     "message": "Zajźujo, až se websedła woglěduju. Móžośo \"<all_urls>\" za blokěrowanje wšych URL wužywaś. Glejśo informaciski wótkaz za wšykne płaśiwe zapiski, ale jano HTTPS a HTTP se pódpěratej."
   },

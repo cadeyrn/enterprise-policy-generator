@@ -349,6 +349,16 @@ const policies = {
             ]
           }
         ]
+      },
+      {
+        name: 'Remove',
+        label : browser.i18n.getMessage('policy_description_SearchEngines_Remove'),
+        mandatory : false,
+        type : 'array',
+        items : {
+          label : browser.i18n.getMessage('policy_description_SearchEngines_Remove_Name'),
+          type : 'string'
+        }
       }
     ]
   },

@@ -15,6 +15,8 @@
 #### Enterprise Policies
 
 - new policy: disable hardware acceleration, fixes [#9](https://github.com/cadeyrn/enterprise-policy-generator/issues/9)
+- added option to remove search engines to SearchEngines policy, fixes
+  [#19](https://github.com/cadeyrn/enterprise-policy-generator/issues/19)
 
 #### Dependencies
 
