@@ -351,7 +351,7 @@ const policies = {
         ]
       },
       {
-        name: 'Remove',
+        name : 'Remove',
         label : browser.i18n.getMessage('policy_description_SearchEngines_Remove'),
         mandatory : false,
         type : 'array',
