@@ -228,6 +228,8 @@ const management = {
     const { configurations } = await browser.storage.local.get({ configurations : [] });
     serializer.unserialize(configurations[e.target.parentNode.getAttribute('data-idx')].configuration);
     management.closeListConfigurationsDialog(document.getElementById('modal-list-dialog'));
+    document.getElementById('policy-output').innerText = output.generatePoliciesOutput();
+    document.getElementById('action-links').classList.remove('hidden');
   },
 
   /**
