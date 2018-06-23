@@ -14,7 +14,7 @@
 
 #### Enterprise Policies
 
-- new policy: disable dardware acceleration, fixes [#9](https://github.com/cadeyrn/enterprise-policy-generator/issues/9)
+- new policy: disable hardware acceleration, fixes [#9](https://github.com/cadeyrn/enterprise-policy-generator/issues/9)
 
 #### Dependencies
 
