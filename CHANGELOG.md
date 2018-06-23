@@ -8,6 +8,8 @@
 
 - **now with configuration management!** You can save any number of different configurations, load them at a later time (and of course
   delete them), fixes [#3](https://github.com/cadeyrn/enterprise-policy-generator/issues/3)
+- **shows minimum required Firefox version!** If a policy requires a newer version than Firefox 60.0 or Firefox ESR 60.0 a notice is
+  displayed, fixes [#4](https://github.com/cadeyrn/enterprise-policy-generator/issues/4)
 - some design improvements
 
 #### Dependencies

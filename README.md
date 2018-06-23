@@ -26,6 +26,7 @@ together the desired Enterprise Policies.
 - special marking of policies that only work with Firefox ESR
 - info links for some policies to get additional information
 - you can save any number of different configurations, load them at a later time (and of course delete them)
+- If a policy requires a newer version than Firefox 60.0 or Firefox ESR 60.0 a notice is displayed
 
 ### Shortcuts
 
@@ -34,12 +35,8 @@ reserved. Or you can open the interface via a menu entry in the tools menu.
 
 ### Planned features
 
-There are already some features planned for the future.
-
-- show the minimum required Firefox version for each policy once more policies has been added in later versions of Firefox
-- & more…
-
-Please suggest your feature requests in the [issues tracker](https://github.com/cadeyrn/enterprise-policy-generator/issues).
+There are already some features planned for the future. You can find the roadmap and request new features in the
+[issues tracker](https://github.com/cadeyrn/enterprise-policy-generator/issues).
 
 ### Languages
 
