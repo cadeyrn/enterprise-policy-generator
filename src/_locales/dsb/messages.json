@@ -47,16 +47,25 @@
   "link_learn_more": {
     "message": "dalšne informacije"
   },
+  "link_load_configuration": {
+    "message": "load configuration"
+  },
   "link_save_configuration": {
     "message": "save configuration"
   },
   "link_select_all": {
     "message": "wšykne markěrowaś"
   },
-    "lock_preference": {
+  "list_dialog_btn_cancel": {
+    "message": "Cancel"
+  },
+  "list_dialog_window_title": {
+    "message": "Load Configuration"
+  },
+  "lock_preference": {
     "message": "Nastajenje pśeśiwo změnje šćitaś"
   },
-   "mandatory-label": {
+  "mandatory-label": {
     "message": "obligatoriski"
   },
   "policy_category_block_access": {
