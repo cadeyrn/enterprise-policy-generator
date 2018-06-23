@@ -25,6 +25,7 @@ together the desired Enterprise Policies.
 - validation for mandatory fields
 - special marking of policies that only work with Firefox ESR
 - info links for some policies to get additional information
+- you can save any number of different configurations, load them at a later time (and of course delete them)
 
 ### Shortcuts
 
@@ -35,7 +36,6 @@ reserved. Or you can open the interface via a menu entry in the tools menu.
 
 There are already some features planned for the future.
 
-- store and load configurations
 - show the minimum required Firefox version for each policy once more policies has been added in later versions of Firefox
 - & more…
 
@@ -69,12 +69,17 @@ This permission is needed for providing the option to download the generated “
 
 #### silent permissions
 
-Enterprise Policy Generator needs one more permission, but Firefox does not prompt for the following permission:
+Enterprise Policy Generator needs some more permissions, but Firefox does not prompt for the following permissions:
 
 ##### menus
 
 The menus permission is needed for providing a menu entry in the tools menu to access Enterprise Policy Generator's user
 interface.
+
+##### storage
+_(since 2.0.0)_
+
+The storage permission is needed so that you can save and load configurations.
 
 ## Compatibility
 
