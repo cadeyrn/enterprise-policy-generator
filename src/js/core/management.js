@@ -137,7 +137,7 @@ const management = {
   },
 
   /**
-   * Close the "save configuration" dialog.
+   * Close the "list configurations" dialog.
    *
    * @param {HTMLElement} elModal - the DOM element of the modal dialog
    *
