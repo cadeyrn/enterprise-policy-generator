@@ -54,9 +54,33 @@ const management = {
       e.preventDefault();
 
       modal.classList.remove('visible');
-
-      serializer.serialize();
+      management.saveConfiguration(elName.value);
     };
+  },
+
+  /**
+   * Saves the current configuration with a name and the current date and time.
+   *
+   * @param {string} name - the name of the configuration
+   *
+   * @returns {void}
+   */
+  async saveConfiguration (name) {
+    const { configurations } = await browser.storage.local.get({
+      configurations : []
+    });
+
+    const configuration = {
+      name : name,
+      time : new Date(),
+      configuration : serializer.serialize()
+    }
+
+    configurations.push(configuration);
+
+    browser.storage.local.set({
+      configurations : configurations
+    });
   }
 };
 

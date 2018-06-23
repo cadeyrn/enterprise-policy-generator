@@ -31,7 +31,8 @@
     "browser_style": false
   },
   "permissions": [
-    "menus"
+    "menus",
+    "storage"
   ],
   "optional_permissions": [
     "downloads"
