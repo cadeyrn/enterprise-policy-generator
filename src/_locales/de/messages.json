@@ -23,21 +23,6 @@
   "extension_name": {
     "message": "Enterprise Policy Generator"
   },
-  "future_feature_a": {
-    "message": "Konfigurationen speichern und laden"
-  },
-  "future_feature_b": {
-    "message": "Anzeige der erforderlichen Firefox-Version für jede Richtlinie, sobald weitere Richtlinien in späteren Versionen von Firefox unterstützt werden"
-  },
-  "future_feature_c": {
-    "message": "eine noch bessere Bedienbarkeit"
-  },
-  "future_feature_github": {
-    "message": "… und vielleicht Ihr Vorschlag?"
-  },
-  "future_headline": {
-    "message": "Weitere Funktionen sind für die Zukunft bereits geplant!"
-  },
   "generate_button": {
     "message": "Richtlinien generieren"
   },

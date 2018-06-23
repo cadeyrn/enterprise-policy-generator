@@ -23,21 +23,6 @@
   "extension_name": {
     "message": "Enterprise Policy Generator"
   },
-  "future_feature_a": {
-    "message": "store and load configurations"
-  },
-  "future_feature_b": {
-    "message": "show the minimum required Firefox version for each policy once more policies has been added in later versions of Firefox"
-  },
-  "future_feature_c": {
-    "message": "an even better usability"
-  },
-  "future_feature_github": {
-    "message": "… and maybe your feature request?"
-  },
-  "future_headline": {
-    "message": "More features are already planned for the future!"
-  },
   "generate_button": {
     "message": "Generate Policies"
   },

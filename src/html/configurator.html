@@ -42,28 +42,33 @@
       <button id='generate' data-i18n='generate_button'></button>
       <pre id='policy-output-wrapper'><code id='policy-output'></code></pre>
       <div id='action-links' class='hidden'>
-        <small>
-          <a href='#' id='select-all' data-i18n='link_select_all'></a> |
-          <a href='#' id='grant-download-permission' data-i18n='link_download'></a>
-          <a href='#' id='download' class='hidden' data-i18n='link_download'></a> |
-          <a href='#' id='save-configuration' data-i18n='link_save_configuration'></a>
-        </small>
-      </div>
-      <p>
-        <strong data-i18n='future_headline'></strong>
-      </p>
-      <ul>
-        <li data-i18n='future_feature_a'></li>
-        <li data-i18n='future_feature_b'></li>
-        <li data-i18n='future_feature_c'></li>
-        <li>
-          <a href='https://github.com/cadeyrn/enterprise-policy-generator/issues' target='_blank' rel='noopener'>
-            <span data-i18n='future_feature_github'></span>
+        <div>
+          <a href='#' id='select-all' class='icon'>
+            <img src='../images/mouse-pointer.svg' alt='' />
+            <span data-i18n='link_select_all'></span>
           </a>
-        </li>
-      </ul>
+        </div>
+        <div>
+          <a href='#' id='grant-download-permission' class='icon'>
+            <img src='../images/download.svg' alt='' />
+            <span data-i18n='link_download'></span>
+          </a>
+        </div>
+        <div>
+          <a href='#' id='download' class='icon hidden'>
+            <img src='../images/download.svg' alt='' />
+            <span data-i18n='link_download'></span>
+          </a>
+        </div>
+        <div>
+          <a href='#' id='save-configuration' class='icon'>
+            <img src='../images/save.svg' alt='' />
+            <span data-i18n='link_save_configuration'></span>
+          </a>
+        </div>
+      </div>
       <hr />
-      <a href='#' id='list-configurations'>
+      <a href='#' id='list-configurations' class='icon'>
         <img src='../images/cog.svg' alt='' />
         <span data-i18n='link_load_configuration'></span>
       </a>

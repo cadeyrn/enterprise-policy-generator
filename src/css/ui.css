@@ -488,16 +488,29 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
   background: rgb(185, 0, 4);
 }
 
-#list-configurations img {
+.icon {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.icon.hidden {
+  display: none;
+}
+
+.icon img {
   margin-right: 5px;
   width: 24px;
   height: 24px;
   vertical-align: middle;
 }
 
-#list-configurations span {
+.icon span {
   font-size: 14px;
   color: rgb(33, 37, 42);
+}
+
+#list-configurations {
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 1199px) {

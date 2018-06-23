@@ -23,21 +23,6 @@
   "extension_name": {
     "message": "Enterprise Policy Generator"
   },
-  "future_feature_a": {
-    "message": "Konfiguracije składowaś a zacytaś"
-  },
-  "future_feature_b": {
-    "message": "Pokazowanje trěbneje wersije Firefox za kuždu směrnicu, gaž se dalšne směrnice w pózdźejšych wersijach Firefox pódpěraju"
-  },
-  "future_feature_c": {
-    "message": "hyšći lěpša wobsłužujobnosć"
-  },
-  "future_feature_github": {
-    "message": "… a snaź wašo naraźenje?"
-  },
-  "future_headline": {
-    "message": "Dalšne funkcije su južo za pśichod planowane!"
-  },
   "generate_button": {
     "message": "Směrnice generěrowaś"
   },
