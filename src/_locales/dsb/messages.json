@@ -525,7 +525,7 @@
     "message": "instalacijam zajźowaś"
   },
   "policy_description_SearchEngines_Remove": {
-    "message": "Remove search engine(s)"
+    "message": "Remove search engine(s) (Firefox 62+)"
   },
   "policy_description_SearchEngines_Remove_Name": {
     "message": "Name"

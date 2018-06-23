@@ -525,7 +525,7 @@
     "message": "Installation verhindern"
   },
   "policy_description_SearchEngines_Remove": {
-    "message": "Suchmaschine(n) entfernen"
+    "message": "Suchmaschine(n) entfernen (Firefox 62+)"
   },
   "policy_description_SearchEngines_Remove_Name": {
     "message": "Name"
