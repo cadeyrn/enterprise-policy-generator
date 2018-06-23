@@ -28,28 +28,28 @@ const management = {
    */
   showSaveConfigurationDialog () {
     // show dialog
-    const modal = document.getElementById('modal-save-dialog');
-    modal.classList.add('visible');
+    const elModal = document.getElementById('modal-save-dialog');
+    elModal.classList.add('visible');
 
     // submit button
-    const submitButton = document.getElementById('button-save-dialog-ok');
-    submitButton.onclick = function (e) {
+    const elSubmitButton = document.getElementById('button-save-dialog-ok');
+    elSubmitButton.onclick = function (e) {
       e.preventDefault();
 
-      management.closeSaveConfigurationDialog(modal, submitButton);
+      management.closeSaveConfigurationDialog(elModal, elSubmitButton);
       management.saveConfiguration(elName.value);
     };
 
     // close dialog by clicking the cancel button
-    const closeButton = document.getElementById('button-save-dialog-cancel');
-    closeButton.addEventListener('click', () => {
-      management.closeSaveConfigurationDialog(modal, submitButton);
+    const elCloseButton = document.getElementById('button-save-dialog-cancel');
+    elCloseButton.addEventListener('click', () => {
+      management.closeSaveConfigurationDialog(elModal, elSubmitButton);
     });
 
     // close dialog by pressing ESC
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
-        management.closeSaveConfigurationDialog(modal, submitButton);
+        management.closeSaveConfigurationDialog(elModal, elSubmitButton);
       }
     });
 
@@ -60,10 +60,10 @@ const management = {
     // the name field must not be empty
     elName.addEventListener('input', () => {
       if (elName.value) {
-        submitButton.removeAttribute('disabled');
+        elSubmitButton.removeAttribute('disabled');
       }
       else {
-        submitButton.setAttribute('disabled', true);
+        elSubmitButton.setAttribute('disabled', true);
       }
     });
   },
