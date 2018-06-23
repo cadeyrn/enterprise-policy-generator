@@ -2,6 +2,16 @@
 
 ## Release Notes
 
+### (Work in Progress) Version 2.0.0 (2018-06-xx)
+
+#### Enhancements
+
+- **now with configuration management!** You can save any number of different configurations, load them at a later time (and of course
+  delete them), fixes [#3](https://github.com/cadeyrn/enterprise-policy-generator/issues/3)
+- some design improvements
+
+---
+
 ### [Version 1.1.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v1.1.0) (2018-05-27)
 
 #### Enhancements
