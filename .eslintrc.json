@@ -252,7 +252,7 @@
         "FunctionDeclaration": true,
         "MethodDefinition": true,
         "ClassDeclaration": true,
-        "ArrowFunctionExpression": true
+        "ArrowFunctionExpression": false
       }
     }],
     "require-yield": "error",
