@@ -1,6 +1,6 @@
 'use strict';
 
-/* global serializer */
+/* global output, serializer */
 
 const elListConfigurationsLink = document.getElementById('list-configurations');
 const elSaveConfigurationLink = document.getElementById('save-configuration');
