@@ -25,9 +25,11 @@ const configurator = {
   /**
    * The init() method. Defines UI categories, adds policies to UI, setup all the event listeners.
    *
+   * @param {boolean} unserializeStep - (optional) whether the extra step for the unserializer should be executed or not
+   *
    * @returns {void}
    */
-  init () {
+  init (unserializeStep) {
     // define ui categories
     const categories = [
       'block-access', 'disable-features', 'customization', 'network', 'privacy', 'security',
@@ -35,7 +37,17 @@ const configurator = {
     ];
 
     const categoriesLength = categories.length;
+
     for (let i = 0; i < categoriesLength; i++) {
+      // remove all policies from generator so that it can be re-added (used by unserializer)
+      if (unserializeStep) {
+        const node = document.getElementById('options-' + categories[i]);
+
+        while (node.firstChild) {
+          node.removeChild(node.firstChild);
+        }
+      }
+
       configurator.uiCategoryElements[categories[i]] = document.getElementById('options-' + categories[i]);
     }
 
@@ -165,67 +177,110 @@ const configurator = {
 
     switch (e.target.getAttribute('data-action')) {
       case 'add':
-        // after adding a new array item the remove link of the first one shouldn't be disabled
-        if (e.target.parentNode.parentNode.querySelector('.disabled-link')) {
-          e.target.parentNode.parentNode.querySelector('.disabled-link').classList.remove('disabled-link');
-        }
-
-        // copy the array item
-        const addedNode = e.target.parentNode.cloneNode(true);
-
-        // we want an empty input field for the copied array item, we also need a new DOM ID
-        addedNode.querySelectorAll('input').forEach((el) => {
-          const randomId = configurator.generateRandomDomId();
-
-          el.value = '';
-          el.setAttribute('id', randomId);
-        });
-
-        // we have to re-add our event listener for executing the array field actions
-        addedNode.querySelectorAll('a').forEach((el) => {
-          el.addEventListener('click', configurator.executeArrayFieldActions);
-        });
-
-        // we also have to re-add the event listener for the validation of mandatory fields
-        addedNode.querySelectorAll('input[data-mandatory]').forEach((el) => {
-          el.addEventListener('input', configurator.validateMandatoryFields);
-          el.classList.add('mandatory-style');
-          el.parentNode.querySelector('.mandatory-label').classList.remove('hidden');
-        });
-
-        // add the copied array item to the DOM
-        e.target.parentNode.after(addedNode);
+        configurator.addArrayField(e.target);
         break;
       case 'remove':
-        // different object types have different DOM structures, we need to know the number of total array items
-        const elGrandParent = e.target.parentNode.parentNode;
-        const isObjectArray = elGrandParent.classList.contains('object-array');
-        const hasSubOptions = elGrandParent.querySelectorAll('.sub-options').length > 0;
-        let newLength = 0;
-
-        if (isObjectArray) {
-          newLength = elGrandParent.querySelectorAll(':scope > div').length - 2;
-        }
-        else if (hasSubOptions) {
-          newLength = elGrandParent.querySelectorAll('.sub-options').length - 1;
-        }
-        else {
-          newLength = elGrandParent.querySelectorAll('.input').length - 1;
-        }
-
-        // remove the array item from the DOM
-        if (!e.target.classList.contains('disabled-link')) {
-          e.target.parentNode.remove();
-        }
-
-        // if there is only one array item after removing another array item the remove link should be disabled
-        if (newLength === 1) {
-          elGrandParent.querySelector('[data-action="remove"]').classList.add('disabled-link');
-        }
-
+        configurator.removeArrayField(e.target);
         break;
       default:
       // do nothing
+    }
+  },
+
+  /**
+   * Executes the add action for array fields, called by executeArrayFieldActions().
+   *
+   * @param {HTMLElement} el - the DOM element of the array field which should be duplicated
+   * @param {string} key - (optional) the array field index which should be used for DOM IDs and names
+   * @param {number} overrideCountValue - (optional) use this value for the data-count attribute
+   *
+   * @returns {void}
+   */
+  addArrayField (el, key, overrideCountValue) {
+    // after adding a new array item the remove link of the first one shouldn't be disabled
+    if (el.parentNode.parentNode.querySelector('.disabled-link')) {
+      el.parentNode.parentNode.querySelector('.disabled-link').classList.remove('disabled-link');
+    }
+
+    // increment array field counter
+    const count = overrideCountValue ? parseInt(overrideCountValue) : parseInt(el.getAttribute('data-count')) + 1;
+
+    el.closest('.checkbox').querySelectorAll('[data-count]').forEach((el) => {
+      el.setAttribute('data-count', count);
+    });
+
+    // copy the array item
+    const addedNode = el.parentNode.cloneNode(true);
+
+    // we want an empty input field for the copied array item, we also need a new DOM ID
+    addedNode.querySelectorAll('input').forEach((el) => {
+      const id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (key ? key : count));
+
+      el.value = '';
+      el.setAttribute('id', id);
+      el.setAttribute('name', id);
+    });
+
+    // for select fields we also need a new DOM ID
+    addedNode.querySelectorAll('select').forEach((el) => {
+      const id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (key ? key : count));
+      el.setAttribute('id', id);
+      el.setAttribute('name', id);
+    });
+
+    // we have to re-add our event listener for executing the array field actions
+    addedNode.querySelectorAll('a').forEach((el) => {
+      const id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (key ? key : count));
+      el.setAttribute('id', id);
+      el.addEventListener('click', configurator.executeArrayFieldActions);
+    });
+
+    // we also have to re-add the event listener for the validation of mandatory fields
+    addedNode.querySelectorAll('input[data-mandatory]').forEach((el) => {
+      el.addEventListener('input', configurator.validateMandatoryFields);
+      el.classList.add('mandatory-style');
+      el.parentNode.querySelector('.mandatory-label').classList.remove('hidden');
+    });
+
+    // add the copied array item to the DOM
+    el.parentNode.after(addedNode);
+  },
+
+  /**
+   * Executes the remove action for array fields, called by executeArrayFieldActions().
+   *
+   * @param {HTMLElement} el - the DOM element of the array field which should be removed
+   *
+   * @returns {void}
+   */
+  removeArrayField (el) {
+    // different object types have different DOM structures, we need to know the number of total array items
+    const elGrandParent = el.parentNode.parentNode;
+    const isObjectArray = elGrandParent.classList.contains('object-array');
+    const hasSubOptions = elGrandParent.querySelectorAll('.sub-options').length > 0;
+    let newLength = 0;
+
+    // object-array property of object type
+    if (isObjectArray) {
+      newLength = elGrandParent.querySelectorAll(':scope > div').length - 2;
+    }
+    // array type
+    else if (hasSubOptions) {
+      newLength = elGrandParent.querySelectorAll('.sub-options').length - 1;
+    }
+    // array property of object type
+    else {
+      newLength = elGrandParent.querySelectorAll('.input').length - 1;
+    }
+
+    // remove the array item from the DOM
+    if (!el.classList.contains('disabled-link')) {
+      el.parentNode.remove();
+    }
+
+    // if there is only one array item after removing another array item the remove link should be disabled
+    if (newLength === 1) {
+      elGrandParent.querySelector('[data-action="remove"]').classList.add('disabled-link');
     }
   },
 
@@ -276,11 +331,11 @@ const configurator = {
     // add array properties
     const optionsLength = policy.items.length;
     for (let i = 0; i < optionsLength; i++) {
-      configurator.addProperty(elSubOptions, policy.items[i]);
+      configurator.addProperty(elSubOptions, key + '_' + policy.items[i].name, policy.items[i], true, true);
     }
 
     // add array field action links
-    configurator.addArrayFieldActionLinks(elSubOptions);
+    configurator.addArrayFieldActionLinks(elSubOptions, key + '_1');
 
     // add option to UI
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
@@ -323,8 +378,9 @@ const configurator = {
 
     // add options to select element
     const elSelect = document.createElement('select');
-    elSelect.setAttribute('name', key + '_select');
-    elSelect.setAttribute('id', key + '_select');
+    elSelect.setAttribute('id', key + '_Select');
+    elSelect.setAttribute('name', key + '_Select');
+    elSelect.setAttribute('data-name', key);
 
     elSelectWrapper.appendChild(elSelect);
     elObjectWrapper.appendChild(elSelectWrapper);
@@ -363,7 +419,7 @@ const configurator = {
     if (policy.properties) {
       const optionsLength = policy.properties.length;
       for (let i = 0; i < optionsLength; i++) {
-        configurator.addProperty(elSubOptions, policy.properties[i]);
+        configurator.addProperty(elSubOptions, key, policy.properties[i]);
       }
     }
 
@@ -389,8 +445,9 @@ const configurator = {
 
     const elInput = document.createElement('input');
     elInput.setAttribute('type', 'text');
-    elInput.setAttribute('name', key + 'Text');
-    elInput.setAttribute('id', key + 'Text');
+    elInput.setAttribute('id', key + '_Text');
+    elInput.setAttribute('name', key + '_Text');
+    elInput.setAttribute('data-name', key);
     elInput.setAttribute('placeholder', policy.label);
 
     elSubOptions.appendChild(elInput);
@@ -403,30 +460,32 @@ const configurator = {
    * Adds a property to a policy field, calls the appropriate method.
    *
    * @param {HTMLElement} el - the DOM element of the policy
+   * @param {string} parentName - the name of the parent policy object
    * @param {Object} policy - the policy object
    * @param {boolean} isArrayProperty - whether this call is within an array field or not
+   * @param {boolean} hideArrayActionLinks - whether this is an array item but no action links should be added
    *
    * @returns {void}
    */
-  addProperty (el, policy, isArrayProperty) {
+  addProperty (el, parentName, policy, isArrayProperty, hideArrayActionLinks) {
     switch (policy.type) {
       case 'array':
-        configurator.addArrayProperty(el, policy);
+        configurator.addArrayProperty(el, parentName, policy);
         break;
       case 'boolean':
         configurator.addBooleanProperty(el, policy);
         break;
       case 'enum':
-        configurator.addEnumProperty(el, policy);
+        configurator.addEnumProperty(el, parentName, policy, isArrayProperty);
         break;
       case 'object-array':
-        configurator.addObjectArrayProperty(el, policy);
+        configurator.addObjectArrayProperty(el, parentName, policy);
         break;
       case 'string':
-        configurator.addStringProperty(el, policy, false, isArrayProperty);
+        configurator.addStringProperty(el, parentName, policy, false, isArrayProperty, hideArrayActionLinks);
         break;
       case 'url':
-        configurator.addStringProperty(el, policy, true, isArrayProperty);
+        configurator.addStringProperty(el, parentName, policy, true, isArrayProperty, hideArrayActionLinks);
         break;
       default:
       // do nothing
@@ -437,11 +496,12 @@ const configurator = {
    * Adds property of the type "array" to a policy.
    *
    * @param {HTMLElement} el - the DOM element of the policy
+   * @param {string} parentName - the name of the parent policy object
    * @param {Object} policy - the policy object
    *
    * @returns {void}
    */
-  addArrayProperty (el, policy) {
+  addArrayProperty (el, parentName, policy) {
     const elObjectWrapper = document.createElement('div');
     elObjectWrapper.classList.add('array');
     elObjectWrapper.setAttribute('data-name', policy.name);
@@ -455,7 +515,7 @@ const configurator = {
 
     // add array items
     if (policy.items) {
-      configurator.addProperty(elObjectWrapper, policy.items, true);
+      configurator.addProperty(elObjectWrapper, parentName + '_' + policy.name, policy.items, true);
     }
 
     el.appendChild(elObjectWrapper);
@@ -476,8 +536,9 @@ const configurator = {
     // checkbox
     const elInput = document.createElement('input');
     elInput.setAttribute('type', 'checkbox');
-    elInput.setAttribute('name', policy.name);
     elInput.setAttribute('id', policy.name);
+    elInput.setAttribute('name', policy.name);
+    elInput.setAttribute('data-name', policy.name);
 
     // mandatory field
     if (policy.mandatory) {
@@ -499,11 +560,13 @@ const configurator = {
    * Adds property of the type "enum" to a policy.
    *
    * @param {HTMLElement} el - the DOM element of the policy
+   * @param {string} parentName - the name of the parent policy object
    * @param {Object} policy - the policy object
+   * @param {boolean} isArrayProperty - whether this call is within an array field or not
    *
    * @returns {void}
    */
-  addEnumProperty (el, policy) {
+  addEnumProperty (el, parentName, policy, isArrayProperty) {
     const elObjectWrapper = document.createElement('div');
     elObjectWrapper.classList.add('enum');
 
@@ -512,14 +575,18 @@ const configurator = {
       configurator.addSelectLabel(elObjectWrapper, policy.name, policy);
     }
 
+    // we need an unique and deterministic name as DOM id and name
+    const domName = isArrayProperty ? parentName + '_1' : parentName + '_' + policy.name;
+
     // add select element
     const elSelectWrapper = document.createElement('div');
     elSelectWrapper.classList.add('select-wrapper');
     elObjectWrapper.appendChild(elSelectWrapper);
 
     const elSelect = document.createElement('select');
-    elSelect.setAttribute('name', policy.name);
-    elSelect.setAttribute('id', policy.name);
+    elSelect.setAttribute('id', domName);
+    elSelect.setAttribute('name', domName);
+    elSelect.setAttribute('data-name', policy.name);
 
     // mandatory field
     if (policy.mandatory) {
@@ -545,11 +612,12 @@ const configurator = {
    * Adds property of the type "object-array" to a policy.
    *
    * @param {HTMLElement} el - the DOM element of the policy
+   * @param {string} parentName - the name of the parent policy object
    * @param {Object} policy - the policy object
    *
    * @returns {void}
    */
-  addObjectArrayProperty (el, policy) {
+  addObjectArrayProperty (el, parentName, policy) {
     const elObjectWrapper = document.createElement('div');
     elObjectWrapper.classList.add('object-array');
     elObjectWrapper.setAttribute('data-name', policy.name);
@@ -570,38 +638,44 @@ const configurator = {
 
     const optionsLength = policy.items.length;
     for (let i = 0; i < optionsLength; i++) {
-      configurator.addProperty(elSubOptions, policy.items[i]);
+      const name = parentName + '_' + policy.name + '_' + policy.items[i].name;
+      configurator.addProperty(elSubOptions, name, policy.items[i], true, true);
     }
 
     // add array field action links
-    configurator.addArrayFieldActionLinks(elSubOptions);
+    const arrayAddName = parentName + '_' + policy.name + '_1';
+    configurator.addArrayFieldActionLinks(elSubOptions, arrayAddName);
   },
 
   /**
    * Adds property of the type "string" or "url" to a policy.
    *
    * @param {HTMLElement} el - the DOM element of the policy
+   * @param {string} parentName - the name of the parent policy object
    * @param {Object} policy - the policy object
    * @param {boolean} isUrl - if true, the property is of the type "url", otherwise it's of the type "string"
    * @param {boolean} isArrayProperty - whether this call is within an array field or not
+   * @param {boolean} hideArrayActionLinks - whether this is an array item but no action links should be added
    *
    * @returns {void}
    */
-  addStringProperty (el, policy, isUrl, isArrayProperty) {
+  addStringProperty (el, parentName, policy, isUrl, isArrayProperty, hideArrayActionLinks) {
     const elObjectWrapper = document.createElement('div');
     elObjectWrapper.classList.add('input');
 
-    // set different DOM name and ID if property of an array
-    if (isArrayProperty) {
-      policy.name = configurator.generateRandomDomId();
-    }
+    // we need an unique and deterministic name as DOM id and name
+    const domName = isArrayProperty ? parentName + '_1' : parentName + '_' + policy.name;
 
     // input field
     const elInput = document.createElement('input');
     elInput.setAttribute('type', 'text');
-    elInput.setAttribute('name', policy.name);
-    elInput.setAttribute('id', policy.name);
+    elInput.setAttribute('id', domName);
+    elInput.setAttribute('name', domName);
     elInput.setAttribute('placeholder', policy.label);
+
+    if (!isArrayProperty || hideArrayActionLinks) {
+      elInput.setAttribute('data-name', policy.name);
+    }
 
     // mandatory field
     if (policy.mandatory) {
@@ -611,20 +685,11 @@ const configurator = {
     elObjectWrapper.appendChild(elInput);
 
     // add array field action links if property of an array
-    if (isArrayProperty) {
-      configurator.addArrayFieldActionLinks(elObjectWrapper);
+    if (isArrayProperty && !hideArrayActionLinks) {
+      configurator.addArrayFieldActionLinks(elObjectWrapper, domName);
     }
 
     el.appendChild(elObjectWrapper);
-  },
-
-  /**
-   * Returns a random string which can be used as DOM name and ID.
-   *
-   * @returns {string} - a random string
-   */
-  generateRandomDomId () {
-    return Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
   },
 
   /**
@@ -645,8 +710,9 @@ const configurator = {
     // checkbox
     const elCheckbox = document.createElement('input');
     elCheckbox.setAttribute('type', 'checkbox');
-    elCheckbox.setAttribute('name', key);
     elCheckbox.setAttribute('id', key);
+    elCheckbox.setAttribute('name', key);
+    elCheckbox.setAttribute('data-name', key);
     elCheckbox.setAttribute('data-type', type);
     elCheckbox.classList.add('primary-checkbox');
 
@@ -721,10 +787,11 @@ const configurator = {
    * Adds a remove and an add link for array fields to a policy node.
    *
    * @param {HTMLElement} elSubOptions - the DOM node of the wrapping element
+   * @param {string} id - the policy key used as part of the DOM id for the add link
    *
    * @returns {void}
    */
-  addArrayFieldActionLinks (elSubOptions) {
+  addArrayFieldActionLinks (elSubOptions, id) {
     // remove link
     const elRemoveLink = document.createElement('a');
     elRemoveLink.setAttribute('href', '#');
@@ -741,8 +808,10 @@ const configurator = {
 
     // add link
     const elAddLink = document.createElement('a');
+    elAddLink.setAttribute('id', 'Array_Add_' + id);
     elAddLink.setAttribute('href', '#');
     elAddLink.setAttribute('data-action', 'add');
+    elAddLink.setAttribute('data-count', '1');
     elAddLink.setAttribute('title', browser.i18n.getMessage('title_add_row'));
     elAddLink.classList.add('array-action');
     elSubOptions.appendChild(elAddLink);
@@ -780,8 +849,8 @@ const configurator = {
   addLockableLink (elSubOptions, key) {
     const elLockCheckbox = document.createElement('input');
     elLockCheckbox.setAttribute('type', 'checkbox');
-    elLockCheckbox.setAttribute('name', key + '_Locked');
     elLockCheckbox.setAttribute('id', key + '_Locked');
+    elLockCheckbox.setAttribute('name', key + '_Locked');
     elLockCheckbox.classList.add('lock-checkbox');
     elSubOptions.appendChild(elLockCheckbox);
 

@@ -23,21 +23,6 @@
   "extension_name": {
     "message": "Enterprise Policy Generator"
   },
-  "future_feature_a": {
-    "message": "Konfiguracije składowaś a zacytaś"
-  },
-  "future_feature_b": {
-    "message": "Pokazowanje trěbneje wersije Firefox za kuždu směrnicu, gaž se dalšne směrnice w pózdźejšych wersijach Firefox pódpěraju"
-  },
-  "future_feature_c": {
-    "message": "hyšći lěpša wobsłužujobnosć"
-  },
-  "future_feature_github": {
-    "message": "… a snaź wašo naraźenje?"
-  },
-  "future_headline": {
-    "message": "Dalšne funkcije su južo za pśichod planowane!"
-  },
   "generate_button": {
     "message": "Směrnice generěrowaś"
   },
@@ -47,13 +32,31 @@
   "link_learn_more": {
     "message": "dalšne informacije"
   },
+  "link_load_configuration": {
+    "message": "load configuration"
+  },
+  "link_save_configuration": {
+    "message": "save configuration"
+  },
   "link_select_all": {
     "message": "wšykne markěrowaś"
   },
-    "lock_preference": {
+  "list_dialog_btn_cancel": {
+    "message": "Cancel"
+  },
+  "list_dialog_window_title": {
+    "message": "Load Configuration"
+  },
+  "list_table_name": {
+    "message": "Name"
+  },
+  "list_table_time": {
+    "message": "Time"
+  },
+  "lock_preference": {
     "message": "Nastajenje pśeśiwo změnje šćitaś"
   },
-   "mandatory-label": {
+  "mandatory-label": {
     "message": "obligatoriski"
   },
   "policy_category_block_access": {
@@ -533,8 +536,26 @@
   "policy_description_WebsiteFilter_Exceptions_URL": {
     "message": "URL"
   },
+  "save_dialog_btn_cancel": {
+    "message": "Cancel"
+  },
+  "save_dialog_btn_ok": {
+    "message": "Save Configuration"
+  },
+  "save_dialog_form_name": {
+    "message": "Name"
+  },
+  "save_dialog_window_title": {
+    "message": "Save Configuration"
+  },
   "title_add_row": {
     "message": "Smužku pśidaś"
+  },
+  "title_apply_configuration": {
+    "message": "apply configuration"
+  },
+  "title_remove_configuration": {
+    "message": "remove configuration"
   },
   "title_remove_row": {
     "message": "Smužku wótwónoźeś"

@@ -23,21 +23,6 @@
   "extension_name": {
     "message": "Enterprise Policy Generator"
   },
-  "future_feature_a": {
-    "message": "store and load configurations"
-  },
-  "future_feature_b": {
-    "message": "show the minimum required Firefox version for each policy once more policies has been added in later versions of Firefox"
-  },
-  "future_feature_c": {
-    "message": "an even better usability"
-  },
-  "future_feature_github": {
-    "message": "… and maybe your feature request?"
-  },
-  "future_headline": {
-    "message": "More features are already planned for the future!"
-  },
   "generate_button": {
     "message": "Generate Policies"
   },
@@ -47,8 +32,26 @@
   "link_learn_more": {
     "message": "more information"
   },
+  "link_load_configuration": {
+    "message": "load configuration"
+  },
+  "link_save_configuration": {
+    "message": "save configuration"
+  },
   "link_select_all": {
     "message": "select all"
+  },
+  "list_dialog_btn_cancel": {
+    "message": "Cancel"
+  },
+  "list_dialog_window_title": {
+    "message": "Load Configuration"
+  },
+  "list_table_name": {
+    "message": "Name"
+  },
+  "list_table_time": {
+    "message": "Time"
   },
   "lock_preference": {
     "message": "Protect preference from change"
@@ -533,8 +536,26 @@
   "policy_description_WebsiteFilter_Exceptions_URL": {
     "message": "URL"
   },
+  "save_dialog_btn_cancel": {
+    "message": "Cancel"
+  },
+  "save_dialog_btn_ok": {
+    "message": "Save Configuration"
+  },
+  "save_dialog_form_name": {
+    "message": "Name"
+  },
+  "save_dialog_window_title": {
+    "message": "Save Configuration"
+  },
   "title_add_row": {
     "message": "add row"
+  },
+  "title_apply_configuration": {
+    "message": "apply configuration"
+  },
+  "title_remove_configuration": {
+    "message": "remove configuration"
   },
   "title_remove_row": {
     "message": "remove row"

@@ -23,21 +23,6 @@
   "extension_name": {
     "message": "Enterprise Policy Generator"
   },
-  "future_feature_a": {
-    "message": "Konfiguracije składować a začitać"
-  },
-  "future_feature_b": {
-    "message": "Pokazowanje trěbneje wersije Firefox za kóždu směrnicu, hdyž so dalše směrnicy w pozdźišich wersijach Firefox podpěruja"
-  },
-  "future_feature_c": {
-    "message": "hišće lěpša wobsłužujomnosć"
-  },
-  "future_feature_github": {
-    "message": "… a snano waš namjet?"
-  },
-  "future_headline": {
-    "message": "Dalše funkcije su hižo za přichod planowane!"
-  },
   "generate_button": {
     "message": "Směrnicy generować"
   },
@@ -47,13 +32,31 @@
   "link_learn_more": {
     "message": "dalše informacije"
   },
+  "link_load_configuration": {
+    "message": "load configuration"
+  },
+  "link_save_configuration": {
+    "message": "save configuration"
+  },
   "link_select_all": {
     "message": "wšě markěrować"
   },
-    "lock_preference": {
+  "list_dialog_btn_cancel": {
+    "message": "Cancel"
+  },
+  "list_dialog_window_title": {
+    "message": "Load Configuration"
+  },
+  "list_table_name": {
+    "message": "Name"
+  },
+  "list_table_time": {
+    "message": "Time"
+  },
+  "lock_preference": {
     "message": "Nastajenje přećiwo změnje škitać"
   },
-   "mandatory-label": {
+  "mandatory-label": {
     "message": "obligatoriski"
   },
   "policy_category_block_access": {
@@ -533,8 +536,26 @@
   "policy_description_WebsiteFilter_Exceptions_URL": {
     "message": "URL"
   },
+  "save_dialog_btn_cancel": {
+    "message": "Cancel"
+  },
+  "save_dialog_btn_ok": {
+    "message": "Save Configuration"
+  },
+  "save_dialog_form_name": {
+    "message": "Name"
+  },
+  "save_dialog_window_title": {
+    "message": "Save Configuration"
+  },
   "title_add_row": {
     "message": "Linku přidać"
+  },
+  "title_apply_configuration": {
+    "message": "apply configuration"
+  },
+  "title_remove_configuration": {
+    "message": "remove configuration"
   },
   "title_remove_row": {
     "message": "Linku wotstronić"

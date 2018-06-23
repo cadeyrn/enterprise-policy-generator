@@ -13,7 +13,7 @@
     </header>
   </div>
   <main id='main'>
-    <section id='main-section'>
+    <form id='generator-form'>
       <h3 data-i18n='policy_category_block_access'></h3>
       <div id='options-block-access'></div>
       <h3 data-i18n='policy_category_disable_features'></h3>
@@ -30,7 +30,7 @@
       <div id='options-updates-and-data'></div>
       <h3 data-i18n='policy_category_others'></h3>
       <div id='options-others'></div>
-    </section>
+    </form>
     <section id='secondary-section'>
       <h3 data-i18n='explanation_headline_usage'></h3>
       <p data-i18n='explanation_intro'></p>
@@ -42,25 +42,36 @@
       <button id='generate' data-i18n='generate_button'></button>
       <pre id='policy-output-wrapper'><code id='policy-output'></code></pre>
       <div id='action-links' class='hidden'>
-        <small>
-          <a href='#' id='select-all' data-i18n='link_select_all'></a> |
-          <a href='#' id='grant-download-permission' data-i18n='link_download'></a>
-          <a href='#' id='download' class='hidden' data-i18n='link_download'></a>
-        </small>
-      </div>
-      <p>
-        <strong data-i18n='future_headline'></strong>
-      </p>
-      <ul>
-        <li data-i18n='future_feature_a'></li>
-        <li data-i18n='future_feature_b'></li>
-        <li data-i18n='future_feature_c'></li>
-        <li>
-          <a href='https://github.com/cadeyrn/enterprise-policy-generator/issues' target='_blank' rel='noopener'>
-            <span data-i18n='future_feature_github'></span>
+        <div>
+          <a href='#' id='select-all' class='icon'>
+            <img src='../images/mouse-pointer.svg' alt='' />
+            <span data-i18n='link_select_all'></span>
           </a>
-        </li>
-      </ul>
+        </div>
+        <div>
+          <a href='#' id='grant-download-permission' class='icon'>
+            <img src='../images/download.svg' alt='' />
+            <span data-i18n='link_download'></span>
+          </a>
+        </div>
+        <div>
+          <a href='#' id='download' class='icon hidden'>
+            <img src='../images/download.svg' alt='' />
+            <span data-i18n='link_download'></span>
+          </a>
+        </div>
+        <div>
+          <a href='#' id='save-configuration' class='icon'>
+            <img src='../images/save.svg' alt='' />
+            <span data-i18n='link_save_configuration'></span>
+          </a>
+        </div>
+      </div>
+      <hr />
+      <a href='#' id='list-configurations' class='icon'>
+        <img src='../images/cog.svg' alt='' />
+        <span data-i18n='link_load_configuration'></span>
+      </a>
     </section>
   </main>
   <footer id='footer'>
@@ -68,10 +79,54 @@
       <span data-i18n='extension_name'></span> © 2018, soeren-hentzschel.at
     </a>
   </footer>
+  <div id='modal-save-dialog' class='modal-dialog'>
+    <div>
+      <header>
+        <div data-i18n='save_dialog_window_title'></div>
+      </header>
+      <section>
+        <form>
+          <div>
+            <label for='save-dialog-name' data-i18n='save_dialog_form_name'></label>
+            <input type='text' name='save-dialog-name' id='save-dialog-name' />
+          </div>
+        </form>
+      </section>
+      <aside>
+        <button id='button-save-dialog-cancel' class='secondary-action' data-i18n='save_dialog_btn_cancel'></button>
+        <button id='button-save-dialog-ok' class='primary-action' data-i18n='save_dialog_btn_ok' disabled></button>
+      </aside>
+    </div>
+  </div>
+  <div id='modal-list-dialog' class='modal-dialog'>
+    <div>
+      <header>
+        <div data-i18n='list_dialog_window_title'></div>
+      </header>
+      <section>
+        <table id='list-configurations-table'>
+          <thead>
+            <tr>
+              <th data-i18n='list_table_name'></th>
+              <th class='time' data-i18n='list_table_time'></th>
+              <th class='actions'></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+      <aside>
+        <button id='button-list-dialog-cancel' class='secondary-action' data-i18n='list_dialog_btn_cancel'></button>
+      </aside>
+    </div>
+  </div>
+  <div class='modal-dialog-bg'></div>
   <script src='../js/lib/i18n.js'></script>
+  <script src='../js/core/serializer.js'></script>
   <script src='../js/core/policies.js'></script>
   <script src='../js/core/policymanager.js'></script>
   <script src='../js/core/output.js'></script>
   <script src='../js/core/configurator.js'></script>
+  <script src='../js/core/management.js'></script>
 </body>
 </html>
