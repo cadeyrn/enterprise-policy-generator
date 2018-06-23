@@ -249,7 +249,7 @@ const management = {
     const { configurations } = await browser.storage.local.get({ configurations : [] });
     configurations.splice(e.target.parentNode.getAttribute('data-idx'), 1);
     browser.storage.local.set({ configurations : configurations });
-    e.target.closest('tr').remove();
+    management.listConfigurations(document.getElementById('modal-list-dialog'));
   }
 };
 
