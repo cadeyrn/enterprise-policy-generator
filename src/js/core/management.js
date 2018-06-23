@@ -54,7 +54,7 @@ const management = {
     });
 
     // focus the name input field
-    const elName = document.getElementById('save-dialog-name');
+    const elName = elModal.querySelector('#save-dialog-name');
     elName.focus();
 
     // the name field must not be empty
