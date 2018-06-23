@@ -66,12 +66,16 @@ const management = {
     });
 
     // submit button
-    elSubmitButton.addEventListener('click', (e) => {
+    const submitListener = (e) => {
       e.preventDefault();
 
       management.saveConfiguration(elName.value);
       management.closeSaveConfigurationDialog(elModal, elSubmitButton);
-    });
+
+      elSubmitButton.removeEventListener('click', submitListener);
+    };
+
+    elSubmitButton.addEventListener('click', submitListener);
   },
 
   /**
