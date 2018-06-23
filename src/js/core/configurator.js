@@ -755,16 +755,18 @@ const configurator = {
 
       let versionTextContent = browser.i18n.getMessage('version_required') + ': ';
 
-      if (policy.first_available.mainstream !== '60.0') {
+      if (policy.first_available.mainstream && policy.first_available.mainstream !== '60.0') {
         versionTextContent += 'Firefox ' + policy.first_available.mainstream;
         versionTextContent += ' ' + browser.i18n.getMessage('version_or_higher');
       }
 
-      if (policy.first_available.mainstream !== '60.0' && policy.first_available.esr !== '60.0') {
-        versionTextContent += ', ';
+      if (policy.first_available.mainstream && policy.first_available.esr) {
+        if (policy.first_available.mainstream !== '60.0' && policy.first_available.esr !== '60.0') {
+          versionTextContent += ', ';
+        }
       }
 
-      if (policy.first_available.esr !== '60.0') {
+      if (policy.first_available.esr && policy.first_available.esr !== '60.0') {
         versionTextContent += 'Firefox ESR ' + policy.first_available.esr;
         versionTextContent += ' ' + browser.i18n.getMessage('version_or_higher');
       }
