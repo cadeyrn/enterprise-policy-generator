@@ -10,6 +10,10 @@
   delete them), fixes [#3](https://github.com/cadeyrn/enterprise-policy-generator/issues/3)
 - some design improvements
 
+#### Dependencies
+
+- updated eslint from version 4.19.1 to 5.0.0
+
 ---
 
 ### [Version 1.1.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v1.1.0) (2018-05-27)
