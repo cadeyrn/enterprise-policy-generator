@@ -1009,6 +1009,16 @@ const policies = {
 
   // others
 
+  HardwareAcceleration : {
+    description : browser.i18n.getMessage('policy_description_HardwareAcceleration'),
+    enterprise_only : false,
+    first_available : { mainstream : '62.0', esr : null },
+    info_link : null,
+    is_lockable : false,
+    ui_category : 'others',
+    type : 'boolean-inverse'
+  },
+
   PopupBlocking : {
     description : browser.i18n.getMessage('policy_description_PopupBlocking'),
     enterprise_only : false,

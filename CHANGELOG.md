@@ -12,6 +12,10 @@
   displayed, fixes [#4](https://github.com/cadeyrn/enterprise-policy-generator/issues/4)
 - some design improvements
 
+#### Enterprise Policies
+
+- new policy: disable dardware acceleration, fixes [#9](https://github.com/cadeyrn/enterprise-policy-generator/issues/9)
+
 #### Dependencies
 
 - updated eslint from version 4.19.1 to 5.0.0

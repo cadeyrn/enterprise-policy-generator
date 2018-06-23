@@ -341,6 +341,9 @@
   "policy_description_FlashPlugin_Default_true": {
     "message": "Flash ist immer aktiviert"
   },
+  "policy_description_HardwareAcceleration": {
+    "message": "Hardwarebeschleunigung deaktivieren"
+  },
   "policy_description_Homepage": {
     "message": "Startseite festlegen"
   },

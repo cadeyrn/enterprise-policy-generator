@@ -341,6 +341,9 @@
   "policy_description_FlashPlugin_Default_true": {
     "message": "Flash je přeco zmóžnjeny"
   },
+  "policy_description_HardwareAcceleration": {
+    "message": "Disable hardware acceleration"
+  },
   "policy_description_Homepage": {
     "message": "Startowu stronu nastajić"
   },
