@@ -455,6 +455,15 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
   text-align: right;
 }
 
+.modal-dialog button[disabled] {
+  cursor: not-allowed;
+  opacity: .5;
+}
+
+.modal-dialog button[disabled]::before {
+  display: none;
+}
+
 .modal-dialog .primary-action {
   background-color: rgb(18, 188, 0);
 }
