@@ -31,16 +31,25 @@ const management = {
     const modal = document.getElementById('modal-save-dialog');
     modal.classList.add('visible');
 
+    // submit button
+    const submitButton = document.getElementById('button-save-dialog-ok');
+    submitButton.onclick = function (e) {
+      e.preventDefault();
+
+      management.closeSaveConfigurationDialog(modal, submitButton);
+      management.saveConfiguration(elName.value);
+    };
+
     // close dialog by clicking the cancel button
     const closeButton = document.getElementById('button-save-dialog-cancel');
     closeButton.addEventListener('click', () => {
-      management.closeSaveConfigurationDialog(modal);
+      management.closeSaveConfigurationDialog(modal, submitButton);
     });
 
     // close dialog by pressing ESC
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
-        management.closeSaveConfigurationDialog(modal);
+        management.closeSaveConfigurationDialog(modal, submitButton);
       }
     });
 
@@ -48,26 +57,29 @@ const management = {
     const elName = document.getElementById('save-dialog-name');
     elName.focus();
 
-    // submit button
-    const submitButton = document.getElementById('button-save-dialog-ok');
-    submitButton.onclick = function (e) {
-      e.preventDefault();
-
-      management.closeSaveConfigurationDialog(modal);
-      management.saveConfiguration(elName.value);
-    };
+    // the name field must not be empty
+    elName.addEventListener('input', () => {
+      if (elName.value) {
+        submitButton.removeAttribute('disabled');
+      }
+      else {
+        submitButton.setAttribute('disabled', true);
+      }
+    });
   },
 
   /**
    * Close the "save configuration" dialog.
    *
    * @param {HTMLElement} modal - the DOM element of the modal dialog
+   * @param {HTMLElement} submitButton - the DOM element of the submit button
    *
    * @returns {void}
    */
-  closeSaveConfigurationDialog (modal) {
+  closeSaveConfigurationDialog (modal, submitButton) {
     modal.classList.remove('visible');
     document.getElementById('save-dialog-name').value = '';
+    submitButton.setAttribute('disabled', true);
   },
 
   /**
