@@ -47,6 +47,9 @@
   "link_learn_more": {
     "message": "weitere Informationen"
   },
+  "link_save_configuration": {
+    "message": "Konfiguration speichern"
+  },
   "link_select_all": {
     "message": "alles markieren"
   },
@@ -532,6 +535,18 @@
   },
   "policy_description_WebsiteFilter_Exceptions_URL": {
     "message": "URL"
+  },
+  "save_dialog_btn_cancel": {
+    "message": "Abbrechen"
+  },
+  "save_dialog_btn_ok": {
+    "message": "Konfiguration speichern"
+  },
+  "save_dialog_form_name": {
+    "message": "Name"
+  },
+  "save_dialog_window_title": {
+    "message": "Konfiguration speichern"
   },
   "title_add_row": {
     "message": "Zeile hinzufügen"

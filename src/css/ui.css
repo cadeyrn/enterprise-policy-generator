@@ -386,6 +386,91 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
   vertical-align: middle;
 }
 
+.modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 200;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scale(.7);
+  opacity: 0;
+  transition: all 300ms;
+  pointer-events: none;
+}
+
+.modal-dialog.visible {
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-dialog + .modal-dialog-bg {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  background: rgba(0, 0, 0, .8);
+  opacity: 0;
+  transition: all 300ms;
+}
+
+.modal-dialog.visible + .modal-dialog-bg {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-dialog > div {
+  width: 500px;
+  border-width: 0;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .3);
+}
+
+.modal-dialog header {
+  padding: 10px 15px;
+  background-color: rgb(10, 132, 255);
+  color: rgb(255, 255, 255);
+}
+
+.modal-dialog section {
+  padding: 30px 15px;
+}
+
+.modal-dialog input {
+  width: 100%;
+}
+
+.modal-dialog aside {
+  padding: 15px;
+  background-color: rgb(240, 240, 240);
+  text-align: right;
+}
+
+.modal-dialog .primary-action {
+  background-color: rgb(18, 188, 0);
+}
+
+.modal-dialog .primary-action::before {
+  background: rgb(0, 158, 0);
+}
+
+.modal-dialog .secondary-action {
+  margin-right: 5px;
+  background-color: rgb(215, 0, 34);
+}
+
+.modal-dialog .secondary-action::before {
+  background: rgb(185, 0, 4);
+}
+
 @media screen and (max-width: 1199px) {
   html, body {
     height: auto;

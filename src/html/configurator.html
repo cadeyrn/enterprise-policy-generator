@@ -45,7 +45,8 @@
         <small>
           <a href='#' id='select-all' data-i18n='link_select_all'></a> |
           <a href='#' id='grant-download-permission' data-i18n='link_download'></a>
-          <a href='#' id='download' class='hidden' data-i18n='link_download'></a>
+          <a href='#' id='download' class='hidden' data-i18n='link_download'></a> |
+          <a href='#' id='save-configuration' data-i18n='link_save_configuration'></a>
         </small>
       </div>
       <p>
@@ -68,11 +69,32 @@
       <span data-i18n='extension_name'></span> © 2018, soeren-hentzschel.at
     </a>
   </footer>
+  <div id='modal-save-dialog' class='modal-dialog'>
+    <div>
+      <header>
+        <div data-i18n='save_dialog_window_title'></div>
+      </header>
+      <section>
+        <form>
+          <div>
+            <label for='save-dialog-name' data-i18n='save_dialog_form_name'></label>
+            <input type='text' name='save-dialog-name' id='save-dialog-name' />
+          </div>
+        </form>
+      </section>
+      <aside>
+        <button id='button-save-dialog-cancel' class='secondary-action' data-i18n='save_dialog_btn_cancel'></button>
+        <button id='button-save-dialog-ok' class='primary-action' data-i18n='save_dialog_btn_ok'></button>
+      </aside>
+    </div>
+  </div>
+  <div class='modal-dialog-bg'></div>
   <script src='../js/lib/i18n.js'></script>
   <script src='../js/core/serializer.js'></script>
   <script src='../js/core/policies.js'></script>
   <script src='../js/core/policymanager.js'></script>
   <script src='../js/core/output.js'></script>
   <script src='../js/core/configurator.js'></script>
+  <script src='../js/core/management.js'></script>
 </body>
 </html>

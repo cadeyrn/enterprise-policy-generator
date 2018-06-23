@@ -47,6 +47,9 @@
   "link_learn_more": {
     "message": "dalše informacije"
   },
+  "link_save_configuration": {
+    "message": "save configuration"
+  },
   "link_select_all": {
     "message": "wšě markěrować"
   },
@@ -532,6 +535,18 @@
   },
   "policy_description_WebsiteFilter_Exceptions_URL": {
     "message": "URL"
+  },
+  "save_dialog_btn_cancel": {
+    "message": "Cancel"
+  },
+  "save_dialog_btn_ok": {
+    "message": "Save Configuration"
+  },
+  "save_dialog_form_name": {
+    "message": "Name"
+  },
+  "save_dialog_window_title": {
+    "message": "Save Configuration"
   },
   "title_add_row": {
     "message": "Linku přidać"
