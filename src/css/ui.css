@@ -22,6 +22,13 @@ a:hover {
   color: rgb(0, 102, 225);
 }
 
+hr {
+  margin: 20px 0;
+  height: 1px;
+  border: 0;
+  background-color: rgb(54, 57, 89);
+}
+
 label {
   cursor: pointer;
 }
@@ -408,7 +415,7 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
   pointer-events: all;
 }
 
-.modal-dialog + .modal-dialog-bg {
+.modal-dialog ~ .modal-dialog-bg {
   position: fixed;
   z-index: 100;
   top: 0;
@@ -421,7 +428,7 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
   transition: all 300ms;
 }
 
-.modal-dialog.visible + .modal-dialog-bg {
+.modal-dialog.visible ~ .modal-dialog-bg {
   opacity: 1;
   visibility: visible;
 }
@@ -479,6 +486,18 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
 
 .modal-dialog .secondary-action::before {
   background: rgb(185, 0, 4);
+}
+
+#list-configurations img {
+  margin-right: 5px;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+#list-configurations span {
+  font-size: 14px;
+  color: rgb(33, 37, 42);
 }
 
 @media screen and (max-width: 1199px) {

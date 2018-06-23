@@ -47,11 +47,20 @@
   "link_learn_more": {
     "message": "weitere Informationen"
   },
+  "link_load_configuration": {
+    "message": "Konfiguration laden"
+  },
   "link_save_configuration": {
     "message": "Konfiguration speichern"
   },
   "link_select_all": {
     "message": "alles markieren"
+  },
+  "list_dialog_btn_cancel": {
+    "message": "Abbrechen"
+  },
+  "list_dialog_window_title": {
+    "message": "Konfiguration laden"
   },
   "lock_preference": {
     "message": "Einstellung vor Veränderung schützen"

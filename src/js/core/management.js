@@ -2,6 +2,7 @@
 
 /* global serializer */
 
+const elListConfigurationsLink = document.getElementById('list-configurations');
 const elSaveConfigurationLink = document.getElementById('save-configuration');
 
 /**
@@ -14,9 +15,13 @@ const management = {
    * @returns {void}
    */
   init () {
+    elListConfigurationsLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      management.showListConfigurationsDialog();
+    });
+
     elSaveConfigurationLink.addEventListener('click', (e) => {
       e.preventDefault();
-
       management.showSaveConfigurationDialog();
     });
   },
@@ -105,6 +110,41 @@ const management = {
     browser.storage.local.set({
       configurations : configurations
     });
+  },
+
+  /**
+   * Show the "list configurations" dialog. This method also defines the behaviour of the dialog.
+   *
+   * @returns {void}
+   */
+  showListConfigurationsDialog () {
+    // show dialog
+    const elModal = document.getElementById('modal-list-dialog');
+    elModal.classList.add('visible');
+
+    // close dialog by clicking the cancel button
+    const elCloseButton = elModal.querySelector('#button-list-dialog-cancel');
+    elCloseButton.addEventListener('click', () => {
+      management.closeListConfigurationsDialog(elModal);
+    });
+
+    // close dialog by pressing ESC
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        management.closeListConfigurationsDialog(elModal);
+      }
+    });
+  },
+
+  /**
+   * Close the "save configuration" dialog.
+   *
+   * @param {HTMLElement} elModal - the DOM element of the modal dialog
+   *
+   * @returns {void}
+   */
+  closeListConfigurationsDialog (elModal) {
+    elModal.classList.remove('visible');
   }
 };
 
