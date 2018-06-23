@@ -47,6 +47,12 @@
   "list_dialog_window_title": {
     "message": "Konfiguration laden"
   },
+  "list_table_name": {
+    "message": "Name"
+  },
+  "list_table_time": {
+    "message": "Zeitpunkt"
+  },
   "lock_preference": {
     "message": "Einstellung vor Veränderung schützen"
   },
@@ -544,6 +550,12 @@
   },
   "title_add_row": {
     "message": "Zeile hinzufügen"
+  },
+  "title_apply_configuration": {
+    "message": "Konfiguration anwenden"
+  },
+  "title_remove_configuration": {
+    "message": "Konfiguration entfernen"
   },
   "title_remove_row": {
     "message": "Zeile entfernen"

@@ -36,17 +36,24 @@ const management = {
     const elModal = document.getElementById('modal-save-dialog');
     elModal.classList.add('visible');
 
-    // submit button
+    const elName = elModal.querySelector('#save-dialog-name');
     const elSubmitButton = elModal.querySelector('#button-save-dialog-ok');
-    elSubmitButton.addEventListener('click', (e) => {
-      e.preventDefault();
+    const elCloseButton = elModal.querySelector('#button-save-dialog-cancel');
 
-      management.saveConfiguration(elName.value);
-      management.closeSaveConfigurationDialog(elModal, elSubmitButton);
+    // focus the name input field
+    elName.focus();
+
+    // the name field must not be empty
+    elName.addEventListener('input', () => {
+      if (elName.value) {
+        elSubmitButton.removeAttribute('disabled');
+      }
+      else {
+        elSubmitButton.setAttribute('disabled', true);
+      }
     });
 
     // close dialog by clicking the cancel button
-    const elCloseButton = elModal.querySelector('#button-save-dialog-cancel');
     elCloseButton.addEventListener('click', () => {
       management.closeSaveConfigurationDialog(elModal, elSubmitButton);
     });
@@ -58,18 +65,12 @@ const management = {
       }
     });
 
-    // focus the name input field
-    const elName = elModal.querySelector('#save-dialog-name');
-    elName.focus();
+    // submit button
+    elSubmitButton.addEventListener('click', (e) => {
+      e.preventDefault();
 
-    // the name field must not be empty
-    elName.addEventListener('input', () => {
-      if (elName.value) {
-        elSubmitButton.removeAttribute('disabled');
-      }
-      else {
-        elSubmitButton.setAttribute('disabled', true);
-      }
+      management.saveConfiguration(elName.value);
+      management.closeSaveConfigurationDialog(elModal, elSubmitButton);
     });
   },
 
@@ -130,6 +131,8 @@ const management = {
         management.closeListConfigurationsDialog(elModal);
       }
     });
+
+    management.listConfigurations(elModal);
   },
 
   /**
@@ -141,6 +144,70 @@ const management = {
    */
   closeListConfigurationsDialog (elModal) {
     elModal.classList.remove('visible');
+  },
+
+  /**
+   * List the saved configurations.
+   *
+   * @param {HTMLElement} elModal - the DOM element of the modal dialog
+   *
+   * @returns {void}
+   */
+  async listConfigurations (elModal) {
+    const { configurations } = await browser.storage.local.get({ configurations : [] });
+
+    // tbody element, configuration rows will be added here
+    const elTableBody = elModal.querySelector('#list-configurations-table tbody');
+
+    // remove old content
+    while (elTableBody.firstChild) {
+      elTableBody.removeChild(elTableBody.firstChild);
+    }
+
+    // add configurations to table
+    for (const configuration of configurations) {
+      // row
+      const elRow = document.createElement('tr');
+      elTableBody.appendChild(elRow);
+
+      // name column
+      const elNameColumn = document.createElement('td');
+      elNameColumn.textContent = configuration.name;
+      elRow.appendChild(elNameColumn);
+
+      // time column
+      const elTimeColumn = document.createElement('td');
+      elTimeColumn.textContent = configuration.time.toLocaleString();
+      elRow.appendChild(elTimeColumn);
+
+      // icon column
+      const elIconColumn = document.createElement('td');
+      elRow.appendChild(elIconColumn);
+
+      // remove icon
+      const elRemoveLink = document.createElement('a');
+      elRemoveLink.setAttribute('href', '#');
+      elRemoveLink.setAttribute('title', browser.i18n.getMessage('title_remove_configuration'));
+      elRemoveLink.classList.add('icon');
+      elIconColumn.appendChild(elRemoveLink);
+
+      const elRemoveIcon = document.createElement('img');
+      elRemoveIcon.src = '/images/trash.svg';
+      elRemoveIcon.setAttribute('alt', browser.i18n.getMessage('title_remove_configuration'));
+      elRemoveLink.appendChild(elRemoveIcon);
+
+      // load icon
+      const elLoadLink = document.createElement('a');
+      elLoadLink.setAttribute('href', '#');
+      elLoadLink.setAttribute('title', browser.i18n.getMessage('title_apply_configuration'));
+      elLoadLink.classList.add('icon');
+      elIconColumn.appendChild(elLoadLink);
+
+      const elLoadIcon = document.createElement('img');
+      elLoadIcon.src = '/images/check-square.svg';
+      elLoadIcon.setAttribute('alt', browser.i18n.getMessage('title_apply_configuration'));
+      elLoadLink.appendChild(elLoadIcon);
+    }
   }
 };
 

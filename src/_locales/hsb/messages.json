@@ -47,6 +47,12 @@
   "list_dialog_window_title": {
     "message": "Load Configuration"
   },
+  "list_table_name": {
+    "message": "Name"
+  },
+  "list_table_time": {
+    "message": "Time"
+  },
   "lock_preference": {
     "message": "Nastajenje přećiwo změnje škitać"
   },
@@ -544,6 +550,12 @@
   },
   "title_add_row": {
     "message": "Linku přidać"
+  },
+  "title_apply_configuration": {
+    "message": "apply configuration"
+  },
+  "title_remove_configuration": {
+    "message": "remove configuration"
   },
   "title_remove_row": {
     "message": "Linku wotstronić"

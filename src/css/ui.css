@@ -436,6 +436,8 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
 .modal-dialog > div {
   width: 500px;
   max-width: 98%;
+  max-height: 90vh;
+  overflow: scroll;
   border-width: 0;
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
@@ -511,6 +513,35 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
 
 #list-configurations {
   margin-bottom: 10px;
+}
+
+#list-configurations-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#list-configurations-table th, #list-configurations-table td {
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(150, 150, 150);
+  text-align: left;
+}
+
+#list-configurations-table .time {
+  width: 190px;
+}
+
+#list-configurations-table .actions {
+  width: 60px;
+  text-align: right;
+}
+
+#list-configurations-table .icon img {
+  opacity: .5;
+  transition: opacity ease 250ms;
+}
+
+#list-configurations-table .icon img:hover {
+  opacity: 1;
 }
 
 @media screen and (max-width: 1199px) {
