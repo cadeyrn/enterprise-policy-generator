@@ -41,8 +41,8 @@ const management = {
     elSubmitButton.addEventListener('click', (e) => {
       e.preventDefault();
 
-      management.closeSaveConfigurationDialog(elModal, elSubmitButton);
       management.saveConfiguration(elName.value);
+      management.closeSaveConfigurationDialog(elModal, elSubmitButton);
     });
 
     // close dialog by clicking the cancel button
