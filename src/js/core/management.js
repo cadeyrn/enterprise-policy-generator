@@ -59,7 +59,7 @@ const management = {
     };
 
     // save configuration by pressing Enter, close dialog by pressing ESC
-    window.addEventListener('keydown', (e) => {
+    window.onkeydown = (e) => {
       if (e.key === 'Enter') {
         e.preventDefault();
 
