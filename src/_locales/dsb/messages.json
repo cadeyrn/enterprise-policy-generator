@@ -33,25 +33,25 @@
     "message": "dalšne informacije"
   },
   "link_load_configuration": {
-    "message": "load configuration"
+    "message": "Konfiguaraciju zacytaś"
   },
   "link_save_configuration": {
-    "message": "save configuration"
+    "message": "Konfiguraciju składowaś"
   },
   "link_select_all": {
     "message": "wšykne markěrowaś"
   },
   "list_dialog_btn_cancel": {
-    "message": "Cancel"
+    "message": "Pśetergnuś"
   },
   "list_dialog_window_title": {
-    "message": "Load Configuration"
+    "message": "Konfiguaraciju zacytaś"
   },
   "list_table_name": {
-    "message": "Name"
+    "message": "Mě"
   },
   "list_table_time": {
-    "message": "Time"
+    "message": "Cas"
   },
   "lock_preference": {
     "message": "Nastajenje pśeśiwo změnje šćitaś"
@@ -342,7 +342,7 @@
     "message": "Flash jo pśecej zmóžnjony"
   },
   "policy_description_HardwareAcceleration": {
-    "message": "Disable hardware acceleration"
+    "message": "Hardwarowe póspěšenje znjemóžniś"
   },
   "policy_description_Homepage": {
     "message": "Startowy bok nastajiś"
@@ -453,10 +453,10 @@
     "message": "SSL-Proxy. Aby portowy numer konfigurěrował, pśidajśo pšosym \":\" slědowany pśez portowy numer"
   },
   "policy_description_Proxy_UseHTTPProxyForAllProtocols_false": {
-    "message": "toś ten proksy-serwer nic za wšykne protokole wužywaś"
+    "message": "Toś ten proksy-serwer nic za wšykne protokole wužywaś"
   },
   "policy_description_Proxy_UseHTTPProxyForAllProtocols_true": {
-    "message": "toś ten proksy-serwer za wšykne protokole wužywaś"
+    "message": "Toś ten proksy-serwer za wšykne protokole wužywaś"
   },
   "policy_description_Proxy_UseProxyForDNS": {
     "message": "Pśi wužywanju SOCKS v5 proksy za DNS-napšašowanja wužywaś"
@@ -525,10 +525,10 @@
     "message": "instalacijam zajźowaś"
   },
   "policy_description_SearchEngines_Remove": {
-    "message": "Remove search engine(s) (Firefox 62+)"
+    "message": "Pytnice wótwónoźeś (Firefox 62+)"
   },
   "policy_description_SearchEngines_Remove_Name": {
-    "message": "Name"
+    "message": "Mě"
   },
   "policy_description_WebsiteFilter": {
     "message": "Zajźujo, až se websedła woglěduju. Móžośo \"<all_urls>\" za blokěrowanje wšych URL wužywaś. Glejśo informaciski wótkaz za wšykne płaśiwe zapiski, ale jano HTTPS a HTTP se pódpěratej."
@@ -546,33 +546,33 @@
     "message": "URL"
   },
   "save_dialog_btn_cancel": {
-    "message": "Cancel"
+    "message": "Pśetergnuś"
   },
   "save_dialog_btn_ok": {
-    "message": "Save Configuration"
+    "message": "Konfiguraciju składowaś"
   },
   "save_dialog_form_name": {
-    "message": "Name"
+    "message": "Mě"
   },
   "save_dialog_window_title": {
-    "message": "Save Configuration"
+    "message": "Konfiguraciju składowaś"
   },
   "title_add_row": {
     "message": "Smužku pśidaś"
   },
   "title_apply_configuration": {
-    "message": "apply configuration"
+    "message": "Konfiguraciju nałožyś"
   },
   "title_remove_configuration": {
-    "message": "remove configuration"
+    "message": "Konfiguraciju wótwónoźeś"
   },
   "title_remove_row": {
     "message": "Smužku wótwónoźeś"
   },
   "version_or_higher": {
-    "message": "or higher"
+    "message": "abo wušy"
   },
   "version_required": {
-    "message": "requires at least"
+    "message": "pomina se nanejmjenjej"
   }
 }
