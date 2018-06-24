@@ -435,13 +435,13 @@
     "message" : "Utiliser les paramètres du proxy système"
   },
   "Policy_description_Proxy_Proxy_FTPProxy": {
-    "message" : "FTP Proxy. Pour configurer les numéros de port, veuillez ajouter un "\:\" suivi du numéro de port"
+    "message" : "FTP Proxy. Pour configurer les numéros de port, veuillez ajouter un “:“ suivi du numéro de port"
   },
   "Policy_description_Proxy_Proxy_Passthrough": {
     "message" : "Pas de procuration pour...."
   },
   "Policy_description_Proxy_Proxy_SOCKSProxy": {
-    "message" : "SOCKS Host. Pour configurer les numéros de port, veuillez ajouter un "\:\" suivi du numéro de port"
+    "message" : "SOCKS Host. Pour configurer les numéros de port, veuillez ajouter un “:“ suivi du numéro de port"
   },
   "Policy_description_Proxy_Proxy_SOCKSVersion_v4": {
     "message" : "SOCKS v4"
@@ -450,7 +450,7 @@
     "message" : "SOCKS v5"
   },
   "Policy_description_Proxy_SSLProxy_SSLProxy": {
-    "message" : "Proxy SSL. Pour configurer les numéros de port, veuillez ajouter un "\:\" suivi du numéro de port"
+    "message" : "Proxy SSL. Pour configurer les numéros de port, veuillez ajouter un “:“ suivi du numéro de port"
   },
   "policy_description_Proxy_UseHTTPProxyForAllProtocols_false": {
     "message" : "N'utilisez pas ce serveur proxy pour tous les protocoles."
