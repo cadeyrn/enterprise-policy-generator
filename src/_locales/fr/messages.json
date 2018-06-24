@@ -198,7 +198,7 @@
     "message" : "Empêcher Firefox de se mettre à jour"
   },
   "policy_description_DisableBuiltinPDFViewer": {
-    "message": "Désactiver le visionneur PDF intégré (pdf.js)"".
+    "message": "Désactiver le visionneur PDF intégré (pdf.js)""
   },
   "policy_description_DisableDeveloperTools": {
     "message" : "Désactiver les outils de développement intégrés"
@@ -237,7 +237,7 @@
     "message" : "Désactivez le bouton \"Refresh Firefox\" dans about:support"
   },
   "policy_description_DisableSafeMode": {
-    "message" : "Désactiver la possibilité de redémarrer Firefox avec les add-ons désactivés (mode sans échec).
+    "message" : "Désactiver la possibilité de redémarrer Firefox avec les add-ons désactivés (mode sans échec)."
   },
   "policy_description_DisableSecurityBypass": {
     "message" : "Empêcher que certains avertissements de sécurité soient contournés"
@@ -417,7 +417,7 @@
     "message" : "Ne pas demander d'authentification"
   },
   "Policy_description_Proxy_Proxy_HTTPProxy": {
-    "message" : "Proxy HTTP. Pour configurer les numéros de port, veuillez ajouter un ":" suivi du numéro de port"
+    "message" : "Proxy HTTP. Pour configurer les numéros de port, veuillez ajouter un " :" suivi du numéro de port"
   },
   "policy_description_Proxy_Mode_autoConfig": {
     "message" : "automatic proxy configuration url"
@@ -435,13 +435,13 @@
     "message" : "Utiliser les paramètres du proxy système"
   },
   "Policy_description_Proxy_Proxy_FTPProxy": {
-    "message" : "FTP Proxy. Pour configurer les numéros de port, veuillez ajouter un ":" suivi du numéro de port"
+    "message" : "FTP Proxy. Pour configurer les numéros de port, veuillez ajouter un " :" suivi du numéro de port"
   },
   "Policy_description_Proxy_Proxy_Passthrough": {
     "message" : "Pas de procuration pour...."
   },
   "Policy_description_Proxy_Proxy_SOCKSProxy": {
-    "message" : "SOCKS Host. Pour configurer les numéros de port, veuillez ajouter un ":" suivi du numéro de port"
+    "message" : "SOCKS Host. Pour configurer les numéros de port, veuillez ajouter un " :" suivi du numéro de port"
   },
   "Policy_description_Proxy_Proxy_SOCKSVersion_v4": {
     "message" : "SOCKS v4"
@@ -504,7 +504,7 @@
     "message" : "POST"
   },
   "Policy_description_SearchEngines_Add_Add_Name": {
-    "message" : "Nom
+    "message" : "Nom"
   },
   "Policy_description_SearchEngines_Add_SuggestURLTemplate": {
     "message" : "URL pour les suggestions. Veuillez utiliser {conditions de recherche} comme caractère de remplacement pour le terme de recherche"
@@ -528,7 +528,7 @@
     "message" : "Supprimer le(s) moteur(s) de recherche (Firefox 62+)"
   },
   "Policy_description_SearchEngines_Remove_Remove_Name": {
-    "message" : "Nom
+    "message" : "Nom"
   },
   "Policy_description_WebsiteFilter": {
     "message" : "Empêche les sites Web d'être visités. Vous pouvez utiliser \"<all_urls>\" pour bloquer toutes les URL. Voir le lien info pour toutes les entrées valides, mais seuls HTTPS et HTTP sont supportés."
