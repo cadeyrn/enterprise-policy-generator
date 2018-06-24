@@ -301,7 +301,7 @@
   },
   "policy_description_Extensions_Install_URL_URL_or_Path": {
     "message" : "URL ou chemin d'accès"
-  }
+  },
   "Policy_description_Extensions_Locked": {
     "message" : "Les extensions verrouillées ne peuvent pas être désactivées ou désinstallées. Veuillez spécifier les ID d'extension."
   },
