@@ -15,15 +15,15 @@ const management = {
    * @returns {void}
    */
   init () {
-    elListConfigurationsLink.addEventListener('click', (e) => {
+    elListConfigurationsLink.onclick = (e) => {
       e.preventDefault();
       management.showListConfigurationsDialog();
-    });
+    };
 
-    elSaveConfigurationLink.addEventListener('click', (e) => {
+    elSaveConfigurationLink.onclick = (e) => {
       e.preventDefault();
       management.showSaveConfigurationDialog();
-    });
+    };
   },
 
   /**
@@ -44,14 +44,14 @@ const management = {
     elName.focus();
 
     // the name field must not be empty
-    elName.addEventListener('input', () => {
+    elName.oninput = () => {
       if (elName.value) {
         elSubmitButton.removeAttribute('disabled');
       }
       else {
         elSubmitButton.setAttribute('disabled', true);
       }
-    });
+    };
 
     // close dialog by clicking the cancel button
     elCloseButton.onclick = () => {
@@ -128,16 +128,16 @@ const management = {
 
     // close dialog by clicking the cancel button
     const elCloseButton = elModal.querySelector('#button-list-dialog-cancel');
-    elCloseButton.addEventListener('click', () => {
+    elCloseButton.onclick = () => {
       management.closeListConfigurationsDialog(elModal);
-    });
+    };
 
     // close dialog by pressing ESC
-    window.addEventListener('keydown', (e) => {
+    window.onkeydown = (e) => {
       if (e.key === 'Escape') {
         management.closeListConfigurationsDialog(elModal);
       }
-    });
+    };
 
     management.listConfigurations(elModal);
   },
