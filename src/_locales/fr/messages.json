@@ -1,0 +1,578 @@
+{
+  "enterprise_only_label": {
+    "message": "Fonctionne uniquement avec Firefox ESR"
+  },
+  "explanation_headline_usage": {
+    "message": "Usage"
+  },
+  "explanation_intro": {
+    "message": "En cliquant sur le bouton, un code sera généré. Ce code doit être stocké dans un fichier \"policies.json\" qui doit être stocké dans le répertoire de distribution."
+  },
+  "explanation_intro_linux": {
+    "message": "créer un répertoire appelé \"distribution\" dans le répertoire où se trouve Firefox et y placer le fichier \"policies.json\"."
+  },
+  "explanation_intro_macos": {
+    "message": "créer un répertoire appelé \"distribution\" dans Firefox.app/Contents/Resources/ et y placer le fichier \"policies.json\"."
+  },
+  "explanation_intro_windows": {
+    "message": "créer un répertoire appelé \"distribution\" où se trouve le fichier firefox.exe et y placer le fichier \"policies.json\"."
+  },
+  "extension_description": {
+    "message": "Générer Règles d'Entreprise pour Firefox."
+  },
+  "extension_name": {
+    "message": "Générateur de Règles d'Entreprise"
+  },
+  "generate_button": {
+    "message" : "Générer des politiques"
+  },
+  "link_download": {
+    "message" : "download policies.json.json"
+  },
+  "link_learn_more": {
+    "message" : "plus d'informations"
+  },
+  "link_load_load_configuration": {
+    "message" : "charger configuration"
+  },
+  "link_save_configuration_save_configuration": {
+    "message" : "Sauvegarder la configuration"
+  },
+  "link_select_all": {
+    "message" : "Sélectionner tout"
+  },
+  "list_dialog_btn_cancel": {
+    "message" : "Annuler"
+  },
+  "list_dialog_window_title": {
+    "message" : "Charger la configuration"
+  },
+  "list_table_nom_de_table": {
+    "message" : "Nom"
+  },
+  "list_table_time": {
+    "message" : "Temps"
+  },
+  "lock_preference": {
+    "message" : "Protéger les préférences de tout changements"
+  },
+  "étiquette obligatoire": {
+    "message" : "Obligatoire"
+  },
+  "policy_category_block_access": {
+    "message" : "Bloquer l'accès"
+  },
+  "policy_category_disable_features": {
+    "message" : "Désactiver les fonctions"
+  },
+  "policy_category_customization": {
+    "message" : "Personnalisation"
+  },
+  "policy_category_network": {
+    "message" : "Réseau"
+  },
+  "policy_category_privacy": {
+    "message" : "Vie privée"
+  },
+  "policy_category_security": {
+    "message" : "Sécurité"
+  },
+  "policy_category_update_and_data": {
+    "message" : "Mises à jour et collecte de données"
+  },
+  "politique_catégorie_autres": {
+    "message" : "Autres politiques"
+  },
+  "Policy_description_Authentication": {
+    "message" : "Sites supportants l'authentification intégrée"
+  },
+  "Policy_description_Authentication_Delegated": {
+    "message" : "Délégué"
+  },
+  "Policy_description_Authentication_Delegated_URL": {
+    "message" : "URL"
+  },
+  "policy_description_Authentication_NTLM": {
+    "message" : "NTLM"
+  },
+  "Policy_description_Authentication_NTLM_URL": {
+    "message" : "URL"
+  },
+  "Policy_description_Authentication_SPNEGO": {
+    "message" : "SPNEGO"
+  },
+  "Policy_description_Authentication_SPNEGO_URL": {
+    "message" : "URL"
+  },
+  "policy_description_BlockAboutAddons": {
+    "message" : "Bloquer l'accès au gestionnaire d'add-ons (about:addons)"
+  },
+  "policy_description_BlockAboutConfig": {
+    "message" : "Bloquer l'accès à la configuration du navigateur (about:config)"
+  },
+  "policy_description_BlockAboutProfiles": {
+    "message" : "Bloquer l'accès au gestionnaire de profils de contenu (about:profiles)"
+  },
+  "policy_description_BlockAboutSupport": {
+    "message" : "Bloquer l'accès à la page d'information de dépannage (about:support)"
+  },
+  "Policy_description_Bookmarks": {
+    "message" : "Créer des signets par défaut"
+  },
+  "policy_description_Bookmarks_Favicon": {
+    "message" : "Favicon"
+  },
+  "policy_description_Bookmarks_Folder": {
+    "message" : "Dossier"
+  },
+  "policy_description_Bookmarks_Placement": {
+    "message" : "Placement"
+  },
+  "policy_description_Bookmarks_Placement_Menu_Placement_Menu": {
+    "message" : "Menu Marques-pages"
+  },
+  "policy_description_Bookmarks_Placement_Placement_Toolbar": {
+    "message" : "Barre de marques-pages"
+  },
+  "policy_description_Bookmarks_Title": {
+    "message" : "Titre"
+  },
+  "policy_description_Bookmarks_URL": {
+    "message" : "URL"
+  },
+  "policy_description_Certificates": {
+    "message" : "Lire les certificats de la liste de certificats de Windows (Windows uniquement)"
+  },
+  "policy_description_Certificates_ImportEnterpriseRoots_false": {
+    "message" : "Ne lisez pas les certificats du magasin de certificats de Windows"
+  },
+  "policy_description_Certificates_ImportEnterpriseRoots_true": {
+    "message" : "lire les certificats du magasin de certificats de Windows"
+  },
+  "policy_description_Cookies": {
+    "message" : "Autoriser ou refuser des sites Web à placer des cookies"
+  },
+  "policy_description_Cookies_AcceptThirdParty": {
+    "message" : "La valeur par défaut pour \"Accepter les cookies de tiers et les données du site\""
+  },
+  "policy_description_Cookies_AcceptThirdParty_always": {
+    "message" : "Toujours"
+  },
+  "policy_description_Cookies_AcceptThirdParty_from_visited": {
+    "message" : "de la visite"
+  },
+  "policy_description_Cookies_AcceptThirdParty_never": {
+    "message" : "Jamais"
+  },
+  "policy_description_Cookies_Allow": {
+    "message" : "Domaines où les cookies sont toujours autorisés"
+  },
+  "policy_description_Cookies_Allow_Domain": {
+    "message" : "Domaine"
+  },
+  "policy_description_Cookies_Block": {
+    "message" : "Domaines où les cookies sont toujours bloqués"
+  },
+  "policy_description_Cookies_Block_Domaine_Block_Domaine": {
+    "message" : "Domaine"
+  },
+  "policy_description_Cookies_Default": {
+    "message" : "La valeur par défaut pour \"Accepter les cookies et les données de sites Web\""
+  },
+  "policy_description_Cookies_Default_false": {
+    "message" : "n'accepte pas les cookies"
+  },
+  "policy_description_Cookies_Default_Default_true" : {
+    "message" : "Accepter les cookies"
+  },
+  "policy_description_Cookies_ExpireAtSessionEnd" : {
+    "message" : "Conserver les biscuits jusqu'à ce que...."
+  },
+  "policy_description_Cookies_ExpireAtSessionEnd_false": {
+    "message" : ".... jusqu'à ce qu'ils expirent"
+  },
+  "policy_description_Cookies_ExpireAtSessionEnd_true": {
+    "message" : "..... jusqu'à ce que Firefox soit fermé"
+  },
+  "policy_description_DisableAppUpdate": {
+    "message" : "Empêcher Firefox de se mettre à jour"
+  },
+  "policy_description_DisableBuiltinPDFViewer": {
+    "message": "Désactiver le visionneur PDF intégré (pdf.js)"
+  },
+  "policy_description_DisableDeveloperTools": {
+    "message" : "Désactiver les outils de développement intégrés"
+  },
+  "policy_description_DisableFeedbackCommands": {
+    "message" : "Désactiver les options de menu \"Soumettre un feedback\" et \"Signaler un site trompeur\" dans le menu d'aide"
+  },
+  "policy_description_DisableFirefoxAccounts": {
+    "message" : "Désactiver les services basés sur les comptes Firefox comme Firefox Sync"
+  },
+  "policy_description_DisableFirefoxScreenshots": {
+    "message" : "Désactiver l'outil de capture d'écran intégré (Firefox Screenshots)"
+  },
+  "policy_description_DisableFirefoxStudies": {
+    "message" : "Empêcher Firefox d'installer et d'exécuter des études (études SHIELD)"
+  },
+  "policy_description_DisableForgetButton": {
+    "message" : "Désactiver le bouton \"Oublier\" de la barre d'outils qui permet d'oublier le dernier historique de navigation"
+  },
+  "policy_description_DisableFormHistory": {
+    "message" : "Désactiver le formulaire et l'historique de la barre de recherche"
+  },
+  "policy_description_DisableMasterPasswordCreation": {
+    "message" : "Désactiver la fonction mot de passe maître"
+  },
+  "policy_description_DisablePocket": {
+    "message" : "Désactiver l'intégration de Pocket, un service de Mozilla"
+  },
+  "policy_description_DisablePrivateBrowsing": {
+    "message" : "Désactiver le mode de navigation privée"
+  },
+  "policy_description_DisableProfileImport": {
+    "message" : "Désactiver le menu \"Importer des données d'un autre navigateur\" dans la bibliothèque"
+  },
+  "policy_description_DisableProfileRefresh": {
+    "message" : "Désactivez le bouton \"Refresh Firefox\" dans about:support"
+  },
+  "policy_description_DisableSafeMode": {
+    "message" : "Désactiver la possibilité de redémarrer Firefox avec les add-ons désactivés (mode sans échec)."
+  },
+  "policy_description_DisableSecurityBypass": {
+    "message" : "Empêcher que certains avertissements de sécurité soient contournés"
+  },
+  "policy_description_DisableSecurityBypass_InvalidCertificate": {
+    "message" : "Empêcher l'ajout d'une exception lorsqu'un certificat invalide est affiché"
+  },
+  "policy_description_DisableSecurityBypass_InvalidCertificate_false": {
+    "message" : "Ne pas empêcher"
+  },
+  "policy_description_DisableSecurityBypass_InvalidCertificate_null": {
+    "message" : "aucune préférence"
+  },
+  "policy_description_DisableSecurityBypass_InvalidCertificate_true": {
+    "message" : "Prévenir"
+  },
+  "policy_description_DisableSecurityBypass_SafeBrowsing": {
+    "message" : "Empêcher le contournement de l'avertissement et la visite d'un site Web malveillant."
+  },
+  "policy_description_DisableSecurityBypass_SafeBrowsing_false": {
+    "message" : "Ne pas empêcher"
+  },
+  "policy_description_DisableSecurityBypass_SafeBrowsing_null": {
+    "message" : "aucune préférence"
+  },
+  "policy_description_DisableSecurityBypass_SafeBrowsing_true": {
+    "message" : "Prévenir"
+  },
+  "policy_description_DisableSetDesktopBackground": {
+    "message" : "Désactiver la fonction pour définir une image comme fond d'écran"
+  },
+  "policy_description_DisableSystemAddonUpdate": {
+    "message" : "Empêcher Firefox d'installer et de mettre à jour les add-ons du système."
+  },
+  "policy_description_DisableTelemetry": {
+    "message" : "Empêcher Firefox d'envoyer des données techniques et d'interaction à Mozilla (télémétrie)"
+  },
+  "policy_description_DisplayBookmarksToolbar": {
+    "message" : "Afficher la barre de signets par défaut"
+  },
+  "policy_description_DisplayMenuBar": {
+    "message" : "Afficher la barre de menu par défaut"
+  },
+  "policy_description_DontCheckDefaultBrowser": {
+    "message" : "Ne vérifiez pas si Firefox est le navigateur par défaut au démarrage."
+  },
+  "policy_description_EnableTrackingProtection": {
+    "message" : "Activer ou désactiver la protection de suivi"
+  },
+  "policy_description_EnableTrackingProtection_Value_Value_false": {
+    "message" : "Désactiver la protection de suivi"
+  },
+  "policy_description_EnableTrackingProtection_Value_Value_true": {
+    "message" : "activer la protection de suivi"
+  },
+  "Policy_description_Extensions": {
+    "message" : "Installer, désinstaller ou verrouiller les extensions"
+  },
+  "policy_description_Extensions_Install": {
+    "message" : "Installer les add-ons. Vous pouvez spécifier des URL ou des chemins d'accès."
+  },
+  "policy_description_Extensions_Install_URL_URL_or_Path": {
+    "message" : "URL ou chemin d'accès"
+  }
+  "Policy_description_Extensions_Locked": {
+    "message" : "Les extensions verrouillées ne peuvent pas être désactivées ou désinstallées. Veuillez spécifier les ID d'extension."
+  },
+  "policy_description_Extensions_Locked_ID": {
+    "message" : "Add-on ID"
+  },
+  "policy_description_Extensions_Uninstall": {
+    "message" : "Désinstaller les add-ons. Veuillez spécifier les ID d'extension."
+  },
+  "policy_description_Extensions_Uninstall_ID": {
+    "message" : "Add-on ID"
+  },
+  "policy_description_FlashPlugin": {
+    "message" : "Autoriser ou refuser l'utilisation du plugin Flash"
+  },
+  "policy_description_FlashPlugin_Allow": {
+    "message" : "Activer le plugin Flash pour ces URLs par défaut, sauf si Flash est complètement désactivé."
+  },
+  "Policy_description_FlashPlugin_Allow_URL": {
+    "message" : "URL"
+  },
+  "policy_description_FlashPlugin_Block": {
+    "message" : "Bloquer le plugin Flash pour ces URLs"
+  },
+  "Policy_description_FlashPlugin_Block_URL": {
+    "message" : "URL"
+  },
+  "policy_description_FlashPlugin_Default": {
+    "message" : "Toujours activer ou désactiver Flash"
+  },
+  "policy_description_FlashPlugin_Default_false": {
+    "message" : "Flash est toujours désactivé"
+  },
+  "policy_description_FlashPlugin_Default_null": {
+    "message" : "aucune préférence"
+  },
+  "Policy_description_FlashPlugin_Default_Default_true": {
+    "message" : "Flash est toujours activé"
+  },
+  "policy_description_HardwareAcceleration": {
+    "message" : "Désactiver l'accélération matérielle"
+  },
+  "policy_description_Homepage": {
+    "message" : "Set the homepage"
+  },
+  "policy_description_Homepage_Additional": {
+    "message" : "URLs supplémentaires"
+  },
+  "policy_description_Homepage_URL": {
+    "message" : "URL"
+  },
+  "policy_description_InstallAddonsPermission": {
+    "message" : "Permettre aux sites web d'installer des add-ons"
+  },
+  "policy_description_InstallAddonsPermission_Allow": {
+    "message" : "Les sites Web qui peuvent installer des extensions à moins que l'installation d'add-ons soit désactivée (addons.mozilla.org est déjà autorisé)."
+  },
+  "policy_description_InstallAddonsPermission_Allow_URL": {
+    "message" : "URL"
+  },
+  "policy_description_InstallAddonsPermission_Default_false": {
+    "message" : "les add-ons ne peuvent pas être installés par l'utilisateur"
+  },
+  "policy_description_InstallAddonsPermission_Default_Default_true": {
+    "message" : "les add-ons peuvent être installés par l'utilisateur"
+  },
+  "policy_description_NoDefaultBookmarks": {
+    "message" : "Ne créez pas les signets par défaut fournis avec Firefox, y compris les signets intelligents (les plus visités, les balises récentes). Note : cette politique n'est efficace que si elle est utilisée avant la première exécution du profil"
+  },
+  "policy_description_OfferToSaveLogins": {
+    "message" : "Permettre ou interdire à Firefox d'offrir de se souvenir des logins et mots de passe sauvegardés"
+  },
+  "Policy_description_OfferToSaveLogins_options_options_false": {
+    "message" : "Ne pas offrir de se souvenir des logins et mots de passe sauvegardés"
+  },
+  "Policy_description_OfferToSaveLogins_options_options_true": {
+    "message" : "Offre de se souvenir des noms d'utilisateur et mots de passe sauvegardés"
+  },
+  "policy_description_OverrideFirstRunPage": {
+    "message" : "Remplacer la première page d'exécution. Définissez cette politique à vide si vous voulez désactiver la première page d'exécution."
+  },
+  "policy_description_OverridePoverridePostUpdatePage": {
+    "message" : "Remplacer la page \"Quoi de neuf\" après la mise à jour. Définissez cette politique sur vide si vous voulez désactiver la page post-mise à jour."
+  },
+  "policy_description_PopupupBlocking": {
+    "message" : "Autoriser ou refuser l'utilisation des fenêtres pop-up"
+  },
+  "Policy_description_PopupupBlocking_Allow": {
+    "message" : "Domaines pour lesquels les fenêtres pop-up sont autorisées"
+  },
+  "Policy_description_PopupupBlocking_Allow_URL": {
+    "message" : "URL"
+  },
+  "Policy_description_PopupBlocking_Default_Default_false": {
+    "message" : "les pop-ups ne sont pas bloqués par défaut"
+  },
+  "Policy_description_PopupBlocking_Default_Default_true": {
+    "message" : "les pop-ups sont bloqués par défaut"
+  },
+  "Policy_description_Proxy": {
+    "message" : "Configurez l'accès par procuration à Internet"
+  },
+  "policy_description_Proxy_AutoConfigURL": {
+    "message" : "URL de configuration automatique du proxy"
+  },
+  "Policy_description_Proxy_AutoLogin": {
+    "message" : "Demande d'authentification"
+  },
+  "policy_description_Proxy_AutoLogin_false": {
+    "message" : "Demande d'authentification"
+  },
+  "policy_description_Proxy_AutoLogin_true": {
+    "message" : "Ne pas demander d'authentification"
+  },
+  "Policy_description_Proxy_Proxy_HTTPProxy": {
+    "message" : "Proxy HTTP. Pour configurer les numéros de port, veuillez ajouter un “:“ suivi du numéro de port"
+  },
+  "policy_description_Proxy_Mode_autoConfig": {
+    "message" : "automatic proxy configuration url"
+  },
+  "policy_description_Proxy_Mode_autoDetect": {
+    "message" : "Détection automatique des paramètres de proxy pour ce réseau"
+  },
+  "Policy_description_Proxy_Mode_Mode_manuel": {
+    "message" : "Configuration manuelle du proxy"
+  },
+  "Policy_description_Proxy_Mode_Mode_none": {
+    "message" : "Pas de procuration"
+  },
+  "Policy_description_Proxy_Mode_système_de_proxy": {
+    "message" : "Utiliser les paramètres du proxy système"
+  },
+  "Policy_description_Proxy_Proxy_FTPProxy": {
+    "message" : "FTP Proxy. Pour configurer les numéros de port, veuillez ajouter un “:“ suivi du numéro de port"
+  },
+  "Policy_description_Proxy_Proxy_Passthrough": {
+    "message" : "Pas de procuration pour...."
+  },
+  "Policy_description_Proxy_Proxy_SOCKSProxy": {
+    "message" : "SOCKS Host. Pour configurer les numéros de port, veuillez ajouter un “:“ suivi du numéro de port"
+  },
+  "Policy_description_Proxy_Proxy_SOCKSVersion_v4": {
+    "message" : "SOCKS v4"
+  },
+  "Policy_description_Proxy_Proxy_SOCKSVersion_v5": {
+    "message" : "SOCKS v5"
+  },
+  "Policy_description_Proxy_SSLProxy_SSLProxy": {
+    "message" : "Proxy SSL. Pour configurer les numéros de port, veuillez ajouter un “:“ suivi du numéro de port"
+  },
+  "policy_description_Proxy_UseHTTPProxyForAllProtocols_false": {
+    "message" : "N'utilisez pas ce serveur proxy pour tous les protocoles."
+  },
+  "policy_description_Proxy_UseHTTPProxyForAllProtocols_true": {
+    "message" : "utiliser ce serveur proxy pour tous les protocoles"
+  },
+  "policy_description_Proxy_UseProxy_UseProxyForDNS": {
+    "message" : "Proxy DNS lors de l'utilisation de SOCKS v5"
+  },
+  "policy_description_Proxy_Proxy_UseProxyForDNS_false": {
+    "message" : "Ne pas utiliser Proxy DNS"
+  },
+  "policy_description_Proxy_Proxy_UseProxyForDNS_true": {
+    "message" : "Utiliser Proxy DNS"
+  },
+  "Policy_description_SanitizeOnShutdown": {
+    "message" : "Effacer toutes les données du navigateur à l'arrêt"
+  },
+  "Policy_description_SearchBar": {
+    "message" : "Que la barre de recherche soit unifiée ou séparée"
+  },
+  "Policy_description_SearchBar_options_options_separate": {
+    "message" : "il y a une barre de recherche séparée"
+  },
+  "Policy_description_SearchBar_options_options_unifiées": {
+    "message" : "la recherche et la barre d'adresse sont unifiées"
+  },
+  "Policy_description_SearchEngines": {
+    "message" : "Modifie la liste des moteurs de recherche intégrés à Firefox"
+  },
+  "Policy_description_SearchEngines_Add": {
+    "message" : "Ajouter un ou plusieurs moteurs de recherche"
+  },
+  "Policy_description_SearchEngines_Add_Alias": {
+    "message" : "Alias qui peut être utilisé pour accéder au moteur"
+  },
+  "Policy_description_SearchEngines_Add_Add_Description": {
+    "message" : "Description"
+  },
+  "Policy_description_SearchEngines_Add_IconURL": {
+    "message" : "Icône URL"
+  },
+  "Policy_description_SearchEngines_Add_Add_Method": {
+    "message" : "Méthode de demande"
+  },
+  "Policy_description_SearchEngines_Add_Method_GET": {
+    "message" : "GET"
+  },
+  "Policy_description_SearchEngines_Add_Method_Method_POST": {
+    "message" : "POST"
+  },
+  "Policy_description_SearchEngines_Add_Add_Name": {
+    "message" : "Nom"
+  },
+  "Policy_description_SearchEngines_Add_SuggestURLTemplate": {
+    "message" : "URL pour les suggestions. Veuillez utiliser {conditions de recherche} comme caractère de remplacement pour le terme de recherche"
+  },
+  "Policy_description_SearchEngines_Add_Add_URL": {
+    "message" : "URL pour les recherches. Veuillez utiliser {conditions de recherche} comme caractère de remplacement pour le terme de recherche"
+  },
+  "policy_description_SearchEngines_Default": {
+  "message" : "Nom du moteur de recherche par défaut"
+  },
+  "Policy_description_SearchEngines_PreventInstalls": {
+    "message" : "Empêcher l'installation de nouveaux moteurs de recherche"
+  },
+  "Policy_description_SearchEngines_PreventInstalls_false": {
+    "message" : "n'empêche pas les installations"
+  },
+  "Policy_description_SearchEngines_PreventInstalls_true": {
+    "message" : "Empêcher les installations"
+  },
+  "Policy_description_SearchEngines_Remove": {
+    "message" : "Supprimer le(s) moteur(s) de recherche (Firefox 62+)"
+  },
+  "Policy_description_SearchEngines_Remove_Remove_Name": {
+    "message" : "Nom"
+  },
+  "Policy_description_WebsiteFilter": {
+    "message" : "Empêche les sites Web d'être visités. Vous pouvez utiliser \"<all_urls>\" pour bloquer toutes les URL. Voir le lien info pour toutes les entrées valides, mais seuls HTTPS et HTTP sont supportés."
+  },
+  "Policy_description_WebsiteFilter_Block": {
+    "message" : "Bloquer les URL suivantes"
+  },
+  "Policy_description_WebsiteFilter_Block_Block_URL": {
+    "message" : "URL"
+  },
+  "Policy_description_WebsiteFilter_Exceptions": {
+    "message" : "Exceptions"
+  },
+  "Policy_description_WebsiteFilter_Exceptions_URL": {
+    "message" : "URL"
+  },
+  "save_dialog_btn_cancel": {
+    "message" : "Annuler"
+  },
+  "save_dialog_btn_ok": {
+    "message" : "Sauvegarder la configuration"
+  },
+  "save_dialog_form_name": {
+    "message" : "Nom"
+  },
+  "save_dialog_window_title": {
+    "message" : "Sauvegarder la configuration"
+  },
+  "title_add_add_row": {
+    "message" : "Ajouter ligne"
+  },
+  "title_apply_configuration_apply_configuration": {
+    "message" : "Appliquer la configuration"
+  },
+  "title_remove_configuration_remove_configuration": {
+    "message" : "Supprimer la configuration"
+  },
+  "title_remove_row": {
+    "message" : "Enlever la rangée"
+  },
+  "version_or_higher": {
+    "message" : "ou plus haut"
+  },
+  "version_required": {
+    "message" : "nécessite au moins"
+  }
+}
