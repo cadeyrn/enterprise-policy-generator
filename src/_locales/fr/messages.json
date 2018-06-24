@@ -417,7 +417,7 @@
     "message" : "Ne pas demander d'authentification"
   },
   "Policy_description_Proxy_Proxy_HTTPProxy": {
-    "message" : "Proxy HTTP. Pour configurer les numéros de port, veuillez ajouter un "\:\" suivi du numéro de port"
+    "message" : "Proxy HTTP. Pour configurer les numéros de port, veuillez ajouter un “:“ suivi du numéro de port"
   },
   "policy_description_Proxy_Mode_autoConfig": {
     "message" : "automatic proxy configuration url"
