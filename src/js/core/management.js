@@ -54,9 +54,9 @@ const management = {
     });
 
     // close dialog by clicking the cancel button
-    elCloseButton.addEventListener('click', () => {
+    elCloseButton.onclick = () => {
       management.closeSaveConfigurationDialog(elModal, elSubmitButton);
-    });
+    };
 
     // close dialog by pressing ESC
     window.addEventListener('keydown', (e) => {
@@ -66,16 +66,12 @@ const management = {
     });
 
     // submit button
-    const submitListener = (e) => {
+    elSubmitButton.onclick = (e) => {
       e.preventDefault();
 
       management.saveConfiguration(elName.value);
       management.closeSaveConfigurationDialog(elModal, elSubmitButton);
-
-      elSubmitButton.removeEventListener('click', submitListener);
     };
-
-    elSubmitButton.addEventListener('click', submitListener);
   },
 
   /**

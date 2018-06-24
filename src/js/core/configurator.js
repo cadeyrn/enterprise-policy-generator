@@ -97,15 +97,15 @@ const configurator = {
     });
 
     // action for clicking the "generate policies" button
-    elPolicyGeneratorButton.addEventListener('click', (e) => {
+    elPolicyGeneratorButton.onclick = (e) => {
       e.preventDefault();
 
       elPolicyOutput.innerText = output.generatePoliciesOutput();
       elActionLinks.classList.remove('hidden');
-    });
+    };
 
     // action for clicking the "select all" link
-    elSelectAllLink.addEventListener('click', (e) => {
+    elSelectAllLink.onclick = (e) => {
       e.preventDefault();
 
       const selection = window.getSelection();
@@ -113,10 +113,10 @@ const configurator = {
       range.selectNodeContents(elPolicyOutput);
       selection.removeAllRanges();
       selection.addRange(range);
-    });
+    };
 
     // action for clicking the "download policies.json" link if downloads permission is not granted
-    elGrantDownloadPermissionLink.addEventListener('click', async (e) => {
+    elGrantDownloadPermissionLink.onclick = async (e) => {
       e.preventDefault();
 
       const granted = await browser.permissions.request(DOWNLOAD_PERMISSION);
@@ -125,14 +125,14 @@ const configurator = {
       if (granted) {
         configurator.downloadPolicy();
       }
-    });
+    };
 
     // action for clicking the "download policies.json" link if downloads permission is granted
-    elDownloadLink.addEventListener('click', (e) => {
+    elDownloadLink.onclick = (e) => {
       e.preventDefault();
 
       configurator.downloadPolicy();
-    });
+    }
   },
 
   /**
