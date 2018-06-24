@@ -70,7 +70,7 @@ const management = {
       if (e.key === 'Escape') {
         management.closeSaveConfigurationDialog(elModal, elSubmitButton);
       }
-    });
+    };
 
     // submit button
     elSubmitButton.onclick = (e) => {
