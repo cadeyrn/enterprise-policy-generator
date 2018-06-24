@@ -58,8 +58,15 @@ const management = {
       management.closeSaveConfigurationDialog(elModal, elSubmitButton);
     };
 
-    // close dialog by pressing ESC
+    // save configuration by pressing Enter, close dialog by pressing ESC
     window.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+
+        management.saveConfiguration(elName.value);
+        management.closeSaveConfigurationDialog(elModal, elSubmitButton);
+      }
+
       if (e.key === 'Escape') {
         management.closeSaveConfigurationDialog(elModal, elSubmitButton);
       }
