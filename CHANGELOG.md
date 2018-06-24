@@ -18,6 +18,10 @@
 - added option to remove search engines to SearchEngines policy, fixes
   [#19](https://github.com/cadeyrn/enterprise-policy-generator/issues/19)
 
+#### Translations
+
+- added French translation (Thanks, Rom!)
+
 #### Dependencies
 
 - updated eslint from version 4.19.1 to 5.0.0

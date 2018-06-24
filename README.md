@@ -44,6 +44,7 @@ The add-on is currently available in the following languages:
 
 - English
 - German
+- French (Thanks, Rom!)
 - Upper Sorbian (Thanks, milupo!)
 - Lower Sorbian (Thanks, milupo!)
 
