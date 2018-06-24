@@ -198,7 +198,7 @@
     "message" : "Empêcher Firefox de se mettre à jour"
   },
   "policy_description_DisableBuiltinPDFViewer": {
-    "message": "Désactiver le visionneur PDF intégré (pdf.js)""
+    "message": "Désactiver le visionneur PDF intégré (pdf.js)"
   },
   "policy_description_DisableDeveloperTools": {
     "message" : "Désactiver les outils de développement intégrés"
@@ -357,7 +357,7 @@
     "message" : "Permettre aux sites web d'installer des add-ons"
   },
   "policy_description_InstallAddonsPermission_Allow": {
-    "message" : "Les sites Web qui peuvent installer des extensions à moins que l'installation d'add-ons soit désactivée (addons.mozilla.org est déjà autorisé).
+    "message" : "Les sites Web qui peuvent installer des extensions à moins que l'installation d'add-ons soit désactivée (addons.mozilla.org est déjà autorisé)."
   },
   "policy_description_InstallAddonsPermission_Allow_URL": {
     "message" : "URL"
@@ -417,7 +417,7 @@
     "message" : "Ne pas demander d'authentification"
   },
   "Policy_description_Proxy_Proxy_HTTPProxy": {
-    "message" : "Proxy HTTP. Pour configurer les numéros de port, veuillez ajouter un " :" suivi du numéro de port"
+    "message" : "Proxy HTTP. Pour configurer les numéros de port, veuillez ajouter un "\:\" suivi du numéro de port"
   },
   "policy_description_Proxy_Mode_autoConfig": {
     "message" : "automatic proxy configuration url"
@@ -435,13 +435,13 @@
     "message" : "Utiliser les paramètres du proxy système"
   },
   "Policy_description_Proxy_Proxy_FTPProxy": {
-    "message" : "FTP Proxy. Pour configurer les numéros de port, veuillez ajouter un " :" suivi du numéro de port"
+    "message" : "FTP Proxy. Pour configurer les numéros de port, veuillez ajouter un "\:\" suivi du numéro de port"
   },
   "Policy_description_Proxy_Proxy_Passthrough": {
     "message" : "Pas de procuration pour...."
   },
   "Policy_description_Proxy_Proxy_SOCKSProxy": {
-    "message" : "SOCKS Host. Pour configurer les numéros de port, veuillez ajouter un " :" suivi du numéro de port"
+    "message" : "SOCKS Host. Pour configurer les numéros de port, veuillez ajouter un "\:\" suivi du numéro de port"
   },
   "Policy_description_Proxy_Proxy_SOCKSVersion_v4": {
     "message" : "SOCKS v4"
@@ -450,7 +450,7 @@
     "message" : "SOCKS v5"
   },
   "Policy_description_Proxy_SSLProxy_SSLProxy": {
-    "message" : "Proxy SSL. Pour configurer les numéros de port, veuillez ajouter un ":" suivi du numéro de port"
+    "message" : "Proxy SSL. Pour configurer les numéros de port, veuillez ajouter un "\:\" suivi du numéro de port"
   },
   "policy_description_Proxy_UseHTTPProxyForAllProtocols_false": {
     "message" : "N'utilisez pas ce serveur proxy pour tous les protocoles."
@@ -552,7 +552,7 @@
     "message" : "Sauvegarder la configuration"
   },
   "save_dialog_form_name": {
-    "message" : "Nom
+    "message" : "Nom"
   },
   "save_dialog_window_title": {
     "message" : "Sauvegarder la configuration"
