@@ -561,7 +561,7 @@
     "message": "add row"
   },
   "title_apply_configuration": {
-    "message": "apply configuration"
+    "message": "load configuration"
   },
   "title_remove_configuration": {
     "message": "remove configuration"
