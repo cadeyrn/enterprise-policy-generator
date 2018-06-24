@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### (Work in Progress) Version 2.0.0 (2018-06-xx)
+### [Version 2.0.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v2.0.0) (2018-06-24)
 
 #### Enhancements
 
@@ -28,6 +28,9 @@
 - updated eslint-plugin-compat from version 2.3.0 to 2.4.0
 - updated stylelint from version 9.2.1 to 9.3.0
 - updated stylelint-csstree-validator from version 9.2.1 to 9.3.0
+
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v1.1.0...v2.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-2.0.0)
 
 ---
 
