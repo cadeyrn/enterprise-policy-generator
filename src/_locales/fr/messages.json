@@ -18,10 +18,10 @@
     "message": "créer un répertoire appelé \"distribution\" où se trouve le fichier firefox.exe et y placer le fichier \"policies.json\"."
   },
   "extension_description": {
-    "message": "Générer Règles d\'Entreprise pour Firefox."
+    "message": "Générer Règles d'Entreprise pour Firefox."
   },
   "extension_name": {
-    "message": "Générateur de Règles d\'Entreprise"
+    "message": "Générateur de Règles d'Entreprise"
   },
   "generate_button" : {
     "message" : "Générer des politiques"
