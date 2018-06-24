@@ -547,6 +547,9 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
 
 #list-configurations-table td:first-child {
   padding-right: 10px;
+  max-width: 230px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #list-configurations-table .time {
