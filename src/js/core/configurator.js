@@ -132,7 +132,7 @@ const configurator = {
       e.preventDefault();
 
       configurator.downloadPolicy();
-    }
+    };
   },
 
   /**
