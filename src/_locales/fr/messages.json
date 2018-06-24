@@ -108,7 +108,7 @@
     "message" : "Bloquer l'accès au gestionnaire d'add-ons (about:addons)"
   },
   "policy_description_BlockAboutConfig": {
-    "message" : "Bloquer l'accès à la configuration du navigateur (about:config)".
+    "message" : "Bloquer l'accès à la configuration du navigateur (about:config)"
   },
   "policy_description_BlockAboutProfiles": {
     "message" : "Bloquer l'accès au gestionnaire de profils de contenu (about:profiles)"
@@ -153,7 +153,7 @@
     "message" : "Autoriser ou refuser des sites Web à placer des cookies"
   },
   "policy_description_Cookies_AcceptThirdParty": {
-    "message" : "La valeur par défaut pour \"Accepter les cookies de tiers et les données du site\"".
+    "message" : "La valeur par défaut pour \"Accepter les cookies de tiers et les données du site\""
   },
   "policy_description_Cookies_AcceptThirdParty_always": {
     "message" : "Toujours"
@@ -177,7 +177,7 @@
     "message" : "Domaine"
   },
   "policy_description_Cookies_Default": {
-    "message" : "La valeur par défaut pour \"Accepter les cookies et les données de sites Web\"".
+    "message" : "La valeur par défaut pour \"Accepter les cookies et les données de sites Web\""
   },
   "policy_description_Cookies_Default_false": {
     "message" : "n'accepte pas les cookies"
@@ -204,7 +204,7 @@
     "message" : "Désactiver les outils de développement intégrés"
   },
   "policy_description_DisableFeedbackCommands": {
-    "message" : "Désactiver les options de menu \"Soumettre un feedback\" et \"Signaler un site trompeur\" dans le menu d'aide".
+    "message" : "Désactiver les options de menu \"Soumettre un feedback\" et \"Signaler un site trompeur\" dans le menu d'aide"
   },
   "policy_description_DisableFirefoxAccounts": {
     "message" : "Désactiver les services basés sur les comptes Firefox comme Firefox Sync"
@@ -216,7 +216,7 @@
     "message" : "Empêcher Firefox d'installer et d'exécuter des études (études SHIELD)"
   },
   "policy_description_DisableForgetButton": {
-    "message" : "Désactiver le bouton \"Oublier\" de la barre d'outils qui permet d'oublier le dernier historique de navigation".
+    "message" : "Désactiver le bouton \"Oublier\" de la barre d'outils qui permet d'oublier le dernier historique de navigation"
   },
   "policy_description_DisableFormHistory": {
     "message" : "Désactiver le formulaire et l'historique de la barre de recherche"
@@ -231,10 +231,10 @@
     "message" : "Désactiver le mode de navigation privée"
   },
   "policy_description_DisableProfileImport": {
-    "message" : "Désactiver le menu \"Importer des données d'un autre navigateur\" dans la bibliothèque".
+    "message" : "Désactiver le menu \"Importer des données d'un autre navigateur\" dans la bibliothèque"
   },
   "policy_description_DisableProfileRefresh": {
-    "message" : "Désactivez le bouton \"Refresh Firefox\" dans about:support".
+    "message" : "Désactivez le bouton \"Refresh Firefox\" dans about:support"
   },
   "policy_description_DisableSafeMode": {
     "message" : "Désactiver la possibilité de redémarrer Firefox avec les add-ons désactivés (mode sans échec).
@@ -369,7 +369,7 @@
     "message" : "les add-ons peuvent être installés par l'utilisateur"
   },
   "policy_description_NoDefaultBookmarks": {
-    "message" : "Ne créez pas les signets par défaut fournis avec Firefox, y compris les signets intelligents (les plus visités, les balises récentes). Note : cette politique n'est efficace que si elle est utilisée avant la première exécution du profil".
+    "message" : "Ne créez pas les signets par défaut fournis avec Firefox, y compris les signets intelligents (les plus visités, les balises récentes). Note : cette politique n'est efficace que si elle est utilisée avant la première exécution du profil"
   },
   "policy_description_OfferToSaveLogins": {
     "message" : "Permettre ou interdire à Firefox d'offrir de se souvenir des logins et mots de passe sauvegardés"
@@ -417,7 +417,7 @@
     "message" : "Ne pas demander d'authentification"
   },
   "Policy_description_Proxy_Proxy_HTTPProxy": {
-    "message" : "Proxy HTTP. Pour configurer les numéros de port, veuillez ajouter un ":" suivi du numéro de port".
+    "message" : "Proxy HTTP. Pour configurer les numéros de port, veuillez ajouter un ":" suivi du numéro de port"
   },
   "policy_description_Proxy_Mode_autoConfig": {
     "message" : "automatic proxy configuration url"
@@ -435,13 +435,13 @@
     "message" : "Utiliser les paramètres du proxy système"
   },
   "Policy_description_Proxy_Proxy_FTPProxy": {
-    "message" : "FTP Proxy. Pour configurer les numéros de port, veuillez ajouter un ":" suivi du numéro de port".
+    "message" : "FTP Proxy. Pour configurer les numéros de port, veuillez ajouter un ":" suivi du numéro de port"
   },
   "Policy_description_Proxy_Proxy_Passthrough": {
     "message" : "Pas de procuration pour...."
   },
   "Policy_description_Proxy_Proxy_SOCKSProxy": {
-    "message" : "SOCKS Host. Pour configurer les numéros de port, veuillez ajouter un ":" suivi du numéro de port".
+    "message" : "SOCKS Host. Pour configurer les numéros de port, veuillez ajouter un ":" suivi du numéro de port"
   },
   "Policy_description_Proxy_Proxy_SOCKSVersion_v4": {
     "message" : "SOCKS v4"
@@ -450,7 +450,7 @@
     "message" : "SOCKS v5"
   },
   "Policy_description_Proxy_SSLProxy_SSLProxy": {
-    "message" : "Proxy SSL. Pour configurer les numéros de port, veuillez ajouter un ":" suivi du numéro de port".
+    "message" : "Proxy SSL. Pour configurer les numéros de port, veuillez ajouter un ":" suivi du numéro de port"
   },
   "policy_description_Proxy_UseHTTPProxyForAllProtocols_false": {
     "message" : "N'utilisez pas ce serveur proxy pour tous les protocoles."
@@ -507,10 +507,10 @@
     "message" : "Nom
   },
   "Policy_description_SearchEngines_Add_SuggestURLTemplate": {
-    "message" : "URL pour les suggestions. Veuillez utiliser {conditions de recherche} comme caractère de remplacement pour le terme de recherche".
+    "message" : "URL pour les suggestions. Veuillez utiliser {conditions de recherche} comme caractère de remplacement pour le terme de recherche"
   },
   "Policy_description_SearchEngines_Add_Add_URL": {
-    "message" : "URL pour les recherches. Veuillez utiliser {conditions de recherche} comme caractère de remplacement pour le terme de recherche".
+    "message" : "URL pour les recherches. Veuillez utiliser {conditions de recherche} comme caractère de remplacement pour le terme de recherche"
   },
   "policy_description_SearchEngines_Default": {
   "message" : "Nom du moteur de recherche par défaut"
@@ -531,7 +531,7 @@
     "message" : "Nom
   },
   "Policy_description_WebsiteFilter": {
-    "message" : "Empêche les sites Web d'être visités. Vous pouvez utiliser \"<all_urls>\" pour bloquer toutes les URL. Voir le lien info pour toutes les entrées valides, mais seuls HTTPS et HTTP sont supportés.".
+    "message" : "Empêche les sites Web d'être visités. Vous pouvez utiliser \"<all_urls>\" pour bloquer toutes les URL. Voir le lien info pour toutes les entrées valides, mais seuls HTTPS et HTTP sont supportés."
   },
   "Policy_description_WebsiteFilter_Block": {
     "message" : "Bloquer les URL suivantes"
