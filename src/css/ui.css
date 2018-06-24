@@ -501,9 +501,12 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
   background: rgb(185, 0, 4);
 }
 
+#action-links .icon {
+  margin-bottom: 5px;
+}
+
 .icon {
   display: inline-block;
-  margin-bottom: 5px;
 }
 
 .icon.hidden {
@@ -522,6 +525,11 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
   color: rgb(33, 37, 42);
 }
 
+.trash-icon {
+  position: relative;
+  top: -1px;
+}
+
 #list-configurations {
   margin-bottom: 10px;
 }
@@ -535,6 +543,10 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
   padding: 10px 0;
   border-bottom: 1px solid rgb(150, 150, 150);
   text-align: left;
+}
+
+#list-configurations-table td:first-child {
+  padding-right: 10px;
 }
 
 #list-configurations-table .time {

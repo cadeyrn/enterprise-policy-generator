@@ -197,7 +197,7 @@ const management = {
       elRemoveLink.setAttribute('href', '#');
       elRemoveLink.setAttribute('title', browser.i18n.getMessage('title_remove_configuration'));
       elRemoveLink.setAttribute('data-idx', i);
-      elRemoveLink.classList.add('icon');
+      elRemoveLink.classList.add('icon', 'trash-icon');
       elRemoveLink.addEventListener('click', management.removeConfiguration);
       elIconColumn.appendChild(elRemoveLink);
 
