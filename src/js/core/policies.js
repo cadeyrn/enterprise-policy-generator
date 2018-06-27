@@ -1022,7 +1022,7 @@ const policies = {
   HardwareAcceleration : {
     description : browser.i18n.getMessage('policy_description_HardwareAcceleration'),
     enterprise_only : false,
-    first_available : { mainstream : '62.0', esr : null },
+    first_available : { mainstream : '62.0', esr : '60.2' },
     info_link : null,
     is_lockable : false,
     ui_category : 'others',

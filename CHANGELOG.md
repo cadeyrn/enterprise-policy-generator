@@ -4,6 +4,10 @@
 
 ### (Work in Progress) Version 2.1.0 (2018-07-xx)
 
+#### Enterprise Policies
+
+- changed requirement: policy to disable hardware acceleration is available from Firefox 62 and Firefox ESR 60.2 (before: only Firefox 62)
+
 #### Dependencies
 
 - updated eslint from version 5.0.0 to 5.0.1
