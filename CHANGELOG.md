@@ -29,7 +29,7 @@
 #### Enterprise Policies
 
 - new policy to disable hardware acceleration, fixes [#9](https://github.com/cadeyrn/enterprise-policy-generator/issues/9)
-- added option to remove search engines to SearchEngines policy, fixes
+- added option to remove search engines to search engines policy, fixes
   [#19](https://github.com/cadeyrn/enterprise-policy-generator/issues/19)
 
 #### Translations
