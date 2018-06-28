@@ -525,7 +525,7 @@
     "message" : "Empêcher les installations"
   },
   "Policy_description_SearchEngines_Remove": {
-    "message" : "Supprimer le(s) moteur(s) de recherche (Firefox 62+)"
+    "message" : "Supprimer le(s) moteur(s) de recherche (Firefox 62+, Firefox ESR 60.2+)"
   },
   "Policy_description_SearchEngines_Remove_Remove_Name": {
     "message" : "Nom"

@@ -525,7 +525,7 @@
     "message": "prevent installs"
   },
   "policy_description_SearchEngines_Remove": {
-    "message": "Remove search engine(s) (Firefox 62+)"
+    "message": "Remove search engine(s) (Firefox 62+, Firefox ESR 60.2+)"
   },
   "policy_description_SearchEngines_Remove_Name": {
     "message": "Name"

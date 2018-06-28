@@ -525,7 +525,7 @@
     "message": "instalacijam zajźowaś"
   },
   "policy_description_SearchEngines_Remove": {
-    "message": "Pytnice wótwónoźeś (Firefox 62+)"
+    "message": "Pytnice wótwónoźeś (Firefox 62+, Firefox ESR 60.2+)"
   },
   "policy_description_SearchEngines_Remove_Name": {
     "message": "Mě"
