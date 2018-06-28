@@ -6,7 +6,8 @@
 
 #### Enterprise Policies
 
-- changed requirement: policy to disable hardware acceleration is available from Firefox 62 and Firefox ESR 60.2 (before: only Firefox 62)
+- policies to disable Firefox updates and to disable system add-on updates are no longer ESR only and also available from Firefox 62
+- policy to disable hardware acceleration is also available from Firefox ESR 60.2
 
 #### Dependencies
 

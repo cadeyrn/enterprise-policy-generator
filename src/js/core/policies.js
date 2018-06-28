@@ -979,8 +979,8 @@ const policies = {
 
   DisableAppUpdate : {
     description : browser.i18n.getMessage('policy_description_DisableAppUpdate'),
-    enterprise_only : true,
-    first_available : { mainstream : '60.0', esr : '60.0' },
+    enterprise_only : false,
+    first_available : { mainstream : '62.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'updates-and-data',
@@ -989,8 +989,8 @@ const policies = {
 
   DisableSystemAddonUpdate : {
     description : browser.i18n.getMessage('policy_description_DisableSystemAddonUpdate'),
-    enterprise_only : true,
-    first_available : { mainstream : '60.0', esr : '60.0' },
+    enterprise_only : false,
+    first_available : { mainstream : '62.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'updates-and-data',
