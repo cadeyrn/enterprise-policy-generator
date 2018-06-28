@@ -6,7 +6,8 @@
 
 #### Enterprise Policies
 
-- policies to disable Firefox updates and to disable system add-on updates are no longer ESR only and also available from Firefox 62
+- policy to disable Firefox updates is no longer ESR only and also available from Firefox 62
+- policy to disable system add-on updates is no longer ESR only and also available from Firefox 62
 - policy to disable hardware acceleration is also available from Firefox ESR 60.2
 
 #### Dependencies
