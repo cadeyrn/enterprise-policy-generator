@@ -713,6 +713,24 @@ const policies = {
           label : browser.i18n.getMessage('policy_description_Authentication_NTLM_URL'),
           type : 'string'
         }
+      },
+      {
+        name : 'AllowNonFQDN',
+        label : browser.i18n.getMessage('policy_description_Authentication_AllowNonFQDN'),
+        mandatory : false,
+        type : 'object',
+        properties : [
+          {
+            name : 'SPNEGO',
+            label : browser.i18n.getMessage('policy_description_Authentication_AllowNonFQDN_SPNEGO'),
+            type : 'boolean'
+          },
+          {
+            name : 'NTLM',
+            label : browser.i18n.getMessage('policy_description_Authentication_AllowNonFQDN_NTLM'),
+            type : 'boolean'
+          }
+        ]
       }
     ]
   },

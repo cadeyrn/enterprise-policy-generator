@@ -86,6 +86,15 @@
   "Policy_description_Authentication": {
     "message" : "Sites supportants l'authentification intégrée"
   },
+  "policy_description_Authentication_AllowNonFQDN": {
+    "message": "Always allow SPNEGO or NTLM on non FQDNs (fully qualified domain names)"
+  },
+  "policy_description_Authentication_AllowNonFQDN_NTLM": {
+    "message": "Always allow NTLM on non FQDNs (Firefox 62+, Firefox ESR 60.2+)"
+  },
+  "policy_description_Authentication_AllowNonFQDN_SPNEGO": {
+    "message": "Always allow SPNEGO on non FQDNs (Firefox 62+, Firefox ESR 60.2+)"
+  },
   "Policy_description_Authentication_Delegated": {
     "message" : "Délégué"
   },
