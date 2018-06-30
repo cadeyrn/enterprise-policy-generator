@@ -473,10 +473,13 @@ const configurator = {
         configurator.addArrayProperty(el, parentName, policy);
         break;
       case 'boolean':
-        configurator.addBooleanProperty(el, policy);
+        configurator.addBooleanProperty(el, parentName, policy);
         break;
       case 'enum':
         configurator.addEnumProperty(el, parentName, policy, isArrayProperty);
+        break;
+      case 'object':
+        configurator.addObjectProperty(el, parentName, policy);
         break;
       case 'object-array':
         configurator.addObjectArrayProperty(el, parentName, policy);
@@ -525,20 +528,25 @@ const configurator = {
    * Adds property of the type "boolean" to a policy.
    *
    * @param {HTMLElement} el - the DOM element of the policy
+   * @param {string} parentName - the name of the parent policy object
    * @param {Object} policy - the policy object
    *
    * @returns {void}
    */
-  addBooleanProperty (el, policy) {
+  addBooleanProperty (el, parentName, policy) {
     const elObjectWrapper = document.createElement('div');
     elObjectWrapper.classList.add('checkbox');
+
+    // property name
+    const name = parentName ? parentName : policy.name;
 
     // checkbox
     const elInput = document.createElement('input');
     elInput.setAttribute('type', 'checkbox');
-    elInput.setAttribute('id', policy.name);
-    elInput.setAttribute('name', policy.name);
+    elInput.setAttribute('id', name);
+    elInput.setAttribute('name', name);
     elInput.setAttribute('data-name', policy.name);
+    elInput.classList.add('property-checkbox');
 
     // mandatory field
     if (policy.mandatory) {
@@ -549,7 +557,7 @@ const configurator = {
 
     // label
     const elLabel = document.createElement('label');
-    elLabel.setAttribute('for', policy.name);
+    elLabel.setAttribute('for', name);
     elLabel.textContent = policy.label;
     elObjectWrapper.appendChild(elLabel);
 
@@ -606,6 +614,41 @@ const configurator = {
     elSelectWrapper.appendChild(elSelect);
 
     el.appendChild(elObjectWrapper);
+  },
+
+  /**
+   * Adds property of the type "object" to a policy.
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   * @param {string} parentName - the name of the parent policy object
+   * @param {Object} policy - the policy object
+   *
+   * @returns {void}
+   */
+  addObjectProperty (el, parentName, policy) {
+    const elObjectWrapper = document.createElement('div');
+    elObjectWrapper.classList.add('object');
+    elObjectWrapper.setAttribute('data-name', policy.name);
+
+    // label
+    const elCaptionWrapper = document.createElement('div');
+    elCaptionWrapper.classList.add('label');
+    elObjectWrapper.appendChild(elCaptionWrapper);
+
+    const elCaption = document.createTextNode(policy.label);
+    elCaptionWrapper.appendChild(elCaption);
+
+    el.appendChild(elObjectWrapper);
+
+    // add properties
+    const elSubOptions = document.createElement('div');
+    elObjectWrapper.appendChild(elSubOptions);
+
+    const optionsLength = policy.properties.length;
+    for (let i = 0; i < optionsLength; i++) {
+      const name = parentName + '_' + policy.name + '_' + policy.properties[i].name;
+      configurator.addProperty(elSubOptions, name, policy.properties[i]);
+    }
   },
 
   /**
@@ -705,7 +748,7 @@ const configurator = {
   addPolicyNode (key, policy, type, inverse) {
     // start node for each policy
     const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('checkbox');
+    elObjectWrapper.classList.add('checkbox', 'policy-container');
 
     // checkbox
     const elCheckbox = document.createElement('input');

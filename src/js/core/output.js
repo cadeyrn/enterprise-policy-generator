@@ -106,6 +106,21 @@ const output = {
   generateOutputForObjects (el) {
     const policy = { };
 
+    // objects
+    [...el.parentNode.querySelectorAll(':scope > div > .object')].forEach((el) => {
+      const obj = {};
+
+      // checkboxes
+      [...el.querySelectorAll(':scope .checkbox > input')].forEach((el) => {
+        output.addCheckboxValue(el, obj);
+      });
+
+      // only add non-empty policies
+      if (Object.keys(obj).length > 0) {
+        policy[el.getAttribute('data-name')] = obj;
+      }
+    });
+
     // object arrays
     [...el.parentNode.querySelectorAll(':scope > div > .object-array')].forEach((el) => {
       const items = [];

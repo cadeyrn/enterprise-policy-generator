@@ -139,6 +139,6 @@ const serializer = {
    * @returns {boolean} - whether the policy is enabled or not
    */
   isPolicyEnabled (el) {
-    return el.closest('.checkbox').querySelector(':scope > .primary-checkbox').checked;
+    return el.closest('.policy-container').querySelector(':scope > .primary-checkbox').checked;
   }
 };
