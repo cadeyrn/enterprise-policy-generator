@@ -6,8 +6,16 @@
 
 #### Enterprise Policies
 
-- policy to disable Firefox updates is no longer ESR only and also available from Firefox 62
-- policy to disable system add-on updates is no longer ESR only and also available from Firefox 62
+- policy to disable Firefox updates is no longer ESR only and is also available from Firefox 62
+- policy to disable system add-on updates is no longer ESR only and is also available from Firefox 62
+- policy to disable telemetry is no longer ESR only and is also available from Firefox 62
+- policy to set or lock the homepage is no longer ESR only and is also available from Firefox 62
+- policy to set the default location of the search bar is no longer ESR only and is also available from Firefox 62
+- policy to install, uninstall or lock extensions is no longer ESR only and is also available from Firefox 62
+- policy to block websites from being visited is no longer ESR only and is also available from Firefox 62
+- policy to configure integrated authentication is no longer ESR only and is also available from Firefox 62
+- policy to override the first run page is no longer ESR only and is also available from Firefox 62
+- policy to override the post-update "What's New" page is no longer ESR only and is also available from Firefox 62
 - policy to disable hardware acceleration is also available from Firefox ESR 60.2
 - option to remove search engines in search engines policy is also available from Firefox ESR 60.2
 

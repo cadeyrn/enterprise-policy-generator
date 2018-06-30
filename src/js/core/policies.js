@@ -212,8 +212,8 @@ const policies = {
 
   Homepage : {
     description : browser.i18n.getMessage('policy_description_Homepage'),
-    enterprise_only : true,
-    first_available : { mainstream : '60.0', esr : '60.0' },
+    enterprise_only : false,
+    first_available : { mainstream : '62.0', esr : '60.0' },
     info_link : null,
     is_lockable : true,
     ui_category : 'customization',
@@ -240,8 +240,8 @@ const policies = {
 
   SearchBar : {
     description : browser.i18n.getMessage('policy_description_SearchBar'),
-    enterprise_only : true,
-    first_available : { mainstream : '60.0', esr : '60.0' },
+    enterprise_only : false,
+    first_available : { mainstream : '62.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'customization',
@@ -465,8 +465,8 @@ const policies = {
 
   Extensions : {
     description : browser.i18n.getMessage('policy_description_Extensions'),
-    enterprise_only : true,
-    first_available : { mainstream : '60.0', esr : '60.0' },
+    enterprise_only : false,
+    first_available : { mainstream : '62.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'customization',
@@ -509,8 +509,8 @@ const policies = {
 
   WebsiteFilter : {
     description : browser.i18n.getMessage('policy_description_WebsiteFilter'),
-    enterprise_only : true,
-    first_available : { mainstream : '60.0', esr : '60.0' },
+    enterprise_only : false,
+    first_available : { mainstream : '62.0', esr : '60.0' },
     info_link : 'https://developer.mozilla.org/Add-ons/WebExtensions/Match_patterns',
     is_lockable : false,
     ui_category : 'network',
@@ -677,8 +677,8 @@ const policies = {
 
   Authentication : {
     description : browser.i18n.getMessage('policy_description_Authentication'),
-    enterprise_only : true,
-    first_available : { mainstream : '60.0', esr : '60.0' },
+    enterprise_only : false,
+    first_available : { mainstream : '62.0', esr : '60.0' },
     info_link : 'https://developer.mozilla.org/docs/Mozilla/Integrated_authentication',
     is_lockable : false,
     ui_category : 'network',
@@ -999,8 +999,8 @@ const policies = {
 
   DisableTelemetry : {
     description : browser.i18n.getMessage('policy_description_DisableTelemetry'),
-    enterprise_only : true,
-    first_available : { mainstream : '60.0', esr : '60.0' },
+    enterprise_only : false,
+    first_available : { mainstream : '62.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'updates-and-data',
@@ -1100,8 +1100,8 @@ const policies = {
 
   OverrideFirstRunPage : {
     description : browser.i18n.getMessage('policy_description_OverrideFirstRunPage'),
-    enterprise_only : true,
-    first_available : { mainstream : '60.0', esr : '60.0' },
+    enterprise_only : false,
+    first_available : { mainstream : '62.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'others',
@@ -1111,8 +1111,8 @@ const policies = {
 
   OverridePostUpdatePage : {
     description : browser.i18n.getMessage('policy_description_OverridePostUpdatePage'),
-    enterprise_only : true,
-    first_available : { mainstream : '60.0', esr : '60.0' },
+    enterprise_only : false,
+    first_available : { mainstream : '62.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
     ui_category : 'others',
