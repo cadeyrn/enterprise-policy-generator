@@ -644,6 +644,11 @@ const configurator = {
     const elSubOptions = document.createElement('div');
     elObjectWrapper.appendChild(elSubOptions);
 
+    // property can be locked
+    if (policy.is_lockable) {
+      configurator.addLockableLink(elSubOptions, parentName + '_' + policy.name);
+    }
+
     const optionsLength = policy.properties.length;
     for (let i = 0; i < optionsLength; i++) {
       const name = parentName + '_' + policy.name + '_' + policy.properties[i].name;

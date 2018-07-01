@@ -207,6 +207,23 @@ option {
   background-image: url('../images/locked.svg');
 }
 
+.object .lock-checkbox + label {
+  padding-left: 20px;
+}
+
+.object .lock-checkbox + label::before {
+  left: -5px;
+}
+
+.object > .label {
+  font-weight: 700;
+}
+
+.object .array + .checkbox {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
 button {
   position: relative;
   padding: 8px 15px;

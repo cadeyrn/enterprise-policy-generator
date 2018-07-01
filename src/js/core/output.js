@@ -115,10 +115,39 @@ const output = {
         output.addCheckboxValue(el, obj);
       });
 
+      // simple arrays
+      [...el.querySelectorAll(':scope > div > .array')].forEach((innerEl) => {
+        const items = [];
+
+        // input fields
+        [...innerEl.querySelectorAll(':scope > .input input')].forEach((arrEl) => {
+          if (arrEl.value) {
+            items.push(arrEl.value);
+          }
+        });
+
+        // only add non-empty arrays
+        if (items.length > 0) {
+          obj[innerEl.getAttribute('data-name')] = items;
+        }
+      });
+
       // only add non-empty policies
       if (Object.keys(obj).length > 0) {
         policy[el.getAttribute('data-name')] = obj;
       }
+
+      // locked property
+      const lockable = el.querySelector(':scope > div > .lock-checkbox');
+      if (lockable && lockable.checked) {
+        if (!policy[el.getAttribute('data-name')]) {
+          policy[el.getAttribute('data-name')] = {};
+        }
+
+        policy[el.getAttribute('data-name')]['Locked'] = true;
+      }
+
+      output.addLockedField(el.querySelector(':scope > div'), policy[el.getAttribute('data-name')]);
     });
 
     // object arrays
@@ -280,13 +309,13 @@ const output = {
   /**
    * Adds the value of the "Locked" field to the output.
    *
-   * @param {HTMLInputElement} el - the DOM element of the policy
+   * @param {HTMLElement} el - the DOM element of the policy
    * @param {Object} policy - the policy object
    *
    * @returns {void}
    */
   addLockedField (el, policy) {
-    const lockable = el.parentNode.querySelector('.lock-checkbox');
+    const lockable = el.parentNode.querySelector(':scope > div > .lock-checkbox');
 
     if (lockable && lockable.checked) {
       policy['Locked'] = true;
