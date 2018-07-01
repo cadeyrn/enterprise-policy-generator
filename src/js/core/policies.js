@@ -859,6 +859,154 @@ const policies = {
     ]
   },
 
+  Permissions : {
+    description : browser.i18n.getMessage('policy_description_Permissions'),
+    enterprise_only : false,
+    first_available : { mainstream : '62.0', esr : '60.2' },
+    info_link : null,
+    is_lockable : false,
+    ui_category : 'privacy',
+    type : 'object',
+    properties : [
+      {
+        name : 'Location',
+        label : browser.i18n.getMessage('policy_description_Permissions_Location'),
+        mandatory : false,
+        is_lockable : true,
+        type : 'object',
+        properties : [
+          {
+            name : 'Allow',
+            label : browser.i18n.getMessage('policy_description_Permissions_Location_Allow'),
+            mandatory : false,
+            type : 'array',
+            items : {
+              label : browser.i18n.getMessage('policy_description_Permissions_Location_Allow_URL'),
+              type : 'string'
+            }
+          },
+          {
+            name : 'Block',
+            label : browser.i18n.getMessage('policy_description_Permissions_Location_Block'),
+            mandatory : false,
+            type : 'array',
+            items : {
+              label : browser.i18n.getMessage('policy_description_Permissions_Location_Block_URL'),
+              type : 'string'
+            }
+          },
+          {
+            name : 'BlockNewRequests',
+            label : browser.i18n.getMessage('policy_description_Permissions_Location_BlockNewRequests'),
+            type : 'boolean'
+          }
+        ]
+      },
+      {
+        name : 'Camera',
+        label : browser.i18n.getMessage('policy_description_Permissions_Camera'),
+        mandatory : false,
+        is_lockable : true,
+        type : 'object',
+        properties : [
+          {
+            name : 'Allow',
+            label : browser.i18n.getMessage('policy_description_Permissions_Camera_Allow'),
+            mandatory : false,
+            type : 'array',
+            items : {
+              label : browser.i18n.getMessage('policy_description_Permissions_Camera_Allow_URL'),
+              type : 'string'
+            }
+          },
+          {
+            name : 'Block',
+            label : browser.i18n.getMessage('policy_description_Permissions_Camera_Block'),
+            mandatory : false,
+            type : 'array',
+            items : {
+              label : browser.i18n.getMessage('policy_description_Permissions_Camera_Block_URL'),
+              type : 'string'
+            }
+          },
+          {
+            name : 'BlockNewRequests',
+            label : browser.i18n.getMessage('policy_description_Permissions_Camera_BlockNewRequests'),
+            type : 'boolean'
+          }
+        ]
+      },
+      {
+        name : 'Microphone',
+        label : browser.i18n.getMessage('policy_description_Permissions_Microphone'),
+        mandatory : false,
+        is_lockable : true,
+        type : 'object',
+        properties : [
+          {
+            name : 'Allow',
+            label : browser.i18n.getMessage('policy_description_Permissions_Microphone_Allow'),
+            mandatory : false,
+            type : 'array',
+            items : {
+              label : browser.i18n.getMessage('policy_description_Permissions_Microphone_Allow_URL'),
+              type : 'string'
+            }
+          },
+          {
+            name : 'Block',
+            label : browser.i18n.getMessage('policy_description_Permissions_Microphone_Block'),
+            mandatory : false,
+            type : 'array',
+            items : {
+              label : browser.i18n.getMessage('policy_description_Permissions_Microphone_Block_URL'),
+              type : 'string'
+            }
+          },
+          {
+            name : 'BlockNewRequests',
+            label : browser.i18n.getMessage('policy_description_Permissions_Microphone_BlockNewRequests'),
+            type : 'boolean'
+          }
+        ]
+      },
+      {
+        name : 'Notifications',
+        label : browser.i18n.getMessage('policy_description_Permissions_Notifications'),
+        mandatory : false,
+        is_lockable : true,
+        type : 'object',
+        properties : [
+          {
+            name : 'Allow',
+            label : browser.i18n.getMessage('policy_description_Permissions_Notifications_Allow'),
+            mandatory : false,
+            type : 'array',
+            items : {
+              label : browser.i18n.getMessage('policy_description_Permissions_Notifications_Allow_URL'),
+              type : 'string'
+            }
+          },
+          {
+            name : 'Block',
+            label : browser.i18n.getMessage('policy_description_Permissions_Notifications_Block'),
+            mandatory : false,
+            type : 'array',
+            items : {
+              label : browser.i18n.getMessage('policy_description_Permissions_Notifications_Block_URL'),
+              type : 'string'
+            }
+          },
+          {
+            name : 'BlockNewRequests',
+            label : browser.i18n.getMessage('policy_description_Permissions_Notifications_BlockNewRequests'),
+            type : 'boolean'
+          }
+        ]
+      }
+    ]
+  },
+
   // security
 
   FlashPlugin : {

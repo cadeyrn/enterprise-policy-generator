@@ -6,6 +6,8 @@
 
 #### Enterprise Policies
 
+- new policy to configure permissions for location, camera, microphone and notifications, fixes
+  [#18](https://github.com/cadeyrn/enterprise-policy-generator/issues/18)
 - new option for policy to configure integrated authentication: always allow SPNEGO or NTLM on non FQDNs (fully qualified domain names),
   fixes [#23](https://github.com/cadeyrn/enterprise-policy-generator/issues/23)
 - policy to disable Firefox updates is no longer ESR only and is also available from Firefox 62

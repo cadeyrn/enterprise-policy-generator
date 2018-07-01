@@ -395,6 +395,81 @@
   "policy_description_OverridePoverridePostUpdatePage": {
     "message" : "Remplacer la page \"Quoi de neuf\" après la mise à jour. Définissez cette politique sur vide si vous voulez désactiver la page post-mise à jour."
   },
+  "policy_description_Permissions": {
+    "message": "Configure permissions for location, camera, microphone and notifications"
+  },
+  "policy_description_Permissions_Camera": {
+    "message": "Camera"
+  },
+  "policy_description_Permissions_Camera_Allow": {
+    "message": "Allow access for these URLs"
+  },
+  "policy_description_Permissions_Camera_Allow_URL": {
+    "message": "URL"
+  },
+  "policy_description_Permissions_Camera_Block": {
+    "message": "Block access for these URLs"
+  },
+  "policy_description_Permissions_Camera_Block_URL": {
+    "message": "URL"
+  },
+  "policy_description_Permissions_Camera_BlockNewRequests": {
+    "message": "Block new requests asking to access your camera"
+  },
+  "policy_description_Permissions_Location": {
+    "message": "Location"
+  },
+  "policy_description_Permissions_Location_Allow": {
+    "message": "Allow access for these URLs"
+  },
+  "policy_description_Permissions_Location_Allow_URL": {
+    "message": "URL"
+  },
+  "policy_description_Permissions_Location_Block": {
+    "message": "Block access for these URLs"
+  },
+  "policy_description_Permissions_Location_Block_URL": {
+    "message": "URL"
+  },
+  "policy_description_Permissions_Location_BlockNewRequests": {
+    "message": "Block new requests asking to access your location"
+  },
+  "policy_description_Permissions_Microphone": {
+    "message": "Microphone"
+  },
+  "policy_description_Permissions_Microphone_Allow": {
+    "message": "Allow access for these URLs"
+  },
+  "policy_description_Permissions_Microphone_Allow_URL": {
+    "message": "URL"
+  },
+  "policy_description_Permissions_Microphone_Block": {
+    "message": "Block access for these URLs"
+  },
+  "policy_description_Permissions_Microphone_Block_URL": {
+    "message": "URL"
+  },
+  "policy_description_Permissions_Microphone_BlockNewRequests": {
+    "message": "Block new requests asking to access your microphone"
+  },
+  "policy_description_Permissions_Notifications": {
+    "message": "Notifications"
+  },
+  "policy_description_Permissions_Notifications_Allow": {
+    "message": "Allow notifications for these URLs"
+  },
+  "policy_description_Permissions_Notifications_Allow_URL": {
+    "message": "URL"
+  },
+  "policy_description_Permissions_Notifications_Block": {
+    "message": "Block notifications for these URLs"
+  },
+  "policy_description_Permissions_Notifications_Block_URL": {
+    "message": "URL"
+  },
+  "policy_description_Permissions_Notifications_BlockNewRequests": {
+    "message": "Block new requests asking to allow notifications"
+  },
   "policy_description_PopupupBlocking": {
     "message" : "Autoriser ou refuser l'utilisation des fenêtres pop-up"
   },
