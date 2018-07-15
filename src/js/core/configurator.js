@@ -371,11 +371,11 @@ const configurator = {
       '((\\d{1,3}\\.){3}\\d{1,3}))' +
       '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' +
       '(\\?[;&a-z\\d%_.~+=-]*)?' +
-      '(\\#[-a-z\\d_]*)?$','i'
+      '(\\#[-a-z\\d_]*)?$', 'i'
     );
 
     return pattern.test(encodeURI(string));
-},
+  },
 
   /**
    * Appends policy element to the appropriate UI category in the DOM.

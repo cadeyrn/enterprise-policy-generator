@@ -158,11 +158,9 @@ const management = {
   /**
    * List the saved configurations.
    *
-   * @param {HTMLElement} elModal - the DOM element of the modal dialog
-   *
    * @returns {void}
    */
-  async listConfigurations (elModal) {
+  async listConfigurations () {
     const { configurations } = await browser.storage.local.get({ configurations : [] });
     const configurationLength = configurations.length;
 
@@ -264,7 +262,7 @@ const management = {
     const { configurations } = await browser.storage.local.get({ configurations : [] });
     configurations.splice(e.target.parentNode.getAttribute('data-idx'), 1);
     browser.storage.local.set({ configurations : configurations });
-    management.listConfigurations(document.getElementById('modal-list-dialog'));
+    management.listConfigurations();
   }
 };
 

@@ -173,7 +173,7 @@
     "selector-max-combinators": null,
     "selector-max-compound-selectors": 4,
     "selector-max-id": 2,
-    "selector-max-pseudo-class": 2,
+    "selector-max-pseudo-class": 3,
     "selector-max-specificity": null,
     "selector-max-type": 2,
     "selector-max-universal": 0,
