@@ -90,10 +90,10 @@
     "message": "Always allow SPNEGO or NTLM on non FQDNs (fully qualified domain names)"
   },
   "policy_description_Authentication_AllowNonFQDN_NTLM": {
-    "message": "Always allow NTLM on non FQDNs (Firefox 62+, Firefox ESR 60.2+)"
+    "message": "Always allow NTLM on non FQDNs (Firefox 63+)"
   },
   "policy_description_Authentication_AllowNonFQDN_SPNEGO": {
-    "message": "Always allow SPNEGO on non FQDNs (Firefox 62+, Firefox ESR 60.2+)"
+    "message": "Always allow SPNEGO on non FQDNs (Firefox 63+)"
   },
   "policy_description_Authentication_Delegated": {
     "message": "Delegěrowany"
