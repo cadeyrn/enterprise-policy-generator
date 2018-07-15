@@ -26,6 +26,7 @@
 #### Dependencies
 
 - updated eslint from version 5.0.0 to 5.1.0
+- updated eslint-plugin-compat from version 2.4.0 to 2.5.0
 - updated gulp-eslint from version 4.0.2 to 5.0.0
 
 ---
