@@ -59,7 +59,7 @@
   "lock_preference": {
     "message": "Nastajenje pśeśiwo změnje šćitaś"
   },
-  "mandatory-label": {
+  "mandatory_label": {
     "message": "obligatoriski"
   },
   "policy_category_block_access": {

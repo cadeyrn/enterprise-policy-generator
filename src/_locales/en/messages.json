@@ -59,7 +59,7 @@
   "lock_preference": {
     "message": "Protect preference from change"
   },
-  "mandatory-label": {
+  "mandatory_label": {
     "message": "mandatory"
   },
   "policy_category_block_access": {

@@ -975,7 +975,7 @@ const configurator = {
 
     const elMandatoryLabel = document.createElement('div');
     elMandatoryLabel.classList.add('mandatory-label');
-    elMandatoryLabel.innerText = browser.i18n.getMessage('mandatory-label');
+    elMandatoryLabel.innerText = browser.i18n.getMessage('mandatory_label');
     elMandatoryWrapper.appendChild(elMandatoryLabel);
   }
 };
