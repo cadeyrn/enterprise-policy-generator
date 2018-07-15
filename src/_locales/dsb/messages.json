@@ -44,6 +44,9 @@
   "list_dialog_btn_cancel": {
     "message": "Pśetergnuś"
   },
+  "list_dialog_no_saved_configurations": {
+    "message": "No configurations have been saved yet."
+  },
   "list_dialog_window_title": {
     "message": "Konfiguaraciju zacytaś"
   },

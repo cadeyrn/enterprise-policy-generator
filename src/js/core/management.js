@@ -2,7 +2,9 @@
 
 /* global output, serializer */
 
+const elConfigurationTable = document.getElementById('list-configurations-table');
 const elListConfigurationsLink = document.getElementById('list-configurations');
+const elNoSavedConfigurations = document.getElementById('no-saved-configurations');
 const elSaveConfigurationLink = document.getElementById('save-configuration');
 
 /**
@@ -162,9 +164,20 @@ const management = {
    */
   async listConfigurations (elModal) {
     const { configurations } = await browser.storage.local.get({ configurations : [] });
+    const configurationLength = configurations.length;
+
+    // show notice if no configurations are saved, otherwise show the configurations table
+    if (configurationLength === 0) {
+      elNoSavedConfigurations.classList.remove('hidden');
+      elConfigurationTable.classList.add('hidden');
+    }
+    else {
+      elNoSavedConfigurations.classList.add('hidden');
+      elConfigurationTable.classList.remove('hidden');
+    }
 
     // tbody element, configuration rows will be added here
-    const elTableBody = elModal.querySelector('#list-configurations-table tbody');
+    const elTableBody = elConfigurationTable.querySelector('tbody');
 
     // remove old content
     while (elTableBody.firstChild) {
@@ -172,7 +185,6 @@ const management = {
     }
 
     // add configurations to table
-    const configurationLength = configurations.length;
     for (let i = 0; i < configurationLength; i++) {
       // row
       const elRow = document.createElement('tr');

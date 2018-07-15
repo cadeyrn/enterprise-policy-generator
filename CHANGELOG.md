@@ -4,6 +4,11 @@
 
 ### (Work in Progress) Version 2.1.0 (2018-07-xx)
 
+#### Enhancements
+
+- show a notice in the list configurations dialog if no configurations have been saved yet, fixes
+  [#24](https://github.com/cadeyrn/enterprise-policy-generator/issues/24)
+
 #### Enterprise Policies
 
 - new policy to configure permissions for location, camera, microphone and notifications, fixes

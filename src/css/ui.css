@@ -555,6 +555,10 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
   margin-bottom: 10px;
 }
 
+#no-saved-configurations {
+  font-style: italic;
+}
+
 #list-configurations-table {
   width: 100%;
   border-collapse: collapse;

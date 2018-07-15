@@ -44,6 +44,9 @@
   "list_dialog_btn_cancel": {
     "message": "Abbrechen"
   },
+  "list_dialog_no_saved_configurations": {
+    "message": "Es wurden noch keine Konfigurationen gespeichert."
+  },
   "list_dialog_window_title": {
     "message": "Konfiguration laden"
   },
