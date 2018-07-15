@@ -1,4 +1,10 @@
 {
+  "configuration_export": {
+    "message": "export configuration"
+  },
+  "configuration_import": {
+    "message": "import configuration"
+  },
   "enterprise_only_label": {
     "message": "funkcioněrujo jano w Firefox ESR"
   },

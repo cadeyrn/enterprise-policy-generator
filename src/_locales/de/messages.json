@@ -1,4 +1,10 @@
 {
+  "configuration_export": {
+    "message": "Konfiguration exportieren"
+  },
+  "configuration_import": {
+    "message": "Konfiguration importieren"
+  },
   "enterprise_only_label": {
     "message": "funktioniert nur in Firefox ESR"
   },
