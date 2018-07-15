@@ -82,6 +82,15 @@ const configurator = {
         const elSubOptions = el.parentNode.getElementsByClassName('sub-options');
         if (elSubOptions.length > 0) {
           elSubOptions[0].classList.toggle('disabled');
+
+          // set focus to first input or select field after a policy checkbox has been checked
+          if (!elSubOptions[0].classList.contains('disabled')) {
+            const firstInputField = elSubOptions[0].querySelector('input[type=text], select');
+
+            if (firstInputField) {
+              firstInputField.focus();
+            }
+          }
         }
       });
     });
@@ -244,6 +253,13 @@ const configurator = {
 
     // add the copied array item to the DOM
     el.parentNode.after(addedNode);
+
+    // set focus to first input or select field of the newly added array field
+    const firstInputField = addedNode.querySelector('input[type=text], select');
+
+    if (firstInputField) {
+      firstInputField.focus();
+    }
   },
 
   /**
@@ -275,6 +291,13 @@ const configurator = {
 
     // remove the array item from the DOM
     if (!el.classList.contains('disabled-link')) {
+      // set focus to previous input or select field
+      const previousInputField = el.parentNode.previousSibling.querySelector('input[type=text], select');
+
+      if (previousInputField) {
+        previousInputField.focus();
+      }
+
       el.parentNode.remove();
     }
 

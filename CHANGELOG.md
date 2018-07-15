@@ -8,6 +8,8 @@
 
 - show a notice in the list configurations dialog if no configurations have been saved yet, fixes
   [#24](https://github.com/cadeyrn/enterprise-policy-generator/issues/24)
+- set focus to first input or select field when checking a policy checkbox or when adding a new array field, set focus to previous
+  field when removing an array field, fixes [#13](https://github.com/cadeyrn/enterprise-policy-generator/issues/13)
 
 #### Enterprise Policies
 
