@@ -556,7 +556,7 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
 }
 
 #no-saved-configurations {
-  font-style: italic;
+  font-size: 14px;
 }
 
 #list-configurations-table {
