@@ -1,9 +1,9 @@
 {
   "configuration_export": {
-    "message": "export configuration"
+    "message": "konfiguraciju eksportěrowaś"
   },
   "configuration_import": {
-    "message": "import configuration"
+    "message": "konfiguraciju importěrowaś"
   },
   "enterprise_only_label": {
     "message": "funkcioněrujo jano w Firefox ESR"
@@ -33,7 +33,7 @@
     "message": "Směrnice generěrowaś"
   },
   "invalid_url_label": {
-    "message": "invalid URL"
+    "message": "njepłaśiwy URL"
   },
   "link_download": {
     "message": "policies.json ześěgnuś"
@@ -54,7 +54,7 @@
     "message": "Pśetergnuś"
   },
   "list_dialog_no_saved_configurations": {
-    "message": "No configurations have been saved yet."
+    "message": "Hyšći žedne konfiguracije skłaźone."
   },
   "list_dialog_window_title": {
     "message": "Konfiguaraciju zacytaś"
@@ -99,13 +99,13 @@
     "message": "Webboki, kótarež integrěrowanu awtentifikaciju pódpěraju"
   },
   "policy_description_Authentication_AllowNonFQDN": {
-    "message": "Always allow SPNEGO or NTLM on non FQDNs (fully qualified domain names)"
+    "message": "Pśecej SPNEGO abo NTLM na nje-FQDN (połnokwalificěrowane domenowe mjenja) dowóliś"
   },
   "policy_description_Authentication_AllowNonFQDN_NTLM": {
-    "message": "Always allow NTLM on non FQDNs (Firefox 63+)"
+    "message": "Pśecej NTLM na nje-FQDN (Firefox 63+) dowóliś"
   },
   "policy_description_Authentication_AllowNonFQDN_SPNEGO": {
-    "message": "Always allow SPNEGO on non FQDNs (Firefox 63+)"
+    "message": "Pśecej SPNEGO na nje-FQDN (Firefox 63+) dowóliś"
   },
   "policy_description_Authentication_Delegated": {
     "message": "Delegěrowany"
@@ -281,7 +281,7 @@
   "policy_description_DisableSecurityBypass_SafeBrowsing_false": {
     "message": "njezajźowaś"
   },
-    "policy_description_DisableSecurityBypass_SafeBrowsing_null": {
+  "policy_description_DisableSecurityBypass_SafeBrowsing_null": {
     "message": "žedno nastajenje"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_true": {
@@ -290,13 +290,13 @@
   "policy_description_DisableSetDesktopBackground": {
     "message": "Funkciju znjemóžniś, wobraz ako slězynu wužywaś"
   },
-   "policy_description_DisableSystemAddonUpdate": {
+  "policy_description_DisableSystemAddonUpdate": {
     "message": "Firefox instalěrowanje a aktualizěrowanje systemowych dodankow zawoboraś"
   },
   "policy_description_DisableTelemetry": {
     "message": "Firefox słanje datow k techniskim drobnostkam a interakcijam do Mozilla zawoboraś (telemetrija)"
   },
-   "policy_description_DisplayBookmarksToolbar": {
+  "policy_description_DisplayBookmarksToolbar": {
     "message": "Rědku cytańskich znamjenjow pó standarźe pokazaś"
   },
   "policy_description_DisplayMenuBar": {
@@ -408,79 +408,79 @@
     "message": "Bok nowosćow pśepisaś, kótaryž se móžo pó aktualizaciji zjawiś. Prozne zapódawańske pólo bok dopołnje znjemóžnjujo."
   },
   "policy_description_Permissions": {
-    "message": "Configure permissions for location, camera, microphone and notifications"
+    "message": "Pšawa za městno, kameru, mikrofon a powěźeńki konfigurěrowaś"
   },
   "policy_description_Permissions_Camera": {
-    "message": "Camera"
+    "message": "Kamera"
   },
   "policy_description_Permissions_Camera_Allow": {
-    "message": "Allow access for these URLs"
+    "message": "Pśistup k toś tym URL dowóliś"
   },
   "policy_description_Permissions_Camera_Allow_URL": {
     "message": "URL"
   },
   "policy_description_Permissions_Camera_Block": {
-    "message": "Block access for these URLs"
+    "message": "Pśistup k toś tym URL blokěrowaś"
   },
   "policy_description_Permissions_Camera_Block_URL": {
     "message": "URL"
   },
   "policy_description_Permissions_Camera_BlockNewRequests": {
-    "message": "Block new requests asking to access your camera"
+    "message": "Nowe napšašowanja blokěrowaś, kótarež pśistup k wašej kamerje pominaju"
   },
   "policy_description_Permissions_Location": {
-    "message": "Location"
+    "message": "Městno"
   },
   "policy_description_Permissions_Location_Allow": {
-    "message": "Allow access for these URLs"
+    "message": "Pśistup k toś tym URL dowóliś"
   },
   "policy_description_Permissions_Location_Allow_URL": {
     "message": "URL"
   },
   "policy_description_Permissions_Location_Block": {
-    "message": "Block access for these URLs"
+    "message": "Pśistup k toś tym URL blokěrowaś"
   },
   "policy_description_Permissions_Location_Block_URL": {
     "message": "URL"
   },
   "policy_description_Permissions_Location_BlockNewRequests": {
-    "message": "Block new requests asking to access your location"
+    "message": "Nowe napšašowanja blokěrowaś, kótarež pśistup k wašomu městnoju pominaju"
   },
   "policy_description_Permissions_Microphone": {
-    "message": "Microphone"
+    "message": "Mikrofon"
   },
   "policy_description_Permissions_Microphone_Allow": {
-    "message": "Allow access for these URLs"
+    "message": "Pśistup k toś tym URL dowóliś"
   },
   "policy_description_Permissions_Microphone_Allow_URL": {
     "message": "URL"
   },
   "policy_description_Permissions_Microphone_Block": {
-    "message": "Block access for these URLs"
+    "message": "Pśistup k toś tym URL blokěrowaś"
   },
   "policy_description_Permissions_Microphone_Block_URL": {
     "message": "URL"
   },
   "policy_description_Permissions_Microphone_BlockNewRequests": {
-    "message": "Block new requests asking to access your microphone"
+    "message": "Nowe napšašowanja blokěrowaś, kótarež pśistup k wašomu mikrofonoju pominaju"
   },
   "policy_description_Permissions_Notifications": {
-    "message": "Notifications"
+    "message": "Powěźeńki"
   },
   "policy_description_Permissions_Notifications_Allow": {
-    "message": "Allow notifications for these URLs"
+    "message": "Powěźeńki za toś te URL dowóliś"
   },
   "policy_description_Permissions_Notifications_Allow_URL": {
     "message": "URL"
   },
   "policy_description_Permissions_Notifications_Block": {
-    "message": "Block notifications for these URLs"
+    "message": "Powěźeńki za toś te URL blokěrowaś"
   },
   "policy_description_Permissions_Notifications_Block_URL": {
     "message": "URL"
   },
   "policy_description_Permissions_Notifications_BlockNewRequests": {
-    "message": "Block new requests asking to allow notifications"
+    "message": "Nowe napšašowanja blokěrowaś, kótarež pominaju, powěźeńki dowóliś"
   },
   "policy_description_PopupBlocking": {
     "message": "Wužywanje wuskokujucych woknow dowóliś abo zakazaś"
@@ -498,7 +498,7 @@
     "message": "Wuskokujuce wokna se pó standarźe blokěruju"
   },
   "policy_description_Proxy": {
-    "message": "Pśistup proksy na internet konfigurěrowaś"
+    "message": "Pśistup proksy do interneta konfigurěrowaś"
   },
   "policy_description_Proxy_AutoConfigURL": {
     "message": "Awotmatiska adresa konfiguracije proksy"
@@ -575,14 +575,14 @@
   "policy_description_SearchBar_options_unified": {
     "message": "pytańske polo jo kombiněrowane z adresowym pólom"
   },
-    "policy_description_SearchEngines": {
+  "policy_description_SearchEngines": {
     "message": "Změnijo lisćinu pytnicow zatwarjonych do Firefox"
   },
   "policy_description_SearchEngines_Add": {
     "message": "Pytnice pśidaś"
   },
   "policy_description_SearchEngines_Add_Alias": {
-    "message": "Alias, kótaryž so dajo za pśistup na pytnicu wužywaś"
+    "message": "Alias, kótaryž so dajo za pśistup k pytnicy wužywaś"
   },
   "policy_description_SearchEngines_Add_Description": {
     "message": "Wopisanje"
