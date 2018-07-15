@@ -121,7 +121,7 @@ const output = {
 
         // input fields
         [...innerEl.querySelectorAll(':scope > .input input')].forEach((arrEl) => {
-          if (arrEl.value) {
+          if (arrEl.value && !arrEl.classList.contains('invalid-url-style')) {
             items.push(arrEl.value);
           }
         });
@@ -160,7 +160,9 @@ const output = {
 
           // input fields
           [...el.querySelectorAll(':scope > .input input')].forEach((arrEl) => {
-            output.addInputValue(arrEl, obj);
+            if (!arrEl.classList.contains('invalid-url-style')) {
+              output.addInputValue(arrEl, obj);
+            }
           });
 
           // enum fields
@@ -187,7 +189,7 @@ const output = {
 
       // input fields
       [...el.querySelectorAll(':scope > .input input')].forEach((arrEl) => {
-        if (arrEl.value) {
+        if (arrEl.value && !arrEl.classList.contains('invalid-url-style')) {
           items.push(arrEl.value);
         }
       });
@@ -210,7 +212,9 @@ const output = {
 
     // input fields
     [...el.parentNode.querySelectorAll(':scope > div > .input input')].forEach((el) => {
-      output.addInputValue(el, policy);
+      if (!el.classList.contains('invalid-url-style')) {
+        output.addInputValue(el, policy);
+      }
     });
 
     // set "Locked" field

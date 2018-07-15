@@ -43,11 +43,13 @@ input[type='text'], input[type='url'] {
   transition: border ease 250ms;
 }
 
-input[type='text'].mandatory-style, input[type='url'].mandatory-style {
+input[type='text'].mandatory-style, input[type='url'].mandatory-style, input[type='url'].invalid-url-style {
   border-color: rgb(215, 0, 34);
 }
 
-input[type='text']:not(.mandatory-style):focus, input[type='url']:not(.mandatory-style):focus, select:focus {
+input[type='text']:not(.mandatory-style):focus,
+input[type='url']:not(.mandatory-style):not(.invalid-url-style):focus,
+select:focus {
   border-color: rgb(0, 102, 225);
 }
 
@@ -59,7 +61,7 @@ input[type='text']:not(.mandatory-style):focus, input[type='url']:not(.mandatory
   margin-top: 2px;
 }
 
-.mandatory-label {
+.mandatory-label, .invalid-url-label {
   position: absolute;
   top: 4px;
   right: 54px;
@@ -70,7 +72,7 @@ input[type='text']:not(.mandatory-style):focus, input[type='url']:not(.mandatory
   color: rgb(255, 255, 255);
 }
 
-.input + .input .mandatory-label {
+.input + .input .mandatory-label, .input + .input .invalid-url-label {
   top: 6px;
 }
 

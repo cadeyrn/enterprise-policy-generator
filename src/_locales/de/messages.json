@@ -26,6 +26,9 @@
   "generate_button": {
     "message": "Richtlinien generieren"
   },
+  "invalid_url_label": {
+    "message": "ungültige URL"
+  },
   "link_download": {
     "message": "policies.json herunterladen"
   },

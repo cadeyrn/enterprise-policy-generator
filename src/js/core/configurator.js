@@ -85,7 +85,7 @@ const configurator = {
 
           // set focus to first input or select field after a policy checkbox has been checked
           if (!elSubOptions[0].classList.contains('disabled')) {
-            const firstInputField = elSubOptions[0].querySelector('input[type=text], select');
+            const firstInputField = elSubOptions[0].querySelector('input[type=text], input[type=url], select');
 
             if (firstInputField) {
               firstInputField.focus();
@@ -103,6 +103,11 @@ const configurator = {
     // add event listener for mandatory field validation
     [...document.querySelectorAll('input[data-mandatory]')].forEach((el) => {
       el.addEventListener('input', configurator.validateMandatoryFields);
+    });
+
+    // add event listener for URL field validation
+    [...document.querySelectorAll('input[type=url]')].forEach((el) => {
+      el.addEventListener('input', configurator.validateUrlFields);
     });
 
     // action for clicking the "generate policies" button
@@ -251,11 +256,17 @@ const configurator = {
       el.parentNode.querySelector('.mandatory-label').classList.remove('hidden');
     });
 
+    // we also have to re-add the event listener for the validation of URL fields
+    addedNode.querySelectorAll('input[type=url]').forEach((el) => {
+      el.addEventListener('input', configurator.validateUrlFields);
+      el.parentNode.querySelector('.invalid-url-label').classList.add('hidden');
+    });
+
     // add the copied array item to the DOM
     el.parentNode.after(addedNode);
 
     // set focus to first input or select field of the newly added array field
-    const firstInputField = addedNode.querySelector('input[type=text], select');
+    const firstInputField = addedNode.querySelector('input[type=text], input[type=url], select');
 
     if (firstInputField) {
       firstInputField.focus();
@@ -292,10 +303,10 @@ const configurator = {
     // remove the array item from the DOM
     if (!el.classList.contains('disabled-link')) {
       // set focus to previous input or select field
-      const previousInputField = el.parentNode.previousSibling.querySelector('input[type=text], select');
+      const previousField = el.parentNode.previousSibling.querySelector('input[type=text], input[type=url], select');
 
-      if (previousInputField) {
-        previousInputField.focus();
+      if (previousField) {
+        previousField.focus();
       }
 
       el.parentNode.remove();
@@ -326,6 +337,45 @@ const configurator = {
       e.target.parentNode.querySelector('.mandatory-label').classList.remove('hidden');
     }
   },
+
+  /**
+   * Validation for URL fields.
+   *
+   * @param {InputEvent} e - event
+   *
+   * @returns {void}
+   */
+  validateUrlFields (e) {
+    // the URL field has a valid URL, hide visual indication
+    if (!e.target.value || configurator.isValidURL(e.target.value)) {
+      e.target.classList.remove('invalid-url-style');
+      e.target.parentNode.querySelector('.invalid-url-label').classList.add('hidden');
+    }
+    // the URL field has not a valid URL, add visual indication
+    else {
+      e.target.classList.add('invalid-url-style');
+      e.target.parentNode.querySelector('.invalid-url-label').classList.remove('hidden');
+    }
+  },
+
+  /**
+   * Tests if a given string is a valid URL.
+   *
+   * @param {string} string - the string to check
+   *
+   * @returns {boolean} - whether the given string is a valid URL or not
+   */
+  isValidURL (string) {
+    const pattern = new RegExp('^(https?:\\/\\/)?' +
+      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.?)+[a-z]{2,}|' +
+      '((\\d{1,3}\\.){3}\\d{1,3}))' +
+      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' +
+      '(\\?[;&a-z\\d%_.~+=-]*)?' +
+      '(\\#[-a-z\\d_]*)?$','i'
+    );
+
+    return pattern.test(encodeURI(string));
+},
 
   /**
    * Appends policy element to the appropriate UI category in the DOM.
@@ -739,7 +789,14 @@ const configurator = {
 
     // input field
     const elInput = document.createElement('input');
-    elInput.setAttribute('type', 'text');
+
+    if (isUrl) {
+      elInput.setAttribute('type', 'url');
+    }
+    else {
+      elInput.setAttribute('type', 'text');
+    }
+
     elInput.setAttribute('id', domName);
     elInput.setAttribute('name', domName);
     elInput.setAttribute('placeholder', policy.label);
@@ -751,6 +808,11 @@ const configurator = {
     // mandatory field
     if (policy.mandatory) {
       configurator.addMandatoryLabel(elInput, elObjectWrapper);
+    }
+
+    // URL validation label
+    if (isUrl) {
+      configurator.addInvalidUrlLabel(elObjectWrapper);
     }
 
     elObjectWrapper.appendChild(elInput);
@@ -977,6 +1039,20 @@ const configurator = {
     elMandatoryLabel.classList.add('mandatory-label');
     elMandatoryLabel.innerText = browser.i18n.getMessage('mandatory_label');
     elMandatoryWrapper.appendChild(elMandatoryLabel);
+  },
+
+  /**
+   * Adds a label for invalid URLs.
+   *
+   * @param {HTMLElement} elObjectWrapper - the DOM node of the wrapping element
+   *
+   * @returns {void}
+   */
+  addInvalidUrlLabel (elObjectWrapper) {
+    const elLabel = document.createElement('div');
+    elLabel.classList.add('invalid-url-label', 'hidden');
+    elLabel.innerText = browser.i18n.getMessage('invalid_url_label');
+    elObjectWrapper.appendChild(elLabel);
   }
 };
 

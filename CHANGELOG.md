@@ -6,6 +6,7 @@
 
 #### Enhancements
 
+- added a validation for fields where a valid URL is required, fixes [#11](https://github.com/cadeyrn/enterprise-policy-generator/issues/11)
 - show a notice in the list configurations dialog if no configurations have been saved yet, fixes
   [#24](https://github.com/cadeyrn/enterprise-policy-generator/issues/24)
 - set focus to first input or select field when checking a policy checkbox or when adding a new array field, set focus to previous

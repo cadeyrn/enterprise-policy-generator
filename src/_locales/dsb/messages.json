@@ -26,6 +26,9 @@
   "generate_button": {
     "message": "Směrnice generěrowaś"
   },
+  "invalid_url_label": {
+    "message": "invalid URL"
+  },
   "link_download": {
     "message": "policies.json ześěgnuś"
   },

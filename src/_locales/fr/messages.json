@@ -26,6 +26,9 @@
   "generate_button": {
     "message" : "Générer des politiques"
   },
+  "invalid_url_label": {
+    "message": "invalid URL"
+  },
   "link_download": {
     "message" : "download policies.json.json"
   },
