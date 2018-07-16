@@ -42,6 +42,10 @@
   [#25](https://github.com/cadeyrn/enterprise-policy-generator/issues/25)
 - option to remove search engines in search engines policy is also available from Firefox ESR 60.2, see
   [#25](https://github.com/cadeyrn/enterprise-policy-generator/issues/25)
+  
+#### Translations
+
+- updated French translation (Thanks, Rom!)
 
 #### Dependencies
 
