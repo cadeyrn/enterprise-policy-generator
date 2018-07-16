@@ -1,9 +1,9 @@
 {
   "configuration_export": {
-    "message": "export configuration"
+    "message": "exporter configuration"
   },
   "configuration_import": {
-    "message": "import configuration"
+    "message": "importer configuration"
   },
   "enterprise_only_label": {
     "message": "Fonctionne uniquement avec Firefox ESR"
@@ -33,10 +33,10 @@
     "message" : "Générer des politiques"
   },
   "invalid_url_label": {
-    "message": "invalid URL"
+    "message": "Adresse invalide"
   },
   "link_download": {
-    "message" : "download policies.json.json"
+    "message" : "télécharger policies.json.json"
   },
   "link_learn_more": {
     "message" : "plus d'informations"
@@ -54,7 +54,7 @@
     "message" : "Annuler"
   },
   "list_dialog_no_saved_configurations": {
-    "message": "No configurations have been saved yet."
+    "message": "Aucune configuration n'a encore été sauvegardée."
   },
   "list_dialog_window_title": {
     "message" : "Charger la configuration"
@@ -99,31 +99,31 @@
     "message" : "Sites supportants l'authentification intégrée"
   },
   "policy_description_Authentication_AllowNonFQDN": {
-    "message": "Always allow SPNEGO or NTLM on non FQDNs (fully qualified domain names)"
+    "message": "Toujours autoriser SPNEGO ou NTLM hors des FQDNs (noms de domaine entièrement qualifiés)"
   },
   "policy_description_Authentication_AllowNonFQDN_NTLM": {
-    "message": "Always allow NTLM on non FQDNs (Firefox 63+)"
+    "message": "Toujours autoriser NTLM hors des FQDNs (Firefox 63+)"
   },
   "policy_description_Authentication_AllowNonFQDN_SPNEGO": {
-    "message": "Always allow SPNEGO on non FQDNs (Firefox 63+)"
+    "message": "Toujours autoriser SPNEGO hors des FQDNs (Firefox 63+)"
   },
   "Policy_description_Authentication_Delegated": {
     "message" : "Délégué"
   },
   "Policy_description_Authentication_Delegated_URL": {
-    "message" : "URL"
+    "message" : "Adresse"
   },
   "policy_description_Authentication_NTLM": {
     "message" : "NTLM"
   },
   "Policy_description_Authentication_NTLM_URL": {
-    "message" : "URL"
+    "message" : "Adresse"
   },
   "Policy_description_Authentication_SPNEGO": {
     "message" : "SPNEGO"
   },
   "Policy_description_Authentication_SPNEGO_URL": {
-    "message" : "URL"
+    "message" : "Adresse"
   },
   "policy_description_BlockAboutAddons": {
     "message" : "Bloquer l'accès au gestionnaire d'add-ons (about:addons)"
@@ -159,7 +159,7 @@
     "message" : "Titre"
   },
   "policy_description_Bookmarks_URL": {
-    "message" : "URL"
+    "message" : "Adresse"
   },
   "policy_description_Certificates": {
     "message" : "Lire les certificats de la liste de certificats de Windows (Windows uniquement)"
@@ -318,10 +318,10 @@
     "message" : "Installer, désinstaller ou verrouiller les extensions"
   },
   "policy_description_Extensions_Install": {
-    "message" : "Installer les add-ons. Vous pouvez spécifier des URL ou des chemins d'accès."
+    "message" : "Installer les add-ons. Vous pouvez spécifier des adresses ou des chemins d'accès."
   },
   "policy_description_Extensions_Install_URL_URL_or_Path": {
-    "message" : "URL ou chemin d'accès"
+    "message" : "Adresse ou chemin d'accès"
   },
   "Policy_description_Extensions_Locked": {
     "message" : "Les extensions verrouillées ne peuvent pas être désactivées ou désinstallées. Veuillez spécifier les ID d'extension."
@@ -339,16 +339,16 @@
     "message" : "Autoriser ou refuser l'utilisation du plugin Flash"
   },
   "policy_description_FlashPlugin_Allow": {
-    "message" : "Activer le plugin Flash pour ces URLs par défaut, sauf si Flash est complètement désactivé."
+    "message" : "Activer le plugin Flash pour ces adresses par défaut, sauf si Flash est complètement désactivé."
   },
   "Policy_description_FlashPlugin_Allow_URL": {
-    "message" : "URL"
+    "message" : "Adresse"
   },
   "policy_description_FlashPlugin_Block": {
-    "message" : "Bloquer le plugin Flash pour ces URLs"
+    "message" : "Bloquer le plugin Flash pour ces adresses"
   },
   "Policy_description_FlashPlugin_Block_URL": {
-    "message" : "URL"
+    "message" : "Adresse"
   },
   "policy_description_FlashPlugin_Default": {
     "message" : "Toujours activer ou désactiver Flash"
@@ -369,10 +369,10 @@
     "message" : "Set the homepage"
   },
   "policy_description_Homepage_Additional": {
-    "message" : "URLs supplémentaires"
+    "message" : "Adresses supplémentaires"
   },
   "policy_description_Homepage_URL": {
-    "message" : "URL"
+    "message" : "Adresse"
   },
   "policy_description_InstallAddonsPermission": {
     "message" : "Permettre aux sites web d'installer des add-ons"
@@ -381,7 +381,7 @@
     "message" : "Les sites Web qui peuvent installer des extensions à moins que l'installation d'add-ons soit désactivée (addons.mozilla.org est déjà autorisé)."
   },
   "policy_description_InstallAddonsPermission_Allow_URL": {
-    "message" : "URL"
+    "message" : "Adresse"
   },
   "policy_description_InstallAddonsPermission_Default_false": {
     "message" : "les add-ons ne peuvent pas être installés par l'utilisateur"
@@ -408,79 +408,79 @@
     "message" : "Remplacer la page \"Quoi de neuf\" après la mise à jour. Définissez cette politique sur vide si vous voulez désactiver la page post-mise à jour."
   },
   "policy_description_Permissions": {
-    "message": "Configure permissions for location, camera, microphone and notifications"
+    "message": "Configurer les permissions pour l'emplacement, la caméra, le microphone et les notifications"
   },
   "policy_description_Permissions_Camera": {
-    "message": "Camera"
+    "message": "Caméra"
   },
   "policy_description_Permissions_Camera_Allow": {
-    "message": "Allow access for these URLs"
+    "message": "Autoriser l'accès pour ces adresses"
   },
   "policy_description_Permissions_Camera_Allow_URL": {
-    "message": "URL"
+    "message": "Adresse"
   },
   "policy_description_Permissions_Camera_Block": {
-    "message": "Block access for these URLs"
+    "message": "Bloquer l'accès pour ces adresses"
   },
   "policy_description_Permissions_Camera_Block_URL": {
-    "message": "URL"
+    "message": "Adresse"
   },
   "policy_description_Permissions_Camera_BlockNewRequests": {
-    "message": "Block new requests asking to access your camera"
+    "message": "Bloquer les nouvelles requêtes demandant l'activation de votre caméra"
   },
   "policy_description_Permissions_Location": {
-    "message": "Location"
+    "message": "Emplacement"
   },
   "policy_description_Permissions_Location_Allow": {
-    "message": "Allow access for these URLs"
+    "message": "Autoriser accès pour ces adresses"
   },
   "policy_description_Permissions_Location_Allow_URL": {
-    "message": "URL"
+    "message": "Adresse"
   },
   "policy_description_Permissions_Location_Block": {
-    "message": "Block access for these URLs"
+    "message": "Bloquer l'accès pour ces adresses"
   },
   "policy_description_Permissions_Location_Block_URL": {
-    "message": "URL"
+    "message": "Adresse"
   },
   "policy_description_Permissions_Location_BlockNewRequests": {
-    "message": "Block new requests asking to access your location"
+    "message": "Bloquer les nouvelles requêtes demandant l'accès à votre emplacement"
   },
   "policy_description_Permissions_Microphone": {
     "message": "Microphone"
   },
   "policy_description_Permissions_Microphone_Allow": {
-    "message": "Allow access for these URLs"
+    "message": "Autoriser l'accès pour ces adresses"
   },
   "policy_description_Permissions_Microphone_Allow_URL": {
-    "message": "URL"
+    "message": "Adresse"
   },
   "policy_description_Permissions_Microphone_Block": {
-    "message": "Block access for these URLs"
+    "message": "Bloquer l'accès pour ces adresses"
   },
   "policy_description_Permissions_Microphone_Block_URL": {
-    "message": "URL"
+    "message": "Adresse"
   },
   "policy_description_Permissions_Microphone_BlockNewRequests": {
-    "message": "Block new requests asking to access your microphone"
+    "message": "Bloquer les nouvelles requêtes demandant l'activation de votre microphone"
   },
   "policy_description_Permissions_Notifications": {
     "message": "Notifications"
   },
   "policy_description_Permissions_Notifications_Allow": {
-    "message": "Allow notifications for these URLs"
+    "message": "Autoriser les notifications pour ces adresses"
   },
   "policy_description_Permissions_Notifications_Allow_URL": {
-    "message": "URL"
+    "message": "Adresse"
   },
   "policy_description_Permissions_Notifications_Block": {
-    "message": "Block notifications for these URLs"
+    "message": "Bloquer les notifications pour ces adresses"
   },
   "policy_description_Permissions_Notifications_Block_URL": {
-    "message": "URL"
+    "message": "Adresse"
   },
   "policy_description_Permissions_Notifications_BlockNewRequests": {
-    "message": "Block new requests asking to allow notifications"
+    "message": "Bloquer les nouvelles requêtes demandants l'activation des notifications"
   },
   "policy_description_PopupupBlocking": {
     "message" : "Autoriser ou refuser l'utilisation des fenêtres pop-up"
@@ -489,7 +489,7 @@
     "message" : "Domaines pour lesquels les fenêtres pop-up sont autorisées"
   },
   "Policy_description_PopupupBlocking_Allow_URL": {
-    "message" : "URL"
+    "message" : "Adresse"
   },
   "Policy_description_PopupBlocking_Default_Default_false": {
     "message" : "les pop-ups ne sont pas bloqués par défaut"
@@ -501,7 +501,7 @@
     "message" : "Configurez l'accès par procuration à Internet"
   },
   "policy_description_Proxy_AutoConfigURL": {
-    "message" : "URL de configuration automatique du proxy"
+    "message" : "Adresse de configuration automatique du proxy"
   },
   "Policy_description_Proxy_AutoLogin": {
     "message" : "Demande d'authentification"
@@ -588,7 +588,7 @@
     "message" : "Description"
   },
   "Policy_description_SearchEngines_Add_IconURL": {
-    "message" : "Icône URL"
+    "message" : "Adresse icône"
   },
   "Policy_description_SearchEngines_Add_Add_Method": {
     "message" : "Méthode de demande"
@@ -603,10 +603,10 @@
     "message" : "Nom"
   },
   "Policy_description_SearchEngines_Add_SuggestURLTemplate": {
-    "message" : "URL pour les suggestions. Veuillez utiliser {conditions de recherche} comme caractère de remplacement pour le terme de recherche"
+    "message" : "Adresse pour les suggestions. Veuillez utiliser {conditions de recherche} comme caractère de remplacement pour le terme de recherche"
   },
   "Policy_description_SearchEngines_Add_Add_URL": {
-    "message" : "URL pour les recherches. Veuillez utiliser {conditions de recherche} comme caractère de remplacement pour le terme de recherche"
+    "message" : "Adresse pour les recherches. Veuillez utiliser {conditions de recherche} comme caractère de remplacement pour le terme de recherche"
   },
   "policy_description_SearchEngines_Default": {
   "message" : "Nom du moteur de recherche par défaut"
@@ -630,16 +630,16 @@
     "message" : "Empêche les sites Web d'être visités. Vous pouvez utiliser \"<all_urls>\" pour bloquer toutes les URL. Voir le lien info pour toutes les entrées valides, mais seuls HTTPS et HTTP sont supportés."
   },
   "Policy_description_WebsiteFilter_Block": {
-    "message" : "Bloquer les URL suivantes"
+    "message" : "Bloquer les Adresses suivantes"
   },
   "Policy_description_WebsiteFilter_Block_Block_URL": {
-    "message" : "URL"
+    "message" : "Adresse"
   },
   "Policy_description_WebsiteFilter_Exceptions": {
     "message" : "Exceptions"
   },
   "Policy_description_WebsiteFilter_Exceptions_URL": {
-    "message" : "URL"
+    "message" : "Adresse"
   },
   "save_dialog_btn_cancel": {
     "message" : "Annuler"
