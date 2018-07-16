@@ -255,7 +255,7 @@
     "message" : "Désactiver le menu \"Importer des données d'un autre navigateur\" dans la bibliothèque"
   },
   "policy_description_DisableProfileRefresh": {
-    "message" : "Désactivez le bouton \"Refresh Firefox\" dans \"about:support\""
+    "message" : "Désactivez le bouton \"Refresh Firefox\" dans about:support"
   },
   "policy_description_DisableSafeMode": {
     "message" : "Désactiver la possibilité de redémarrer Firefox avec les add-ons désactivés (mode sans échec)."
