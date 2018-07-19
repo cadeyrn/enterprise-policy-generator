@@ -16,6 +16,8 @@
 
 - new policy to configure permissions for location, camera, microphone and notifications (Firefox 62+, Firefox ESR 60.2+), fixes
   [#18](https://github.com/cadeyrn/enterprise-policy-generator/issues/18)
+- new policy to set a different server URL for Firefox updates (Firefox 63+), fixes
+  [#29](https://github.com/cadeyrn/enterprise-policy-generator/issues/29)
 - new option for policy to configure integrated authentication: always allow SPNEGO or NTLM on non fully qualified domain names
   (Firefox 63+), fixes [#23](https://github.com/cadeyrn/enterprise-policy-generator/issues/23)
 - policy to disable Firefox updates is no longer ESR only and is also available from Firefox 62, see

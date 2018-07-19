@@ -95,6 +95,9 @@
   "policy_category_others": {
     "message": "Sonstige Richtlinien"
   },
+  "policy_description_AppUpdateURL": {
+    "message": "Abweichende Server-URL für Firefox-Aktualisierungen"
+  },
   "policy_description_Authentication": {
     "message": "Webseiten, welche eine integrierte Authentifizierung unterstützen"
   },

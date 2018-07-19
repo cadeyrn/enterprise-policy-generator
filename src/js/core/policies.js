@@ -1153,6 +1153,17 @@ const policies = {
     type : 'boolean'
   },
 
+  AppUpdateURL : {
+    description : browser.i18n.getMessage('policy_description_AppUpdateURL'),
+    enterprise_only : false,
+    first_available : { mainstream : '63.0', esr : null },
+    info_link : null,
+    is_lockable : false,
+    ui_category : 'updates-and-data',
+    type : 'string',
+    label : 'URL'
+  },
+
   DisableSystemAddonUpdate : {
     description : browser.i18n.getMessage('policy_description_DisableSystemAddonUpdate'),
     enterprise_only : false,

@@ -95,6 +95,9 @@
   "policy_category_others": {
     "message": "Druge směrnice"
   },
+  "policy_description_AppUpdateURL": {
+    "message": "Different server URL for Firefox updates"
+  },
   "policy_description_Authentication": {
     "message": "Webboki, kótarež integrěrowanu awtentifikaciju pódpěraju"
   },
