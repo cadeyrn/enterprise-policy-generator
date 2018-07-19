@@ -96,7 +96,7 @@
     "message" : "Autres politiques"
   },
   "policy_description_AppUpdateURL": {
-    "message": "Different server URL for Firefox updates"
+    "message": "Adresse différente pour les mises à jours de Firefox"
   },
   "Policy_description_Authentication": {
     "message" : "Sites supportants l'authentification intégrée"
