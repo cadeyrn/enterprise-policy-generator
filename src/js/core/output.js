@@ -239,7 +239,9 @@ const output = {
    * @returns {void}
    */
   generateOutputForStrings (el) {
-    policymanager.add(el.getAttribute('data-name'), el.parentNode.querySelector('input[type=text]').value);
+    if (!output.hasInvalidFields(el)) {
+      policymanager.add(el.getAttribute('data-name'), el.parentNode.querySelector('input[type=text]').value);
+    }
   },
 
   /**
@@ -250,10 +252,12 @@ const output = {
    * @returns {void}
    */
   generateOutputForUrls (el) {
-    const inputField = el.parentNode.querySelector('input[type=url]');
+    if (!output.hasInvalidFields(el.parentNode)) {
+      const inputField = el.parentNode.querySelector('input[type=url]');
 
-    if (!inputField.classList.contains('invalid-url-style')) {
-      policymanager.add(el.getAttribute('data-name'), inputField.value);
+      if (!inputField.classList.contains('invalid-url-style')) {
+        policymanager.add(el.getAttribute('data-name'), inputField.value);
+      }
     }
   },
 

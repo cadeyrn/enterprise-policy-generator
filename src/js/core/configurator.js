@@ -535,6 +535,11 @@ const configurator = {
     elInput.setAttribute('data-name', key);
     elInput.setAttribute('placeholder', policy.label);
 
+    // mandatory field
+    if (policy.mandatory) {
+      configurator.addMandatoryLabel(elInput, elSubOptions);
+    }
+
     // URL validation label
     if (isUrl) {
       configurator.addInvalidUrlLabel(elSubOptions);
