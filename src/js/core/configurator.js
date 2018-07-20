@@ -69,7 +69,10 @@ const configurator = {
         configurator.addObjectOption(key, policies[key]);
       }
       else if (policies[key].type === 'string') {
-        configurator.addStringOption(key, policies[key]);
+        configurator.addStringOption(key, policies[key], false);
+      }
+      else if (policies[key].type === 'url') {
+        configurator.addStringOption(key, policies[key], true);
       }
     }
 
@@ -505,11 +508,13 @@ const configurator = {
    *
    * @param {string} key - the name of the policy
    * @param {Object} policy - the policy object
+   * @param {boolean} isUrl - if true, the option is of the type "url", otherwise it's of the type "string"
    *
    * @returns {void}
    */
-  addStringOption (key, policy) {
-    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'string');
+  addStringOption (key, policy, isUrl) {
+    const type = isUrl ? 'url' : 'string';
+    const elObjectWrapper = configurator.addPolicyNode(key, policy, type);
     const elSubOptions = configurator.addSubOptions(elObjectWrapper);
 
     // input field
@@ -517,11 +522,23 @@ const configurator = {
     elInputWrapper.classList.add('input');
 
     const elInput = document.createElement('input');
-    elInput.setAttribute('type', 'text');
+
+    if (isUrl) {
+      elInput.setAttribute('type', 'url');
+    }
+    else {
+      elInput.setAttribute('type', 'text');
+    }
+
     elInput.setAttribute('id', key + '_Text');
     elInput.setAttribute('name', key + '_Text');
     elInput.setAttribute('data-name', key);
     elInput.setAttribute('placeholder', policy.label);
+
+    // URL validation label
+    if (isUrl) {
+      configurator.addInvalidUrlLabel(elSubOptions);
+    }
 
     elSubOptions.appendChild(elInput);
 

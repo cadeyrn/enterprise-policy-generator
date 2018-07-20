@@ -32,6 +32,9 @@ const output = {
         else if (el.getAttribute('data-type') === 'string') {
           output.generateOutputForStrings(el);
         }
+        else if (el.getAttribute('data-type') === 'url') {
+          output.generateOutputForUrls(el);
+        }
       }
     });
 
@@ -227,7 +230,7 @@ const output = {
   },
 
   /**
-   * Generates output for policies of type "string" or "url".
+   * Generates output for policies of type "string".
    *
    * @param {HTMLElement} el - the DOM element of the policy
    *
@@ -235,6 +238,17 @@ const output = {
    */
   generateOutputForStrings (el) {
     policymanager.add(el.getAttribute('data-name'), el.parentNode.querySelector('input[type=text]').value);
+  },
+
+  /**
+   * Generates output for policies of type "url".
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   *
+   * @returns {void}
+   */
+  generateOutputForUrls (el) {
+    policymanager.add(el.getAttribute('data-name'), el.parentNode.querySelector('input[type=url]').value);
   },
 
   /**
