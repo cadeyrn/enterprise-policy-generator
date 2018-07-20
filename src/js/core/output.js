@@ -250,7 +250,11 @@ const output = {
    * @returns {void}
    */
   generateOutputForUrls (el) {
-    policymanager.add(el.getAttribute('data-name'), el.parentNode.querySelector('input[type=url]').value);
+    const inputField = el.parentNode.querySelector('input[type=url]');
+
+    if (!inputField.classList.contains('invalid-url-style')) {
+      policymanager.add(el.getAttribute('data-name'), inputField.value);
+    }
   },
 
   /**
