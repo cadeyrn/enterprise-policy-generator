@@ -33,6 +33,10 @@ label {
   cursor: pointer;
 }
 
+label + .sub-options:not(.disabled) {
+  margin-top: 10px;
+}
+
 input[type='text'], input[type='url'] {
   box-sizing: border-box;
   padding: 0 10px;
