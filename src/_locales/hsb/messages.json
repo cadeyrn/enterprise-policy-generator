@@ -96,7 +96,7 @@
     "message": "Druhe směrnicy"
   },
   "policy_description_AppUpdateURL": {
-    "message": "Different server URL for Firefox updates"
+    "message": "Wotchilny serwerowy URL za aktualizacije Firefox"
   },
   "policy_description_Authentication": {
     "message": "Webstrony, kotrež integrowanu awtentifikaciju podpěruja"
