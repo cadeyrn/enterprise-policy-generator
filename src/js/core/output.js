@@ -150,7 +150,9 @@ const output = {
         policy[el.getAttribute('data-name')]['Locked'] = true;
       }
 
-      output.addLockedField(el.querySelector(':scope > div'), policy[el.getAttribute('data-name')]);
+      if (policy[el.getAttribute('data-name')]) {
+        output.addLockedField(el.querySelector(':scope > div'), policy[el.getAttribute('data-name')]);
+      }
     });
 
     // object arrays
