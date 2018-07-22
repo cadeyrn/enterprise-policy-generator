@@ -442,11 +442,11 @@ const management = {
    * Saves the current configuration with a name and the current date and time.
    *
    * @param {string} name - the name of the configuration
-   * @param {HTMLElement} name - the DOM element of the configuration file input
+   * @param {HTMLElement} elLocalFile - the DOM element of the configuration file input
    *
    * @returns {void}
    */
-  async importConfiguration (name, elLocalFile) {
+  importConfiguration (name, elLocalFile) {
     const reader = new FileReader();
 
     reader.readAsText(elLocalFile.files[0]);
