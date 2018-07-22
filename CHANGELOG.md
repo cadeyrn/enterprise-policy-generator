@@ -2,11 +2,13 @@
 
 ## Release Notes
 
-### (Work in Progress) Version 2.1.0 (2018-07-xx)
+### [Version 3.0.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v3.0.0) (2018-07-22)
 
 #### Enhancements
 
-- added a validation for fields where a valid URL is required, fixes [#11](https://github.com/cadeyrn/enterprise-policy-generator/issues/11)
+- **configurations could already be saved and loaded at a later time since version 2.0.0. Now configurations can also be exported and
+  re-imported on other devices**, fixes [#22](https://github.com/cadeyrn/enterprise-policy-generator/issues/22)
+- **added a validation for fields where a valid URL is required**, fixes [#11](https://github.com/cadeyrn/enterprise-policy-generator/issues/11)
 - show a notice in the list configurations dialog if no configurations have been saved yet, fixes
   [#24](https://github.com/cadeyrn/enterprise-policy-generator/issues/24)
 - set focus to first input or select field when checking a policy checkbox or when adding a new array field, set focus to previous
@@ -55,6 +57,9 @@
 - updated eslint from version 5.0.0 to 5.2.0
 - updated eslint-plugin-compat from version 2.4.0 to 2.5.1
 - updated gulp-eslint from version 4.0.2 to 5.0.0
+
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v2.0.0...v3.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-3.0.0)
 
 ---
 
