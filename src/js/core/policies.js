@@ -312,7 +312,7 @@ const policies = {
             name : 'IconURL',
             label : browser.i18n.getMessage('policy_description_SearchEngines_Add_IconURL'),
             mandatory : false,
-            type : 'string'
+            type : 'url'
           },
           {
             name : 'Alias',
@@ -640,7 +640,7 @@ const policies = {
         name : 'AutoConfigURL',
         label : browser.i18n.getMessage('policy_description_Proxy_AutoConfigURL'),
         mandatory : false,
-        type : 'string'
+        type : 'url'
       },
       {
         name : 'AutoLogin',
@@ -1160,7 +1160,7 @@ const policies = {
     info_link : null,
     is_lockable : false,
     ui_category : 'updates-and-data',
-    type : 'string',
+    type : 'url',
     label : 'URL'
   },
 
@@ -1282,7 +1282,7 @@ const policies = {
     info_link : null,
     is_lockable : false,
     ui_category : 'others',
-    type : 'string',
+    type : 'url',
     label : 'URL'
   },
 
@@ -1293,7 +1293,7 @@ const policies = {
     info_link : null,
     is_lockable : false,
     ui_category : 'others',
-    type : 'string',
+    type : 'url',
     label : 'URL'
   }
 };
