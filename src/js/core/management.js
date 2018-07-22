@@ -226,11 +226,10 @@ const management = {
 
       // fake export icon (permission not yet granted)
       const elFakeExportLink = document.createElement('a');
-      elFakeExportLink.setAttribute('id', 'fake-export-link');
       elFakeExportLink.setAttribute('href', '#');
       elFakeExportLink.setAttribute('title', browser.i18n.getMessage('configuration_export'));
       elFakeExportLink.setAttribute('data-idx', i);
-      elFakeExportLink.classList.add('icon');
+      elFakeExportLink.classList.add('icon', 'fake-export-link');
       elFakeExportLink.addEventListener('click', management.grantDownloadPermission);
       elIconColumn.appendChild(elFakeExportLink);
 
@@ -241,11 +240,10 @@ const management = {
 
       // export icon
       const elExportLink = document.createElement('a');
-      elExportLink.setAttribute('id', 'export-link');
       elExportLink.setAttribute('href', '#');
       elExportLink.setAttribute('title', browser.i18n.getMessage('configuration_export'));
       elExportLink.setAttribute('data-idx', i);
-      elExportLink.classList.add('icon', 'hidden');
+      elExportLink.classList.add('icon', 'export-link', 'hidden');
       elExportLink.addEventListener('click', management.exportConfiguration);
       elIconColumn.appendChild(elExportLink);
 
@@ -315,8 +313,8 @@ const management = {
     // if the downloads permission is granted hide the link for granting permission and show the
     // real export link instead
     if (granted) {
-      document.getElementById('fake-export-link').classList.add('hidden');
-      document.getElementById('export-link').classList.remove('hidden');
+      document.querySelector('.fake-export-link').classList.add('hidden');
+      document.querySelector('.export-link').classList.remove('hidden');
     }
   },
 
