@@ -68,10 +68,18 @@
         </div>
       </div>
       <hr />
-      <a href='#' id='list-configurations' class='icon'>
-        <img src='../images/cog.svg' alt='' />
-        <span data-i18n='link_load_configuration'></span>
-      </a>
+      <div>
+        <a href='#' id='list-configurations' class='icon'>
+          <img src='../images/cog.svg' alt='' />
+          <span data-i18n='link_load_configuration'></span>
+        </a>
+      </div>
+      <div>
+        <a href='#' id='import-configuration' class='icon'>
+          <img src='../images/export.svg' alt='' />
+          <span data-i18n='configuration_import'></span>
+        </a>
+      </div>
     </section>
   </main>
   <footer id='footer'>
@@ -118,6 +126,28 @@
       </section>
       <aside>
         <button id='button-list-dialog-cancel' class='secondary-action' data-i18n='list_dialog_btn_cancel'></button>
+      </aside>
+    </div>
+  </div>
+  <div id='import-configuration-dialog' class='modal-dialog'>
+    <div>
+      <header>
+        <div data-i18n='configuration_import'></div>
+      </header>
+      <section>
+        <form>
+          <div>
+            <label for='import-dialog-name' data-i18n='save_dialog_form_name'></label>
+            <input type='text' name='import-dialog-name' id='import-dialog-name' />
+          </div>
+          <p>
+            <input type='file' id='import-file-input' accept='.policy' />
+          </p>
+        </form>
+      </section>
+      <aside>
+        <button id='button-import-config-cancel' class='secondary-action' data-i18n='save_dialog_btn_cancel'></button>
+        <button id='button-import-config-ok' class='primary-action' data-i18n='configuration_import' disabled></button>
       </aside>
     </div>
   </div>

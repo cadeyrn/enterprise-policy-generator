@@ -3,6 +3,7 @@
 /* global DOWNLOAD_PERMISSION, output, serializer */
 
 const elConfigurationTable = document.getElementById('list-configurations-table');
+const elImportConfigurationLink = document.getElementById('import-configuration');
 const elListConfigurationsLink = document.getElementById('list-configurations');
 const elNoSavedConfigurations = document.getElementById('no-saved-configurations');
 const elSaveConfigurationLink = document.getElementById('save-configuration');
@@ -25,6 +26,11 @@ const management = {
     elSaveConfigurationLink.onclick = (e) => {
       e.preventDefault();
       management.showSaveConfigurationDialog();
+    };
+
+    elImportConfigurationLink.onclick = (e) => {
+      e.preventDefault();
+      management.showImportConfigurationDialog();
     };
   },
 
@@ -350,6 +356,115 @@ const management = {
       saveAs : true,
       url : URL.createObjectURL(new Blob([serializedConfig])),
       filename : 'policy-export-' + configuration.time.getTime() + '.policy'
+    });
+  },
+
+  /**
+   * Show the "import configuration" dialog. This method also defines the behaviour of the dialog.
+   *
+   * @returns {void}
+   */
+  showImportConfigurationDialog () {
+    // show dialog
+    const elModal = document.getElementById('import-configuration-dialog');
+    elModal.classList.add('visible');
+
+    const elName = elModal.querySelector('#import-dialog-name');
+    const elFileInput = elModal.querySelector('#import-file-input');
+    const elSubmitButton = elModal.querySelector('#button-import-config-ok');
+    const elCloseButton = elModal.querySelector('#button-import-config-cancel');
+
+    // focus the name input field
+    elName.focus();
+
+    // the name field must not be empty
+    elName.oninput = () => {
+      if (elName.value && elFileInput.value) {
+        elSubmitButton.removeAttribute('disabled');
+      }
+      else {
+        elSubmitButton.setAttribute('disabled', true);
+      }
+    };
+
+    // the file input field must not be empty
+    elFileInput.oninput = () => {
+      if (elName.value && elFileInput.value) {
+        elSubmitButton.removeAttribute('disabled');
+      }
+      else {
+        elSubmitButton.setAttribute('disabled', true);
+      }
+    };
+
+    // close dialog by clicking the cancel button
+    elCloseButton.onclick = () => {
+      management.closeImportConfigurationDialog(elModal, elSubmitButton);
+    };
+
+    // import configuration by pressing Enter, close dialog by pressing ESC
+    window.onkeydown = (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+
+        management.importConfiguration(elName.value, elFileInput);
+        management.closeImportConfigurationDialog(elModal, elSubmitButton);
+      }
+
+      if (e.key === 'Escape') {
+        management.closeImportConfigurationDialog(elModal, elSubmitButton);
+      }
+    };
+
+    // submit button
+    elSubmitButton.onclick = (e) => {
+      e.preventDefault();
+
+      management.importConfiguration(elName.value, elFileInput);
+      management.closeImportConfigurationDialog(elModal, elSubmitButton);
+    };
+  },
+
+  /**
+   * Close the "list configurations" dialog.
+   *
+   * @param {HTMLElement} elModal - the DOM element of the modal dialog
+   * @param {HTMLElement} elSubmitButton - the DOM element of the submit button
+   *
+   * @returns {void}
+   */
+  closeImportConfigurationDialog (elModal, elSubmitButton) {
+    elModal.classList.remove('visible');
+    elModal.querySelector('#import-dialog-name').value = '';
+    elModal.querySelector('#import-file-input').value = '';
+    elSubmitButton.setAttribute('disabled', true);
+  },
+
+  /**
+   * Saves the current configuration with a name and the current date and time.
+   *
+   * @param {string} name - the name of the configuration
+   * @param {HTMLElement} name - the DOM element of the configuration file input
+   *
+   * @returns {void}
+   */
+  async importConfiguration (name, elLocalFile) {
+    const reader = new FileReader();
+
+    reader.readAsText(elLocalFile.files[0]);
+    reader.addEventListener('loadend', async () => {
+      const { configurations } = await browser.storage.local.get({ configurations : [] });
+      const file = reader.result;
+
+      const configuration = {
+        name : name,
+        time : new Date(),
+        configuration : JSON.parse(window.atob(file)).configuration
+      };
+
+      configurations.push(configuration);
+
+      browser.storage.local.set({ configurations : configurations });
     });
   }
 };
