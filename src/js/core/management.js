@@ -71,8 +71,10 @@ const management = {
       if (e.key === 'Enter') {
         e.preventDefault();
 
-        management.saveConfiguration(elName.value);
-        management.closeSaveConfigurationDialog(elModal, elSubmitButton);
+        if (elName.value) {
+          management.saveConfiguration(elName.value);
+          management.closeSaveConfigurationDialog(elModal, elSubmitButton);
+        }
       }
 
       if (e.key === 'Escape') {
@@ -405,8 +407,10 @@ const management = {
       if (e.key === 'Enter') {
         e.preventDefault();
 
-        management.importConfiguration(elName.value, elFileInput);
-        management.closeImportConfigurationDialog(elModal, elSubmitButton);
+        if (elName.value && elFileInput.value) {
+          management.importConfiguration(elName.value, elFileInput);
+          management.closeImportConfigurationDialog(elModal, elSubmitButton);
+        }
       }
 
       if (e.key === 'Escape') {
