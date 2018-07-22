@@ -167,8 +167,6 @@ const management = {
    * @returns {void}
    */
   async listConfigurations () {
-    management.testDownloadPermission();
-
     const { configurations } = await browser.storage.local.get({ configurations : [] });
     const configurationLength = configurations.length;
 
@@ -266,6 +264,8 @@ const management = {
       elLoadIcon.setAttribute('alt', browser.i18n.getMessage('title_apply_configuration'));
       elLoadLink.appendChild(elLoadIcon);
     }
+
+    management.testDownloadPermission();
   },
 
   /**
