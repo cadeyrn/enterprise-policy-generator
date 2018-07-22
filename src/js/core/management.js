@@ -344,10 +344,11 @@ const management = {
 
     const { configurations } = await browser.storage.local.get({ configurations : [] });
     const configuration = configurations[e.target.parentNode.getAttribute('data-idx')];
+    const serializedConfig = window.btoa(JSON.stringify(configurations[e.target.parentNode.getAttribute('data-idx')]));
 
     browser.downloads.download({
       saveAs : true,
-      url : URL.createObjectURL(new Blob([window.btoa(configurations[e.target.parentNode.getAttribute('data-idx')])])),
+      url : URL.createObjectURL(new Blob([serializedConfig])),
       filename : 'policy-export-' + configuration.time.getTime() + '.policy'
     });
   }
