@@ -18,12 +18,13 @@ Although this extension is not directly related to the CCK2 Wizard, it shares th
 ### Features
 
 - simply click together the desired Enterprise Policies
-- supports all policies which are supported by Firefox 60
-- validation for mandatory fields
+- supports all policies which are supported by Firefox 60 and newer
+- validation for mandatory fields and URLs
 - special marking of policies that only work with Firefox ESR
 - info links for some policies to get additional information
 - you can save any number of different configurations, load them at a later time (and of course delete them)
-- If a policy requires a newer version than Firefox 60.0 or Firefox ESR 60.0 a notice is displayed
+- you can also export configurations and import them on other devices
+- if a policy requires a newer version than Firefox 60.0 or Firefox ESR 60.0 a notice is displayed
 
 ### Shortcuts
 
