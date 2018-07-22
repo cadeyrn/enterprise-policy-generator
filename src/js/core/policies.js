@@ -1160,6 +1160,7 @@ const policies = {
     info_link : null,
     is_lockable : false,
     ui_category : 'updates-and-data',
+    mandatory : true,
     type : 'url',
     label : 'URL'
   },
@@ -1282,6 +1283,7 @@ const policies = {
     info_link : null,
     is_lockable : false,
     ui_category : 'others',
+    mandatory : false,
     type : 'url',
     label : 'URL'
   },
@@ -1293,6 +1295,7 @@ const policies = {
     info_link : null,
     is_lockable : false,
     ui_category : 'others',
+    mandatory : false,
     type : 'url',
     label : 'URL'
   }
