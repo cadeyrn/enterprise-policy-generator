@@ -54,8 +54,8 @@ const serializer = {
           data.select[node.id] = node.value;
         }
       }
-      // text fields
-      else if (node.type === 'text') {
+      // text and url fields
+      else if (node.type === 'text' || node.type === 'url') {
         if (serializer.isPolicyEnabled(node) && node.value) {
           data.input[node.id] = node.value;
         }
@@ -103,7 +103,7 @@ const serializer = {
       }
     });
 
-    // text fields
+    // text and url fields
     Object.keys(data.input).forEach((id) => {
       const el = document.getElementById(id);
 
