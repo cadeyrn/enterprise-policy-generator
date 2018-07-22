@@ -1,6 +1,6 @@
 'use strict';
 
-/* global output, serializer */
+/* global DOWNLOAD_PERMISSION, output, serializer */
 
 const elConfigurationTable = document.getElementById('list-configurations-table');
 const elListConfigurationsLink = document.getElementById('list-configurations');
@@ -161,6 +161,8 @@ const management = {
    * @returns {void}
    */
   async listConfigurations () {
+    management.testDownloadPermission();
+
     const { configurations } = await browser.storage.local.get({ configurations : [] });
     const configurationLength = configurations.length;
 
@@ -216,6 +218,36 @@ const management = {
       elRemoveIcon.setAttribute('alt', browser.i18n.getMessage('title_remove_configuration'));
       elRemoveLink.appendChild(elRemoveIcon);
 
+      // fake export icon (permission not yet granted)
+      const elFakeExportLink = document.createElement('a');
+      elFakeExportLink.setAttribute('id', 'fake-export-link');
+      elFakeExportLink.setAttribute('href', '#');
+      elFakeExportLink.setAttribute('title', browser.i18n.getMessage('configuration_export'));
+      elFakeExportLink.setAttribute('data-idx', i);
+      elFakeExportLink.classList.add('icon');
+      elFakeExportLink.addEventListener('click', management.grantDownloadPermission);
+      elIconColumn.appendChild(elFakeExportLink);
+
+      const elFakeExportIcon = document.createElement('img');
+      elFakeExportIcon.src = '/images/export.svg';
+      elFakeExportIcon.setAttribute('alt', browser.i18n.getMessage('configuration_export'));
+      elFakeExportLink.appendChild(elFakeExportIcon);
+
+      // export icon
+      const elExportLink = document.createElement('a');
+      elExportLink.setAttribute('id', 'export-link');
+      elExportLink.setAttribute('href', '#');
+      elExportLink.setAttribute('title', browser.i18n.getMessage('configuration_export'));
+      elExportLink.setAttribute('data-idx', i);
+      elExportLink.classList.add('icon', 'hidden');
+      elExportLink.addEventListener('click', management.exportConfiguration);
+      elIconColumn.appendChild(elExportLink);
+
+      const elExportIcon = document.createElement('img');
+      elExportIcon.src = '/images/export.svg';
+      elExportIcon.setAttribute('alt', browser.i18n.getMessage('configuration_export'));
+      elExportLink.appendChild(elExportIcon);
+
       // load icon
       const elLoadLink = document.createElement('a');
       elLoadLink.setAttribute('href', '#');
@@ -263,6 +295,61 @@ const management = {
     configurations.splice(e.target.parentNode.getAttribute('data-idx'), 1);
     browser.storage.local.set({ configurations : configurations });
     management.listConfigurations();
+  },
+
+  /**
+   * Tests if the downloads permission has been granted or not. If granted, the link for granting the permission
+   * will be hidden and the real export link will be shown.
+   *
+   * @returns {void}
+   */
+  async testDownloadPermission () {
+    const granted = await browser.permissions.contains(DOWNLOAD_PERMISSION);
+
+    // if the downloads permission is granted hide the link for granting permission and show the
+    // real export link instead
+    if (granted) {
+      document.getElementById('fake-export-link').classList.add('hidden');
+      document.getElementById('export-link').classList.remove('hidden');
+    }
+  },
+
+  /**
+   * Grants the download permission and exports the configuration once granted.
+   *
+   * @param {MouseEvent} e - event
+   *
+   * @returns {void}
+   */
+  async grantDownloadPermission (e) {
+    e.preventDefault();
+
+    const granted = await browser.permissions.request(DOWNLOAD_PERMISSION);
+
+    // immediately prompt for download after the downloads permission has been granted
+    if (granted) {
+      management.exportConfiguration(e);
+    }
+  },
+
+  /**
+   * Removes the selected configuration.
+   *
+   * @param {MouseEvent} e - event
+   *
+   * @returns {void}
+   */
+  async exportConfiguration (e) {
+    e.preventDefault();
+
+    const { configurations } = await browser.storage.local.get({ configurations : [] });
+    const configuration = configurations[e.target.parentNode.getAttribute('data-idx')];
+
+    browser.downloads.download({
+      saveAs : true,
+      url : URL.createObjectURL(new Blob([window.btoa(configurations[e.target.parentNode.getAttribute('data-idx')])])),
+      filename : 'policy-export-' + configuration.time.getTime() + '.policy'
+    });
   }
 };
 
