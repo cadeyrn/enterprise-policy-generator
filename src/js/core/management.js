@@ -466,7 +466,9 @@ const management = {
 
       configurations.push(configuration);
 
-      browser.storage.local.set({ configurations : configurations });
+      await browser.storage.local.set({ configurations : configurations });
+
+      management.showListConfigurationsDialog();
     });
   }
 };
