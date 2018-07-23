@@ -8,7 +8,7 @@
 
 - **configurations could already be saved and loaded at a later time since version 2.0.0. Now configurations can also be exported and
   re-imported on other devices**, fixes [#22](https://github.com/cadeyrn/enterprise-policy-generator/issues/22)
-- **added a basic validation for fields where a valid URL is required**. Basic means simple protocol check (https:// or http://,)
+- **added a basic validation for fields where a valid URL is required**. Basic means simple protocol check (https:// or http://)
   because a full URL validation is a science, fixes [#11](https://github.com/cadeyrn/enterprise-policy-generator/issues/11)
 - show a notice in the list configurations dialog if no configurations have been saved yet, fixes
   [#24](https://github.com/cadeyrn/enterprise-policy-generator/issues/24)
