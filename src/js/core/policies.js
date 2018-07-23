@@ -753,7 +753,7 @@ const policies = {
         type : 'array',
         items : {
           label : browser.i18n.getMessage('policy_description_Cookies_Allow_Domain'),
-          type : 'string'
+          type : 'url'
         }
       },
       {
@@ -763,7 +763,7 @@ const policies = {
         type : 'array',
         items : {
           label : browser.i18n.getMessage('policy_description_Cookies_Block_Domain'),
-          type : 'string'
+          type : 'url'
         }
       },
       {
@@ -882,7 +882,7 @@ const policies = {
             type : 'array',
             items : {
               label : browser.i18n.getMessage('policy_description_Permissions_Location_Allow_URL'),
-              type : 'string'
+              type : 'url'
             }
           },
           {
@@ -892,7 +892,7 @@ const policies = {
             type : 'array',
             items : {
               label : browser.i18n.getMessage('policy_description_Permissions_Location_Block_URL'),
-              type : 'string'
+              type : 'url'
             }
           },
           {
@@ -916,7 +916,7 @@ const policies = {
             type : 'array',
             items : {
               label : browser.i18n.getMessage('policy_description_Permissions_Camera_Allow_URL'),
-              type : 'string'
+              type : 'url'
             }
           },
           {
@@ -926,7 +926,7 @@ const policies = {
             type : 'array',
             items : {
               label : browser.i18n.getMessage('policy_description_Permissions_Camera_Block_URL'),
-              type : 'string'
+              type : 'url'
             }
           },
           {
@@ -950,7 +950,7 @@ const policies = {
             type : 'array',
             items : {
               label : browser.i18n.getMessage('policy_description_Permissions_Microphone_Allow_URL'),
-              type : 'string'
+              type : 'url'
             }
           },
           {
@@ -960,7 +960,7 @@ const policies = {
             type : 'array',
             items : {
               label : browser.i18n.getMessage('policy_description_Permissions_Microphone_Block_URL'),
-              type : 'string'
+              type : 'url'
             }
           },
           {
@@ -984,7 +984,7 @@ const policies = {
             type : 'array',
             items : {
               label : browser.i18n.getMessage('policy_description_Permissions_Notifications_Allow_URL'),
-              type : 'string'
+              type : 'url'
             }
           },
           {
@@ -994,7 +994,7 @@ const policies = {
             type : 'array',
             items : {
               label : browser.i18n.getMessage('policy_description_Permissions_Notifications_Block_URL'),
-              type : 'string'
+              type : 'url'
             }
           },
           {
@@ -1045,7 +1045,7 @@ const policies = {
         type : 'array',
         items : {
           label : browser.i18n.getMessage('policy_description_FlashPlugin_Allow_URL'),
-          type : 'string'
+          type : 'url'
         }
       },
       {
@@ -1055,7 +1055,7 @@ const policies = {
         type : 'array',
         items : {
           label : browser.i18n.getMessage('policy_description_FlashPlugin_Block_URL'),
-          type : 'string'
+          type : 'url'
         }
       }
     ]
