@@ -561,6 +561,10 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
   top: -1px;
 }
 
+.file-input-wrapper {
+  margin-top: 20px;
+}
+
 #import-configuration img {
   transform: rotate(180deg);
 }
