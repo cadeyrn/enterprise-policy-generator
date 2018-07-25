@@ -1,0 +1,677 @@
+{
+  "configuration_export": {
+    "message": "导出配置"
+  },
+  "configuration_import": {
+    "message": "导入配置"
+  },
+  "enterprise_only_label": {
+    "message": "仅在 Firefox ESR 生效"
+  },
+  "explanation_headline_usage": {
+    "message": "使用方法"
+  },
+  "explanation_intro": {
+    "message": "点击下方的按钮会生成一段代码，该代码必须保存在一个名为 “policies.json” 的文件里，位于 distribution 目录下。"
+  },
+  "explanation_intro_linux": {
+    "message": "在 Firefox 安装目录创建一个名为 “distribution” 的文件夹，并将 “policies.json” 文件放在该文件夹下。"
+  },
+  "explanation_intro_macos": {
+    "message": "在 Firefox.app/Contents/Resources/ 创建一个名为 “distribution” 的文件夹，并将 “policies.json” 文件放在该文件夹下。"
+  },
+  "explanation_intro_windows": {
+    "message": "在 firefox.exe 文件所在的目录创建一个名为 “distribution” 的文件夹，并将 “policies.json” 文件放在该文件夹下。"
+  },
+  "extension_description": {
+    "message": "为 Firefox 生成企业策略。"
+  },
+  "extension_name": {
+    "message": "Enterprise Policy Generator"
+  },
+  "generate_button": {
+    "message": "生成策略"
+  },
+  "invalid_url_label": {
+    "message": "无效的 URL"
+  },
+  "link_download": {
+    "message": "下载 policies.json"
+  },
+  "link_learn_more": {
+    "message": "更多信息"
+  },
+  "link_load_configuration": {
+    "message": "载入配置"
+  },
+  "link_save_configuration": {
+    "message": "保存配置"
+  },
+  "link_select_all": {
+    "message": "全选"
+  },
+  "list_dialog_btn_cancel": {
+    "message": "取消"
+  },
+  "list_dialog_no_saved_configurations": {
+    "message": "尚未有任何配置保存。"
+  },
+  "list_dialog_window_title": {
+    "message": "载入配置"
+  },
+  "list_table_name": {
+    "message": "名称"
+  },
+  "list_table_time": {
+    "message": "时间"
+  },
+  "lock_preference": {
+    "message": "保护首选项不被修改"
+  },
+  "mandatory_label": {
+    "message": "必需"
+  },
+  "policy_category_block_access": {
+    "message": "阻止访问"
+  },
+  "policy_category_disable_features": {
+    "message": "禁用功能"
+  },
+  "policy_category_customization": {
+    "message": "自定义"
+  },
+  "policy_category_network": {
+    "message": "网络"
+  },
+  "policy_category_privacy": {
+    "message": "隐私"
+  },
+  "policy_category_security": {
+    "message": "安全"
+  },
+  "policy_category_update_and_data": {
+    "message": "更新和数据收集"
+  },
+  "policy_category_others": {
+    "message": "其他策略"
+  },
+  "policy_description_AppUpdateURL": {
+    "message": "用于 Firefox 更新的不同服务器 URL"
+  },
+  "policy_description_Authentication": {
+    "message": "支持整合验证 (integrated authentication) 的站点"
+  },
+  "policy_description_Authentication_AllowNonFQDN": {
+    "message": "始终允许在非 FQDN（完全限定性域名）上使用 SPNEGO 或 NTLM"
+  },
+  "policy_description_Authentication_AllowNonFQDN_NTLM": {
+    "message": "始终允许在非 FQDN 上使用 NTLM (Firefox 63+)"
+  },
+  "policy_description_Authentication_AllowNonFQDN_SPNEGO": {
+    "message": "始终允许在非 FQDN 上使用 SPNEGO (Firefox 63++)"
+  },
+  "policy_description_Authentication_Delegated": {
+    "message": "Delegated"
+  },
+  "policy_description_Authentication_Delegated_URL": {
+    "message": "URL"
+  },
+  "policy_description_Authentication_NTLM": {
+    "message": "NTLM"
+  },
+  "policy_description_Authentication_NTLM_URL": {
+    "message": "URL"
+  },
+  "policy_description_Authentication_SPNEGO": {
+    "message": "SPNEGO"
+  },
+  "policy_description_Authentication_SPNEGO_URL": {
+    "message": "URL"
+  },
+  "policy_description_BlockAboutAddons": {
+    "message": "阻止访问附加组件管理器 (about:addons)"
+  },
+  "policy_description_BlockAboutConfig": {
+    "message": "阻止访问浏览器配置页面 (about:config)"
+  },
+  "policy_description_BlockAboutProfiles": {
+    "message": "阻止访问内嵌的配置管理器 (about:profiles)"
+  },
+  "policy_description_BlockAboutSupport": {
+    "message": "阻止访问故障排除信息页面 (about:support)"
+  },
+  "policy_description_Bookmarks": {
+    "message": "创建默认的书签"
+  },
+  "policy_description_Bookmarks_Favicon": {
+    "message": "小图标"
+  },
+  "policy_description_Bookmarks_Folder": {
+    "message": "文件夹"
+  },
+  "policy_description_Bookmarks_Placement": {
+    "message": "位置"
+  },
+  "policy_description_Bookmarks_Placement_Menu": {
+    "message": "书签菜单"
+  },
+  "policy_description_Bookmarks_Placement_Toolbar": {
+    "message": "书签工具栏"
+  },
+  "policy_description_Bookmarks_Title": {
+    "message": "标题"
+  },
+  "policy_description_Bookmarks_URL": {
+    "message": "URL"
+  },
+  "policy_description_Certificates": {
+    "message": "读取来自 Windows 证书商店的证书（仅支持 Windows）"
+  },
+  "policy_description_Certificates_ImportEnterpriseRoots_false": {
+    "message": "不读取来自 Windows 证书商店的证书"
+  },
+  "policy_description_Certificates_ImportEnterpriseRoots_true": {
+    "message": "读取来自 Windows 证书商店的证书"
+  },
+  "policy_description_Cookies": {
+    "message": "允许或阻止网站设置 Cookie"
+  },
+  "policy_description_Cookies_AcceptThirdParty": {
+    "message": "“接受第三方 Cookie 和网站数据”的默认值"
+  },
+  "policy_description_Cookies_AcceptThirdParty_always": {
+    "message": "始终"
+  },
+  "policy_description_Cookies_AcceptThirdParty_from_visited": {
+    "message": "来自访问过的网站"
+  },
+  "policy_description_Cookies_AcceptThirdParty_never": {
+    "message": "永不"
+  },
+  "policy_description_Cookies_Allow": {
+    "message": "始终允许设置 Cookie 的域名"
+  },
+  "policy_description_Cookies_Allow_Domain": {
+    "message": "域名"
+  },
+  "policy_description_Cookies_Block": {
+    "message": "始终阻止设置 Cookies 的域名"
+  },
+  "policy_description_Cookies_Block_Domain": {
+    "message": "域名"
+  },
+  "policy_description_Cookies_Default": {
+    "message": "“接受来自网站的 Cookie 和网站数据”的默认值"
+  },
+  "policy_description_Cookies_Default_false": {
+    "message": "不接受 Cookie"
+  },
+  "policy_description_Cookies_Default_true": {
+    "message": "接受 Cookie"
+  },
+  "policy_description_Cookies_ExpireAtSessionEnd": {
+    "message": "保存 Cookie，直到"
+  },
+  "policy_description_Cookies_ExpireAtSessionEnd_false": {
+    "message": "它们过期"
+  },
+  "policy_description_Cookies_ExpireAtSessionEnd_true": {
+    "message": "Firefox 关闭"
+  },
+  "policy_description_DisableAppUpdate": {
+    "message": "阻止 Firefox 进行更新"
+  },
+  "policy_description_DisableBuiltinPDFViewer": {
+    "message": "禁用内建的 PDF 阅读器 (pdf.js)"
+  },
+  "policy_description_DisableDeveloperTools": {
+    "message": "禁用内建的开发者工具"
+  },
+  "policy_description_DisableFeedbackCommands": {
+    "message": "禁用帮助菜单中的“提交反馈”和“举报诈骗网站”菜单项"
+  },
+  "policy_description_DisableFirefoxAccounts": {
+    "message": "禁用基于 Firefox 账户的 Firefox 同步等服务"
+  },
+  "policy_description_DisableFirefoxScreenshots": {
+    "message": "禁用内建的截图工具（Firefox 截图）"
+  },
+  "policy_description_DisableFirefoxStudies": {
+    "message": "阻止 Firefox 安装并运行一些实验项目（SHIELD 实验）"
+  },
+  "policy_description_DisableForgetButton": {
+    "message": "禁用“抹去足迹”工具栏按钮，防止清除最近的浏览历史"
+  },
+  "policy_description_DisableFormHistory": {
+    "message": "禁用表单和搜索栏历史"
+  },
+  "policy_description_DisableMasterPasswordCreation": {
+    "message": "禁用主密码功能"
+  },
+  "policy_description_DisablePocket": {
+    "message": "禁用 Mozilla 提供的 Pocket 服务"
+  },
+  "policy_description_DisablePrivateBrowsing": {
+    "message": "禁用隐私浏览模式"
+  },
+  "policy_description_DisableProfileImport": {
+    "message": "禁用我的足迹里的“从其他浏览器导入数据”菜单项"
+  },
+  "policy_description_DisableProfileRefresh": {
+    "message": "禁用 about:support 页面中的“翻新 Firefox” 按钮"
+  },
+  "policy_description_DisableSafeMode": {
+    "message": "禁用 Firefox 安全模式（禁用所有附加组件并重开浏览器）"
+  },
+  "policy_description_DisableSecurityBypass": {
+    "message": "阻止特定安全警告被跳过"
+  },
+  "policy_description_DisableSecurityBypass_InvalidCertificate": {
+    "message": "阻止将已显示为无效的证书添加到例外列表"
+  },
+  "policy_description_DisableSecurityBypass_InvalidCertificate_false": {
+    "message": "不阻止"
+  },
+  "policy_description_DisableSecurityBypass_InvalidCertificate_null": {
+    "message": "不设置"
+  },
+  "policy_description_DisableSecurityBypass_InvalidCertificate_true": {
+    "message": "阻止"
+  },
+  "policy_description_DisableSecurityBypass_SafeBrowsing": {
+    "message": "阻止安全警告被跳过导致用户访问恶意网站"
+  },
+  "policy_description_DisableSecurityBypass_SafeBrowsing_false": {
+    "message": "不阻止"
+  },
+  "policy_description_DisableSecurityBypass_SafeBrowsing_null": {
+    "message": "不设置"
+  },
+  "policy_description_DisableSecurityBypass_SafeBrowsing_true": {
+    "message": "阻止"
+  },
+  "policy_description_DisableSetDesktopBackground": {
+    "message": "禁止将图片设为桌面背景"
+  },
+  "policy_description_DisableSystemAddonUpdate": {
+    "message": "阻止 Firefox 安装和更新系统附加组件"
+  },
+  "policy_description_DisableTelemetry": {
+    "message": "阻止 Firefox 发送技术信息及交互数据到 Mozilla (telemetry)"
+  },
+  "policy_description_DisplayBookmarksToolbar": {
+    "message": "默认显示书签工具栏"
+  },
+  "policy_description_DisplayMenuBar": {
+    "message": "默认显示菜单栏"
+  },
+  "policy_description_DontCheckDefaultBrowser": {
+    "message": "启动时不检查 Firefox 是否是默认浏览器"
+  },
+  "policy_description_EnableTrackingProtection": {
+    "message": "启用或禁用跟踪保护"
+  },
+  "policy_description_EnableTrackingProtection_Value_false": {
+    "message": "禁用跟踪保护"
+  },
+  "policy_description_EnableTrackingProtection_Value_true": {
+    "message": "启用跟踪保护"
+  },
+  "policy_description_Extensions": {
+    "message": "安装、卸载或锁定扩展"
+  },
+  "policy_description_Extensions_Install": {
+    "message": "在这里安装附加组件。你可以指定 URL 或路径。"
+  },
+  "policy_description_Extensions_Install_URL_or_Path": {
+    "message": "URL 或路径"
+  },
+  "policy_description_Extensions_Locked": {
+    "message": "被锁定的扩展将无法禁用或卸载。请指定扩展的 ID。"
+  },
+  "policy_description_Extensions_Locked_ID": {
+    "message": "附加组件 ID"
+  },
+  "policy_description_Extensions_Uninstall": {
+    "message": "在这里卸载附加组件，请指定扩展的 ID。"
+  },
+  "policy_description_Extensions_Uninstall_ID": {
+    "message": "附加组件 ID"
+  },
+  "policy_description_FlashPlugin": {
+    "message": "允许或阻止使用 Flash 插件"
+  },
+  "policy_description_FlashPlugin_Allow": {
+    "message": "针对这些 URL 默认启用 Flash 插件，除非已完全禁用 Flash"
+  },
+  "policy_description_FlashPlugin_Allow_URL": {
+    "message": "URL"
+  },
+  "policy_description_FlashPlugin_Block": {
+    "message": "阻止 Flash 插件使用在这些 URL"
+  },
+  "policy_description_FlashPlugin_Block_URL": {
+    "message": "URL"
+  },
+  "policy_description_FlashPlugin_Default": {
+    "message": "始终启用或禁用 Flash"
+  },
+  "policy_description_FlashPlugin_Default_false": {
+    "message": "始终禁用 Flash"
+  },
+  "policy_description_FlashPlugin_Default_null": {
+    "message": "不设置"
+  },
+  "policy_description_FlashPlugin_Default_true": {
+    "message": "始终启用 Flash"
+  },
+  "policy_description_HardwareAcceleration": {
+    "message": "禁用硬件加速"
+  },
+  "policy_description_Homepage": {
+    "message": "设置主页"
+  },
+  "policy_description_Homepage_Additional": {
+    "message": "额外的 URL"
+  },
+  "policy_description_Homepage_URL": {
+    "message": "URL"
+  },
+  "policy_description_InstallAddonsPermission": {
+    "message": "允许网站安装附加组件"
+  },
+  "policy_description_InstallAddonsPermission_Allow": {
+    "message": "下面是允许安装扩展的网站，除非扩展安装的功能被禁用（已允许 addons.mozilla.org）"
+  },
+  "policy_description_InstallAddonsPermission_Allow_URL": {
+    "message": "URL"
+  },
+  "policy_description_InstallAddonsPermission_Default_false": {
+    "message": "不允许用户安装附加组件"
+  },
+  "policy_description_InstallAddonsPermission_Default_true": {
+    "message": "允许用户安装附加组件"
+  },
+  "policy_description_NoDefaultBookmarks": {
+    "message": "不创建默认的书签集，包括智能书签（最常访问的、最近的标签）。注意：该策略仅在配置文件夹首次使用之前就用过的情况下才有效"
+  },
+  "policy_description_OfferToSaveLogins": {
+    "message": "允许或禁止 Firefox 记住登录的账号和密码"
+  },
+  "policy_description_OfferToSaveLogins_options_false": {
+    "message": "不记住登录的账号和密码"
+  },
+  "policy_description_OfferToSaveLogins_options_true": {
+    "message": "记住登录的账号和密码"
+  },
+  "policy_description_OverrideFirstRunPage": {
+    "message": "允许覆盖首次运行时显示的页面。如果你想禁止显示，请设置为空白。"
+  },
+  "policy_description_OverridePostUpdatePage": {
+    "message": "覆盖浏览器更新完毕显示的“更新内容”页面。如果你想禁止显示该页面，请设置为空白。"
+  },
+  "policy_description_Permissions": {
+    "message": "配置位置、摄像头、麦克风和通知的权限"
+  },
+  "policy_description_Permissions_Camera": {
+    "message": "摄像头"
+  },
+  "policy_description_Permissions_Camera_Allow": {
+    "message": "允许下列 URL 操控"
+  },
+  "policy_description_Permissions_Camera_Allow_URL": {
+    "message": "URL"
+  },
+  "policy_description_Permissions_Camera_Block": {
+    "message": "阻止下列 URL 操控"
+  },
+  "policy_description_Permissions_Camera_Block_URL": {
+    "message": "URL"
+  },
+  "policy_description_Permissions_Camera_BlockNewRequests": {
+    "message": "阻止新的请求操控你的摄像头"
+  },
+  "policy_description_Permissions_Location": {
+    "message": "位置"
+  },
+  "policy_description_Permissions_Location_Allow": {
+    "message": "允许下列 URL 获知"
+  },
+  "policy_description_Permissions_Location_Allow_URL": {
+    "message": "URL"
+  },
+  "policy_description_Permissions_Location_Block": {
+    "message": "阻止下列 URL 获知"
+  },
+  "policy_description_Permissions_Location_Block_URL": {
+    "message": "URL"
+  },
+  "policy_description_Permissions_Location_BlockNewRequests": {
+    "message": "阻止新的请求获知你的位置"
+  },
+  "policy_description_Permissions_Microphone": {
+    "message": "麦克风"
+  },
+  "policy_description_Permissions_Microphone_Allow": {
+    "message": "允许下列 URL 操控"
+  },
+  "policy_description_Permissions_Microphone_Allow_URL": {
+    "message": "URL"
+  },
+  "policy_description_Permissions_Microphone_Block": {
+    "message": "阻止下列 URL 操控"
+  },
+  "policy_description_Permissions_Microphone_Block_URL": {
+    "message": "URL"
+  },
+  "policy_description_Permissions_Microphone_BlockNewRequests": {
+    "message": "阻止新的请求操控你的麦克风"
+  },
+  "policy_description_Permissions_Notifications": {
+    "message": "通知"
+  },
+  "policy_description_Permissions_Notifications_Allow": {
+    "message": "允许下列 URL 传送通知"
+  },
+  "policy_description_Permissions_Notifications_Allow_URL": {
+    "message": "URL"
+  },
+  "policy_description_Permissions_Notifications_Block": {
+    "message": "阻止下列 URL 传送通知"
+  },
+  "policy_description_Permissions_Notifications_Block_URL": {
+    "message": "URL"
+  },
+  "policy_description_Permissions_Notifications_BlockNewRequests": {
+    "message": "阻止新的请求向你传送通知"
+  },
+  "policy_description_PopupBlocking": {
+    "message": "允许或阻止显示弹出窗口"
+  },
+  "policy_description_PopupBlocking_Allow": {
+    "message": "允许显示弹出窗口的域名"
+  },
+  "policy_description_PopupBlocking_Allow_URL": {
+    "message": "URL"
+  },
+  "policy_description_PopupBlocking_Default_false": {
+    "message": "默认不阻止弹出窗口"
+  },
+  "policy_description_PopupBlocking_Default_true": {
+    "message": "默认阻止弹出窗口"
+  },
+  "policy_description_Proxy": {
+    "message": "配置连接互联网的代理"
+  },
+  "policy_description_Proxy_AutoConfigURL": {
+    "message": "自动代理配置的 URL"
+  },
+  "policy_description_Proxy_AutoLogin": {
+    "message": "提示身份验证"
+  },
+  "policy_description_Proxy_AutoLogin_false": {
+    "message": "提示身份验证"
+  },
+  "policy_description_Proxy_AutoLogin_true": {
+    "message": "不提示身份验证"
+  },
+  "policy_description_Proxy_HTTPProxy": {
+    "message": "HTTP 代理。要配置端口号，请在端口号前添加 “:”"
+  },
+  "policy_description_Proxy_Mode_autoConfig": {
+    "message": "自动代理配置的 URL"
+  },
+  "policy_description_Proxy_Mode_autoDetect": {
+    "message": "自动检测此网络的代理设置"
+  },
+  "policy_description_Proxy_Mode_manual": {
+    "message": "手动代理配置"
+  },
+  "policy_description_Proxy_Mode_none": {
+    "message": "不使用代理服务器"
+  },
+  "policy_description_Proxy_Mode_system": {
+    "message": "使用系统代理设置"
+  },
+  "policy_description_Proxy_FTPProxy": {
+    "message": "FTP 代理。要配置端口号，请在端口号前添加 “:”"
+  },
+  "policy_description_Proxy_Passthrough": {
+    "message": "不使用代理的 URL..."
+  },
+  "policy_description_Proxy_SOCKSProxy": {
+    "message": "SOCKS 主机。要配置端口号，请在端口号前添加 “:”"
+  },
+  "policy_description_Proxy_SOCKSVersion_v4": {
+    "message": "SOCKS v4"
+  },
+  "policy_description_Proxy_SOCKSVersion_v5": {
+    "message": "SOCKS v5"
+  },
+  "policy_description_Proxy_SSLProxy": {
+    "message": "SSL 代理。要配置端口号，请在端口号前添加 “:”"
+  },
+  "policy_description_Proxy_UseHTTPProxyForAllProtocols_false": {
+    "message": "所有协议都不使用此代理服务器"
+  },
+  "policy_description_Proxy_UseHTTPProxyForAllProtocols_true": {
+    "message": "所有协议都使用此代理服务器"
+  },
+  "policy_description_Proxy_UseProxyForDNS": {
+    "message": "使用 SOCKS v5 时代理 DNS 查询"
+  },
+  "policy_description_Proxy_UseProxyForDNS_false": {
+    "message": "不代理 DNS 查询"
+  },
+  "policy_description_Proxy_UseProxyForDNS_true": {
+    "message": "代理 DNS 查询"
+  },
+  "policy_description_SanitizeOnShutdown": {
+    "message": "关闭浏览器时清除所有数据"
+  },
+  "policy_description_SearchBar": {
+    "message": "搜索栏合并或分开显示"
+  },
+  "policy_description_SearchBar_options_separate": {
+    "message": "分开显示搜索栏"
+  },
+  "policy_description_SearchBar_options_unified": {
+    "message": "合并搜索栏和地址栏"
+  },
+  "policy_description_SearchEngines": {
+    "message": "修改 Firefox 内置的搜索引擎列表"
+  },
+  "policy_description_SearchEngines_Add": {
+    "message": "添加更多搜索引擎"
+  },
+  "policy_description_SearchEngines_Add_Alias": {
+    "message": "用于调用搜索引擎的别名"
+  },
+  "policy_description_SearchEngines_Add_Description": {
+    "message": "描述"
+  },
+  "policy_description_SearchEngines_Add_IconURL": {
+    "message": "图标 URL"
+  },
+  "policy_description_SearchEngines_Add_Method": {
+    "message": "请求的方法"
+  },
+  "policy_description_SearchEngines_Add_Method_GET": {
+    "message": "GET"
+  },
+  "policy_description_SearchEngines_Add_Method_POST": {
+    "message": "POST"
+  },
+  "policy_description_SearchEngines_Add_Name": {
+    "message": "名称"
+  },
+  "policy_description_SearchEngines_Add_SuggestURLTemplate": {
+    "message": "用于搜索建议的 URL。请使用 {searchTerms} 作为搜索项的占位符"
+  },
+  "policy_description_SearchEngines_Add_URL": {
+    "message": "用于搜索的 URL。请使用 {searchTerms} 作为搜索项的占位符"
+  },
+  "policy_description_SearchEngines_Default": {
+    "message": "默认搜索引擎的名称"
+  },
+  "policy_description_SearchEngines_PreventInstalls": {
+    "message": "阻止安装新的搜索引擎"
+  },
+  "policy_description_SearchEngines_PreventInstalls_false": {
+    "message": "不阻止安装"
+  },
+  "policy_description_SearchEngines_PreventInstalls_true": {
+    "message": "阻止安装"
+  },
+  "policy_description_SearchEngines_Remove": {
+    "message": "移除搜索引擎 (Firefox 62+)"
+  },
+  "policy_description_SearchEngines_Remove_Name": {
+    "message": "名称"
+  },
+  "policy_description_WebsiteFilter": {
+    "message": "阻止访问特定网站。你可以使用 “<all_urls>” 屏蔽所有 URL。点击更多信息链接可以查看所有有效项，仅支持 HTTPS 和 HTTP 的 URL。"
+  },
+  "policy_description_WebsiteFilter_Block": {
+    "message": "屏蔽下列 URL"
+  },
+  "policy_description_WebsiteFilter_Block_URL": {
+    "message": "URL"
+  },
+  "policy_description_WebsiteFilter_Exceptions": {
+    "message": "例外"
+  },
+  "policy_description_WebsiteFilter_Exceptions_URL": {
+    "message": "URL"
+  },
+  "save_dialog_btn_cancel": {
+    "message": "取消"
+  },
+  "save_dialog_btn_ok": {
+    "message": "保存配置"
+  },
+  "save_dialog_form_name": {
+    "message": "名称"
+  },
+  "save_dialog_window_title": {
+    "message": "保存配置Save Configuration"
+  },
+  "title_add_row": {
+    "message": "新增行"
+  },
+  "title_apply_configuration": {
+    "message": "载入配置"
+  },
+  "title_remove_configuration": {
+    "message": "移除配置"
+  },
+  "title_remove_row": {
+    "message": "删除行"
+  },
+  "version_or_higher": {
+    "message": "或更高版本"
+  },
+  "version_required": {
+    "message": "至少需要"
+  }
+}
