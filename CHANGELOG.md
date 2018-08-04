@@ -11,7 +11,7 @@
 
 #### Translations
 
-- added Simplified Chinese translation (Thanks, fang5566!)
+- added Simplified Chinese translation (Thanks, fang5566!), fixes [#31](https://github.com/cadeyrn/enterprise-policy-generator/issues/31)
 
 #### Dependencies
 
