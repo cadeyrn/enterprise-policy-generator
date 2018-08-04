@@ -2,6 +2,12 @@
 
 ## Release Notes
 
+### (Work in Progress) Version 3.1.0 (2018-08-xx)
+
+- added Simplified Chinese translation (Thanks, fang5566!)
+
+---
+
 ### [Version 3.0.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v3.0.0) (2018-07-24)
 
 #### Enhancements
