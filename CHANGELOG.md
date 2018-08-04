@@ -4,6 +4,11 @@
 
 ### (Work in Progress) Version 3.1.0 (2018-08-xx)
 
+#### Enhancements
+
+- small design improvements, fixes [#32](https://github.com/cadeyrn/enterprise-policy-generator/issues/32) and
+  [#33](https://github.com/cadeyrn/enterprise-policy-generator/issues/33)
+
 #### Translations
 
 - added Simplified Chinese translation (Thanks, fang5566!)
@@ -13,6 +18,9 @@
 - updated eslint from version 5.2.0 to 5.3.0
 - updated stylelint from version 9.3.0 to 9.4.0
 - updated web-ext from version 2.7.0 to 2.8.0
+
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v3.0.0...v3.1.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-3.1.0)
 
 ---
 

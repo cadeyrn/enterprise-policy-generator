@@ -354,8 +354,9 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
 }
 
 #main {
+  display: flex;
   box-sizing: border-box;
-  padding: 100px 25px 70px;
+  padding: 100px 0 70px;
   width: 100%;
   height: 100%;
 }
@@ -367,8 +368,9 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
 }
 
 #generator-form, #secondary-section {
-  float: left;
-  width: calc(50% - 20px);
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 0 25px;
   height: 100%;
   overflow: auto;
 }
@@ -565,6 +567,10 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
   margin-top: 20px;
 }
 
+#import-configuration {
+  margin-bottom: 5px;
+}
+
 #import-configuration img {
   transform: rotate(180deg);
 }
@@ -618,10 +624,16 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
     height: auto;
   }
 
+  #main {
+    flex-direction: column;
+  }
+
   #generator-form, #secondary-section {
-    float: none;
-    width: 100%;
-    height: auto;
+    flex-basis: auto;
+  }
+
+  #import-configuration {
+    margin-bottom: 15px;
   }
 }
 
