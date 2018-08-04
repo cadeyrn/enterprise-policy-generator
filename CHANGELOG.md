@@ -8,6 +8,10 @@
 
 - added Simplified Chinese translation (Thanks, fang5566!)
 
+#### Dependencies
+
+- updated eslint from version 5.2.0 to 5.3.0
+
 ---
 
 ### [Version 3.0.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v3.0.0) (2018-07-24)
