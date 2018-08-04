@@ -4,6 +4,8 @@
 
 ### (Work in Progress) Version 3.1.0 (2018-08-xx)
 
+#### Translations
+
 - added Simplified Chinese translation (Thanks, fang5566!)
 
 ---
