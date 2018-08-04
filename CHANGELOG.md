@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### (Work in Progress) Version 3.1.0 (2018-08-xx)
+### [Version 3.1.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v3.1.0) (2018-08-05)
 
 #### Enhancements
 
