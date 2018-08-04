@@ -1,3 +1,15 @@
+:root {
+  --color-black: rgb(33, 37, 42);
+  --color-blue: rgb(10, 132, 255);
+  --color-blue-dark: rgb(0, 102, 225);
+  --color-dark-border: rgb(54, 57, 89);
+  --color-green: rgb(18, 188, 0);
+  --color-green-dark: rgb(0, 158, 0);
+  --color-red: rgb(215, 0, 34);
+  --color-red-dark: rgb(185, 0, 4);
+  --color-white: rgb(255, 255, 255);
+}
+
 html {
   height: 100%;
 }
@@ -7,26 +19,26 @@ body {
   height: 100%;
   font-family: Verdana, sans-serif;
   font-size: 16px;
-  background: rgb(255, 255, 255);
-  color: rgb(33, 37, 42);
+  background: var(--color-white);
+  color: var(--color-black);
   overflow-x: hidden;
 }
 
 a {
-  color: rgb(10, 132, 255);
+  color: var(--color-blue);
   text-decoration: none;
   transition: color ease 250ms;
 }
 
 a:hover {
-  color: rgb(0, 102, 225);
+  color: var(--color-blue-dark);
 }
 
 hr {
   margin: 20px 0;
   height: 1px;
   border: 0;
-  background-color: rgb(54, 57, 89);
+  background-color: var(--color-dark-border);
 }
 
 label {
@@ -42,19 +54,19 @@ input[type='text'], input[type='url'] {
   padding: 0 10px;
   width: calc(100% - 50px);
   height: 30px;
-  border: 2px solid rgb(54, 57, 89);
+  border: 2px solid var(--color-dark-border);
   border-radius: 2px;
   transition: border ease 250ms;
 }
 
 input[type='text'].mandatory-style, input[type='url'].mandatory-style, input[type='url'].invalid-url-style {
-  border-color: rgb(215, 0, 34);
+  border-color: var(--color-red);
 }
 
 input[type='text']:not(.mandatory-style):focus,
 input[type='url']:not(.mandatory-style):not(.invalid-url-style):focus,
 select:focus {
-  border-color: rgb(0, 102, 225);
+  border-color: var(--color-blue-dark);
 }
 
 .input {
@@ -72,8 +84,8 @@ select:focus {
   padding: 2px 5px;
   height: 18px;
   font-size: 14px;
-  background: rgb(215, 0, 34);
-  color: rgb(255, 255, 255);
+  background: var(--color-red);
+  color: var(--color-white);
 }
 
 .input + .input .mandatory-label, .input + .input .invalid-url-label {
@@ -97,9 +109,9 @@ select:focus {
   bottom: 0;
   right: 0;
   padding: 2px 12px;
-  border: 2px solid rgb(54, 57, 89);
-  background: rgb(10, 132, 255);
-  color: rgb(255, 255, 255);
+  border: 2px solid var(--color-dark-border);
+  background: var(--color-blue);
+  color: var(--color-white);
   pointer-events: none;
   transition: .25s all ease;
 }
@@ -112,14 +124,14 @@ select {
   margin: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid rgb(54, 57, 89);
+  border: 2px solid var(--color-dark-border);
   outline: 0;
   box-shadow: none;
   cursor: pointer;
 }
 
 select.mandatory-style {
-  border-color: rgb(215, 0, 34);
+  border-color: var(--color-red);
 }
 
 option {
@@ -148,7 +160,7 @@ option {
   margin-top: 2px;
   width: 18px;
   height: 18px;
-  border: 2px solid rgb(54, 57, 89);
+  border: 2px solid var(--color-dark-border);
   border-radius: 2px;
   cursor: pointer;
   transition: all 250ms ease;
@@ -161,8 +173,8 @@ option {
   height: 17px;
   transform: rotate(40deg);
   border: 2px solid transparent;
-  border-right-color: rgb(18, 188, 0);
-  border-bottom-color: rgb(18, 188, 0);
+  border-right-color: var(--color-green);
+  border-bottom-color: var(--color-green);
   transform-origin: 100% 100%;
   backface-visibility: hidden;
 }
@@ -184,12 +196,12 @@ option {
   padding-left: 25px;
   height: 24px;
   font-size: small;
-  color: rgb(10, 132, 255);
+  color: var(--color-blue);
   transition: color ease 250ms;
 }
 
 .lock-checkbox + label:hover {
-  color: rgb(0, 102, 225);
+  color: var(--color-blue-dark);
 }
 
 .lock-checkbox + label::before {
@@ -206,7 +218,7 @@ option {
 }
 
 .lock-checkbox:checked + label {
-  color: rgb(18, 188, 0);
+  color: var(--color-green);
 }
 
 .lock-checkbox:checked + label::before {
@@ -237,8 +249,8 @@ button {
   font-size: 16px;
   border: none;
   border-radius: 2px;
-  background: rgb(10, 132, 255);
-  color: rgb(255, 255, 255);
+  background: var(--color-blue);
+  color: var(--color-white);
   cursor: pointer;
   transition: color ease 500ms;
 }
@@ -253,7 +265,7 @@ button::before {
   right: 0;
   transform: scaleX(0);
   border-radius: 2px;
-  background: rgb(0, 102, 225);
+  background: var(--color-blue-dark);
   transform-origin: 0 50%;
   transition-property: transform;
   transition-duration: 500ms;
@@ -341,8 +353,8 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
   left: 0;
   right: 0;
   height: 100px;
-  background: rgb(255, 255, 255);
-  border-bottom: 1px solid rgb(54, 57, 89);
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-dark-border);
   transition: height 250ms ease-in-out;
 }
 
@@ -392,8 +404,8 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
   height: 64px;
   line-height: 64px;
   font-size: 14px;
-  border-top: 1px solid rgb(54, 57, 89);
-  background: rgb(255, 255, 255);
+  border-top: 1px solid var(--color-dark-border);
+  background: var(--color-white);
 }
 
 #footer a {
@@ -402,7 +414,7 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
   background: url('../images/sh-at.png') no-repeat;
   background-size: 32px 32px;
   background-position: center left;
-  color: rgb(33, 37, 42);
+  color: var(--color-black);
   text-decoration: none;
 }
 
@@ -484,14 +496,14 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
   overflow: auto;
   border-width: 0;
   border-radius: 5px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--color-white);
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .3);
 }
 
 .modal-dialog header {
   padding: 10px 15px;
-  background-color: rgb(10, 132, 255);
-  color: rgb(255, 255, 255);
+  background-color: var(--color-blue);
+  color: var(--color-white);
 }
 
 .modal-dialog section {
@@ -518,20 +530,20 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
 }
 
 .modal-dialog .primary-action {
-  background-color: rgb(18, 188, 0);
+  background-color: var(--color-green);
 }
 
 .modal-dialog .primary-action::before {
-  background: rgb(0, 158, 0);
+  background: var(--color-green-dark);
 }
 
 .modal-dialog .secondary-action {
   margin-right: 5px;
-  background-color: rgb(215, 0, 34);
+  background-color: var(--color-red);
 }
 
 .modal-dialog .secondary-action::before {
-  background: rgb(185, 0, 4);
+  background: var(--color-red-dark);
 }
 
 #action-links .icon {
@@ -555,7 +567,7 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
 
 .icon span {
   font-size: 14px;
-  color: rgb(33, 37, 42);
+  color: var(--color-black);
 }
 
 .trash-icon {
