@@ -16,7 +16,7 @@
 #### Code Quality
 
 - use flexbox for two column layout instead of floats, fixed by [#33](https://github.com/cadeyrn/enterprise-policy-generator/issues/33)
-- use CSS variables for most color, fixes [#34](https://github.com/cadeyrn/enterprise-policy-generator/issues/34)
+- use CSS variables for most colors, fixes [#34](https://github.com/cadeyrn/enterprise-policy-generator/issues/34)
 
 #### Dependencies
 
