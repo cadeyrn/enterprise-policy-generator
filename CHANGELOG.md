@@ -12,6 +12,7 @@
 
 - updated eslint from version 5.2.0 to 5.3.0
 - updated stylelint from version 9.3.0 to 9.4.0
+- updated web-ext from version 2.7.0 to 2.8.0
 
 ---
 
