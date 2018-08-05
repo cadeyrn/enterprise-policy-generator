@@ -43,7 +43,7 @@ The add-on is currently available in the following languages:
 - English
 - German
 - French (Thanks, Rom!)
-- Simplified Chinese (Thanks, fang5566!)
+- Simplified Chinese (Thanks, fang5566 and yfdyh000!)
 - Upper Sorbian (Thanks, milupo!)
 - Lower Sorbian (Thanks, milupo!)
 
