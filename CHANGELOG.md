@@ -7,6 +7,7 @@
 #### Translations
 
 - updated Simplified Chinese translation (Thanks, yfdyh000!), fixes [#35](https://github.com/cadeyrn/enterprise-policy-generator/issues/35)
+- fixed typo in English translation
 
 ---
 
