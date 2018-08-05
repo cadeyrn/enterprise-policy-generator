@@ -108,7 +108,7 @@
     "message": "Always allow NTLM on non FQDNs (Firefox 63+)"
   },
   "policy_description_Authentication_AllowNonFQDN_SPNEGO": {
-    "message": "Always allow SPNEGO on non FQDNs (Firefox 63++)"
+    "message": "Always allow SPNEGO on non FQDNs (Firefox 63+)"
   },
   "policy_description_Authentication_Delegated": {
     "message": "Delegated"

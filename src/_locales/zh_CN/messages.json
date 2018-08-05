@@ -108,7 +108,7 @@
     "message": "始终允许在非 FQDN 上使用 NTLM (Firefox 63+)"
   },
   "policy_description_Authentication_AllowNonFQDN_SPNEGO": {
-    "message": "始终允许在非 FQDN 上使用 SPNEGO (Firefox 63++)"
+    "message": "始终允许在非 FQDN 上使用 SPNEGO (Firefox 63+)"
   },
   "policy_description_Authentication_Delegated": {
     "message": "委托（Delegated）"
