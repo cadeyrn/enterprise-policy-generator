@@ -2,6 +2,14 @@
 
 ## Release Notes
 
+### (Work in Progress) version.next
+
+#### Translations
+
+- updated Simplified Chinese translation (Thanks, yfdyh000!), fixes [#35](https://github.com/cadeyrn/enterprise-policy-generator/issues/35)
+
+---
+
 ### [Version 3.1.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v3.1.0) (2018-08-05)
 
 #### Enhancements
