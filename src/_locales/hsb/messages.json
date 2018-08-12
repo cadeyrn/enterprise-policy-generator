@@ -105,10 +105,10 @@
     "message": "Přeco SPNEGO abo NTLM na nje-FQDN (połnokwalifikowane domenowe mjena) dowolić"
   },
   "policy_description_Authentication_AllowNonFQDN_NTLM": {
-    "message": "Přeco NTLM na nje-FQDN (Firefox 63+) dowolić"
+    "message": "Přeco NTLM na nje-FQDN (Firefox 62+, Firefox ESR 60.2+) dowolić"
   },
   "policy_description_Authentication_AllowNonFQDN_SPNEGO": {
-    "message": "Přeco SPNEGO na nje-FQDNs (Firefox 63+) dowolić"
+    "message": "Přeco SPNEGO na nje-FQDNs (Firefox 62+, Firefox ESR 60.2+) dowolić"
   },
   "policy_description_Authentication_Delegated": {
     "message": "Delegowany"

@@ -4,6 +4,27 @@
 
 ### (Work in Progress) Version 4.0.0
 
+#### Enterprise Policies
+
+- policy to disable telemetry is also available from Firefox 62, see
+  [#36](https://github.com/cadeyrn/enterprise-policy-generator/issues/36)
+- policy to set or lock the homepage is also available from Firefox 62, see
+  [#36](https://github.com/cadeyrn/enterprise-policy-generator/issues/36)
+- policy to set the default location of the search bar is also available from Firefox 62, see
+  [#36](https://github.com/cadeyrn/enterprise-policy-generator/issues/36)
+- policy to install, uninstall or lock extensions is also available from Firefox 62, see
+  [#36](https://github.com/cadeyrn/enterprise-policy-generator/issues/36)
+- policy to block websites from being visited is also available from Firefox 62, see
+  [#36](https://github.com/cadeyrn/enterprise-policy-generator/issues/36)
+- policy to configure integrated authentication is also available from Firefox 62, see
+  [#36](https://github.com/cadeyrn/enterprise-policy-generator/issues/36)
+- policy to override the first run page is also available from Firefox 62, see
+  [#36](https://github.com/cadeyrn/enterprise-policy-generator/issues/36)
+- policy to override the post-update "What's New" page is also available from Firefox 62, see
+  [#36](https://github.com/cadeyrn/enterprise-policy-generator/issues/36)
+- policy to configure integrated authentication: "Always allow SPNEGO or NTLM on non FQDNs" is also available from Firefox 62 and
+  Firefox ESR 60.2, see [#36](https://github.com/cadeyrn/enterprise-policy-generator/issues/36)
+
 #### Dependencies
 
 - updated stylelint-order from version 0.8.1 to 1.0.0
