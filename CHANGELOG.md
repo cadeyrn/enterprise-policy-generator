@@ -2,6 +2,14 @@
 
 ## Release Notes
 
+### (Work in Progress) Version 4.0.0
+
+#### Dependencies
+
+- updated stylelint-order from version 0.8.1 to 1.0.0
+
+---
+
 ### [Version 3.1.1](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v3.1.1) (2018-08-08)
 
 #### Translations
