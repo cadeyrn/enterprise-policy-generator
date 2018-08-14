@@ -417,73 +417,73 @@
     "message": "摄像头"
   },
   "policy_description_Permissions_Camera_Allow": {
-    "message": "允许下列 URL 访问"
+    "message": "允许下列 URL 操控"
   },
   "policy_description_Permissions_Camera_Allow_URL": {
     "message": "URL"
   },
   "policy_description_Permissions_Camera_Block": {
-    "message": "阻止下列 URL 访问"
+    "message": "阻止下列 URL 操控"
   },
   "policy_description_Permissions_Camera_Block_URL": {
     "message": "URL"
   },
   "policy_description_Permissions_Camera_BlockNewRequests": {
-    "message": "阻止访问您的摄像头的新授权请求"
+    "message": "禁止请求操控您的摄像头"
   },
   "policy_description_Permissions_Location": {
-    "message": "地理位置"
+    "message": "位置"
   },
   "policy_description_Permissions_Location_Allow": {
-    "message": "允许下列 URL 获取"
+    "message": "允许下列 URL 获知"
   },
   "policy_description_Permissions_Location_Allow_URL": {
     "message": "URL"
   },
   "policy_description_Permissions_Location_Block": {
-    "message": "阻止下列 URL 获取"
+    "message": "阻止下列 URL 获知"
   },
   "policy_description_Permissions_Location_Block_URL": {
     "message": "URL"
   },
   "policy_description_Permissions_Location_BlockNewRequests": {
-    "message": "阻止获知您的位置的的新授权请求"
+    "message": "禁止请求获知您的位置"
   },
   "policy_description_Permissions_Microphone": {
     "message": "麦克风"
   },
   "policy_description_Permissions_Microphone_Allow": {
-    "message": "允许下列 URL 访问"
+    "message": "允许下列 URL 操控"
   },
   "policy_description_Permissions_Microphone_Allow_URL": {
     "message": "URL"
   },
   "policy_description_Permissions_Microphone_Block": {
-    "message": "阻止下列 URL 访问"
+    "message": "阻止下列 URL 操控"
   },
   "policy_description_Permissions_Microphone_Block_URL": {
     "message": "URL"
   },
   "policy_description_Permissions_Microphone_BlockNewRequests": {
-    "message": "阻止访问您的麦克风的新授权请求"
+    "message": "禁止请求操控您的麦克风"
   },
   "policy_description_Permissions_Notifications": {
     "message": "通知"
   },
   "policy_description_Permissions_Notifications_Allow": {
-    "message": "允许下列 URL 发出通知"
+    "message": "允许下列 URL 传送通知"
   },
   "policy_description_Permissions_Notifications_Allow_URL": {
     "message": "URL"
   },
   "policy_description_Permissions_Notifications_Block": {
-    "message": "阻止下列 URL 发出通知"
+    "message": "阻止下列 URL 传送通知"
   },
   "policy_description_Permissions_Notifications_Block_URL": {
     "message": "URL"
   },
   "policy_description_Permissions_Notifications_BlockNewRequests": {
-    "message": "阻止向您发送通知的新授权请求"
+    "message": "禁止请求向您传送通知"
   },
   "policy_description_PopupBlocking": {
     "message": "允许或阻止显示弹出窗口"
