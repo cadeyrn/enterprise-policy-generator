@@ -31,6 +31,7 @@
 
 #### Dependencies
 
+- updated eslint from version 5.3.0 to 5.4.0
 - updated stylelint-order from version 0.8.1 to 1.0.0
 
 ---
