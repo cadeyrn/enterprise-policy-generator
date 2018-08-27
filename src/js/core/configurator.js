@@ -627,7 +627,7 @@ const configurator = {
     elObjectWrapper.classList.add('checkbox');
 
     // property name
-    const name = parentName ? parentName : policy.name;
+    const name = parentName ? parentName + '_' + policy.name : policy.name;
 
     // checkbox
     const elInput = document.createElement('input');
@@ -740,7 +740,15 @@ const configurator = {
 
     const optionsLength = policy.properties.length;
     for (let i = 0; i < optionsLength; i++) {
-      const name = parentName + '_' + policy.name + '_' + policy.properties[i].name;
+      let name;
+
+      if (policy.properties[i].type === 'boolean') {
+        name = parentName + '_' + policy.name;
+      }
+      else {
+        name = parentName + '_' + policy.name + '_' + policy.properties[i].name;
+      }
+
       configurator.addProperty(elSubOptions, name, policy.properties[i]);
     }
   },
