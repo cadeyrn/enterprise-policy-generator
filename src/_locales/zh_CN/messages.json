@@ -540,7 +540,7 @@
     "message": "FTP 代理。要配置端口号，请在端口号前添加 “:”"
   },
   "policy_description_Proxy_Passthrough": {
-    "message": "不使用代理的 URL..."
+    "message": "不使用代理的 URL…"
   },
   "policy_description_Proxy_SOCKSProxy": {
     "message": "SOCKS 主机。要配置端口号，请在端口号前添加 “:”"

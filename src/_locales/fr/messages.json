@@ -210,13 +210,13 @@
     "message" : "Accepter les cookies"
   },
   "policy_description_Cookies_ExpireAtSessionEnd" : {
-    "message" : "Conserver les biscuits jusqu'à ce que...."
+    "message" : "Conserver les biscuits jusqu'à ce que…"
   },
   "policy_description_Cookies_ExpireAtSessionEnd_false": {
-    "message" : ".... jusqu'à ce qu'ils expirent"
+    "message" : "… jusqu'à ce qu'ils expirent"
   },
   "policy_description_Cookies_ExpireAtSessionEnd_true": {
-    "message" : "..... jusqu'à ce que Firefox soit fermé"
+    "message" : "… jusqu'à ce que Firefox soit fermé"
   },
   "policy_description_Cookies_RejectTracker": {
     "message": "Reject tracking cookies (Firefox 63+)"
@@ -540,7 +540,7 @@
     "message" : "FTP Proxy. Pour configurer les numéros de port, veuillez ajouter un “:“ suivi du numéro de port"
   },
   "Policy_description_Proxy_Proxy_Passthrough": {
-    "message" : "Pas de procuration pour...."
+    "message" : "Pas de procuration pour…"
   },
   "Policy_description_Proxy_Proxy_SOCKSProxy": {
     "message" : "SOCKS Host. Pour configurer les numéros de port, veuillez ajouter un “:“ suivi du numéro de port"
