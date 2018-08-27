@@ -218,6 +218,9 @@
   "policy_description_Cookies_ExpireAtSessionEnd_true": {
     "message": "… daniž Firefox se njezacynijo"
   },
+  "policy_description_Cookies_RejectTracker": {
+    "message": "Reject tracking cookies (Firefox 63+)"
+  },
   "policy_description_DisableAppUpdate": {
     "message": "Firefox aktualizěrowanje zawoboraś"
   },

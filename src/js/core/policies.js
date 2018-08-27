@@ -817,6 +817,11 @@ const policies = {
             value : 'false'
           }
         ]
+      },
+      {
+        name : 'RejectTracker',
+        label : browser.i18n.getMessage('policy_description_Cookies_RejectTracker'),
+        type : 'boolean'
       }
     ]
   },

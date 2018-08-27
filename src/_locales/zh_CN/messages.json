@@ -218,6 +218,9 @@
   "policy_description_Cookies_ExpireAtSessionEnd_true": {
     "message": "Firefox 关闭"
   },
+  "policy_description_Cookies_RejectTracker": {
+    "message": "Reject tracking cookies (Firefox 63+)"
+  },
   "policy_description_DisableAppUpdate": {
     "message": "阻止 Firefox 进行更新"
   },

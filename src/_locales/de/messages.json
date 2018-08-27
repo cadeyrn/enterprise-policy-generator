@@ -218,6 +218,9 @@
   "policy_description_Cookies_ExpireAtSessionEnd_true": {
     "message": "… bis Firefox geschlossen wird"
   },
+  "policy_description_Cookies_RejectTracker": {
+    "message": "Tracking-Cookies blockieren (Firefox 63+)"
+  },
   "policy_description_DisableAppUpdate": {
     "message": "Firefox am Aktualisieren hindern"
   },
