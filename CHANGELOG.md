@@ -24,6 +24,8 @@
   [#36](https://github.com/cadeyrn/enterprise-policy-generator/issues/36)
 - policy to configure integrated authentication: "Always allow SPNEGO or NTLM on non FQDNs" is also available from Firefox 62 and
   Firefox ESR 60.2, see [#36](https://github.com/cadeyrn/enterprise-policy-generator/issues/36)
+- policy to set a different server URL for Firefox updates is also available from Firefox 62 and Firefox ESR 60.2, see
+  [#36](https://github.com/cadeyrn/enterprise-policy-generator/issues/36)
   
 #### Translations
 

@@ -1156,7 +1156,7 @@ const policies = {
   AppUpdateURL : {
     description : browser.i18n.getMessage('policy_description_AppUpdateURL'),
     enterprise_only : false,
-    first_available : { mainstream : '63.0', esr : null },
+    first_available : { mainstream : '62.0', esr : '60.2' },
     info_link : null,
     is_lockable : false,
     ui_category : 'updates-and-data',
