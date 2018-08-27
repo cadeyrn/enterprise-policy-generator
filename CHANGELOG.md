@@ -7,7 +7,7 @@
 #### Enterprise Policies
 
 - new option to reject trackers for cookies policy (Firefox 63+), fixes
-  [#50](https://github.com/cadeyrn/enterprise-policy-generator/issues/50)
+  [#40](https://github.com/cadeyrn/enterprise-policy-generator/issues/40)
 - policy to disable telemetry is also available from Firefox 62, see
   [#36](https://github.com/cadeyrn/enterprise-policy-generator/issues/36)
 - policy to set or lock the homepage is also available from Firefox 62, see
