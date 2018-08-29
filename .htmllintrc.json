@@ -44,7 +44,7 @@
   "indent-width": 2,
   "indent-width-cont": false,
   "input-radio-req-name": true,
-  "input-req-label": true,
+  "input-req-label": false,
   "label-req-for": true,
   "lang-style": "case",
   "line-end-style": "lf",

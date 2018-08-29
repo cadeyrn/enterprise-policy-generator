@@ -3,6 +3,7 @@
 /* global output, policies, policymanager */
 
 const DOWNLOAD_PERMISSION = { permissions : ['downloads'] };
+const FILTER_ANIMATION_DELAY_IN_MS = 1500;
 
 const elActionLinks = document.getElementById('action-links');
 const elDownloadLink = document.getElementById('download');
@@ -150,6 +151,9 @@ const configurator = {
 
       configurator.downloadPolicy();
     };
+
+    // filter field
+    configurator.filterfield();
   },
 
   /**
@@ -1077,6 +1081,114 @@ const configurator = {
     elLabel.classList.add('invalid-url-label', 'hidden');
     elLabel.innerText = browser.i18n.getMessage('invalid_url_label');
     elObjectWrapper.appendChild(elLabel);
+  },
+
+  /**
+   * Implements code related to the filter field.
+   *
+   * @returns {void}
+   */
+  filterfield () {
+    const filterWrapper = document.getElementById('filter-wrapper');
+    const filter = document.getElementById('filter');
+    const styleHelper = document.getElementById('filter-style-helper');
+
+    filter.setAttribute('placeholder', browser.i18n.getMessage('filter_field'));
+
+    filter.onfocus = () => {
+      if (filterWrapper.classList.contains('open')) {
+        return;
+      }
+
+      filterWrapper.classList.add('in');
+
+      setTimeout(() => {
+        filterWrapper.classList.add('open');
+        filterWrapper.classList.remove('in');
+      }, FILTER_ANIMATION_DELAY_IN_MS);
+    };
+
+    styleHelper.onclick = (e) => {
+      e.preventDefault();
+
+      if (!filterWrapper.classList.contains('open')) {
+        return;
+      }
+
+      filter.value = '';
+
+      filterWrapper.classList.add('close');
+      filterWrapper.classList.remove('open');
+      filterWrapper.classList.remove('close');
+
+      configurator.applySearchFieldFilter(e);
+    };
+
+    filter.oninput = (e) => {
+      configurator.applySearchFieldFilter(e);
+    };
+  },
+
+  /**
+   * This method sets or removes an attribute based on the content of the filter field.
+   *
+   * @param {MouseEvent} e - event
+   *
+   * @returns {void}
+   */
+  applySearchFieldFilter (e) {
+    const matcher = new RegExp(e.target.value, 'i');
+
+    [...document.getElementsByClassName('policy-container')].forEach((policy) => {
+      [...policy.querySelectorAll(':scope label, :scope .label')].forEach((label) => {
+        const policyName = policy.querySelector('.primary-checkbox').getAttribute('data-name');
+
+        if (matcher.test(label.textContent) || matcher.test(policyName)) {
+          policy.setAttribute('data-filtered', 'true');
+        }
+        else {
+          policy.removeAttribute('data-filtered');
+        }
+      });
+    });
+
+    configurator.showFilteredResult();
+  },
+
+  /**
+   * This method is used to show the filtered result.
+   *
+   * @returns {void}
+   */
+  showFilteredResult () {
+    [...document.getElementsByClassName('policy-container')].forEach((policy) => {
+      if (policy.hasAttribute('data-filtered')) {
+        policy.classList.remove('hidden');
+      }
+      else {
+        policy.classList.add('hidden');
+      }
+    });
+
+    configurator.hideEmptyCategories();
+  },
+
+  /**
+   * This method is used to hide all categories without visible policies.
+   *
+   * @returns {void}
+   */
+  hideEmptyCategories () {
+    [...document.getElementsByClassName('options-block')].forEach((block) => {
+      const isVisible = block.querySelector('.policy-container:not(.hidden)');
+
+      if (isVisible) {
+        block.previousElementSibling.classList.remove('hidden');
+      }
+      else {
+        block.previousElementSibling.classList.add('hidden');
+      }
+    });
   }
 };
 

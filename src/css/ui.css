@@ -631,6 +631,232 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
   opacity: 1;
 }
 
+#filter-wrapper {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+}
+
+#filter {
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  padding: 7px 15px;
+  width: 100%;
+  height: auto;
+  font-size: 14px;
+  border: 3px solid var(--color-dark-border);
+  border-radius: 25px;
+  background: none;
+  color: var(--color-black);
+}
+
+#filter:focus {
+  outline: none;
+  border-color: var(--color-blue);
+}
+
+#filter-wrapper.open #filter {
+  padding-right: 40px;
+}
+
+#filter-wrapper:not(.open) #filter {
+  cursor: pointer;
+}
+
+#filter-style-helper {
+  position: absolute;
+  z-index: 1;
+  top: 1px;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+#filter-style-helper::before, #filter-style-helper::after {
+  content: '';
+  position: absolute;
+  width: 13px;
+  height: 3px;
+  background-color: var(--color-dark-border);
+  border-radius: 3px;
+  transform-origin: 100% 100%;
+}
+
+#filter-style-helper::before {
+  top: -3px;
+  right: -3px;
+  transform: rotate(-45deg);
+  opacity: 0;
+}
+
+#filter-style-helper::after{
+  bottom: -3px;
+  right: -3px;
+  transform: rotate(45deg);
+}
+
+#filter-wrapper,
+#filter-wrapper #filter-style-helper,
+#filter-wrapper #filter-style-helper::before,
+#filter-wrapper #filter-style-helper::after {
+  animation-duration: 1200ms;
+  animation-fill-mode: forwards;
+}
+
+#filter-wrapper.in {
+  animation-name: expand;
+}
+
+#filter-wrapper.in #filter-style-helper::before {
+  animation-name: beforeAnimation;
+}
+
+#filter-wrapper.in #filter-style-helper::after {
+  animation-name: afterAnimation;
+}
+
+#filter-wrapper.close,
+#filter-wrapper.close #filter-style-helper,
+#filter-wrapper.close #filter-style-helper::before,
+#filter-wrapper.close #filter-style-helper::after {
+  animation-direction: reverse;
+}
+
+#filter-wrapper.close {
+  animation-name: expand;
+}
+
+#filter-wrapper.close #filter-style-helper::before {
+  animation-name: beforeAnimation;
+}
+
+#filter-wrapper.close #filter-style-helper::after {
+  animation-name: afterAnimation;
+}
+
+#filter-wrapper.open {
+  width: 250px;
+}
+
+#filter-wrapper.open #filter-style-helper {
+  z-index: 3;
+}
+
+#filter-wrapper.open #filter-style-helper::before {
+  top: 9px;
+  right: 13px;
+  width: 20px;
+  opacity: 1;
+}
+
+#filter-wrapper.open #filter-style-helper::after {
+  bottom: 10px;
+  right: 15px;
+  width: 20px;
+}
+
+@keyframes expand {
+  20% {
+    width: 36px;
+  }
+
+  45% {
+    width: 250px;
+  }
+
+  100% {
+    width: 250px;
+  }
+}
+
+@keyframes beforeAnimation {
+  50% {
+    opacity: 0;
+  }
+
+  55% {
+    top: -4px;
+    right: -3px;
+    width: 13px;
+    opacity: 1;
+  }
+
+  65% {
+    top: 6px;
+    right: 10px;
+    width: 30px;
+  }
+
+  80% {
+    top: 9px;
+    right: 13px;
+    width: 20px;
+  }
+
+  100% {
+    top: 9px;
+    right: 13px;
+    width: 20px;
+    opacity: 1;
+  }
+}
+
+@keyframes afterAnimation {
+  10% {
+    bottom: -10px;
+    right: -10px;
+    width: 24px;
+  }
+
+  15%{
+    opacity: 1;
+  }
+
+  35% {
+    bottom: -3px;
+    right: -3px;
+    width: 13px;
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  64% {
+    opacity: 0;
+  }
+
+  65% {
+    bottom: -2px;
+    right: -3px;
+    width: 13px;
+    opacity: 1;
+  }
+
+  75% {
+    bottom: 4px;
+    right: 10px;
+    width: 30px;
+  }
+
+  90% {
+    bottom: 10px;
+    right: 15px;
+    width: 20px;
+  }
+
+  100% {
+    bottom: 10px;
+    right: 15px;
+    width: 20px;
+  }
+}
+
 @media screen and (max-width: 1199px) {
   html, body {
     height: auto;
@@ -646,6 +872,12 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
 
   #import-configuration {
     margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 729px) {
+  #filter-wrapper {
+    display: none;
   }
 }
 
