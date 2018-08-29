@@ -30,7 +30,7 @@
     "message": "Générateur de Règles d'Entreprise"
   },
   "filter_field": {
-    "message": "Filtrer les politiques..."
+    "message": "Filtrer les politiques…"
   },
   "generate_button": {
     "message" : "Générer des politiques"
