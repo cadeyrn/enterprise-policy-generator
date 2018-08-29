@@ -30,7 +30,7 @@
     "message": "Enterprise Policy Generator"
   },
   "filter_field": {
-    "message": "Filter policies…"
+    "message": "Prawidła filtrować…"
   },
   "generate_button": {
     "message": "Směrnicy generować"
@@ -222,7 +222,7 @@
     "message": "… doniž Firefox so njezačini"
   },
   "policy_description_Cookies_RejectTracker": {
-    "message": "Reject tracking cookies (Firefox 63+)"
+    "message": "Slědowanske placki blokować (Firefox 63+)"
   },
   "policy_description_DisableAppUpdate": {
     "message": "Firefox při aktualizowanju haćić"
