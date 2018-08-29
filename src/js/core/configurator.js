@@ -1141,7 +1141,9 @@ const configurator = {
 
     [...document.getElementsByClassName('policy-container')].forEach((policy) => {
       [...policy.querySelectorAll(':scope label, :scope .label')].forEach((label) => {
-        if (matcher.test(label.textContent)) {
+        const policyName = policy.querySelector('.primary-checkbox').getAttribute('data-name');
+
+        if (matcher.test(label.textContent) || matcher.test(policyName)) {
           policy.setAttribute('data-filtered', 'true');
         }
         else {
