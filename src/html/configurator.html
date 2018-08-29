@@ -10,13 +10,14 @@
   <div id='header-wrapper' class='default'>
     <header id='header'>
       <a id='logo' href='configurator.html'></a>
+      <div id='filter-wrapper'>
+        <input type='text' id='filter' placeholder='' />
+        <div id='filter-style-helper'></div>
+      </div>
     </header>
   </div>
   <main id='main'>
     <form id='generator-form' novalidate>
-      <div id='filter-wrapper'>
-        <input type='text' id='filter' placeholder='' />
-      </div>
       <h3 data-i18n='policy_category_block_access'></h3>
       <div id='options-block-access' class='options-block'></div>
       <h3 data-i18n='policy_category_disable_features'></h3>

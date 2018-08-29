@@ -3,6 +3,7 @@
 /* global output, policies, policymanager */
 
 const DOWNLOAD_PERMISSION = { permissions : ['downloads'] };
+const FILTER_ANIMATION_DELAY_IN_MS = 1500;
 
 const elActionLinks = document.getElementById('action-links');
 const elDownloadLink = document.getElementById('download');
@@ -1088,9 +1089,40 @@ const configurator = {
    * @returns {void}
    */
   filterfield () {
+    const filterWrapper = document.getElementById('filter-wrapper');
     const filter = document.getElementById('filter');
+    const styleHelper = document.getElementById('filter-style-helper');
 
     filter.setAttribute('placeholder', browser.i18n.getMessage('filter_field'));
+
+    filter.onfocus = () => {
+      if (filterWrapper.classList.contains('open')) {
+        return;
+      }
+
+      filterWrapper.classList.add('in');
+
+      setTimeout(() => {
+        filterWrapper.classList.add('open');
+        filterWrapper.classList.remove('in');
+      }, FILTER_ANIMATION_DELAY_IN_MS);
+    };
+
+    styleHelper.onclick = (e) => {
+      e.preventDefault();
+
+      if (!filterWrapper.classList.contains('open')) {
+        return;
+      }
+
+      filter.value = '';
+
+      filterWrapper.classList.add('close');
+      filterWrapper.classList.remove('open');
+      filterWrapper.classList.remove('close');
+
+      configurator.applySearchFieldFilter(e);
+    };
 
     filter.oninput = (e) => {
       configurator.applySearchFieldFilter(e);
