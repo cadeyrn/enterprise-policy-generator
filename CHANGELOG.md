@@ -4,6 +4,11 @@
 
 ### (Work in Progress) Version 4.0.0
 
+#### Enhancements
+
+- **a filter field has been added. Both the descriptions of the policies and the internal policy names can be
+  searched**, fixes [#14](https://github.com/cadeyrn/enterprise-policy-generator/issues/14)
+
 #### Enterprise Policies
 
 - new option to reject trackers for cookies policy (Firefox 63+), fixes

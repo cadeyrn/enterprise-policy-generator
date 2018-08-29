@@ -27,6 +27,7 @@ of the documentation and all possible options is necessary. Administrators can s
 - you can save any number of different configurations, load them at a later time (and of course delete them)
 - you can also export configurations and import them on other devices
 - if a policy requires a newer version than Firefox 60.0 or Firefox ESR 60.0 a notice is displayed
+- a filter field allows to search in the descriptions of the policy and in the internal policy names
 
 ### Shortcuts
 
