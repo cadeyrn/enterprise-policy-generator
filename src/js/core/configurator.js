@@ -740,7 +740,7 @@ const configurator = {
 
     const optionsLength = policy.properties.length;
     for (let i = 0; i < optionsLength; i++) {
-      let name;
+      let name = '';
 
       if (policy.properties[i].type === 'boolean') {
         name = parentName + '_' + policy.name;
