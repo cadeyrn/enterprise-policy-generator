@@ -150,6 +150,9 @@ const configurator = {
 
       configurator.downloadPolicy();
     };
+
+    // filter field
+    configurator.filterfield();
   },
 
   /**
@@ -1077,6 +1080,59 @@ const configurator = {
     elLabel.classList.add('invalid-url-label', 'hidden');
     elLabel.innerText = browser.i18n.getMessage('invalid_url_label');
     elObjectWrapper.appendChild(elLabel);
+  },
+
+  /**
+   * Implements code related to the filter field.
+   *
+   * @returns {void}
+   */
+  filterfield () {
+    const filter = document.getElementById('filter');
+
+    filter.oninput = (e) => {
+      configurator.applySearchFieldFilter(e);
+    };
+  },
+
+  /**
+   * This method sets or removes an attribute based on the content of the filter field.
+   *
+   * @param {MouseEvent} e - event
+   *
+   * @returns {void}
+   */
+  applySearchFieldFilter (e) {
+    const matcher = new RegExp(e.target.value, 'i');
+
+    [...document.getElementsByClassName('policy-container')].forEach((policy) => {
+      [...policy.querySelectorAll(':scope label, :scope .label')].forEach((label) => {
+        if (matcher.test(label.textContent)) {
+          policy.setAttribute('data-filtered', 'true');
+        }
+        else {
+          policy.removeAttribute('data-filtered');
+        }
+      });
+    });
+
+    configurator.showFilteredResult();
+  },
+
+  /**
+   * This method is used to show the filtered result.
+   *
+   * @returns {void}
+   */
+  showFilteredResult () {
+    [...document.getElementsByClassName('policy-container')].forEach((policy) => {
+      if (policy.hasAttribute('data-filtered')) {
+        policy.classList.remove('hidden');
+      }
+      else {
+        policy.classList.add('hidden');
+      }
+    });
   }
 };
 
