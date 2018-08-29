@@ -1090,6 +1090,8 @@ const configurator = {
   filterfield () {
     const filter = document.getElementById('filter');
 
+    filter.setAttribute('placeholder', browser.i18n.getMessage('filter_field'));
+
     filter.oninput = (e) => {
       configurator.applySearchFieldFilter(e);
     };
