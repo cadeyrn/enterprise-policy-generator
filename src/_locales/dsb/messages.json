@@ -29,6 +29,9 @@
   "extension_name": {
     "message": "Enterprise Policy Generator"
   },
+  "filter_field": {
+    "message": "Filter policies…"
+  },
   "generate_button": {
     "message": "Směrnice generěrowaś"
   },

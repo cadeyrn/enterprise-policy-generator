@@ -29,6 +29,9 @@
   "extension_name": {
     "message": "Générateur de Règles d'Entreprise"
   },
+  "filter_field": {
+    "message": "Filter policies…"
+  },
   "generate_button": {
     "message" : "Générer des politiques"
   },

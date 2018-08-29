@@ -29,6 +29,9 @@
   "extension_name": {
     "message": "Enterprise Policy Generator"
   },
+  "filter_field": {
+    "message": "Policies filtern…"
+  },
   "generate_button": {
     "message": "Richtlinien generieren"
   },
