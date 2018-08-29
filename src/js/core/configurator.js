@@ -1140,7 +1140,7 @@ const configurator = {
     const matcher = new RegExp(e.target.value, 'i');
 
     [...document.getElementsByClassName('policy-container')].forEach((policy) => {
-      [...policy.querySelectorAll(':scope label, :scope .label')].forEach((label) => {
+      [...policy.querySelectorAll(':scope > label, :scope > .label')].forEach((label) => {
         const policyName = policy.querySelector('.primary-checkbox').getAttribute('data-name');
 
         if (matcher.test(label.textContent) || matcher.test(policyName)) {
