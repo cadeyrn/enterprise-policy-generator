@@ -1119,7 +1119,10 @@ const configurator = {
 
       filterWrapper.classList.add('close');
       filterWrapper.classList.remove('open');
-      filterWrapper.classList.remove('close');
+
+      setTimeout(() => {
+        filterWrapper.classList.remove('close');
+      }, FILTER_ANIMATION_DELAY_IN_MS);
 
       configurator.applySearchFieldFilter(e);
     };
