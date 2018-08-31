@@ -36,7 +36,7 @@ reserved. Or you can open the interface via a menu entry in the tools menu.
 
 ### Planned features
 
-There are already some features planned for the future. You can find the roadmap and request new features in the
+You can find the roadmap and request new features in the
 [issues tracker](https://github.com/cadeyrn/enterprise-policy-generator/issues).
 
 ### Languages
