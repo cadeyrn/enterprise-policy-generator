@@ -44,7 +44,7 @@
 - updated gulp-htmllint from version 0.0.15 to 0.0.16
 - updated stylelint from version 9.4.0 to 9.5.0
 - updated stylelint-order from version 0.8.1 to 1.0.0
-- updated web-ext from version 2.8.0 to 2.9.0
+- updated web-ext from version 2.8.0 to 2.9.1
 
 ---
 
