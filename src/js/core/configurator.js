@@ -1093,22 +1093,7 @@ const configurator = {
     const filter = document.getElementById('filter');
     const styleHelper = document.getElementById('filter-style-helper');
 
-    filter.setAttribute('placeholder', browser.i18n.getMessage('filter_field'));
-
-    filter.onfocus = () => {
-      if (filterWrapper.classList.contains('open')) {
-        return;
-      }
-
-      filterWrapper.classList.add('in');
-
-      setTimeout(() => {
-        filterWrapper.classList.add('open');
-        filterWrapper.classList.remove('in');
-      }, FILTER_ANIMATION_DELAY_IN_MS);
-    };
-
-    styleHelper.onclick = (e) => {
+    const close = (e) => {
       e.preventDefault();
 
       if (!filterWrapper.classList.contains('open')) {
@@ -1125,6 +1110,32 @@ const configurator = {
       }, FILTER_ANIMATION_DELAY_IN_MS);
 
       configurator.applySearchFieldFilter(e);
+    };
+
+    filter.setAttribute('placeholder', browser.i18n.getMessage('filter_field'));
+
+    filter.onfocus = () => {
+      if (filterWrapper.classList.contains('open')) {
+        return;
+      }
+
+      filterWrapper.classList.add('in');
+
+      setTimeout(() => {
+        filterWrapper.classList.add('open');
+        filterWrapper.classList.remove('in');
+      }, FILTER_ANIMATION_DELAY_IN_MS);
+
+      window.onkeydown = (e) => {
+        if (e.key === 'Escape' && document.activeElement === filter) {
+          close(e);
+          filter.blur();
+        }
+      };
+    };
+
+    styleHelper.onclick = (e) => {
+      close(e);
     };
 
     filter.oninput = (e) => {
