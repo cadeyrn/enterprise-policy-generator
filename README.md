@@ -65,7 +65,8 @@ ask you at runtime once the following permissions is needed:
 
 ##### download files and read and modify the browser's download history
 
-This permission is needed for providing the option to download the generated “policies.json” file.
+This permission is needed for providing the option to download the generated “policies.json” file or to export
+configurations.
 
 #### silent permissions
 
