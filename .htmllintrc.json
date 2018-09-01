@@ -48,7 +48,7 @@
   "label-req-for": true,
   "lang-style": "case",
   "line-end-style": "lf",
-  "line-max-len": 129,
+  "line-max-len": 170,
   "line-max-len-ignore-regex": false,
   "line-no-trailing-whitespace": true,
   "spec-char-escape": false,
