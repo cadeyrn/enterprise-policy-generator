@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### (Work in Progress) Version 4.0.0
+### [Version 4.0.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v4.0.0) (2018-09-01)
 
 #### Enhancements
 
@@ -45,6 +45,9 @@
 - updated stylelint from version 9.4.0 to 9.5.0
 - updated stylelint-order from version 0.8.1 to 1.0.0
 - updated web-ext from version 2.8.0 to 2.9.1
+
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v3.1.1...v4.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-4.0.0)
 
 ---
 
