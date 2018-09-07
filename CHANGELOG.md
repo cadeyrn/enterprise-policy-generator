@@ -2,6 +2,16 @@
 
 ## Release Notes
 
+### (Work in Progress) Version 4.1.0
+
+#### Dependencies
+
+- updated eslint-plugin-promise from version 4.0.0 to 4.0.1
+
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v4.0.0...master)
+
+---
+
 ### [Version 4.0.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v4.0.0) (2018-09-01)
 
 #### Enhancements
