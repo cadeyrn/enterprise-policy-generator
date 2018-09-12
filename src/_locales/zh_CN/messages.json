@@ -30,7 +30,7 @@
     "message": "Enterprise Policy Generator"
   },
   "filter_field": {
-    "message": "Filter policies…"
+    "message": "过滤器策略…"
   },
   "generate_button": {
     "message": "生成策略"
@@ -222,7 +222,7 @@
     "message": "Firefox 关闭"
   },
   "policy_description_Cookies_RejectTracker": {
-    "message": "Reject tracking cookies (Firefox 63+)"
+    "message": "阻止跟踪 Cookies (Firefox 63+)"
   },
   "policy_description_DisableAppUpdate": {
     "message": "阻止 Firefox 进行更新"
