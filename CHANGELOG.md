@@ -6,6 +6,7 @@
 
 #### Dependencies
 
+- updated eslint from version 5.5.0 to 5.6.1
 - updated eslint-plugin-promise from version 4.0.0 to 4.0.1
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v4.0.0...master)
