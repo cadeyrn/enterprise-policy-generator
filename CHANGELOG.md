@@ -7,7 +7,7 @@
 #### Dependencies
 
 - updated eslint from version 5.5.0 to 5.7.0
-- updated eslint-plugin-compat from version 2.5.1 to 2.6.1
+- updated eslint-plugin-compat from version 2.5.1 to 2.6.2
 - updated eslint-plugin-promise from version 4.0.0 to 4.0.1
 - updated stylelint from version 9.5.0 to 9.6.0
 
