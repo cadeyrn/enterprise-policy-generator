@@ -418,7 +418,7 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
   text-decoration: none;
 }
 
-.esr-only, .versions-info {
+.esr-only, .additional-note, .versions-info {
   margin-top: 2px;
   font-size: small;
   color: rgba(19, 69, 99, .8);
@@ -429,7 +429,7 @@ input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
   font-size: small;
 }
 
-.esr-only img, .info-link img {
+.esr-only img, .additional-note img, .info-link img {
   position: relative;
   top: -1px;
   margin-right: 2px;

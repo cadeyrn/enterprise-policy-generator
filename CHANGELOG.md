@@ -4,6 +4,11 @@
 
 ### (Work in Progress) Version 5.0.0
 
+#### Enhancements
+
+- added support for additional policy notes, for example if a policy is not supported on all operating systems, see
+  [#57](https://github.com/cadeyrn/enterprise-policy-generator/issues/57)
+
 #### Dependencies
 
 - updated eslint from version 5.5.0 to 5.8.0

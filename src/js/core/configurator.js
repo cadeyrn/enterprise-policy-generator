@@ -904,6 +904,20 @@ const configurator = {
       elESRNotice.appendChild(elESRText);
     }
 
+    // additional note
+    if (policy.additional_note) {
+      const elAdditionalNote = document.createElement('div');
+      elAdditionalNote.classList.add('additional-note');
+      elLabel.appendChild(elAdditionalNote);
+
+      const elAdditionalNoteImage = document.createElement('img');
+      elAdditionalNoteImage.src = '/images/warning.svg';
+      elAdditionalNote.appendChild(elAdditionalNoteImage);
+
+      const elAdditionalNoteText = document.createTextNode(policy.additional_note);
+      elAdditionalNote.appendChild(elAdditionalNoteText);
+    }
+
     // versions info
     if (policy.first_available.mainstream !== '60.0' || policy.first_available.esr !== '60.0') {
       const elVersionsInfo = document.createElement('div');
