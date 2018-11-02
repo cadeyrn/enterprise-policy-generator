@@ -168,7 +168,7 @@
     "message": "URL"
   },
   "policy_description_Certificates": {
-    "message": "Zertifikate aus dem Windows-Zertifikatspeicher lesen (nur Windows)"
+    "message": "Zertifikate aus dem Windows-Zertifikatspeicher lesen"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_false": {
     "message": "Zertifikate nicht aus dem Windows-Zertifikatspeicher lesen"
@@ -658,6 +658,9 @@
   },
   "policy_description_WebsiteFilter_Exceptions_URL": {
     "message": "URL"
+  },
+  "requirement_windows_and_fx64": {
+    "message": "funktioniert nur auf Windows; deaktivieren funktioniert erst ab Firefox 64"
   },
   "requirement_windows_or_linux": {
     "message": "funktioniert nur auf Windows und Linux"

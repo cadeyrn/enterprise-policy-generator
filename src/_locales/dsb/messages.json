@@ -168,7 +168,7 @@
     "message": "URL"
   },
   "policy_description_Certificates": {
-    "message": "Certifikaty z certifikatowego składowaka Windows cytaś (jano Windows)"
+    "message": "Certifikaty z certifikatowego składowaka Windows cytaś"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_false": {
     "message": "Certifikaty z certifikatowego składowaka Windows njecytaś"
@@ -658,6 +658,9 @@
   },
   "policy_description_WebsiteFilter_Exceptions_URL": {
     "message": "URL"
+  },
+  "requirement_windows_and_fx64": {
+    "message": "works only on Windows; disabling works only on Firefox 64 and higher"
   },
   "requirement_windows_or_linux": {
     "message": "works only on Windows and Linux"
