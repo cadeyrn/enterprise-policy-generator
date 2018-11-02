@@ -193,6 +193,7 @@ const policies = {
   DisplayMenuBar : {
     description : browser.i18n.getMessage('policy_description_DisplayMenuBar'),
     enterprise_only : false,
+    additional_note : browser.i18n.getMessage('requirement_windows_or_linux'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,

@@ -650,6 +650,9 @@
   "policy_description_WebsiteFilter_Exceptions_URL": {
     "message": "URL"
   },
+  "requirement_windows_or_linux": {
+    "message": "funktioniert nur auf Windows und Linux"
+  },
   "save_dialog_btn_cancel": {
     "message": "Abbrechen"
   },

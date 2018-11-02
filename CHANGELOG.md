@@ -6,8 +6,13 @@
 
 #### Enhancements
 
-- added support for additional policy notes, for example if a policy is not supported on all operating systems, see
+- added support for additional policy notes, for example if a policy is not supported on all operating systems, fixes
   [#57](https://github.com/cadeyrn/enterprise-policy-generator/issues/57)
+  
+#### Enterprise Policies
+
+- added a note that the policy to hide the menu bar is Windows / Linux only, fixes
+  [#56](https://github.com/cadeyrn/enterprise-policy-generator/issues/56)
 
 #### Dependencies
 
