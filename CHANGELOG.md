@@ -15,7 +15,9 @@
   [#53](https://github.com/cadeyrn/enterprise-policy-generator/issues/53)
 - added a note that the policy to hide the menu bar is Windows / Linux only, fixes
   [#56](https://github.com/cadeyrn/enterprise-policy-generator/issues/56)
-- added a note that the option not to read certificates from the Windows certificate store only works on Firefox 64
+- added a note that the policy to read certificates from the system certificate store also works on macOS starting
+  with Firefox 63, fixes [#39](https://github.com/cadeyrn/enterprise-policy-generator/issues/39)
+- added a note that the option not to read certificates from the system certificate store only works on Firefox 64
   and higher, fixes [#46](https://github.com/cadeyrn/enterprise-policy-generator/issues/46)
 - removed the policy to disable the safe mode because it's not supported via policies.json, only via GPO, fixes
   [#58](https://github.com/cadeyrn/enterprise-policy-generator/issues/58)

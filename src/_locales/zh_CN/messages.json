@@ -168,13 +168,13 @@
     "message": "URL"
   },
   "policy_description_Certificates": {
-    "message": "读取 Windows 证书存储的证书"
+    "message": "Read certificates from the system certificate store"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_false": {
-    "message": "不读取 Windows 证书存储的证书"
+    "message": "don't read certificates from the system certificate store"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_true": {
-    "message": "读取 Windows 证书存储的证书"
+    "message": "read certificates from the system certificate store"
   },
   "policy_description_Cookies": {
     "message": "允许或阻止网站设置 Cookie"
@@ -659,8 +659,8 @@
   "policy_description_WebsiteFilter_Exceptions_URL": {
     "message": "URL"
   },
-  "requirement_windows_and_fx64": {
-    "message": "works only on Windows; disabling works only on Firefox 64 and higher"
+  "requirement_certificates_policy": {
+    "message": "Windows only; macOS on Firefox 63 and higher; disabling on Firefox 64 and higher"
   },
   "requirement_windows_or_linux": {
     "message": "works only on Windows and Linux"

@@ -1146,7 +1146,7 @@ const policies = {
   Certificates : {
     description : browser.i18n.getMessage('policy_description_Certificates'),
     enterprise_only : false,
-    additional_note : browser.i18n.getMessage('requirement_windows_and_fx64'),
+    additional_note : browser.i18n.getMessage('requirement_certificates_policy'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,

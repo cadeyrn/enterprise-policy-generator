@@ -168,13 +168,13 @@
     "message" : "Adresse"
   },
   "policy_description_Certificates": {
-    "message" : "Lire les certificats de la liste de certificats de Windows"
+    "message": "Read certificates from the system certificate store"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_false": {
-    "message" : "Ne lisez pas les certificats du magasin de certificats de Windows"
+    "message": "don't read certificates from the system certificate store"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_true": {
-    "message" : "lire les certificats du magasin de certificats de Windows"
+    "message": "read certificates from the system certificate store"
   },
   "policy_description_Cookies": {
     "message" : "Autoriser ou refuser des sites Web à placer des cookies"
@@ -659,8 +659,8 @@
   "Policy_description_WebsiteFilter_Exceptions_URL": {
     "message" : "Adresse"
   },
-  "requirement_windows_and_fx64": {
-    "message": "works only on Windows; disabling works only on Firefox 64 and higher"
+  "requirement_certificates_policy": {
+    "message": "Windows only; macOS on Firefox 63 and higher; disabling on Firefox 64 and higher"
   },
   "requirement_windows_or_linux": {
     "message": "works only on Windows and Linux"
