@@ -311,6 +311,18 @@
   "policy_description_DisplayMenuBar": {
     "message" : "Afficher la barre de menu par défaut"
   },
+  "policy_description_DNSOverHTTPS": {
+    "message": "Configure DNS over HTTPS"
+  },
+  "policy_description_DNSOverHTTPS_Enabled_false": {
+    "message": "Disable DNS over HTTPS"
+  },
+  "policy_description_DNSOverHTTPS_Enabled_true": {
+    "message": "Enable DNS over HTTPS"
+  },
+  "policy_description_DNSOverHTTPS_ProviderURL": {
+    "message": "Provider URL"
+  },
   "policy_description_DontCheckDefaultBrowser": {
     "message" : "Ne vérifiez pas si Firefox est le navigateur par défaut au démarrage."
   },

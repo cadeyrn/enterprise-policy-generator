@@ -311,6 +311,18 @@
   "policy_description_DisplayMenuBar": {
     "message": "Zeige die Menüleiste standardmäßig"
   },
+  "policy_description_DNSOverHTTPS": {
+    "message": "DNS über HTTPS konfigurieren"
+  },
+  "policy_description_DNSOverHTTPS_Enabled_false": {
+    "message": "DNS über HTTPS deaktivieren"
+  },
+  "policy_description_DNSOverHTTPS_Enabled_true": {
+    "message": "DNS über HTTPS aktivieren"
+  },
+  "policy_description_DNSOverHTTPS_ProviderURL": {
+    "message": "Provider-URL"
+  },
   "policy_description_DontCheckDefaultBrowser": {
     "message": "Beim Start nicht prüfen, ob Firefox der Standard-Browser ist"
   },

@@ -540,6 +540,40 @@ const policies = {
     ]
   },
 
+  DNSOverHTTPS : {
+    description : browser.i18n.getMessage('policy_description_DNSOverHTTPS'),
+    enterprise_only : false,
+    first_available : { mainstream : '63.0', esr : null },
+    info_link : null,
+    is_lockable : true,
+    ui_category : 'network',
+    type : 'object',
+    properties : [
+      {
+        name : 'Enabled',
+        label : browser.i18n.getMessage('policy_description_DNSOverHTTPS_Enabled'),
+        mandatory : false,
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('policy_description_DNSOverHTTPS_Enabled_true'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_DNSOverHTTPS_Enabled_false'),
+            value : 'false'
+          }
+        ]
+      },
+      {
+        name : 'ProviderURL',
+        label : browser.i18n.getMessage('policy_description_DNSOverHTTPS_ProviderURL'),
+        mandatory : false,
+        type : 'url'
+      },
+    ]
+  },
+
   Proxy : {
     description : browser.i18n.getMessage('policy_description_Proxy'),
     enterprise_only : false,

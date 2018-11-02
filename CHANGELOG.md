@@ -11,6 +11,8 @@
   
 #### Enterprise Policies
 
+- new policy to configure DNS over HTTPS (Firefox 63+), fixes
+  [#53](https://github.com/cadeyrn/enterprise-policy-generator/issues/53)
 - added a note that the policy to hide the menu bar is Windows / Linux only, fixes
   [#56](https://github.com/cadeyrn/enterprise-policy-generator/issues/56)
 

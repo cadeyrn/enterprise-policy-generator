@@ -311,6 +311,18 @@
   "policy_description_DisplayMenuBar": {
     "message": "Menijowu rědku pó standarźe pokazaś"
   },
+  "policy_description_DNSOverHTTPS": {
+    "message": "Configure DNS over HTTPS"
+  },
+  "policy_description_DNSOverHTTPS_Enabled_false": {
+    "message": "Disable DNS over HTTPS"
+  },
+  "policy_description_DNSOverHTTPS_Enabled_true": {
+    "message": "Enable DNS over HTTPS"
+  },
+  "policy_description_DNSOverHTTPS_ProviderURL": {
+    "message": "Provider URL"
+  },
   "policy_description_DontCheckDefaultBrowser": {
     "message": "Pśi starśe njekontrolěrowaś, lěc Firefox jo standardny wobglědowak"
   },
