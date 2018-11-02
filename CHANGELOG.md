@@ -15,6 +15,8 @@
   [#53](https://github.com/cadeyrn/enterprise-policy-generator/issues/53)
 - added a note that the policy to hide the menu bar is Windows / Linux only, fixes
   [#56](https://github.com/cadeyrn/enterprise-policy-generator/issues/56)
+- removed the policy to disable the safe mode because it's not supported via policies.json, only via GPO, fixes
+  [#58](https://github.com/cadeyrn/enterprise-policy-generator/issues/58)
 
 #### Dependencies
 

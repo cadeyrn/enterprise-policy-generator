@@ -266,9 +266,6 @@
   "policy_description_DisableProfileRefresh": {
     "message": "禁用 about:support 页面中的“翻新 Firefox” 按钮"
   },
-  "policy_description_DisableSafeMode": {
-    "message": "禁用 Firefox 安全模式（禁用所有附加组件并重开浏览器）"
-  },
   "policy_description_DisableSecurityBypass": {
     "message": "阻止跳过特定的安全警告"
   },

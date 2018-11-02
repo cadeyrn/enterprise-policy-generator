@@ -266,9 +266,6 @@
   "policy_description_DisableProfileRefresh": {
     "message" : "Désactivez le bouton \"Refresh Firefox\" dans about:support"
   },
-  "policy_description_DisableSafeMode": {
-    "message" : "Désactiver la possibilité de redémarrer Firefox avec les add-ons désactivés (mode sans échec)."
-  },
   "policy_description_DisableSecurityBypass": {
     "message" : "Empêcher que certains avertissements de sécurité soient contournés"
   },

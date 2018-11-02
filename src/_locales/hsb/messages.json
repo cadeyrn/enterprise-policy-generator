@@ -266,9 +266,6 @@
   "policy_description_DisableProfileRefresh": {
     "message": "Tłóčatko \"Firefox wobnowić\" w about:support znjemóžnić"
   },
-  "policy_description_DisableSafeMode": {
-    "message": "Móžnosć znjemóžnić, Firefox ze znjemóžnjenymi přidatkami znowa startować (wěsty modus)"
-  },
   "policy_description_DisableSecurityBypass": {
     "message": "Zadźěwać, zo so wěstotne warnowanja wobeńdu"
   },

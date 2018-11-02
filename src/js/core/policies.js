@@ -168,16 +168,6 @@ const policies = {
     type : 'boolean'
   },
 
-  DisableSafeMode : {
-    description : browser.i18n.getMessage('policy_description_DisableSafeMode'),
-    enterprise_only : false,
-    first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
-    ui_category : 'disable-features',
-    type : 'boolean'
-  },
-
   DisableFeedbackCommands : {
     description : browser.i18n.getMessage('policy_description_DisableFeedbackCommands'),
     enterprise_only : false,

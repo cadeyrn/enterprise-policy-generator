@@ -266,9 +266,6 @@
   "policy_description_DisableProfileRefresh": {
     "message": "Tłocašk \"Firefox wótnowiś\" w about:support znjemóžniś"
   },
-  "policy_description_DisableSafeMode": {
-    "message": "Móžnosć znjemóžniś, Firefox ze znjemóžnjonymi dodankami znowego startowaś (wěsty modus)"
-  },
   "policy_description_DisableSecurityBypass": {
     "message": "Zajźowaś, až se wěstotnych warnowanjow wobinu"
   },
