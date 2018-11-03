@@ -9,6 +9,11 @@
 - added support for additional policy notes, for example if a policy is not supported on all operating systems, fixes
   [#57](https://github.com/cadeyrn/enterprise-policy-generator/issues/57)
   
+### Bugfixes
+
+- fixed a bug which caused that the order of bookmarks was wrong when loading a saved configuration, fixes
+  [#47](https://github.com/cadeyrn/enterprise-policy-generator/issues/47)
+  
 #### Enterprise Policies
 
 - new policy to configure DNS over HTTPS (Firefox 63+), fixes
