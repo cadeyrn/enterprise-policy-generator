@@ -168,13 +168,13 @@
     "message": "URL"
   },
   "policy_description_Certificates": {
-    "message": "Read certificates from the system certificate store"
+    "message": "Certifikaty z certifikatoweho składowaka systema čitać"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_false": {
-    "message": "don't read certificates from the system certificate store"
+    "message": "Certifikaty z certifikatoweho składowaka systema nječitać"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_true": {
-    "message": "read certificates from the system certificate store"
+    "message": "Certifikaty z certifikatoweho składowaka systema čitać"
   },
   "policy_description_Cookies": {
     "message": "Webstronam dowolić abo zakazać, placki stajić"
@@ -309,16 +309,16 @@
     "message": "Menijowu lajstu po standardźe pokazać"
   },
   "policy_description_DNSOverHTTPS": {
-    "message": "Configure DNS over HTTPS"
+    "message": "DNS přez HTTPS konfigurować"
   },
   "policy_description_DNSOverHTTPS_Enabled_false": {
-    "message": "Disable DNS over HTTPS"
+    "message": "DNS přez HTTPS znjemóžnić"
   },
   "policy_description_DNSOverHTTPS_Enabled_true": {
-    "message": "Enable DNS over HTTPS"
+    "message": "DNS přez HTTPS zmóžnić"
   },
   "policy_description_DNSOverHTTPS_ProviderURL": {
-    "message": "Provider URL"
+    "message": "URL poskićowarja"
   },
   "policy_description_DontCheckDefaultBrowser": {
     "message": "Při starće njekontrolować, hač Firefox je standardny wobhladowak"
@@ -660,10 +660,10 @@
     "message": "URL"
   },
   "requirement_certificates_policy": {
-    "message": "Windows only; macOS on Firefox 63 and higher; disabling on Firefox 64 and higher"
+    "message": "jenož Windows; macOS wot Firefox 63; znjemóžnić wot Firefox 64"
   },
   "requirement_windows_or_linux": {
-    "message": "works only on Windows and Linux"
+    "message": "funguje jenož z Windows a Linux"
   },
   "save_dialog_btn_cancel": {
     "message": "Přetorhnyć"
