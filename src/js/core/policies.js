@@ -560,7 +560,7 @@ const policies = {
         label : browser.i18n.getMessage('policy_description_DNSOverHTTPS_ProviderURL'),
         mandatory : false,
         type : 'url'
-      },
+      }
     ]
   },
 
