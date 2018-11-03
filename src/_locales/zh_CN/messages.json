@@ -168,13 +168,13 @@
     "message": "URL"
   },
   "policy_description_Certificates": {
-    "message": "Read certificates from the system certificate store"
+    "message": "读取系统证书库中的证书"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_false": {
-    "message": "don't read certificates from the system certificate store"
+    "message": "不读取系统证书库中的证书"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_true": {
-    "message": "read certificates from the system certificate store"
+    "message": "读取系统证书库中的证书"
   },
   "policy_description_Cookies": {
     "message": "允许或阻止网站设置 Cookie"
@@ -309,16 +309,16 @@
     "message": "默认显示菜单栏"
   },
   "policy_description_DNSOverHTTPS": {
-    "message": "Configure DNS over HTTPS"
+    "message": "配置 DNS over HTTPS"
   },
   "policy_description_DNSOverHTTPS_Enabled_false": {
-    "message": "Disable DNS over HTTPS"
+    "message": "禁用 DNS over HTTPS"
   },
   "policy_description_DNSOverHTTPS_Enabled_true": {
-    "message": "Enable DNS over HTTPS"
+    "message": "启用 DNS over HTTPS"
   },
   "policy_description_DNSOverHTTPS_ProviderURL": {
-    "message": "Provider URL"
+    "message": "提供商 URL"
   },
   "policy_description_DontCheckDefaultBrowser": {
     "message": "启动时不检查 Firefox 是否为默认浏览器"
@@ -660,10 +660,10 @@
     "message": "URL"
   },
   "requirement_certificates_policy": {
-    "message": "Windows only; macOS on Firefox 63 and higher; disabling on Firefox 64 and higher"
+    "message": "仅限 Windows；macOS 的 Firefox 63 及更高版本；禁止在 Firefox 64 及更高版本使用"
   },
   "requirement_windows_or_linux": {
-    "message": "works only on Windows and Linux"
+    "message": "仅适用于 Windows 和 Linux"
   },
   "save_dialog_btn_cancel": {
     "message": "取消"
