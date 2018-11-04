@@ -35,7 +35,7 @@
 - updated gulp-stylelint from version 7.0.0 to 8.0.0
 - updated stylelint from version 9.5.0 to 9.7.1
 
-[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v4.0.0...v4.1.0)
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v4.0.0...v4.1.0)<br />
 [Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-4.1.0)
 
 ---
