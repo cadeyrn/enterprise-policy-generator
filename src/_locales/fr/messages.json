@@ -168,13 +168,13 @@
     "message" : "Adresse"
   },
   "policy_description_Certificates": {
-    "message": "Read certificates from the system certificate store"
+    "message": "Lire certificats depuis la liste des certificats du système"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_false": {
-    "message": "don't read certificates from the system certificate store"
+    "message": "ne pas lire les certificats depuis la liste des certificats du système"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_true": {
-    "message": "read certificates from the system certificate store"
+    "message": "lire les certificats depuis la liste des certificats du système"
   },
   "policy_description_Cookies": {
     "message" : "Autoriser ou refuser des sites Web à placer des cookies"
@@ -309,16 +309,16 @@
     "message" : "Afficher la barre de menu par défaut"
   },
   "policy_description_DNSOverHTTPS": {
-    "message": "Configure DNS over HTTPS"
+    "message": "Configurer DNS sur HTTPS"
   },
   "policy_description_DNSOverHTTPS_Enabled_false": {
-    "message": "Disable DNS over HTTPS"
+    "message": "Désactiver DNS sur HTTPS"
   },
   "policy_description_DNSOverHTTPS_Enabled_true": {
-    "message": "Enable DNS over HTTPS"
+    "message": "Activer DNS sur HTTPS"
   },
   "policy_description_DNSOverHTTPS_ProviderURL": {
-    "message": "Provider URL"
+    "message": "URL du fournisseur"
   },
   "policy_description_DontCheckDefaultBrowser": {
     "message" : "Ne vérifiez pas si Firefox est le navigateur par défaut au démarrage."
@@ -660,10 +660,10 @@
     "message" : "Adresse"
   },
   "requirement_certificates_policy": {
-    "message": "Windows only; macOS on Firefox 63 and higher; disabling on Firefox 64 and higher"
+    "message": "Windows uniquement; macOS avec Firefox 63ou plus réçent; désactiver sur Firefox 64 et supérieur"
   },
   "requirement_windows_or_linux": {
-    "message": "works only on Windows and Linux"
+    "message": "fonctionne sur Windows et Linux"
   },
   "save_dialog_btn_cancel": {
     "message" : "Annuler"
