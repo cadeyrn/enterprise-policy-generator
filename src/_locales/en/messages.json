@@ -393,7 +393,7 @@
     "message": "URL"
   },
   "policy_description_InstallAddonsPermission": {
-    "message": "Allow webites to install add-ons"
+    "message": "Allow websites to install add-ons"
   },
   "policy_description_InstallAddonsPermission_Allow": {
     "message": "Websites that can install extensions unless the installation of add-ons is disabled (addons.mozilla.org is already allowed)"
