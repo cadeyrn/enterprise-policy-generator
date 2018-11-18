@@ -8,6 +8,10 @@
 
 - fixed a bug that caused saved configurations not to load under certain circumstances, fixes
   [#63](https://github.com/cadeyrn/enterprise-policy-generator/issues/63)
+  
+#### Translations
+
+- fixed typo in English translation (Thanks, a1346054!), fixes [#62](https://github.com/cadeyrn/enterprise-policy-generator/pull/62)
 
 #### Dependencies
 
