@@ -80,8 +80,8 @@ const serializer = {
     Object.keys(data.arrayfields).forEach((id) => {
       const newCountValue = Math.max(...data.arrayfields[id]);
 
-      data.arrayfields[id].forEach((key, idx) => {
-        configurator.addArrayField(document.getElementById('Array_Add_' + id + '_' + (idx + 1)), key, newCountValue);
+      data.arrayfields[id].forEach((key) => {
+        configurator.addArrayField(document.getElementById('Array_Add_' + id + '_1'), key, newCountValue);
       });
     });
 

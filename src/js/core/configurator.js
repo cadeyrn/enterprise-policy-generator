@@ -218,6 +218,18 @@ const configurator = {
    * @returns {void}
    */
   addArrayField (el, key, overrideCountValue) {
+    // if the key parameter is used, this method is called by the unserializer. Let's make sure that we append new
+    // items always to the end to preserve the original order
+    if (key) {
+      const closest = el.closest('.array-action-links');
+
+      if (closest) {
+        const arrayActionElements = closest.getElementsByClassName('array-action');
+        // eslint-disable-next-line no-param-reassign
+        el = arrayActionElements[arrayActionElements.length - 1];
+      }
+    }
+
     // after adding a new array item the remove link of the first one shouldn't be disabled
     if (el.parentNode.parentNode.querySelector('.disabled-link')) {
       el.parentNode.parentNode.querySelector('.disabled-link').classList.remove('disabled-link');
@@ -409,6 +421,7 @@ const configurator = {
     }
 
     // add array field action links
+    elSubOptions.parentNode.classList.add('array-action-links');
     configurator.addArrayFieldActionLinks(elSubOptions, key + '_1');
 
     // add option to UI
@@ -793,6 +806,7 @@ const configurator = {
 
     // add array field action links
     const arrayAddName = parentName + '_' + policy.name + '_1';
+    elSubOptions.parentNode.classList.add('array-action-links');
     configurator.addArrayFieldActionLinks(elSubOptions, arrayAddName);
   },
 
@@ -847,6 +861,7 @@ const configurator = {
 
     // add array field action links if property of an array
     if (isArrayProperty && !hideArrayActionLinks) {
+      el.classList.add('array-action-links');
       configurator.addArrayFieldActionLinks(elObjectWrapper, domName);
     }
 
