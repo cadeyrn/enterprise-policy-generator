@@ -2,6 +2,24 @@
 
 ## Release Notes
 
+### [Version 4.1.1](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v4.1.1) (2018-11-18)
+  
+#### Bugfixes
+
+- fixed a bug that caused saved configurations not to load under certain circumstances, fixes
+  [#63](https://github.com/cadeyrn/enterprise-policy-generator/issues/63)
+
+#### Dependencies
+
+- updated eslint from version 5.8.0 to 5.9.0
+- updated stylelint from version 9.7.1 to 9.8.0
+- updated web-ext from version 2.9.1 to 2.9.2
+
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v4.1.0...v4.1.1)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-4.1.1)
+
+---
+
 ### [Version 4.1.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v4.1.0) (2018-11-04)
 
 #### Enhancements
