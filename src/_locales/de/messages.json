@@ -8,6 +8,9 @@
   "enterprise_only_label": {
     "message": "funktioniert nur in Firefox ESR"
   },
+  "explanation_about_policies": {
+    "message": "Ab Firefox 63 gibt es unter about:policies eine Übersicht über alle aktiven Policies sowie Fehler in der Datei „policies.json“."
+  },
   "explanation_headline_usage": {
     "message": "Anwendung"
   },

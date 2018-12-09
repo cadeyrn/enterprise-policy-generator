@@ -8,6 +8,9 @@
   "enterprise_only_label": {
     "message": "Fonctionne uniquement avec Firefox ESR"
   },
+  "explanation_about_policies": {
+    "message": "Starting with Firefox 63 there is an overview of all active policies and errors in the file “policies.json” at about:policies."
+  },
   "explanation_headline_usage": {
     "message": "Usage"
   },

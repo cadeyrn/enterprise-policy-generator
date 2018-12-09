@@ -4,6 +4,11 @@
 
 ### (Work in Progress) Version 4.2.0
 
+#### Enhancements
+
+- added a note that starting with Firefox 63 there is an overview of all active policies and errors in the file
+  “policies.json” at about:policies, fixes [#38](https://github.com/cadeyrn/enterprise-policy-generator/issues/38)
+
 #### Enterprise Policies
 
 - new policy to change the interface language of Firefox (Firefox 64+, Firefox ESR 60.3.1+), fixes
