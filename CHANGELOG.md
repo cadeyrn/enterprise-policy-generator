@@ -2,6 +2,16 @@
 
 ## Release Notes
 
+### (Work in Progress) Version 4.2.0
+
+#### Dependencies
+
+- updated eslint from version 5.9.0 to 5.10.0
+
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v4.1.1...master)<br />
+
+---
+
 ### [Version 4.1.1](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v4.1.1) (2018-11-18)
   
 #### Bugfixes
