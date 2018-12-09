@@ -7,6 +7,7 @@
 #### Dependencies
 
 - updated eslint from version 5.9.0 to 5.10.0
+- updated npm-run-all from version 4.1.3 to 4.1.5
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v4.1.1...master)<br />
 
