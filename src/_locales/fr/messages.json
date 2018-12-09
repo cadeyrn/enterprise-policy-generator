@@ -606,13 +606,13 @@
     "message" : "Utiliser Proxy DNS"
   },
   "policy_description_RequestedLocales": {
-    "message": "Change interface language of Firefox"
+    "message": "Changer l'interface de language de Firefox"
   },
   "policy_description_RequestedLocales_Requirement": {
-    "message": "The corresponding language package must be installed"
+    "message": "Les paquet de Langues correspondantes doivent êtres installées"
   },
   "policy_description_RequestedLocales_Value": {
-    "message": "Language Code"
+    "message": "Language du Code"
   },
   "Policy_description_SanitizeOnShutdown": {
     "message" : "Effacer toutes les données du navigateur à l'arrêt"
