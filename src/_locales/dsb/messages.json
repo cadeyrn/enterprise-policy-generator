@@ -9,7 +9,7 @@
     "message": "funkcioněrujo jano w Firefox ESR"
   },
   "explanation_about_policies": {
-    "message": "Starting with Firefox 63 there is an overview of all active policies and errors in the file “policies.json” at about:policies."
+    "message": "Wót Firefox 63 jo pśeglěd wó wšych aktiwnych pšawidłach pód about:policies ako teke wó zmólkach w dataji „policies.json“."
   },
   "explanation_headline_usage": {
     "message": "Nałoženje"
@@ -171,7 +171,7 @@
     "message": "URL"
   },
   "policy_description_Certificates": {
-    "message": "Configure certificates"
+    "message": "Certifikaty konfigurěrowaś"
   },
   "policy_description_Certificates_ImportEnterpriseRoots": {
     "message": "Certifikaty z certifikatowego składowaka systema cytaś (jano Windows; macOS wót Firefox 63; znjemóžniś wót Firefox 64)"
@@ -183,10 +183,10 @@
     "message": "Certifikaty z certifikatowego składowaka systema cytaś"
   },
   "policy_description_Certificates_Install": {
-    "message": "Import certificates (Firefox 64+, Firefox ESR 60.3.1+; Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates or %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: USERDIR/Library/Application Support/Mozilla/Certificates or /Library/Application Support/Mozilla/Certificates, Linux: /home/user/.mozilla/certificates; distribution/Certificates and arbitrary absolute pathes from Firefox 65)"
+    "message": "Certifikaty importěrowaś (Firefox 64+, Firefox ESR 60.3.1+; Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates abo %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: USERDIR/Library/Application Support/Mozilla/Certificates abo /Library/Application Support/Mozilla/Certificates, Linux: /home/user/.mozilla/certificates; distribution/Certificates a někake absolutne sćažki wót Firefox 65)"
   },
   "policy_description_Certificates_Install_Value": {
-    "message": "Path to .crt file"
+    "message": "Sćažka k .crt-dataji"
   },
   "policy_description_Cookies": {
     "message": "Webbokam dowóliś abo zakazaś, cookieje stajiś"
@@ -402,16 +402,16 @@
     "message": "Pśidatne URL"
   },
   "policy_description_Homepage_StartPage": {
-    "message": "Start Firefox with… (Firefox 64+, Firefox ESR 60.3.1+)"
+    "message": "Firefox startowaś z… (Firefox 64+, Firefox ESR 60.3.1+)"
   },
   "policy_description_Homepage_StartPage_Homepage": {
-    "message": "… the website defined as homepage"
+    "message": "… nastajonym startowym bokom"
   },
   "policy_description_Homepage_StartPage_None": {
-    "message": "… an empty page"
+    "message": "… proznym bokom"
   },
   "policy_description_Homepage_StartPage_Previous_Session": {
-    "message": "… the previous browser session"
+    "message": "… slědnym pósejźenim wobglědowaka"
   },
   "policy_description_Homepage_URL": {
     "message": "URL"
@@ -606,13 +606,13 @@
     "message": "Proksy-DNS wužywaś"
   },
   "policy_description_RequestedLocales": {
-    "message": "Change interface language of Firefox"
+    "message": "Rěc pówjercha Firefox změniś"
   },
   "policy_description_RequestedLocales_Requirement": {
-    "message": "The corresponding language package must be installed"
+    "message": "Wótpowědny rěcny pakśik musy zainstalěrowany byś"
   },
   "policy_description_RequestedLocales_Value": {
-    "message": "Language Code"
+    "message": "Rěcny kode"
   },
   "policy_description_SanitizeOnShutdown": {
     "message": "Wšykne pśeglědowańske daty wulašowaś, gaž se Firefox zacynijo"
