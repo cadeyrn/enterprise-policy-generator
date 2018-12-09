@@ -180,6 +180,21 @@ const policies = {
 
   // customization
 
+  RequestedLocales : {
+    description : browser.i18n.getMessage('policy_description_RequestedLocales'),
+    enterprise_only : false,
+    additional_note : browser.i18n.getMessage('policy_description_RequestedLocales_Requirement'),
+    first_available : { mainstream : '64.0', esr : '60.3.1' },
+    info_link : 'https://addons.mozilla.org/firefox/language-tools/',
+    is_lockable : false,
+    ui_category : 'customization',
+    type : 'flat-array',
+    value : {
+      label : browser.i18n.getMessage('policy_description_RequestedLocales_Value'),
+      mandatory : true
+    }
+  },
+
   DisplayMenuBar : {
     description : browser.i18n.getMessage('policy_description_DisplayMenuBar'),
     enterprise_only : false,

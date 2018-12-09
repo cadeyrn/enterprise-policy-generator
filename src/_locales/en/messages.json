@@ -581,6 +581,15 @@
   "policy_description_Proxy_UseProxyForDNS_true": {
     "message": "use Proxy DNS"
   },
+  "policy_description_RequestedLocales": {
+    "message": "Change interface language of Firefox"
+  },
+  "policy_description_RequestedLocales_Requirement": {
+    "message": "The corresponding language package must be installed"
+  },
+  "policy_description_RequestedLocales_Value": {
+    "message": "Language Code"
+  },
   "policy_description_SanitizeOnShutdown": {
     "message": "Clear all browser data on shutdown"
   },

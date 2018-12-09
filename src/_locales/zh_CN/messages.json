@@ -581,6 +581,15 @@
   "policy_description_Proxy_UseProxyForDNS_true": {
     "message": "代理 DNS 查询"
   },
+  "policy_description_RequestedLocales": {
+    "message": "Change interface language of Firefox"
+  },
+  "policy_description_RequestedLocales_Requirement": {
+    "message": "The corresponding language package must be installed"
+  },
+  "policy_description_RequestedLocales_Value": {
+    "message": "Language Code"
+  },
   "policy_description_SanitizeOnShutdown": {
     "message": "关闭浏览器时清除所有浏览器数据"
   },
