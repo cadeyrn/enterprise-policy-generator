@@ -306,6 +306,10 @@ button:hover::before {
   position: relative;
 }
 
+.sub-options + .sub-options {
+  margin-top: 2px;
+}
+
 input[data-type='array'] ~ .sub-options, .object-array > div {
   position: relative;
 }

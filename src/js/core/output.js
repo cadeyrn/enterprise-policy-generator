@@ -26,6 +26,9 @@ const output = {
         else if (el.getAttribute('data-type') === 'enum') {
           output.generateOutputForEnums(el);
         }
+        else if (el.getAttribute('data-type') === 'flat-array') {
+          output.generateOutputForFlatArrays(el);
+        }
         else if (el.getAttribute('data-type') === 'object') {
           output.generateOutputForObjects(el);
         }
@@ -97,6 +100,32 @@ const output = {
     [...el.parentNode.querySelectorAll(':scope > .enum select')].forEach((el) => {
       policymanager.add(el.getAttribute('data-name'), output.parseEnumContent(el));
     });
+  },
+
+  /**
+   * Generates output for policies of type "flat-array".
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   *
+   * @returns {void}
+   */
+  generateOutputForFlatArrays (el) {
+    const items = [];
+
+    [...el.parentNode.querySelectorAll(':scope > div')].forEach((el) => {
+      if (!output.hasInvalidFields(el)) {
+        [...el.querySelectorAll(':scope input')].forEach((el) => {
+          if (el.value) {
+            items.push(el.value);
+          }
+        });
+      }
+    });
+
+    // only add non-empty arrays
+    if (items.length > 0) {
+      policymanager.add(el.getAttribute('data-name'), items);
+    }
   },
 
   /**

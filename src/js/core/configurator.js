@@ -66,6 +66,9 @@ const configurator = {
       else if (policies[key].type === 'enum') {
         configurator.addEnumOption(key, policies[key]);
       }
+      else if (policies[key].type === 'flat-array') {
+        configurator.addFlatArrayOption(key, policies[key]);
+      }
       else if (policies[key].type === 'object') {
         configurator.addObjectOption(key, policies[key]);
       }
@@ -480,6 +483,43 @@ const configurator = {
       elOption.appendChild(elOptionLabel);
       elSelect.appendChild(elOption);
     }
+
+    // add option to UI
+    configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
+  },
+
+  /**
+   * Adds policy of the type "flat-array" to the DOM.
+   *
+   * @param {string} key - the name of the policy
+   * @param {Object} policy - the policy object
+   *
+   * @returns {void}
+   */
+  addFlatArrayOption (key, policy) {
+    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'flat-array');
+    const elSubOptions = configurator.addSubOptions(elObjectWrapper);
+
+    const elInputWrapper = document.createElement('div');
+    elInputWrapper.classList.add('input');
+
+    const elInput = document.createElement('input');
+    elInput.setAttribute('type', 'text');
+    elInput.setAttribute('id', key + '_Value_1');
+    elInput.setAttribute('name', key + '_Value_1');
+    elInput.setAttribute('data-name', key);
+    elInput.setAttribute('placeholder', policy.value.label);
+
+    // mandatory field
+    if (policy.value.mandatory) {
+      configurator.addMandatoryLabel(elInput, elSubOptions);
+    }
+
+    elSubOptions.appendChild(elInput);
+
+    // add array field action links
+    elSubOptions.parentNode.classList.add('array-action-links');
+    configurator.addArrayFieldActionLinks(elSubOptions, key + '_1');
 
     // add option to UI
     configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
