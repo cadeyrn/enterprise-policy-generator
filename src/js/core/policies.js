@@ -226,9 +226,29 @@ const policies = {
     type : 'object',
     properties : [
       {
+        name : 'StartPage',
+        label : browser.i18n.getMessage('policy_description_Homepage_StartPage'),
+        mandatory : false,
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('policy_description_Homepage_StartPage_Homepage'),
+            value : 'homepage'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Homepage_StartPage_None'),
+            value : 'none'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Homepage_StartPage_Previous_Session'),
+            value : 'previous-session'
+          }
+        ]
+      },
+      {
         name : 'URL',
         label : browser.i18n.getMessage('policy_description_Homepage_URL'),
-        mandatory : true,
+        mandatory : false,
         type : 'url'
       },
       {

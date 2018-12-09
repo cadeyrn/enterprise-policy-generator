@@ -389,6 +389,18 @@
   "policy_description_Homepage_Additional": {
     "message": "Přidatne URL"
   },
+  "policy_description_Homepage_StartPage": {
+    "message": "Start Firefox with… (Firefox 64+, Firefox ESR 60.3.1+)"
+  },
+  "policy_description_Homepage_StartPage_Homepage": {
+    "message": "… the website defined as homepage"
+  },
+  "policy_description_Homepage_StartPage_None": {
+    "message": "… an empty page"
+  },
+  "policy_description_Homepage_StartPage_Previous_Session": {
+    "message": "… the previous browser session"
+  },
   "policy_description_Homepage_URL": {
     "message": "URL"
   },

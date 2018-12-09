@@ -386,6 +386,18 @@
   "policy_description_Homepage": {
     "message": "Startseite festlegen"
   },
+  "policy_description_Homepage_StartPage": {
+    "message": "Starte Firefox mit… (Firefox 64+, Firefox ESR 60.3.1+)"
+  },
+  "policy_description_Homepage_StartPage_Homepage": {
+    "message": "… der eingestellten Startseite"
+  },
+  "policy_description_Homepage_StartPage_None": {
+    "message": "… einer leeren Seite"
+  },
+  "policy_description_Homepage_StartPage_Previous_Session": {
+    "message": "… der letzten Browser-Sitzung"
+  },
   "policy_description_Homepage_Additional": {
     "message": "Zusätzliche URLs"
   },

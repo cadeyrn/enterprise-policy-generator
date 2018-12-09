@@ -8,6 +8,8 @@
 
 - new policy to change the interface language of Firefox (Firefox 64+, Firefox ESR 60.3.1+), fixes
   [#52](https://github.com/cadeyrn/enterprise-policy-generator/issues/52)
+- new option to start Firefox with an empty page or the previous session as part of the homepage policy
+  (Firefox 64+, Firefox ESR 60.3.1+), fixes [#54](https://github.com/cadeyrn/enterprise-policy-generator/issues/54)
 
 #### Dependencies
 
