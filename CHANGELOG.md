@@ -10,6 +10,8 @@
   [#52](https://github.com/cadeyrn/enterprise-policy-generator/issues/52)
 - new option to start Firefox with an empty page or the previous session as part of the homepage policy
   (Firefox 64+, Firefox ESR 60.3.1+), fixes [#54](https://github.com/cadeyrn/enterprise-policy-generator/issues/54)
+- new option to import certificates as part of the certificates policy
+  (Firefox 64+, Firefox ESR 60.3.1+), fixes [#60](https://github.com/cadeyrn/enterprise-policy-generator/issues/60)
 
 #### Dependencies
 

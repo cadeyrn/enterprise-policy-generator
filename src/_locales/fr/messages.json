@@ -168,13 +168,22 @@
     "message" : "Adresse"
   },
   "policy_description_Certificates": {
-    "message": "Lire certificats depuis la liste des certificats du système"
+    "message": "Configure certificates"
+  },
+  "policy_description_Certificates_ImportEnterpriseRoots": {
+    "message": "Lire certificats depuis la liste des certificats du système (Windows uniquement; macOS avec Firefox 63ou plus réçent; désactiver sur Firefox 64 et supérieur)"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_false": {
     "message": "ne pas lire les certificats depuis la liste des certificats du système"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_true": {
     "message": "lire les certificats depuis la liste des certificats du système"
+  },
+  "policy_description_Certificates_Install": {
+    "message": "Import certificates (Firefox 64+, Firefox ESR 60.3.1+; Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates or %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: USERDIR/Library/Application Support/Mozilla/Certificates or /Library/Application Support/Mozilla/Certificates, Linux: /home/user/.mozilla/certificates; distribution/Certificates and arbitrary absolute pathes from Firefox 65)"
+  },
+  "policy_description_Certificates_Install_Value": {
+    "message": "Path to .crt file"
   },
   "policy_description_Cookies": {
     "message" : "Autoriser ou refuser des sites Web à placer des cookies"
@@ -679,9 +688,6 @@
   },
   "Policy_description_WebsiteFilter_Exceptions_URL": {
     "message" : "Adresse"
-  },
-  "requirement_certificates_policy": {
-    "message": "Windows uniquement; macOS avec Firefox 63ou plus réçent; désactiver sur Firefox 64 et supérieur"
   },
   "requirement_windows_or_linux": {
     "message": "fonctionne sur Windows et Linux"

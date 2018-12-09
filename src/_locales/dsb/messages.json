@@ -168,13 +168,22 @@
     "message": "URL"
   },
   "policy_description_Certificates": {
-    "message": "Certifikaty z certifikatowego składowaka systema cytaś"
+    "message": "Configure certificates"
+  },
+  "policy_description_Certificates_ImportEnterpriseRoots": {
+    "message": "Certifikaty z certifikatowego składowaka systema cytaś (jano Windows; macOS wót Firefox 63; znjemóžniś wót Firefox 64)"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_false": {
     "message": "Certifikaty z certifikatowego składowaka systema njecytaś"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_true": {
     "message": "Certifikaty z certifikatowego składowaka systema cytaś"
+  },
+  "policy_description_Certificates_Install": {
+    "message": "Import certificates (Firefox 64+, Firefox ESR 60.3.1+; Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates or %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: USERDIR/Library/Application Support/Mozilla/Certificates or /Library/Application Support/Mozilla/Certificates, Linux: /home/user/.mozilla/certificates; distribution/Certificates and arbitrary absolute pathes from Firefox 65)"
+  },
+  "policy_description_Certificates_Install_Value": {
+    "message": "Path to .crt file"
   },
   "policy_description_Cookies": {
     "message": "Webbokam dowóliś abo zakazaś, cookieje stajiś"
@@ -679,9 +688,6 @@
   },
   "policy_description_WebsiteFilter_Exceptions_URL": {
     "message": "URL"
-  },
-  "requirement_certificates_policy": {
-    "message": "jano Windows; macOS wót Firefox 63; znjemóžniś wót Firefox 64"
   },
   "requirement_windows_or_linux": {
     "message": "funkcioněrujo jano z Windows a Linux"

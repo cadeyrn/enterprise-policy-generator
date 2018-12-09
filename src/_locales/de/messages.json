@@ -168,13 +168,22 @@
     "message": "URL"
   },
   "policy_description_Certificates": {
-    "message": "Zertifikate aus dem System-Zertifikatsspeicher lesen"
+    "message": "Zertifikate konfigurieren"
+  },
+  "policy_description_Certificates_ImportEnterpriseRoots": {
+    "message": "Zertifikate aus dem System-Zertifikatsspeicher lesen (nur Windows; macOS ab Firefox 63; deaktivieren ab Firefox 64)"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_false": {
     "message": "Zertifikate nicht aus dem System-Zertifikatsspeicher lesen"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_true": {
     "message": "Zertifikate aus dem System-Zertifikatsspeicher lesen"
+  },
+  "policy_description_Certificates_Install": {
+    "message": "Zertifikate importieren (Firefox 64+, Firefox ESR 60.3.1+; Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates oder %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: USERDIR/Library/Application Support/Mozilla/Certificates oder /Library/Application Support/Mozilla/Certificates, Linux: /home/user/.mozilla/certificates; distribution/Certificates und beliebige absolute Pfade ab Firefox 65)"
+  },
+  "policy_description_Certificates_Install_Value": {
+    "message": "Pfad zur .crt-Datei"
   },
   "policy_description_Cookies": {
     "message": "Webseiten erlauben oder verbieten, Cookies zu setzen"
@@ -679,9 +688,6 @@
   },
   "policy_description_WebsiteFilter_Exceptions_URL": {
     "message": "URL"
-  },
-  "requirement_certificates_policy": {
-    "message": "nur Windows; macOS ab Firefox 63; deaktivieren ab Firefox 64"
   },
   "requirement_windows_or_linux": {
     "message": "funktioniert nur auf Windows und Linux"

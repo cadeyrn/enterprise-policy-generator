@@ -168,13 +168,22 @@
     "message": "URL"
   },
   "policy_description_Certificates": {
-    "message": "Read certificates from the system certificate store"
+    "message": "Configure certificates"
+  },
+  "policy_description_Certificates_ImportEnterpriseRoots": {
+    "message": "read certificates from the system certificate store (Windows only; macOS on Firefox 63 and higher; disabling on Firefox 64 and higher)"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_false": {
     "message": "don't read certificates from the system certificate store"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_true": {
     "message": "read certificates from the system certificate store"
+  },
+  "policy_description_Certificates_Install": {
+    "message": "Import certificates (Firefox 64+, Firefox ESR 60.3.1+; Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates or %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: USERDIR/Library/Application Support/Mozilla/Certificates or /Library/Application Support/Mozilla/Certificates, Linux: /home/user/.mozilla/certificates; distribution/Certificates and arbitrary absolute pathes from Firefox 65)"
+  },
+  "policy_description_Certificates_Install_Value": {
+    "message": "Path to .crt file"
   },
   "policy_description_Cookies": {
     "message": "Allow or deny websites to set cookies"
@@ -679,9 +688,6 @@
   },
   "policy_description_WebsiteFilter_Exceptions_URL": {
     "message": "URL"
-  },
-  "requirement_certificates_policy": {
-    "message": "Windows only; macOS on Firefox 63 and higher; disabling on Firefox 64 and higher"
   },
   "requirement_windows_or_linux": {
     "message": "works only on Windows and Linux"

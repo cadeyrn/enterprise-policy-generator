@@ -168,13 +168,22 @@
     "message": "URL"
   },
   "policy_description_Certificates": {
-    "message": "读取系统证书库中的证书"
+    "message": "Configure certificates"
+  },
+  "policy_description_Certificates_ImportEnterpriseRoots": {
+    "message": "读取系统证书库中的证书 (仅限 Windows；macOS 的 Firefox 63 及更高版本；禁止在 Firefox 64 及更高版本使用)"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_false": {
     "message": "不读取系统证书库中的证书"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_true": {
     "message": "读取系统证书库中的证书"
+  },
+  "policy_description_Certificates_Install": {
+    "message": "Import certificates (Firefox 64+, Firefox ESR 60.3.1+; Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates or %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: USERDIR/Library/Application Support/Mozilla/Certificates or /Library/Application Support/Mozilla/Certificates, Linux: /home/user/.mozilla/certificates; distribution/Certificates and arbitrary absolute pathes from Firefox 65)"
+  },
+  "policy_description_Certificates_Install_Value": {
+    "message": "Path to .crt file"
   },
   "policy_description_Cookies": {
     "message": "允许或阻止网站设置 Cookie"
@@ -679,9 +688,6 @@
   },
   "policy_description_WebsiteFilter_Exceptions_URL": {
     "message": "URL"
-  },
-  "requirement_certificates_policy": {
-    "message": "仅限 Windows；macOS 的 Firefox 63 及更高版本；禁止在 Firefox 64 及更高版本使用"
   },
   "requirement_windows_or_linux": {
     "message": "仅适用于 Windows 和 Linux"
