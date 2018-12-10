@@ -9,7 +9,7 @@
     "message": "仅在 Firefox ESR 生效"
   },
   "explanation_about_policies": {
-    "message": "从 Firefox 63 开始，所有活跃和策略和错误都会在 about:policies 页面对应的“policies.json”文件中显示一个摘要。",
+    "message": "从 Firefox 63 开始，所有活跃和策略和错误都会在 about:policies 页面对应的“policies.json”文件中显示一个摘要。"
   },
   "explanation_headline_usage": {
     "message": "使用方法"

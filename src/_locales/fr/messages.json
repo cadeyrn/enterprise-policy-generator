@@ -9,7 +9,7 @@
     "message": "Fonctionne uniquement avec Firefox ESR"
   },
   "explanation_about_policies": {
-    "message": "A partir de Firefox 63, il y a un aperçu de toutes les politiques actives et des erreurs dans le fichier "policies.json" à la page about:policies."
+    "message": "A partir de Firefox 63, il y a un aperçu de toutes les politiques actives et des erreurs dans le fichier \"policies.json\" à la page about:policies."
   },
   "explanation_headline_usage": {
     "message": "Usage"
