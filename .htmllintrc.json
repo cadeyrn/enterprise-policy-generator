@@ -51,6 +51,7 @@
   "line-max-len": 170,
   "line-max-len-ignore-regex": false,
   "line-no-trailing-whitespace": true,
+  "link-req-noopener": true,
   "spec-char-escape": false,
   "table-req-caption": false,
   "table-req-header": false,
