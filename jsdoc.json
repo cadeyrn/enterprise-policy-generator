@@ -15,7 +15,7 @@
       "outputSourceFiles": true
     },
     "systemName": "Enterprise Policy Generator",
-    "copyright": "© 2018, soeren-hentzschel.at",
+    "copyright": "© 2018 - 2019, soeren-hentzschel.at",
     "path": "ink-docstrap",
     "theme": "united",
     "linenums": true,
