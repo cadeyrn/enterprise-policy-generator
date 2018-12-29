@@ -9,6 +9,7 @@
 - updated eslint from version 5.10.0 to 5.11.1 and added one new rule
 - updated gulp from version 3.9.1 to 4.0.0
 - updated htmllint from version 0.7.2 to 0.7.3 and added one new rule
+- updated web-ext from version 2.9.2 to 2.9.3
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v4.2.0...master)<br />
 
