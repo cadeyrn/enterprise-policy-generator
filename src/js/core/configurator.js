@@ -69,6 +69,9 @@ const configurator = {
       else if (policies[key].type === 'flat-array') {
         configurator.addFlatArrayOption(key, policies[key]);
       }
+      else if (policies[key].type === 'key-value-pairs') {
+        configurator.addKeyValuePairsOption(key, policies[key]);
+      }
       else if (policies[key].type === 'object') {
         configurator.addObjectOption(key, policies[key]);
       }
@@ -521,6 +524,54 @@ const configurator = {
     }
 
     elSubOptions.appendChild(elInput);
+
+    // add array field action links
+    elSubOptions.parentNode.classList.add('array-action-links');
+    configurator.addArrayFieldActionLinks(elSubOptions, key + '_1');
+
+    // add option to UI
+    configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
+  },
+
+  /**
+   * Adds policy of the type "key-value-pairs" to the DOM.
+   *
+   * @param {string} key - the name of the policy
+   * @param {Object} policy - the policy object
+   *
+   * @returns {void}
+   */
+  addKeyValuePairsOption (key, policy) {
+    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'key-value-pairs');
+    const elSubOptions = configurator.addSubOptions(elObjectWrapper);
+
+    const elInputWrapperKey = document.createElement('div');
+    elInputWrapperKey.classList.add('input');
+
+    const elInputKey = document.createElement('input');
+    elInputKey.setAttribute('type', 'text');
+    elInputKey.setAttribute('id', key + '_Key_Value_1');
+    elInputKey.setAttribute('name', key + '_Key_Value_1');
+    elInputKey.setAttribute('data-name', key);
+    elInputKey.setAttribute('placeholder', policy.label_key);
+    elInputKey.classList.add('key');
+    configurator.addMandatoryLabel(elInputKey, elInputWrapperKey);
+    elInputWrapperKey.appendChild(elInputKey);
+    elSubOptions.appendChild(elInputWrapperKey);
+
+    const elInputWrapperValue = document.createElement('div');
+    elInputWrapperValue.classList.add('input');
+
+    const elInputValue = document.createElement('input');
+    elInputValue.setAttribute('type', 'text');
+    elInputValue.setAttribute('id', key + '_Value_Value_1');
+    elInputValue.setAttribute('name', key + '_Value_Value_1');
+    elInputValue.setAttribute('data-name', key);
+    elInputValue.setAttribute('placeholder', policy.label_value);
+    elInputValue.classList.add('value');
+    configurator.addMandatoryLabel(elInputValue, elInputWrapperValue);
+    elInputWrapperValue.appendChild(elInputValue);
+    elSubOptions.appendChild(elInputWrapperValue);
 
     // add array field action links
     elSubOptions.parentNode.classList.add('array-action-links');

@@ -29,6 +29,9 @@ const output = {
         else if (el.getAttribute('data-type') === 'flat-array') {
           output.generateOutputForFlatArrays(el);
         }
+        else if (el.getAttribute('data-type') === 'key-value-pairs') {
+          output.generateOutputForKeyValuePairs(el);
+        }
         else if (el.getAttribute('data-type') === 'object') {
           output.generateOutputForObjects(el);
         }
@@ -124,6 +127,30 @@ const output = {
 
     // only add non-empty arrays
     if (items.length > 0) {
+      policymanager.add(el.getAttribute('data-name'), items);
+    }
+  },
+
+  /**
+   * Generates output for policies of type "key-value-pairs".
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   *
+   * @returns {void}
+   */
+  generateOutputForKeyValuePairs (el) {
+    const items = {};
+
+    [...el.parentNode.querySelectorAll(':scope > div')].forEach((el) => {
+      const key = el.getElementsByClassName('key')[0];
+      const value = el.getElementsByClassName('value')[0];
+      if (!output.hasInvalidFields(el)) {
+        items[key.value] = value.value;
+      }
+    });
+
+    // only add non-empty policies
+    if (Object.keys(items).length > 0) {
       policymanager.add(el.getAttribute('data-name'), items);
     }
   },
