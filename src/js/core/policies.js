@@ -1206,7 +1206,8 @@ const policies = {
         label : 'TLS 1.3',
         value : 'tls1.3'
       }
-    ]
+    ],
+    default : 'tls1'
   },
 
   SSLVersionMax : {
@@ -1237,7 +1238,8 @@ const policies = {
         label : 'TLS 1.3 (' + browser.i18n.getMessage('policy_label_default') + ')',
         value : 'tls1.3'
       }
-    ]
+    ],
+    default : 'tls1.3'
   },
 
   Certificates : {
