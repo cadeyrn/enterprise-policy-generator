@@ -1195,13 +1195,11 @@ const policies = {
       {
         label : 'TLS 1.1',
         value : 'tls1.1'
-      }
-      ,
+      },
       {
         label : 'TLS 1.2',
         value : 'tls1.2'
-      }
-      ,
+      },
       {
         label : 'TLS 1.3',
         value : 'tls1.3'
@@ -1227,13 +1225,11 @@ const policies = {
       {
         label : 'TLS 1.1',
         value : 'tls1.1'
-      }
-      ,
+      },
       {
         label : 'TLS 1.2',
         value : 'tls1.2'
-      }
-      ,
+      },
       {
         label : 'TLS 1.3 (' + browser.i18n.getMessage('policy_label_default') + ')',
         value : 'tls1.3'
