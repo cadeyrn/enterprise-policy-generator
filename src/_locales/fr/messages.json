@@ -104,7 +104,7 @@
   "policy_description_AppUpdateURL": {
     "message": "Adresse différente pour les mises à jours de Firefox"
   },
-  "Policy_description_Authentication": {
+  "policy_description_Authentication": {
     "message" : "Sites supportants l'authentification intégrée"
   },
   "policy_description_Authentication_AllowNonFQDN": {
@@ -116,22 +116,22 @@
   "policy_description_Authentication_AllowNonFQDN_SPNEGO": {
     "message": "Toujours autoriser SPNEGO hors des FQDNs (Firefox 62+, Firefox ESR 60.2+)"
   },
-  "Policy_description_Authentication_Delegated": {
+  "policy_description_Authentication_Delegated": {
     "message" : "Délégué"
   },
-  "Policy_description_Authentication_Delegated_URL": {
+  "policy_description_Authentication_Delegated_URL": {
     "message" : "Adresse"
   },
   "policy_description_Authentication_NTLM": {
     "message" : "NTLM"
   },
-  "Policy_description_Authentication_NTLM_URL": {
+  "policy_description_Authentication_NTLM_URL": {
     "message" : "Adresse"
   },
-  "Policy_description_Authentication_SPNEGO": {
+  "policy_description_Authentication_SPNEGO": {
     "message" : "SPNEGO"
   },
-  "Policy_description_Authentication_SPNEGO_URL": {
+  "policy_description_Authentication_SPNEGO_URL": {
     "message" : "Adresse"
   },
   "policy_description_BlockAboutAddons": {
@@ -146,7 +146,7 @@
   "policy_description_BlockAboutSupport": {
     "message" : "Bloquer l'accès à la page d'informations de dépannage (about:support)"
   },
-  "Policy_description_Bookmarks": {
+  "policy_description_Bookmarks": {
     "message" : "Créer des signets par défaut"
   },
   "policy_description_Bookmarks_Favicon": {
@@ -344,7 +344,7 @@
   "policy_description_EnableTrackingProtection_Value_Value_true": {
     "message" : "activer la protection de suivi"
   },
-  "Policy_description_Extensions": {
+  "policy_description_Extensions": {
     "message" : "Installer, désinstaller ou verrouiller les extensions"
   },
   "policy_description_Extensions_Install": {
@@ -353,7 +353,7 @@
   "policy_description_Extensions_Install_URL_URL_or_Path": {
     "message" : "Adresse ou chemin d'accès"
   },
-  "Policy_description_Extensions_Locked": {
+  "policy_description_Extensions_Locked": {
     "message" : "Les extensions verrouillées ne peuvent pas être désactivées ou désinstallées. Veuillez spécifier les ID d'extension."
   },
   "policy_description_Extensions_Locked_ID": {
@@ -371,13 +371,13 @@
   "policy_description_FlashPlugin_Allow": {
     "message" : "Activer le plugin Flash pour ces adresses par défaut, sauf si Flash est complètement désactivé."
   },
-  "Policy_description_FlashPlugin_Allow_URL": {
+  "policy_description_FlashPlugin_Allow_URL": {
     "message" : "Adresse"
   },
   "policy_description_FlashPlugin_Block": {
     "message" : "Bloquer le plugin Flash pour ces adresses"
   },
-  "Policy_description_FlashPlugin_Block_URL": {
+  "policy_description_FlashPlugin_Block_URL": {
     "message" : "Adresse"
   },
   "policy_description_FlashPlugin_Default": {
@@ -389,7 +389,7 @@
   "policy_description_FlashPlugin_Default_null": {
     "message" : "aucune préférence"
   },
-  "Policy_description_FlashPlugin_Default_Default_true": {
+  "policy_description_FlashPlugin_Default_Default_true": {
     "message" : "Flash est toujours activé"
   },
   "policy_description_HardwareAcceleration": {
@@ -437,10 +437,10 @@
   "policy_description_OfferToSaveLogins": {
     "message" : "Permettre ou interdire à Firefox d'offrir de se souvenir des logins et mots de passe sauvegardés"
   },
-  "Policy_description_OfferToSaveLogins_options_options_false": {
+  "policy_description_OfferToSaveLogins_options_options_false": {
     "message" : "Ne pas offrir de se souvenir des logins et mots de passe sauvegardés"
   },
-  "Policy_description_OfferToSaveLogins_options_options_true": {
+  "policy_description_OfferToSaveLogins_options_options_true": {
     "message" : "Offre de se souvenir des noms d'utilisateur et mots de passe sauvegardés"
   },
   "policy_description_OverrideFirstRunPage": {
@@ -527,25 +527,25 @@
   "policy_description_PopupupBlocking": {
     "message" : "Autoriser ou refuser l'utilisation des fenêtres pop-up"
   },
-  "Policy_description_PopupupBlocking_Allow": {
+  "policy_description_PopupupBlocking_Allow": {
     "message" : "Domaines pour lesquels les fenêtres pop-up sont autorisées"
   },
-  "Policy_description_PopupupBlocking_Allow_URL": {
+  "policy_description_PopupupBlocking_Allow_URL": {
     "message" : "Adresse"
   },
-  "Policy_description_PopupBlocking_Default_Default_false": {
+  "policy_description_PopupBlocking_Default_Default_false": {
     "message" : "les pop-ups ne sont pas bloqués par défaut"
   },
-  "Policy_description_PopupBlocking_Default_Default_true": {
+  "policy_description_PopupBlocking_Default_Default_true": {
     "message" : "les pop-ups sont bloqués par défaut"
   },
-  "Policy_description_Proxy": {
+  "policy_description_Proxy": {
     "message" : "Configurez l'accès par procuration à Internet"
   },
   "policy_description_Proxy_AutoConfigURL": {
     "message" : "Adresse de configuration automatique du proxy"
   },
-  "Policy_description_Proxy_AutoLogin": {
+  "policy_description_Proxy_AutoLogin": {
     "message" : "Demande d'authentification"
   },
   "policy_description_Proxy_AutoLogin_false": {
@@ -554,7 +554,7 @@
   "policy_description_Proxy_AutoLogin_true": {
     "message" : "Ne pas demander d'authentification"
   },
-  "Policy_description_Proxy_Proxy_HTTPProxy": {
+  "policy_description_Proxy_Proxy_HTTPProxy": {
     "message" : "Proxy HTTP. Pour configurer les numéros de port, veuillez ajouter un “:“ suivi du numéro de port"
   },
   "policy_description_Proxy_Mode_autoConfig": {
@@ -563,31 +563,31 @@
   "policy_description_Proxy_Mode_autoDetect": {
     "message" : "Détection automatique des paramètres de proxy pour ce réseau"
   },
-  "Policy_description_Proxy_Mode_Mode_manuel": {
+  "policy_description_Proxy_Mode_Mode_manuel": {
     "message" : "Configuration manuelle du proxy"
   },
-  "Policy_description_Proxy_Mode_Mode_none": {
+  "policy_description_Proxy_Mode_Mode_none": {
     "message" : "Pas de procuration"
   },
-  "Policy_description_Proxy_Mode_système_de_proxy": {
+  "policy_description_Proxy_Mode_système_de_proxy": {
     "message" : "Utiliser les paramètres du proxy système"
   },
-  "Policy_description_Proxy_Proxy_FTPProxy": {
+  "policy_description_Proxy_Proxy_FTPProxy": {
     "message" : "FTP Proxy. Pour configurer les numéros de port, veuillez ajouter un “:“ suivi du numéro de port"
   },
-  "Policy_description_Proxy_Proxy_Passthrough": {
+  "policy_description_Proxy_Proxy_Passthrough": {
     "message" : "Pas de procuration pour…"
   },
-  "Policy_description_Proxy_Proxy_SOCKSProxy": {
+  "policy_description_Proxy_Proxy_SOCKSProxy": {
     "message" : "SOCKS Host. Pour configurer les numéros de port, veuillez ajouter un “:“ suivi du numéro de port"
   },
-  "Policy_description_Proxy_Proxy_SOCKSVersion_v4": {
+  "policy_description_Proxy_Proxy_SOCKSVersion_v4": {
     "message" : "SOCKS v4"
   },
-  "Policy_description_Proxy_Proxy_SOCKSVersion_v5": {
+  "policy_description_Proxy_Proxy_SOCKSVersion_v5": {
     "message" : "SOCKS v5"
   },
-  "Policy_description_Proxy_SSLProxy_SSLProxy": {
+  "policy_description_Proxy_SSLProxy_SSLProxy": {
     "message" : "Proxy SSL. Pour configurer les numéros de port, veuillez ajouter un “:“ suivi du numéro de port"
   },
   "policy_description_Proxy_UseHTTPProxyForAllProtocols_false": {
@@ -614,67 +614,67 @@
   "policy_description_RequestedLocales_Value": {
     "message": "Language du Code"
   },
-  "Policy_description_SanitizeOnShutdown": {
+  "policy_description_SanitizeOnShutdown": {
     "message" : "Effacer toutes les données du navigateur à l'arrêt"
   },
-  "Policy_description_SearchBar": {
+  "policy_description_SearchBar": {
     "message" : "Faire en sorte que la barre de recherche soit unifiée ou séparée"
   },
-  "Policy_description_SearchBar_options_options_separate": {
+  "policy_description_SearchBar_options_options_separate": {
     "message" : "il y a une barre de recherche séparée"
   },
-  "Policy_description_SearchBar_options_options_unifiées": {
+  "policy_description_SearchBar_options_options_unifiées": {
     "message" : "la recherche et la barre d'adresse sont unifiées"
   },
-  "Policy_description_SearchEngines": {
+  "policy_description_SearchEngines": {
     "message" : "Modifier la liste des moteurs de recherche intégrés à Firefox"
   },
-  "Policy_description_SearchEngines_Add": {
+  "policy_description_SearchEngines_Add": {
     "message" : "Ajouter un ou plusieurs moteurs de recherche"
   },
-  "Policy_description_SearchEngines_Add_Alias": {
+  "policy_description_SearchEngines_Add_Alias": {
     "message" : "Alias qui peut être utilisé pour accéder au moteur"
   },
-  "Policy_description_SearchEngines_Add_Add_Description": {
+  "policy_description_SearchEngines_Add_Add_Description": {
     "message" : "Description"
   },
-  "Policy_description_SearchEngines_Add_IconURL": {
+  "policy_description_SearchEngines_Add_IconURL": {
     "message" : "Adresse icône"
   },
-  "Policy_description_SearchEngines_Add_Add_Method": {
+  "policy_description_SearchEngines_Add_Add_Method": {
     "message" : "Méthode de demande"
   },
-  "Policy_description_SearchEngines_Add_Method_GET": {
+  "policy_description_SearchEngines_Add_Method_GET": {
     "message" : "GET"
   },
-  "Policy_description_SearchEngines_Add_Method_Method_POST": {
+  "policy_description_SearchEngines_Add_Method_Method_POST": {
     "message" : "POST"
   },
-  "Policy_description_SearchEngines_Add_Add_Name": {
+  "policy_description_SearchEngines_Add_Add_Name": {
     "message" : "Nom"
   },
-  "Policy_description_SearchEngines_Add_SuggestURLTemplate": {
+  "policy_description_SearchEngines_Add_SuggestURLTemplate": {
     "message" : "Adresse pour les suggestions. Veuillez utiliser {conditions de recherche} comme caractère de remplacement pour le terme de recherche"
   },
-  "Policy_description_SearchEngines_Add_Add_URL": {
+  "policy_description_SearchEngines_Add_Add_URL": {
     "message" : "Adresse pour les recherches. Veuillez utiliser {conditions de recherche} comme caractère de remplacement pour le terme de recherche"
   },
   "policy_description_SearchEngines_Default": {
   "message" : "Nom du moteur de recherche par défaut"
   },
-  "Policy_description_SearchEngines_PreventInstalls": {
+  "policy_description_SearchEngines_PreventInstalls": {
     "message" : "Empêcher l'installation de nouveaux moteurs de recherche"
   },
-  "Policy_description_SearchEngines_PreventInstalls_false": {
+  "policy_description_SearchEngines_PreventInstalls_false": {
     "message" : "n'empêche pas les installations"
   },
-  "Policy_description_SearchEngines_PreventInstalls_true": {
+  "policy_description_SearchEngines_PreventInstalls_true": {
     "message" : "Empêcher les installations"
   },
-  "Policy_description_SearchEngines_Remove": {
+  "policy_description_SearchEngines_Remove": {
     "message" : "Supprimer le(s) moteur(s) de recherche (Firefox 62+, Firefox ESR 60.2+)"
   },
-  "Policy_description_SearchEngines_Remove_Remove_Name": {
+  "policy_description_SearchEngines_Remove_Remove_Name": {
     "message" : "Nom"
   },
   "policy_description_SecurityDevices": {
@@ -692,19 +692,19 @@
   "policy_description_SSLVersionMin": {
     "message": "Minimum required TLS version"
   },
-  "Policy_description_WebsiteFilter": {
+  "policy_description_WebsiteFilter": {
     "message" : "Empêche les sites Web d'être visités. Vous pouvez utiliser \"<all_urls>\" pour bloquer toutes les URL. Voir le lien info pour toutes les entrées valides, mais seuls HTTPS et HTTP sont supportés."
   },
-  "Policy_description_WebsiteFilter_Block": {
+  "policy_description_WebsiteFilter_Block": {
     "message" : "Bloquer les Adresses suivantes"
   },
-  "Policy_description_WebsiteFilter_Block_Block_URL": {
+  "policy_description_WebsiteFilter_Block_Block_URL": {
     "message" : "Adresse"
   },
-  "Policy_description_WebsiteFilter_Exceptions": {
+  "policy_description_WebsiteFilter_Exceptions": {
     "message" : "Exceptions"
   },
-  "Policy_description_WebsiteFilter_Exceptions_URL": {
+  "policy_description_WebsiteFilter_Exceptions_URL": {
     "message" : "Adresse"
   },
   "policy_label_default": {
