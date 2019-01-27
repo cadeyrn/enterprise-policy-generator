@@ -4,6 +4,11 @@
 
 ### (Work in Progress) Version 4.3.0
 
+#### Enhancements
+
+- policies with select field can now have a different default value than the first one, fixes
+  [#67](https://github.com/cadeyrn/enterprise-policy-generator/issues/67)
+
 #### Enterprise Policies
 
 - new policies to set the minimum required and the maximum supported TLS version (Firefox 66+), fixes

@@ -481,6 +481,11 @@ const configurator = {
       const elOption = document.createElement('option');
       elOption.setAttribute('value', policy.options[i].value);
       elOption.appendChild(elOptionLabel);
+
+      if (policy.options[i].value === policy.default) {
+        elOption.setAttribute('selected', 'selected');
+      }
+
       elSelect.appendChild(elOption);
     }
 
@@ -754,6 +759,11 @@ const configurator = {
       const elOption = document.createElement('option');
       elOption.setAttribute('value', policy.options[i].value);
       elOption.appendChild(elOptionLabel);
+
+      if (policy.options[i].value === policy.default) {
+        elOption.setAttribute('selected', 'selected');
+      }
+
       elSelect.appendChild(elOption);
     }
 
