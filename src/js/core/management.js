@@ -339,7 +339,7 @@ const management = {
   },
 
   /**
-   * Removes the selected configuration.
+   * Exports a configuration.
    *
    * @param {MouseEvent} e - event
    *
@@ -443,7 +443,7 @@ const management = {
   },
 
   /**
-   * Saves the current configuration with a name and the current date and time.
+   * Imports a configuration file.
    *
    * @param {string} name - the name of the configuration
    * @param {HTMLElement} elLocalFile - the DOM element of the configuration file input
