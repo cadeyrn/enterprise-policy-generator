@@ -1178,6 +1178,68 @@ const policies = {
     ]
   },
 
+  SSLVersionMin : {
+    description : browser.i18n.getMessage('policy_description_SSLVersionMin'),
+    enterprise_only : false,
+    first_available : { mainstream : '66.0', esr : null },
+    info_link : null,
+    is_lockable : false,
+    ui_category : 'security',
+    type : 'enum',
+    label : null,
+    options : [
+      {
+        label : 'TLS 1.0 (' + browser.i18n.getMessage('policy_label_default') + ')',
+        value : 'tls1'
+      },
+      {
+        label : 'TLS 1.1',
+        value : 'tls1.1'
+      }
+      ,
+      {
+        label : 'TLS 1.2',
+        value : 'tls1.2'
+      }
+      ,
+      {
+        label : 'TLS 1.3',
+        value : 'tls1.3'
+      }
+    ]
+  },
+
+  SSLVersionMax : {
+    description : browser.i18n.getMessage('policy_description_SSLVersionMax'),
+    enterprise_only : false,
+    first_available : { mainstream : '66.0', esr : null },
+    info_link : null,
+    is_lockable : false,
+    ui_category : 'security',
+    type : 'enum',
+    label : null,
+    options : [
+      {
+        label : 'TLS 1.0',
+        value : 'tls1'
+      },
+      {
+        label : 'TLS 1.1',
+        value : 'tls1.1'
+      }
+      ,
+      {
+        label : 'TLS 1.2',
+        value : 'tls1.2'
+      }
+      ,
+      {
+        label : 'TLS 1.3 (' + browser.i18n.getMessage('policy_label_default') + ')',
+        value : 'tls1.3'
+      }
+    ]
+  },
+
   Certificates : {
     description : browser.i18n.getMessage('policy_description_Certificates'),
     enterprise_only : false,

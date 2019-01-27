@@ -677,6 +677,12 @@
   "policy_description_SearchEngines_Remove_Name": {
     "message": "Mě"
   },
+  "policy_description_SSLVersionMax": {
+    "message": "Maximum supported TLS version"
+  },
+  "policy_description_SSLVersionMin": {
+    "message": "Minimum required TLS version"
+  },
   "policy_description_WebsiteFilter": {
     "message": "Zajźujo, až se websedła woglěduju. Móžośo \"<all_urls>\" za blokěrowanje wšych URL wužywaś. Glejśo informaciski wótkaz za wšykne płaśiwe zapiski, ale jano HTTPS a HTTP se pódpěratej."
   },
@@ -691,6 +697,9 @@
   },
   "policy_description_WebsiteFilter_Exceptions_URL": {
     "message": "URL"
+  },
+  "policy_label_default": {
+    "message": "default"
   },
   "requirement_windows_or_linux": {
     "message": "funkcioněrujo jano z Windows a Linux"

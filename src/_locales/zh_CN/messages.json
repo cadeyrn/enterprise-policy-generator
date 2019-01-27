@@ -677,6 +677,12 @@
   "policy_description_SearchEngines_Remove_Name": {
     "message": "名称"
   },
+  "policy_description_SSLVersionMax": {
+    "message": "Maximum supported TLS version"
+  },
+  "policy_description_SSLVersionMin": {
+    "message": "Minimum required TLS version"
+  },
   "policy_description_WebsiteFilter": {
     "message": "阻止访问特定网站。您可以使用 “<all_urls>” 屏蔽所有 URL。点击更多信息链接可以查看所有有效项，仅支持 HTTPS 和 HTTP 的 URL。"
   },
@@ -691,6 +697,9 @@
   },
   "policy_description_WebsiteFilter_Exceptions_URL": {
     "message": "URL"
+  },
+  "policy_label_default": {
+    "message": "default"
   },
   "requirement_windows_or_linux": {
     "message": "仅适用于 Windows 和 Linux"

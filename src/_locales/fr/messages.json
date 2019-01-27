@@ -677,6 +677,12 @@
   "Policy_description_SearchEngines_Remove_Remove_Name": {
     "message" : "Nom"
   },
+  "policy_description_SSLVersionMax": {
+    "message": "Maximum supported TLS version"
+  },
+  "policy_description_SSLVersionMin": {
+    "message": "Minimum required TLS version"
+  },
   "Policy_description_WebsiteFilter": {
     "message" : "Empêche les sites Web d'être visités. Vous pouvez utiliser \"<all_urls>\" pour bloquer toutes les URL. Voir le lien info pour toutes les entrées valides, mais seuls HTTPS et HTTP sont supportés."
   },
@@ -691,6 +697,9 @@
   },
   "Policy_description_WebsiteFilter_Exceptions_URL": {
     "message" : "Adresse"
+  },
+  "policy_label_default": {
+    "message": "default"
   },
   "requirement_windows_or_linux": {
     "message": "fonctionne sur Windows et Linux"

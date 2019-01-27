@@ -4,6 +4,11 @@
 
 ### (Work in Progress) Version 4.3.0
 
+#### Enterprise Policies
+
+- new policies to set the minimum required and the maximum supported TLS version (Firefox 66+), fixes
+  [#66](https://github.com/cadeyrn/enterprise-policy-generator/issues/66)
+
 #### Dependencies
 
 - updated eslint from version 5.10.0 to 5.12.1 and updated eslint configuration
