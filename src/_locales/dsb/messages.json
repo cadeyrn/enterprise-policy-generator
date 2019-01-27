@@ -678,19 +678,19 @@
     "message": "Mě"
   },
   "policy_description_SecurityDevices": {
-    "message": "Add PKCS #11 modules"
+    "message": "Module PKCS#11 instalěrowaś"
   },
   "policy_description_SecurityDevices_label_key": {
-    "message": "Name of device"
+    "message": "Mě rěda"
   },
   "policy_description_SecurityDevices_label_value": {
-    "message": "Path to library for device"
+    "message": "Sćažka k bibliotece za rěd"
   },
   "policy_description_SSLVersionMax": {
-    "message": "Maximum supported TLS version"
+    "message": "Maksimalnje pódpěrana TLS-wersija"
   },
   "policy_description_SSLVersionMin": {
-    "message": "Minimum required TLS version"
+    "message": "Minimalnje trěbna TLS-wersija"
   },
   "policy_description_WebsiteFilter": {
     "message": "Zajźujo, až se websedła woglěduju. Móžośo \"<all_urls>\" za blokěrowanje wšych URL wužywaś. Glejśo informaciski wótkaz za wšykne płaśiwe zapiski, ale jano HTTPS a HTTP se pódpěratej."

@@ -678,19 +678,19 @@
     "message": "Mjeno"
   },
   "policy_description_SecurityDevices": {
-    "message": "Add PKCS #11 modules"
+    "message": "Module PKCS#11 instalować"
   },
   "policy_description_SecurityDevices_label_key": {
-    "message": "Name of device"
+    "message": "Mjeno grata"
   },
   "policy_description_SecurityDevices_label_value": {
-    "message": "Path to library for device"
+    "message": "Šćežka k bibliotece za grat"
   },
   "policy_description_SSLVersionMax": {
-    "message": "Maximum supported TLS version"
+    "message": "Maksimalnje podpěrana TLS-wersija"
   },
   "policy_description_SSLVersionMin": {
-    "message": "Minimum required TLS version"
+    "message": "Minimalnje trěbna TLS-wersija"
   },
   "policy_description_WebsiteFilter": {
     "message": "Zadźěwa, zo so websydła wopytuja. Móžeće \"<all_urls>\" za blokowanje wšěch URL wužiwać. Hlejće informaciski wotkaz za wšě płaćiwe zapiski, ale jenož HTTPS a HTTP so podpěrujetej."
