@@ -13,6 +13,8 @@
 
 - new policies to set the minimum required and the maximum supported TLS version (Firefox 66+), fixes
   [#66](https://github.com/cadeyrn/enterprise-policy-generator/issues/66)
+- new policy for adding PKCS #11 security modules (Firefox 64+, Firefox ESR 60.4+), fixes
+  [#48](https://github.com/cadeyrn/enterprise-policy-generator/issues/48)
 
 #### Dependencies
 

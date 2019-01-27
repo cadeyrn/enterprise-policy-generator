@@ -1280,6 +1280,18 @@ const policies = {
     ]
   },
 
+  SecurityDevices : {
+    description : browser.i18n.getMessage('policy_description_SecurityDevices'),
+    enterprise_only : false,
+    first_available : { mainstream : '64.0', esr : '60.4' },
+    info_link : null,
+    is_lockable : false,
+    ui_category : 'security',
+    type : 'key-value-pairs',
+    label_key : browser.i18n.getMessage('policy_description_SecurityDevices_label_key'),
+    label_value : browser.i18n.getMessage('policy_description_SecurityDevices_label_value')
+  },
+
   // udpates and data collection
 
   DisableAppUpdate : {

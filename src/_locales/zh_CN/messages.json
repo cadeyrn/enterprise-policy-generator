@@ -677,6 +677,15 @@
   "policy_description_SearchEngines_Remove_Name": {
     "message": "名称"
   },
+  "policy_description_SecurityDevices": {
+    "message": "Add PKCS #11 modules"
+  },
+  "policy_description_SecurityDevices_label_key": {
+    "message": "Name of device"
+  },
+  "policy_description_SecurityDevices_label_value": {
+    "message": "Path to library for device"
+  },
   "policy_description_SSLVersionMax": {
     "message": "Maximum supported TLS version"
   },

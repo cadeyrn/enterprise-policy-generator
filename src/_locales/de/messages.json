@@ -677,6 +677,15 @@
   "policy_description_SearchEngines_Remove_Name": {
     "message": "Name"
   },
+  "policy_description_SecurityDevices": {
+    "message": "PKCS#11-Module installieren"
+  },
+  "policy_description_SecurityDevices_label_key": {
+    "message": "Name des Gerätes"
+  },
+  "policy_description_SecurityDevices_label_value": {
+    "message": "Pfad zur Bibliothek für das Gerät"
+  },
   "policy_description_SSLVersionMax": {
     "message": "Maximal unterstützte TLS-Version"
   },
