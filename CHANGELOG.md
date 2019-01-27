@@ -8,6 +8,8 @@
 
 - policies with select field can now have a different default value than the first one, fixes
   [#67](https://github.com/cadeyrn/enterprise-policy-generator/issues/67)
+- added support for new "key-value-pairs" policy type, see
+  [#48](https://github.com/cadeyrn/enterprise-policy-generator/issues/48)
 
 #### Enterprise Policies
 
