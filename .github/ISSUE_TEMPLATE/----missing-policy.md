@@ -14,7 +14,7 @@ https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox&component=Enterprise%
 ---
 
 **Which policy is not supported by Enterprise Policy Generator?**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+What is the name of the policy or what does this policy do?
 
 **Link for more information**
 Do you know a bugzilla.mozilla.org ticket or have other useful links?
