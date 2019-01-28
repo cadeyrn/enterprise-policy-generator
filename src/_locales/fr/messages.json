@@ -678,19 +678,19 @@
     "message" : "Nom"
   },
   "policy_description_SecurityDevices": {
-    "message": "Add PKCS #11 modules"
+    "message": "Ajouter #11 modules PKCS"
   },
   "policy_description_SecurityDevices_label_key": {
-    "message": "Name of device"
+    "message": "Nom du périphérique"
   },
   "policy_description_SecurityDevices_label_value": {
-    "message": "Path to library for device"
+    "message": "Chemin d'accès à la bibliothèque de l'appareil"
   },
   "policy_description_SSLVersionMax": {
-    "message": "Maximum supported TLS version"
+    "message": "Version TLS maximum supporté"
   },
   "policy_description_SSLVersionMin": {
-    "message": "Minimum required TLS version"
+    "message": "Version TLS minimale requise"
   },
   "policy_description_WebsiteFilter": {
     "message" : "Empêche les sites Web d'être visités. Vous pouvez utiliser \"<all_urls>\" pour bloquer toutes les URL. Voir le lien info pour toutes les entrées valides, mais seuls HTTPS et HTTP sont supportés."
@@ -708,7 +708,7 @@
     "message" : "Adresse"
   },
   "policy_label_default": {
-    "message": "default"
+    "message": "par défault"
   },
   "requirement_windows_or_linux": {
     "message": "fonctionne sur Windows et Linux"
