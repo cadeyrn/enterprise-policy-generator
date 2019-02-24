@@ -2,6 +2,16 @@
 
 ## Release Notes
 
+### (Work in Progress) Version 4.4.0
+
+- updated web-ext from version 2.9.3 to 3.0.0
+
+#### Dependencies
+
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v4.3.0...master)<br />
+
+---
+
 ### [Version 4.3.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v4.3.0) (2019-01-28)
 
 #### Enhancements
