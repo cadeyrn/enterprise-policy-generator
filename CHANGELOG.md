@@ -5,6 +5,7 @@
 ### (Work in Progress) Version 4.4.0
 
 - updated eslint from version 5.12.1 to 5.14.1
+- updated eslint-plugin-compat from version 2.6.3 to 2.7.3
 - updated web-ext from version 2.9.3 to 3.0.0
 
 #### Dependencies
