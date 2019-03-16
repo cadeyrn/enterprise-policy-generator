@@ -14,6 +14,8 @@
   [#73](https://github.com/cadeyrn/enterprise-policy-generator/issues/73)
 - new policy to add a custom support menu item to the help menu (Firefox 67+), fixes
   [#74](https://github.com/cadeyrn/enterprise-policy-generator/issues/74)
+- changed description of DisableFirefoxStudies policy to reflect that the policy not only disables shield studies but
+  also contextual feature recommendations, fixes [#75](https://github.com/cadeyrn/enterprise-policy-generator/issues/75)
 
 #### Dependencies
 

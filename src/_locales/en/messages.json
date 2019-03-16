@@ -264,7 +264,7 @@
     "message": "Disable the built-in screenshot tool (Firefox Screenshots)"
   },
   "policy_description_DisableFirefoxStudies": {
-    "message": "Prevent Firefox from installing and running studies (SHIELD studies)"
+    "message": "Prevent Firefox from installing and running studies and contextual feature recommendations"
   },
   "policy_description_DisableForgetButton": {
     "message": "Disable the “Forget” toolbar button which can be used to forget the last browsing history"

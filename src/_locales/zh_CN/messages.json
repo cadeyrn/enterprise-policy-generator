@@ -264,7 +264,7 @@
     "message": "禁用内置的截图工具（Firefox Screenshots）"
   },
   "policy_description_DisableFirefoxStudies": {
-    "message": "阻止 Firefox 安装并运行一些实验项目（SHIELD 实验）"
+    "message": "Prevent Firefox from installing and running studies and contextual feature recommendations"
   },
   "policy_description_DisableForgetButton": {
     "message": "禁用“抹去足迹”工具栏按钮，阻止用它清除最近的浏览历史"

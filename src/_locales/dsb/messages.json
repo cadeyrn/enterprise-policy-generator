@@ -264,7 +264,7 @@
     "message": "Zatwarjonu funkciju za fota wobrazowki (Firefox Screenshots) znjemóžniś"
   },
   "policy_description_DisableFirefoxStudies": {
-    "message": "Firefox instalěrowanje a wuwjedowanje studijow zawoboraś (studije SHIELD)"
+    "message": "Prevent Firefox from installing and running studies and contextual feature recommendations"
   },
   "policy_description_DisableForgetButton": {
     "message": "Tłocašk \"Zabyś\" znjemóžniś, kótarež se ma wužywaś, aby historiju wulašowało"

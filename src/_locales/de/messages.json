@@ -264,7 +264,7 @@
     "message": "Deaktiviere die eingebaute Funktion für Bildschirmfotos (Firefox Screenshots)"
   },
   "policy_description_DisableFirefoxStudies": {
-    "message": "Firefox an der Installation und Ausführung von Studien hindern (SHIELD-Studien)"
+    "message": "Firefox an der Installation und Ausführung von Studien sowie kontextbezogenen Feature-Empfehlungen hindern"
   },
   "policy_description_DisableForgetButton": {
     "message": "Deaktiviere die „Vergessen“ Schaltfläche, welche benutzt werden kann, um die Chronik zu löschen"
