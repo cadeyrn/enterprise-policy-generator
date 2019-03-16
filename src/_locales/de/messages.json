@@ -170,6 +170,15 @@
   "policy_description_Bookmarks_URL": {
     "message": "URL"
   },
+  "policy_description_CaptivePortal": {
+    "message": "Netzwerk-Anmeldeseite aktivieren oder deaktivieren"
+  },
+  "policy_description_CaptivePortal_options_false": {
+    "message": "Netzwerk-Anmeldeseite deaktivieren"
+  },
+  "policy_description_CaptivePortal_options_true": {
+    "message": "Netzwerk-Anmeldeseite aktivieren"
+  },
   "policy_description_Certificates": {
     "message": "Zertifikate konfigurieren"
   },

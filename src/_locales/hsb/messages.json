@@ -170,6 +170,15 @@
   "policy_description_Bookmarks_URL": {
     "message": "URL"
   },
+  "policy_description_CaptivePortal": {
+    "message": "Enable or disable captive portal support"
+  },
+  "policy_description_CaptivePortal_options_false": {
+    "message": "Disable captive portal support"
+  },
+  "policy_description_CaptivePortal_options_true": {
+    "message": "Enable captive portal support"
+  },
   "policy_description_Certificates": {
     "message": "Certifikaty konfigurować"
   },

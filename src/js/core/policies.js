@@ -795,6 +795,27 @@ const policies = {
     ]
   },
 
+  CaptivePortal : {
+    description : browser.i18n.getMessage('policy_description_CaptivePortal'),
+    enterprise_only : false,
+    first_available : { mainstream : '67.0', esr : null },
+    info_link : null,
+    is_lockable : false,
+    ui_category : 'network',
+    type : 'enum',
+    label : null,
+    options : [
+      {
+        label : browser.i18n.getMessage('policy_description_CaptivePortal_options_true'),
+        value : 'true'
+      },
+      {
+        label : browser.i18n.getMessage('policy_description_CaptivePortal_options_false'),
+        value : 'false'
+      }
+    ]
+  },
+
   // privacy
 
   Cookies : {
