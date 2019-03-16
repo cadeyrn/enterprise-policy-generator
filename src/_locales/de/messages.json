@@ -719,6 +719,18 @@
   "policy_description_SSLVersionMin": {
     "message": "Minimal erforderliche TLS-Version"
   },
+  "policy_description_SupportMenu": {
+    "message": "Hinzufügen eines benutzerdefinierten Support-Menüpunktes zum Hilfemenü"
+  },
+  "policy_description_SupportMenu_AccessKey": {
+    "message": "Zugriffstaste (ein einzelner Buchstabe!)"
+  },
+  "policy_description_SupportMenu_Title": {
+    "message": "Titel"
+  },
+  "policy_description_SupportMenu_URL": {
+    "message": "URL"
+  },
   "policy_description_WebsiteFilter": {
     "message": "Blockiere Besuche von Webseiten. Es kann „<all_urls>“ verwendet werden, um alle URLs zu blockieren. Siehe Info-Link für alle gültigen Eingaben, es werden jedoch nur HTTPS und HTTP unterstützt."
   },

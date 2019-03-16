@@ -719,6 +719,18 @@
   "policy_description_SSLVersionMin": {
     "message": "最低要求的 TLS 版本"
   },
+  "policy_description_SupportMenu": {
+    "message": "Add a custom support menu item to the help menu"
+  },
+  "policy_description_SupportMenu_AccessKey": {
+    "message": "Access key (a single character!)"
+  },
+  "policy_description_SupportMenu_Title": {
+    "message": "Title"
+  },
+  "policy_description_SupportMenu_URL": {
+    "message": "URL"
+  },
   "policy_description_WebsiteFilter": {
     "message": "阻止访问特定网站。您可以使用 “<all_urls>” 屏蔽所有 URL。点击更多信息链接可以查看所有有效项，仅支持 HTTPS 和 HTTP 的 URL。"
   },

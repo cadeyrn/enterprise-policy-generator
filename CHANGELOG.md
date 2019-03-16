@@ -12,6 +12,8 @@
   [#71](https://github.com/cadeyrn/enterprise-policy-generator/issues/71)
 - new policy to enable or disable automatic extension updates (Firefox 67+), fixes
   [#73](https://github.com/cadeyrn/enterprise-policy-generator/issues/73)
+- new policy to add a custom support menu item to the help menu (Firefox 67+), fixes
+  [#74](https://github.com/cadeyrn/enterprise-policy-generator/issues/74)
 
 #### Dependencies
 

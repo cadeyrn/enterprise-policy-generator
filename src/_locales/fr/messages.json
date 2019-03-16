@@ -719,6 +719,18 @@
   "policy_description_SSLVersionMin": {
     "message": "Version TLS minimale requise"
   },
+  "policy_description_SupportMenu": {
+    "message": "Add a custom support menu item to the help menu"
+  },
+  "policy_description_SupportMenu_AccessKey": {
+    "message": "Access key (a single character!)"
+  },
+  "policy_description_SupportMenu_Title": {
+    "message": "Title"
+  },
+  "policy_description_SupportMenu_URL": {
+    "message": "URL"
+  },
   "policy_description_WebsiteFilter": {
     "message" : "Empêche les sites Web d'être visités. Vous pouvez utiliser \"<all_urls>\" pour bloquer toutes les URL. Voir le lien info pour toutes les entrées valides, mais seuls HTTPS et HTTP sont supportés."
   },

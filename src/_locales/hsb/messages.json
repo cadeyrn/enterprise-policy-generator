@@ -719,6 +719,18 @@
   "policy_description_SSLVersionMin": {
     "message": "Minimalnje trěbna TLS-wersija"
   },
+  "policy_description_SupportMenu": {
+    "message": "Add a custom support menu item to the help menu"
+  },
+  "policy_description_SupportMenu_AccessKey": {
+    "message": "Access key (a single character!)"
+  },
+  "policy_description_SupportMenu_Title": {
+    "message": "Title"
+  },
+  "policy_description_SupportMenu_URL": {
+    "message": "URL"
+  },
   "policy_description_WebsiteFilter": {
     "message": "Zadźěwa, zo so websydła wopytuja. Móžeće \"<all_urls>\" za blokowanje wšěch URL wužiwać. Hlejće informaciski wotkaz za wšě płaćiwe zapiski, ale jenož HTTPS a HTTP so podpěrujetej."
   },

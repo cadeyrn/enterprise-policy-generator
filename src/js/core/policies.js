@@ -1508,5 +1508,35 @@ const policies = {
     mandatory : false,
     type : 'url',
     label : 'URL'
+  },
+
+  SupportMenu : {
+    description : browser.i18n.getMessage('policy_description_SupportMenu'),
+    enterprise_only : false,
+    first_available : { mainstream : '67.0', esr : null },
+    info_link : null,
+    is_lockable : false,
+    ui_category : 'others',
+    type : 'object',
+    properties : [
+      {
+        name : 'Title',
+        label : browser.i18n.getMessage('policy_description_SupportMenu_Title'),
+        mandatory : true,
+        type : 'string'
+      },
+      {
+        name : 'URL',
+        label : browser.i18n.getMessage('policy_description_SupportMenu_URL'),
+        mandatory : true,
+        type : 'url'
+      },
+      {
+        name : 'AccessKey',
+        label : browser.i18n.getMessage('policy_description_SupportMenu_AccessKey'),
+        mandatory : false,
+        type : 'string'
+      }
+    ]
   }
 };
