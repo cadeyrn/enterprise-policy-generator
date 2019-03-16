@@ -374,6 +374,15 @@
   "policy_description_Extensions_Uninstall_ID": {
     "message": "附加组件 ID"
   },
+  "policy_description_ExtensionUpdate": {
+    "message": "Enable or disable automatic extension updates"
+  },
+  "policy_description_ExtensionUpdate_options_false": {
+    "message": "Disable automatic extension updates"
+  },
+  "policy_description_ExtensionUpdate_options_true": {
+    "message": "Enable automatic extension updates"
+  },
   "policy_description_FlashPlugin": {
     "message": "允许或阻止使用 Flash 插件"
   },

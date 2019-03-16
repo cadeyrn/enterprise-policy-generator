@@ -374,6 +374,15 @@
   "policy_description_Extensions_Uninstall_ID": {
     "message": "Add-on-ID"
   },
+  "policy_description_ExtensionUpdate": {
+    "message": "Automatische Aktualisierung von Erweiterungen aktivieren oder deaktivieren"
+  },
+  "policy_description_ExtensionUpdate_options_false": {
+    "message": "Automatische Aktualisierung von Erweiterungen deaktivieren"
+  },
+  "policy_description_ExtensionUpdate_options_true": {
+    "message": "Automatische Aktualisierung von Erweiterungen aktivieren"
+  },
   "policy_description_FlashPlugin": {
     "message": "Die Verwendung des Flash-Plugins erlauben oder verbieten"
   },

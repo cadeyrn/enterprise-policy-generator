@@ -10,6 +10,8 @@
   [#69](https://github.com/cadeyrn/enterprise-policy-generator/issues/69)
 - new policy to enable or disable network prediction (DNS prefetching) (Firefox 67+), fixes
   [#71](https://github.com/cadeyrn/enterprise-policy-generator/issues/71)
+- new policy to enable or disable automatic extension updates (Firefox 67+), fixes
+  [#73](https://github.com/cadeyrn/enterprise-policy-generator/issues/73)
 
 #### Dependencies
 
