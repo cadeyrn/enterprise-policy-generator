@@ -8,6 +8,8 @@
 
 - new policy to enable or disable captive portal support (Firefox 67+), fixes
   [#69](https://github.com/cadeyrn/enterprise-policy-generator/issues/69)
+- new policy to enable or disable network prediction (DNS prefetching) (Firefox 67+), fixes
+  [#71](https://github.com/cadeyrn/enterprise-policy-generator/issues/71)
 
 #### Dependencies
 

@@ -599,6 +599,27 @@ const policies = {
     ]
   },
 
+  NetworkPrediction : {
+    description : browser.i18n.getMessage('policy_description_NetworkPrediction'),
+    enterprise_only : false,
+    first_available : { mainstream : '67.0', esr : null },
+    info_link : null,
+    is_lockable : false,
+    ui_category : 'network',
+    type : 'enum',
+    label : null,
+    options : [
+      {
+        label : browser.i18n.getMessage('policy_description_NetworkPrediction_options_true'),
+        value : 'true'
+      },
+      {
+        label : browser.i18n.getMessage('policy_description_NetworkPrediction_options_false'),
+        value : 'false'
+      }
+    ]
+  },
+
   Proxy : {
     description : browser.i18n.getMessage('policy_description_Proxy'),
     enterprise_only : false,

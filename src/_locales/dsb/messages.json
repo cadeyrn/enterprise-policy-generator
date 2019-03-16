@@ -440,6 +440,15 @@
   "policy_description_InstallAddonsPermission_Default_true": {
     "message": "Rozšyrjenja daju se wót wužywarja instalěrowaś"
   },
+  "policy_description_NetworkPrediction": {
+    "message": "Enable or disable network prediction (DNS prefetching)"
+  },
+  "policy_description_NetworkPrediction_options_false": {
+    "message": "Disable network prediction (DNS prefetching)"
+  },
+  "policy_description_NetworkPrediction_options_true": {
+    "message": "Enable network prediction (DNS prefetching)"
+  },
   "policy_description_NoDefaultBookmarks": {
     "message": "Žedne standardne cytańske znamjenja inkluziwnje inteligentne cytańske znamjenja (nejcesćej woglědane boki, njedawno wužyte klucowe słowa) napóraś. Pokazka: toś ta směrnica jo jano statkowna, gaž se pśed prědnym wužywanim profila Firefox nałožujo"
   },

@@ -440,6 +440,15 @@
   "policy_description_InstallAddonsPermission_Default_true": {
     "message": "允许用户安装附加组件"
   },
+  "policy_description_NetworkPrediction": {
+    "message": "Enable or disable network prediction (DNS prefetching)"
+  },
+  "policy_description_NetworkPrediction_options_false": {
+    "message": "Disable network prediction (DNS prefetching)"
+  },
+  "policy_description_NetworkPrediction_options_true": {
+    "message": "Enable network prediction (DNS prefetching)"
+  },
   "policy_description_NoDefaultBookmarks": {
     "message": "不创建默认的书签集，包括智能书签（最常访问、最近的标签）。注意：该策略仅在配置文件首次启用时生效"
   },
