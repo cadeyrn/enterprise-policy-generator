@@ -1483,7 +1483,18 @@ const policies = {
     info_link : null,
     is_lockable : false,
     ui_category : 'others',
-    type : 'boolean'
+    type : 'enum',
+    label : null,
+    options : [
+      {
+        label : browser.i18n.getMessage('policy_description_DontCheckDefaultBrowser_options_true'),
+        value : 'true'
+      },
+      {
+        label : browser.i18n.getMessage('policy_description_DontCheckDefaultBrowser_options_false'),
+        value : 'false'
+      }
+    ]
   },
 
   OverrideFirstRunPage : {

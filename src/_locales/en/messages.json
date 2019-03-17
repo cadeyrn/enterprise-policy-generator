@@ -342,7 +342,13 @@
     "message": "Provider URL"
   },
   "policy_description_DontCheckDefaultBrowser": {
-    "message": "Don't check if Firefox is the default browser at startup"
+    "message": "Configure check for default browser on startup"
+  },
+  "policy_description_DontCheckDefaultBrowser_options_false": {
+    "message": "Check on startup if Firefox is the default browser (Firefox 66+, Firefox ESR 60.6+)"
+  },
+  "policy_description_DontCheckDefaultBrowser_options_true": {
+    "message": "Don't check on startup if Firefox is the default browser"
   },
   "policy_description_EnableTrackingProtection": {
     "message": "Enable or disable tracking protection"

@@ -342,6 +342,12 @@
     "message": "URL poskićowarja"
   },
   "policy_description_DontCheckDefaultBrowser": {
+    "message": "Configure check for default browser on startup"
+  },
+  "policy_description_DontCheckDefaultBrowser_options_false": {
+    "message": "Check on startup if Firefox is the default browser (Firefox 66+, Firefox ESR 60.6+)"
+  },
+  "policy_description_DontCheckDefaultBrowser_options_true": {
     "message": "Při starće njekontrolować, hač Firefox je standardny wobhladowak"
   },
   "policy_description_EnableTrackingProtection": {

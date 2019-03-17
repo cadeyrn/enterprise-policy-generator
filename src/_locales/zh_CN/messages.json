@@ -342,6 +342,12 @@
     "message": "提供商 URL"
   },
   "policy_description_DontCheckDefaultBrowser": {
+    "message": "Configure check for default browser on startup"
+  },
+  "policy_description_DontCheckDefaultBrowser_options_false": {
+    "message": "Check on startup if Firefox is the default browser (Firefox 66+, Firefox ESR 60.6+)"
+  },
+  "policy_description_DontCheckDefaultBrowser_options_true": {
     "message": "启动时不检查 Firefox 是否为默认浏览器"
   },
   "policy_description_EnableTrackingProtection": {

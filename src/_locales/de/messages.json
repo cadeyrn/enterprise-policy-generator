@@ -342,6 +342,12 @@
     "message": "Provider-URL"
   },
   "policy_description_DontCheckDefaultBrowser": {
+    "message": "Prüfung konfigurieren, ob Firefox der Standard-Browser ist"
+  },
+  "policy_description_DontCheckDefaultBrowser_options_false": {
+    "message": "Beim Start prüfen, ob Firefox der Standard-Browser ist (Firefox 66+, Firefox ESR 60.6+)"
+  },
+  "policy_description_DontCheckDefaultBrowser_options_true": {
     "message": "Beim Start nicht prüfen, ob Firefox der Standard-Browser ist"
   },
   "policy_description_EnableTrackingProtection": {
