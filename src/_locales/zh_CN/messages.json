@@ -681,10 +681,13 @@
     "message": "GET"
   },
   "policy_description_SearchEngines_Add_Method_POST": {
-    "message": "POST"
+    "message": "POST (Firefox 67+)"
   },
   "policy_description_SearchEngines_Add_Name": {
     "message": "名称"
+  },
+  "policy_description_SearchEngines_Add_PostData": {
+    "message": "POST Data (if POST method was selected; e.g. q={searchTerms}&anotherParam=yes)"
   },
   "policy_description_SearchEngines_Add_SuggestURLTemplate": {
     "message": "搜索建议的 URL。使用 {searchTerms} 作为搜索关键词的占位符"

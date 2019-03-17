@@ -373,7 +373,13 @@ const policies = {
                 value : 'POST'
               }
             ]
-          }
+          },
+          {
+            name : 'PostData',
+            label : browser.i18n.getMessage('policy_description_SearchEngines_Add_PostData'),
+            mandatory : false,
+            type : 'string'
+          },
         ]
       },
       {

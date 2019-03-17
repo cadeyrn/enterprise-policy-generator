@@ -14,9 +14,10 @@
   [#73](https://github.com/cadeyrn/enterprise-policy-generator/issues/73)
 - new policy to add a custom support menu item to the help menu (Firefox 67+), fixes
   [#74](https://github.com/cadeyrn/enterprise-policy-generator/issues/74)
-- changed policy for default browser check on startup: it's now possible to enable the default browser check, not only
-  to disable it (Firefox 66+, Firefox ESR 60.6+), fixes
-  [#77](https://github.com/cadeyrn/enterprise-policy-generator/issues/77)
+- added support for POST method in SearchEngines policy (Firefox 67+), fixes
+  [#76](https://github.com/cadeyrn/enterprise-policy-generator/issues/76)
+- it's now possible to enable the default browser check on startup, not only to disable it (Firefox 66+,
+  Firefox ESR 60.6+), fixes [#77](https://github.com/cadeyrn/enterprise-policy-generator/issues/77)
 - changed description of DisableFirefoxStudies policy to reflect that the policy not only disables shield studies but
   also contextual feature recommendations, fixes [#75](https://github.com/cadeyrn/enterprise-policy-generator/issues/75)
 

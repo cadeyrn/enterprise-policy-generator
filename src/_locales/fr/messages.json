@@ -680,11 +680,14 @@
   "policy_description_SearchEngines_Add_Method_GET": {
     "message" : "GET"
   },
-  "policy_description_SearchEngines_Add_Method_Method_POST": {
-    "message" : "POST"
+  "policy_description_SearchEngines_Add_Method_POST": {
+    "message" : "POST (Firefox 67+)"
   },
   "policy_description_SearchEngines_Add_Add_Name": {
     "message" : "Nom"
+  },
+  "policy_description_SearchEngines_Add_PostData": {
+    "message": "POST Data (if POST method was selected; e.g. q={searchTerms}&anotherParam=yes)"
   },
   "policy_description_SearchEngines_Add_SuggestURLTemplate": {
     "message" : "Adresse pour les suggestions. Veuillez utiliser {conditions de recherche} comme caractère de remplacement pour le terme de recherche"
