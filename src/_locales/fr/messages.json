@@ -264,7 +264,7 @@
     "message" : "Désactiver l'outil de capture d'écran intégré (Firefox Screenshots)"
   },
   "policy_description_DisableFirefoxStudies": {
-    "message": "Prevent Firefox from installing and running studies and contextual feature recommendations"
+    "message": "Empêcher Firefox d'installer ou de lire des éxamens ou encore des recommendations de fonctions contextuelles"
   },
   "policy_description_DisableForgetButton": {
     "message" : "Désactiver le bouton \"Oublier\" de la barre d'outils qui permet d'oublier le dernier historique de navigation"
