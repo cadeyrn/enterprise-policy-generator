@@ -379,7 +379,7 @@ const policies = {
             label : browser.i18n.getMessage('policy_description_SearchEngines_Add_PostData'),
             mandatory : false,
             type : 'string'
-          },
+          }
         ]
       },
       {
