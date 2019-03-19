@@ -23,7 +23,7 @@
 
 #### Dependencies
 
-- updated eslint from version 5.12.1 to 5.15.2
+- updated eslint from version 5.12.1 to 5.15.3
 - updated eslint-plugin-compat from version 2.6.3 to 3.0.1
 - updated stylelint-order from version 2.0.0 to 2.1.0
 - updated web-ext from version 2.9.3 to 3.0.0
