@@ -171,13 +171,13 @@
     "message": "URL"
   },
   "policy_description_CaptivePortal": {
-    "message": "Enable or disable captive portal support"
+    "message": "开启或关闭强制门户认证（captive portal）支持"
   },
   "policy_description_CaptivePortal_options_false": {
-    "message": "Disable captive portal support"
+    "message": "关闭强制门户认证支持"
   },
   "policy_description_CaptivePortal_options_true": {
-    "message": "Enable captive portal support"
+    "message": "开启强制门户认证支持"
   },
   "policy_description_Certificates": {
     "message": "配置证书"
@@ -264,7 +264,7 @@
     "message": "禁用内置的截图工具（Firefox Screenshots）"
   },
   "policy_description_DisableFirefoxStudies": {
-    "message": "Prevent Firefox from installing and running studies and contextual feature recommendations"
+    "message": "阻止 Firefox 安装并运行一些实验项目和上下文特性推荐 (contextual feature recommendations)"
   },
   "policy_description_DisableForgetButton": {
     "message": "禁用“抹去足迹”工具栏按钮，阻止用它清除最近的浏览历史"
@@ -342,10 +342,10 @@
     "message": "提供商 URL"
   },
   "policy_description_DontCheckDefaultBrowser": {
-    "message": "Configure check for default browser on startup"
+    "message": "配置启动时是否检查为默认浏览器"
   },
   "policy_description_DontCheckDefaultBrowser_options_false": {
-    "message": "Check on startup if Firefox is the default browser (Firefox 66+, Firefox ESR 60.6+)"
+    "message": "启动时检查 Firefox 是否为默认浏览器 (Firefox 66+，Firefox ESR 60.6+)"
   },
   "policy_description_DontCheckDefaultBrowser_options_true": {
     "message": "启动时不检查 Firefox 是否为默认浏览器"
@@ -381,13 +381,13 @@
     "message": "附加组件 ID"
   },
   "policy_description_ExtensionUpdate": {
-    "message": "Enable or disable automatic extension updates"
+    "message": "允许或阻止扩展自动更新"
   },
   "policy_description_ExtensionUpdate_options_false": {
-    "message": "Disable automatic extension updates"
+    "message": "阻止扩展自动更新"
   },
   "policy_description_ExtensionUpdate_options_true": {
-    "message": "Enable automatic extension updates"
+    "message": "允许扩展自动更新"
   },
   "policy_description_FlashPlugin": {
     "message": "允许或阻止使用 Flash 插件"
@@ -456,13 +456,13 @@
     "message": "允许用户安装附加组件"
   },
   "policy_description_NetworkPrediction": {
-    "message": "Enable or disable network prediction (DNS prefetching)"
+    "message": "启用或禁用网络预测 (DNS 预读取)"
   },
   "policy_description_NetworkPrediction_options_false": {
-    "message": "Disable network prediction (DNS prefetching)"
+    "message": "禁用网络预测 (DNS 预读取)"
   },
   "policy_description_NetworkPrediction_options_true": {
-    "message": "Enable network prediction (DNS prefetching)"
+    "message": "启用网络预测 (DNS 预读取)"
   },
   "policy_description_NoDefaultBookmarks": {
     "message": "不创建默认的书签集，包括智能书签（最常访问、最近的标签）。注意：该策略仅在配置文件首次启用时生效"
@@ -687,7 +687,7 @@
     "message": "名称"
   },
   "policy_description_SearchEngines_Add_PostData": {
-    "message": "POST Data (if POST method was selected; e.g. q={searchTerms}&anotherParam=yes)"
+    "message": "POST 数据 (如果选择使用 POST method，例如 q={searchTerms}&anotherParam=yes)"
   },
   "policy_description_SearchEngines_Add_SuggestURLTemplate": {
     "message": "搜索建议的 URL。使用 {searchTerms} 作为搜索关键词的占位符"
@@ -729,13 +729,13 @@
     "message": "最低要求的 TLS 版本"
   },
   "policy_description_SupportMenu": {
-    "message": "Add a custom support menu item to the help menu"
+    "message": "在帮助菜单添加一个自定义的支持菜单项"
   },
   "policy_description_SupportMenu_AccessKey": {
-    "message": "Access key (a single character!)"
+    "message": "快捷键 (就一个字母!)"
   },
   "policy_description_SupportMenu_Title": {
-    "message": "Title"
+    "message": "标题"
   },
   "policy_description_SupportMenu_URL": {
     "message": "URL"
