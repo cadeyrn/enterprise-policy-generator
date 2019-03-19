@@ -171,13 +171,13 @@
     "message": "URL"
   },
   "policy_description_CaptivePortal": {
-    "message": "Enable or disable captive portal support"
+    "message": "Syćowu přizjewjensku stronu zmóžnić abo znjemóžnić"
   },
   "policy_description_CaptivePortal_options_false": {
-    "message": "Disable captive portal support"
+    "message": "Syćowu přizjewjensku stronu znjemóžnić"
   },
   "policy_description_CaptivePortal_options_true": {
-    "message": "Enable captive portal support"
+    "message": "Syćowu přizjewjensku stronu zmóžnić"
   },
   "policy_description_Certificates": {
     "message": "Certifikaty konfigurować"
@@ -264,7 +264,7 @@
     "message": "Zatwarjenu funkciju za fota wobrazowki (Firefox Screenshots) znjemóžnić"
   },
   "policy_description_DisableFirefoxStudies": {
-    "message": "Prevent Firefox from installing and running studies and contextual feature recommendations"
+    "message": "Firefox při instalowanju a wuwjedźenju studijow kaž tež so na kontekst poćahowacych doporučenjow za funkcije haćić"
   },
   "policy_description_DisableForgetButton": {
     "message": "Tłóčatko \"Zabyć\" znjemóžnić, kotrež so ma wužiwać, zo by historiju zhašało"
@@ -342,10 +342,10 @@
     "message": "URL poskićowarja"
   },
   "policy_description_DontCheckDefaultBrowser": {
-    "message": "Configure check for default browser on startup"
+    "message": "Přepruwowanje konfigurować, hač Firefox je standardny wobhladowak"
   },
   "policy_description_DontCheckDefaultBrowser_options_false": {
-    "message": "Check on startup if Firefox is the default browser (Firefox 66+, Firefox ESR 60.6+)"
+    "message": "Při startowanju přepruwować, hač Firefox je standardny wobhladowak (Firefox 66+, Firefox ESR 60.6+)"
   },
   "policy_description_DontCheckDefaultBrowser_options_true": {
     "message": "Při starće njekontrolować, hač Firefox je standardny wobhladowak"
@@ -381,13 +381,13 @@
     "message": "ID přidatka"
   },
   "policy_description_ExtensionUpdate": {
-    "message": "Enable or disable automatic extension updates"
+    "message": "Awtomatiske aktualizowanje rozšěrjenjow zmóžnić abo znjemóžnić"
   },
   "policy_description_ExtensionUpdate_options_false": {
-    "message": "Disable automatic extension updates"
+    "message": "Awtomatiske aktualizowanje rozšěrjenjow znjemóžnić"
   },
   "policy_description_ExtensionUpdate_options_true": {
-    "message": "Enable automatic extension updates"
+    "message": "Awtomatiske aktualizowanje rozšěrjenjow zmóžnić"
   },
   "policy_description_FlashPlugin": {
     "message": "Wužiwanje tykača Flash dowolić abo zakazać"
@@ -456,13 +456,13 @@
     "message": "Rozšěrjenja dadźa so wot wužiwarja instalować"
   },
   "policy_description_NetworkPrediction": {
-    "message": "Enable or disable network prediction (DNS prefetching)"
+    "message": "DNS-předzačitanje zmóžnić abo znjemóžnić"
   },
   "policy_description_NetworkPrediction_options_false": {
-    "message": "Disable network prediction (DNS prefetching)"
+    "message": "DNS-předzačitanje znjemóžnić"
   },
   "policy_description_NetworkPrediction_options_true": {
-    "message": "Enable network prediction (DNS prefetching)"
+    "message": "DNS-předzačitanje zmóžnić)"
   },
   "policy_description_NoDefaultBookmarks": {
     "message": "Žane standardne zapołožki inkluziwnje inteligentne zapołožki (najhusćišo wopytane strony, njedawno wužite klučowe słowa) wutworić. Pokazka: tuta směrnica je jenož skutkowna, hdyž so před prěnim wužiwanjom profila Firefox nałožuje"
@@ -687,7 +687,7 @@
     "message": "Mjeno"
   },
   "policy_description_SearchEngines_Add_PostData": {
-    "message": "POST Data (if POST method was selected; e.g. q={searchTerms}&anotherParam=yes)"
+    "message": "POST Data (hdyž je so metoda POST wubrała; na př. q={searchTerms}&anotherParam=yes)"
   },
   "policy_description_SearchEngines_Add_SuggestURLTemplate": {
     "message": "URL za namjety. Prošu wužiwajće {searchTerms} jako wariablu za pytanski wuraz"
@@ -729,13 +729,13 @@
     "message": "Minimalnje trěbna TLS-wersija"
   },
   "policy_description_SupportMenu": {
-    "message": "Add a custom support menu item to the help menu"
+    "message": "Přidawanje swójskeho menijoweho zapiska za meni Pomoc"
   },
   "policy_description_SupportMenu_AccessKey": {
-    "message": "Access key (a single character!)"
+    "message": "Přistupna tasta (jednotliwy pismik!)"
   },
   "policy_description_SupportMenu_Title": {
-    "message": "Title"
+    "message": "Titul"
   },
   "policy_description_SupportMenu_URL": {
     "message": "URL"
