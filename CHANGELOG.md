@@ -12,6 +12,7 @@
 - updated gulp from version 4.0.0 to 4.0.2
 - updated gulp-stylelint from version 8.0.0 to 9.0.0
 - updated htmllint from version 0.7.3 to 0.8.0
+- updated jsdoc from version 3.5.5 to 3.6.2
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v4.4.0...master)<br />
 
