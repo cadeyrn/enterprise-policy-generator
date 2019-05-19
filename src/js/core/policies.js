@@ -608,7 +608,7 @@ const policies = {
   NetworkPrediction : {
     description : browser.i18n.getMessage('policy_description_NetworkPrediction'),
     enterprise_only : false,
-    first_available : { mainstream : '67.0', esr : null },
+    first_available : { mainstream : '67.0', esr : '60.7' },
     info_link : null,
     is_lockable : false,
     ui_category : 'network',
@@ -825,7 +825,7 @@ const policies = {
   CaptivePortal : {
     description : browser.i18n.getMessage('policy_description_CaptivePortal'),
     enterprise_only : false,
-    first_available : { mainstream : '67.0', esr : null },
+    first_available : { mainstream : '67.0', esr : '60.7' },
     info_link : null,
     is_lockable : false,
     ui_category : 'network',
@@ -1229,7 +1229,7 @@ const policies = {
   SSLVersionMin : {
     description : browser.i18n.getMessage('policy_description_SSLVersionMin'),
     enterprise_only : false,
-    first_available : { mainstream : '66.0', esr : null },
+    first_available : { mainstream : '66.0', esr : '60.6' },
     info_link : null,
     is_lockable : false,
     ui_category : 'security',
@@ -1259,7 +1259,7 @@ const policies = {
   SSLVersionMax : {
     description : browser.i18n.getMessage('policy_description_SSLVersionMax'),
     enterprise_only : false,
-    first_available : { mainstream : '66.0', esr : null },
+    first_available : { mainstream : '66.0', esr : '60.6' },
     info_link : null,
     is_lockable : false,
     ui_category : 'security',
@@ -1363,7 +1363,7 @@ const policies = {
   ExtensionUpdate : {
     description : browser.i18n.getMessage('policy_description_ExtensionUpdate'),
     enterprise_only : false,
-    first_available : { mainstream : '67.0', esr : null },
+    first_available : { mainstream : '67.0', esr : '60.7' },
     info_link : null,
     is_lockable : false,
     ui_category : 'updates-and-data',
@@ -1530,7 +1530,7 @@ const policies = {
   SupportMenu : {
     description : browser.i18n.getMessage('policy_description_SupportMenu'),
     enterprise_only : false,
-    first_available : { mainstream : '67.0', esr : null },
+    first_available : { mainstream : '67.0', esr : '60.7' },
     info_link : null,
     is_lockable : false,
     ui_category : 'others',

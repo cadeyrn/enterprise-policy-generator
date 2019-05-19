@@ -4,6 +4,19 @@
 
 ### (Work in Progress) Version 4.5.0
 
+#### Enterprise Policies
+
+- policies to set the minimum required and the maximum supported TLS version are also available from Firefox ESR 60.6,
+  see [#90](https://github.com/cadeyrn/enterprise-policy-generator/issues/90)
+- policy to enable or disable captive portal support is also available from Firefox ESR 60.7, see
+  [#90](https://github.com/cadeyrn/enterprise-policy-generator/issues/90)
+- policy to enable or disable network prediction (DNS prefetching) is also available from Firefox ESR 60.7, see
+  [#90](https://github.com/cadeyrn/enterprise-policy-generator/issues/90)
+- policy to enable or disable automatic extension updates is also available from Firefox ESR 60.7, see
+  [#90](https://github.com/cadeyrn/enterprise-policy-generator/issues/90)
+- policy to add a custom support menu item to the help menu is also available from Firefox ESR 60.7, see
+  [#90](https://github.com/cadeyrn/enterprise-policy-generator/issues/90)
+
 #### Dependencies
 
 - updated eslint from version 5.15.3 to 5.16.0
