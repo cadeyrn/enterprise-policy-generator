@@ -8,6 +8,7 @@
 
 - updated eslint from version 5.15.3 to 5.16.0
 - updated eslint-plugin-compat from version 3.0.1 to 3.1.1
+- updated eslint-plugin-promise from version 4.0.1 to 4.1.1
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v4.4.0...master)<br />
 
