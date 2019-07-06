@@ -23,6 +23,7 @@
 - updated eslint-plugin-compat from version 3.0.1 to 3.2.0
 - updated eslint-plugin-promise from version 4.0.1 to 4.2.1
 - updated gulp from version 4.0.0 to 4.0.2
+- updated gulp-eslint from version 5.0.0 to 6.0.0
 - updated gulp-stylelint from version 8.0.0 to 9.0.0
 - updated htmllint from version 0.7.3 to 0.8.0
 - updated jsdoc from version 3.5.5 to 3.6.2
