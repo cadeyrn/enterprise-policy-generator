@@ -26,7 +26,7 @@
 - updated gulp-eslint from version 5.0.0 to 6.0.0
 - updated gulp-stylelint from version 8.0.0 to 9.0.0
 - updated htmllint from version 0.7.3 to 0.8.0
-- updated jsdoc from version 3.5.5 to 3.6.2
+- updated jsdoc from version 3.5.5 to 3.6.3
 - updated stylelint from version 9.10.1 to 10.1.0
 - updated stylelint-csstree-validator from version 1.3.0 to 1.4.1
 - updated stylelint-order from version 2.1.0 to 3.0.0
