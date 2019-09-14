@@ -7,7 +7,7 @@
     "xss"
   ],
   "parserOptions": {
-    "ecmaVersion": 2017
+    "ecmaVersion": 2020
   },
   "env": {
     "browser": true,
@@ -43,12 +43,14 @@
     "constructor-super": "error",
     "curly": "error",
     "default-case": "error",
+    "default-param-last": "error",
     "dot-location": ["error", "property"],
     "dot-notation": "off",
     "eol-last": "error",
     "eqeqeq": "error",
     "for-direction": "error",
     "func-call-spacing": "error",
+    "function-call-argument-newline": ["error", "consistent"],
     "func-name-matching": "error",
     "func-names": "off",
     "func-style": "error",
@@ -129,6 +131,7 @@
     "no-implicit-coercion": "error",
     "no-implicit-globals": "error",
     "no-implied-eval": "error",
+    "no-import-assign": "error",
     "no-inline-comments": "error",
     "no-inner-declarations": ["error", "both"],
     "no-invalid-regexp": "error",
@@ -235,6 +238,7 @@
     "prefer-numeric-literals": "error",
     "prefer-object-spread": "off",
     "prefer-promise-reject-errors": "error",
+    "prefer-regex-literals": "error",
     "prefer-rest-params": "error",
     "prefer-spread": "error",
     "prefer-template": "off",
