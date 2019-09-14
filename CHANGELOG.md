@@ -22,6 +22,8 @@
   [#90](https://github.com/cadeyrn/enterprise-policy-generator/issues/90)
 - policy to add a custom support menu item to the help menu is also available from Firefox ESR 60.7, see
   [#90](https://github.com/cadeyrn/enterprise-policy-generator/issues/90)
+- improved labels for Certificates/Add policy, fixes
+  [#95](https://github.com/cadeyrn/enterprise-policy-generator/issues/95)
 
 #### Dependencies
 

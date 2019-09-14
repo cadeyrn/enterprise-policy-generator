@@ -192,10 +192,10 @@
     "message": "read certificates from the system certificate store"
   },
   "policy_description_Certificates_Install": {
-    "message": "Import certificates (Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates or %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: USERDIR/Library/Application Support/Mozilla/Certificates or /Library/Application Support/Mozilla/Certificates, Linux: /home/user/.mozilla/certificates; distribution/Certificates and arbitrary absolute pathes)"
+    "message": "Import certificates (Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates or %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: /Library/Application Support/Mozilla/Certificates or ~/Library/Application Support/Mozilla/Certificates, Linux: /usr/lib/mozilla/certificates, /usr/lib64/mozilla/certificates or ~/.mozilla/certificates)"
   },
   "policy_description_Certificates_Install_Value": {
-    "message": "Path to .crt file"
+    "message": "Path to the .der or .pem file"
   },
   "policy_description_Cookies": {
     "message": "Allow or deny websites to set cookies"

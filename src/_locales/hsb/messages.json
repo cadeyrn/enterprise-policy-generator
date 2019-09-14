@@ -192,10 +192,10 @@
     "message": "Certifikaty z certifikatoweho składowaka systema čitać"
   },
   "policy_description_Certificates_Install": {
-    "message": "Certifikaty importować (Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates abo %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: USERDIR/Library/Application Support/Mozilla/Certificates abo /Library/Application Support/Mozilla/Certificates, Linux: /home/user/.mozilla/certificates; distribution/Certificates a někajke absolutne šćežki)"
+    "message": "Certifikaty importować (Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates abo %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: /Library/Application Support/Mozilla/Certificates abo ~/Library/Application Support/Mozilla/Certificates, Linux: /usr/lib/mozilla/certificates, /usr/lib64/mozilla/certificates abo ~/.mozilla/certificates)"
   },
   "policy_description_Certificates_Install_Value": {
-    "message": "Šćežka k .crt-dataji"
+    "message": "Path to the .der or .pem file"
   },
   "policy_description_Cookies": {
     "message": "Webstronam dowolić abo zakazać, placki stajić"

@@ -192,10 +192,10 @@
     "message": "Certifikaty z certifikatowego składowaka systema cytaś"
   },
   "policy_description_Certificates_Install": {
-    "message": "Certifikaty importěrowaś (Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates abo %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: USERDIR/Library/Application Support/Mozilla/Certificates abo /Library/Application Support/Mozilla/Certificates, Linux: /home/user/.mozilla/certificates; distribution/Certificates a někake absolutne sćažki)"
+    "message": "Certifikaty importěrowaś (Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates abo %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: /Library/Application Support/Mozilla/Certificates abo ~/Library/Application Support/Mozilla/Certificates, Linux: /usr/lib/mozilla/certificates, /usr/lib64/mozilla/certificates abo ~/.mozilla/certificates)"
   },
   "policy_description_Certificates_Install_Value": {
-    "message": "Sćažka k .crt-dataji"
+    "message": "Path to the .der or .pem file"
   },
   "policy_description_Cookies": {
     "message": "Webbokam dowóliś abo zakazaś, cookieje stajiś"
