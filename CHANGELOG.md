@@ -8,19 +8,19 @@
 
 - Deprecation of Firefox 60. Firefox Browser 68 or higher is required now. Also Enterprise Policy Generator no longer
   shows minimum required Firefox version for policies older than Firefox 68.0, fixes
-  [#80](https://github.com/cadeyrn/enterprise-policy-generator/issues/00)
+  [#80](https://github.com/cadeyrn/enterprise-policy-generator/issues/80)
 
 #### Enterprise Policies
 
-- policies to set the minimum required and the maximum supported TLS version are also available from Firefox ESR 60.6,
+- policies to set the minimum required and the maximum supported TLS version are also available in Firefox ESR,
   see [#90](https://github.com/cadeyrn/enterprise-policy-generator/issues/90)
-- policy to enable or disable captive portal support is also available from Firefox ESR 60.7, see
+- policy to enable or disable captive portal support is also available in Firefox ESR, see
   [#90](https://github.com/cadeyrn/enterprise-policy-generator/issues/90)
-- policy to enable or disable network prediction (DNS prefetching) is also available from Firefox ESR 60.7, see
+- policy to enable or disable network prediction (DNS prefetching) is also available in Firefox ESR, see
   [#90](https://github.com/cadeyrn/enterprise-policy-generator/issues/90)
-- policy to enable or disable automatic extension updates is also available from Firefox ESR 60.7, see
+- policy to enable or disable automatic extension updates is also available in Firefox ESR, see
   [#90](https://github.com/cadeyrn/enterprise-policy-generator/issues/90)
-- policy to add a custom support menu item to the help menu is also available from Firefox ESR 60.7, see
+- policy to add a custom support menu item to the help menu is also available in Firefox ESR, see
   [#90](https://github.com/cadeyrn/enterprise-policy-generator/issues/90)
 - improved labels for Certificates/Add policy, fixes
   [#95](https://github.com/cadeyrn/enterprise-policy-generator/issues/95)
