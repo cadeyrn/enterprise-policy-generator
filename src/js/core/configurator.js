@@ -1035,7 +1035,7 @@ const configurator = {
     }
 
     // versions info
-    if (policy.first_available.mainstream !== '60.0' || policy.first_available.esr !== '60.0') {
+    if (parseFloat(policy.first_available.mainstream) > 68.0 || parseFloat(policy.first_available.esr) > 68.0) {
       const elVersionsInfo = document.createElement('div');
       elVersionsInfo.classList.add('versions-info');
       elLabel.appendChild(elVersionsInfo);

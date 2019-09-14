@@ -4,6 +4,12 @@
 
 ### (Work in Progress) Version 5.0.0
 
+#### Enhancements
+
+- Deprecation of Firefox 60. Firefox Browser 68 or higher is required now. Also Enterprise Policy Generator no longer
+  shows minimum required Firefox version for policies older than Firefox 68.0, fixes
+  [#80](https://github.com/cadeyrn/enterprise-policy-generator/issues/00)
+
 #### Enterprise Policies
 
 - policies to set the minimum required and the maximum supported TLS version are also available from Firefox ESR 60.6,

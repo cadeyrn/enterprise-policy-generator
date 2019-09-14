@@ -9,7 +9,7 @@
     "message": "仅在 Firefox ESR 生效"
   },
   "explanation_about_policies": {
-    "message": "从 Firefox 63 开始，所有活跃和策略和错误都会在 about:policies 页面对应的“policies.json”文件中显示一个摘要。"
+    "message": "There is an overview of all active policies and errors in the file “policies.json” at about:policies."
   },
   "explanation_headline_usage": {
     "message": "使用方法"
@@ -111,10 +111,10 @@
     "message": "始终允许在非 FQDN（完全限定性域名）上使用 SPNEGO 或 NTLM"
   },
   "policy_description_Authentication_AllowNonFQDN_NTLM": {
-    "message": "始终允许在非 FQDN 上使用 NTLM (Firefox 62+, Firefox ESR 60.2+)"
+    "message": "始终允许在非 FQDN 上使用 NTLM"
   },
   "policy_description_Authentication_AllowNonFQDN_SPNEGO": {
-    "message": "始终允许在非 FQDN 上使用 SPNEGO (Firefox 62+, Firefox ESR 60.2+)"
+    "message": "始终允许在非 FQDN 上使用 SPNEGO"
   },
   "policy_description_Authentication_Delegated": {
     "message": "委托（Delegated）"
@@ -183,7 +183,7 @@
     "message": "配置证书"
   },
   "policy_description_Certificates_ImportEnterpriseRoots": {
-    "message": "读取系统证书库中的证书 (仅限 Windows；macOS 的 Firefox 63 及更高版本；禁止在 Firefox 64 及更高版本使用)"
+    "message": "read certificates from the system certificate store (Windows and macOS only)"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_false": {
     "message": "不读取系统证书库中的证书"
@@ -192,7 +192,7 @@
     "message": "读取系统证书库中的证书"
   },
   "policy_description_Certificates_Install": {
-    "message": "导入证书（Firefox 64+、Firefox ESR 60.3.1+；Windows：%USERNAME\\AppData\\Local\\Mozilla\\Certificates 或 %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates，macOS：USERDIR/Library/Application Support/Mozilla/Certificates 或 /Library/Application Support/Mozilla/Certificates，Linux：/home/user/.mozilla/certificates; distribution/Certificates 和 Firefox 65 开始可使用的任意绝对路径）"
+    "message": "导入证书（Windows：%USERNAME\\AppData\\Local\\Mozilla\\Certificates 或 %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates，macOS：USERDIR/Library/Application Support/Mozilla/Certificates 或 /Library/Application Support/Mozilla/Certificates，Linux：/home/user/.mozilla/certificates; distribution/Certificates 开始可使用的任意绝对路径）"
   },
   "policy_description_Certificates_Install_Value": {
     "message": ".crt 文件的路径"
@@ -243,7 +243,7 @@
     "message": "Firefox 关闭"
   },
   "policy_description_Cookies_RejectTracker": {
-    "message": "阻止跟踪 Cookies (Firefox 63+)"
+    "message": "阻止跟踪 Cookies"
   },
   "policy_description_DisableAppUpdate": {
     "message": "阻止 Firefox 进行更新"
@@ -345,7 +345,7 @@
     "message": "配置启动时是否检查为默认浏览器"
   },
   "policy_description_DontCheckDefaultBrowser_options_false": {
-    "message": "启动时检查 Firefox 是否为默认浏览器 (Firefox 66+，Firefox ESR 60.6+)"
+    "message": "启动时检查 Firefox 是否为默认浏览器"
   },
   "policy_description_DontCheckDefaultBrowser_options_true": {
     "message": "启动时不检查 Firefox 是否为默认浏览器"
@@ -426,7 +426,7 @@
     "message": "额外的 URL"
   },
   "policy_description_Homepage_StartPage": {
-    "message": "Firefox 启动时显示…（Firefox 64+、Firefox ESR 60.3.1+）"
+    "message": "Firefox 启动时显示…"
   },
   "policy_description_Homepage_StartPage_Homepage": {
     "message": "… 设置为主页的网站"
@@ -681,7 +681,7 @@
     "message": "GET"
   },
   "policy_description_SearchEngines_Add_Method_POST": {
-    "message": "POST (Firefox 67+)"
+    "message": "POST"
   },
   "policy_description_SearchEngines_Add_Name": {
     "message": "名称"

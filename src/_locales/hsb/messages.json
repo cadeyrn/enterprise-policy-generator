@@ -9,7 +9,7 @@
     "message": "funguje jenož w Firefox ESR"
   },
   "explanation_about_policies": {
-    "message": "Wot Firefox 63 je přehlad wo wšěch aktiwnych prawidłach pod about:policies kaž tež wo zmylkach w dataji „policies.json“."
+    "message": "There is an overview of all active policies and errors in the file “policies.json” at about:policies."
   },
   "explanation_headline_usage": {
     "message": "Nałoženje"
@@ -111,10 +111,10 @@
     "message": "Přeco SPNEGO abo NTLM na nje-FQDN (połnokwalifikowane domenowe mjena) dowolić"
   },
   "policy_description_Authentication_AllowNonFQDN_NTLM": {
-    "message": "Přeco NTLM na nje-FQDN (Firefox 62+, Firefox ESR 60.2+) dowolić"
+    "message": "Přeco NTLM na nje-FQDN dowolić"
   },
   "policy_description_Authentication_AllowNonFQDN_SPNEGO": {
-    "message": "Přeco SPNEGO na nje-FQDNs (Firefox 62+, Firefox ESR 60.2+) dowolić"
+    "message": "Přeco SPNEGO na nje-FQDNs dowolić"
   },
   "policy_description_Authentication_Delegated": {
     "message": "Delegowany"
@@ -183,7 +183,7 @@
     "message": "Certifikaty konfigurować"
   },
   "policy_description_Certificates_ImportEnterpriseRoots": {
-    "message": "Certifikaty z certifikatoweho składowaka systema čitać (jenož Windows; macOS wot Firefox 63; znjemóžnić wot Firefox 64)"
+    "message": "read certificates from the system certificate store (Windows and macOS only)"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_false": {
     "message": "Certifikaty z certifikatoweho składowaka systema nječitać"
@@ -192,7 +192,7 @@
     "message": "Certifikaty z certifikatoweho składowaka systema čitać"
   },
   "policy_description_Certificates_Install": {
-    "message": "Certifikaty importować (Firefox 64+, Firefox ESR 60.3.1+; Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates abo %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: USERDIR/Library/Application Support/Mozilla/Certificates abo /Library/Application Support/Mozilla/Certificates, Linux: /home/user/.mozilla/certificates; distribution/Certificates a někajke absolutne šćežki wot Firefox 65)"
+    "message": "Certifikaty importować (Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates abo %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: USERDIR/Library/Application Support/Mozilla/Certificates abo /Library/Application Support/Mozilla/Certificates, Linux: /home/user/.mozilla/certificates; distribution/Certificates a někajke absolutne šćežki)"
   },
   "policy_description_Certificates_Install_Value": {
     "message": "Šćežka k .crt-dataji"
@@ -243,7 +243,7 @@
     "message": "… doniž Firefox so njezačini"
   },
   "policy_description_Cookies_RejectTracker": {
-    "message": "Slědowanske placki blokować (Firefox 63+)"
+    "message": "Slědowanske placki blokować"
   },
   "policy_description_DisableAppUpdate": {
     "message": "Firefox při aktualizowanju haćić"
@@ -345,7 +345,7 @@
     "message": "Přepruwowanje konfigurować, hač Firefox je standardny wobhladowak"
   },
   "policy_description_DontCheckDefaultBrowser_options_false": {
-    "message": "Při startowanju přepruwować, hač Firefox je standardny wobhladowak (Firefox 66+, Firefox ESR 60.6+)"
+    "message": "Při startowanju přepruwować, hač Firefox je standardny wobhladowak"
   },
   "policy_description_DontCheckDefaultBrowser_options_true": {
     "message": "Při starće njekontrolować, hač Firefox je standardny wobhladowak"
@@ -426,7 +426,7 @@
     "message": "Přidatne URL"
   },
   "policy_description_Homepage_StartPage": {
-    "message": "Firefox startować z… (Firefox 64+, Firefox ESR 60.3.1+)"
+    "message": "Firefox startować z…"
   },
   "policy_description_Homepage_StartPage_Homepage": {
     "message": "… nastajenej startowej stronu"
@@ -681,7 +681,7 @@
     "message": "GET"
   },
   "policy_description_SearchEngines_Add_Method_POST": {
-    "message": "POST (Firefox 67+)"
+    "message": "POST"
   },
   "policy_description_SearchEngines_Add_Name": {
     "message": "Mjeno"
@@ -708,7 +708,7 @@
     "message": "instalacijam zadźěwać"
   },
   "policy_description_SearchEngines_Remove": {
-    "message": "Pytawy wotstronić (Firefox 62+, Firefox ESR 60.2+)"
+    "message": "Pytawy wotstronić"
   },
   "policy_description_SearchEngines_Remove_Name": {
     "message": "Mjeno"

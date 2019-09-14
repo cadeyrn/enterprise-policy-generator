@@ -9,7 +9,7 @@
     "message": "Fonctionne uniquement avec Firefox ESR"
   },
   "explanation_about_policies": {
-    "message": "A partir de Firefox 63, il y a un aperçu de toutes les politiques actives et des erreurs dans le fichier \"policies.json\" à la page about:policies."
+    "message": "There is an overview of all active policies and errors in the file \"policies.json\" at about:policies."
   },
   "explanation_headline_usage": {
     "message": "Usage"
@@ -111,10 +111,10 @@
     "message": "Toujours autoriser SPNEGO ou NTLM hors des FQDNs (noms de domaine entièrement qualifiés)"
   },
   "policy_description_Authentication_AllowNonFQDN_NTLM": {
-    "message": "Toujours autoriser NTLM hors des FQDNs (Firefox 62+, Firefox ESR 60.2+)"
+    "message": "Toujours autoriser NTLM hors des FQDNs"
   },
   "policy_description_Authentication_AllowNonFQDN_SPNEGO": {
-    "message": "Toujours autoriser SPNEGO hors des FQDNs (Firefox 62+, Firefox ESR 60.2+)"
+    "message": "Toujours autoriser SPNEGO hors des FQDNs"
   },
   "policy_description_Authentication_Delegated": {
     "message" : "Délégué"
@@ -183,7 +183,7 @@
     "message": "Configurer certificats"
   },
   "policy_description_Certificates_ImportEnterpriseRoots": {
-    "message": "Lire certificats depuis la liste des certificats du système (Windows uniquement; macOS avec Firefox 63ou plus réçent; désactiver sur Firefox 64 et supérieur)"
+    "message": "read certificates from the system certificate store (Windows and macOS only)"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_false": {
     "message": "ne pas lire les certificats depuis la liste des certificats du système"
@@ -192,7 +192,7 @@
     "message": "lire les certificats depuis la liste des certificats du système"
   },
   "policy_description_Certificates_Install": {
-    "message": "Importer certificats (Firefox 64+, Firefox ESR 60.3.1+; Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates or %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: USERDIR/Library/Application Support/Mozilla/Certificates ou /Library/Application Support/Mozilla/Certificates, Linux: /home/user/.mozilla/certificates; distribution/Certificats et chemins absolus arbitraires de Firefox 65)"
+    "message": "Importer certificats (Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates or %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: USERDIR/Library/Application Support/Mozilla/Certificates ou /Library/Application Support/Mozilla/Certificates, Linux: /home/user/.mozilla/certificates; distribution/Certificats et chemins absolus arbitraires)"
   },
   "policy_description_Certificates_Install_Value": {
     "message": "Chemin jusqu'au fichier .crt"
@@ -243,7 +243,7 @@
     "message" : "… jusqu'à ce que Firefox soit fermé"
   },
   "policy_description_Cookies_RejectTracker": {
-    "message": "Rejeter les cookies de suivi (Firefox 63+)"
+    "message": "Rejeter les cookies de suivi"
   },
   "policy_description_DisableAppUpdate": {
     "message" : "Empêcher Firefox de se mettre à jour"
@@ -345,7 +345,7 @@
     "message": "Configurer vérification du navigateur par défaut au démarrage"
   },
   "policy_description_DontCheckDefaultBrowser_options_false": {
-    "message": "Vérifier au démarrage si Firefox est le navigateur par défaut (Firefox 66+, Firefox ESR 60.6+)"
+    "message": "Vérifier au démarrage si Firefox est le navigateur par défaut"
   },
   "policy_description_DontCheckDefaultBrowser_options_true": {
     "message": "Ne vérifiez pas si Firefox est le navigateur par défaut au démarrage"
@@ -429,7 +429,7 @@
     "message" : "Adresse"
   },
   "policy_description_Homepage_StartPage": {
-    "message": "Démarrer Firefox avec… (Firefox 64+, Firefox ESR 60.3.1+)"
+    "message": "Démarrer Firefox avec…"
   },
   "policy_description_Homepage_StartPage_Homepage": {
     "message": "… le site web définis comme page d'accueil"
@@ -681,7 +681,7 @@
     "message" : "GET"
   },
   "policy_description_SearchEngines_Add_Method_POST": {
-    "message" : "POST (Firefox 67+)"
+    "message" : "POST"
   },
   "policy_description_SearchEngines_Add_Add_Name": {
     "message" : "Nom"
@@ -708,7 +708,7 @@
     "message" : "Empêcher les installations"
   },
   "policy_description_SearchEngines_Remove": {
-    "message" : "Supprimer le(s) moteur(s) de recherche (Firefox 62+, Firefox ESR 60.2+)"
+    "message" : "Supprimer le(s) moteur(s) de recherche"
   },
   "policy_description_SearchEngines_Remove_Remove_Name": {
     "message" : "Nom"

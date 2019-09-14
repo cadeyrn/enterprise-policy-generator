@@ -15,7 +15,8 @@ Although this extension is not directly related to the CCK2 Wizard, it shares th
 Quantum and Enterprise Policies. The Enterprise Policy Generator helps to create the configuration file, so that no in-depth study
 of the documentation and all possible options is necessary. Administrators can simply click together the desired Enterprise Policies.
 
-**Enterprise Policy Generator is a WebExtension and compatible with Firefox Quantum (Firefox 60 and later).**
+**Enterprise Policy Generator is a WebExtension and compatible with Firefox Browser 60 and higher (Firefox Browser 68 and
+higher for latest version of Enterprise Policy Generator).**
 
 ### Features
 
@@ -81,11 +82,6 @@ interface.
 _(since 2.0.0)_
 
 The storage permission is needed so that you can save and load configurations.
-
-## Compatibility
-
-Enterprise Policy Generator requires at least Firefox 60. Because the add-on is a tool for the new Enterprise Policy
-Engine, there is no point in supporting older versions of Firefox.
 
 ## Download
 

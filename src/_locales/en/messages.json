@@ -9,7 +9,7 @@
     "message": "works only in Firefox ESR"
   },
   "explanation_about_policies": {
-    "message": "Starting with Firefox 63 there is an overview of all active policies and errors in the file “policies.json” at about:policies."
+    "message": "There is an overview of all active policies and errors in the file “policies.json” at about:policies."
   },
   "explanation_headline_usage": {
     "message": "Usage"
@@ -111,10 +111,10 @@
     "message": "Always allow SPNEGO or NTLM on non FQDNs (fully qualified domain names)"
   },
   "policy_description_Authentication_AllowNonFQDN_NTLM": {
-    "message": "Always allow NTLM on non FQDNs (Firefox 62+, Firefox ESR 60.2+)"
+    "message": "Always allow NTLM on non FQDNs"
   },
   "policy_description_Authentication_AllowNonFQDN_SPNEGO": {
-    "message": "Always allow SPNEGO on non FQDNs (Firefox 62+, Firefox ESR 60.2+)"
+    "message": "Always allow SPNEGO on non FQDNs"
   },
   "policy_description_Authentication_Delegated": {
     "message": "Delegated"
@@ -183,7 +183,7 @@
     "message": "Configure certificates"
   },
   "policy_description_Certificates_ImportEnterpriseRoots": {
-    "message": "read certificates from the system certificate store (Windows only; macOS on Firefox 63 and higher; disabling on Firefox 64 and higher)"
+    "message": "read certificates from the system certificate store (Windows and macOS only)"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_false": {
     "message": "don't read certificates from the system certificate store"
@@ -192,7 +192,7 @@
     "message": "read certificates from the system certificate store"
   },
   "policy_description_Certificates_Install": {
-    "message": "Import certificates (Firefox 64+, Firefox ESR 60.3.1+; Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates or %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: USERDIR/Library/Application Support/Mozilla/Certificates or /Library/Application Support/Mozilla/Certificates, Linux: /home/user/.mozilla/certificates; distribution/Certificates and arbitrary absolute pathes from Firefox 65)"
+    "message": "Import certificates (Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates or %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: USERDIR/Library/Application Support/Mozilla/Certificates or /Library/Application Support/Mozilla/Certificates, Linux: /home/user/.mozilla/certificates; distribution/Certificates and arbitrary absolute pathes)"
   },
   "policy_description_Certificates_Install_Value": {
     "message": "Path to .crt file"
@@ -243,7 +243,7 @@
     "message": "… until Firefox is closed"
   },
   "policy_description_Cookies_RejectTracker": {
-    "message": "Reject tracking cookies (Firefox 63+)"
+    "message": "Reject tracking cookies"
   },
   "policy_description_DisableAppUpdate": {
     "message": "Prevent Firefox from updating"
@@ -345,7 +345,7 @@
     "message": "Configure check for default browser on startup"
   },
   "policy_description_DontCheckDefaultBrowser_options_false": {
-    "message": "Check on startup if Firefox is the default browser (Firefox 66+, Firefox ESR 60.6+)"
+    "message": "Check on startup if Firefox is the default browser"
   },
   "policy_description_DontCheckDefaultBrowser_options_true": {
     "message": "Don't check on startup if Firefox is the default browser"
@@ -426,7 +426,7 @@
     "message": "Additional URLs"
   },
   "policy_description_Homepage_StartPage": {
-    "message": "Start Firefox with… (Firefox 64+, Firefox ESR 60.3.1+)"
+    "message": "Start Firefox with…"
   },
   "policy_description_Homepage_StartPage_Homepage": {
     "message": "… the website defined as homepage"
@@ -681,7 +681,7 @@
     "message": "GET"
   },
   "policy_description_SearchEngines_Add_Method_POST": {
-    "message": "POST (Firefox 67+)"
+    "message": "POST"
   },
   "policy_description_SearchEngines_Add_Name": {
     "message": "Name"
@@ -708,7 +708,7 @@
     "message": "prevent installs"
   },
   "policy_description_SearchEngines_Remove": {
-    "message": "Remove search engine(s) (Firefox 62+, Firefox ESR 60.2+)"
+    "message": "Remove search engine(s)"
   },
   "policy_description_SearchEngines_Remove_Name": {
     "message": "Name"
