@@ -341,14 +341,14 @@
   "policy_description_DisableSetDesktopBackground": {
     "message": "Deaktiviere die Funktion, eine Grafik als Hintergrundbild zu verwenden"
   },
-  "policy_description_DisplayBookmarksToolbar": {
-    "message": "Zeige die Lesezeichen-Symbolleiste standardmäßig"
-  },
   "policy_description_DisableSystemAddonUpdate": {
     "message": "Firefox an der Installation und am Aktualisieren von System-Add-ons hindern"
   },
   "policy_description_DisableTelemetry": {
     "message": "Firefox hindern, Daten zu technischen Details und Interaktionen an Mozilla zu senden (Telemetrie)"
+  },
+  "policy_description_DisplayBookmarksToolbar": {
+    "message": "Zeige die Lesezeichen-Symbolleiste standardmäßig"
   },
   "policy_description_DisplayMenuBar": {
     "message": "Zeige die Menüleiste standardmäßig"
@@ -455,6 +455,9 @@
   "policy_description_Homepage": {
     "message": "Startseite festlegen"
   },
+  "policy_description_Homepage_Additional": {
+    "message": "Zusätzliche URLs"
+  },
   "policy_description_Homepage_StartPage": {
     "message": "Starte Firefox mit…"
   },
@@ -466,9 +469,6 @@
   },
   "policy_description_Homepage_StartPage_Previous_Session": {
     "message": "… der letzten Browser-Sitzung"
-  },
-  "policy_description_Homepage_Additional": {
-    "message": "Zusätzliche URLs"
   },
   "policy_description_Homepage_URL": {
     "message": "URL"
