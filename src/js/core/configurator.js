@@ -4,6 +4,7 @@
 
 const DOWNLOAD_PERMISSION = { permissions : ['downloads'] };
 const FILTER_ANIMATION_DELAY_IN_MS = 1500;
+const FIREFOX_68 = 68.0;
 
 const elActionLinks = document.getElementById('action-links');
 const elDownloadLink = document.getElementById('download');
@@ -1048,7 +1049,7 @@ const configurator = {
     }
 
     // versions info
-    if (parseFloat(policy.first_available.mainstream) > 68.0 || parseFloat(policy.first_available.esr) > 68.0) {
+    if (parseFloat(policy.first_available.mainstream) > FIREFOX_68 || parseFloat(policy.first_available.esr) > FIREFOX_68) {
       const elVersionsInfo = document.createElement('div');
       elVersionsInfo.classList.add('versions-info');
       elLabel.appendChild(elVersionsInfo);
