@@ -7,10 +7,12 @@
 #### Enhancements
 
 - deprecation of Firefox 60. Firefox Browser 68 or higher is required now. Also Enterprise Policy Generator no longer
-  shows minimum required Firefox version for policies older than Firefox 68.0, fixes
+  shows minimum required Firefox version for policies older than Firefox 68.0, see
   [#80](https://github.com/cadeyrn/enterprise-policy-generator/issues/80)
 - enhanced URL validation method to optionally allow data:image URI for some policies, see
   [#96](https://github.com/cadeyrn/enterprise-policy-generator/issues/96)
+- enhanced URL validation method to allow file:// URLs for URL properties, see
+  [#93](https://github.com/cadeyrn/enterprise-policy-generator/issues/93)
 
 #### Enterprise Policies
 
@@ -24,7 +26,7 @@
   [#90](https://github.com/cadeyrn/enterprise-policy-generator/issues/90)
 - policy to add a custom support menu item to the help menu is also available in Firefox ESR, see
   [#90](https://github.com/cadeyrn/enterprise-policy-generator/issues/90)
-- improved labels for Certificates|Add policy, fixes
+- improved labels for Certificates|Add policy, see
   [#95](https://github.com/cadeyrn/enterprise-policy-generator/issues/95)
 - allow data:image URI for IconURL property of SearchEngine|Add policy, see
   [#96](https://github.com/cadeyrn/enterprise-policy-generator/issues/96)

@@ -393,10 +393,10 @@ const configurator = {
    * @returns {boolean} - whether the given string is a valid URL or not
    */
   isValidURL (string, dataUriAllowed) {
-    let pattern = new RegExp(/^https?:\/\//, 'gi');
+    let pattern = new RegExp(/^(https?|file):\/\//, 'gi');
 
     if (dataUriAllowed) {
-      pattern = new RegExp(/^(https?:\/\/|data:image\/)/, 'gi');
+      pattern = new RegExp(/^((https?|file):\/\/|data:image\/)/, 'gi');
     }
 
     return pattern.test(encodeURI(string));
