@@ -485,7 +485,7 @@
   "policy_description_InstallAddonsPermission_Default_false": {
     "message" : "les add-ons ne peuvent pas être installés par l'utilisateur"
   },
-  "policy_description_InstallAddonsPermission_Default_Default_true": {
+  "policy_description_InstallAddonsPermission_Default_true": {
     "message" : "les add-ons peuvent être installés par l'utilisateur"
   },
   "policy_description_NetworkPrediction": {
