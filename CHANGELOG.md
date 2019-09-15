@@ -31,6 +31,10 @@
   [#98](https://github.com/cadeyrn/enterprise-policy-generator/issues/98)
 - added cryptomining and fingerprinting to EnableTrackingProtection policy and changed some wording to better align with
   the current wording of Firefox, see [#100](https://github.com/cadeyrn/enterprise-policy-generator/issues/100)
+  
+#### Translations
+
+- fixed a few unused translation in French translation
 
 #### Dependencies
 
