@@ -645,7 +645,7 @@
     "message": "Changer l'interface de language de Firefox"
   },
   "policy_description_RequestedLocales_Requirement": {
-    "message": "Les paquet de Langues correspondantes doivent êtres installées"
+    "message": "The corresponding language package must be installed. Leave empty to use the language of the operating system."
   },
   "policy_description_RequestedLocales_Value": {
     "message": "Language du Code"

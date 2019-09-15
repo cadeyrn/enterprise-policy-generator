@@ -645,7 +645,7 @@
     "message": "修改 Firefox 的界面语言"
   },
   "policy_description_RequestedLocales_Requirement": {
-    "message": "必须安装对应的语言包"
+    "message": "The corresponding language package must be installed. Leave empty to use the language of the operating system."
   },
   "policy_description_RequestedLocales_Value": {
     "message": "语言代码"

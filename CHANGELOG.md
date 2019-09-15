@@ -16,6 +16,8 @@
 
 #### Enterprise Policies
 
+- allow empty value for RequestedLocales policy to use the operating system language as Firefox language, see
+  [#87](https://github.com/cadeyrn/enterprise-policy-generator/issues/87)
 - re-added DisableSafeMode policy (removed in Enterprise Policy Generator 4.1.0) but with better description, see
   [#94](https://github.com/cadeyrn/enterprise-policy-generator/issues/94)
 - improved labels for Certificates|Add policy, see

@@ -645,7 +645,7 @@
     "message": "Rěc pówjercha Firefox změniś"
   },
   "policy_description_RequestedLocales_Requirement": {
-    "message": "Wótpowědny rěcny pakśik musy zainstalěrowany byś"
+    "message": "The corresponding language package must be installed. Leave empty to use the language of the operating system."
   },
   "policy_description_RequestedLocales_Value": {
     "message": "Rěcny kode"

@@ -645,7 +645,7 @@
     "message": "Oberflächen-Sprache von Firefox ändern"
   },
   "policy_description_RequestedLocales_Requirement": {
-    "message": "Entsprechendes Sprachpaket muss installiert sein"
+    "message": "Entsprechendes Sprachpaket muss installiert sein. Feld leer lassen, um Sprache des Betriebssystems zu nutzen."
   },
   "policy_description_RequestedLocales_Value": {
     "message": "Sprachkürzel"

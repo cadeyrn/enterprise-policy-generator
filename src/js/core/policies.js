@@ -201,7 +201,8 @@ const policies = {
     type : 'flat-array',
     value : {
       label : browser.i18n.getMessage('policy_description_RequestedLocales_Value'),
-      mandatory : true
+      mandatory : false,
+      allow_empty_value : true
     }
   },
 

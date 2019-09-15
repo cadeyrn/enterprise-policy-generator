@@ -118,7 +118,7 @@ const output = {
     [...el.parentNode.querySelectorAll(':scope > div')].forEach((el) => {
       if (!output.hasInvalidFields(el)) {
         [...el.querySelectorAll(':scope input')].forEach((el) => {
-          if (el.value) {
+          if (el.value || el.getAttribute('data-empty-value-allowed')) {
             items.push(el.value);
           }
         });
@@ -127,7 +127,13 @@ const output = {
 
     // only add non-empty arrays
     if (items.length > 0) {
-      policymanager.add(el.getAttribute('data-name'), items);
+      // add empty string instead of array if there is only one empty item
+      if (items.length === 1 && items[0] === '') {
+        policymanager.add(el.getAttribute('data-name'), '');
+      }
+      else {
+        policymanager.add(el.getAttribute('data-name'), items);
+      }
     }
   },
 

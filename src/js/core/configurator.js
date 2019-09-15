@@ -529,6 +529,11 @@ const configurator = {
       configurator.addMandatoryLabel(elInput, elSubOptions);
     }
 
+    // empty value is allowed
+    if (policy.value.allow_empty_value) {
+      elInput.setAttribute('data-empty-value-allowed', "true");
+    }
+
     elSubOptions.appendChild(elInput);
 
     // add array field action links
