@@ -287,6 +287,9 @@
   "policy_description_DisableProfileRefresh": {
     "message": "Deaktiviere die „Firefox bereinigen“-Schaltfläche in about:support"
   },
+  "policy_description_DisableSafeMode": {
+    "message": "Deaktiviere den Menü-Eintrag, um Firefox mit deaktivierten Add-ons neu zu starten (Abgesicherter Modus)"
+  },
   "policy_description_DisableSecurityBypass": {
     "message": "Das Umgehen bestimmter Sicherheitswarnungen verhindern"
   },

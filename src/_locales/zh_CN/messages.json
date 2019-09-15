@@ -287,6 +287,9 @@
   "policy_description_DisableProfileRefresh": {
     "message": "禁用 about:support 页面中的“翻新 Firefox” 按钮"
   },
+  "policy_description_DisableSafeMode": {
+    "message": "Disable the menu item to restart Firefox with add-ons disabled (safe mode)"
+  },
   "policy_description_DisableSecurityBypass": {
     "message": "阻止跳过特定的安全警告"
   },

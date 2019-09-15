@@ -287,6 +287,9 @@
   "policy_description_DisableProfileRefresh": {
     "message": "Disable the “Refresh Firefox” button in about:support"
   },
+  "policy_description_DisableSafeMode": {
+    "message": "Disable the menu item to restart Firefox with add-ons disabled (safe mode)"
+  },
   "policy_description_DisableSecurityBypass": {
     "message": "Prevent certain security warnings from being bypassed"
   },

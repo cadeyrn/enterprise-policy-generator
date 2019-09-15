@@ -287,6 +287,9 @@
   "policy_description_DisableProfileRefresh": {
     "message": "Tłocašk \"Firefox wótnowiś\" w about:support znjemóžniś"
   },
+  "policy_description_DisableSafeMode": {
+    "message": "Disable the menu item to restart Firefox with add-ons disabled (safe mode)"
+  },
   "policy_description_DisableSecurityBypass": {
     "message": "Zajźowaś, až se wěstotnych warnowanjow wobinu"
   },
