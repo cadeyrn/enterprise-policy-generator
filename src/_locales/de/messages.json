@@ -11,6 +11,12 @@
   "enum_value_block_yes": {
     "message": "blockieren"
   },
+  "enum_value_enable_no": {
+    "message": "deaktivieren"
+  },
+  "enum_value_enable_yes": {
+    "message": "aktivieren"
+  },
   "enum_value_no": {
     "message": "nein"
   },
@@ -508,6 +514,9 @@
   },
   "policy_description_OverridePostUpdatePage": {
     "message": "Die Seite mit den Neuerungen überschreiben, die nach einem Update erscheinen kann. Ein leeres Eingabefeld deaktiviert die Seite vollständig."
+  },
+  "policy_description_PasswordManagerEnabled": {
+    "message": "Das Speichern von Passwörtern im Passwort-Manager aktivieren oder deaktivieren"
   },
   "policy_description_Permissions": {
     "message": "Berechtigungen für Standort, Kamera, Mikrofon und Benachrichtigungen konfigurieren"

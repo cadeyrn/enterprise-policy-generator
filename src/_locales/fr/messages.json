@@ -11,6 +11,12 @@
   "enum_value_block_yes": {
     "message": "block"
   },
+  "enum_value_enable_no": {
+    "message": "disable"
+  },
+  "enum_value_enable_yes": {
+    "message": "enable"
+  },
   "enum_value_no": {
     "message": "no"
   },

@@ -1315,6 +1315,27 @@ const policies = {
 
   // security
 
+  PasswordManagerEnabled : {
+    description : browser.i18n.getMessage('policy_description_PasswordManagerEnabled'),
+    enterprise_only : false,
+    first_available : { mainstream : '70.0', esr : null },
+    info_link : null,
+    is_lockable : false,
+    ui_category : 'security',
+    type : 'enum',
+    label : null,
+    options : [
+      {
+        label : browser.i18n.getMessage('enum_value_enable_yes'),
+        value : 'true'
+      },
+      {
+        label : browser.i18n.getMessage('enum_value_enable_no'),
+        value : 'false'
+      }
+    ]
+  },
+
   FlashPlugin : {
     description : browser.i18n.getMessage('policy_description_FlashPlugin'),
     enterprise_only : false,

@@ -11,6 +11,12 @@
   "enum_value_block_yes": {
     "message": "block"
   },
+  "enum_value_enable_no": {
+    "message": "disable"
+  },
+  "enum_value_enable_yes": {
+    "message": "enable"
+  },
   "enum_value_no": {
     "message": "no"
   },
@@ -508,6 +514,9 @@
   },
   "policy_description_OverridePostUpdatePage": {
     "message": "覆盖浏览器更新后显示的“新功能”（What's New）页面。如果您想禁止显示该页面，请将 URL 栏留空。"
+  },
+  "policy_description_PasswordManagerEnabled": {
+    "message": "Enable or disable saving passwords to the password manager"
   },
   "policy_description_Permissions": {
     "message": "配置位置、摄像头、麦克风和通知的权限"

@@ -11,6 +11,12 @@
   "enum_value_block_yes": {
     "message": "block"
   },
+  "enum_value_enable_no": {
+    "message": "disable"
+  },
+  "enum_value_enable_yes": {
+    "message": "enable"
+  },
   "enum_value_no": {
     "message": "no"
   },
@@ -508,6 +514,9 @@
   },
   "policy_description_OverridePostUpdatePage": {
     "message": "Stronu z nowosćemi přepisać, kotraž so móže po aktualizaciji jewić. Prózdne zapodawanske polo stronu dospołnje znjemóžnja."
+  },
+  "policy_description_PasswordManagerEnabled": {
+    "message": "Enable or disable saving passwords to the password manager"
   },
   "policy_description_Permissions": {
     "message": "Prawa za stejnišćo, kameru, mikrofon a zdźělenki konfigurować"
