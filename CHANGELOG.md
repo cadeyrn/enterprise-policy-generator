@@ -41,7 +41,7 @@
   
 #### Translations
 
-- fixed a few unused translation in French translation
+- fixed broken French translation (some translations were not used because of broken translation keys)
 
 #### Dependencies
 

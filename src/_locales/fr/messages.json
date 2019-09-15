@@ -68,10 +68,10 @@
   "link_learn_more": {
     "message" : "plus d'informations"
   },
-  "link_load_load_configuration": {
+  "link_load_configuration": {
     "message" : "charger configuration"
   },
-  "link_save_configuration_save_configuration": {
+  "link_save_configuration": {
     "message" : "Sauvegarder la configuration"
   },
   "link_select_all": {
@@ -86,7 +86,7 @@
   "list_dialog_window_title": {
     "message" : "Charger la configuration"
   },
-  "list_table_nom_de_table": {
+  "list_table_name": {
     "message" : "Nom"
   },
   "list_table_time": {
@@ -95,7 +95,7 @@
   "lock_preference": {
     "message" : "Protéger les préférences de tout changements"
   },
-  "étiquette obligatoire": {
+  "mandatory_label": {
     "message" : "Obligatoire"
   },
   "policy_category_block_access": {
@@ -119,7 +119,7 @@
   "policy_category_update_and_data": {
     "message" : "Mises à jour et collecte de données"
   },
-  "politique_catégorie_autres": {
+  "policy_category_others": {
     "message" : "Autres politiques"
   },
   "policy_description_AppUpdateURL": {
@@ -179,10 +179,10 @@
   "policy_description_Bookmarks_Placement": {
     "message" : "Placement"
   },
-  "policy_description_Bookmarks_Placement_Menu_Placement_Menu": {
+  "policy_description_Bookmarks_Placement_Menu": {
     "message" : "Menu Marques-pages"
   },
-  "policy_description_Bookmarks_Placement_Placement_Toolbar": {
+  "policy_description_Bookmarks_Placement_Toolbar": {
     "message" : "Barre de marques-pages"
   },
   "policy_description_Bookmarks_Title": {
@@ -242,7 +242,7 @@
   "policy_description_Cookies_Block": {
     "message" : "Domaines où les cookies sont toujours bloqués"
   },
-  "policy_description_Cookies_Block_Domaine_Block_Domaine": {
+  "policy_description_Cookies_Block_Domain": {
     "message" : "Domaine"
   },
   "policy_description_Cookies_Default": {
@@ -251,10 +251,10 @@
   "policy_description_Cookies_Default_false": {
     "message" : "n'accepte pas les cookies"
   },
-  "policy_description_Cookies_Default_Default_true" : {
+  "policy_description_Cookies_Default_true": {
     "message" : "Accepter les cookies"
   },
-  "policy_description_Cookies_ExpireAtSessionEnd" : {
+  "policy_description_Cookies_ExpireAtSessionEnd": {
     "message" : "Conserver les biscuits jusqu'à ce que…"
   },
   "policy_description_Cookies_ExpireAtSessionEnd_false": {
@@ -386,10 +386,10 @@
   "policy_description_EnableTrackingProtection_Value": {
     "message": "Tracking Content"
   },
-  "policy_description_EnableTrackingProtection_Value_Value_false": {
+  "policy_description_EnableTrackingProtection_Value_false": {
     "message" : "Désactiver la protection de suivi"
   },
-  "policy_description_EnableTrackingProtection_Value_Value_true": {
+  "policy_description_EnableTrackingProtection_Value_true": {
     "message" : "activer la protection de suivi"
   },
   "policy_description_Extensions": {
@@ -398,7 +398,7 @@
   "policy_description_Extensions_Install": {
     "message" : "Installer les add-ons. Vous pouvez spécifier des adresses ou des chemins d'accès."
   },
-  "policy_description_Extensions_Install_URL_URL_or_Path": {
+  "policy_description_Extensions_Install_URL_or_Path": {
     "message" : "Adresse ou chemin d'accès"
   },
   "policy_description_Extensions_Locked": {
@@ -446,7 +446,7 @@
   "policy_description_FlashPlugin_Default_null": {
     "message" : "aucune préférence"
   },
-  "policy_description_FlashPlugin_Default_Default_true": {
+  "policy_description_FlashPlugin_Default_true": {
     "message" : "Flash est toujours activé"
   },
   "policy_description_HardwareAcceleration": {
@@ -608,19 +608,19 @@
   "policy_description_Permissions_Notifications_BlockNewRequests": {
     "message": "Bloquer les nouvelles requêtes demandants l'activation des notifications"
   },
-  "policy_description_PopupupBlocking": {
+  "policy_description_PopupBlocking": {
     "message" : "Autoriser ou refuser l'utilisation des fenêtres pop-up"
   },
-  "policy_description_PopupupBlocking_Allow": {
+  "policy_description_PopupBlocking_Allow": {
     "message" : "Domaines pour lesquels les fenêtres pop-up sont autorisées"
   },
-  "policy_description_PopupupBlocking_Allow_URL": {
+  "policy_description_PopupBlocking_Allow_URL": {
     "message" : "Adresse"
   },
-  "policy_description_PopupBlocking_Default_Default_false": {
+  "policy_description_PopupBlocking_Default_false": {
     "message" : "les pop-ups ne sont pas bloqués par défaut"
   },
-  "policy_description_PopupBlocking_Default_Default_true": {
+  "policy_description_PopupBlocking_Default_true": {
     "message" : "les pop-ups sont bloqués par défaut"
   },
   "policy_description_Proxy": {
@@ -638,7 +638,7 @@
   "policy_description_Proxy_AutoLogin_true": {
     "message" : "Ne pas demander d'authentification"
   },
-  "policy_description_Proxy_Proxy_HTTPProxy": {
+  "policy_description_Proxy_HTTPProxy": {
     "message" : "Proxy HTTP. Pour configurer les numéros de port, veuillez ajouter un “:“ suivi du numéro de port"
   },
   "policy_description_Proxy_Mode_autoConfig": {
@@ -647,31 +647,31 @@
   "policy_description_Proxy_Mode_autoDetect": {
     "message" : "Détection automatique des paramètres de proxy pour ce réseau"
   },
-  "policy_description_Proxy_Mode_Mode_manuel": {
+  "policy_description_Proxy_Mode_manual": {
     "message" : "Configuration manuelle du proxy"
   },
-  "policy_description_Proxy_Mode_Mode_none": {
+  "policy_description_Proxy_Mode_none": {
     "message" : "Pas de procuration"
   },
-  "policy_description_Proxy_Mode_système_de_proxy": {
+  "policy_description_Proxy_Mode_system": {
     "message" : "Utiliser les paramètres du proxy système"
   },
-  "policy_description_Proxy_Proxy_FTPProxy": {
+  "policy_description_Proxy_FTPProxy": {
     "message" : "FTP Proxy. Pour configurer les numéros de port, veuillez ajouter un “:“ suivi du numéro de port"
   },
-  "policy_description_Proxy_Proxy_Passthrough": {
+  "policy_description_Proxy_Passthrough": {
     "message" : "Pas de procuration pour…"
   },
-  "policy_description_Proxy_Proxy_SOCKSProxy": {
+  "policy_description_Proxy_SOCKSProxy": {
     "message" : "SOCKS Host. Pour configurer les numéros de port, veuillez ajouter un “:“ suivi du numéro de port"
   },
-  "policy_description_Proxy_Proxy_SOCKSVersion_v4": {
+  "policy_description_Proxy_SOCKSVersion_v4": {
     "message" : "SOCKS v4"
   },
-  "policy_description_Proxy_Proxy_SOCKSVersion_v5": {
+  "policy_description_Proxy_SOCKSVersion_v5": {
     "message" : "SOCKS v5"
   },
-  "policy_description_Proxy_SSLProxy_SSLProxy": {
+  "policy_description_Proxy_SSLProxy": {
     "message" : "Proxy SSL. Pour configurer les numéros de port, veuillez ajouter un “:“ suivi du numéro de port"
   },
   "policy_description_Proxy_UseHTTPProxyForAllProtocols_false": {
@@ -680,13 +680,13 @@
   "policy_description_Proxy_UseHTTPProxyForAllProtocols_true": {
     "message" : "utiliser ce serveur proxy pour tous les protocoles"
   },
-  "policy_description_Proxy_UseProxy_UseProxyForDNS": {
+  "policy_description_Proxy_UseProxyForDNS": {
     "message" : "Proxy DNS lors de l'utilisation de SOCKS v5"
   },
-  "policy_description_Proxy_Proxy_UseProxyForDNS_false": {
+  "policy_description_Proxy_UseProxyForDNS_false": {
     "message" : "Ne pas utiliser Proxy DNS"
   },
-  "policy_description_Proxy_Proxy_UseProxyForDNS_true": {
+  "policy_description_Proxy_UseProxyForDNS_true": {
     "message" : "Utiliser Proxy DNS"
   },
   "policy_description_RequestedLocales": {
@@ -728,10 +728,10 @@
   "policy_description_SearchBar": {
     "message" : "Faire en sorte que la barre de recherche soit unifiée ou séparée"
   },
-  "policy_description_SearchBar_options_options_separate": {
+  "policy_description_SearchBar_options_separate": {
     "message" : "il y a une barre de recherche séparée"
   },
-  "policy_description_SearchBar_options_options_unifiées": {
+  "policy_description_SearchBar_options_unified": {
     "message" : "la recherche et la barre d'adresse sont unifiées"
   },
   "policy_description_SearchEngines": {
@@ -743,13 +743,13 @@
   "policy_description_SearchEngines_Add_Alias": {
     "message" : "Alias qui peut être utilisé pour accéder au moteur"
   },
-  "policy_description_SearchEngines_Add_Add_Description": {
+  "policy_description_SearchEngines_Add_Description": {
     "message" : "Description"
   },
   "policy_description_SearchEngines_Add_IconURL": {
     "message" : "Icon URL or data:image…"
   },
-  "policy_description_SearchEngines_Add_Add_Method": {
+  "policy_description_SearchEngines_Add_Method": {
     "message" : "Méthode de demande"
   },
   "policy_description_SearchEngines_Add_Method_GET": {
@@ -758,7 +758,7 @@
   "policy_description_SearchEngines_Add_Method_POST": {
     "message" : "POST"
   },
-  "policy_description_SearchEngines_Add_Add_Name": {
+  "policy_description_SearchEngines_Add_Name": {
     "message" : "Nom"
   },
   "policy_description_SearchEngines_Add_PostData": {
@@ -767,7 +767,7 @@
   "policy_description_SearchEngines_Add_SuggestURLTemplate": {
     "message" : "Adresse pour les suggestions. Veuillez utiliser {conditions de recherche} comme caractère de remplacement pour le terme de recherche"
   },
-  "policy_description_SearchEngines_Add_Add_URL": {
+  "policy_description_SearchEngines_Add_URL": {
     "message" : "Adresse pour les recherches. Veuillez utiliser {conditions de recherche} comme caractère de remplacement pour le terme de recherche"
   },
   "policy_description_SearchEngines_Default": {
@@ -824,7 +824,7 @@
   "policy_description_WebsiteFilter_Block": {
     "message" : "Bloquer les Adresses suivantes"
   },
-  "policy_description_WebsiteFilter_Block_Block_URL": {
+  "policy_description_WebsiteFilter_Block_URL": {
     "message" : "Adresse"
   },
   "policy_description_WebsiteFilter_Exceptions": {
@@ -851,13 +851,13 @@
   "save_dialog_window_title": {
     "message" : "Sauvegarder la configuration"
   },
-  "title_add_add_row": {
+  "title_add_row": {
     "message" : "Ajouter ligne"
   },
-  "title_apply_configuration_apply_configuration": {
+  "title_apply_configuration": {
     "message" : "Aharger configuration"
   },
-  "title_remove_configuration_remove_configuration": {
+  "title_remove_configuration": {
     "message" : "Supprimer la configuration"
   },
   "title_remove_row": {
