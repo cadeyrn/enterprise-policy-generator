@@ -275,6 +275,27 @@ const policies = {
     ]
   },
 
+  NewTabPage : {
+    description : browser.i18n.getMessage('policy_description_NewTabPage'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : null,
+    is_lockable : false,
+    ui_category : 'customization',
+    type : 'enum',
+    label : null,
+    options : [
+      {
+        label : browser.i18n.getMessage('enum_value_enable_yes'),
+        value : 'true'
+      },
+      {
+        label : browser.i18n.getMessage('enum_value_enable_no'),
+        value : 'false'
+      }
+    ]
+  },
+
   SearchBar : {
     description : browser.i18n.getMessage('policy_description_SearchBar'),
     enterprise_only : false,

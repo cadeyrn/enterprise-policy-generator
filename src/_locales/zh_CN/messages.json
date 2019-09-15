@@ -503,6 +503,9 @@
   "policy_description_NetworkPrediction_options_true": {
     "message": "启用网络预测 (DNS 预读取)"
   },
+  "policy_description_NewTabPage": {
+    "message": "Enable or disable the page that appears when opening a new tab"
+  },
   "policy_description_NoDefaultBookmarks": {
     "message": "不创建默认的书签集，包括智能书签（最常访问、最近的标签）。注意：该策略仅在配置文件首次启用时生效"
   },

@@ -22,6 +22,8 @@
   [#86](https://github.com/cadeyrn/enterprise-policy-generator/issues/86)
 - allow empty value for RequestedLocales policy to use the operating system language as Firefox language, see
   [#87](https://github.com/cadeyrn/enterprise-policy-generator/issues/87)
+- new policy to enable or disable the page that appears when opening a new tab, see
+  [#88](https://github.com/cadeyrn/enterprise-policy-generator/issues/88)
 - replaced old SanitizeOnShutdown policy to clear all data on shutdown with new selective SanitizeOnShutdown policy.
   Users of the old policy: Please have a look at your configuration and adjust accordingly, see
   [#91](https://github.com/cadeyrn/enterprise-policy-generator/issues/91)

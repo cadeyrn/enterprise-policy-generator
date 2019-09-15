@@ -503,6 +503,9 @@
   "policy_description_NetworkPrediction_options_true": {
     "message": "DNS Prefetching aktivieren"
   },
+  "policy_description_NewTabPage": {
+    "message": "Die Seite, welche beim Öffnen eines neuen Tabs erscheint, aktivieren oder deaktivieren"
+  },
   "policy_description_NoDefaultBookmarks": {
     "message": "Keine Standard-Lesezeichen, einschließlich der intelligenten Lesezeichen (Meistbesuchte Seiten, Kürzlich verwendete Schlagwörter), erstellen. Hinweis: diese Richtlinie ist nur wirksam, wenn sie vor der ersten Benutzung des Firefox-Profils angewendet wird"
   },

@@ -503,6 +503,9 @@
   "policy_description_NetworkPrediction_options_true": {
     "message": "DNS-předzačitanje zmóžnić)"
   },
+  "policy_description_NewTabPage": {
+    "message": "Enable or disable the page that appears when opening a new tab"
+  },
   "policy_description_NoDefaultBookmarks": {
     "message": "Žane standardne zapołožki inkluziwnje inteligentne zapołožki (najhusćišo wopytane strony, njedawno wužite klučowe słowa) wutworić. Pokazka: tuta směrnica je jenož skutkowna, hdyž so před prěnim wužiwanjom profila Firefox nałožuje"
   },

@@ -503,6 +503,9 @@
   "policy_description_NetworkPrediction_options_true": {
     "message": "Activer prédiction réseau (Pré-recherche DNS)"
   },
+  "policy_description_NewTabPage": {
+    "message": "Enable or disable the page that appears when opening a new tab"
+  },
   "policy_description_NoDefaultBookmarks": {
     "message" : "Ne pas créer les favoris par défaut fournis avec Firefox, y compris les signets intelligents (les plus visités, les balises récentes). Note : cette politique n'est efficace que si elle est utilisée avant la première exécution du profil"
   },

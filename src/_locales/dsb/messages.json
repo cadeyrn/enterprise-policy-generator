@@ -503,6 +503,9 @@
   "policy_description_NetworkPrediction_options_true": {
     "message": "DNS-pśedzacytanje zmóžniś"
   },
+  "policy_description_NewTabPage": {
+    "message": "Enable or disable the page that appears when opening a new tab"
+  },
   "policy_description_NoDefaultBookmarks": {
     "message": "Žedne standardne cytańske znamjenja inkluziwnje inteligentne cytańske znamjenja (nejcesćej woglědane boki, njedawno wužyte klucowe słowa) napóraś. Pokazka: toś ta směrnica jo jano statkowna, gaž se pśed prědnym wužywanim profila Firefox nałožujo"
   },
