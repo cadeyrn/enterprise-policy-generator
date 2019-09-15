@@ -5,6 +5,12 @@
   "configuration_import": {
     "message": "导入配置"
   },
+  "enum_value_block_no": {
+    "message": "don't block"
+  },
+  "enum_value_block_yes": {
+    "message": "block"
+  },
   "enum_value_no": {
     "message": "no"
   },
@@ -363,7 +369,16 @@
     "message": "启动时不检查 Firefox 是否为默认浏览器"
   },
   "policy_description_EnableTrackingProtection": {
-    "message": "启用或禁用跟踪保护"
+    "message": "Enhanced Tracking Protection"
+  },
+  "policy_description_EnableTrackingProtection_Cryptomining": {
+    "message": "block cryptominers (Firefox 70+)"
+  },
+  "policy_description_EnableTrackingProtection_Fingerprinting": {
+    "message": "block fingerprinters (Firefox 70+)"
+  },
+  "policy_description_EnableTrackingProtection_Value": {
+    "message": "Tracking Content"
   },
   "policy_description_EnableTrackingProtection_Value_false": {
     "message": "禁用跟踪保护"

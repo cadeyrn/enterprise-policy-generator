@@ -1104,16 +1104,60 @@ const policies = {
     properties : [
       {
         name : 'Value',
-        label : null,
+        label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Value'),
         mandatory : false,
         type : 'enum',
         options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
           {
             label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Value_true'),
             value : 'true'
           },
           {
             label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Value_false'),
+            value : 'false'
+          }
+        ]
+      },
+      {
+        name : 'Cryptomining',
+        label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Cryptomining'),
+        mandatory : false,
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_block_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_block_no'),
+            value : 'false'
+          }
+        ]
+      },
+      {
+        name : 'Fingerprinting',
+        label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Fingerprinting'),
+        mandatory : false,
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_block_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_block_no'),
             value : 'false'
           }
         ]

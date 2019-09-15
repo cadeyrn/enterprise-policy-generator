@@ -27,6 +27,8 @@
   [#95](https://github.com/cadeyrn/enterprise-policy-generator/issues/95)
 - allow data:image URI for IconURL property of SearchEngine|Add policy, see
   [#96](https://github.com/cadeyrn/enterprise-policy-generator/issues/96)
+- added cryptomining and fingerprinting to EnableTrackingProtection policy and changed some wording to better align with
+  the current wording of Firefox, see [#100](https://github.com/cadeyrn/enterprise-policy-generator/issues/100)
 
 #### Dependencies
 

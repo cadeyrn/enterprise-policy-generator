@@ -5,6 +5,12 @@
   "configuration_import": {
     "message": "import configuration"
   },
+  "enum_value_block_no": {
+    "message": "don't block"
+  },
+  "enum_value_block_yes": {
+    "message": "block"
+  },
   "enum_value_no": {
     "message": "no"
   },
@@ -363,7 +369,16 @@
     "message": "Don't check on startup if Firefox is the default browser"
   },
   "policy_description_EnableTrackingProtection": {
-    "message": "Enable or disable tracking protection"
+    "message": "Enhanced Tracking Protection"
+  },
+  "policy_description_EnableTrackingProtection_Cryptomining": {
+    "message": "block cryptominers (Firefox 70+)"
+  },
+  "policy_description_EnableTrackingProtection_Fingerprinting": {
+    "message": "block fingerprinters (Firefox 70+)"
+  },
+  "policy_description_EnableTrackingProtection_Value": {
+    "message": "Tracking Content"
   },
   "policy_description_EnableTrackingProtection_Value_false": {
     "message": "disable tracking protection"

@@ -5,6 +5,12 @@
   "configuration_import": {
     "message": "Konfiguration importieren"
   },
+  "enum_value_block_no": {
+    "message": "nicht blockieren"
+  },
+  "enum_value_block_yes": {
+    "message": "blockieren"
+  },
   "enum_value_no": {
     "message": "nein"
   },
@@ -363,7 +369,16 @@
     "message": "Beim Start nicht prüfen, ob Firefox der Standard-Browser ist"
   },
   "policy_description_EnableTrackingProtection": {
-    "message": "Schutz vor Aktivitätenverfolgung aktivieren oder deaktivieren"
+    "message": "Verbesserter Schutz vor Aktivitätenverfolgung"
+  },
+  "policy_description_EnableTrackingProtection_Cryptomining": {
+    "message": "Heimliche Digitalwährungsberechner (Krypto-Miner) blockieren (Firefox 70+)"
+  },
+  "policy_description_EnableTrackingProtection_Fingerprinting": {
+    "message": "Identifizierer (Fingerprinter) blockieren (Firefox 70+)"
+  },
+  "policy_description_EnableTrackingProtection_Value": {
+    "message": "Tracking-Content"
   },
   "policy_description_EnableTrackingProtection_Value_false": {
     "message": "Schutz vor Aktivitätenverfolgung deaktivieren"
