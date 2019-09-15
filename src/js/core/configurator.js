@@ -372,7 +372,7 @@ const configurator = {
    */
   validateUrlFields (e) {
     // the URL field has a valid URL, hide visual indication
-    if (!e.target.value || configurator.isValidURL(e.target.value)) {
+    if (!e.target.value || configurator.isValidURL(e.target.value, e.target.getAttribute('data-data-uri-allowed'))) {
       e.target.classList.remove('invalid-url-style');
       e.target.parentNode.querySelector('.invalid-url-label').classList.add('hidden');
     }
@@ -387,11 +387,16 @@ const configurator = {
    * Tests if a given string is a valid URL.
    *
    * @param {string} string - the string to check
+   * @param {boolean} dataUriAllowed - whether data URIs are allowed or not
    *
    * @returns {boolean} - whether the given string is a valid URL or not
    */
-  isValidURL (string) {
-    const pattern = new RegExp(/^https?:\/\//, 'gi');
+  isValidURL (string, dataUriAllowed) {
+    let pattern = new RegExp(/^https?:\/\//, 'gi');
+
+    if (dataUriAllowed) {
+      pattern = new RegExp(/^(https?:\/\/|data:image\/)/, 'gi');
+    }
 
     return pattern.test(encodeURI(string));
   },
@@ -687,10 +692,13 @@ const configurator = {
         configurator.addObjectArrayProperty(el, parentName, policy);
         break;
       case 'string':
-        configurator.addStringProperty(el, parentName, policy, false, isArrayProperty, hideArrayActionLinks);
+        configurator.addStringProperty(el, parentName, policy, false, false, isArrayProperty, hideArrayActionLinks);
         break;
       case 'url':
-        configurator.addStringProperty(el, parentName, policy, true, isArrayProperty, hideArrayActionLinks);
+        configurator.addStringProperty(el, parentName, policy, true, false, isArrayProperty, hideArrayActionLinks);
+        break;
+      case 'urlOrData':
+        configurator.addStringProperty(el, parentName, policy, true, true, isArrayProperty, hideArrayActionLinks);
         break;
       default:
       // do nothing
@@ -918,12 +926,13 @@ const configurator = {
    * @param {string} parentName - the name of the parent policy object
    * @param {Object} policy - the policy object
    * @param {boolean} isUrl - if true, the property is of the type "url", otherwise it's of the type "string"
+   * @param {boolean} dataUriAllowed - if true, data URIs are allowed as input, only considered if isUrl is true
    * @param {boolean} isArrayProperty - whether this call is within an array field or not
    * @param {boolean} hideArrayActionLinks - whether this is an array item but no action links should be added
    *
    * @returns {void}
    */
-  addStringProperty (el, parentName, policy, isUrl, isArrayProperty, hideArrayActionLinks) {
+  addStringProperty (el, parentName, policy, isUrl, dataUriAllowed, isArrayProperty, hideArrayActionLinks) {
     const elObjectWrapper = document.createElement('div');
     elObjectWrapper.classList.add('input');
 
@@ -935,6 +944,10 @@ const configurator = {
 
     if (isUrl) {
       elInput.setAttribute('type', 'url');
+
+      if (dataUriAllowed) {
+        elInput.setAttribute('data-data-uri-allowed', 'true');
+      }
     }
     else {
       elInput.setAttribute('type', 'text');

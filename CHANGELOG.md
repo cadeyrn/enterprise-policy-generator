@@ -6,9 +6,11 @@
 
 #### Enhancements
 
-- Deprecation of Firefox 60. Firefox Browser 68 or higher is required now. Also Enterprise Policy Generator no longer
+- deprecation of Firefox 60. Firefox Browser 68 or higher is required now. Also Enterprise Policy Generator no longer
   shows minimum required Firefox version for policies older than Firefox 68.0, fixes
   [#80](https://github.com/cadeyrn/enterprise-policy-generator/issues/80)
+- enhanced URL validation method to optionally allow data:image URI for some policies, see
+  [#96](https://github.com/cadeyrn/enterprise-policy-generator/issues/96)
 
 #### Enterprise Policies
 
