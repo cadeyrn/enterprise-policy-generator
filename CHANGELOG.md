@@ -33,8 +33,9 @@
   [#98](https://github.com/cadeyrn/enterprise-policy-generator/issues/98)
 - new policy to set the default value for allowing Firefox to offer to remember saved logins and passwords
   (Firefox 70+), see [#99](https://github.com/cadeyrn/enterprise-policy-generator/issues/99)
-- added cryptomining and fingerprinting to EnableTrackingProtection policy and changed some wording to better align with
-  the current wording of Firefox, see [#100](https://github.com/cadeyrn/enterprise-policy-generator/issues/100)
+- added cryptomining and fingerprinting to EnableTrackingProtection policy (Firefox 70+) and changed some wording to
+  better align with the current wording of Firefox, see
+  [#100](https://github.com/cadeyrn/enterprise-policy-generator/issues/100)
   
 #### Translations
 
