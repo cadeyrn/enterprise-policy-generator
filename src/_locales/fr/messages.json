@@ -785,7 +785,7 @@
   "policy_description_SearchEngines_Remove": {
     "message" : "Supprimer le(s) moteur(s) de recherche"
   },
-  "policy_description_SearchEngines_Remove_Remove_Name": {
+  "policy_description_SearchEngines_Remove_Name": {
     "message" : "Nom"
   },
   "policy_description_SecurityDevices": {
