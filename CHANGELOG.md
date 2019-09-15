@@ -46,15 +46,15 @@
 
 #### Enterprise Policies
 
-- new policy to enable or disable captive portal support (Firefox 67+), fixes
+- new policy to enable or disable captive portal support (Firefox 67+, Firefox ESR 60.7+), fixes
   [#69](https://github.com/cadeyrn/enterprise-policy-generator/issues/69)
-- new policy to enable or disable network prediction (DNS prefetching) (Firefox 67+), fixes
+- new policy to enable or disable network prediction (DNS prefetching) (Firefox 67+, Firefox ESR 60.7+), fixes
   [#71](https://github.com/cadeyrn/enterprise-policy-generator/issues/71)
-- new policy to enable or disable automatic extension updates (Firefox 67+), fixes
+- new policy to enable or disable automatic extension updates (Firefox 67+, Firefox ESR 60.7+), fixes
   [#73](https://github.com/cadeyrn/enterprise-policy-generator/issues/73)
-- new policy to add a custom support menu item to the help menu (Firefox 67+), fixes
+- new policy to add a custom support menu item to the help menu (Firefox 67+, Firefox ESR 60.7+), fixes
   [#74](https://github.com/cadeyrn/enterprise-policy-generator/issues/74)
-- added support for POST method in SearchEngines policy (Firefox 67+), fixes
+- added support for POST method in SearchEngines policy (Firefox 67+, Firefox ESR 60.7+), fixes
   [#76](https://github.com/cadeyrn/enterprise-policy-generator/issues/76)
 - it's now possible to enable the default browser check on startup, not only to disable it (Firefox 66+,
   Firefox ESR 60.6+), fixes [#77](https://github.com/cadeyrn/enterprise-policy-generator/issues/77)
