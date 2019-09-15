@@ -5,6 +5,15 @@
   "configuration_import": {
     "message": "Konfiguration importieren"
   },
+  "enum_value_no": {
+    "message": "nein"
+  },
+  "enum_value_no_preference": {
+    "message": "keine Voreinstellung"
+  },
+  "enum_value_yes": {
+    "message": "ja"
+  },
   "enterprise_only_label": {
     "message": "funktioniert nur in Firefox ESR"
   },
@@ -651,7 +660,31 @@
     "message": "Sprachkürzel"
   },
   "policy_description_SanitizeOnShutdown": {
-    "message": "Lösche alle Browsing-Daten, wenn Firefox geschlossen wird"
+    "message": "Lösche Browsing-Daten, wenn Firefox geschlossen wird"
+  },
+  "policy_description_SanitizeOnShutdown_Cache": {
+    "message": "Cache"
+  },
+  "policy_description_SanitizeOnShutdown_Cookies": {
+    "message": "Cookies"
+  },
+  "policy_description_SanitizeOnShutdown_Downloads": {
+    "message": "Download-Chronik"
+  },
+  "policy_description_SanitizeOnShutdown_FormData": {
+    "message": "Eingegebene Suchbegriffe und Formulardaten"
+  },
+  "policy_description_SanitizeOnShutdown_History": {
+    "message": "Besuchte Seiten"
+  },
+  "policy_description_SanitizeOnShutdown_Sessions": {
+    "message": "Aktive Logins"
+  },
+  "policy_description_SanitizeOnShutdown_SiteSettings": {
+    "message": "Website-Einstellungen"
+  },
+  "policy_description_SanitizeOnShutdown_OfflineApps": {
+    "message": "Offline-Website-Daten"
   },
   "policy_description_SearchBar": {
     "message": "Legt fest, ob die Suchleiste mit der Adressleiste kombiniert oder separat ist"

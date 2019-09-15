@@ -5,6 +5,15 @@
   "configuration_import": {
     "message": "导入配置"
   },
+  "enum_value_no": {
+    "message": "no"
+  },
+  "enum_value_no_preference": {
+    "message": "preference"
+  },
+  "enum_value_yes": {
+    "message": "yes"
+  },
   "enterprise_only_label": {
     "message": "仅在 Firefox ESR 生效"
   },
@@ -651,7 +660,31 @@
     "message": "语言代码"
   },
   "policy_description_SanitizeOnShutdown": {
-    "message": "关闭浏览器时清除所有浏览器数据"
+    "message": "Clear browser data on shutdown"
+  },
+  "policy_description_SanitizeOnShutdown_Cache": {
+    "message": "Cache"
+  },
+  "policy_description_SanitizeOnShutdown_Cookies": {
+    "message": "Cookies"
+  },
+  "policy_description_SanitizeOnShutdown_Downloads": {
+    "message": "Download History"
+  },
+  "policy_description_SanitizeOnShutdown_FormData": {
+    "message": "Form & Search History"
+  },
+  "policy_description_SanitizeOnShutdown_History": {
+    "message": "Browsing History"
+  },
+  "policy_description_SanitizeOnShutdown_Sessions": {
+    "message": "Active Logins"
+  },
+  "policy_description_SanitizeOnShutdown_SiteSettings": {
+    "message": "Site Preferences"
+  },
+  "policy_description_SanitizeOnShutdown_OfflineApps": {
+    "message": "Offline Website Data"
   },
   "policy_description_SearchBar": {
     "message": "搜索栏合并或分开显示"

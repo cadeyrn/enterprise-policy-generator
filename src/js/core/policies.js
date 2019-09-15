@@ -952,7 +952,145 @@ const policies = {
     info_link : null,
     is_lockable : false,
     ui_category : 'privacy',
-    type : 'boolean'
+    type : 'object',
+    properties : [
+      {
+        name : 'Cache',
+        label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_Cache'),
+        mandatory : false,
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ],
+        default : 'false'
+      },
+      {
+        name : 'Cookies',
+        label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_Cookies'),
+        mandatory : false,
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ],
+        default : 'false'
+      },
+      {
+        name : 'Downloads',
+        label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_Downloads'),
+        mandatory : false,
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ],
+        default : 'false'
+      },
+      {
+        name : 'FormData',
+        label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_FormData'),
+        mandatory : false,
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ],
+        default : 'false'
+      },
+      {
+        name : 'History',
+        label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_History'),
+        mandatory : false,
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ],
+        default : 'false'
+      },
+      {
+        name : 'Sessions',
+        label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_Sessions'),
+        mandatory : false,
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ],
+        default : 'false'
+      },
+      {
+        name : 'SiteSettings',
+        label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_SiteSettings'),
+        mandatory : false,
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ],
+        default : 'false'
+      },
+      {
+        name : 'OfflineApps',
+        label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_OfflineApps'),
+        mandatory : false,
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ],
+        default : 'false'
+      }
+    ]
   },
 
   EnableTrackingProtection : {
