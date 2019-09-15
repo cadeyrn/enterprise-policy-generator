@@ -16,16 +16,6 @@
 
 #### Enterprise Policies
 
-- policies to set the minimum required and the maximum supported TLS version are also available in Firefox ESR,
-  see [#90](https://github.com/cadeyrn/enterprise-policy-generator/issues/90)
-- policy to enable or disable captive portal support is also available in Firefox ESR, see
-  [#90](https://github.com/cadeyrn/enterprise-policy-generator/issues/90)
-- policy to enable or disable network prediction (DNS prefetching) is also available in Firefox ESR, see
-  [#90](https://github.com/cadeyrn/enterprise-policy-generator/issues/90)
-- policy to enable or disable automatic extension updates is also available in Firefox ESR, see
-  [#90](https://github.com/cadeyrn/enterprise-policy-generator/issues/90)
-- policy to add a custom support menu item to the help menu is also available in Firefox ESR, see
-  [#90](https://github.com/cadeyrn/enterprise-policy-generator/issues/90)
 - re-added DisableSafeMode policy (removed in Enterprise Policy Generator 4.1.0) but with better description, see
   [#94](https://github.com/cadeyrn/enterprise-policy-generator/issues/94)
 - improved labels for Certificates|Add policy, see
