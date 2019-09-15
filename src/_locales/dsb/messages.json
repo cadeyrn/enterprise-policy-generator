@@ -525,7 +525,7 @@
     "message": "Bok nowosćow pśepisaś, kótaryž se móžo pó aktualizaciji zjawiś. Prozne zapódawańske pólo bok dopołnje znjemóžnjujo."
   },
   "policy_description_PasswordManagerEnabled": {
-    "message": "Enable or disable saving passwords to the password manager"
+    "message": "Enable or disable the password manager completely"
   },
   "policy_description_Permissions": {
     "message": "Pšawa za městno, kameru, mikrofon a powěźeńki konfigurěrowaś"

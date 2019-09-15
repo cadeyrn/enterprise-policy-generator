@@ -525,7 +525,7 @@
     "message": "Override the post-update “What's New” page. Set this policy to blank if you want to disable the post-update page."
   },
   "policy_description_PasswordManagerEnabled": {
-    "message": "Enable or disable saving passwords to the password manager"
+    "message": "Enable or disable the password manager completely"
   },
   "policy_description_Permissions": {
     "message": "Configure permissions for location, camera, microphone and notifications"

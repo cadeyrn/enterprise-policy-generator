@@ -525,7 +525,7 @@
     "message": "Stronu z nowosćemi přepisać, kotraž so móže po aktualizaciji jewić. Prózdne zapodawanske polo stronu dospołnje znjemóžnja."
   },
   "policy_description_PasswordManagerEnabled": {
-    "message": "Enable or disable saving passwords to the password manager"
+    "message": "Enable or disable the password manager completely"
   },
   "policy_description_Permissions": {
     "message": "Prawa za stejnišćo, kameru, mikrofon a zdźělenki konfigurować"

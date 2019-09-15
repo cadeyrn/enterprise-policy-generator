@@ -524,6 +524,9 @@
   "policy_description_OverridePostUpdatePage": {
     "message" : "Remplacer la page \"Quoi de neuf\" après la mise à jour. Définissez cette politique sur vide si vous voulez désactiver la page post-mise à jour."
   },
+  "policy_description_PasswordManagerEnabled": {
+    "message": "Enable or disable the password manager completely"
+  },
   "policy_description_Permissions": {
     "message": "Configurer les permissions pour l'emplacement, la caméra, le microphone et les notifications"
   },
