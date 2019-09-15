@@ -672,7 +672,7 @@
     "message": "Description"
   },
   "policy_description_SearchEngines_Add_IconURL": {
-    "message": "Icon URL"
+    "message": "Icon URL or data:image…"
   },
   "policy_description_SearchEngines_Add_Method": {
     "message": "Request Method"

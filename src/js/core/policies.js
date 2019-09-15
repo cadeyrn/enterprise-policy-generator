@@ -332,13 +332,13 @@ const policies = {
             name : 'URLTemplate',
             label : browser.i18n.getMessage('policy_description_SearchEngines_Add_URL'),
             mandatory : true,
-            type : 'string'
+            type : 'url'
           },
           {
             name : 'IconURL',
             label : browser.i18n.getMessage('policy_description_SearchEngines_Add_IconURL'),
             mandatory : false,
-            type : 'url'
+            type : 'urlOrData'
           },
           {
             name : 'Alias',
@@ -356,7 +356,7 @@ const policies = {
             name : 'SuggestURLTemplate',
             label : browser.i18n.getMessage('policy_description_SearchEngines_Add_SuggestURLTemplate'),
             mandatory : false,
-            type : 'string'
+            type : 'url'
           },
           {
             name : 'Method',

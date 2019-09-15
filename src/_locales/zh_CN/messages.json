@@ -672,7 +672,7 @@
     "message": "描述"
   },
   "policy_description_SearchEngines_Add_IconURL": {
-    "message": "图标 URL"
+    "message": "Icon URL or data:image…"
   },
   "policy_description_SearchEngines_Add_Method": {
     "message": "请求方法"
