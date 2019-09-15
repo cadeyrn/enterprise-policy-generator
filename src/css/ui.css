@@ -310,6 +310,10 @@ button:hover::before {
   margin-top: 2px;
 }
 
+.sub-options > .checkbox {
+  padding-top: 2px;
+}
+
 input[data-type='array'] ~ .sub-options, .object-array > div {
   position: relative;
 }
