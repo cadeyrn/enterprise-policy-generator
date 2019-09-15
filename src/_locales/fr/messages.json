@@ -506,7 +506,7 @@
   "policy_description_OverrideFirstRunPage": {
     "message" : "Remplacer la première page d'exécution. Définissez cette politique à vide si vous voulez désactiver la première page d'exécution."
   },
-  "policy_description_OverridePoverridePostUpdatePage": {
+  "policy_description_OverridePostUpdatePage": {
     "message" : "Remplacer la page \"Quoi de neuf\" après la mise à jour. Définissez cette politique sur vide si vous voulez désactiver la page post-mise à jour."
   },
   "policy_description_Permissions": {
