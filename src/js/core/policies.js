@@ -1315,6 +1315,27 @@ const policies = {
 
   // security
 
+  OfferToSaveLogins : {
+    description : browser.i18n.getMessage('policy_description_OfferToSaveLogins'),
+    enterprise_only : false,
+    first_available : { mainstream : '60.0', esr : '60.0' },
+    info_link : null,
+    is_lockable : false,
+    ui_category : 'security',
+    type : 'enum',
+    label : null,
+    options : [
+      {
+        label : browser.i18n.getMessage('policy_description_OfferToSaveLogins_options_true'),
+        value : 'true'
+      },
+      {
+        label : browser.i18n.getMessage('policy_description_OfferToSaveLogins_options_false'),
+        value : 'false'
+      }
+    ]
+  },
+
   PasswordManagerEnabled : {
     description : browser.i18n.getMessage('policy_description_PasswordManagerEnabled'),
     enterprise_only : false,
@@ -1671,27 +1692,6 @@ const policies = {
           label : browser.i18n.getMessage('policy_description_PopupBlocking_Allow_URL'),
           type : 'url'
         }
-      }
-    ]
-  },
-
-  OfferToSaveLogins : {
-    description : browser.i18n.getMessage('policy_description_OfferToSaveLogins'),
-    enterprise_only : false,
-    first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
-    ui_category : 'others',
-    type : 'enum',
-    label : null,
-    options : [
-      {
-        label : browser.i18n.getMessage('policy_description_OfferToSaveLogins_options_true'),
-        value : 'true'
-      },
-      {
-        label : browser.i18n.getMessage('policy_description_OfferToSaveLogins_options_false'),
-        value : 'false'
       }
     ]
   },
