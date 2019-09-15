@@ -509,6 +509,15 @@
   "policy_description_OfferToSaveLogins_options_true": {
     "message": "wužyte pśizjawjenja a gronidła se spomnjeś"
   },
+  "policy_description_OfferToSaveLoginsDefault": {
+    "message": "Default value for allowing Firefox to offer to remember saved logins and passwords"
+  },
+  "policy_description_OfferToSaveLoginsDefault_options_false": {
+    "message": "wužyte pśizjawjenja a gronidła se njespomnjeś"
+  },
+  "policy_description_OfferToSaveLoginsDefault_options_true": {
+    "message": "wužyte pśizjawjenja a gronidła se spomnjeś"
+  },
   "policy_description_OverrideFirstRunPage": {
     "message": "Bok pśepisaś, kótaryž se pśi prědnem starśe pokazujo. Prozne zapódawańske pólo bok dopołnje znjemóžnjujo."
   },

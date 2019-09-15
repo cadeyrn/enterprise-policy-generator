@@ -29,6 +29,8 @@
   [#96](https://github.com/cadeyrn/enterprise-policy-generator/issues/96)
 - new policy to enable or disable saving passwords to the password manager (Firefox 70+), see
   [#98](https://github.com/cadeyrn/enterprise-policy-generator/issues/98)
+- new policy to set the default value for allowing Firefox to offer to remember saved logins and passwords, see
+  [#99](https://github.com/cadeyrn/enterprise-policy-generator/issues/99)
 - added cryptomining and fingerprinting to EnableTrackingProtection policy and changed some wording to better align with
   the current wording of Firefox, see [#100](https://github.com/cadeyrn/enterprise-policy-generator/issues/100)
   

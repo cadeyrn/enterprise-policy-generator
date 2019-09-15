@@ -1336,6 +1336,27 @@ const policies = {
     ]
   },
 
+  OfferToSaveLoginsDefault : {
+    description : browser.i18n.getMessage('policy_description_OfferToSaveLoginsDefault'),
+    enterprise_only : false,
+    first_available : { mainstream : '70.0', esr : null },
+    info_link : null,
+    is_lockable : false,
+    ui_category : 'security',
+    type : 'enum',
+    label : null,
+    options : [
+      {
+        label : browser.i18n.getMessage('policy_description_OfferToSaveLoginsDefault_true'),
+        value : 'true'
+      },
+      {
+        label : browser.i18n.getMessage('policy_description_OfferToSaveLoginsDefault_false'),
+        value : 'false'
+      }
+    ]
+  },
+
   PasswordManagerEnabled : {
     description : browser.i18n.getMessage('policy_description_PasswordManagerEnabled'),
     enterprise_only : false,
