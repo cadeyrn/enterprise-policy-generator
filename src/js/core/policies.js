@@ -1717,6 +1717,21 @@ const policies = {
     ]
   },
 
+  LocalFileLinks : {
+    description : browser.i18n.getMessage('policy_description_LocalFileLinks'),
+    enterprise_only : false,
+    additional_note : null,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : null,
+    is_lockable : false,
+    ui_category : 'others',
+    type : 'flat-array',
+    value : {
+      label : browser.i18n.getMessage('policy_description_LocalFileLinks_label'),
+      mandatory : true
+    }
+  },
+
   DontCheckDefaultBrowser : {
     description : browser.i18n.getMessage('policy_description_DontCheckDefaultBrowser'),
     enterprise_only : false,

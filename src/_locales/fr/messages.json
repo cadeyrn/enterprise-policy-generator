@@ -488,6 +488,12 @@
   "policy_description_InstallAddonsPermission_Default_true": {
     "message" : "les add-ons peuvent être installés par l'utilisateur"
   },
+  "policy_description_LocalFileLinks": {
+    "message": "Allow specific websites to link to local files"
+  },
+  "policy_description_LocalFileLinks_label": {
+    "message": "URL"
+  },
   "policy_description_NetworkPrediction": {
     "message": "Activer ou désactiver prédiction réseau (Pré-recherche DNS)"
   },

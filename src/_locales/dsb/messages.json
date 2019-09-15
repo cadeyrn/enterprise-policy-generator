@@ -488,6 +488,12 @@
   "policy_description_InstallAddonsPermission_Default_true": {
     "message": "Rozšyrjenja daju se wót wužywarja instalěrowaś"
   },
+  "policy_description_LocalFileLinks": {
+    "message": "Allow specific websites to link to local files"
+  },
+  "policy_description_LocalFileLinks_label": {
+    "message": "URL"
+  },
   "policy_description_NetworkPrediction": {
     "message": "DNS-pśedzacytanje zmóžniś abo znjemóžniś"
   },

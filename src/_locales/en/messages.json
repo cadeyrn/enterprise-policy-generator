@@ -488,6 +488,12 @@
   "policy_description_InstallAddonsPermission_Default_true": {
     "message": "add-ons can be installed by the user"
   },
+  "policy_description_LocalFileLinks": {
+    "message": "Allow specific websites to link to local files"
+  },
+  "policy_description_LocalFileLinks_label": {
+    "message": "URL"
+  },
   "policy_description_NetworkPrediction": {
     "message": "Enable or disable network prediction (DNS prefetching)"
   },

@@ -488,6 +488,12 @@
   "policy_description_InstallAddonsPermission_Default_true": {
     "message": "允许用户安装附加组件"
   },
+  "policy_description_LocalFileLinks": {
+    "message": "Allow specific websites to link to local files"
+  },
+  "policy_description_LocalFileLinks_label": {
+    "message": "URL"
+  },
   "policy_description_NetworkPrediction": {
     "message": "启用或禁用网络预测 (DNS 预读取)"
   },
