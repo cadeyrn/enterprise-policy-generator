@@ -788,6 +788,9 @@
   "policy_description_SearchEngines_Remove_Name": {
     "message": "Name"
   },
+  "policy_description_SearchSuggestEnabled": {
+    "message": "Suchmaschinen-Vorschläge aktivieren oder deaktivieren"
+  },
   "policy_description_SecurityDevices": {
     "message": "PKCS#11-Module installieren"
   },
