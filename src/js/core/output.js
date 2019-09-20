@@ -301,7 +301,7 @@ const output = {
    * @returns {void}
    */
   generateOutputForStrings (el) {
-    if (!output.hasInvalidFields(el)) {
+    if (!output.hasInvalidFields(el.parentNode)) {
       policymanager.add(el.getAttribute('data-name'), el.parentNode.querySelector('input[type=text]').value);
     }
   },
