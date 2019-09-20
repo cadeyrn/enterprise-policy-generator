@@ -422,6 +422,24 @@
   "policy_description_ExtensionUpdate_options_true": {
     "message": "Automatische Aktualisierung von Erweiterungen aktivieren"
   },
+  "policy_description_FirefoxHome": {
+    "message": "Den Firefox-Startbildschirm anpassen"
+  },
+  "policy_description_FirefoxHome_Search": {
+    "message": "Internetsuche"
+  },
+  "policy_description_FirefoxHome_TopSites": {
+    "message": "Wichtige Seiten"
+  },
+  "policy_description_FirefoxHome_Highlights": {
+    "message": "Überblick"
+  },
+  "policy_description_FirefoxHome_Pocket": {
+    "message": "Pocket-Empfehlungen"
+  },
+  "policy_description_FirefoxHome_Snippets": {
+    "message": "Kurzinformationen"
+  },
   "policy_description_FlashPlugin": {
     "message": "Die Verwendung des Flash-Plugins erlauben oder verbieten"
   },

@@ -275,6 +275,118 @@ const policies = {
     ]
   },
 
+  FirefoxHome : {
+    description : browser.i18n.getMessage('policy_description_FirefoxHome'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : null,
+    is_lockable : true,
+    ui_category : 'customization',
+    type : 'object',
+    properties : [
+      {
+        name : 'Search',
+        label : browser.i18n.getMessage('policy_description_FirefoxHome_Search'),
+        mandatory : false,
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ]
+      },
+      {
+        name : 'TopSites',
+        label : browser.i18n.getMessage('policy_description_FirefoxHome_TopSites'),
+        mandatory : false,
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ]
+      },
+      {
+        name : 'Highlights',
+        label : browser.i18n.getMessage('policy_description_FirefoxHome_Highlights'),
+        mandatory : false,
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ]
+      },
+      {
+        name : 'Pocket',
+        label : browser.i18n.getMessage('policy_description_FirefoxHome_Pocket'),
+        mandatory : false,
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ]
+      },
+      {
+        name : 'Snippets',
+        label : browser.i18n.getMessage('policy_description_FirefoxHome_Snippets'),
+        mandatory : false,
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ]
+      }
+    ]
+  },
+
   NewTabPage : {
     description : browser.i18n.getMessage('policy_description_NewTabPage'),
     enterprise_only : false,

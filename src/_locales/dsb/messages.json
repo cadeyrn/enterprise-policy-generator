@@ -422,6 +422,24 @@
   "policy_description_ExtensionUpdate_options_true": {
     "message": "Awtomatiske aktualizěrowanje rozšyrjenjow zmóžniśs"
   },
+  "policy_description_FirefoxHome": {
+    "message": "Customize the Firefox home page"
+  },
+  "policy_description_FirefoxHome_Search": {
+    "message": "Web Search"
+  },
+  "policy_description_FirefoxHome_TopSites": {
+    "message": "Top Sites"
+  },
+  "policy_description_FirefoxHome_Highlights": {
+    "message": "Highlights"
+  },
+  "policy_description_FirefoxHome_Pocket": {
+    "message": "Pocket Recommendations"
+  },
+  "policy_description_FirefoxHome_Snippets": {
+    "message": "Snippets"
+  },
   "policy_description_FlashPlugin": {
     "message": "Wužywanje tykaca Flash dowóliś abo zakazaś"
   },

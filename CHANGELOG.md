@@ -18,6 +18,8 @@
 
 - new policy to allow specific websites to link to local files, see
   [#83](https://github.com/cadeyrn/enterprise-policy-generator/issues/83)
+- new policy to customize the Firefox home page, see
+  [#85](https://github.com/cadeyrn/enterprise-policy-generator/issues/85)
 - new policy to enable or disable search suggestions, see
   [#86](https://github.com/cadeyrn/enterprise-policy-generator/issues/86)
 - allow empty value for RequestedLocales policy to use the operating system language as Firefox language, see

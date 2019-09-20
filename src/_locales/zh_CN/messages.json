@@ -422,6 +422,24 @@
   "policy_description_ExtensionUpdate_options_true": {
     "message": "允许扩展自动更新"
   },
+  "policy_description_FirefoxHome": {
+    "message": "Customize the Firefox home page"
+  },
+  "policy_description_FirefoxHome_Search": {
+    "message": "Web Search"
+  },
+  "policy_description_FirefoxHome_TopSites": {
+    "message": "Top Sites"
+  },
+  "policy_description_FirefoxHome_Highlights": {
+    "message": "Highlights"
+  },
+  "policy_description_FirefoxHome_Pocket": {
+    "message": "Pocket Recommendations"
+  },
+  "policy_description_FirefoxHome_Snippets": {
+    "message": "Snippets"
+  },
   "policy_description_FlashPlugin": {
     "message": "允许或阻止使用 Flash 插件"
   },
