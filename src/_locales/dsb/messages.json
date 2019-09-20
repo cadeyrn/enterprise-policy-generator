@@ -380,6 +380,12 @@
   "policy_description_DontCheckDefaultBrowser_options_true": {
     "message": "Pśi starśe njekontrolěrowaś, lěc Firefox jo standardny wobglědowak"
   },
+  "policy_description_DownloadDirectory": {
+    "message": "Set and lock the download directory"
+  },
+  "policy_description_DownloadDirectory_Label": {
+    "message": "You can use ${home} for the native home directory"
+  },
   "policy_description_EnableTrackingProtection": {
     "message": "Enhanced Tracking Protection"
   },

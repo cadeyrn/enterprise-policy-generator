@@ -380,6 +380,12 @@
   "policy_description_DontCheckDefaultBrowser_options_true": {
     "message": "Beim Start nicht prüfen, ob Firefox der Standard-Browser ist"
   },
+  "policy_description_DownloadDirectory": {
+    "message": "Downloadverzeichnis festlegen und sperren"
+  },
+  "policy_description_DownloadDirectory_Label": {
+    "message": "Der Platzhalter ${home} kann für das native Benutzerverzeichnis verwendet werden"
+  },
   "policy_description_EnableTrackingProtection": {
     "message": "Verbesserter Schutz vor Aktivitätenverfolgung"
   },
