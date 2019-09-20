@@ -266,6 +266,12 @@
   "policy_description_Cookies_RejectTracker": {
     "message": "Rejeter les cookies de suivi"
   },
+  "policy_description_DefaultDownloadDirectory": {
+    "message": "Set the default download directory"
+  },
+  "policy_description_DefaultDownloadDirectory_Label": {
+    "message": "You can use ${home} for the native home directory"
+  },
   "policy_description_DisableAppUpdate": {
     "message" : "Empêcher Firefox de se mettre à jour"
   },

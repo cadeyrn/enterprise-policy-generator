@@ -1802,6 +1802,18 @@ const policies = {
 
   // others
 
+  DefaultDownloadDirectory : {
+    description : browser.i18n.getMessage('policy_description_DefaultDownloadDirectory'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : null,
+    is_lockable : false,
+    ui_category : 'others',
+    mandatory : true,
+    type : 'string',
+    label : browser.i18n.getMessage('policy_description_DefaultDownloadDirectory_Label')
+  },
+
   HardwareAcceleration : {
     description : browser.i18n.getMessage('policy_description_HardwareAcceleration'),
     enterprise_only : false,

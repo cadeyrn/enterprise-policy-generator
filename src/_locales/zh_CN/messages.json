@@ -266,6 +266,12 @@
   "policy_description_Cookies_RejectTracker": {
     "message": "阻止跟踪 Cookies"
   },
+  "policy_description_DefaultDownloadDirectory": {
+    "message": "Set the default download directory"
+  },
+  "policy_description_DefaultDownloadDirectory_Label": {
+    "message": "You can use ${home} for the native home directory"
+  },
   "policy_description_DisableAppUpdate": {
     "message": "阻止 Firefox 进行更新"
   },
