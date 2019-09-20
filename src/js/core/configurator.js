@@ -531,7 +531,7 @@ const configurator = {
 
     // empty value is allowed
     if (policy.value.allow_empty_value) {
-      elInput.setAttribute('data-empty-value-allowed', "true");
+      elInput.setAttribute('data-empty-value-allowed', 'true');
     }
 
     elSubOptions.appendChild(elInput);
