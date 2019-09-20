@@ -95,11 +95,14 @@ select:focus {
 .select-wrapper {
   display: block;
   position: relative;
-  margin: 5px 0;
   width: calc(100% - 50px);
   height: 30px;
   overflow: hidden;
   border-radius: 2px;
+}
+
+.select-wrapper:not(.disabled) {
+  margin: 5px 0;
 }
 
 .select-wrapper::after {
