@@ -15,6 +15,7 @@
   [#93](https://github.com/cadeyrn/enterprise-policy-generator/issues/93)
 - enhanced URL validation method to optionally allow data:image URI for some policies, see
   [#96](https://github.com/cadeyrn/enterprise-policy-generator/issues/96)
+- some minor improvements and fixes (design, validation, translation files)
 
 #### Enterprise Policies
 
