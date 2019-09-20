@@ -656,6 +656,9 @@
   "policy_description_PopupBlocking_Default_true": {
     "message" : "les pop-ups sont bloqués par défaut"
   },
+  "policy_description_PromptForDownloadLocation": {
+    "message": "Ask where to save each file before downloading"
+  },
   "policy_description_Proxy": {
     "message" : "Configurez l'accès par procuration à Internet"
   },

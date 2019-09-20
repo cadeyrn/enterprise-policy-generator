@@ -656,6 +656,9 @@
   "policy_description_PopupBlocking_Default_true": {
     "message": "Wuskakowace wokna so po standardźe blokuja"
   },
+  "policy_description_PromptForDownloadLocation": {
+    "message": "Ask where to save each file before downloading"
+  },
   "policy_description_Proxy": {
     "message": "Přistup proksy na internet konfigurować"
   },

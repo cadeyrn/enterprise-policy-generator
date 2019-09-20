@@ -656,6 +656,9 @@
   "policy_description_PopupBlocking_Default_true": {
     "message": "默认阻止弹出窗口"
   },
+  "policy_description_PromptForDownloadLocation": {
+    "message": "Ask where to save each file before downloading"
+  },
   "policy_description_Proxy": {
     "message": "配置连接互联网的代理服务器"
   },

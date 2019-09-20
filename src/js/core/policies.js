@@ -1826,6 +1826,27 @@ const policies = {
     label : browser.i18n.getMessage('policy_description_DownloadDirectory_Label')
   },
 
+  PromptForDownloadLocation : {
+    description : browser.i18n.getMessage('policy_description_PromptForDownloadLocation'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : null,
+    is_lockable : false,
+    ui_category : 'others',
+    mandatory : true,
+    type : 'enum',
+    options : [
+      {
+        label : browser.i18n.getMessage('enum_value_yes'),
+        value : 'true'
+      },
+      {
+        label : browser.i18n.getMessage('enum_value_no'),
+        value : 'false'
+      }
+    ]
+  },
+
   HardwareAcceleration : {
     description : browser.i18n.getMessage('policy_description_HardwareAcceleration'),
     enterprise_only : false,

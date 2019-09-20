@@ -22,6 +22,8 @@
   [#84](https://github.com/cadeyrn/enterprise-policy-generator/issues/84)
 - new policy to set the download directory and lock it, see
   [#84](https://github.com/cadeyrn/enterprise-policy-generator/issues/84)
+- new policy to ask where to save each file before downloading, see
+  [#84](https://github.com/cadeyrn/enterprise-policy-generator/issues/84)
 - new policy to customize the Firefox home page, see
   [#85](https://github.com/cadeyrn/enterprise-policy-generator/issues/85)
 - new policy to enable or disable search suggestions, see
