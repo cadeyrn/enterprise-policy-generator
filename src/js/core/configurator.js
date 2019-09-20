@@ -1053,6 +1053,21 @@ const configurator = {
       elAdditionalNote.appendChild(elAdditionalNoteText);
     }
 
+    // deprecation note
+    if (policy.deprecation_note) {
+      const elDeprecationNote = document.createElement('div');
+      elDeprecationNote.classList.add('deprecation-note');
+      elLabel.appendChild(elDeprecationNote);
+      elLabel.classList.add('deprecated');
+
+      const elDeprecationNoteImage = document.createElement('img');
+      elDeprecationNoteImage.src = '/images/minus.svg';
+      elDeprecationNote.appendChild(elDeprecationNoteImage);
+
+      const elDeprecationNoteText = document.createTextNode(policy.deprecation_note);
+      elDeprecationNote.appendChild(elDeprecationNoteText);
+    }
+
     // versions info
     if (parseFloat(policy.first_available.mainstream) > FIREFOX_68 || parseFloat(policy.first_available.esr) > FIREFOX_68) {
       const elVersionsInfo = document.createElement('div');
