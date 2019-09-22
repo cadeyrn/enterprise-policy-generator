@@ -29,6 +29,9 @@ const output = {
         else if (el.getAttribute('data-type') === 'flat-array') {
           output.generateOutputForFlatArrays(el);
         }
+        else if (el.getAttribute('data-type') === 'key-object-list') {
+          output.generateOutputForKeyObjectList(el);
+        }
         else if (el.getAttribute('data-type') === 'key-value-pairs') {
           output.generateOutputForKeyValuePairs(el);
         }
@@ -134,6 +137,51 @@ const output = {
       else {
         policymanager.add(el.getAttribute('data-name'), items);
       }
+    }
+  },
+
+  /**
+   * Generates output for policies of type "key-object-list".
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   *
+   * @returns {void}
+   */
+  generateOutputForKeyObjectList (el) {
+    const items = {};
+
+    [...el.parentNode.querySelectorAll(':scope > div')].forEach((el) => {
+      const key = el.getElementsByClassName('key')[0];
+
+      if (key.value) {
+        const properties = {};
+
+        // input fields
+        [...el.querySelectorAll(':scope .sub-sub-options input')].forEach((el) => {
+          if (el.value && !el.classList.contains('invalid-url-style')) {
+            properties[el.getAttribute('data-name')] = el.value;
+          }
+        });
+
+        // enum fields
+        [...el.querySelectorAll(':scope .sub-sub-options select')].forEach((el) => {
+          const value = output.parseEnumContent(el);
+
+          if (value) {
+            properties[el.getAttribute('data-name')] = output.parseEnumContent(el);
+          }
+        });
+
+        // only add non-empty properties
+        if (Object.values(properties).length > 0) {
+          items[key.value] = properties;
+        }
+      }
+    });
+
+    // only add non-empty policies
+    if (Object.keys(items).length > 0) {
+      policymanager.add(el.getAttribute('data-name'), items);
     }
   },
 

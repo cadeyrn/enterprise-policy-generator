@@ -70,6 +70,9 @@ const configurator = {
       else if (policies[key].type === 'flat-array') {
         configurator.addFlatArrayOption(key, policies[key]);
       }
+      else if (policies[key].type === 'key-object-list') {
+        configurator.addKeyObjectListOption(key, policies[key]);
+      }
       else if (policies[key].type === 'key-value-pairs') {
         configurator.addKeyValuePairsOption(key, policies[key]);
       }
@@ -545,6 +548,53 @@ const configurator = {
   },
 
   /**
+   * Adds policy of the type "key-object-list" to the DOM.
+   *
+   * @param {string} key - the name of the policy
+   * @param {Object} policy - the policy object
+   *
+   * @returns {void}
+   */
+  addKeyObjectListOption (key, policy) {
+    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'key-object-list');
+    const elSubOptions = configurator.addSubOptions(elObjectWrapper);
+
+    const elInputWrapperKey = document.createElement('div');
+    elInputWrapperKey.classList.add('input');
+
+    const elInputKey = document.createElement('input');
+    elInputKey.setAttribute('type', 'text');
+    elInputKey.setAttribute('id', key + '_Key_1');
+    elInputKey.setAttribute('name', key + '_Key_1');
+    elInputKey.setAttribute('data-name', key);
+    elInputKey.setAttribute('placeholder', policy.label_key);
+    elInputKey.classList.add('key');
+    configurator.addMandatoryLabel(elInputKey, elInputWrapperKey);
+    elInputWrapperKey.appendChild(elInputKey);
+    elSubOptions.appendChild(elInputWrapperKey);
+
+    const elSubSubOptions = document.createElement('div');
+    elSubSubOptions.classList.add('sub-sub-options');
+
+    // add properties
+    if (policy.properties) {
+      const optionsLength = policy.properties.length;
+      for (let i = 0; i < optionsLength; i++) {
+        configurator.addProperty(elSubSubOptions, key + '_' + policy.properties[i].name, policy.properties[i], true, true);
+      }
+    }
+
+    elSubOptions.appendChild(elSubSubOptions);
+
+    // add array field action links
+    elSubOptions.parentNode.classList.add('array-action-links');
+    configurator.addArrayFieldActionLinks(elSubOptions, key + '_1');
+
+    // add option to UI
+    configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
+  },
+
+  /**
    * Adds policy of the type "key-value-pairs" to the DOM.
    *
    * @param {string} key - the name of the policy
@@ -944,6 +994,16 @@ const configurator = {
 
     // we need an unique and deterministic name as DOM id and name
     const domName = isArrayProperty ? parentName + '_1' : parentName + '_' + policy.name;
+
+    // optional caption
+    if (policy.caption) {
+      const elCaptionWrapper = document.createElement('div');
+      elCaptionWrapper.classList.add('label');
+      elObjectWrapper.appendChild(elCaptionWrapper);
+
+      const elCaption = document.createTextNode(policy.caption);
+      elCaptionWrapper.appendChild(elCaption);
+    }
 
     // input field
     const elInput = document.createElement('input');
