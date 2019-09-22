@@ -407,6 +407,9 @@
   "policy_description_Extensions": {
     "message": "Erweiterungen installieren, deinstallieren oder sperren"
   },
+  "policy_description_Extensions_Deprecated": {
+    "message": "Veraltet. Die darunter liegende Richtlinie sollte verwendet werden."
+  },
   "policy_description_Extensions_Install": {
     "message": "Add-ons installieren. Es können URLs oder Pfade angegeben werden."
   },
@@ -423,6 +426,39 @@
     "message": "Add-ons deinstallieren. Bitte Add-on-IDs angeben."
   },
   "policy_description_Extensions_Uninstall_ID": {
+    "message": "Add-on-ID"
+  },
+  "policy_description_ExtensionSettings": {
+    "message": "Die Installation und Deinstallation von Erweiterungen verwalten"
+  },
+  "policy_description_ExtensionSettings_blocked_install_message_caption": {
+    "message": "Fehlermeldung, welche dem Nutzer angezeigt wird, wenn versucht wird, die blockierte Erweiterung zu installieren"
+  },
+  "policy_description_ExtensionSettings_blocked_install_message_label": {
+    "message": "Fehlermeldung"
+  },
+  "policy_description_ExtensionSettings_install_url_caption": {
+    "message": "Installations-URL. Wenn die Erweiterung vom lokalen Dateisystem installiert werden soll, bitte file:///-URI verwenden."
+  },
+  "policy_description_ExtensionSettings_install_url_label": {
+    "message": "URL"
+  },
+  "policy_description_ExtensionSettings_installation_mode": {
+    "message": "Installations-Modus"
+  },
+  "policy_description_ExtensionSettings_installation_mode_allowed": {
+    "message": "Die Installation dieser Erweiterung durch den Nutzer ist erlaubt"
+  },
+  "policy_description_ExtensionSettings_installation_mode_blocked": {
+    "message": "Die Installation dieser Erweiterung durch den Nutzer ist verboten und die Erweiterung wird vom Gerät entfernt, falls bereits installiert"
+  },
+  "policy_description_ExtensionSettings_installation_mode_force_installed": {
+    "message": "Die Erweiterung wird automatisch installiert und kann vom Nutzer nicht entfernt werden (Installations-URL erforderlich)"
+  },
+  "policy_description_ExtensionSettings_installation_mode_normal_installed": {
+    "message": "Die Erweiterung wird automatisch installiert und kann vom Nutzer deaktiviert werden (Installations-URL erforderlich)"
+  },
+  "policy_description_ExtensionSettings_Label_Key": {
     "message": "Add-on-ID"
   },
   "policy_description_ExtensionUpdate": {

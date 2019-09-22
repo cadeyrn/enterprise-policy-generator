@@ -642,6 +642,7 @@ const policies = {
   Extensions : {
     description : browser.i18n.getMessage('policy_description_Extensions'),
     enterprise_only : false,
+    deprecation_note : browser.i18n.getMessage('policy_description_Extensions_Deprecated'),
     first_available : { mainstream : '62.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
@@ -677,6 +678,61 @@ const policies = {
           label : browser.i18n.getMessage('policy_description_Extensions_Locked_ID'),
           type : 'string'
         }
+      }
+    ]
+  },
+
+  ExtensionSettings : {
+    description : browser.i18n.getMessage('policy_description_ExtensionSettings'),
+    enterprise_only : false,
+    first_available : { mainstream : '69.0', esr : '68.1' },
+    info_link : null,
+    is_lockable : false,
+    ui_category : 'customization',
+    type : 'key-object-list',
+    label_key : browser.i18n.getMessage('policy_description_ExtensionSettings_Label_Key'),
+    properties : [
+      {
+        name : 'installation_mode',
+        label : browser.i18n.getMessage('policy_description_ExtensionSettings_installation_mode'),
+        mandatory : false,
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_ExtensionSettings_installation_mode_allowed'),
+            value : 'allowed'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_ExtensionSettings_installation_mode_blocked'),
+            value : 'blocked'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_ExtensionSettings_installation_mode_force_installed'),
+            value : 'force_installed'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_ExtensionSettings_installation_mode_normal_installed'),
+            value : 'normal_installed'
+          }
+        ]
+      },
+      {
+        name : 'install_url',
+        caption : browser.i18n.getMessage('policy_description_ExtensionSettings_install_url_caption'),
+        label : browser.i18n.getMessage('policy_description_ExtensionSettings_install_url_label'),
+        mandatory : false,
+        type : 'url'
+      },
+      {
+        name : 'blocked_install_message',
+        caption : browser.i18n.getMessage('policy_description_ExtensionSettings_blocked_install_message_caption'),
+        label : browser.i18n.getMessage('policy_description_ExtensionSettings_blocked_install_message_label'),
+        mandatory : false,
+        type : 'string'
       }
     ]
   },

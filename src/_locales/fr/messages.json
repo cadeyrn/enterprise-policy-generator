@@ -407,6 +407,9 @@
   "policy_description_Extensions": {
     "message" : "Installer, désinstaller ou verrouiller les extensions"
   },
+  "policy_description_Extensions_Deprecated": {
+    "message": "Deprecated. The following policy should be used."
+  },
   "policy_description_Extensions_Install": {
     "message" : "Installer les add-ons. Vous pouvez spécifier des adresses ou des chemins d'accès."
   },
@@ -424,6 +427,39 @@
   },
   "policy_description_Extensions_Uninstall_ID": {
     "message" : "Add-on ID"
+  },
+  "policy_description_ExtensionSettings": {
+    "message": "Manage the installation and uninstallation of add-ons"
+  },
+  "policy_description_ExtensionSettings_blocked_install_message_caption": {
+    "message": "Error message to display to the user when trying to install the blocked add-on"
+  },
+  "policy_description_ExtensionSettings_blocked_install_message_label": {
+    "message": "error message"
+  },
+  "policy_description_ExtensionSettings_install_url_caption": {
+    "message": "install URL. If installing from the local file system, use a file:/// URI."
+  },
+  "policy_description_ExtensionSettings_install_url_label": {
+    "message": "URL"
+  },
+  "policy_description_ExtensionSettings_installation_mode": {
+    "message": "installation mode"
+  },
+  "policy_description_ExtensionSettings_installation_mode_allowed": {
+    "message": "allows the add-on to be installed by the user"
+  },
+  "policy_description_ExtensionSettings_installation_mode_blocked": {
+    "message": "blocks installation of the add-on and removes it from the device if already installed"
+  },
+  "policy_description_ExtensionSettings_installation_mode_force_installed": {
+    "message": "the add-on is automatically installed and can't be removed by the user (requires an install url)"
+  },
+  "policy_description_ExtensionSettings_installation_mode_normal_installed": {
+    "message": "the add-on is automatically installed but can be disabled by the user (requires an install url)"
+  },
+  "policy_description_ExtensionSettings_Label_Key": {
+    "message": "Add-on ID"
   },
   "policy_description_ExtensionUpdate": {
     "message": "Activer ou désactiver les mises à jours automatiques des extensions"
