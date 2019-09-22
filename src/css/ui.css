@@ -325,6 +325,15 @@ button:hover::before {
   padding-left: 50px;
 }
 
+.extra-options > .label {
+  font-weight: 700;
+}
+
+.extra-options > .label.post-extra {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
 input[data-type='array'] ~ .sub-options, .object-array > div {
   position: relative;
 }

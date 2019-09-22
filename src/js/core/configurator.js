@@ -106,6 +106,11 @@ const configurator = {
             }
           }
         }
+
+        const elExtraOptions = el.parentNode.getElementsByClassName('extra-options');
+        if (elExtraOptions.length > 0) {
+          elExtraOptions[0].classList.toggle('disabled');
+        }
       });
     });
 
@@ -557,6 +562,34 @@ const configurator = {
    */
   addKeyObjectListOption (key, policy) {
     const elObjectWrapper = configurator.addPolicyNode(key, policy, 'key-object-list');
+
+    // add extra properties
+    if (policy.extra && policy.extra.properties) {
+      const elExtraOptions = document.createElement('div');
+      elExtraOptions.classList.add('extra-options', 'disabled');
+      elExtraOptions.setAttribute('data-key', policy.extra.key);
+      elObjectWrapper.appendChild(elExtraOptions);
+
+      const elPreCaptionWrapper = document.createElement('div');
+      elPreCaptionWrapper.classList.add('label', 'pre-extra');
+      elExtraOptions.appendChild(elPreCaptionWrapper);
+
+      const elPreCaption = document.createTextNode(policy.extra.caption_pre);
+      elPreCaptionWrapper.appendChild(elPreCaption);
+
+      const optionsLength = policy.extra.properties.length;
+      for (let i = 0; i < optionsLength; i++) {
+        configurator.addProperty(elExtraOptions, key + '_' + policy.extra.properties[i].name, policy.extra.properties[i]);
+      }
+
+      const elPostCaptionWrapper = document.createElement('div');
+      elPostCaptionWrapper.classList.add('label', 'post-extra');
+      elExtraOptions.appendChild(elPostCaptionWrapper);
+
+      const elPostCaption = document.createTextNode(policy.extra.caption_post);
+      elPostCaptionWrapper.appendChild(elPostCaption);
+    }
+
     const elSubOptions = configurator.addSubOptions(elObjectWrapper);
 
     const elInputWrapperKey = document.createElement('div');

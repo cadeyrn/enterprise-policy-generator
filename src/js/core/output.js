@@ -151,20 +151,21 @@ const output = {
     const items = {};
 
     [...el.parentNode.querySelectorAll(':scope > div')].forEach((el) => {
-      const key = el.getElementsByClassName('key')[0];
+      const elKey = el.getElementsByClassName('key')[0];
+      const key = elKey ? elKey.value : el.getAttribute('data-key');
 
-      if (key.value) {
+      if (key) {
         const properties = {};
 
         // input fields
-        [...el.querySelectorAll(':scope .sub-sub-options input')].forEach((el) => {
+        [...el.querySelectorAll(':scope input')].forEach((el) => {
           if (el.value && !el.classList.contains('invalid-url-style')) {
             properties[el.getAttribute('data-name')] = el.value;
           }
         });
 
         // enum fields
-        [...el.querySelectorAll(':scope .sub-sub-options select')].forEach((el) => {
+        [...el.querySelectorAll(':scope select')].forEach((el) => {
           const value = output.parseEnumContent(el);
 
           if (value) {
@@ -174,7 +175,7 @@ const output = {
 
         // only add non-empty properties
         if (Object.values(properties).length > 0) {
-          items[key.value] = properties;
+          items[key] = properties;
         }
       }
     });
