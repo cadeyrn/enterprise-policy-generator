@@ -1528,7 +1528,7 @@ const policies = {
   OfferToSaveLoginsDefault : {
     description : browser.i18n.getMessage('policy_description_OfferToSaveLoginsDefault'),
     enterprise_only : false,
-    first_available : { mainstream : '70.0', esr : null },
+    first_available : { mainstream : '70.0', esr : '68.2' },
     info_link : null,
     is_lockable : false,
     ui_category : 'security',
@@ -1549,7 +1549,7 @@ const policies = {
   PasswordManagerEnabled : {
     description : browser.i18n.getMessage('policy_description_PasswordManagerEnabled'),
     enterprise_only : false,
-    first_available : { mainstream : '70.0', esr : null },
+    first_available : { mainstream : '70.0', esr : '68.2' },
     info_link : null,
     is_lockable : false,
     ui_category : 'security',

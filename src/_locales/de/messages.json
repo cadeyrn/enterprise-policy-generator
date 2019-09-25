@@ -390,10 +390,10 @@
     "message": "Verbesserter Schutz vor Aktivitätenverfolgung"
   },
   "policy_description_EnableTrackingProtection_Cryptomining": {
-    "message": "Heimliche Digitalwährungsberechner (Krypto-Miner) blockieren (Firefox 70+)"
+    "message": "Heimliche Digitalwährungsberechner (Krypto-Miner) blockieren (Firefox 70+, Firefox ESR 68.2+)"
   },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
-    "message": "Identifizierer (Fingerprinter) blockieren (Firefox 70+)"
+    "message": "Identifizierer (Fingerprinter) blockieren (Firefox 70+, Firefox ESR 68.2+)"
   },
   "policy_description_EnableTrackingProtection_Value": {
     "message": "Tracking-Content"

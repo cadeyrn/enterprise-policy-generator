@@ -46,12 +46,12 @@
   [#95](https://github.com/cadeyrn/enterprise-policy-generator/issues/95)
 - allow data:image URI for IconURL property of SearchEngine|Add policy, see
   [#96](https://github.com/cadeyrn/enterprise-policy-generator/issues/96)
-- new policy to completely disable the password manager (Firefox 70+), see
+- new policy to completely disable the password manager (Firefox 70+, Firefox ESR 68.2+), see
   [#98](https://github.com/cadeyrn/enterprise-policy-generator/issues/98)
 - new policy to set the default value for allowing Firefox to offer to remember saved logins and passwords
-  (Firefox 70+), see [#99](https://github.com/cadeyrn/enterprise-policy-generator/issues/99)
-- added cryptomining and fingerprinting to EnableTrackingProtection policy (Firefox 70+) and changed some wording to
-  better align with the current wording of Firefox, see
+  (Firefox 70+, Firefox ESR 68.2+), see [#99](https://github.com/cadeyrn/enterprise-policy-generator/issues/99)
+- added cryptomining and fingerprinting to EnableTrackingProtection policy (Firefox 70+, Firefox ESR 68.2+) and changed
+  some wording to better align with the current wording of Firefox, see
   [#100](https://github.com/cadeyrn/enterprise-policy-generator/issues/100)
   
 #### Translations

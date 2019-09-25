@@ -390,10 +390,10 @@
     "message": "Enhanced Tracking Protection"
   },
   "policy_description_EnableTrackingProtection_Cryptomining": {
-    "message": "block cryptominers (Firefox 70+)"
+    "message": "block cryptominers (Firefox 70+, Firefox ESR 68.2+)"
   },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
-    "message": "block fingerprinters (Firefox 70+)"
+    "message": "block fingerprinters (Firefox 70+, Firefox ESR 68.2+)"
   },
   "policy_description_EnableTrackingProtection_Value": {
     "message": "Tracking Content"
