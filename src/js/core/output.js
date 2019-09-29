@@ -157,15 +157,32 @@ const output = {
       if (key) {
         const properties = {};
 
+        // arrays
+        [...el.querySelectorAll(':scope > .array')].forEach((innerEl) => {
+          const items = [];
+
+          // input fields
+          [...innerEl.querySelectorAll(':scope > .input input')].forEach((arrEl) => {
+            if (arrEl.value && !arrEl.classList.contains('invalid-url-style')) {
+              items.push(arrEl.value);
+            }
+          });
+
+          // only add non-empty arrays
+          if (items.length > 0) {
+            properties[innerEl.getAttribute('data-name')] = items;
+          }
+        });
+
         // input fields
-        [...el.querySelectorAll(':scope input')].forEach((el) => {
+        [...el.querySelectorAll(':scope > .input input:not(.key), :scope .sub-sub-options > .input input')].forEach((el) => {
           if (el.value && !el.classList.contains('invalid-url-style')) {
             properties[el.getAttribute('data-name')] = el.value;
           }
         });
 
         // enum fields
-        [...el.querySelectorAll(':scope select')].forEach((el) => {
+        [...el.querySelectorAll(':scope > .enum select, :scope .sub-sub-options > .enum select')].forEach((el) => {
           const value = output.parseEnumContent(el);
 
           if (value) {
