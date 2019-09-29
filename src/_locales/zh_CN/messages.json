@@ -1,4 +1,7 @@
 {
+  "common_url": {
+    "message": "URL"
+  },
   "configuration_export": {
     "message": "导出配置"
   },
@@ -524,14 +527,8 @@
   "policy_description_FlashPlugin_Allow": {
     "message": "在这些 URL 下默认启用 Flash 插件，除非已完全禁用 Flash"
   },
-  "policy_description_FlashPlugin_Allow_URL": {
-    "message": "URL"
-  },
   "policy_description_FlashPlugin_Block": {
     "message": "阻止 Flash 插件在这些 URL 下使用"
-  },
-  "policy_description_FlashPlugin_Block_URL": {
-    "message": "URL"
   },
   "policy_description_FlashPlugin_Default": {
     "message": "始终启用或禁用 Flash"
@@ -563,17 +560,11 @@
   "policy_description_Homepage_StartPage_Previous_Session": {
     "message": "… 先前的浏览状态"
   },
-  "policy_description_Homepage_URL": {
-    "message": "URL"
-  },
   "policy_description_InstallAddonsPermission": {
     "message": "允许网站安装附加组件"
   },
   "policy_description_InstallAddonsPermission_Allow": {
     "message": "下列是允许安装扩展的网站，除非扩展安装的功能被禁用（已允许 addons.mozilla.org）"
-  },
-  "policy_description_InstallAddonsPermission_Allow_URL": {
-    "message": "URL"
   },
   "policy_description_InstallAddonsPermission_Default_false": {
     "message": "不允许用户安装附加组件"
@@ -583,9 +574,6 @@
   },
   "policy_description_LocalFileLinks": {
     "message": "Allow specific websites to link to local files"
-  },
-  "policy_description_LocalFileLinks_label": {
-    "message": "URL"
   },
   "policy_description_NetworkPrediction": {
     "message": "启用或禁用网络预测 (DNS 预读取)"
@@ -638,14 +626,8 @@
   "policy_description_Permissions_Camera_Allow": {
     "message": "允许下列 URL 操控"
   },
-  "policy_description_Permissions_Camera_Allow_URL": {
-    "message": "URL"
-  },
   "policy_description_Permissions_Camera_Block": {
     "message": "阻止下列 URL 操控"
-  },
-  "policy_description_Permissions_Camera_Block_URL": {
-    "message": "URL"
   },
   "policy_description_Permissions_Camera_BlockNewRequests": {
     "message": "禁止请求操控您的摄像头"
@@ -656,14 +638,8 @@
   "policy_description_Permissions_Location_Allow": {
     "message": "允许下列 URL 获知"
   },
-  "policy_description_Permissions_Location_Allow_URL": {
-    "message": "URL"
-  },
   "policy_description_Permissions_Location_Block": {
     "message": "阻止下列 URL 获知"
-  },
-  "policy_description_Permissions_Location_Block_URL": {
-    "message": "URL"
   },
   "policy_description_Permissions_Location_BlockNewRequests": {
     "message": "禁止请求获知您的位置"
@@ -674,14 +650,8 @@
   "policy_description_Permissions_Microphone_Allow": {
     "message": "允许下列 URL 操控"
   },
-  "policy_description_Permissions_Microphone_Allow_URL": {
-    "message": "URL"
-  },
   "policy_description_Permissions_Microphone_Block": {
     "message": "阻止下列 URL 操控"
-  },
-  "policy_description_Permissions_Microphone_Block_URL": {
-    "message": "URL"
   },
   "policy_description_Permissions_Microphone_BlockNewRequests": {
     "message": "禁止请求操控您的麦克风"
@@ -692,14 +662,8 @@
   "policy_description_Permissions_Notifications_Allow": {
     "message": "允许下列 URL 传送通知"
   },
-  "policy_description_Permissions_Notifications_Allow_URL": {
-    "message": "URL"
-  },
   "policy_description_Permissions_Notifications_Block": {
     "message": "阻止下列 URL 传送通知"
-  },
-  "policy_description_Permissions_Notifications_Block_URL": {
-    "message": "URL"
   },
   "policy_description_Permissions_Notifications_BlockNewRequests": {
     "message": "禁止请求向您传送通知"
@@ -709,9 +673,6 @@
   },
   "policy_description_PopupBlocking_Allow": {
     "message": "允许显示弹出窗口的域名"
-  },
-  "policy_description_PopupBlocking_Allow_URL": {
-    "message": "URL"
   },
   "policy_description_PopupBlocking_Default_false": {
     "message": "默认不阻止弹出窗口"
@@ -914,23 +875,14 @@
   "policy_description_SupportMenu_Title": {
     "message": "标题"
   },
-  "policy_description_SupportMenu_URL": {
-    "message": "URL"
-  },
   "policy_description_WebsiteFilter": {
     "message": "阻止访问特定网站。您可以使用 “<all_urls>” 屏蔽所有 URL。点击更多信息链接可以查看所有有效项，仅支持 HTTPS 和 HTTP 的 URL。"
   },
   "policy_description_WebsiteFilter_Block": {
     "message": "屏蔽下列 URL"
   },
-  "policy_description_WebsiteFilter_Block_URL": {
-    "message": "URL"
-  },
   "policy_description_WebsiteFilter_Exceptions": {
     "message": "例外"
-  },
-  "policy_description_WebsiteFilter_Exceptions_URL": {
-    "message": "URL"
   },
   "policy_label_default": {
     "message": "默认"

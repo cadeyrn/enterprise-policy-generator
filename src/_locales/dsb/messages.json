@@ -1,4 +1,7 @@
 {
+  "common_url": {
+    "message": "URL"
+  },
   "configuration_export": {
     "message": "konfiguraciju eksportěrowaś"
   },
@@ -524,14 +527,8 @@
   "policy_description_FlashPlugin_Allow": {
     "message": "Za toś te URL tykac Flash pó standarźe zmóžniś, snaźkuli Flash jo dopołnje znjemóžnjony"
   },
-  "policy_description_FlashPlugin_Allow_URL": {
-    "message": "URL"
-  },
   "policy_description_FlashPlugin_Block": {
     "message": "Tykac Flash za toś te URL blokěrowaś"
-  },
-  "policy_description_FlashPlugin_Block_URL": {
-    "message": "URL"
   },
   "policy_description_FlashPlugin_Default": {
     "message": "Flash pśecej zmóžniś abo znjemóžniś"
@@ -563,17 +560,11 @@
   "policy_description_Homepage_StartPage_Previous_Session": {
     "message": "… slědnym pósejźenim wobglědowaka"
   },
-  "policy_description_Homepage_URL": {
-    "message": "URL"
-  },
   "policy_description_InstallAddonsPermission": {
     "message": "Websedłam dowóliś, rozšyrjenja instalěrowaś"
   },
   "policy_description_InstallAddonsPermission_Allow": {
     "message": "Websedła, kótarež mógu rozšyrjenja instalěrowaś, snaźkuli instalacija dodankow jo znjemóžnjona (addons.mozilla.org jo pśecej dowólony)"
-  },
-  "policy_description_InstallAddonsPermission_Allow_URL": {
-    "message": "URL"
   },
   "policy_description_InstallAddonsPermission_Default_false": {
     "message": "Rozšyrjenja njedaju se wót wužywarja instalěrowaś"
@@ -583,9 +574,6 @@
   },
   "policy_description_LocalFileLinks": {
     "message": "Allow specific websites to link to local files"
-  },
-  "policy_description_LocalFileLinks_label": {
-    "message": "URL"
   },
   "policy_description_NetworkPrediction": {
     "message": "DNS-pśedzacytanje zmóžniś abo znjemóžniś"
@@ -638,14 +626,8 @@
   "policy_description_Permissions_Camera_Allow": {
     "message": "Pśistup k toś tym URL dowóliś"
   },
-  "policy_description_Permissions_Camera_Allow_URL": {
-    "message": "URL"
-  },
   "policy_description_Permissions_Camera_Block": {
     "message": "Pśistup k toś tym URL blokěrowaś"
-  },
-  "policy_description_Permissions_Camera_Block_URL": {
-    "message": "URL"
   },
   "policy_description_Permissions_Camera_BlockNewRequests": {
     "message": "Nowe napšašowanja blokěrowaś, kótarež pśistup k wašej kamerje pominaju"
@@ -656,14 +638,8 @@
   "policy_description_Permissions_Location_Allow": {
     "message": "Pśistup k toś tym URL dowóliś"
   },
-  "policy_description_Permissions_Location_Allow_URL": {
-    "message": "URL"
-  },
   "policy_description_Permissions_Location_Block": {
     "message": "Pśistup k toś tym URL blokěrowaś"
-  },
-  "policy_description_Permissions_Location_Block_URL": {
-    "message": "URL"
   },
   "policy_description_Permissions_Location_BlockNewRequests": {
     "message": "Nowe napšašowanja blokěrowaś, kótarež pśistup k wašomu městnoju pominaju"
@@ -674,14 +650,8 @@
   "policy_description_Permissions_Microphone_Allow": {
     "message": "Pśistup k toś tym URL dowóliś"
   },
-  "policy_description_Permissions_Microphone_Allow_URL": {
-    "message": "URL"
-  },
   "policy_description_Permissions_Microphone_Block": {
     "message": "Pśistup k toś tym URL blokěrowaś"
-  },
-  "policy_description_Permissions_Microphone_Block_URL": {
-    "message": "URL"
   },
   "policy_description_Permissions_Microphone_BlockNewRequests": {
     "message": "Nowe napšašowanja blokěrowaś, kótarež pśistup k wašomu mikrofonoju pominaju"
@@ -692,14 +662,8 @@
   "policy_description_Permissions_Notifications_Allow": {
     "message": "Powěźeńki za toś te URL dowóliś"
   },
-  "policy_description_Permissions_Notifications_Allow_URL": {
-    "message": "URL"
-  },
   "policy_description_Permissions_Notifications_Block": {
     "message": "Powěźeńki za toś te URL blokěrowaś"
-  },
-  "policy_description_Permissions_Notifications_Block_URL": {
-    "message": "URL"
   },
   "policy_description_Permissions_Notifications_BlockNewRequests": {
     "message": "Nowe napšašowanja blokěrowaś, kótarež pominaju, powěźeńki dowóliś"
@@ -709,9 +673,6 @@
   },
   "policy_description_PopupBlocking_Allow": {
     "message": "Domeny, za kótarež wuskokujuce wokna su dowólone"
-  },
-  "policy_description_PopupBlocking_Allow_URL": {
-    "message": "URL"
   },
   "policy_description_PopupBlocking_Default_false": {
     "message": "Wuskokujuce wokna se pó standarźe njeblokěruju"
@@ -914,23 +875,14 @@
   "policy_description_SupportMenu_Title": {
     "message": "Titel"
   },
-  "policy_description_SupportMenu_URL": {
-    "message": "URL"
-  },
   "policy_description_WebsiteFilter": {
     "message": "Zajźujo, až se websedła woglěduju. Móžośo \"<all_urls>\" za blokěrowanje wšych URL wužywaś. Glejśo informaciski wótkaz za wšykne płaśiwe zapiski, ale jano HTTPS a HTTP se pódpěratej."
   },
   "policy_description_WebsiteFilter_Block": {
     "message": "Slědujuce URL blokěrowaś"
   },
-  "policy_description_WebsiteFilter_Block_URL": {
-    "message": "URL"
-  },
   "policy_description_WebsiteFilter_Exceptions": {
     "message": "Wuwześa"
-  },
-  "policy_description_WebsiteFilter_Exceptions_URL": {
-    "message": "URL"
   },
   "policy_label_default": {
     "message": "default"

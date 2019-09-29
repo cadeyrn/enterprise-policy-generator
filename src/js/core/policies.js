@@ -258,7 +258,7 @@ const policies = {
       },
       {
         name : 'URL',
-        label : browser.i18n.getMessage('policy_description_Homepage_URL'),
+        label : browser.i18n.getMessage('common_url'),
         mandatory : false,
         type : 'url'
       },
@@ -268,7 +268,7 @@ const policies = {
         mandatory : false,
         type : 'array',
         items : {
-          label : browser.i18n.getMessage('policy_description_Homepage_URL'),
+          label : browser.i18n.getMessage('common_url'),
           type : 'url'
         }
       }
@@ -566,7 +566,7 @@ const policies = {
       },
       {
         name : 'URL',
-        label : browser.i18n.getMessage('policy_description_Bookmarks_URL'),
+        label : browser.i18n.getMessage('common_url'),
         mandatory : true,
         type : 'url'
       },
@@ -632,7 +632,7 @@ const policies = {
         mandatory : false,
         type : 'array',
         items : {
-          label : browser.i18n.getMessage('policy_description_InstallAddonsPermission_Allow_URL'),
+          label : browser.i18n.getMessage('common_url'),
           type : 'url'
         }
       }
@@ -722,7 +722,7 @@ const policies = {
           mandatory : false,
           type : 'array',
           items : {
-            label : 'URL',
+            label : browser.i18n.getMessage('common_url'),
             type : 'string'
           }
         },
@@ -791,7 +791,7 @@ const policies = {
       {
         name : 'install_url',
         caption : browser.i18n.getMessage('policy_description_ExtensionSettings_install_url_caption'),
-        label : browser.i18n.getMessage('policy_description_ExtensionSettings_install_url_label'),
+        label : browser.i18n.getMessage('common_url'),
         mandatory : false,
         type : 'url'
       },
@@ -822,7 +822,7 @@ const policies = {
         mandatory : false,
         type : 'array',
         items : {
-          label : browser.i18n.getMessage('policy_description_WebsiteFilter_Block_URL'),
+          label : browser.i18n.getMessage('common_url'),
           type : 'string'
         }
       },
@@ -832,7 +832,7 @@ const policies = {
         mandatory : false,
         type : 'array',
         items : {
-          label : browser.i18n.getMessage('policy_description_WebsiteFilter_Exceptions_URL'),
+          label : browser.i18n.getMessage('common_url'),
           type : 'string'
         }
       }
@@ -1046,7 +1046,7 @@ const policies = {
         mandatory : false,
         type : 'array',
         items : {
-          label : browser.i18n.getMessage('policy_description_Authentication_SPNEGO_URL'),
+          label : browser.i18n.getMessage('common_url'),
           type : 'string'
         }
       },
@@ -1056,7 +1056,7 @@ const policies = {
         mandatory : false,
         type : 'array',
         items : {
-          label : browser.i18n.getMessage('policy_description_Authentication_Delegated_URL'),
+          label : browser.i18n.getMessage('common_url'),
           type : 'string'
         }
       },
@@ -1066,7 +1066,7 @@ const policies = {
         mandatory : false,
         type : 'array',
         items : {
-          label : browser.i18n.getMessage('policy_description_Authentication_NTLM_URL'),
+          label : browser.i18n.getMessage('common_url'),
           type : 'string'
         }
       },
@@ -1445,7 +1445,7 @@ const policies = {
             mandatory : false,
             type : 'array',
             items : {
-              label : browser.i18n.getMessage('policy_description_Permissions_Location_Allow_URL'),
+              label : browser.i18n.getMessage('common_url'),
               type : 'url'
             }
           },
@@ -1455,7 +1455,7 @@ const policies = {
             mandatory : false,
             type : 'array',
             items : {
-              label : browser.i18n.getMessage('policy_description_Permissions_Location_Block_URL'),
+              label : browser.i18n.getMessage('common_url'),
               type : 'url'
             }
           },
@@ -1479,7 +1479,7 @@ const policies = {
             mandatory : false,
             type : 'array',
             items : {
-              label : browser.i18n.getMessage('policy_description_Permissions_Camera_Allow_URL'),
+              label : browser.i18n.getMessage('common_url'),
               type : 'url'
             }
           },
@@ -1489,7 +1489,7 @@ const policies = {
             mandatory : false,
             type : 'array',
             items : {
-              label : browser.i18n.getMessage('policy_description_Permissions_Camera_Block_URL'),
+              label : browser.i18n.getMessage('common_url'),
               type : 'url'
             }
           },
@@ -1513,7 +1513,7 @@ const policies = {
             mandatory : false,
             type : 'array',
             items : {
-              label : browser.i18n.getMessage('policy_description_Permissions_Microphone_Allow_URL'),
+              label : browser.i18n.getMessage('common_url'),
               type : 'url'
             }
           },
@@ -1523,7 +1523,7 @@ const policies = {
             mandatory : false,
             type : 'array',
             items : {
-              label : browser.i18n.getMessage('policy_description_Permissions_Microphone_Block_URL'),
+              label : browser.i18n.getMessage('common_url'),
               type : 'url'
             }
           },
@@ -1547,7 +1547,7 @@ const policies = {
             mandatory : false,
             type : 'array',
             items : {
-              label : browser.i18n.getMessage('policy_description_Permissions_Notifications_Allow_URL'),
+              label : browser.i18n.getMessage('common_url'),
               type : 'url'
             }
           },
@@ -1557,7 +1557,7 @@ const policies = {
             mandatory : false,
             type : 'array',
             items : {
-              label : browser.i18n.getMessage('policy_description_Permissions_Notifications_Block_URL'),
+              label : browser.i18n.getMessage('common_url'),
               type : 'url'
             }
           },
@@ -1671,7 +1671,7 @@ const policies = {
         mandatory : false,
         type : 'array',
         items : {
-          label : browser.i18n.getMessage('policy_description_FlashPlugin_Allow_URL'),
+          label : browser.i18n.getMessage('common_url'),
           type : 'url'
         }
       },
@@ -1681,7 +1681,7 @@ const policies = {
         mandatory : false,
         type : 'array',
         items : {
-          label : browser.i18n.getMessage('policy_description_FlashPlugin_Block_URL'),
+          label : browser.i18n.getMessage('common_url'),
           type : 'url'
         }
       }
@@ -1871,7 +1871,7 @@ const policies = {
     ui_category : 'updates-and-data',
     mandatory : true,
     type : 'url',
-    label : 'URL'
+    label : browser.i18n.getMessage('common_url')
   },
 
   ExtensionUpdate : {
@@ -2013,7 +2013,7 @@ const policies = {
         mandatory : false,
         type : 'array',
         items : {
-          label : browser.i18n.getMessage('policy_description_PopupBlocking_Allow_URL'),
+          label : browser.i18n.getMessage('common_url'),
           type : 'url'
         }
       }
@@ -2030,7 +2030,7 @@ const policies = {
     ui_category : 'others',
     type : 'flat-array',
     value : {
-      label : browser.i18n.getMessage('policy_description_LocalFileLinks_label'),
+      label : browser.i18n.getMessage('common_url'),
       mandatory : true
     }
   },
@@ -2086,7 +2086,7 @@ const policies = {
     ui_category : 'others',
     mandatory : false,
     type : 'url',
-    label : 'URL'
+    label : browser.i18n.getMessage('common_url')
   },
 
   OverridePostUpdatePage : {
@@ -2098,7 +2098,7 @@ const policies = {
     ui_category : 'others',
     mandatory : false,
     type : 'url',
-    label : 'URL'
+    label : browser.i18n.getMessage('common_url')
   },
 
   SupportMenu : {
@@ -2118,7 +2118,7 @@ const policies = {
       },
       {
         name : 'URL',
-        label : browser.i18n.getMessage('policy_description_SupportMenu_URL'),
+        label : browser.i18n.getMessage('common_url'),
         mandatory : true,
         type : 'url'
       },

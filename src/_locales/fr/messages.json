@@ -1,4 +1,7 @@
 {
+  "common_url": {
+    "message": "Adresse"
+  },
   "configuration_export": {
     "message": "exporter configuration"
   },
@@ -524,14 +527,8 @@
   "policy_description_FlashPlugin_Allow": {
     "message" : "Activer le plugin Flash pour ces adresses par défaut, sauf si Flash est complètement désactivé."
   },
-  "policy_description_FlashPlugin_Allow_URL": {
-    "message" : "Adresse"
-  },
   "policy_description_FlashPlugin_Block": {
     "message" : "Bloquer le plugin Flash pour ces adresses"
-  },
-  "policy_description_FlashPlugin_Block_URL": {
-    "message" : "Adresse"
   },
   "policy_description_FlashPlugin_Default": {
     "message" : "Toujours activer ou désactiver Flash"
@@ -551,9 +548,6 @@
   "policy_description_Homepage_Additional": {
     "message" : "Adresses supplémentaires"
   },
-  "policy_description_Homepage_URL": {
-    "message" : "Adresse"
-  },
   "policy_description_Homepage_StartPage": {
     "message": "Démarrer Firefox avec…"
   },
@@ -572,9 +566,6 @@
   "policy_description_InstallAddonsPermission_Allow": {
     "message" : "Les sites Web qui peuvent installer des extensions à moins que l'installation d'add-ons soit désactivée (addons.mozilla.org est déjà autorisé)."
   },
-  "policy_description_InstallAddonsPermission_Allow_URL": {
-    "message" : "Adresse"
-  },
   "policy_description_InstallAddonsPermission_Default_false": {
     "message" : "les add-ons ne peuvent pas être installés par l'utilisateur"
   },
@@ -583,9 +574,6 @@
   },
   "policy_description_LocalFileLinks": {
     "message": "Allow specific websites to link to local files"
-  },
-  "policy_description_LocalFileLinks_label": {
-    "message": "URL"
   },
   "policy_description_NetworkPrediction": {
     "message": "Activer ou désactiver prédiction réseau (Pré-recherche DNS)"
@@ -638,14 +626,8 @@
   "policy_description_Permissions_Camera_Allow": {
     "message": "Autoriser l'accès pour ces adresses"
   },
-  "policy_description_Permissions_Camera_Allow_URL": {
-    "message": "Adresse"
-  },
   "policy_description_Permissions_Camera_Block": {
     "message": "Bloquer l'accès pour ces adresses"
-  },
-  "policy_description_Permissions_Camera_Block_URL": {
-    "message": "Adresse"
   },
   "policy_description_Permissions_Camera_BlockNewRequests": {
     "message": "Bloquer les nouvelles requêtes demandant l'activation de votre caméra"
@@ -656,14 +638,8 @@
   "policy_description_Permissions_Location_Allow": {
     "message": "Autoriser accès pour ces adresses"
   },
-  "policy_description_Permissions_Location_Allow_URL": {
-    "message": "Adresse"
-  },
   "policy_description_Permissions_Location_Block": {
     "message": "Bloquer l'accès pour ces adresses"
-  },
-  "policy_description_Permissions_Location_Block_URL": {
-    "message": "Adresse"
   },
   "policy_description_Permissions_Location_BlockNewRequests": {
     "message": "Bloquer les nouvelles requêtes demandant l'accès à votre emplacement"
@@ -674,14 +650,8 @@
   "policy_description_Permissions_Microphone_Allow": {
     "message": "Autoriser l'accès pour ces adresses"
   },
-  "policy_description_Permissions_Microphone_Allow_URL": {
-    "message": "Adresse"
-  },
   "policy_description_Permissions_Microphone_Block": {
     "message": "Bloquer l'accès pour ces adresses"
-  },
-  "policy_description_Permissions_Microphone_Block_URL": {
-    "message": "Adresse"
   },
   "policy_description_Permissions_Microphone_BlockNewRequests": {
     "message": "Bloquer les nouvelles requêtes demandant l'activation de votre microphone"
@@ -692,14 +662,8 @@
   "policy_description_Permissions_Notifications_Allow": {
     "message": "Autoriser les notifications pour ces adresses"
   },
-  "policy_description_Permissions_Notifications_Allow_URL": {
-    "message": "Adresse"
-  },
   "policy_description_Permissions_Notifications_Block": {
     "message": "Bloquer les notifications pour ces adresses"
-  },
-  "policy_description_Permissions_Notifications_Block_URL": {
-    "message": "Adresse"
   },
   "policy_description_Permissions_Notifications_BlockNewRequests": {
     "message": "Bloquer les nouvelles requêtes demandants l'activation des notifications"
@@ -709,9 +673,6 @@
   },
   "policy_description_PopupBlocking_Allow": {
     "message" : "Domaines pour lesquels les fenêtres pop-up sont autorisées"
-  },
-  "policy_description_PopupBlocking_Allow_URL": {
-    "message" : "Adresse"
   },
   "policy_description_PopupBlocking_Default_false": {
     "message" : "les pop-ups ne sont pas bloqués par défaut"
@@ -914,23 +875,14 @@
   "policy_description_SupportMenu_Title": {
     "message": "Titre"
   },
-  "policy_description_SupportMenu_URL": {
-    "message": "URL"
-  },
   "policy_description_WebsiteFilter": {
     "message" : "Empêche les sites Web d'être visités. Vous pouvez utiliser \"<all_urls>\" pour bloquer toutes les URL. Voir le lien info pour toutes les entrées valides, mais seuls HTTPS et HTTP sont supportés."
   },
   "policy_description_WebsiteFilter_Block": {
     "message" : "Bloquer les Adresses suivantes"
   },
-  "policy_description_WebsiteFilter_Block_URL": {
-    "message" : "Adresse"
-  },
   "policy_description_WebsiteFilter_Exceptions": {
     "message" : "Exceptions"
-  },
-  "policy_description_WebsiteFilter_Exceptions_URL": {
-    "message" : "Adresse"
   },
   "policy_label_default": {
     "message": "par défault"

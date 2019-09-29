@@ -1,4 +1,7 @@
 {
+  "common_url": {
+    "message": "URL"
+  },
   "configuration_export": {
     "message": "export configuration"
   },
@@ -524,14 +527,8 @@
   "policy_description_FlashPlugin_Allow": {
     "message": "Enable the Flash plugin for these URLs by default, unless Flash is completely disabled"
   },
-  "policy_description_FlashPlugin_Allow_URL": {
-    "message": "URL"
-  },
   "policy_description_FlashPlugin_Block": {
     "message": "Block the Flash plugin for these URLs"
-  },
-  "policy_description_FlashPlugin_Block_URL": {
-    "message": "URL"
   },
   "policy_description_FlashPlugin_Default": {
     "message": "Always enable or disable Flash"
@@ -563,17 +560,11 @@
   "policy_description_Homepage_StartPage_Previous_Session": {
     "message": "… the previous browser session"
   },
-  "policy_description_Homepage_URL": {
-    "message": "URL"
-  },
   "policy_description_InstallAddonsPermission": {
     "message": "Allow websites to install add-ons"
   },
   "policy_description_InstallAddonsPermission_Allow": {
     "message": "Websites that can install extensions unless the installation of add-ons is disabled (addons.mozilla.org is already allowed)"
-  },
-  "policy_description_InstallAddonsPermission_Allow_URL": {
-    "message": "URL"
   },
   "policy_description_InstallAddonsPermission_Default_false": {
     "message": "add-ons can't be installed by the user"
@@ -583,9 +574,6 @@
   },
   "policy_description_LocalFileLinks": {
     "message": "Allow specific websites to link to local files"
-  },
-  "policy_description_LocalFileLinks_label": {
-    "message": "URL"
   },
   "policy_description_NetworkPrediction": {
     "message": "Enable or disable network prediction (DNS prefetching)"
@@ -638,14 +626,8 @@
   "policy_description_Permissions_Camera_Allow": {
     "message": "Allow access for these URLs"
   },
-  "policy_description_Permissions_Camera_Allow_URL": {
-    "message": "URL"
-  },
   "policy_description_Permissions_Camera_Block": {
     "message": "Block access for these URLs"
-  },
-  "policy_description_Permissions_Camera_Block_URL": {
-    "message": "URL"
   },
   "policy_description_Permissions_Camera_BlockNewRequests": {
     "message": "Block new requests asking to access your camera"
@@ -656,14 +638,8 @@
   "policy_description_Permissions_Location_Allow": {
     "message": "Allow access for these URLs"
   },
-  "policy_description_Permissions_Location_Allow_URL": {
-    "message": "URL"
-  },
   "policy_description_Permissions_Location_Block": {
     "message": "Block access for these URLs"
-  },
-  "policy_description_Permissions_Location_Block_URL": {
-    "message": "URL"
   },
   "policy_description_Permissions_Location_BlockNewRequests": {
     "message": "Block new requests asking to access your location"
@@ -674,14 +650,8 @@
   "policy_description_Permissions_Microphone_Allow": {
     "message": "Allow access for these URLs"
   },
-  "policy_description_Permissions_Microphone_Allow_URL": {
-    "message": "URL"
-  },
   "policy_description_Permissions_Microphone_Block": {
     "message": "Block access for these URLs"
-  },
-  "policy_description_Permissions_Microphone_Block_URL": {
-    "message": "URL"
   },
   "policy_description_Permissions_Microphone_BlockNewRequests": {
     "message": "Block new requests asking to access your microphone"
@@ -692,14 +662,8 @@
   "policy_description_Permissions_Notifications_Allow": {
     "message": "Allow notifications for these URLs"
   },
-  "policy_description_Permissions_Notifications_Allow_URL": {
-    "message": "URL"
-  },
   "policy_description_Permissions_Notifications_Block": {
     "message": "Block notifications for these URLs"
-  },
-  "policy_description_Permissions_Notifications_Block_URL": {
-    "message": "URL"
   },
   "policy_description_Permissions_Notifications_BlockNewRequests": {
     "message": "Block new requests asking to allow notifications"
@@ -709,9 +673,6 @@
   },
   "policy_description_PopupBlocking_Allow": {
     "message": "Domains for which pop-up windows are allowed"
-  },
-  "policy_description_PopupBlocking_Allow_URL": {
-    "message": "URL"
   },
   "policy_description_PopupBlocking_Default_false": {
     "message": "pop-ups are not blocked by default"
@@ -914,23 +875,14 @@
   "policy_description_SupportMenu_Title": {
     "message": "Title"
   },
-  "policy_description_SupportMenu_URL": {
-    "message": "URL"
-  },
   "policy_description_WebsiteFilter": {
     "message": "Blocks websites from being visited. You can use “<all_urls>” for blocking all URLs. See info link for all valid entries, but only HTTPS and HTTP are supported."
   },
   "policy_description_WebsiteFilter_Block": {
     "message": "Block the following URLs"
   },
-  "policy_description_WebsiteFilter_Block_URL": {
-    "message": "URL"
-  },
   "policy_description_WebsiteFilter_Exceptions": {
     "message": "Exceptions"
-  },
-  "policy_description_WebsiteFilter_Exceptions_URL": {
-    "message": "URL"
   },
   "policy_label_default": {
     "message": "default"

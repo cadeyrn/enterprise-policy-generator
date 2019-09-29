@@ -1,4 +1,7 @@
 {
+  "common_url": {
+    "message": "URL"
+  },
   "configuration_export": {
     "message": "Konfiguration exportieren"
   },
@@ -143,20 +146,11 @@
   "policy_description_Authentication_Delegated": {
     "message": "Delegiert"
   },
-  "policy_description_Authentication_Delegated_URL": {
-    "message": "URL"
-  },
   "policy_description_Authentication_NTLM": {
     "message": "NTLM"
   },
-  "policy_description_Authentication_NTLM_URL": {
-    "message": "URL"
-  },
   "policy_description_Authentication_SPNEGO": {
     "message": "SPNEGO"
-  },
-  "policy_description_Authentication_SPNEGO_URL": {
-    "message": "URL"
   },
   "policy_description_BlockAboutAddons": {
     "message": "Blockiere Zugang zur Erweiterungs-Verwaltung (about:addons)"
@@ -190,9 +184,6 @@
   },
   "policy_description_Bookmarks_Title": {
     "message": "Titel"
-  },
-  "policy_description_Bookmarks_URL": {
-    "message": "URL"
   },
   "policy_description_CaptivePortal": {
     "message": "Netzwerk-Anmeldeseite aktivieren oder deaktivieren"
@@ -464,9 +455,6 @@
   "policy_description_ExtensionSettings_install_url_caption": {
     "message": "Installations-URL. Wenn die Erweiterung vom lokalen Dateisystem installiert werden soll, bitte file:///-URI verwenden."
   },
-  "policy_description_ExtensionSettings_install_url_label": {
-    "message": "URL"
-  },
   "policy_description_ExtensionSettings_installation_mode": {
     "message": "Installation"
   },
@@ -524,14 +512,8 @@
   "policy_description_FlashPlugin_Allow": {
     "message": "Für diese URLs das Flash-Plugin standardmäßig aktivieren, außer wenn Flash vollständig deaktiviert ist"
   },
-  "policy_description_FlashPlugin_Allow_URL": {
-    "message": "URL"
-  },
   "policy_description_FlashPlugin_Block": {
     "message": "Für diese URLs das Flash-Plugin blockieren"
-  },
-  "policy_description_FlashPlugin_Block_URL": {
-    "message": "URL"
   },
   "policy_description_FlashPlugin_Default": {
     "message": "Flash immer aktivieren oder deaktivieren"
@@ -563,17 +545,11 @@
   "policy_description_Homepage_StartPage_Previous_Session": {
     "message": "… der letzten Browser-Sitzung"
   },
-  "policy_description_Homepage_URL": {
-    "message": "URL"
-  },
   "policy_description_InstallAddonsPermission": {
     "message": "Webseiten erlauben, Erweiterungen zu installieren"
   },
   "policy_description_InstallAddonsPermission_Allow": {
     "message": "Webseiten, welche Erweiterungen installieren können, sofern die Installation von Erweiterungen nicht deaktiviert ist (addons.mozilla.org ist bereits erlaubt)"
-  },
-  "policy_description_InstallAddonsPermission_Allow_URL": {
-    "message": "URL"
   },
   "policy_description_InstallAddonsPermission_Default_false": {
     "message": "Erweiterungen können vom Nutzer nicht installiert werden"
@@ -583,9 +559,6 @@
   },
   "policy_description_LocalFileLinks": {
     "message": "Bestimmten Websites erlauben, lokale Dateien zu verlinken"
-  },
-  "policy_description_LocalFileLinks_label": {
-    "message": "URL"
   },
   "policy_description_NetworkPrediction": {
     "message": "DNS Prefetching aktivieren oder deaktivieren"
@@ -638,14 +611,8 @@
   "policy_description_Permissions_Camera_Allow": {
     "message": "Zugriff für diese URLs erlauben"
   },
-  "policy_description_Permissions_Camera_Allow_URL": {
-    "message": "URL"
-  },
   "policy_description_Permissions_Camera_Block": {
     "message": "Zugriff für diese URLs blockieren"
-  },
-  "policy_description_Permissions_Camera_Block_URL": {
-    "message": "URL"
   },
   "policy_description_Permissions_Camera_BlockNewRequests": {
     "message": "Neue Anfragen für den Zugriff auf Ihre Kamera blockieren"
@@ -656,14 +623,8 @@
   "policy_description_Permissions_Location_Allow": {
     "message": "Zugriff für diese URLs erlauben"
   },
-  "policy_description_Permissions_Location_Allow_URL": {
-    "message": "URL"
-  },
   "policy_description_Permissions_Location_Block": {
     "message": "Zugriff für diese URLs blockieren"
-  },
-  "policy_description_Permissions_Location_Block_URL": {
-    "message": "URL"
   },
   "policy_description_Permissions_Location_BlockNewRequests": {
     "message": "Neue Anfragen für den Zugriff auf Ihren Standort blockieren"
@@ -674,14 +635,8 @@
   "policy_description_Permissions_Microphone_Allow": {
     "message": "Zugriff für diese URLs erlauben"
   },
-  "policy_description_Permissions_Microphone_Allow_URL": {
-    "message": "URL"
-  },
   "policy_description_Permissions_Microphone_Block": {
     "message": "Zugriff für diese URLs blockieren"
-  },
-  "policy_description_Permissions_Microphone_Block_URL": {
-    "message": "URL"
   },
   "policy_description_Permissions_Microphone_BlockNewRequests": {
     "message": "Neue Anfragen für den Zugriff auf Ihr Mikrofon blockieren"
@@ -692,14 +647,8 @@
   "policy_description_Permissions_Notifications_Allow": {
     "message": "Benachrichtigungen für diese URLs erlauben"
   },
-  "policy_description_Permissions_Notifications_Allow_URL": {
-    "message": "URL"
-  },
   "policy_description_Permissions_Notifications_Block": {
     "message": "Benachrichtigungen für diese URLs blockieren"
-  },
-  "policy_description_Permissions_Notifications_Block_URL": {
-    "message": "URL"
   },
   "policy_description_Permissions_Notifications_BlockNewRequests": {
     "message": "Neue Anfragen zum Anzeigen von Benachrichtigungen blockieren"
@@ -709,9 +658,6 @@
   },
   "policy_description_PopupBlocking_Allow": {
     "message": "Domains, für welche Pop-up-Fenster erlaubt sind"
-  },
-  "policy_description_PopupBlocking_Allow_URL": {
-    "message": "URL"
   },
   "policy_description_PopupBlocking_Default_false": {
     "message": "Pop-ups werden standardmäßig nicht blockiert"
@@ -914,23 +860,14 @@
   "policy_description_SupportMenu_Title": {
     "message": "Titel"
   },
-  "policy_description_SupportMenu_URL": {
-    "message": "URL"
-  },
   "policy_description_WebsiteFilter": {
     "message": "Blockiere Besuche von Webseiten. Es kann „<all_urls>“ verwendet werden, um alle URLs zu blockieren. Siehe Info-Link für alle gültigen Eingaben, es werden jedoch nur HTTPS und HTTP unterstützt."
   },
   "policy_description_WebsiteFilter_Block": {
     "message": "Blockiere die folgenden URLs"
   },
-  "policy_description_WebsiteFilter_Block_URL": {
-    "message": "URL"
-  },
   "policy_description_WebsiteFilter_Exceptions": {
     "message": "Ausnahmen"
-  },
-  "policy_description_WebsiteFilter_Exceptions_URL": {
-    "message": "URL"
   },
   "policy_label_default": {
     "message": "Standard"
