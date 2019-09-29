@@ -11,8 +11,8 @@ Engine allows administrators to configure Firefox via a configuration file. The 
 Group Policy Objects (GPO) is that this method does not only work on Windows, but cross-platform on Windows, Apple macOS
 and Linux.
 
-Although this extension is not directly related to the CCK2 Wizard, it shares the same idea as CCK2 Wizard, but it is for Firefox
-Quantum and Enterprise Policies. The Enterprise Policy Generator helps to create the configuration file, so that no in-depth study
+Although this extension is not directly related to the CCK2 Wizard, it shares the same idea as CCK2 Wizard, but it is for Firefox 60 or
+higher and Enterprise Policies. The Enterprise Policy Generator helps to create the configuration file, so that no in-depth study
 of the documentation and all possible options is necessary. Administrators can simply click together the desired Enterprise Policies.
 
 **Enterprise Policy Generator is a WebExtension and compatible with Firefox Browser 60 and higher (Firefox Browser 68 or
