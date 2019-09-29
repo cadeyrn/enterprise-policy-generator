@@ -912,8 +912,6 @@ const configurator = {
       elCheckbox.setAttribute('id', policy.name + '_' + policy.options[i].value);
       elCheckbox.setAttribute('name', policy.name + '_' + policy.options[i].value);
       elCheckbox.setAttribute('value', policy.options[i].value);
-      //elCheckbox.setAttribute('data-name', key);
-      //elCheckbox.setAttribute('data-type', type);
       elCheckbox.classList.add('property-checkbox');
       elCheckboxWrapper.appendChild(elCheckbox);
 
