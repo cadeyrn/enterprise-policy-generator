@@ -16,7 +16,7 @@ Quantum and Enterprise Policies. The Enterprise Policy Generator helps to create
 of the documentation and all possible options is necessary. Administrators can simply click together the desired Enterprise Policies.
 
 **Enterprise Policy Generator is a WebExtension and compatible with Firefox Browser 60 and higher (Firefox Browser 68 or
-higher is needed for the latest version of Enterprise Policy Generator).**
+higher is required for the latest version of Enterprise Policy Generator).**
 
 ### Features
 
