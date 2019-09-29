@@ -90,7 +90,7 @@ const configurator = {
     // test if the download permission is granted or not
     configurator.testDownloadPermission();
 
-    // show suboptions for enabled policies and hide suboptions for disabled policies
+    // show sub options for enabled policies and hide sub options for disabled policies
     [...document.querySelectorAll('.primary-checkbox')].forEach((el) => {
       el.addEventListener('change', () => {
         const elSubOptions = el.parentNode.getElementsByClassName('sub-options');
@@ -110,6 +110,15 @@ const configurator = {
         const elExtraOptions = el.parentNode.getElementsByClassName('extra-options');
         if (elExtraOptions.length > 0) {
           elExtraOptions[0].classList.toggle('disabled');
+
+          // set focus to first input or select field after a policy checkbox has been checked
+          if (!elExtraOptions[0].classList.contains('disabled')) {
+            const firstInputField = elExtraOptions[0].querySelector('input[type=text], input[type=url], select');
+
+            if (firstInputField) {
+              firstInputField.focus();
+            }
+          }
         }
       });
     });
