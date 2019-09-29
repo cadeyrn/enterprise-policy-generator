@@ -1652,7 +1652,7 @@ const policies = {
         type : 'enum',
         options : [
           {
-            label : browser.i18n.getMessage('policy_description_FlashPlugin_Default_null'),
+            label : browser.i18n.getMessage('enum_value_no_preference'),
             value : null
           },
           {
@@ -1704,7 +1704,7 @@ const policies = {
         type : 'enum',
         options : [
           {
-            label : browser.i18n.getMessage('policy_description_DisableSecurityBypass_InvalidCertificate_null'),
+            label : browser.i18n.getMessage('enum_value_no_preference'),
             value : null
           },
           {
@@ -1724,7 +1724,7 @@ const policies = {
         type : 'enum',
         options : [
           {
-            label : browser.i18n.getMessage('policy_description_DisableSecurityBypass_SafeBrowsing_null'),
+            label : browser.i18n.getMessage('enum_value_no_preference'),
             value : null
           },
           {

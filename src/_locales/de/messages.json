@@ -329,9 +329,6 @@
   "policy_description_DisableSecurityBypass_InvalidCertificate_false": {
     "message": "nicht verhindern"
   },
-  "policy_description_DisableSecurityBypass_InvalidCertificate_null": {
-    "message": "keine Voreinstellung"
-  },
   "policy_description_DisableSecurityBypass_InvalidCertificate_true": {
     "message": "verhindern"
   },
@@ -340,9 +337,6 @@
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_false": {
     "message": "nicht verhindern"
-  },
-  "policy_description_DisableSecurityBypass_SafeBrowsing_null": {
-    "message": "keine Voreinstellung"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_true": {
     "message": "verhindern"
@@ -544,9 +538,6 @@
   },
   "policy_description_FlashPlugin_Default_false": {
     "message": "Flash ist immer deaktiviert"
-  },
-  "policy_description_FlashPlugin_Default_null": {
-    "message": "keine Voreinstellung"
   },
   "policy_description_FlashPlugin_Default_true": {
     "message": "Flash ist immer aktiviert"

@@ -21,7 +21,7 @@
     "message": "no"
   },
   "enum_value_no_preference": {
-    "message": "preference"
+    "message": "aucune préférence"
   },
   "enum_value_yes": {
     "message": "yes"
@@ -329,9 +329,6 @@
   "policy_description_DisableSecurityBypass_InvalidCertificate_false": {
     "message" : "Ne pas empêcher"
   },
-  "policy_description_DisableSecurityBypass_InvalidCertificate_null": {
-    "message" : "aucune préférence"
-  },
   "policy_description_DisableSecurityBypass_InvalidCertificate_true": {
     "message" : "Prévenir"
   },
@@ -340,9 +337,6 @@
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_false": {
     "message" : "Ne pas empêcher"
-  },
-  "policy_description_DisableSecurityBypass_SafeBrowsing_null": {
-    "message" : "aucune préférence"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_true": {
     "message" : "Prévenir"
@@ -544,9 +538,6 @@
   },
   "policy_description_FlashPlugin_Default_false": {
     "message" : "Flash est toujours désactivé"
-  },
-  "policy_description_FlashPlugin_Default_null": {
-    "message" : "aucune préférence"
   },
   "policy_description_FlashPlugin_Default_true": {
     "message" : "Flash est toujours activé"

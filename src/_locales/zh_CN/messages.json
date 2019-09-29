@@ -21,7 +21,7 @@
     "message": "no"
   },
   "enum_value_no_preference": {
-    "message": "preference"
+    "message": "不设置"
   },
   "enum_value_yes": {
     "message": "yes"
@@ -329,9 +329,6 @@
   "policy_description_DisableSecurityBypass_InvalidCertificate_false": {
     "message": "不阻止"
   },
-  "policy_description_DisableSecurityBypass_InvalidCertificate_null": {
-    "message": "不设置"
-  },
   "policy_description_DisableSecurityBypass_InvalidCertificate_true": {
     "message": "阻止"
   },
@@ -340,9 +337,6 @@
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_false": {
     "message": "不阻止"
-  },
-  "policy_description_DisableSecurityBypass_SafeBrowsing_null": {
-    "message": "不设置"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_true": {
     "message": "阻止"
@@ -544,9 +538,6 @@
   },
   "policy_description_FlashPlugin_Default_false": {
     "message": "始终禁用 Flash"
-  },
-  "policy_description_FlashPlugin_Default_null": {
-    "message": "不设置"
   },
   "policy_description_FlashPlugin_Default_true": {
     "message": "始终启用 Flash"

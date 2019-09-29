@@ -21,7 +21,7 @@
     "message": "no"
   },
   "enum_value_no_preference": {
-    "message": "preference"
+    "message": "žane nastajenje"
   },
   "enum_value_yes": {
     "message": "yes"
@@ -329,9 +329,6 @@
   "policy_description_DisableSecurityBypass_InvalidCertificate_false": {
     "message": "njezadźěwać"
   },
-  "policy_description_DisableSecurityBypass_InvalidCertificate_null": {
-    "message": "žane nastajenje"
-  },
   "policy_description_DisableSecurityBypass_InvalidCertificate_true": {
     "message": "zadźěwać"
   },
@@ -340,9 +337,6 @@
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_false": {
     "message": "njezadźěwać"
-  },
-  "policy_description_DisableSecurityBypass_SafeBrowsing_null": {
-    "message": "žane nastajenje"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_true": {
     "message": "zadźěwać"
@@ -544,9 +538,6 @@
   },
   "policy_description_FlashPlugin_Default_false": {
     "message": "Flash je přeco znjemóžnjeny"
-  },
-  "policy_description_FlashPlugin_Default_null": {
-    "message": "žane nastajenje"
   },
   "policy_description_FlashPlugin_Default_true": {
     "message": "Flash je přeco zmóžnjeny"

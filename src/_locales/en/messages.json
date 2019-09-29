@@ -21,7 +21,7 @@
     "message": "no"
   },
   "enum_value_no_preference": {
-    "message": "preference"
+    "message": "no preference"
   },
   "enum_value_yes": {
     "message": "yes"
@@ -329,9 +329,6 @@
   "policy_description_DisableSecurityBypass_InvalidCertificate_false": {
     "message": "don't prevent"
   },
-  "policy_description_DisableSecurityBypass_InvalidCertificate_null": {
-    "message": "no preference"
-  },
   "policy_description_DisableSecurityBypass_InvalidCertificate_true": {
     "message": "prevent"
   },
@@ -340,9 +337,6 @@
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_false": {
     "message": "don't prevent"
-  },
-  "policy_description_DisableSecurityBypass_SafeBrowsing_null": {
-    "message": "no preference"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_true": {
     "message": "prevent"
@@ -544,9 +538,6 @@
   },
   "policy_description_FlashPlugin_Default_false": {
     "message": "Flash is always disabled"
-  },
-  "policy_description_FlashPlugin_Default_null": {
-    "message": "no preference"
   },
   "policy_description_FlashPlugin_Default_true": {
     "message": "Flash is always enabled"
