@@ -42,6 +42,8 @@
 - replaced old SanitizeOnShutdown policy to clear all data on shutdown with new selective SanitizeOnShutdown policy.
   Users of the old policy: Please have a look at your configuration and adjust accordingly, see
   [#91](https://github.com/cadeyrn/enterprise-policy-generator/issues/91)
+- new policy to manage the installation and uninstallation of add-ons, see
+  [#92](https://github.com/cadeyrn/enterprise-policy-generator/issues/92)
 - re-added DisableSafeMode policy (removed in Enterprise Policy Generator 4.1.0) but with better description, see
   [#94](https://github.com/cadeyrn/enterprise-policy-generator/issues/94)
 - improved labels for Certificates|Add policy, see
