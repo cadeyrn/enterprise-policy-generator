@@ -94,11 +94,13 @@ const configurator = {
     [...document.querySelectorAll('.primary-checkbox')].forEach((el) => {
       el.addEventListener('change', () => {
         const elSubOptions = el.parentNode.getElementsByClassName('sub-options');
+        const elExtraOptions = el.parentNode.getElementsByClassName('extra-options');
+
         if (elSubOptions.length > 0) {
           elSubOptions[0].classList.toggle('disabled');
 
           // set focus to first input or select field after a policy checkbox has been checked
-          if (!elSubOptions[0].classList.contains('disabled')) {
+          if (!elSubOptions[0].classList.contains('disabled') && elExtraOptions.length === 0) {
             const firstInputField = elSubOptions[0].querySelector('input[type=text], input[type=url], select');
 
             if (firstInputField) {
@@ -107,7 +109,6 @@ const configurator = {
           }
         }
 
-        const elExtraOptions = el.parentNode.getElementsByClassName('extra-options');
         if (elExtraOptions.length > 0) {
           elExtraOptions[0].classList.toggle('disabled');
 
