@@ -174,6 +174,22 @@ const output = {
           }
         });
 
+        // multiselect checkboxes
+        [...el.querySelectorAll(':scope > .multiselect')].forEach((innerEl) => {
+          const items = [];
+
+          [...el.querySelectorAll(':scope .checkbox > input')].forEach((arrEl) => {
+            if (arrEl.checked) {
+              items.push(arrEl.value);
+            }
+          });
+
+          // only add non-empty arrays
+          if (items.length > 0) {
+            properties[innerEl.getAttribute('data-name')] = items;
+          }
+        });
+
         // input fields
         [...el.querySelectorAll(':scope > .input input:not(.key), :scope .sub-sub-options > .input input')].forEach((el) => {
           if (el.value && !el.classList.contains('invalid-url-style')) {

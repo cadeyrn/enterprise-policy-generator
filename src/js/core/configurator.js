@@ -784,6 +784,9 @@ const configurator = {
       case 'enum':
         configurator.addEnumProperty(el, parentName, policy, isArrayProperty);
         break;
+      case 'multiselect':
+        configurator.addMultiselectProperty(el, parentName, policy);
+        break;
       case 'object':
         configurator.addObjectProperty(el, parentName, policy);
         break;
@@ -869,6 +872,56 @@ const configurator = {
     elLabel.setAttribute('for', name);
     elLabel.textContent = policy.label;
     elObjectWrapper.appendChild(elLabel);
+
+    el.appendChild(elObjectWrapper);
+  },
+
+  /**
+   * Adds property of the type "multiselect" to a policy.
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   * @param {string} parentName - the name of the parent policy object
+   * @param {Object} policy - the policy object
+   *
+   * @returns {void}
+   */
+  addMultiselectProperty (el, parentName, policy) {
+    const elObjectWrapper = document.createElement('div');
+    elObjectWrapper.classList.add('multiselect');
+    elObjectWrapper.setAttribute('data-name', policy.name);
+
+    // label
+    if (policy.label) {
+      configurator.addSelectLabel(elObjectWrapper, policy.name, policy);
+    }
+
+    // add checkboxes
+    const elCheckboxesWrapper = document.createElement('div');
+    elCheckboxesWrapper.classList.add('checkboxes-wrapper');
+    elObjectWrapper.appendChild(elCheckboxesWrapper);
+
+    // add options to select element
+    const optionsLength = policy.options.length;
+    for (let i = 0; i < optionsLength; i++) {
+      const elCheckboxWrapper = document.createElement('div');
+      elCheckboxWrapper.classList.add('checkbox');
+      elCheckboxesWrapper.appendChild(elCheckboxWrapper);
+
+      const elCheckbox = document.createElement('input');
+      elCheckbox.setAttribute('type', 'checkbox');
+      elCheckbox.setAttribute('id', policy.name + '_' + policy.options[i].value);
+      elCheckbox.setAttribute('name', policy.name + '_' + policy.options[i].value);
+      elCheckbox.setAttribute('value', policy.options[i].value);
+      //elCheckbox.setAttribute('data-name', key);
+      //elCheckbox.setAttribute('data-type', type);
+      elCheckbox.classList.add('property-checkbox');
+      elCheckboxWrapper.appendChild(elCheckbox);
+
+      const elCheckboxLabel = document.createElement('label');
+      elCheckboxLabel.setAttribute('for', policy.name + '_' + policy.options[i].value);
+      elCheckboxLabel.textContent = policy.options[i].label;
+      elCheckboxWrapper.appendChild(elCheckboxLabel);
+    }
 
     el.appendChild(elObjectWrapper);
   },
