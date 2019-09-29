@@ -30,7 +30,7 @@
     "message": "funktioniert nur in Firefox ESR"
   },
   "explanation_about_policies": {
-    "message": "Unter about:policies gibt es eine Übersicht über alle aktiven Policies sowie Fehler in der Datei „policies.json“."
+    "message": "Unter about:policies gibt es eine Übersicht über alle aktiven Richtlinien sowie Fehler in der Datei „policies.json“."
   },
   "explanation_headline_usage": {
     "message": "Anwendung"
@@ -48,13 +48,13 @@
     "message": "erstellen Sie ein Verzeichnis mit dem Namen „distribution“ in dem Verzeichnis, in welchem sich die Datei firefox.exe befindet und platzieren Sie die Datei „policies.json“ dort."
   },
   "extension_description": {
-    "message": "Generiert Enterprise Policies für Firefox."
+    "message": "Generiert Unternehmensrichtlinien für Firefox."
   },
   "extension_name": {
     "message": "Enterprise Policy Generator"
   },
   "filter_field": {
-    "message": "Policies filtern…"
+    "message": "Richtlinien filtern…"
   },
   "generate_button": {
     "message": "Richtlinien generieren"
