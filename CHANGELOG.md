@@ -57,6 +57,8 @@
 - added cryptomining and fingerprinting to EnableTrackingProtection policy (Firefox 70+, Firefox ESR 68.2+) and changed
   some wording to better align with the current wording of Firefox, see
   [#100](https://github.com/cadeyrn/enterprise-policy-generator/issues/100)
+- Authentication policy can optionally be locked starting with Firefox 71, was always locked before, see
+  [#104](https://github.com/cadeyrn/enterprise-policy-generator/issues/104)
   
 #### Translations
 
