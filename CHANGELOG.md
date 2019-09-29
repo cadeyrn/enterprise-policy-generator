@@ -63,6 +63,7 @@
 #### Translations
 
 - fixed broken French translation (some translations were not used because of broken translation keys)
+- unified some phrases in German translation
 
 #### Dependencies
 
