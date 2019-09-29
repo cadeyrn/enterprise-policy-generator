@@ -185,9 +185,6 @@
   "policy_description_Bookmarks_Title": {
     "message": "Titul"
   },
-  "policy_description_Bookmarks_URL": {
-    "message": "URL"
-  },
   "policy_description_CaptivePortal": {
     "message": "Syćowu přizjewjensku stronu zmóžnić abo znjemóžnić"
   },
@@ -457,9 +454,6 @@
   },
   "policy_description_ExtensionSettings_install_url_caption": {
     "message": "install URL. If installing from the local file system, use a file:/// URI."
-  },
-  "policy_description_ExtensionSettings_install_url_label": {
-    "message": "URL"
   },
   "policy_description_ExtensionSettings_installation_mode": {
     "message": "installation"
