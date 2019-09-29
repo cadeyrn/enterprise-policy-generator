@@ -159,7 +159,7 @@
     "message": "URL"
   },
   "policy_description_BlockAboutAddons": {
-    "message": "Blockiere Zugang zur Add-ons-Verwaltung (about:addons)"
+    "message": "Blockiere Zugang zur Erweiterungs-Verwaltung (about:addons)"
   },
   "policy_description_BlockAboutConfig": {
     "message": "Blockiere Zugang zur Browser-Konfiguration (about:config)"
@@ -318,7 +318,7 @@
     "message": "Deaktiviere die „Firefox bereinigen“-Schaltfläche in about:support"
   },
   "policy_description_DisableSafeMode": {
-    "message": "Deaktiviere den Menü-Eintrag, um Firefox mit deaktivierten Add-ons neu zu starten (Abgesicherter Modus)"
+    "message": "Deaktiviere den Menü-Eintrag, um Firefox mit deaktivierten Erweiterungen neu zu starten (Abgesicherter Modus)"
   },
   "policy_description_DisableSecurityBypass": {
     "message": "Das Umgehen bestimmter Sicherheitswarnungen verhindern"
@@ -351,7 +351,7 @@
     "message": "Deaktiviere die Funktion, eine Grafik als Hintergrundbild zu verwenden"
   },
   "policy_description_DisableSystemAddonUpdate": {
-    "message": "Firefox an der Installation und am Aktualisieren von System-Add-ons hindern"
+    "message": "Firefox an der Installation und am Aktualisieren von System-Erweiterungen hindern"
   },
   "policy_description_DisableTelemetry": {
     "message": "Firefox hindern, Daten zu technischen Details und Interaktionen an Mozilla zu senden (Telemetrie)"
@@ -414,22 +414,22 @@
     "message": "Veraltet. Die darunter liegende Richtlinie sollte verwendet werden."
   },
   "policy_description_Extensions_Install": {
-    "message": "Add-ons installieren. Es können URLs oder Pfade angegeben werden."
+    "message": "Erweiterungen installieren. Es können URLs oder Pfade angegeben werden."
   },
   "policy_description_Extensions_Install_URL_or_Path": {
     "message": "URL oder Pfad"
   },
   "policy_description_Extensions_Locked": {
-    "message": "Gesperrte Erweiterungen können weder deaktiviert noch deinstalliert werden. Bitte Add-on-IDs angeben."
+    "message": "Gesperrte Erweiterungen können weder deaktiviert noch deinstalliert werden. Bitte Erweiterungs-IDs angeben."
   },
   "policy_description_Extensions_Locked_ID": {
-    "message": "Add-on-ID"
+    "message": "Erweiterungs-ID"
   },
   "policy_description_Extensions_Uninstall": {
-    "message": "Add-ons deinstallieren. Bitte Add-on-IDs angeben."
+    "message": "Erweiterungen deinstallieren. Bitte Erweiterungs-IDs angeben."
   },
   "policy_description_Extensions_Uninstall_ID": {
-    "message": "Add-on-ID"
+    "message": "Erweiterungs-ID"
   },
   "policy_description_ExtensionSettings": {
     "message": "Die Installation und Deinstallation von Erweiterungen verwalten"
@@ -495,7 +495,7 @@
     "message": "Die Erweiterung wird automatisch installiert und kann vom Nutzer deaktiviert werden (Installations-URL erforderlich)"
   },
   "policy_description_ExtensionSettings_Label_Key": {
-    "message": "Add-on-ID"
+    "message": "Erweiterungs-ID"
   },
   "policy_description_ExtensionUpdate": {
     "message": "Automatische Aktualisierung von Erweiterungen aktivieren oder deaktivieren"
