@@ -146,20 +146,11 @@
   "policy_description_Authentication_Delegated": {
     "message" : "Délégué"
   },
-  "policy_description_Authentication_Delegated_URL": {
-    "message" : "Adresse"
-  },
   "policy_description_Authentication_NTLM": {
     "message" : "NTLM"
   },
-  "policy_description_Authentication_NTLM_URL": {
-    "message" : "Adresse"
-  },
   "policy_description_Authentication_SPNEGO": {
     "message" : "SPNEGO"
-  },
-  "policy_description_Authentication_SPNEGO_URL": {
-    "message" : "Adresse"
   },
   "policy_description_BlockAboutAddons": {
     "message" : "Bloquer l'accès au gestionnaire d'add-ons (about:addons)"
