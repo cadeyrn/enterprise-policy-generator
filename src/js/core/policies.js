@@ -691,6 +691,74 @@ const policies = {
     ui_category : 'customization',
     type : 'key-object-list',
     label_key : browser.i18n.getMessage('policy_description_ExtensionSettings_Label_Key'),
+    extra : {
+      key : '*',
+      caption_pre : browser.i18n.getMessage('policy_description_ExtensionSettings_extra_caption_pre'),
+      caption_post : browser.i18n.getMessage('policy_description_ExtensionSettings_extra_caption_post'),
+      properties : [
+        {
+          name : 'installation_mode',
+          label : browser.i18n.getMessage('policy_description_ExtensionSettings_installation_mode'),
+          mandatory : false,
+          type : 'enum',
+          options : [
+            {
+              label : browser.i18n.getMessage('enum_value_no_preference'),
+              value : null
+            },
+            {
+              label : browser.i18n.getMessage('policy_description_ExtensionSettings_installation_mode_allowed_all'),
+              value : 'allowed'
+            },
+            {
+              label : browser.i18n.getMessage('policy_description_ExtensionSettings_installation_mode_blocked_all'),
+              value : 'blocked'
+            }
+          ]
+        },
+        {
+          name : 'install_sources',
+          label : browser.i18n.getMessage('policy_description_ExtensionSettings_install_sources'),
+          mandatory : false,
+          type : 'array',
+          items : {
+            label : 'URL',
+            type : 'string'
+          }
+        },
+        {
+          name : 'allowed_types',
+          label : browser.i18n.getMessage('policy_description_ExtensionSettings_allowed_types'),
+          mandatory : false,
+          type : 'multiselect',
+          options : [
+            {
+              value : 'extension',
+              label : browser.i18n.getMessage('policy_description_ExtensionSettings_allowed_types_extension')
+            },
+            {
+              value : 'theme',
+              label : browser.i18n.getMessage('policy_description_ExtensionSettings_allowed_types_theme')
+            },
+            {
+              value : 'dictionary',
+              label : browser.i18n.getMessage('policy_description_ExtensionSettings_allowed_types_dictionary')
+            },
+            {
+              value : 'langpack',
+              label : browser.i18n.getMessage('policy_description_ExtensionSettings_allowed_types_langpack')
+            }
+          ]
+        },
+        {
+          name : 'blocked_install_message',
+          caption : browser.i18n.getMessage('policy_description_ExtensionSettings_blocked_install_message_caption_all'),
+          label : browser.i18n.getMessage('policy_description_ExtensionSettings_blocked_install_message_label'),
+          mandatory : false,
+          type : 'string'
+        }
+      ]
+    },
     properties : [
       {
         name : 'installation_mode',
@@ -703,11 +771,11 @@ const policies = {
             value : null
           },
           {
-            label : browser.i18n.getMessage('policy_description_ExtensionSettings_installation_mode_allowed'),
+            label : browser.i18n.getMessage('policy_description_ExtensionSettings_installation_mode_allowed_single'),
             value : 'allowed'
           },
           {
-            label : browser.i18n.getMessage('policy_description_ExtensionSettings_installation_mode_blocked'),
+            label : browser.i18n.getMessage('policy_description_ExtensionSettings_installation_mode_blocked_single'),
             value : 'blocked'
           },
           {
@@ -729,7 +797,7 @@ const policies = {
       },
       {
         name : 'blocked_install_message',
-        caption : browser.i18n.getMessage('policy_description_ExtensionSettings_blocked_install_message_caption'),
+        caption : browser.i18n.getMessage('policy_description_ExtensionSettings_blocked_install_message_caption_single'),
         label : browser.i18n.getMessage('policy_description_ExtensionSettings_blocked_install_message_label'),
         mandatory : false,
         type : 'string'

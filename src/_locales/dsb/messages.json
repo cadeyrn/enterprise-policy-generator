@@ -431,11 +431,38 @@
   "policy_description_ExtensionSettings": {
     "message": "Manage the installation and uninstallation of add-ons"
   },
-  "policy_description_ExtensionSettings_blocked_install_message_caption": {
+  "policy_description_ExtensionSettings_allowed_types": {
+    "message": "Allowed add-on types"
+  },
+  "policy_description_ExtensionSettings_allowed_types_dictionary": {
+    "message": "Dictionaries"
+  },
+  "policy_description_ExtensionSettings_allowed_types_extension": {
+    "message": "Extensions"
+  },
+  "policy_description_ExtensionSettings_allowed_types_langpack": {
+    "message": "Language packs"
+  },
+  "policy_description_ExtensionSettings_allowed_types_theme": {
+    "message": "Themes"
+  },
+  "policy_description_ExtensionSettings_blocked_install_message_caption_all": {
+    "message": "Error message to display to the user when trying to install an blocked add-on"
+  },
+  "policy_description_ExtensionSettings_blocked_install_message_caption_single": {
     "message": "Error message to display to the user when trying to install the blocked add-on"
   },
   "policy_description_ExtensionSettings_blocked_install_message_label": {
     "message": "error message"
+  },
+  "policy_description_ExtensionSettings_extra_caption_post": {
+    "message": "Configuration for individual add-ons"
+  },
+  "policy_description_ExtensionSettings_extra_caption_pre": {
+    "message": "Configuration for all add-ons"
+  },
+  "policy_description_ExtensionSettings_install_sources": {
+    "message": "Allowed installation sources. Both the location of the *.xpi file and the page where the download is started from must be allowed."
   },
   "policy_description_ExtensionSettings_install_url_caption": {
     "message": "install URL. If installing from the local file system, use a file:/// URI."
@@ -444,13 +471,19 @@
     "message": "URL"
   },
   "policy_description_ExtensionSettings_installation_mode": {
-    "message": "installation mode"
+    "message": "installation"
   },
-  "policy_description_ExtensionSettings_installation_mode_allowed": {
-    "message": "allows the add-on to be installed by the user"
+  "policy_description_ExtensionSettings_installation_mode_allowed_all": {
+    "message": "the installation of add-ons by the user is allowed"
   },
-  "policy_description_ExtensionSettings_installation_mode_blocked": {
-    "message": "blocks installation of the add-on and removes it from the device if already installed"
+  "policy_description_ExtensionSettings_installation_mode_allowed_single": {
+    "message": "the installation of this add-on by the user is allowed"
+  },
+  "policy_description_ExtensionSettings_installation_mode_blocked_all": {
+    "message": "the installation of add-on by the user is not allowed and already installed add-on will be removed from the device"
+  },
+  "policy_description_ExtensionSettings_installation_mode_blocked_single": {
+    "message": "the installation of this add-on by the user is not allowed and the add-on will be removed from the device if already installed"
   },
   "policy_description_ExtensionSettings_installation_mode_force_installed": {
     "message": "the add-on is automatically installed and can't be removed by the user (requires an install url)"

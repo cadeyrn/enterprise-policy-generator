@@ -431,11 +431,38 @@
   "policy_description_ExtensionSettings": {
     "message": "Die Installation und Deinstallation von Erweiterungen verwalten"
   },
-  "policy_description_ExtensionSettings_blocked_install_message_caption": {
+  "policy_description_ExtensionSettings_allowed_types": {
+    "message": "Erlaubte Erweiterungs-Typen"
+  },
+  "policy_description_ExtensionSettings_allowed_types_dictionary": {
+    "message": "Wörterbücher"
+  },
+  "policy_description_ExtensionSettings_allowed_types_extension": {
+    "message": "Erweiterungen"
+  },
+  "policy_description_ExtensionSettings_allowed_types_langpack": {
+    "message": "Sprachpakete"
+  },
+  "policy_description_ExtensionSettings_allowed_types_theme": {
+    "message": "Themes"
+  },
+  "policy_description_ExtensionSettings_blocked_install_message_caption_all": {
+    "message": "Fehlermeldung, welche dem Nutzer angezeigt wird, wenn versucht wird, eine blockierte Erweiterung zu installieren"
+  },
+  "policy_description_ExtensionSettings_blocked_install_message_caption_single": {
     "message": "Fehlermeldung, welche dem Nutzer angezeigt wird, wenn versucht wird, die blockierte Erweiterung zu installieren"
   },
   "policy_description_ExtensionSettings_blocked_install_message_label": {
     "message": "Fehlermeldung"
+  },
+  "policy_description_ExtensionSettings_extra_caption_post": {
+    "message": "Konfiguration für einzelne Erweiterungen"
+  },
+  "policy_description_ExtensionSettings_extra_caption_pre": {
+    "message": "Konfiguration für alle Erweiterungen"
+  },
+  "policy_description_ExtensionSettings_install_sources": {
+    "message": "Erlaubte Installations-Quellen. Sowohl die Quelle der *.xpi-Datei als auch die Domain, von welcher der Download gestartet wird, müssen erlaubt sein."
   },
   "policy_description_ExtensionSettings_install_url_caption": {
     "message": "Installations-URL. Wenn die Erweiterung vom lokalen Dateisystem installiert werden soll, bitte file:///-URI verwenden."
@@ -444,13 +471,19 @@
     "message": "URL"
   },
   "policy_description_ExtensionSettings_installation_mode": {
-    "message": "Installations-Modus"
+    "message": "Installation"
   },
-  "policy_description_ExtensionSettings_installation_mode_allowed": {
+  "policy_description_ExtensionSettings_installation_mode_allowed_all": {
+    "message": "Die Installation von Erweiterungen durch den Nutzer ist erlaubt"
+  },
+  "policy_description_ExtensionSettings_installation_mode_allowed_single": {
     "message": "Die Installation dieser Erweiterung durch den Nutzer ist erlaubt"
   },
-  "policy_description_ExtensionSettings_installation_mode_blocked": {
-    "message": "Die Installation dieser Erweiterung durch den Nutzer ist verboten und die Erweiterung wird vom Gerät entfernt, falls bereits installiert"
+  "policy_description_ExtensionSettings_installation_mode_blocked_all": {
+    "message": "Die Installation von Erweiterungen durch den Nutzer ist nicht erlaubt und bereits installierte Erweiterungen werden vom Gerät entfernt"
+  },
+  "policy_description_ExtensionSettings_installation_mode_blocked_single": {
+    "message": "Die Installation dieser Erweiterung durch den Nutzer ist nicht erlaubt und die Erweiterung wird vom Gerät entfernt, falls bereits installiert"
   },
   "policy_description_ExtensionSettings_installation_mode_force_installed": {
     "message": "Die Erweiterung wird automatisch installiert und kann vom Nutzer nicht entfernt werden (Installations-URL erforderlich)"
