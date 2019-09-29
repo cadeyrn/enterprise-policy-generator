@@ -128,6 +128,9 @@
   "policy_description_Authentication": {
     "message" : "Sites supportants l'authentification intégrée"
   },
+  "policy_description_Authentication_additional_note": {
+    "message": "Option to lock setting new from Firefox 71. Always protected before."
+  },
   "policy_description_Authentication_AllowNonFQDN": {
     "message": "Toujours autoriser SPNEGO ou NTLM hors des FQDNs (noms de domaine entièrement qualifiés)"
   },

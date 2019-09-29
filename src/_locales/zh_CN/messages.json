@@ -128,6 +128,9 @@
   "policy_description_Authentication": {
     "message": "支持整合验证 (integrated authentication) 的站点"
   },
+  "policy_description_Authentication_additional_note": {
+    "message": "Option to lock setting new from Firefox 71. Always protected before."
+  },
   "policy_description_Authentication_AllowNonFQDN": {
     "message": "始终允许在非 FQDN（完全限定性域名）上使用 SPNEGO 或 NTLM"
   },

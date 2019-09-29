@@ -128,6 +128,9 @@
   "policy_description_Authentication": {
     "message": "Webboki, kótarež integrěrowanu awtentifikaciju pódpěraju"
   },
+  "policy_description_Authentication_additional_note": {
+    "message": "Option to lock setting new from Firefox 71. Always protected before."
+  },
   "policy_description_Authentication_AllowNonFQDN": {
     "message": "Pśecej SPNEGO abo NTLM na nje-FQDN (połnokwalificěrowane domenowe mjenja) dowóliś"
   },

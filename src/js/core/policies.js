@@ -1033,9 +1033,10 @@ const policies = {
   Authentication : {
     description : browser.i18n.getMessage('policy_description_Authentication'),
     enterprise_only : false,
+    additional_note : browser.i18n.getMessage('policy_description_Authentication_additional_note'),
     first_available : { mainstream : '62.0', esr : '60.0' },
     info_link : 'https://developer.mozilla.org/docs/Mozilla/Integrated_authentication',
-    is_lockable : false,
+    is_lockable : true,
     ui_category : 'network',
     type : 'object',
     properties : [

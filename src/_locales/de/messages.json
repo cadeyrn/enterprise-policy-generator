@@ -128,6 +128,9 @@
   "policy_description_Authentication": {
     "message": "Webseiten, welche eine integrierte Authentifizierung unterstützen"
   },
+  "policy_description_Authentication_additional_note": {
+    "message": "Option, Einstellung zu schützen, neu ab Firefox 71. Vorher immer geschützt."
+  },
   "policy_description_Authentication_AllowNonFQDN": {
     "message": "Immer SPNEGO oder NTLM auf Nicht-FQDNs (vollqualifizierte Domainnamen) erlauben"
   },
