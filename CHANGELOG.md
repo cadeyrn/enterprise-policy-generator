@@ -11,6 +11,8 @@
   [#80](https://github.com/cadeyrn/enterprise-policy-generator/issues/80)
 - added support for new "key-object-list" policy type, see
   [#92](https://github.com/cadeyrn/enterprise-policy-generator/issues/92)
+- added support for new "multiselect" policy property, see
+  [#92](https://github.com/cadeyrn/enterprise-policy-generator/issues/92)
 - added mechanism for marking deprecated policies, see
   [#92](https://github.com/cadeyrn/enterprise-policy-generator/issues/92)
 - enhanced URL validation method to allow file:// URLs for URL properties, see
