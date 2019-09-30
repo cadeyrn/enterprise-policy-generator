@@ -79,6 +79,9 @@ const configurator = {
       else if (policies[key].type === 'object') {
         configurator.addObjectOption(key, policies[key]);
       }
+      else if (policies[key].type === 'preference') {
+        configurator.addPreferenceOption(key, policies[key]);
+      }
       else if (policies[key].type === 'string') {
         configurator.addStringOption(key, policies[key], false);
       }
@@ -708,6 +711,68 @@ const configurator = {
       for (let i = 0; i < optionsLength; i++) {
         configurator.addProperty(elSubOptions, key, policy.properties[i]);
       }
+    }
+
+    // add option to UI
+    configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
+  },
+
+  /**
+   * Adds policy of the type "preference" to the DOM.
+   *
+   * @param {string} key - the name of the policy
+   * @param {Object} policy - the policy object
+   *
+   * @returns {void}
+   */
+  addPreferenceOption (key, policy) {
+    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'preference');
+
+    if (policy.properties.type === 'boolean') {
+      const elSelectWrapper = document.createElement('div');
+      elSelectWrapper.setAttribute('data-name', policy.properties.option);
+      elSelectWrapper.classList.add('enum', 'sub-options', 'select-wrapper', 'disabled');
+      elObjectWrapper.appendChild(elSelectWrapper);
+
+      const elSelect = document.createElement('select');
+      elSelect.setAttribute('id', key + '_Select');
+      elSelect.setAttribute('name', key + '_Select');
+      elSelectWrapper.appendChild(elSelect);
+
+      const elOptionTrueLabel = document.createTextNode(browser.i18n.getMessage('enum_value_enable_yes'));
+      const elOptionTrue = document.createElement('option');
+      elOptionTrue.setAttribute('value', 'true');
+      elOptionTrue.appendChild(elOptionTrueLabel);
+
+      if (policy.properties.default === 'true') {
+        elOptionTrue.setAttribute('selected', 'selected');
+      }
+
+      elSelect.appendChild(elOptionTrue);
+
+      const elOptionFalseLabel = document.createTextNode(browser.i18n.getMessage('enum_value_enable_no'));
+      const elOptionFalse = document.createElement('option');
+      elOptionFalse.setAttribute('value', 'false');
+      elOptionFalse.appendChild(elOptionFalseLabel);
+
+      if (policy.properties.default === 'false') {
+        elOptionFalse.setAttribute('selected', 'selected');
+      }
+
+      elSelect.appendChild(elOptionFalse);
+    }
+    else if (policy.properties.type === 'string') {
+      const elInputWrapper = document.createElement('div');
+      elInputWrapper.setAttribute('data-name', policy.properties.option);
+      elInputWrapper.classList.add('input', 'sub-options', 'disabled');
+      elObjectWrapper.appendChild(elInputWrapper);
+
+      const elInput = document.createElement('input');
+      elInput.setAttribute('type', 'text');
+      elInput.setAttribute('id', key + '_Text');
+      elInput.setAttribute('name', key + '_Text');
+      elInput.setAttribute('placeholder', policy.properties.label);
+      elInputWrapper.appendChild(elInput);
     }
 
     // add option to UI

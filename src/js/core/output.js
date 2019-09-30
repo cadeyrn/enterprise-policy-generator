@@ -7,6 +7,13 @@
  */
 const output = {
   /**
+   * Contains the values of the policies of the type "preferences".
+   *
+   * @type {Object}
+   */
+  preferences : {},
+
+  /**
    * Generates the JSON output for the selected polices, calls the appropriate method.
    *
    * @returns {string} - the JSON output
@@ -38,6 +45,9 @@ const output = {
         else if (el.getAttribute('data-type') === 'object') {
           output.generateOutputForObjects(el);
         }
+        else if (el.getAttribute('data-type') === 'preference') {
+          output.collectPreferences(el);
+        }
         else if (el.getAttribute('data-type') === 'string') {
           output.generateOutputForStrings(el);
         }
@@ -46,6 +56,8 @@ const output = {
         }
       }
     });
+
+    output.generateOutputForPreferences();
 
     return policymanager.getConfiguration();
   },
@@ -372,6 +384,43 @@ const output = {
     // only add non-empty policies
     if (Object.keys(policy).length > 0) {
       policymanager.add(el.getAttribute('data-name'), policy);
+    }
+  },
+
+  /**
+   * Collects values for policies of type "preference" in a global property, output will be generated in
+   * generateOutputForPreferences().
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   *
+   * @returns {void}
+   */
+  collectPreferences (el) {
+    // enum fields
+    [...el.parentNode.querySelectorAll(':scope > .enum')].forEach((el) => {
+      const value = JSON.parse(el.firstChild.options[el.firstChild.selectedIndex].value);
+      output.preferences[el.getAttribute('data-name')] = value;
+    });
+
+    // input fields
+    [...el.parentNode.querySelectorAll(':scope > .input')].forEach((el) => {
+      if (el.firstChild.value) {
+        output.preferences[el.getAttribute('data-name')] = el.firstChild.value;
+      }
+    });
+  },
+
+  /**
+   * Generates output for policies of type "preference", collected before in collectPreferences().
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   *
+   * @returns {void}
+   */
+  generateOutputForPreferences () {
+    // only add non-empty arrays
+    if (Object.keys(output.preferences).length > 0) {
+      policymanager.add('Preferences', output.preferences);
     }
   },
 
