@@ -665,6 +665,9 @@
   "policy_description_PopupBlocking_Default_true": {
     "message": "Pop-ups werden standardmäßig blockiert"
   },
+  "policy_description_Preference_browser_cache_disk_enable": {
+    "message": "Festplatten-Cache aktivieren / deaktivieren"
+  },
   "policy_description_PromptForDownloadLocation": {
     "message": "Vor dem Herunterladen jeder Datei fragen, wo diese gespeichert werden sollen"
   },
