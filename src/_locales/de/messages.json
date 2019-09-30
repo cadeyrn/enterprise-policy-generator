@@ -668,6 +668,12 @@
   "policy_description_Preference_browser_cache_disk_enable": {
     "message": "Festplatten-Cache aktivieren / deaktivieren"
   },
+  "policy_description_Preference_browser_cache_disk_parent_directory": {
+    "message": "Speicherort des Festplatten-Caches ändern"
+  },
+  "policy_description_Preference_browser_cache_disk_parent_directory_label": {
+    "message": "Pfad"
+  },
   "policy_description_PromptForDownloadLocation": {
     "message": "Vor dem Herunterladen jeder Datei fragen, wo diese gespeichert werden sollen"
   },

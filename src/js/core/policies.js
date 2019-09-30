@@ -1986,6 +1986,20 @@ const policies = {
     }
   },
 
+  Preference_browser_cache_disk_parent_directory : {
+    description : browser.i18n.getMessage('policy_description_Preference_browser_cache_disk_parent_directory'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : null,
+    ui_category : 'others',
+    type : 'preference',
+    properties : {
+      option : 'browser.cache.disk.parent_directory',
+      type : 'string',
+      label : browser.i18n.getMessage('policy_description_Preference_browser_cache_disk_parent_directory_label')
+    }
+  },
+
   HardwareAcceleration : {
     description : browser.i18n.getMessage('policy_description_HardwareAcceleration'),
     enterprise_only : false,

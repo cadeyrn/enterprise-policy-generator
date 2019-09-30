@@ -43,6 +43,8 @@
   [#88](https://github.com/cadeyrn/enterprise-policy-generator/issues/88)
 - new policy to enable or disable storing cache on the hard drive, see
   [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
+- new policy to change the location of the disk cache, see
+  [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
 - replaced old SanitizeOnShutdown policy to clear all data on shutdown with new selective SanitizeOnShutdown policy.
   Users of the old policy: Please have a look at your configuration and adjust accordingly, see
   [#91](https://github.com/cadeyrn/enterprise-policy-generator/issues/91)
