@@ -695,6 +695,9 @@
   "policy_description_Preference_datareporting_policy_dataSubmissionPolicyBypassNotification": {
     "message": "Show the privacy policy tab on first run"
   },
+  "policy_description_Preference_dom_disable_window_flip": {
+    "message": "Allow websites to monkey with window focus"
+  },
   "policy_description_Preference_dom_keyboardevent_keypress_hack_dispatch_non_printable_keys_addl": {
     "message": "Web standards: Restore old behavior regarding keypress event and non-printable keys for certain domains"
   },

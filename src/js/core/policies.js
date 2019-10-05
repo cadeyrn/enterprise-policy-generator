@@ -2196,6 +2196,20 @@ const policies = {
     }
   },
 
+  Preference_dom_disable_window_flip : {
+    description : browser.i18n.getMessage('policy_description_Preference_dom_disable_window_flip'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : null,
+    ui_category : 'others',
+    type : 'preference',
+    properties : {
+      option : 'dom.disable_window_flip',
+      type : 'boolean-inverse',
+      default : 'true'
+    }
+  },
+
   Preference_dom_keyboardevent_keypress_hack_dispatch_non_printable_keys_addl : {
     description : browser.i18n.getMessage('policy_description_Preference_dom_keyboardevent_keypress_hack_dispatch_non_printable_keys_addl'),
     enterprise_only : false,

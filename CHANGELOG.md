@@ -65,6 +65,8 @@
   [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
 - new policy to disable the warning when the browser is closed, see
   [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
+- new policy to allow websites to monkey with window focus, see
+  [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
 - new policy to allow local files to access other local files (Firefox 68.0.1+, Firefox ESR 68.1+), see
   [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
 - replaced old SanitizeOnShutdown policy to clear all data on shutdown with new selective SanitizeOnShutdown policy.
