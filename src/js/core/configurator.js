@@ -753,8 +753,6 @@ const configurator = {
         elOptionTrue.setAttribute('selected', 'selected');
       }
 
-      elSelect.appendChild(elOptionTrue);
-
       let elOptionFalseLabel = document.createTextNode(browser.i18n.getMessage('enum_value_enable_no'));
 
       if (policy.properties.type === 'boolean-inverse') {
@@ -769,7 +767,14 @@ const configurator = {
         elOptionFalse.setAttribute('selected', 'selected');
       }
 
-      elSelect.appendChild(elOptionFalse);
+      if (policy.properties.type === 'boolean-inverse') {
+        elSelect.appendChild(elOptionFalse);
+        elSelect.appendChild(elOptionTrue);
+      }
+      else {
+        elSelect.appendChild(elOptionTrue);
+        elSelect.appendChild(elOptionFalse);
+      }
     }
     else if (policy.properties.type === 'string') {
       const elInputWrapper = document.createElement('div');
