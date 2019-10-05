@@ -680,6 +680,9 @@
   "policy_description_Preference_browser_search_update": {
     "message": "Suchmaschinen aktualisieren"
   },
+  "policy_description_Preference_browser_tabs_warnOnClose": {
+    "message": "Warnung beim Beenden von Firefox anzeigen"
+  },
   "policy_description_Preference_browser_urlbar_suggest_bookmark": {
     "message": "Beim Verwenden der Adressleiste Lesezeichen vorschlagen"
   },
