@@ -2189,6 +2189,20 @@ const policies = {
     ]
   },
 
+  Preference_datareporting_policy_dataSubmissionPolicyBypassNotification : {
+    description : browser.i18n.getMessage('policy_description_Preference_datareporting_policy_dataSubmissionPolicyBypassNotification'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : null,
+    ui_category : 'others',
+    type : 'preference',
+    properties : {
+      option : 'datareporting.policy.dataSubmissionPolicyBypassNotification',
+      type : 'boolean-inverse',
+      default : 'false'
+    }
+  },
+
   OverrideFirstRunPage : {
     description : browser.i18n.getMessage('policy_description_OverrideFirstRunPage'),
     enterprise_only : false,
