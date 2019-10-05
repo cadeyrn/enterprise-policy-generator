@@ -49,6 +49,12 @@
   [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
 - new policy to display the punycode version of internationalized domain names, see
   [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
+- new policy to control the preference to suggest bookmarks when using the address bar, see
+  [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
+- new policy to control the preference to suggest browsing history when using the address bar, see
+  [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
+- new policy to control the preference to suggest open tabs when using the address bar, see
+  [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
 - replaced old SanitizeOnShutdown policy to clear all data on shutdown with new selective SanitizeOnShutdown policy.
   Users of the old policy: Please have a look at your configuration and adjust accordingly, see
   [#91](https://github.com/cadeyrn/enterprise-policy-generator/issues/91)

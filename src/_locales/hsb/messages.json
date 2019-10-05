@@ -677,6 +677,15 @@
   "policy_description_Preference_browser_fixup_dns_first_for_single_words": {
     "message": "Send single words in address bar to DNS first and not directly to search engine"
   },
+  "policy_description_Preference_browser_urlbar_suggest_bookmark": {
+    "message": "Suggest bookmarks when using the address bar"
+  },
+  "policy_description_Preference_browser_urlbar_suggest_history": {
+    "message": "Suggest browsing history when using the address bar"
+  },
+  "policy_description_Preference_browser_urlbar_suggest_openpage": {
+    "message": "Suggest open tabs when using the address bar"
+  },
   "policy_description_Preference_network_IDN_show_punycode": {
     "message": "Display the punycode version of internationalized domain names"
   },

@@ -2112,6 +2112,48 @@ const policies = {
     ]
   },
 
+  Preference_browser_urlbar_suggest_history : {
+    description : browser.i18n.getMessage('policy_description_Preference_browser_urlbar_suggest_history'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : null,
+    ui_category : 'others',
+    type : 'preference',
+    properties : {
+      option : 'browser.urlbar.suggest.history',
+      type : 'boolean',
+      default : 'true'
+    }
+  },
+
+  Preference_browser_urlbar_suggest_bookmark : {
+    description : browser.i18n.getMessage('policy_description_Preference_browser_urlbar_suggest_bookmark'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : null,
+    ui_category : 'others',
+    type : 'preference',
+    properties : {
+      option : 'browser.urlbar.suggest.bookmark',
+      type : 'boolean',
+      default : 'true'
+    }
+  },
+
+  Preference_browser_urlbar_suggest_openpage : {
+    description : browser.i18n.getMessage('policy_description_Preference_browser_urlbar_suggest_openpage'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : null,
+    ui_category : 'others',
+    type : 'preference',
+    properties : {
+      option : 'browser.urlbar.suggest.openpage',
+      type : 'boolean',
+      default : 'true'
+    }
+  },
+
   DontCheckDefaultBrowser : {
     description : browser.i18n.getMessage('policy_description_DontCheckDefaultBrowser'),
     enterprise_only : false,

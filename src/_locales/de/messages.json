@@ -677,6 +677,15 @@
   "policy_description_Preference_browser_fixup_dns_first_for_single_words": {
     "message": "Einzelne Wörter in Adressleiste zunächst an DNS und nicht direkt an Suchmaschine senden"
   },
+  "policy_description_Preference_browser_urlbar_suggest_bookmark": {
+    "message": "Beim Verwenden der Adressleiste Lesezeichen vorschlagen"
+  },
+  "policy_description_Preference_browser_urlbar_suggest_history": {
+    "message": "Beim Verwenden der Adressleiste Einträge aus der Chronik vorschlagen"
+  },
+  "policy_description_Preference_browser_urlbar_suggest_openpage": {
+    "message": "Beim Verwenden der Adressleiste offene Tabs vorschlagen"
+  },
   "policy_description_Preference_network_IDN_show_punycode": {
     "message": "Zeige die Punycode-Version von internationalisierten Domainnamen an"
   },
