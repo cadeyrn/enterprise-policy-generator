@@ -64,7 +64,9 @@
 - new policy to disable the search for search engine updates, see
   [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
 - new policy to disable the warning when the browser is closed, see
-  [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89
+  [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
+- new policy to disallow websites to override the context menu, see
+  [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
 - new policy to disallow websites to move and resize windows, see
   [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
 - new policy to allow websites to monkey with window focus, see

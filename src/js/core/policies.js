@@ -2196,6 +2196,20 @@ const policies = {
     }
   },
 
+  Preference_dom_event_contextmenu_enabled : {
+    description : browser.i18n.getMessage('policy_description_Preference_dom_event_contextmenu_enabled'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : null,
+    ui_category : 'others',
+    type : 'preference',
+    properties : {
+      option : 'dom.event.contextmenu.enabled',
+      type : 'boolean',
+      default : 'true'
+    }
+  },
+
   Preference_dom_disable_window_move_resize : {
     description : browser.i18n.getMessage('policy_description_Preference_dom_disable_window_move_resize'),
     enterprise_only : false,

@@ -701,6 +701,9 @@
   "policy_description_Preference_dom_disable_window_move_resize": {
     "message": "Websites erlauben, Fenster zu verschieben und in der Größe zu verändern"
   },
+  "policy_description_Preference_dom_event_contextmenu_enabled": {
+    "message": "Websites erlauben, das Kontextmenü zu überschreiben"
+  },
   "policy_description_Preference_dom_keyboardevent_keypress_hack_dispatch_non_printable_keys_addl": {
     "message": "Webstandards: Altes Verhalten bezüglich keypress-Event und nicht druckbaren Tasten für bestimmte Domains wiederherstellen"
   },
