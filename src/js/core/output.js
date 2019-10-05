@@ -21,6 +21,9 @@ const output = {
   generatePoliciesOutput () {
     policymanager.init();
 
+    // reset "preferences" property to prevent outdated entries when generating policies multiple times
+    output.preferences = {};
+
     // iterate over all checked policy fields and generate output
     [...document.querySelectorAll('.primary-checkbox')].forEach((el) => {
       if (el.checked) {
