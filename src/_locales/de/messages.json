@@ -713,6 +713,9 @@
   "policy_description_Preference_dom_keyboardevent_keypress_hack_use_legacy_keycode_and_charcode_addl": {
     "message": "Webstandards: Altes Verhalten bezüglich keyCode und charCode für bestimmte Domains wiederherstellen"
   },
+  "policy_description_Preference_extensions_getAddons_showPane": {
+    "message": "Reiter mit Empfehlungen in Erweiterungs-Verwaltung anzeigen"
+  },
   "policy_description_Preference_network_IDN_show_punycode": {
     "message": "Zeige die Punycode-Version von internationalisierten Domainnamen an"
   },

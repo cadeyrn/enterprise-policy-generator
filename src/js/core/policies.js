@@ -601,6 +601,20 @@ const policies = {
     ]
   },
 
+  Preference_extensions_getAddons_showPane : {
+    description : browser.i18n.getMessage('policy_description_Preference_extensions_getAddons_showPane'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : null,
+    ui_category : 'others',
+    type : 'customization',
+    properties : {
+      option : 'extensions.getAddons.showPane',
+      type : 'boolean',
+      default : 'true'
+    }
+  },
+
   InstallAddonsPermission : {
     description : browser.i18n.getMessage('policy_description_InstallAddonsPermission'),
     enterprise_only : false,
