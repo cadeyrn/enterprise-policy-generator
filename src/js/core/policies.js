@@ -1995,6 +1995,34 @@ const policies = {
     type : 'boolean'
   },
 
+  Preference_media_gmp_widevinecdm_enabled : {
+    description : browser.i18n.getMessage('policy_description_Preference_media_gmp_widevinecdm_enabled'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : null,
+    ui_category : 'updates-and-data',
+    type : 'preference',
+    properties : {
+      option : 'media.gmp-widevinecdm.enabled',
+      type : 'boolean',
+      default : 'true'
+    }
+  },
+
+  Preference_media_gmp_gmpopenh264_enabled : {
+    description : browser.i18n.getMessage('policy_description_Preference_media_gmp_gmpopenh264_enabled'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : null,
+    ui_category : 'updates-and-data',
+    type : 'preference',
+    properties : {
+      option : 'media.gmp-gmpopenh264.enabled',
+      type : 'boolean',
+      default : 'true'
+    }
+  },
+
   // others
 
   DefaultDownloadDirectory : {

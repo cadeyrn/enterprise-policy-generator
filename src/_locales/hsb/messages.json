@@ -716,6 +716,12 @@
   "policy_description_Preference_extensions_getAddons_showPane": {
     "message": "Show recommendations tab in add-ons manager"
   },
+  "policy_description_Preference_media_gmp_gmpopenh264_enabled": {
+    "message": "Download OpenH264 plugin for WebRTC communication"
+  },
+  "policy_description_Preference_media_gmp_widevinecdm_enabled": {
+    "message": "Download Widevine plugin for streaming with DRM"
+  },
   "policy_description_Preference_network_IDN_show_punycode": {
     "message": "Display the punycode version of internationalized domain names"
   },
