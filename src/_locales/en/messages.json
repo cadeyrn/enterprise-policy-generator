@@ -677,6 +677,9 @@
   "policy_description_Preference_browser_fixup_dns_first_for_single_words": {
     "message": "Send single words in address bar to DNS first and not directly to search engine"
   },
+  "policy_description_Preference_network_IDN_show_punycode": {
+    "message": "Display the punycode version of internationalized domain names"
+  },
   "policy_description_PromptForDownloadLocation": {
     "message": "Ask where to save each file before downloading"
   },
