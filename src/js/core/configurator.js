@@ -728,7 +728,7 @@ const configurator = {
   addPreferenceOption (key, policy) {
     const elObjectWrapper = configurator.addPolicyNode(key, policy, 'preference');
 
-    if (policy.properties.type === 'boolean') {
+    if (policy.properties.type === 'boolean' || policy.properties.type === 'boolean-inverse') {
       const elSelectWrapper = document.createElement('div');
       elSelectWrapper.setAttribute('data-name', policy.properties.option);
       elSelectWrapper.classList.add('enum', 'sub-options', 'select-wrapper', 'disabled');
@@ -739,7 +739,12 @@ const configurator = {
       elSelect.setAttribute('name', key + '_Select');
       elSelectWrapper.appendChild(elSelect);
 
-      const elOptionTrueLabel = document.createTextNode(browser.i18n.getMessage('enum_value_enable_yes'));
+      let elOptionTrueLabel = document.createTextNode(browser.i18n.getMessage('enum_value_enable_yes'));
+
+      if (policy.properties.type === 'boolean-inverse') {
+        elOptionTrueLabel = document.createTextNode(browser.i18n.getMessage('enum_value_enable_no'));
+      }
+
       const elOptionTrue = document.createElement('option');
       elOptionTrue.setAttribute('value', 'true');
       elOptionTrue.appendChild(elOptionTrueLabel);
@@ -750,7 +755,12 @@ const configurator = {
 
       elSelect.appendChild(elOptionTrue);
 
-      const elOptionFalseLabel = document.createTextNode(browser.i18n.getMessage('enum_value_enable_no'));
+      let elOptionFalseLabel = document.createTextNode(browser.i18n.getMessage('enum_value_enable_no'));
+
+      if (policy.properties.type === 'boolean-inverse') {
+        elOptionFalseLabel = document.createTextNode(browser.i18n.getMessage('enum_value_enable_yes'));
+      }
+
       const elOptionFalse = document.createElement('option');
       elOptionFalse.setAttribute('value', 'false');
       elOptionFalse.appendChild(elOptionFalseLabel);
