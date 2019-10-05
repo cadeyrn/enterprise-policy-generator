@@ -677,6 +677,9 @@
   "policy_description_Preference_browser_fixup_dns_first_for_single_words": {
     "message": "Send single words in address bar to DNS first and not directly to search engine"
   },
+  "policy_description_Preference_browser_search_update": {
+    "message": "Update search engines"
+  },
   "policy_description_Preference_browser_urlbar_suggest_bookmark": {
     "message": "Suggest bookmarks when using the address bar"
   },

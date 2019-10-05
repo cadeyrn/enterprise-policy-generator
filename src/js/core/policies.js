@@ -1947,6 +1947,20 @@ const policies = {
     type : 'boolean'
   },
 
+  Preference_browser_search_update : {
+    description : browser.i18n.getMessage('policy_description_Preference_browser_search_update'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : null,
+    ui_category : 'updates-and-data',
+    type : 'preference',
+    properties : {
+      option : 'browser.search.update',
+      type : 'boolean',
+      default : 'true'
+    }
+  },
+
   DisableTelemetry : {
     description : browser.i18n.getMessage('policy_description_DisableTelemetry'),
     enterprise_only : false,
