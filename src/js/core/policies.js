@@ -2196,6 +2196,20 @@ const policies = {
     }
   },
 
+  Preference_dom_disable_window_move_resize : {
+    description : browser.i18n.getMessage('policy_description_Preference_dom_disable_window_move_resize'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : null,
+    ui_category : 'others',
+    type : 'preference',
+    properties : {
+      option : 'dom.disable_window_move_resize',
+      type : 'boolean-inverse',
+      default : 'false'
+    }
+  },
+
   Preference_dom_disable_window_flip : {
     description : browser.i18n.getMessage('policy_description_Preference_dom_disable_window_flip'),
     enterprise_only : false,
