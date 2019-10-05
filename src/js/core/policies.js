@@ -1619,11 +1619,11 @@ const policies = {
     label : null,
     options : [
       {
-        label : browser.i18n.getMessage('policy_description_OfferToSaveLoginsDefault_true'),
+        label : browser.i18n.getMessage('enum_value_enable_yes'),
         value : 'true'
       },
       {
-        label : browser.i18n.getMessage('policy_description_OfferToSaveLoginsDefault_false'),
+        label : browser.i18n.getMessage('enum_value_enable_no'),
         value : 'false'
       }
     ]
