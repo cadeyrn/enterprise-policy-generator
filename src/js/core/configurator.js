@@ -773,6 +773,9 @@ const configurator = {
       elInput.setAttribute('name', key + '_Text');
       elInput.setAttribute('placeholder', policy.properties.label);
       elInputWrapper.appendChild(elInput);
+
+      // preferences of type "string" should always be a mandatory field
+      configurator.addMandatoryLabel(elInput, elInputWrapper);
     }
 
     // add option to UI
