@@ -680,6 +680,9 @@
   "policy_description_Preference_network_IDN_show_punycode": {
     "message": "Display the punycode version of internationalized domain names"
   },
+  "policy_description_Preference_privacy_file_unique_origin": {
+    "message": "Allow local files to access other local files (security issue!)"
+  },
   "policy_description_PromptForDownloadLocation": {
     "message": "Ask where to save each file before downloading"
   },

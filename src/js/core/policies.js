@@ -1716,6 +1716,20 @@ const policies = {
     ]
   },
 
+  Preference_privacy_file_unique_origin : {
+    description : browser.i18n.getMessage('policy_description_Preference_privacy_file_unique_origin'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0.1', esr : '68.1' },
+    info_link : 'https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730',
+    ui_category : 'security',
+    type : 'preference',
+    properties : {
+      option : 'privacy.file_unique_origin',
+      type : 'boolean-inverse',
+      default : 'true'
+    }
+  },
+
   DisableSecurityBypass : {
     description : browser.i18n.getMessage('policy_description_DisableSecurityBypass'),
     enterprise_only : false,

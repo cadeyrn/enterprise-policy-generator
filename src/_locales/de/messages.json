@@ -689,6 +689,9 @@
   "policy_description_Preference_network_IDN_show_punycode": {
     "message": "Zeige die Punycode-Version von internationalisierten Domainnamen an"
   },
+  "policy_description_Preference_privacy_file_unique_origin": {
+    "message": "Lokalen Dateien den Zugriff auf andere lokale Dateien erlauben (Sicherheitsproblem!)"
+  },
   "policy_description_PromptForDownloadLocation": {
     "message": "Vor dem Herunterladen jeder Datei fragen, wo diese gespeichert werden sollen"
   },
