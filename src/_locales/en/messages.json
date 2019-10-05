@@ -689,6 +689,15 @@
   "policy_description_Preference_datareporting_policy_dataSubmissionPolicyBypassNotification": {
     "message": "Show the privacy policy tab on first run"
   },
+  "policy_description_Preference_dom_keyboardevent_keypress_hack_dispatch_non_printable_keys_addl": {
+    "message": "Web standards: Restore old behavior regarding keypress event and non-printable keys for certain domains"
+  },
+  "policy_description_Preference_dom_keyboardevent_keypress_hack_label": {
+    "message": "comma-delimited list of domains"
+  },
+  "policy_description_Preference_dom_keyboardevent_keypress_hack_use_legacy_keycode_and_charcode_addl": {
+    "message": "Web standards: Restore old behavior regarding keyCode and charCode for certain domains"
+  },
   "policy_description_Preference_network_IDN_show_punycode": {
     "message": "Display the punycode version of internationalized domain names"
   },

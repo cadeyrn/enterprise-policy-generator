@@ -2168,6 +2168,34 @@ const policies = {
     }
   },
 
+  Preference_dom_keyboardevent_keypress_hack_dispatch_non_printable_keys_addl : {
+    description : browser.i18n.getMessage('policy_description_Preference_dom_keyboardevent_keypress_hack_dispatch_non_printable_keys_addl'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : 'https://www.fxsitecompat.dev/en-CA/docs/2018/non-printable-keys-no-longer-fire-keypress-event/',
+    ui_category : 'others',
+    type : 'preference',
+    properties : {
+      option : 'dom.keyboardevent.keypress.hack.dispatch_non_printable_keys.addl',
+      type : 'string',
+      label : browser.i18n.getMessage('policy_description_Preference_dom_keyboardevent_keypress_hack_label')
+    }
+  },
+
+  Preference_dom_keyboardevent_keypress_hack_use_legacy_keycode_and_charcode_addl : {
+    description : browser.i18n.getMessage('policy_description_Preference_dom_keyboardevent_keypress_hack_use_legacy_keycode_and_charcode_addl'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : 'https://support.mozilla.org/kb/dom-events-changes-introduced-firefox-66',
+    ui_category : 'others',
+    type : 'preference',
+    properties : {
+      option : 'dom.keyboardevent.keypress.hack.use_legacy_keycode_and_charcode.addl',
+      type : 'string',
+      label : browser.i18n.getMessage('policy_description_Preference_dom_keyboardevent_keypress_hack_label')
+    }
+  },
+
   DontCheckDefaultBrowser : {
     description : browser.i18n.getMessage('policy_description_DontCheckDefaultBrowser'),
     enterprise_only : false,
