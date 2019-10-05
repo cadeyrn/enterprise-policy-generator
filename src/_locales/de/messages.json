@@ -674,6 +674,9 @@
   "policy_description_Preference_browser_cache_disk_parent_directory_label": {
     "message": "Pfad"
   },
+  "policy_description_Preference_browser_fixup_dns_first_for_single_words": {
+    "message": "Einzelne Wörter in Adressleiste zunächst an DNS und nicht direkt an Suchmaschine senden"
+  },
   "policy_description_PromptForDownloadLocation": {
     "message": "Vor dem Herunterladen jeder Datei fragen, wo diese gespeichert werden sollen"
   },

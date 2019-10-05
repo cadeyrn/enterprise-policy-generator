@@ -894,6 +894,20 @@ const policies = {
     ]
   },
 
+  Preference_browser_fixup_dns_first_for_single_words : {
+    description : browser.i18n.getMessage('policy_description_Preference_browser_fixup_dns_first_for_single_words'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : null,
+    ui_category : 'network',
+    type : 'preference',
+    properties : {
+      option : 'browser.fixup.dns_first_for_single_words',
+      type : 'boolean',
+      default : 'false'
+    }
+  },
+
   Proxy : {
     description : browser.i18n.getMessage('policy_description_Proxy'),
     enterprise_only : false,
