@@ -722,6 +722,9 @@
   "policy_description_Preference_media_gmp_widevinecdm_enabled": {
     "message": "Download Widevine plugin for streaming with DRM"
   },
+  "policy_description_Preference_network_dns_disableIPv6": {
+    "message": "Perform IPv6 DNS lookups"
+  },
   "policy_description_Preference_network_IDN_show_punycode": {
     "message": "Display the punycode version of internationalized domain names"
   },

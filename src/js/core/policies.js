@@ -908,6 +908,20 @@ const policies = {
     ]
   },
 
+  Preference_network_dns_disableIPv6 : {
+    description : browser.i18n.getMessage('policy_description_Preference_network_dns_disableIPv6'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : null,
+    ui_category : 'network',
+    type : 'preference',
+    properties : {
+      option : 'network.dns.disableIPv6',
+      type : 'boolean-inverse',
+      default : 'false'
+    }
+  },
+
   Preference_browser_fixup_dns_first_for_single_words : {
     description : browser.i18n.getMessage('policy_description_Preference_browser_fixup_dns_first_for_single_words'),
     enterprise_only : false,
