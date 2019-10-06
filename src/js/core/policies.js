@@ -2370,8 +2370,11 @@ const policies = {
     type : 'preference',
     properties : {
       option : 'dom.keyboardevent.keypress.hack.dispatch_non_printable_keys.addl',
-      type : 'string',
-      label : browser.i18n.getMessage('policy_description_Preference_dom_keyboardevent_keypress_hack_label')
+      type : 'array',
+      items : {
+        label : browser.i18n.getMessage('common_domain'),
+        type : 'string'
+      }
     }
   },
 
@@ -2384,8 +2387,11 @@ const policies = {
     type : 'preference',
     properties : {
       option : 'dom.keyboardevent.keypress.hack.use_legacy_keycode_and_charcode.addl',
-      type : 'string',
-      label : browser.i18n.getMessage('policy_description_Preference_dom_keyboardevent_keypress_hack_label')
+      type : 'array',
+      items : {
+        label : browser.i18n.getMessage('common_domain'),
+        type : 'string'
+      }
     }
   },
 

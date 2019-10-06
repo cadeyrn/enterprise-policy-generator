@@ -1,4 +1,7 @@
 {
+  "common_domain": {
+    "message": "Domain"
+  },
   "common_url": {
     "message": "Adresse"
   },
@@ -706,9 +709,6 @@
   },
   "policy_description_Preference_dom_keyboardevent_keypress_hack_dispatch_non_printable_keys_addl": {
     "message": "Web standards: Restore old behavior regarding keypress event and non-printable keys for certain domains"
-  },
-  "policy_description_Preference_dom_keyboardevent_keypress_hack_label": {
-    "message": "comma-delimited list of domains"
   },
   "policy_description_Preference_dom_keyboardevent_keypress_hack_use_legacy_keycode_and_charcode_addl": {
     "message": "Web standards: Restore old behavior regarding keyCode and charCode for certain domains"
