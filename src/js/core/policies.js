@@ -1870,6 +1870,30 @@ const policies = {
     default : 'tls1.3'
   },
 
+  Preference_security_default_personal_cert : {
+    description : browser.i18n.getMessage('policy_description_Preference_security_default_personal_cert'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : null,
+    ui_category : 'security',
+    type : 'preference',
+    properties : {
+      option : 'security.default_personal_cert',
+      type : 'enum',
+      options : [
+        {
+          label : browser.i18n.getMessage('policy_description_Preference_security_default_personal_cert_ask_every_time'),
+          value : 'Ask Every Time'
+        },
+        {
+          label : browser.i18n.getMessage('policy_description_Preference_security_default_personal_cert_select_automatically'),
+          value : 'Select Automatically'
+        }
+      ],
+      default : 'Ask Every Time'
+    }
+  },
+
   Certificates : {
     description : browser.i18n.getMessage('policy_description_Certificates'),
     enterprise_only : false,

@@ -734,6 +734,15 @@
   "policy_description_Preference_privacy_file_unique_origin": {
     "message": "Allow local files to access other local files (security issue!)"
   },
+  "policy_description_Preference_security_default_personal_cert": {
+    "message": "Prompt the user to choose the default personal certificate"
+  },
+  "policy_description_Preference_security_default_personal_cert_ask_every_time": {
+    "message": "ask every time"
+  },
+  "policy_description_Preference_security_default_personal_cert_select_automatically": {
+    "message": "select automatically"
+  },
   "policy_description_PromptForDownloadLocation": {
     "message": "Ask where to save each file before downloading"
   },

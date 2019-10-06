@@ -81,6 +81,8 @@
   [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
 - new policy to disable browsing history, see
   [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
+- new policy to automatically chooses the default personal certificate, see
+  [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
 - new policy to allow local files to access other local files (Firefox 68.0.1+, Firefox ESR 68.1+), see
   [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
 - replaced old SanitizeOnShutdown policy to clear all data on shutdown with new selective SanitizeOnShutdown policy.

@@ -734,6 +734,15 @@
   "policy_description_Preference_privacy_file_unique_origin": {
     "message": "Lokalen Dateien den Zugriff auf andere lokale Dateien erlauben (Sicherheitsproblem!)"
   },
+  "policy_description_Preference_security_default_personal_cert": {
+    "message": "Den Nutzer um Auswahl eines Zertifikats für Websites bitten, welche eines benötigen"
+  },
+  "policy_description_Preference_security_default_personal_cert_ask_every_time": {
+    "message": "jedes Mal nachfragen"
+  },
+  "policy_description_Preference_security_default_personal_cert_select_automatically": {
+    "message": "automatisch auswählen"
+  },
   "policy_description_PromptForDownloadLocation": {
     "message": "Vor dem Herunterladen jeder Datei fragen, wo diese gespeichert werden sollen"
   },
