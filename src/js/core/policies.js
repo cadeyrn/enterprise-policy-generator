@@ -621,8 +621,8 @@ const policies = {
     enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
     info_link : null,
-    ui_category : 'others',
-    type : 'customization',
+    ui_category : 'customization',
+    type : 'preference',
     properties : {
       option : 'extensions.getAddons.showPane',
       type : 'boolean',
