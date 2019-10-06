@@ -731,7 +731,7 @@ const configurator = {
     if (policy.properties.type === 'boolean' || policy.properties.type === 'boolean-inverse') {
       const elSelectWrapper = document.createElement('div');
       elSelectWrapper.setAttribute('data-name', policy.properties.option);
-      elSelectWrapper.classList.add('enum', 'sub-options', 'select-wrapper', 'disabled');
+      elSelectWrapper.classList.add('boolean', 'sub-options', 'select-wrapper', 'disabled');
       elObjectWrapper.appendChild(elSelectWrapper);
 
       const elSelect = document.createElement('select');
@@ -775,6 +775,39 @@ const configurator = {
         elSelect.appendChild(elOptionTrue);
         elSelect.appendChild(elOptionFalse);
       }
+    }
+    else if (policy.properties.type === 'enum') {
+      const elSelectWrapper = document.createElement('div');
+      elSelectWrapper.setAttribute('data-name', policy.properties.option);
+      elSelectWrapper.classList.add('enum', 'sub-options', 'select-wrapper', 'disabled');
+      elObjectWrapper.appendChild(elSelectWrapper);
+
+      const elSelect = document.createElement('select');
+      elSelect.setAttribute('id', key + '_Select');
+      elSelect.setAttribute('name', key + '_Select');
+      elSelectWrapper.appendChild(elSelect);
+
+      // mandatory field
+      if (policy.mandatory) {
+        configurator.addMandatoryLabel(elSelect, elSelectWrapper);
+      }
+
+      // add options to select element
+      const optionsLength = policy.properties.options.length;
+      for (let i = 0; i < optionsLength; i++) {
+        const elOptionLabel = document.createTextNode(policy.properties.options[i].label);
+        const elOption = document.createElement('option');
+        elOption.setAttribute('value', policy.properties.options[i].value);
+        elOption.appendChild(elOptionLabel);
+
+        if (policy.properties.options[i].value === policy.properties.default) {
+          elOption.setAttribute('selected', 'selected');
+        }
+
+        elSelect.appendChild(elOption);
+      }
+
+      elSelectWrapper.appendChild(elSelect);
     }
     else if (policy.properties.type === 'string') {
       const elInputWrapper = document.createElement('div');

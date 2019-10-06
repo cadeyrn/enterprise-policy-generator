@@ -399,9 +399,15 @@ const output = {
    * @returns {void}
    */
   collectPreferences (el) {
+    // boolean fields
+    [...el.parentNode.querySelectorAll(':scope > .boolean')].forEach((el) => {
+      const value = JSON.parse(el.firstChild.options[el.firstChild.selectedIndex].value);
+      output.preferences[el.getAttribute('data-name')] = value;
+    });
+
     // enum fields
     [...el.parentNode.querySelectorAll(':scope > .enum')].forEach((el) => {
-      const value = JSON.parse(el.firstChild.options[el.firstChild.selectedIndex].value);
+      const value = el.firstChild.options[el.firstChild.selectedIndex].value;
       output.preferences[el.getAttribute('data-name')] = value;
     });
 
