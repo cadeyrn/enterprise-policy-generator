@@ -728,7 +728,19 @@ const configurator = {
   addPreferenceOption (key, policy) {
     const elObjectWrapper = configurator.addPolicyNode(key, policy, 'preference');
 
-    if (policy.properties.type === 'boolean' || policy.properties.type === 'boolean-inverse') {
+    if (policy.properties.type === 'array') {
+      const elArrayWrapper = document.createElement('div');
+      elArrayWrapper.setAttribute('data-name', policy.properties.option);
+      elArrayWrapper.classList.add('array', 'sub-options', 'disabled');
+      elObjectWrapper.appendChild(elArrayWrapper);
+
+      // add array items
+      if (policy.properties.items) {
+        const parentName = policy.properties.option.replace(/\./g, '_');
+        configurator.addProperty(elArrayWrapper, parentName, policy.properties.items, true);
+      }
+    }
+    else if (policy.properties.type === 'boolean' || policy.properties.type === 'boolean-inverse') {
       const elSelectWrapper = document.createElement('div');
       elSelectWrapper.setAttribute('data-name', policy.properties.option);
       elSelectWrapper.classList.add('boolean', 'sub-options', 'select-wrapper', 'disabled');

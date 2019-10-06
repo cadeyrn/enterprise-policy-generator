@@ -399,6 +399,23 @@ const output = {
    * @returns {void}
    */
   collectPreferences (el) {
+    // arrays
+    [...el.parentNode.querySelectorAll(':scope > .array')].forEach((innerEl) => {
+      const items = [];
+
+      // input fields
+      [...innerEl.querySelectorAll(':scope > .input')].forEach((arrEl) => {
+        if (arrEl.firstChild.value) {
+          items.push(arrEl.firstChild.value);
+        }
+      });
+
+      // only add non-empty arrays
+      if (items.length > 0) {
+        output.preferences[innerEl.getAttribute('data-name')] = items.join(',');
+      }
+    });
+
     // boolean fields
     [...el.parentNode.querySelectorAll(':scope > .boolean')].forEach((el) => {
       const value = JSON.parse(el.firstChild.options[el.firstChild.selectedIndex].value);
