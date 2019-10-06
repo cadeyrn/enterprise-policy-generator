@@ -424,7 +424,7 @@ const output = {
 
     // enum fields
     [...el.parentNode.querySelectorAll(':scope > .enum')].forEach((el) => {
-      const value = el.firstChild.options[el.firstChild.selectedIndex].value;
+      const { value } = el.firstChild.options[el.firstChild.selectedIndex];
       output.preferences[el.getAttribute('data-name')] = value;
     });
 
