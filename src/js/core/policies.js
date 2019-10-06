@@ -2033,6 +2033,20 @@ const policies = {
     type : 'boolean'
   },
 
+  Preference_security_ssl_errorReporting_enabled : {
+    description : browser.i18n.getMessage('policy_description_Preference_security_ssl_errorReporting_enabled'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : null,
+    ui_category : 'updates-and-data',
+    type : 'preference',
+    properties : {
+      option : 'security.ssl.errorReporting.enabled',
+      type : 'boolean',
+      default : 'true'
+    }
+  },
+
   Preference_media_gmp_widevinecdm_enabled : {
     description : browser.i18n.getMessage('policy_description_Preference_media_gmp_widevinecdm_enabled'),
     enterprise_only : false,

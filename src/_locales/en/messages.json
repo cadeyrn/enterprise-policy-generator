@@ -743,6 +743,9 @@
   "policy_description_Preference_security_default_personal_cert_select_automatically": {
     "message": "select automatically"
   },
+  "policy_description_Preference_security_ssl_errorReporting_enabled": {
+    "message": "Allow TLS errors to be sent to Mozilla"
+  },
   "policy_description_PromptForDownloadLocation": {
     "message": "Ask where to save each file before downloading"
   },

@@ -743,6 +743,9 @@
   "policy_description_Preference_security_default_personal_cert_select_automatically": {
     "message": "automatisch auswählen"
   },
+  "policy_description_Preference_security_ssl_errorReporting_enabled": {
+    "message": "TLS-Fehler können an Mozilla gesendet werden"
+  },
   "policy_description_PromptForDownloadLocation": {
     "message": "Vor dem Herunterladen jeder Datei fragen, wo diese gespeichert werden sollen"
   },
