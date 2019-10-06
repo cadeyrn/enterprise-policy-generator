@@ -1,6 +1,6 @@
 {
   "common_domain": {
-    "message": "Domain"
+    "message": "Domena"
   },
   "common_url": {
     "message": "URL"
@@ -12,31 +12,31 @@
     "message": "konfiguraciju importować"
   },
   "enum_value_block_no": {
-    "message": "don't block"
+    "message": "njeblokować"
   },
   "enum_value_block_yes": {
-    "message": "block"
+    "message": "blokować"
   },
   "enum_value_enable_no": {
-    "message": "disable"
+    "message": "znjemóžnić"
   },
   "enum_value_enable_yes": {
-    "message": "enable"
+    "message": "zmóžnić"
   },
   "enum_value_no": {
-    "message": "no"
+    "message": "ně"
   },
   "enum_value_no_preference": {
-    "message": "žane nastajenje"
+    "message": "žane standardne nastajenje"
   },
   "enum_value_yes": {
-    "message": "yes"
+    "message": "haj"
   },
   "enterprise_only_label": {
     "message": "funguje jenož w Firefox ESR"
   },
   "explanation_about_policies": {
-    "message": "There is an overview of all active policies and errors in the file “policies.json” at about:policies."
+    "message": "Pod about:policies je přehlad wo wšěch aktiwnych prawidłach kaž tež wo zmylkach w dataji „policies.json“."
   },
   "explanation_headline_usage": {
     "message": "Nałoženje"
@@ -135,7 +135,7 @@
     "message": "Webstrony, kotrež integrowanu awtentifikaciju podpěruja"
   },
   "policy_description_Authentication_additional_note": {
-    "message": "Option to lock setting new from Firefox 71. Always protected before."
+    "message": "Móžnosć, nastajenje škitać, nowa wot Firefox 71. Do toho přeco škitane."
   },
   "policy_description_Authentication_AllowNonFQDN": {
     "message": "Přeco SPNEGO abo NTLM na nje-FQDN (połnokwalifikowane domenowe mjena) dowolić"
@@ -201,7 +201,7 @@
     "message": "Certifikaty konfigurować"
   },
   "policy_description_Certificates_ImportEnterpriseRoots": {
-    "message": "read certificates from the system certificate store (Windows and macOS only)"
+    "message": "Certifikaty z certifikatoweho składowaka systema čitać (jenož Windows a macOS)"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_false": {
     "message": "Certifikaty z certifikatoweho składowaka systema nječitać"
@@ -213,7 +213,7 @@
     "message": "Certifikaty importować (Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates abo %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: /Library/Application Support/Mozilla/Certificates abo ~/Library/Application Support/Mozilla/Certificates, Linux: /usr/lib/mozilla/certificates, /usr/lib64/mozilla/certificates abo ~/.mozilla/certificates)"
   },
   "policy_description_Certificates_Install_Value": {
-    "message": "Path to the .der or .pem file"
+    "message": "Šćežka k .der- abo .pem-dataji"
   },
   "policy_description_Cookies": {
     "message": "Webstronam dowolić abo zakazać, placki stajić"
@@ -264,10 +264,10 @@
     "message": "Slědowanske placki blokować"
   },
   "policy_description_DefaultDownloadDirectory": {
-    "message": "Set the default download directory"
+    "message": "Standardny zapis sćehnjenjow postajić"
   },
   "policy_description_DefaultDownloadDirectory_Label": {
-    "message": "You can use ${home} for the native home directory"
+    "message": "Zastupowacy symbol ${home} da so za natiwny wužiwarski zapis wužiwać"
   },
   "policy_description_DisableAppUpdate": {
     "message": "Firefox při aktualizowanju haćić"
@@ -312,7 +312,7 @@
     "message": "Tłóčatko \"Firefox wobnowić\" w about:support znjemóžnić"
   },
   "policy_description_DisableSafeMode": {
-    "message": "Disable the menu item to restart Firefox with add-ons disabled (safe mode)"
+    "message": "Menijowy zapisk znjemóžnić, zo by so Firefox ze znjemóžnjenymi rozšěrjenjemi znowa startował (wěsty modus)"
   },
   "policy_description_DisableSecurityBypass": {
     "message": "Zadźěwać, zo so wěstotne warnowanja wobeńdu"
@@ -372,22 +372,22 @@
     "message": "Při starće njekontrolować, hač Firefox je standardny wobhladowak"
   },
   "policy_description_DownloadDirectory": {
-    "message": "Set and lock the download directory"
+    "message": "Zapis sćehnjenjow postajić a zawrěć"
   },
   "policy_description_DownloadDirectory_Label": {
-    "message": "You can use ${home} for the native home directory"
+    "message": "Zastupowacy symbol ${home} da so za natiwny wužiwarski zapis wužiwać"
   },
   "policy_description_EnableTrackingProtection": {
-    "message": "Enhanced Tracking Protection"
+    "message": "Polěpšeny slědowanski škit"
   },
   "policy_description_EnableTrackingProtection_Cryptomining": {
-    "message": "block cryptominers (Firefox 70+, Firefox ESR 68.2+)"
+    "message": "Skryte kryptokopaki (jendź. cryptominers) blokować (Firefox 70+, Firefox ESR 68.2+)"
   },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
-    "message": "block fingerprinters (Firefox 70+, Firefox ESR 68.2+)"
+    "message": "Porstowe wotćišće (fingerprinters) blokować (Firefox 70+, Firefox ESR 68.2+)"
   },
   "policy_description_EnableTrackingProtection_Value": {
-    "message": "Tracking Content"
+    "message": "Slědowacy wobsah"
   },
   "policy_description_EnableTrackingProtection_Value_false": {
     "message": "Slědowanski škit znjemóžnić"
@@ -399,7 +399,7 @@
     "message": "Rozšěrjenja instalować, wotinstalować abo zawrěć"
   },
   "policy_description_Extensions_Deprecated": {
-    "message": "Deprecated. The following policy should be used."
+    "message": "Zestarjeny. Prawidło pod tym ma so wužiwać."
   },
   "policy_description_Extensions_Install": {
     "message": "Přidatki instalować. Móžeće URL abo šćežki podać."
@@ -420,67 +420,67 @@
     "message": "ID přidatka"
   },
   "policy_description_ExtensionSettings": {
-    "message": "Manage the installation and uninstallation of add-ons"
+    "message": "Instalowanje a wotinstalowanje rozšěrjenjow rjadować"
   },
   "policy_description_ExtensionSettings_allowed_types": {
-    "message": "Allowed add-on types"
+    "message": "Dowolene typy rozšěrjenjow"
   },
   "policy_description_ExtensionSettings_allowed_types_dictionary": {
-    "message": "Dictionaries"
+    "message": "Słowniki"
   },
   "policy_description_ExtensionSettings_allowed_types_extension": {
-    "message": "Extensions"
+    "message": "Rozšěrjenja"
   },
   "policy_description_ExtensionSettings_allowed_types_langpack": {
-    "message": "Language packs"
+    "message": "Rěčne pakćiki"
   },
   "policy_description_ExtensionSettings_allowed_types_theme": {
-    "message": "Themes"
+    "message": "Drasty"
   },
   "policy_description_ExtensionSettings_blocked_install_message_caption_all": {
-    "message": "Error message to display to the user when trying to install an blocked add-on"
+    "message": "Zmylkowa zdźělenka, kotraž so wužiwarjej pokazuje, hdyž pospytuje, zablokowane rozšěrjenje instalować"
   },
   "policy_description_ExtensionSettings_blocked_install_message_caption_single": {
-    "message": "Error message to display to the user when trying to install the blocked add-on"
+    "message": "Zmylkowa zdźělenka, kotraž so wužiwarjej pokazuje, hdyž so pospytuje, zablokowane rozšěrjenje instalować"
   },
   "policy_description_ExtensionSettings_blocked_install_message_label": {
-    "message": "error message"
+    "message": "Zmylkowa zdźělenka"
   },
   "policy_description_ExtensionSettings_extra_caption_post": {
-    "message": "Configuration for individual add-ons"
+    "message": "Konfiguracija za jednotliwe rozšěrjenja"
   },
   "policy_description_ExtensionSettings_extra_caption_pre": {
-    "message": "Configuration for all add-ons"
+    "message": "Konfiguracija za wšě rozšěrjenja"
   },
   "policy_description_ExtensionSettings_install_sources": {
-    "message": "Allowed installation sources. Both the location of the *.xpi file and the page where the download is started from must be allowed."
+    "message": "Dowolene instalaciske žórła. Žórło *.xpi-dataje kaž tež domena, z kotrejež so sćehnjenje startuje, dyrbitej dowolenej być."
   },
   "policy_description_ExtensionSettings_install_url_caption": {
-    "message": "install URL. If installing from the local file system, use a file:/// URI."
+    "message": "Instalowanski URL. Jeli ma so rozšěrjenje z lokalneho datajoweho systema instalować, wužiwajće prošu file:///-URI."
   },
   "policy_description_ExtensionSettings_installation_mode": {
-    "message": "installation"
+    "message": "Instalacija"
   },
   "policy_description_ExtensionSettings_installation_mode_allowed_all": {
-    "message": "the installation of add-ons by the user is allowed"
+    "message": "Instalowanje rozšěrjenjow přez wužiwarja je dowolene"
   },
   "policy_description_ExtensionSettings_installation_mode_allowed_single": {
-    "message": "the installation of this add-on by the user is allowed"
+    "message": "Instalowanje tutoho rozšěrjenja přez wužiwarja je dowolene"
   },
   "policy_description_ExtensionSettings_installation_mode_blocked_all": {
-    "message": "the installation of add-on by the user is not allowed and already installed add-on will be removed from the device"
+    "message": "Instalowanje rozšěrjenjow přez wužiwarja njeje dowolene a hižo instalowane rozšěrjenja so z grata wotstronja"
   },
   "policy_description_ExtensionSettings_installation_mode_blocked_single": {
-    "message": "the installation of this add-on by the user is not allowed and the add-on will be removed from the device if already installed"
+    "message": "Instalowanje tutoho rozšěrjenja přez wužiwarja njeje dowolene a rozšěrjenje so z grata wotstroni, jeli je hižo instalowane"
   },
   "policy_description_ExtensionSettings_installation_mode_force_installed": {
-    "message": "the add-on is automatically installed and can't be removed by the user (requires an install url)"
+    "message": "Rozšěrjenje so awtomatisce instaluje a njeda so wot wužiwarja wotstronić (instalowanski URL trěbny)"
   },
   "policy_description_ExtensionSettings_installation_mode_normal_installed": {
-    "message": "the add-on is automatically installed but can be disabled by the user (requires an install url)"
+    "message": "Rozšěrjenje so awtomatisce instaluje a da so wot wužiwarja znjemóžnić (instalowanski URL trěbny)"
   },
   "policy_description_ExtensionSettings_Label_Key": {
-    "message": "ID přidatka"
+    "message": "Rozšěrjenski ID"
   },
   "policy_description_ExtensionUpdate": {
     "message": "Awtomatiske aktualizowanje rozšěrjenjow zmóžnić abo znjemóžnić"
@@ -492,22 +492,22 @@
     "message": "Awtomatiske aktualizowanje rozšěrjenjow zmóžnić"
   },
   "policy_description_FirefoxHome": {
-    "message": "Customize the Firefox home page"
+    "message": "Startowu wobrazowku Firefox přiměrić"
   },
   "policy_description_FirefoxHome_Search": {
-    "message": "Web Search"
+    "message": "Internetne pytanje"
   },
   "policy_description_FirefoxHome_TopSites": {
-    "message": "Top Sites"
+    "message": "Wažne strony"
   },
   "policy_description_FirefoxHome_Highlights": {
-    "message": "Highlights"
+    "message": "Přehlad"
   },
   "policy_description_FirefoxHome_Pocket": {
-    "message": "Pocket Recommendations"
+    "message": "Doporučenja Pocket"
   },
   "policy_description_FirefoxHome_Snippets": {
-    "message": "Snippets"
+    "message": "Krótke informacije"
   },
   "policy_description_FlashPlugin": {
     "message": "Wužiwanje tykača Flash dowolić abo zakazać"
@@ -561,7 +561,7 @@
     "message": "Rozšěrjenja dadźa so wot wužiwarja instalować"
   },
   "policy_description_LocalFileLinks": {
-    "message": "Allow specific websites to link to local files"
+    "message": "Wěstym websydłam dowolić, na lokalne dataje wotkazać"
   },
   "policy_description_NetworkPrediction": {
     "message": "DNS-předzačitanje zmóžnić abo znjemóžnić"
@@ -573,7 +573,7 @@
     "message": "DNS-předzačitanje zmóžnić)"
   },
   "policy_description_NewTabPage": {
-    "message": "Enable or disable the page that appears when opening a new tab"
+    "message": "Strona, kotraž so při wočinjenju noweho rajtarka jewi, zmóžnić abo znjemóžnić"
   },
   "policy_description_NoDefaultBookmarks": {
     "message": "Žane standardne zapołožki inkluziwnje inteligentne zapołožki (najhusćišo wopytane strony, njedawno wužite klučowe słowa) wutworić. Pokazka: tuta směrnica je jenož skutkowna, hdyž so před prěnim wužiwanjom profila Firefox nałožuje"
@@ -588,7 +588,7 @@
     "message": "wužite přizjewjenja a hesła sej spomjatkować"
   },
   "policy_description_OfferToSaveLoginsDefault": {
-    "message": "Default value for allowing Firefox to offer to remember saved logins and passwords"
+    "message": "Standardne nastajenje, hač sej Firefox składowane přizjewjenja a hesła spomjatkuje"
   },
   "policy_description_OfferToSaveLoginsDefault_options_false": {
     "message": "wužite přizjewjenja a hesła sej njespomjatkować"
@@ -603,7 +603,7 @@
     "message": "Stronu z nowosćemi přepisać, kotraž so móže po aktualizaciji jewić. Prózdne zapodawanske polo stronu dospołnje znjemóžnja."
   },
   "policy_description_PasswordManagerEnabled": {
-    "message": "Enable or disable the password manager completely"
+    "message": "Zrjadowak hesłow dospołnje zmóžnić abo znjemóžnić"
   },
   "policy_description_Permissions": {
     "message": "Prawa za stejnišćo, kameru, mikrofon a zdźělenki konfigurować"
@@ -669,88 +669,88 @@
     "message": "Wuskakowace wokna so po standardźe blokuja"
   },
   "policy_description_Preference_browser_cache_disk_enable": {
-    "message": "Enable / disable storing cache on the hard drive"
+    "message": "Pufrowak kruteje tačele zmóžnić / znjemóžnić"
   },
   "policy_description_Preference_browser_cache_disk_parent_directory": {
-    "message": "Change the location of the disk cache"
+    "message": "Składowanske městno pufrowaka kruteje tačele změnić"
   },
   "policy_description_Preference_browser_cache_disk_parent_directory_label": {
-    "message": "Path"
+    "message": "Šćežka"
   },
   "policy_description_Preference_browser_fixup_dns_first_for_single_words": {
-    "message": "Send single words in address bar to DNS first and not directly to search engine"
+    "message": "Jednotliwe słowa w adresowym polu najprjedy na DNS a nic direktnje na pytawu pósłać"
   },
   "policy_description_Preference_browser_search_update": {
-    "message": "Update search engines"
+    "message": "Pytawy aktualizować"
   },
   "policy_description_Preference_browser_tabs_warnOnClose": {
-    "message": "Show warning when the browser is closed"
+    "message": "Warnowanje při kónčenju Firefox pokazać"
   },
   "policy_description_Preference_browser_urlbar_suggest_bookmark": {
-    "message": "Suggest bookmarks when using the address bar"
+    "message": "Při wužiwanju adresoweho pola zapołožki namjetować"
   },
   "policy_description_Preference_browser_urlbar_suggest_history": {
-    "message": "Suggest browsing history when using the address bar"
+    "message": "Při wužiwanju adresoweho pola zapiski z historije namjetować"
   },
   "policy_description_Preference_browser_urlbar_suggest_openpage": {
-    "message": "Suggest open tabs when using the address bar"
+    "message": "Při wužiwanju adresoweho pola wočinjene rajtarki namjetować"
   },
   "policy_description_Preference_datareporting_policy_dataSubmissionPolicyBypassNotification": {
-    "message": "Show the privacy policy tab on first run"
+    "message": "Pokazku priwatnosće při prěnim starće Firefox pokazać"
   },
   "policy_description_Preference_dom_disable_window_flip": {
-    "message": "Allow websites to monkey with window focus"
+    "message": "Websydłam dowolić, woknowy fokus manipulować"
   },
   "policy_description_Preference_dom_disable_window_move_resize": {
-    "message": "Allow websites to move and resize windows"
+    "message": "Websydłam dowolić, wokna přesunyć a jich wulkosc změnić"
   },
   "policy_description_Preference_dom_event_contextmenu_enabled": {
-    "message": "Allow website to override the context menu"
+    "message": "Websydłam dowolić, kontekstowy meni přepisać"
   },
   "policy_description_Preference_dom_keyboardevent_keypress_hack_dispatch_non_printable_keys_addl": {
-    "message": "Web standards: Restore old behavior regarding keypress event and non-printable keys for certain domains"
+    "message": "Webstandardy: Stare zadźerženje nastupajo podawk keypress a njećišćomnych tastow za wěste domeny wobnowić"
   },
   "policy_description_Preference_dom_keyboardevent_keypress_hack_use_legacy_keycode_and_charcode_addl": {
-    "message": "Web standards: Restore old behavior regarding keyCode and charCode for certain domains"
+    "message": "Webstandardy: Stare zadźerženje nastupajo keyCode a charCode za wěste domeny wobnowić"
   },
   "policy_description_Preference_extensions_getAddons_showPane": {
-    "message": "Show recommendations tab in add-ons manager"
+    "message": "Rajtark z doporučenjemi w zrjadowaku rozšěrjenjow pokazać"
   },
   "policy_description_Preference_media_gmp_gmpopenh264_enabled": {
-    "message": "Download OpenH264 plugin for WebRTC communication"
+    "message": "Tykač OpenH264 za WebRTC-komunikaciju sćahnyć"
   },
   "policy_description_Preference_media_gmp_widevinecdm_enabled": {
-    "message": "Download Widevine plugin for streaming with DRM"
+    "message": "Tykač Widevine za streaming z DRM sćahnyć"
   },
   "policy_description_Preference_network_dns_disableIPv6": {
-    "message": "Perform IPv6 DNS lookups"
+    "message": "IPv6 DNS-pytanja přewjesć"
   },
   "policy_description_Preference_network_IDN_show_punycode": {
-    "message": "Display the punycode version of internationalized domain names"
+    "message": "Wersiju Punycode internacionalizowanych domenowych mjenow pokazać"
   },
   "policy_description_Preference_places_history_enabled": {
-    "message": "Remember browsing history"
+    "message": "Sej historiju wobhladowaka spomjatkować"
   },
   "policy_description_Preference_privacy_file_unique_origin": {
-    "message": "Allow local files to access other local files (security issue!)"
+    "message": "Lokalnym datajam přistup na druhe lokalne dataje dowolić (wěstotny problem!)"
   },
   "policy_description_Preference_security_default_personal_cert": {
-    "message": "Prompt the user to choose the default personal certificate"
+    "message": "Wužiwarja wo wuběranje certifikata za websydła prosyć, kotrež tajki trjebaja"
   },
   "policy_description_Preference_security_default_personal_cert_ask_every_time": {
-    "message": "ask every time"
+    "message": "kóždy raz so prašeć"
   },
   "policy_description_Preference_security_default_personal_cert_select_automatically": {
-    "message": "select automatically"
+    "message": "awtomatisce wubrać"
   },
   "policy_description_Preference_security_ssl_errorReporting_enabled": {
-    "message": "Allow TLS errors to be sent to Mozilla"
+    "message": "TLS-zmylki dadźa so na Mozilla pósłać"
   },
   "policy_description_Preference_ui_key_menuAccessKeyFocuses": {
-    "message": "The Alt key can be used to show the menu bar"
+    "message": "Tasta Alt da so wužiwać, zo by menijowu lajstu pokazała"
   },
   "policy_description_PromptForDownloadLocation": {
-    "message": "Ask where to save each file before downloading"
+    "message": "Před sćahowanjom kóždeje dataje so prašeć, hdźež maja so tute składować"
   },
   "policy_description_Proxy": {
     "message": "Přistup proksy na internet konfigurować"
@@ -822,37 +822,37 @@
     "message": "Rěč powjercha Firefox změnić"
   },
   "policy_description_RequestedLocales_Requirement": {
-    "message": "The corresponding language package must be installed. Leave empty to use the language of the operating system."
+    "message": "Wotpowědny rěčny pakćik dyrbi instalowany być. Polo prózdne wostajić, zo by so rěč dźěłoweho systema wužiwała."
   },
   "policy_description_RequestedLocales_Value": {
     "message": "Rěčny kod"
   },
   "policy_description_SanitizeOnShutdown": {
-    "message": "Clear browser data on shutdown"
+    "message": "Přehladowanske daty zhašeć, hdyž so Firefox začini"
   },
   "policy_description_SanitizeOnShutdown_Cache": {
-    "message": "Cache"
+    "message": "Pufrowak"
   },
   "policy_description_SanitizeOnShutdown_Cookies": {
-    "message": "Cookies"
+    "message": "Placki"
   },
   "policy_description_SanitizeOnShutdown_Downloads": {
-    "message": "Download History"
+    "message": "Historija sćehnjenjow"
   },
   "policy_description_SanitizeOnShutdown_FormData": {
-    "message": "Form & Search History"
+    "message": "Zapodate pytanske wurazy a formularne daty"
   },
   "policy_description_SanitizeOnShutdown_History": {
-    "message": "Browsing History"
+    "message": "Wopytane strony"
   },
   "policy_description_SanitizeOnShutdown_Sessions": {
-    "message": "Active Logins"
+    "message": "Aktiwne přizjewjenja"
   },
   "policy_description_SanitizeOnShutdown_SiteSettings": {
-    "message": "Site Preferences"
+    "message": "Nastajenja websydła"
   },
   "policy_description_SanitizeOnShutdown_OfflineApps": {
-    "message": "Offline Website Data"
+    "message": "Daty websydła offline"
   },
   "policy_description_SearchBar": {
     "message": "Postaja, hač pytanske polo je kombinowane z adresowym polom abo separatne"
@@ -876,7 +876,7 @@
     "message": "Wopisanje"
   },
   "policy_description_SearchEngines_Add_IconURL": {
-    "message": "Icon URL or data:image…"
+    "message": "Symbolowy URL abo data:image…"
   },
   "policy_description_SearchEngines_Add_Method": {
     "message": "Naprašowanska metoda"
@@ -918,7 +918,7 @@
     "message": "Mjeno"
   },
   "policy_description_SearchSuggestEnabled": {
-    "message": "Enable or disable search suggestions"
+    "message": "Namjety pytawow zmóžnić abo znjemóžnić"
   },
   "policy_description_SecurityDevices": {
     "message": "Module PKCS#11 instalować"
