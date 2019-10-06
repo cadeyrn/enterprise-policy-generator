@@ -2189,6 +2189,20 @@ const policies = {
     }
   },
 
+  Preference_places_history_enabled : {
+    description : browser.i18n.getMessage('policy_description_Preference_places_history_enabled'),
+    enterprise_only : false,
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : null,
+    ui_category : 'others',
+    type : 'preference',
+    properties : {
+      option : 'places.history.enabled',
+      type : 'boolean',
+      default : 'true'
+    }
+  },
+
   SearchSuggestEnabled : {
     description : browser.i18n.getMessage('policy_description_SearchSuggestEnabled'),
     enterprise_only : false,
