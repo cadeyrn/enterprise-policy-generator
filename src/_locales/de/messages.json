@@ -746,6 +746,9 @@
   "policy_description_Preference_security_ssl_errorReporting_enabled": {
     "message": "TLS-Fehler können an Mozilla gesendet werden"
   },
+  "policy_description_Preference_ui_key_menuAccessKeyFocuses": {
+    "message": "Die Alt-Taste kann benutzt werden, um die Menüleiste anzuzeigen"
+  },
   "policy_description_PromptForDownloadLocation": {
     "message": "Vor dem Herunterladen jeder Datei fragen, wo diese gespeichert werden sollen"
   },

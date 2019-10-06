@@ -217,6 +217,21 @@ const policies = {
     type : 'boolean'
   },
 
+  Preference_ui_key_menuAccessKeyFocuses : {
+    description : browser.i18n.getMessage('policy_description_Preference_ui_key_menuAccessKeyFocuses'),
+    enterprise_only : false,
+    additional_note : browser.i18n.getMessage('requirement_windows_or_linux'),
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    info_link : null,
+    ui_category : 'customization',
+    type : 'preference',
+    properties : {
+      option : 'ui.key.menuAccessKeyFocuses',
+      type : 'boolean',
+      default : 'true'
+    }
+  },
+
   DisplayBookmarksToolbar : {
     description : browser.i18n.getMessage('policy_description_DisplayBookmarksToolbar'),
     enterprise_only : false,

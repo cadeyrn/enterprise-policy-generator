@@ -85,6 +85,8 @@
   [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
 - new policy to disable the feature to send TLS errors to Mozilla, see
   [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
+- new policy to disable the Alt key to show the menu bar on Windows and Linux, see
+  [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
 - new policy to allow local files to access other local files (Firefox 68.0.1+, Firefox ESR 68.1+), see
   [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
 - replaced old SanitizeOnShutdown policy to clear all data on shutdown with new selective SanitizeOnShutdown policy.

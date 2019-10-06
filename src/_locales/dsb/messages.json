@@ -746,6 +746,9 @@
   "policy_description_Preference_security_ssl_errorReporting_enabled": {
     "message": "Allow TLS errors to be sent to Mozilla"
   },
+  "policy_description_Preference_ui_key_menuAccessKeyFocuses": {
+    "message": "The Alt key can be used to show the menu bar"
+  },
   "policy_description_PromptForDownloadLocation": {
     "message": "Ask where to save each file before downloading"
   },
