@@ -468,7 +468,7 @@
     "message": "the installation of this add-on by the user is allowed"
   },
   "policy_description_ExtensionSettings_installation_mode_blocked_all": {
-    "message": "the installation of add-on by the user is not allowed and already installed add-on will be removed from the device"
+    "message": "the installation of add-ons by the user is not allowed and already installed add-ons will be removed from the device"
   },
   "policy_description_ExtensionSettings_installation_mode_blocked_single": {
     "message": "the installation of this add-on by the user is not allowed and the add-on will be removed from the device if already installed"
