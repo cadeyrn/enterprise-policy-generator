@@ -1,6 +1,6 @@
 {
   "common_domain": {
-    "message": "Domain"
+    "message": "Domena"
   },
   "common_url": {
     "message": "URL"
@@ -12,46 +12,46 @@
     "message": "konfiguraciju importěrowaś"
   },
   "enum_value_block_no": {
-    "message": "don't block"
+    "message": "njeblokěrowaś"
   },
   "enum_value_block_yes": {
-    "message": "block"
+    "message": "blokěrowaś"
   },
   "enum_value_enable_no": {
-    "message": "disable"
+    "message": "znjemóžniś"
   },
   "enum_value_enable_yes": {
-    "message": "enable"
+    "message": "zmóžniś"
   },
   "enum_value_no": {
-    "message": "no"
+    "message": "ně"
   },
   "enum_value_no_preference": {
-    "message": "žedno nastajenje"
+    "message": "žedne standardne nastajenje"
   },
   "enum_value_yes": {
-    "message": "yes"
+    "message": "jo"
   },
   "enterprise_only_label": {
     "message": "funkcioněrujo jano w Firefox ESR"
   },
   "explanation_about_policies": {
-    "message": "There is an overview of all active policies and errors in the file “policies.json” at about:policies."
+    "message": "Pód about:policies jo pśeglěd wó wšych aktiwnych pšawidłach ako teke wó zmólkach w dataji „policies.json“."
   },
   "explanation_headline_usage": {
     "message": "Nałoženje"
   },
   "explanation_intro": {
-    "message": "Z kliknjenim na tłocašk se kod generěrujo. Toś ten kod musy se w dataji \"policies.json\" do zarědnika \"distribution\" składowaś."
+    "message": "Z kliknjenim na tłocašk se kod generěrujo. Toś ten kod musy se w dataji „policies.json“ do zarědnika „distribution“ składowaś."
   },
   "explanation_intro_linux": {
-    "message": "Napórajśo zarědnik z mjenim \"distribution\" w zarědniku, w kótaremž jo Firefox a składujśo tam dataju \"policies.json\"."
+    "message": "Napórajśo zarědnik z mjenim „distribution“ w zarědniku, w kótaremž jo Firefox a składujśo tam dataju „policies.json“."
   },
   "explanation_intro_macos": {
-    "message": "Napórajśo  zarědnik z mjenim \"distribution\" w Firefox.app/Contents/Resources/ a składujśo tam dataju \"policies.json\"."
+    "message": "Napórajśo  zarědnik z mjenim „distribution“ w Firefox.app/Contents/Resources/ a składujśo tam dataju „policies.json“."
   },
   "explanation_intro_windows": {
-    "message": "Napórajśo zarědnik z mjenim \"distribution\" w tom zarědniku, źož jo dataja firefox.exe a składujśo tam dataju \"policies.json\"."
+    "message": "Napórajśo zarědnik z mjenim „distribution“ w tom zarědniku, źož jo dataja firefox.exe a składujśo tam dataju „policies.json“."
   },
   "extension_description": {
     "message": "Generěrujo pśedewześarske směrnice za Firefox."
@@ -135,7 +135,7 @@
     "message": "Webboki, kótarež integrěrowanu awtentifikaciju pódpěraju"
   },
   "policy_description_Authentication_additional_note": {
-    "message": "Option to lock setting new from Firefox 71. Always protected before."
+    "message": "Móžnosć, nastajenje šćitaś, nowa wót Firefox 71. Do togo pśecej šćitane."
   },
   "policy_description_Authentication_AllowNonFQDN": {
     "message": "Pśecej SPNEGO abo NTLM na nje-FQDN (połnokwalificěrowane domenowe mjenja) dowóliś"
@@ -201,7 +201,7 @@
     "message": "Certifikaty konfigurěrowaś"
   },
   "policy_description_Certificates_ImportEnterpriseRoots": {
-    "message": "read certificates from the system certificate store (Windows and macOS only)"
+    "message": "Certifikaty z certifikatowego składowaka systema cytaś (jano Windows a macOS)"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_false": {
     "message": "Certifikaty z certifikatowego składowaka systema njecytaś"
@@ -213,13 +213,13 @@
     "message": "Certifikaty importěrowaś (Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates abo %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: /Library/Application Support/Mozilla/Certificates abo ~/Library/Application Support/Mozilla/Certificates, Linux: /usr/lib/mozilla/certificates, /usr/lib64/mozilla/certificates abo ~/.mozilla/certificates)"
   },
   "policy_description_Certificates_Install_Value": {
-    "message": "Path to the .der or .pem file"
+    "message": "Sćažka k .der- abo .pem-dataji"
   },
   "policy_description_Cookies": {
     "message": "Webbokam dowóliś abo zakazaś, cookieje stajiś"
   },
   "policy_description_Cookies_AcceptThirdParty": {
-    "message": "Standardna gódnota za \"Cookieje a sedłowe daty tśeśich póbitowarjow akceptěrowaś\""
+    "message": "Standardna gódnota za „Cookieje a sedłowe daty tśeśich póbitowarjow akceptěrowaś“"
   },
   "policy_description_Cookies_AcceptThirdParty_always": {
     "message": "pśecej"
@@ -243,7 +243,7 @@
     "message": "Domena"
   },
   "policy_description_Cookies_Default": {
-    "message": "Standardna gódnota za \"Cookieje a sedłowe daty z websedłow akceptěrowaś\""
+    "message": "Standardna gódnota za „Cookieje a sedłowe daty z websedłow akceptěrowaś“"
   },
   "policy_description_Cookies_Default_false": {
     "message": "Cookieje njeakceptěrowaś"
@@ -264,10 +264,10 @@
     "message": "Slědowańske cookieje blokěrowaś"
   },
   "policy_description_DefaultDownloadDirectory": {
-    "message": "Set the default download directory"
+    "message": "Standardny zapis ześěgnjenjow póstajiś"
   },
   "policy_description_DefaultDownloadDirectory_Label": {
-    "message": "You can use ${home} for the native home directory"
+    "message": "Zastupujucy symbol ${home} dajo se za natiwny wužywarski zapis wužywaś"
   },
   "policy_description_DisableAppUpdate": {
     "message": "Firefox aktualizěrowanje zawoboraś"
@@ -279,7 +279,7 @@
     "message": "Zatwarjone wuwijarske rědy znjemóžniś"
   },
   "policy_description_DisableFeedbackCommands": {
-    "message": "Menijowej zapiska \"Pósudk pósłaś\" a \"Wobšudnikojske websedło k wěsći daś\" w meniju Pomoc znjemóžniś"
+    "message": "Menijowej zapiska „Pósudk pósłaś“ a „Wobšudnikojske websedło k wěsći daś“ w meniju Pomoc znjemóžniś"
   },
   "policy_description_DisableFirefoxAccounts": {
     "message": "Słužby, kótarež na Firefox Accounts bazěruju, ako na pśikład Firefox Sync, znjemóžniś"
@@ -291,7 +291,7 @@
     "message": "Firefox pśi instalěrowanju a wuwjedowanju studijow ako teke se na kontekst póśěgujucych dopórucenjow za funkcije zawoboraś"
   },
   "policy_description_DisableForgetButton": {
-    "message": "Tłocašk \"Zabyś\" znjemóžniś, kótarež se ma wužywaś, aby historiju wulašowało"
+    "message": "Tłocašk „Zabyś“ znjemóžniś, kótarež se ma wužywaś, aby historiju wulašowało"
   },
   "policy_description_DisableFormHistory": {
     "message": "Formularnu a pytańsku historiju znjemóžniś"
@@ -306,13 +306,13 @@
     "message": "Priwatny modus znjemóžniś"
   },
   "policy_description_DisableProfileImport": {
-    "message": "Menijowy zapisk \"daty z drugego wobglědowaka importěrowaś\" w bibliotece znjemóžniś"
+    "message": "Menijowy zapisk „daty z drugego wobglědowaka importěrowaś“ w bibliotece znjemóžniś"
   },
   "policy_description_DisableProfileRefresh": {
-    "message": "Tłocašk \"Firefox wótnowiś\" w about:support znjemóžniś"
+    "message": "Tłocašk „Firefox wótnowiś“ w about:support znjemóžniś"
   },
   "policy_description_DisableSafeMode": {
-    "message": "Disable the menu item to restart Firefox with add-ons disabled (safe mode)"
+    "message": "Menijowy zapisk znjemóžniś, aby se Firefox ze znjemóžnjonymi rozšyrjenjami znowego startował (wěsty modus)"
   },
   "policy_description_DisableSecurityBypass": {
     "message": "Zajźowaś, až se wěstotnych warnowanjow wobinu"
@@ -372,22 +372,22 @@
     "message": "Pśi starśe njekontrolěrowaś, lěc Firefox jo standardny wobglědowak"
   },
   "policy_description_DownloadDirectory": {
-    "message": "Set and lock the download directory"
+    "message": "Zapis ześěgnjenjow póstajiś a zastajiś"
   },
   "policy_description_DownloadDirectory_Label": {
-    "message": "You can use ${home} for the native home directory"
+    "message": "Zastupujucy symbol ${home} dajo se za natiwny wužywarski zapis wužywaś"
   },
   "policy_description_EnableTrackingProtection": {
-    "message": "Enhanced Tracking Protection"
+    "message": "Pólěpšony slědowański šćit"
   },
   "policy_description_EnableTrackingProtection_Cryptomining": {
-    "message": "block cryptominers (Firefox 70+, Firefox ESR 68.2+)"
+    "message": "Skšajźne kryptokopaki (eng. cryptominers) blokěrowaś (Firefox 70+, Firefox ESR 68.2+)"
   },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
-    "message": "block fingerprinters (Firefox 70+, Firefox ESR 68.2+)"
+    "message": "Palcowe wótśišće (fingerprinters) blokować (Firefox 70+, Firefox ESR 68.2+)"
   },
   "policy_description_EnableTrackingProtection_Value": {
-    "message": "Tracking Content"
+    "message": "Slědujuce wopśimjeśe"
   },
   "policy_description_EnableTrackingProtection_Value_false": {
     "message": "Slědowański šćit znjemóžniś"
@@ -399,7 +399,7 @@
     "message": "Rozšyrjenja instalěrowaś, wótinstalěrowaś abo zastajiś"
   },
   "policy_description_Extensions_Deprecated": {
-    "message": "Deprecated. The following policy should be used."
+    "message": "Zestarjony. Pšawidło pód tym ma se wužywaś."
   },
   "policy_description_Extensions_Install": {
     "message": "Dodanki instalěrowaś. Móžośo URL abo sćažki pódaś."
@@ -420,67 +420,67 @@
     "message": "ID dodanka"
   },
   "policy_description_ExtensionSettings": {
-    "message": "Manage the installation and uninstallation of add-ons"
+    "message": "Instalěrowanje a wótinstalěrowanje rozšyrjenjow zastojaś"
   },
   "policy_description_ExtensionSettings_allowed_types": {
-    "message": "Allowed add-on types"
+    "message": "Dowólone typy rozšyrjenjow"
   },
   "policy_description_ExtensionSettings_allowed_types_dictionary": {
-    "message": "Dictionaries"
+    "message": "Słowniki"
   },
   "policy_description_ExtensionSettings_allowed_types_extension": {
-    "message": "Extensions"
+    "message": "Rozšyrjenja"
   },
   "policy_description_ExtensionSettings_allowed_types_langpack": {
-    "message": "Language packs"
+    "message": "Rěcne pakśiki"
   },
   "policy_description_ExtensionSettings_allowed_types_theme": {
-    "message": "Themes"
+    "message": "Drastwy"
   },
   "policy_description_ExtensionSettings_blocked_install_message_caption_all": {
-    "message": "Error message to display to the user when trying to install an blocked add-on"
+    "message": "Zmólkowa powěźeńka, kótaraž se wužiwarjeju pokazujo, gaž wopytujo, zablokěrowane rozšyrjenje instalěrowaś"
   },
   "policy_description_ExtensionSettings_blocked_install_message_caption_single": {
-    "message": "Error message to display to the user when trying to install the blocked add-on"
+    "message": "Zmólkowa powěźeńka, kótaraž se wužywarjeju pokazujo, gaž se wopytujo, zablokěrowane rozšyrjenje instalěrowaś"
   },
   "policy_description_ExtensionSettings_blocked_install_message_label": {
-    "message": "error message"
+    "message": "Zmólkowa powěźeńka"
   },
   "policy_description_ExtensionSettings_extra_caption_post": {
-    "message": "Configuration for individual add-ons"
+    "message": "Konfiguracija za jadnotliwe rozšyrjenja"
   },
   "policy_description_ExtensionSettings_extra_caption_pre": {
-    "message": "Configuration for all add-ons"
+    "message": "Konfiguracija za wšykne rozšyrjenja"
   },
   "policy_description_ExtensionSettings_install_sources": {
-    "message": "Allowed installation sources. Both the location of the *.xpi file and the page where the download is started from must be allowed."
+    "message": "Dowólone instalaciske žrědła. Žrědło *.xpi-dataje ako teke domena, z kótarejež se ześěgnjenje startujo, musytej dowólonej byś."
   },
   "policy_description_ExtensionSettings_install_url_caption": {
-    "message": "install URL. If installing from the local file system, use a file:/// URI."
+    "message": "Instalěrowański URL. Jolic ma se rozšyrjenje z lokalnego datajowego systema instalěrowaś, wužywajśo pšosym file:///-URI."
   },
   "policy_description_ExtensionSettings_installation_mode": {
-    "message": "installation"
+    "message": "Instalacija"
   },
   "policy_description_ExtensionSettings_installation_mode_allowed_all": {
-    "message": "the installation of add-ons by the user is allowed"
+    "message": "Instalěrowanje rozšyrjenjow pśez wužywarja jo dowólone"
   },
   "policy_description_ExtensionSettings_installation_mode_allowed_single": {
-    "message": "the installation of this add-on by the user is allowed"
+    "message": "Instalěrowanje toś togo rozšyrjenja pśez wužywarja jo dowólone"
   },
   "policy_description_ExtensionSettings_installation_mode_blocked_all": {
-    "message": "the installation of add-on by the user is not allowed and already installed add-on will be removed from the device"
+    "message": "Instalěrowanje rozšyrjenjow pśez wužywarja njejo dowólone a južo zainstalěrowane rozšyrjenja se z rěda wótwónoźiju"
   },
   "policy_description_ExtensionSettings_installation_mode_blocked_single": {
-    "message": "the installation of this add-on by the user is not allowed and the add-on will be removed from the device if already installed"
+    "message": "Instalěrowanje toś togo rozšyrjenja pśez wužywarja njejo dowólone a rozšyrjenje se z rěda wówónoźijo, jolic jo južo zainstalěrowane"
   },
   "policy_description_ExtensionSettings_installation_mode_force_installed": {
-    "message": "the add-on is automatically installed and can't be removed by the user (requires an install url)"
+    "message": "Rozšyrjenje se awtomatiski instalěrujo a njedajo se wót wužywarja wótwónoźiś (instalěrowański URL trěbny)"
   },
   "policy_description_ExtensionSettings_installation_mode_normal_installed": {
-    "message": "the add-on is automatically installed but can be disabled by the user (requires an install url)"
+    "message": "Rozšyrjenje se awtomatiski instalěrujo a dajo se wót wužywarja znjemóžniś (instalěrowański URL trěbny)"
   },
   "policy_description_ExtensionSettings_Label_Key": {
-    "message": "ID dodanka"
+    "message": "Rozšyrjeński ID"
   },
   "policy_description_ExtensionUpdate": {
     "message": "Awtomatiske aktualizěrowanje rozšyrjenjow zmóžniś abo znjemóžniś"
@@ -492,22 +492,22 @@
     "message": "Awtomatiske aktualizěrowanje rozšyrjenjow zmóžniśs"
   },
   "policy_description_FirefoxHome": {
-    "message": "Customize the Firefox home page"
+    "message": "Startowu wobrazowku Firefox pśiměriś"
   },
   "policy_description_FirefoxHome_Search": {
-    "message": "Web Search"
+    "message": "Internetne pytanje"
   },
   "policy_description_FirefoxHome_TopSites": {
-    "message": "Top Sites"
+    "message": "Wažne boki"
   },
   "policy_description_FirefoxHome_Highlights": {
-    "message": "Highlights"
+    "message": "Pśeglěd"
   },
   "policy_description_FirefoxHome_Pocket": {
-    "message": "Pocket Recommendations"
+    "message": "Dopórucenja Pocket"
   },
   "policy_description_FirefoxHome_Snippets": {
-    "message": "Snippets"
+    "message": "Krotke informacije"
   },
   "policy_description_FlashPlugin": {
     "message": "Wužywanje tykaca Flash dowóliś abo zakazaś"
@@ -561,7 +561,7 @@
     "message": "Rozšyrjenja daju se wót wužywarja instalěrowaś"
   },
   "policy_description_LocalFileLinks": {
-    "message": "Allow specific websites to link to local files"
+    "message": "Wěstym websedłam dowóliś, na lokalne dataje wótkazaś"
   },
   "policy_description_NetworkPrediction": {
     "message": "DNS-pśedzacytanje zmóžniś abo znjemóžniś"
@@ -573,7 +573,7 @@
     "message": "DNS-pśedzacytanje zmóžniś"
   },
   "policy_description_NewTabPage": {
-    "message": "Enable or disable the page that appears when opening a new tab"
+    "message": "Bok, kótaryž se pśi wócynjanju nowego rejtarka pokazujo, zmóžniś abo znjemóžniś"
   },
   "policy_description_NoDefaultBookmarks": {
     "message": "Žedne standardne cytańske znamjenja inkluziwnje inteligentne cytańske znamjenja (nejcesćej woglědane boki, njedawno wužyte klucowe słowa) napóraś. Pokazka: toś ta směrnica jo jano statkowna, gaž se pśed prědnym wužywanim profila Firefox nałožujo"
@@ -588,13 +588,13 @@
     "message": "wužyte pśizjawjenja a gronidła se spomnjeś"
   },
   "policy_description_OfferToSaveLoginsDefault": {
-    "message": "Default value for allowing Firefox to offer to remember saved logins and passwords"
+    "message": "Standardne nastajenje, lěc se Firefox skłaźone pśizjawjenja a gronidła markujo"
   },
   "policy_description_OfferToSaveLoginsDefault_options_false": {
-    "message": "wužyte pśizjawjenja a gronidła se njespomnjeś"
+    "message": "se skłaźone pśizjawjenja a gronidła njemarkowaś"
   },
   "policy_description_OfferToSaveLoginsDefault_options_true": {
-    "message": "wužyte pśizjawjenja a gronidła se spomnjeś"
+    "message": "se skłaźone pśizjawjenja a gronidła markowaś"
   },
   "policy_description_OverrideFirstRunPage": {
     "message": "Bok pśepisaś, kótaryž se pśi prědnem starśe pokazujo. Prozne zapódawańske pólo bok dopołnje znjemóžnjujo."
@@ -603,7 +603,7 @@
     "message": "Bok nowosćow pśepisaś, kótaryž se móžo pó aktualizaciji zjawiś. Prozne zapódawańske pólo bok dopołnje znjemóžnjujo."
   },
   "policy_description_PasswordManagerEnabled": {
-    "message": "Enable or disable the password manager completely"
+    "message": "Zastojnik gronidłow dopołnje zmóžniś abo znjemóžniś"
   },
   "policy_description_Permissions": {
     "message": "Pšawa za městno, kameru, mikrofon a powěźeńki konfigurěrowaś"
@@ -669,88 +669,88 @@
     "message": "Wuskokujuce wokna se pó standarźe blokěruju"
   },
   "policy_description_Preference_browser_cache_disk_enable": {
-    "message": "Enable / disable storing cache on the hard drive"
+    "message": "Cache twardeje platy zmóžniś / znjemóžniś"
   },
   "policy_description_Preference_browser_cache_disk_parent_directory": {
-    "message": "Change the location of the disk cache"
+    "message": "Składowańske městno cachea twardeje platy změniś"
   },
   "policy_description_Preference_browser_cache_disk_parent_directory_label": {
-    "message": "Path"
+    "message": "Sćažka"
   },
   "policy_description_Preference_browser_fixup_dns_first_for_single_words": {
-    "message": "Send single words in address bar to DNS first and not directly to search engine"
+    "message": "Jadnotliwe słowa w adresowem pólu nejpjerwjej na DNS a nic direktnje na pytnicu pósłaś"
   },
   "policy_description_Preference_browser_search_update": {
-    "message": "Update search engines"
+    "message": "Pytnice aktualizěrowaś"
   },
   "policy_description_Preference_browser_tabs_warnOnClose": {
-    "message": "Show warning when the browser is closed"
+    "message": "Warnowanje pśi kóńcenju Firefox pokazaś"
   },
   "policy_description_Preference_browser_urlbar_suggest_bookmark": {
-    "message": "Suggest bookmarks when using the address bar"
+    "message": "Pśi wužywanju adresowego póla cytańske znamjenja naraźiś"
   },
   "policy_description_Preference_browser_urlbar_suggest_history": {
-    "message": "Suggest browsing history when using the address bar"
+    "message": "Pśi wužywanju adresowego póla zapiski z historije naraźiś"
   },
   "policy_description_Preference_browser_urlbar_suggest_openpage": {
-    "message": "Suggest open tabs when using the address bar"
+    "message": "Pśi wužywanju adresowego póla wócynjone rejtarki naraźiś"
   },
   "policy_description_Preference_datareporting_policy_dataSubmissionPolicyBypassNotification": {
-    "message": "Show the privacy policy tab on first run"
+    "message": "Pokazku priwatnosći pśi prědnem starśe Firefox pokazaś"
   },
   "policy_description_Preference_dom_disable_window_flip": {
-    "message": "Allow websites to monkey with window focus"
+    "message": "Websedłam dowóliś, woknowy fokus manipulěrowaś"
   },
   "policy_description_Preference_dom_disable_window_move_resize": {
-    "message": "Allow websites to move and resize windows"
+    "message": "Websedłam dowóliś, wokna pśesunuś a jich wjelikosc změniś"
   },
   "policy_description_Preference_dom_event_contextmenu_enabled": {
-    "message": "Allow website to override the context menu"
+    "message": "Websedłam dowóliś, kontekstowy meni pśepisaś"
   },
   "policy_description_Preference_dom_keyboardevent_keypress_hack_dispatch_non_printable_keys_addl": {
-    "message": "Web standards: Restore old behavior regarding keypress event and non-printable keys for certain domains"
+    "message": "Webstandardy: Stare zaźaržanje nastupajucy tšojenje keypress a njeśišćobnych tastow za wěste domeny wótnowiś"
   },
   "policy_description_Preference_dom_keyboardevent_keypress_hack_use_legacy_keycode_and_charcode_addl": {
-    "message": "Web standards: Restore old behavior regarding keyCode and charCode for certain domains"
+    "message": "Webstandardy: Stare zaźaržanje nastupajucy keyCode a charCode za wěste domeny wótnowis"
   },
   "policy_description_Preference_extensions_getAddons_showPane": {
-    "message": "Show recommendations tab in add-ons manager"
+    "message": "Réjtark z dopórucenjami w zastojniku rozšyrjenjow pokazaś"
   },
   "policy_description_Preference_media_gmp_gmpopenh264_enabled": {
-    "message": "Download OpenH264 plugin for WebRTC communication"
+    "message": "Tykac OpenH264 za WebRTC-komunikaciju ześěgnuś"
   },
   "policy_description_Preference_media_gmp_widevinecdm_enabled": {
-    "message": "Download Widevine plugin for streaming with DRM"
+    "message": "Tykac Widevine za streaming z DRM ześěgnuś"
   },
   "policy_description_Preference_network_dns_disableIPv6": {
-    "message": "Perform IPv6 DNS lookups"
+    "message": "IPv6 DNS-pytanja pśewjasć"
   },
   "policy_description_Preference_network_IDN_show_punycode": {
-    "message": "Display the punycode version of internationalized domain names"
+    "message": "Wersiju Punycode internacionalizěrowanych domenowych mjenjow pokazaś"
   },
   "policy_description_Preference_places_history_enabled": {
-    "message": "Remember browsing history"
+    "message": "Se historiju wobglědowaka markowaś"
   },
   "policy_description_Preference_privacy_file_unique_origin": {
-    "message": "Allow local files to access other local files (security issue!)"
+    "message": "Lokalnym datajam pśistup k drugim lokalnym datajam dowóliś (wěstotny problem!)"
   },
   "policy_description_Preference_security_default_personal_cert": {
-    "message": "Prompt the user to choose the default personal certificate"
+    "message": "Wužywarja wó wuběranje certifikata za websedła pšosyś, kótarež taki trjebaju"
   },
   "policy_description_Preference_security_default_personal_cert_ask_every_time": {
-    "message": "ask every time"
+    "message": "kuždy raz se pšašaś"
   },
   "policy_description_Preference_security_default_personal_cert_select_automatically": {
-    "message": "select automatically"
+    "message": "awtomatiski wubraś"
   },
   "policy_description_Preference_security_ssl_errorReporting_enabled": {
-    "message": "Allow TLS errors to be sent to Mozilla"
+    "message": "TLS-zmólki daju se na Mozilla pósłaś"
   },
   "policy_description_Preference_ui_key_menuAccessKeyFocuses": {
-    "message": "The Alt key can be used to show the menu bar"
+    "message": "Tasta Alt dajo se wužywaś, aby menijowu rědku pokazała"
   },
   "policy_description_PromptForDownloadLocation": {
-    "message": "Ask where to save each file before downloading"
+    "message": "Pśed ześěgowanim kuždeje dataje se pšašaś, źož maju se toś te składowaś"
   },
   "policy_description_Proxy": {
     "message": "Pśistup proksy do interneta konfigurěrowaś"
@@ -768,7 +768,7 @@
     "message": "Awtentificěrowańske napšašowanje njepokazaś"
   },
   "policy_description_Proxy_HTTPProxy": {
-    "message": "HTTP-proksy. Aby portowy numer konfigurěrował, pśidajśo pšosym \":\" slědowany pśez portowy numer"
+    "message": "HTTP-proksy. Aby portowy numer konfigurěrował, pśidajśo pšosym „:“ slědowany pśez portowy numer"
   },
   "policy_description_Proxy_Mode_autoConfig": {
     "message": "Awotmatiska adresa konfiguracije proksy"
@@ -786,13 +786,13 @@
     "message": "Nastajenja proksy systema wužywaś"
   },
   "policy_description_Proxy_FTPProxy": {
-    "message": "FTP-proksy. Aby portowy numer konfigurěrował, pśidajśo pšosym \":\" slědowany pśez portowy numer"
+    "message": "FTP-proksy. Aby portowy numer konfigurěrował, pśidajśo pšosym „:“ slědowany pśez portowy numer"
   },
   "policy_description_Proxy_Passthrough": {
     "message": "Žeden proksy za…"
   },
   "policy_description_Proxy_SOCKSProxy": {
-    "message": "SOCKS-host. Aby portowy numer konfigurěrował, pśidajśo pšosym \":\" slědowany pśez portowy numer"
+    "message": "SOCKS-host. Aby portowy numer konfigurěrował, pśidajśo pšosym „:“ slědowany pśez portowy numer"
   },
   "policy_description_Proxy_SOCKSVersion_v4": {
     "message": "SOCKS v4"
@@ -801,7 +801,7 @@
     "message": "SOCKS v5"
   },
   "policy_description_Proxy_SSLProxy": {
-    "message": "SSL-Proxy. Aby portowy numer konfigurěrował, pśidajśo pšosym \":\" slědowany pśez portowy numer"
+    "message": "SSL-Proxy. Aby portowy numer konfigurěrował, pśidajśo pšosym „:“ slědowany pśez portowy numer"
   },
   "policy_description_Proxy_UseHTTPProxyForAllProtocols_false": {
     "message": "Toś ten proksy-serwer nic za wšykne protokole wužywaś"
@@ -822,37 +822,37 @@
     "message": "Rěc pówjercha Firefox změniś"
   },
   "policy_description_RequestedLocales_Requirement": {
-    "message": "The corresponding language package must be installed. Leave empty to use the language of the operating system."
+    "message": "Wótpowědny rěcny pakśik musy zainstalěrowany byś. Pólo prozne wóstajiś, aby se rěc źěłowego systema wužywała."
   },
   "policy_description_RequestedLocales_Value": {
     "message": "Rěcny kode"
   },
   "policy_description_SanitizeOnShutdown": {
-    "message": "Clear browser data on shutdown"
+    "message": "Pśeglědowańske daty wulašowaś, gaž se Firefox zacynijo"
   },
   "policy_description_SanitizeOnShutdown_Cache": {
     "message": "Cache"
   },
   "policy_description_SanitizeOnShutdown_Cookies": {
-    "message": "Cookies"
+    "message": "Cookieje"
   },
   "policy_description_SanitizeOnShutdown_Downloads": {
-    "message": "Download History"
+    "message": "Historija ześěgnjenjow"
   },
   "policy_description_SanitizeOnShutdown_FormData": {
-    "message": "Form & Search History"
+    "message": "Zapódane pytańske wuraze a formularne daty"
   },
   "policy_description_SanitizeOnShutdown_History": {
-    "message": "Browsing History"
+    "message": "Woglědane boki"
   },
   "policy_description_SanitizeOnShutdown_Sessions": {
-    "message": "Active Logins"
+    "message": "Aktiwne pśizjawjenja"
   },
   "policy_description_SanitizeOnShutdown_SiteSettings": {
-    "message": "Site Preferences"
+    "message": "Nastajenja websedła"
   },
   "policy_description_SanitizeOnShutdown_OfflineApps": {
-    "message": "Offline Website Data"
+    "message": "Daty websedła offline"
   },
   "policy_description_SearchBar": {
     "message": "Póstaja, lěc pytańske pólo jo kombiněrowane z adresowym pólom abo separatne"
@@ -876,7 +876,7 @@
     "message": "Wopisanje"
   },
   "policy_description_SearchEngines_Add_IconURL": {
-    "message": "Icon URL or data:image…"
+    "message": "Symbolowy URL abo data:image…"
   },
   "policy_description_SearchEngines_Add_Method": {
     "message": "Napšašowańska metoda"
@@ -918,7 +918,7 @@
     "message": "Mě"
   },
   "policy_description_SearchSuggestEnabled": {
-    "message": "Enable or disable search suggestions"
+    "message": "Naraźenja pytnicow zmóžniś abo znjemóžniś"
   },
   "policy_description_SecurityDevices": {
     "message": "Module PKCS#11 instalěrowaś"
@@ -945,7 +945,7 @@
     "message": "Titel"
   },
   "policy_description_WebsiteFilter": {
-    "message": "Zajźujo, až se websedła woglěduju. Móžośo \"<all_urls>\" za blokěrowanje wšych URL wužywaś. Glejśo informaciski wótkaz za wšykne płaśiwe zapiski, ale jano HTTPS a HTTP se pódpěratej."
+    "message": "Zajźujo, až se websedła woglěduju. Móžośo „<all_urls>“ za blokěrowanje wšych URL wužywaś. Glejśo informaciski wótkaz za wšykne płaśiwe zapiski, ale jano HTTPS a HTTP se pódpěratej."
   },
   "policy_description_WebsiteFilter_Block": {
     "message": "Slědujuce URL blokěrowaś"
