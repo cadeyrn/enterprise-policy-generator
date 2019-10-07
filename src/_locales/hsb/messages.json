@@ -42,16 +42,16 @@
     "message": "Nałoženje"
   },
   "explanation_intro": {
-    "message": "Z kliknjenjom na tłóčatko so kod generuje. Tutón kod dyrbi so w dataji \"policies.json\" do rjadowaka \"distribution\" składować."
+    "message": "Z kliknjenjom na tłóčatko so kod generuje. Tutón kod dyrbi so w dataji „policies.json“ do rjadowaka „distribution“ składować."
   },
   "explanation_intro_linux": {
-    "message": "Wutworće rjadowak z mjenom \"distribution\" w rjadowaku, w kotrymž je Firefox a składujće tam dataju \"policies.json\"."
+    "message": "Wutworće rjadowak z mjenom „distribution“ w rjadowaku, w kotrymž je Firefox a składujće tam dataju „policies.json“."
   },
   "explanation_intro_macos": {
-    "message": "Wutworće rjadowak z mjenom \"distribution\" w Firefox.app/Contents/Resources/ a składujće tam dataju \"policies.json\"."
+    "message": "Wutworće rjadowak z mjenom „distribution“ w Firefox.app/Contents/Resources/ a składujće tam dataju „policies.json“."
   },
   "explanation_intro_windows": {
-    "message": "Wutworće rjadowak z mjenom \"distribution\" w tym rjadowaku, hdźež je dataja firefox.exe a składujće tam dataju \"policies.json\"."
+    "message": "Wutworće rjadowak z mjenom „distribution“ w tym rjadowaku, hdźež je dataja firefox.exe a składujće tam dataju „policies.json“."
   },
   "extension_description": {
     "message": "Generuje předewzaćelske směrnicy za Firefox."
@@ -219,7 +219,7 @@
     "message": "Webstronam dowolić abo zakazać, placki stajić"
   },
   "policy_description_Cookies_AcceptThirdParty": {
-    "message": "Standardna hódnota za \"Placki a sydłowe daty třećich poskićowarjow akceptować\""
+    "message": "Standardna hódnota za „Placki a sydłowe daty třećich poskićowarjow akceptować“"
   },
   "policy_description_Cookies_AcceptThirdParty_always": {
     "message": "přeco"
@@ -243,7 +243,7 @@
     "message": "Domena"
   },
   "policy_description_Cookies_Default": {
-    "message": "Standardna hódnota za \"Placki a sydłowe daty z websydłow akceptować\""
+    "message": "Standardna hódnota za „Placki a sydłowe daty z websydłow akceptować“"
   },
   "policy_description_Cookies_Default_false": {
     "message": "Placki njeakceptować"
@@ -279,7 +279,7 @@
     "message": "Zatwarjene wuwiwarske nastroje znjemóžnić"
   },
   "policy_description_DisableFeedbackCommands": {
-    "message": "Menijowej zapiskaj \"Posudk pósłać\" a \"Wobšudne websydło zdźělić\" w meniju Pomoc znjemóžnić"
+    "message": "Menijowej zapiskaj „Posudk pósłać“ a „Wobšudne websydło zdźělić“ w meniju Pomoc znjemóžnić"
   },
   "policy_description_DisableFirefoxAccounts": {
     "message": "Słužby, kotrež na Firefox Accounts bazěruja, kaž na přikład Firefox Sync, znjemóžnić"
@@ -291,7 +291,7 @@
     "message": "Firefox při instalowanju a wuwjedźenju studijow kaž tež so na kontekst poćahowacych doporučenjow za funkcije haćić"
   },
   "policy_description_DisableForgetButton": {
-    "message": "Tłóčatko \"Zabyć\" znjemóžnić, kotrež so ma wužiwać, zo by historiju zhašało"
+    "message": "Tłóčatko „Zabyć“ znjemóžnić, kotrež so ma wužiwać, zo by historiju zhašało"
   },
   "policy_description_DisableFormHistory": {
     "message": "Formularnu a pytansku historiju znjemóžnić"
@@ -306,10 +306,10 @@
     "message": "Priwatny modus znjemóžnić"
   },
   "policy_description_DisableProfileImport": {
-    "message": "Menijowy zapisk \"daty z druheho wobhladowaka importować\" w bibliotece znjemóžnić"
+    "message": "Menijowy zapisk „daty z druheho wobhladowaka importować“ w bibliotece znjemóžnić"
   },
   "policy_description_DisableProfileRefresh": {
-    "message": "Tłóčatko \"Firefox wobnowić\" w about:support znjemóžnić"
+    "message": "Tłóčatko „Firefox wobnowić“ w about:support znjemóžnić"
   },
   "policy_description_DisableSafeMode": {
     "message": "Menijowy zapisk znjemóžnić, zo by so Firefox ze znjemóžnjenymi rozšěrjenjemi znowa startował (wěsty modus)"
@@ -768,7 +768,7 @@
     "message": "Awtentifikowanske naprašowanje njepokazać"
   },
   "policy_description_Proxy_HTTPProxy": {
-    "message": "HTTP-proksy. Zo byšće portowe čisło konfigurował, přidajće prošu \":\" slědowany přez portowe čisło"
+    "message": "HTTP-proksy. Zo byšće portowe čisło konfigurował, přidajće prošu „:“ slědowany přez portowe čisło"
   },
   "policy_description_Proxy_Mode_autoConfig": {
     "message": "Awotmatiska adresa konfiguracije proksy"
@@ -786,13 +786,13 @@
     "message": "Nastajenja proksy systema wužiwać"
   },
   "policy_description_Proxy_FTPProxy": {
-    "message": "FTP-proksy. Zo byšće portowe čisło konfigurował, přidajće prošu \":\" slědowany přez portowe čisło"
+    "message": "FTP-proksy. Zo byšće portowe čisło konfigurował, přidajće prošu „:“ slědowany přez portowe čisło"
   },
   "policy_description_Proxy_Passthrough": {
     "message": "Žadyn proksy za…"
   },
   "policy_description_Proxy_SOCKSProxy": {
-    "message": "SOCKS-host. Zo byšće portowe čisło konfigurował, přidajće prošu \":\" slědowany přez portowe čisło"
+    "message": "SOCKS-host. Zo byšće portowe čisło konfigurował, přidajće prošu „:“ slědowany přez portowe čisło"
   },
   "policy_description_Proxy_SOCKSVersion_v4": {
     "message": "SOCKS v4"
@@ -801,7 +801,7 @@
     "message": "SOCKS v5"
   },
   "policy_description_Proxy_SSLProxy": {
-    "message": "SSL-Proxy. Zo byšće portowe čisło konfigurował, přidajće prošu \":\" slědowany přez portowe čisło"
+    "message": "SSL-Proxy. Zo byšće portowe čisło konfigurował, přidajće prošu „:“ slědowany přez portowe čisło"
   },
   "policy_description_Proxy_UseHTTPProxyForAllProtocols_false": {
     "message": "Tutón proksy-serwer nic za wšě protokole wužiwać"
@@ -945,7 +945,7 @@
     "message": "Titul"
   },
   "policy_description_WebsiteFilter": {
-    "message": "Zadźěwa, zo so websydła wopytuja. Móžeće \"<all_urls>\" za blokowanje wšěch URL wužiwać. Hlejće informaciski wotkaz za wšě płaćiwe zapiski, ale jenož HTTPS a HTTP so podpěrujetej."
+    "message": "Zadźěwa, zo so websydła wopytuja. Móžeće „<all_urls>“ za blokowanje wšěch URL wužiwać. Hlejće informaciski wotkaz za wšě płaćiwe zapiski, ale jenož HTTPS a HTTP so podpěrujetej."
   },
   "policy_description_WebsiteFilter_Block": {
     "message": "Slědowace URL blokować"
