@@ -1,6 +1,6 @@
 {
   "common_domain": {
-    "message": "Domain"
+    "message": "域名"
   },
   "common_url": {
     "message": "URL"
@@ -12,31 +12,31 @@
     "message": "导入配置"
   },
   "enum_value_block_no": {
-    "message": "don't block"
+    "message": "不屏蔽"
   },
   "enum_value_block_yes": {
-    "message": "block"
+    "message": "屏蔽"
   },
   "enum_value_enable_no": {
-    "message": "disable"
+    "message": "禁用"
   },
   "enum_value_enable_yes": {
-    "message": "enable"
+    "message": "启用"
   },
   "enum_value_no": {
-    "message": "no"
+    "message": "否"
   },
   "enum_value_no_preference": {
-    "message": "不设置"
+    "message": "无首选项"
   },
   "enum_value_yes": {
-    "message": "yes"
+    "message": "是"
   },
   "enterprise_only_label": {
     "message": "仅在 Firefox ESR 生效"
   },
   "explanation_about_policies": {
-    "message": "There is an overview of all active policies and errors in the file “policies.json” at about:policies."
+    "message": "所有活跃的策略和错误都会在 about:policies 页面对应的“policies.json”文件中显示一个摘要。"
   },
   "explanation_headline_usage": {
     "message": "使用方法"
@@ -135,7 +135,7 @@
     "message": "支持整合验证 (integrated authentication) 的站点"
   },
   "policy_description_Authentication_additional_note": {
-    "message": "Option to lock setting new from Firefox 71. Always protected before."
+    "message": "该选项用于锁定 Firefox 71 新增的设置。之前该选项始终受到保护。"
   },
   "policy_description_Authentication_AllowNonFQDN": {
     "message": "始终允许在非 FQDN（完全限定性域名）上使用 SPNEGO 或 NTLM"
@@ -201,7 +201,7 @@
     "message": "配置证书"
   },
   "policy_description_Certificates_ImportEnterpriseRoots": {
-    "message": "read certificates from the system certificate store (Windows and macOS only)"
+    "message": "读取系统证书库中的证书（仅限 Windows 和 macOS）"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_false": {
     "message": "不读取系统证书库中的证书"
@@ -213,7 +213,7 @@
     "message": "导入证书（Windows：%USERNAME\\AppData\\Local\\Mozilla\\Certificates 或 %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates，macOS：/Library/Application Support/Mozilla/Certificates 或 ~/Library/Application Support/Mozilla/Certificates，Linux：/usr/lib/mozilla/certificates, /usr/lib64/mozilla/certificates 或 ~/.mozilla/certificates）"
   },
   "policy_description_Certificates_Install_Value": {
-    "message": "Path to the .der or .pem file"
+    "message": ".der 或 .pem 文件的路径"
   },
   "policy_description_Cookies": {
     "message": "允许或阻止网站设置 Cookie"
@@ -264,10 +264,10 @@
     "message": "阻止跟踪 Cookies"
   },
   "policy_description_DefaultDownloadDirectory": {
-    "message": "Set the default download directory"
+    "message": "设置默认下载目录"
   },
   "policy_description_DefaultDownloadDirectory_Label": {
-    "message": "You can use ${home} for the native home directory"
+    "message": "对于原生的主目录可使用 ${home}"
   },
   "policy_description_DisableAppUpdate": {
     "message": "阻止 Firefox 进行更新"
@@ -312,7 +312,7 @@
     "message": "禁用 about:support 页面中的“翻新 Firefox” 按钮"
   },
   "policy_description_DisableSafeMode": {
-    "message": "Disable the menu item to restart Firefox with add-ons disabled (safe mode)"
+    "message": "禁用以安全模式重启浏览器菜单项"
   },
   "policy_description_DisableSecurityBypass": {
     "message": "阻止跳过特定的安全警告"
@@ -372,22 +372,22 @@
     "message": "启动时不检查 Firefox 是否为默认浏览器"
   },
   "policy_description_DownloadDirectory": {
-    "message": "Set and lock the download directory"
+    "message": "设置并锁定下载目录"
   },
   "policy_description_DownloadDirectory_Label": {
-    "message": "You can use ${home} for the native home directory"
+    "message": "对于原生的主目录可使用 ${home}"
   },
   "policy_description_EnableTrackingProtection": {
-    "message": "Enhanced Tracking Protection"
+    "message": "增强型跟踪保护"
   },
   "policy_description_EnableTrackingProtection_Cryptomining": {
-    "message": "block cryptominers (Firefox 70+, Firefox ESR 68.2+)"
+    "message": "拦截加密货币挖矿程序 (Firefox 70+，Firefox ESR 68.2+)"
   },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
-    "message": "block fingerprinters (Firefox 70+, Firefox ESR 68.2+)"
+    "message": "拦截数字指纹跟踪程序 (Firefox 70+，Firefox ESR 68.2+)"
   },
   "policy_description_EnableTrackingProtection_Value": {
-    "message": "Tracking Content"
+    "message": "跟踪内容"
   },
   "policy_description_EnableTrackingProtection_Value_false": {
     "message": "禁用跟踪保护"
@@ -399,7 +399,7 @@
     "message": "安装、卸载或锁定特定扩展"
   },
   "policy_description_Extensions_Deprecated": {
-    "message": "Deprecated. The following policy should be used."
+    "message": "已不使用，请使用下面的策略。"
   },
   "policy_description_Extensions_Install": {
     "message": "在这里设定安装附加组件。您可以指定 URL 或路径。"
@@ -420,64 +420,64 @@
     "message": "附加组件 ID"
   },
   "policy_description_ExtensionSettings": {
-    "message": "Manage the installation and uninstallation of add-ons"
+    "message": "管理附加组件的安装和卸载"
   },
   "policy_description_ExtensionSettings_allowed_types": {
-    "message": "Allowed add-on types"
+    "message": "允许的附加组件类型"
   },
   "policy_description_ExtensionSettings_allowed_types_dictionary": {
-    "message": "Dictionaries"
+    "message": "词典"
   },
   "policy_description_ExtensionSettings_allowed_types_extension": {
-    "message": "Extensions"
+    "message": "扩展"
   },
   "policy_description_ExtensionSettings_allowed_types_langpack": {
-    "message": "Language packs"
+    "message": "语言包"
   },
   "policy_description_ExtensionSettings_allowed_types_theme": {
-    "message": "Themes"
+    "message": "主题"
   },
   "policy_description_ExtensionSettings_blocked_install_message_caption_all": {
-    "message": "Error message to display to the user when trying to install an blocked add-on"
+    "message": "用户尝试安装被阻止的附加组件时显示的错误消息"
   },
   "policy_description_ExtensionSettings_blocked_install_message_caption_single": {
-    "message": "Error message to display to the user when trying to install the blocked add-on"
+    "message": "用户尝试安装被阻止的附加组件时显示的错误消息"
   },
   "policy_description_ExtensionSettings_blocked_install_message_label": {
-    "message": "error message"
+    "message": "错误消息"
   },
   "policy_description_ExtensionSettings_extra_caption_post": {
-    "message": "Configuration for individual add-ons"
+    "message": "针对单独附加组件的配置"
   },
   "policy_description_ExtensionSettings_extra_caption_pre": {
-    "message": "Configuration for all add-ons"
+    "message": "针对所有附加组件的配置"
   },
   "policy_description_ExtensionSettings_install_sources": {
-    "message": "Allowed installation sources. Both the location of the *.xpi file and the page where the download is started from must be allowed."
+    "message": "所允许的安装来源。必须允许 *.xpi 文件的路径和开始下载的页面这两个来源。"
   },
   "policy_description_ExtensionSettings_install_url_caption": {
-    "message": "install URL. If installing from the local file system, use a file:/// URI."
+    "message": "安装 URL。如果是从本地文件系统安装，请使用 file:/// 形式的 URI。"
   },
   "policy_description_ExtensionSettings_installation_mode": {
-    "message": "installation"
+    "message": "安装"
   },
   "policy_description_ExtensionSettings_installation_mode_allowed_all": {
-    "message": "the installation of add-ons by the user is allowed"
+    "message": "已允许用户发起的附加组件安装"
   },
   "policy_description_ExtensionSettings_installation_mode_allowed_single": {
-    "message": "the installation of this add-on by the user is allowed"
+    "message": "已允许用户发起的该附加组件的安装"
   },
   "policy_description_ExtensionSettings_installation_mode_blocked_all": {
-    "message": "the installation of add-on by the user is not allowed and already installed add-on will be removed from the device"
+    "message": "不允许用户发起的附加组件安装，已安装的附加组件将从设备移除"
   },
   "policy_description_ExtensionSettings_installation_mode_blocked_single": {
-    "message": "the installation of this add-on by the user is not allowed and the add-on will be removed from the device if already installed"
+    "message": "不允许用户发起的附加组件安装，已安装的附加组件将从设备移除"
   },
   "policy_description_ExtensionSettings_installation_mode_force_installed": {
-    "message": "the add-on is automatically installed and can't be removed by the user (requires an install url)"
+    "message": "该附加组件已被自动安装，用户无法移除（需有安装 url）"
   },
   "policy_description_ExtensionSettings_installation_mode_normal_installed": {
-    "message": "the add-on is automatically installed but can be disabled by the user (requires an install url)"
+    "message": "该附加组件已被自动安装，用户无法禁用（需有安装 url）"
   },
   "policy_description_ExtensionSettings_Label_Key": {
     "message": "附加组件 ID"
@@ -492,22 +492,22 @@
     "message": "允许扩展自动更新"
   },
   "policy_description_FirefoxHome": {
-    "message": "Customize the Firefox home page"
+    "message": "自定义 Firefox 主页"
   },
   "policy_description_FirefoxHome_Search": {
-    "message": "Web Search"
+    "message": "网络搜索"
   },
   "policy_description_FirefoxHome_TopSites": {
-    "message": "Top Sites"
+    "message": "常用网站"
   },
   "policy_description_FirefoxHome_Highlights": {
-    "message": "Highlights"
+    "message": "集锦"
   },
   "policy_description_FirefoxHome_Pocket": {
-    "message": "Pocket Recommendations"
+    "message": "Pocket 推荐"
   },
   "policy_description_FirefoxHome_Snippets": {
-    "message": "Snippets"
+    "message": "只言片语"
   },
   "policy_description_FlashPlugin": {
     "message": "允许或阻止使用 Flash 插件"
@@ -561,7 +561,7 @@
     "message": "允许用户安装附加组件"
   },
   "policy_description_LocalFileLinks": {
-    "message": "Allow specific websites to link to local files"
+    "message": "允许指定网站链接到本地文件"
   },
   "policy_description_NetworkPrediction": {
     "message": "启用或禁用网络预测 (DNS 预读取)"
@@ -573,7 +573,7 @@
     "message": "启用网络预测 (DNS 预读取)"
   },
   "policy_description_NewTabPage": {
-    "message": "Enable or disable the page that appears when opening a new tab"
+    "message": "启用或禁用打开新标签页时显示的页面"
   },
   "policy_description_NoDefaultBookmarks": {
     "message": "不创建默认的书签集，包括智能书签（最常访问、最近的标签）。注意：该策略仅在配置文件首次启用时生效"
@@ -588,13 +588,13 @@
     "message": "记住登录的账号和密码"
   },
   "policy_description_OfferToSaveLoginsDefault": {
-    "message": "Default value for allowing Firefox to offer to remember saved logins and passwords"
+    "message": "允许 Firefox 提示记住已保存的登录信息和密码的默认值"
   },
   "policy_description_OfferToSaveLoginsDefault_options_false": {
-    "message": "不记住登录的账号和密码"
+    "message": "不提示记住已保存的登录信息和密码"
   },
   "policy_description_OfferToSaveLoginsDefault_options_true": {
-    "message": "记住登录的账号和密码"
+    "message": "提示记住已保存的登录信息和密码"
   },
   "policy_description_OverrideFirstRunPage": {
     "message": "允许覆盖首次运行时显示的页面。如果您想禁止显示，请将 URL 栏留空。"
@@ -603,7 +603,7 @@
     "message": "覆盖浏览器更新后显示的“新功能”（What's New）页面。如果您想禁止显示该页面，请将 URL 栏留空。"
   },
   "policy_description_PasswordManagerEnabled": {
-    "message": "Enable or disable the password manager completely"
+    "message": "完全启用或禁用密码管理器"
   },
   "policy_description_Permissions": {
     "message": "配置位置、摄像头、麦克风和通知的权限"
@@ -669,88 +669,88 @@
     "message": "默认阻止弹出窗口"
   },
   "policy_description_Preference_browser_cache_disk_enable": {
-    "message": "Enable / disable storing cache on the hard drive"
+    "message": "启用或禁用硬盘存储缓存"
   },
   "policy_description_Preference_browser_cache_disk_parent_directory": {
-    "message": "Change the location of the disk cache"
+    "message": "修改磁盘缓存路径"
   },
   "policy_description_Preference_browser_cache_disk_parent_directory_label": {
-    "message": "Path"
+    "message": "路径"
   },
   "policy_description_Preference_browser_fixup_dns_first_for_single_words": {
-    "message": "Send single words in address bar to DNS first and not directly to search engine"
+    "message": "先发送地址栏的单个字词到 DNS，而非直接发送到搜索引擎"
   },
   "policy_description_Preference_browser_search_update": {
-    "message": "Update search engines"
+    "message": "更新搜索引擎"
   },
   "policy_description_Preference_browser_tabs_warnOnClose": {
-    "message": "Show warning when the browser is closed"
+    "message": "浏览器关闭时显示警告"
   },
   "policy_description_Preference_browser_urlbar_suggest_bookmark": {
-    "message": "Suggest bookmarks when using the address bar"
+    "message": "使用地址栏时建议书签"
   },
   "policy_description_Preference_browser_urlbar_suggest_history": {
-    "message": "Suggest browsing history when using the address bar"
+    "message": "使用地址栏时建议浏览历史"
   },
   "policy_description_Preference_browser_urlbar_suggest_openpage": {
-    "message": "Suggest open tabs when using the address bar"
+    "message": "使用地址栏时建议打开的标签页"
   },
   "policy_description_Preference_datareporting_policy_dataSubmissionPolicyBypassNotification": {
-    "message": "Show the privacy policy tab on first run"
+    "message": "初次运行时显示隐私策略标签页"
   },
   "policy_description_Preference_dom_disable_window_flip": {
-    "message": "Allow websites to monkey with window focus"
+    "message": "允许网站随意更改窗口焦点"
   },
   "policy_description_Preference_dom_disable_window_move_resize": {
-    "message": "Allow websites to move and resize windows"
+    "message": "允许网站移动窗口和更改窗口尺寸"
   },
   "policy_description_Preference_dom_event_contextmenu_enabled": {
-    "message": "Allow website to override the context menu"
+    "message": "允许网站覆盖上下文菜单"
   },
   "policy_description_Preference_dom_keyboardevent_keypress_hack_dispatch_non_printable_keys_addl": {
-    "message": "Web standards: Restore old behavior regarding keypress event and non-printable keys for certain domains"
+    "message": "网页标准：对于特定域名恢复按键（keypress）事件和非可打印（non-printable）按键的原有行为"
   },
   "policy_description_Preference_dom_keyboardevent_keypress_hack_use_legacy_keycode_and_charcode_addl": {
-    "message": "Web standards: Restore old behavior regarding keyCode and charCode for certain domains"
+    "message": "网页标准：对于特定域名恢复 keyCode 和 charCode 的原有行为"
   },
   "policy_description_Preference_extensions_getAddons_showPane": {
-    "message": "Show recommendations tab in add-ons manager"
+    "message": "显示附加组件管理器的推荐版块"
   },
   "policy_description_Preference_media_gmp_gmpopenh264_enabled": {
-    "message": "Download OpenH264 plugin for WebRTC communication"
+    "message": "下载 OpenH264 插件以便进行 WebRTC 通信"
   },
   "policy_description_Preference_media_gmp_widevinecdm_enabled": {
-    "message": "Download Widevine plugin for streaming with DRM"
+    "message": "下载 Widevine 插件以便播放 DRM 流媒体"
   },
   "policy_description_Preference_network_dns_disableIPv6": {
-    "message": "Perform IPv6 DNS lookups"
+    "message": "执行 IPv6 DNS 查找"
   },
   "policy_description_Preference_network_IDN_show_punycode": {
-    "message": "Display the punycode version of internationalized domain names"
+    "message": "显示国际化域名的 punycode 版本"
   },
   "policy_description_Preference_places_history_enabled": {
-    "message": "Remember browsing history"
+    "message": "记住浏览历史"
   },
   "policy_description_Preference_privacy_file_unique_origin": {
-    "message": "Allow local files to access other local files (security issue!)"
+    "message": "允许本地文件访问其他本地文件（有安全风险！）"
   },
   "policy_description_Preference_security_default_personal_cert": {
-    "message": "Prompt the user to choose the default personal certificate"
+    "message": "提示用户选择默认的个人证书"
   },
   "policy_description_Preference_security_default_personal_cert_ask_every_time": {
-    "message": "ask every time"
+    "message": "每次都询问"
   },
   "policy_description_Preference_security_default_personal_cert_select_automatically": {
-    "message": "select automatically"
+    "message": "手动选择"
   },
   "policy_description_Preference_security_ssl_errorReporting_enabled": {
-    "message": "Allow TLS errors to be sent to Mozilla"
+    "message": "允许发送 TLS 错误到 Mozilla"
   },
   "policy_description_Preference_ui_key_menuAccessKeyFocuses": {
-    "message": "The Alt key can be used to show the menu bar"
+    "message": "可按 Alt 键显示菜单栏"
   },
   "policy_description_PromptForDownloadLocation": {
-    "message": "Ask where to save each file before downloading"
+    "message": "每次文件下载前询问保存位置"
   },
   "policy_description_Proxy": {
     "message": "配置连接互联网的代理服务器"
@@ -822,37 +822,37 @@
     "message": "修改 Firefox 的界面语言"
   },
   "policy_description_RequestedLocales_Requirement": {
-    "message": "The corresponding language package must be installed. Leave empty to use the language of the operating system."
+    "message": "必须安装对应的语言包。留空则使用操作系统当前的语言。"
   },
   "policy_description_RequestedLocales_Value": {
     "message": "语言代码"
   },
   "policy_description_SanitizeOnShutdown": {
-    "message": "Clear browser data on shutdown"
+    "message": "关闭浏览器时清除浏览器数据"
   },
   "policy_description_SanitizeOnShutdown_Cache": {
-    "message": "Cache"
+    "message": "缓存"
   },
   "policy_description_SanitizeOnShutdown_Cookies": {
     "message": "Cookies"
   },
   "policy_description_SanitizeOnShutdown_Downloads": {
-    "message": "Download History"
+    "message": "下载历史"
   },
   "policy_description_SanitizeOnShutdown_FormData": {
-    "message": "Form & Search History"
+    "message": "表单和搜索历史"
   },
   "policy_description_SanitizeOnShutdown_History": {
-    "message": "Browsing History"
+    "message": "浏览历史"
   },
   "policy_description_SanitizeOnShutdown_Sessions": {
-    "message": "Active Logins"
+    "message": "活跃的登录"
   },
   "policy_description_SanitizeOnShutdown_SiteSettings": {
-    "message": "Site Preferences"
+    "message": "网站首选项"
   },
   "policy_description_SanitizeOnShutdown_OfflineApps": {
-    "message": "Offline Website Data"
+    "message": "脱机网站数据"
   },
   "policy_description_SearchBar": {
     "message": "搜索栏合并或分开显示"
@@ -876,7 +876,7 @@
     "message": "描述"
   },
   "policy_description_SearchEngines_Add_IconURL": {
-    "message": "Icon URL or data:image…"
+    "message": "图标 URL 或 data:image…"
   },
   "policy_description_SearchEngines_Add_Method": {
     "message": "请求方法"
@@ -918,7 +918,7 @@
     "message": "名称"
   },
   "policy_description_SearchSuggestEnabled": {
-    "message": "Enable or disable search suggestions"
+    "message": "启用或禁用搜索建议"
   },
   "policy_description_SecurityDevices": {
     "message": "添加 PKCS #11 模块"
