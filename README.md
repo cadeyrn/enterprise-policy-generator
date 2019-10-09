@@ -2,6 +2,11 @@
 
 <img src="src/images/logo-large.png" alt="Logo" width="790" border="0" />
 
+## Support the development
+
+**Please consider making [a donation](https://www.paypal.com/paypalme2/agenedia/) to support the further development of
+Enterprise Policy Generator. Thank you very much!**
+
 ## Description
 
 Generates Enterprise Policies for Firefox.
