@@ -389,12 +389,6 @@
   "policy_description_EnableTrackingProtection_Value": {
     "message": "Slědowacy wobsah"
   },
-  "policy_description_EnableTrackingProtection_Value_false": {
-    "message": "Slědowanski škit znjemóžnić"
-  },
-  "policy_description_EnableTrackingProtection_Value_true": {
-    "message": "Slědowanski škit zmóžnić"
-  },
   "policy_description_Extensions": {
     "message": "Rozšěrjenja instalować, wotinstalować abo zawrěć"
   },

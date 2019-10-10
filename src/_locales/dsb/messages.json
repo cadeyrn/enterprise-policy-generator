@@ -389,12 +389,6 @@
   "policy_description_EnableTrackingProtection_Value": {
     "message": "Slědujuce wopśimjeśe"
   },
-  "policy_description_EnableTrackingProtection_Value_false": {
-    "message": "Slědowański šćit znjemóžniś"
-  },
-  "policy_description_EnableTrackingProtection_Value_true": {
-    "message": "Slědowański šćit zmóžniś"
-  },
   "policy_description_Extensions": {
     "message": "Rozšyrjenja instalěrowaś, wótinstalěrowaś abo zastajiś"
   },

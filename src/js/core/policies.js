@@ -1429,11 +1429,11 @@ const policies = {
             value : null
           },
           {
-            label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Value_true'),
+            label : browser.i18n.getMessage('enum_value_block_yes'),
             value : 'true'
           },
           {
-            label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Value_false'),
+            label : browser.i18n.getMessage('enum_value_block_no'),
             value : 'false'
           }
         ]

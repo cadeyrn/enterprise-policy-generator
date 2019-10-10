@@ -389,12 +389,6 @@
   "policy_description_EnableTrackingProtection_Value": {
     "message": "Tracking Content"
   },
-  "policy_description_EnableTrackingProtection_Value_false": {
-    "message": "disable tracking protection"
-  },
-  "policy_description_EnableTrackingProtection_Value_true": {
-    "message": "enable tracking protection"
-  },
   "policy_description_Extensions": {
     "message": "Install, uninstall or lock extensions"
   },

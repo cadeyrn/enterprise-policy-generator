@@ -389,12 +389,6 @@
   "policy_description_EnableTrackingProtection_Value": {
     "message": "Traçage du contenu"
   },
-  "policy_description_EnableTrackingProtection_Value_false": {
-    "message": "Désactiver la protection de traçage"
-  },
-  "policy_description_EnableTrackingProtection_Value_true": {
-    "message": "activer la protection de traçage"
-  },
   "policy_description_Extensions": {
     "message": "Installer, désinstaller ou verrouiller les extensions"
   },
