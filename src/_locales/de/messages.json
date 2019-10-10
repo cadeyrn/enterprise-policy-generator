@@ -560,6 +560,9 @@
   "policy_description_InstallAddonsPermission_Default_true": {
     "message": "Erweiterungen können vom Nutzer installiert werden"
   },
+  "policy_description_InstallAddonsPermission_Deprecated": {
+    "message": "Veraltet. Die darunter liegende Richtlinie sollte verwendet werden."
+  },
   "policy_description_LocalFileLinks": {
     "message": "Bestimmten Websites erlauben, lokale Dateien zu verlinken"
   },

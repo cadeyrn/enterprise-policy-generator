@@ -560,6 +560,9 @@
   "policy_description_InstallAddonsPermission_Default_true": {
     "message": "Rozšěrjenja dadźa so wot wužiwarja instalować"
   },
+  "policy_description_InstallAddonsPermission_Deprecated": {
+    "message": "Zestarjeny. Prawidło pod tym ma so wužiwać."
+  },
   "policy_description_LocalFileLinks": {
     "message": "Wěstym websydłam dowolić, na lokalne dataje wotkazać"
   },

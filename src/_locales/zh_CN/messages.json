@@ -560,6 +560,9 @@
   "policy_description_InstallAddonsPermission_Default_true": {
     "message": "允许用户安装附加组件"
   },
+  "policy_description_InstallAddonsPermission_Deprecated": {
+    "message": "已不使用，请使用下面的策略。"
+  },
   "policy_description_LocalFileLinks": {
     "message": "允许指定网站链接到本地文件"
   },

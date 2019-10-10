@@ -633,6 +633,7 @@ const policies = {
   InstallAddonsPermission : {
     description : browser.i18n.getMessage('policy_description_InstallAddonsPermission'),
     enterprise_only : false,
+    deprecation_note : browser.i18n.getMessage('policy_description_InstallAddonsPermission_Deprecated'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     info_link : null,
     is_lockable : false,
