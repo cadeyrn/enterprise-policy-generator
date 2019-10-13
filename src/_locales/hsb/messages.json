@@ -299,6 +299,9 @@
   "policy_description_DisableMasterPasswordCreation": {
     "message": "Funkciju hłowneho hesła znjemóžnić"
   },
+  "policy_description_DisablePasswordReveal": {
+    "message": "Do not allow passwords to be revealed in saved logins"
+  },
   "policy_description_DisablePocket": {
     "message": "Integraciju słužby Mozilla Pocket znjemóžnić"
   },

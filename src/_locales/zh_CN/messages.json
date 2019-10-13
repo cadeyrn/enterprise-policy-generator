@@ -299,6 +299,9 @@
   "policy_description_DisableMasterPasswordCreation": {
     "message": "禁用主密码功能"
   },
+  "policy_description_DisablePasswordReveal": {
+    "message": "Do not allow passwords to be revealed in saved logins"
+  },
   "policy_description_DisablePocket": {
     "message": "禁用 Mozilla 提供的 Pocket 服务"
   },
