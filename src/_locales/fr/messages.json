@@ -299,6 +299,9 @@
   "policy_description_DisableMasterPasswordCreation": {
     "message": "Désactiver la fonction mot de passe maître"
   },
+  "policy_description_DisablePasswordReveal": {
+    "message": "Do not allow passwords to be revealed in saved logins"
+  },
   "policy_description_DisablePocket": {
     "message": "Désactiver l'intégration de Pocket, un service de Mozilla"
   },

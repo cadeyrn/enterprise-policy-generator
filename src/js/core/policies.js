@@ -1708,6 +1708,16 @@ const policies = {
     ]
   },
 
+  DisablePasswordReveal : {
+    description : browser.i18n.getMessage('policy_description_DisablePasswordReveal'),
+    enterprise_only : false,
+    first_available : { mainstream : '71.0', esr : null },
+    info_link : null,
+    is_lockable : false,
+    ui_category : 'security',
+    type : 'boolean'
+  },
+
   FlashPlugin : {
     description : browser.i18n.getMessage('policy_description_FlashPlugin'),
     enterprise_only : false,
