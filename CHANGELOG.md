@@ -2,6 +2,17 @@
 
 ## Release Notes
 
+### (Work in Progress) Version 5.1.0
+
+#### Enterprise Policies
+
+- new policy to not allow passwords to be revealed in saved logins (Firefox 71+), see
+  [#108](https://github.com/cadeyrn/enterprise-policy-generator/issues/108)
+
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v5.0.0...master)
+
+---
+
 ### [Version 5.0.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v5.0.0) (2019-10-10)
 
 #### Enhancements
@@ -81,7 +92,7 @@
   [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
 - new policy to disable browsing history, see
   [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
-- new policy to automatically chooses the default personal certificate, see
+- new policy to automatically choose the default personal certificate, see
   [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
 - new policy to disable the feature to send TLS errors to Mozilla, see
   [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
