@@ -300,7 +300,7 @@
     "message": "Deaktiviere die Master-Passwort-Funktion"
   },
   "policy_description_DisablePasswordReveal": {
-    "message": "Do not allow passwords to be revealed in saved logins"
+    "message": "Das Anzeigen gespeicherter Passwörter verhindern"
   },
   "policy_description_DisablePocket": {
     "message": "Deaktiviere die Integration von Pocket, einem Dienst von Mozilla"
