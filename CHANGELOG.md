@@ -8,6 +8,10 @@
 
 - new policy to not allow passwords to be revealed in saved logins (Firefox 71+), see
   [#108](https://github.com/cadeyrn/enterprise-policy-generator/issues/108)
+  
+#### Dependencies
+
+- updated gulp-stylelint from version 9.0.0 to 10.0.0
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v5.0.0...master)
 
