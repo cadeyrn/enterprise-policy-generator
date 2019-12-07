@@ -903,7 +903,7 @@
     "message": "Mě standardneje pytnice"
   },
   "policy_description_SearchEngines_DefaultPrivate": {
-    "message": "Name of the default search engine for private windows if different than for regular windows (Firefox 71+)"
+    "message": "Name of the default search engine for private windows if different than for regular windows (Firefox ESR 78+)"
   },
   "policy_description_SearchEngines_PreventInstalls": {
     "message": "Instalaciji nowych pytnicow zajźowaś"

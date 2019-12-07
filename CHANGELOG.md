@@ -8,6 +8,8 @@
 
 - new policy to not allow passwords to be revealed in saved logins (Firefox 71+), see
   [#108](https://github.com/cadeyrn/enterprise-policy-generator/issues/108)
+- added option to set the default search engine for private browsing mode (Firefox ESR 78+), see
+  [#111](https://github.com/cadeyrn/enterprise-policy-generator/issues/111)
   
 #### Translations
 
