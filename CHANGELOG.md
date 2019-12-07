@@ -13,7 +13,8 @@
   
 #### Translations
 
-- added Russian translation (Thanks, wvxwxvw!)
+- added Russian translation, see [#115](https://github.com/cadeyrn/enterprise-policy-generator/issues/115)
+  (Thanks, wvxwxvw!)
 - fixed typo in German translation, see [#112](https://github.com/cadeyrn/enterprise-policy-generator/issues/112)
   (Thanks, musonius!)
   
