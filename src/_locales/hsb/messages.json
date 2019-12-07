@@ -902,6 +902,9 @@
   "policy_description_SearchEngines_Default": {
     "message": "Mjeno standardneje pytawy"
   },
+  "policy_description_SearchEngines_DefaultPrivate": {
+    "message": "Name of the default search engine for private windows if different than for regular windows (Firefox 71+)"
+  },
   "policy_description_SearchEngines_PreventInstalls": {
     "message": "Instalaciji nowych pytawow zadźěwać"
   },
