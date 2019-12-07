@@ -17,6 +17,7 @@
   
 #### Dependencies
 
+- updated eslint from version 6.5.1 to 6.7.2 and updated configuration
 - updated gulp-stylelint from version 9.0.0 to 10.0.0
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v5.0.0...master)
