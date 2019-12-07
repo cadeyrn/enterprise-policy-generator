@@ -14,6 +14,8 @@
 #### Translations
 
 - added Russian translation (Thanks, wvxwxvw!)
+- fixed typo in German translation, see [#112](https://github.com/cadeyrn/enterprise-policy-generator/issues/112)
+  (Thanks, musonius!)
   
 #### Dependencies
 

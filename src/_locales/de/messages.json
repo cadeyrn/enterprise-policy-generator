@@ -729,7 +729,7 @@
     "message": "Zeige die Punycode-Version von internationalisierten Domainnamen an"
   },
   "policy_description_Preference_places_history_enabled": {
-    "message": "Brower-Chronik merken"
+    "message": "Browser-Chronik merken"
   },
   "policy_description_Preference_privacy_file_unique_origin": {
     "message": "Lokalen Dateien den Zugriff auf andere lokale Dateien erlauben (Sicherheitsproblem!)"
