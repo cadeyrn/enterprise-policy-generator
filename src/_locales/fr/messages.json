@@ -590,12 +590,6 @@
   "policy_description_OfferToSaveLoginsDefault": {
     "message": "Valeur par défaut pour permettre à Firefox d'offrir de mémoriser les logins et les mots de passe enregistrés."
   },
-  "policy_description_OfferToSaveLoginsDefault_options_false": {
-    "message": "Ne pas offrir de se souvenir des logins et mots de passe sauvegardés"
-  },
-  "policy_description_OfferToSaveLoginsDefault_options_true": {
-    "message": "Offre de se souvenir des noms d'utilisateur et mots de passe sauvegardés"
-  },
   "policy_description_OverrideFirstRunPage": {
     "message": "Remplacer la première page d'exécution. Définissez cette politique à vide si vous voulez désactiver la première page d'exécution."
   },

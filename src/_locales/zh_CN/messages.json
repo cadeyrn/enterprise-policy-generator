@@ -590,12 +590,6 @@
   "policy_description_OfferToSaveLoginsDefault": {
     "message": "允许 Firefox 提示记住已保存的登录信息和密码的默认值"
   },
-  "policy_description_OfferToSaveLoginsDefault_options_false": {
-    "message": "不提示记住已保存的登录信息和密码"
-  },
-  "policy_description_OfferToSaveLoginsDefault_options_true": {
-    "message": "提示记住已保存的登录信息和密码"
-  },
   "policy_description_OverrideFirstRunPage": {
     "message": "允许覆盖首次运行时显示的页面。如果您想禁止显示，请将 URL 栏留空。"
   },

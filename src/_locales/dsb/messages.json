@@ -590,12 +590,6 @@
   "policy_description_OfferToSaveLoginsDefault": {
     "message": "Standardne nastajenje, lěc se Firefox skłaźone pśizjawjenja a gronidła markujo"
   },
-  "policy_description_OfferToSaveLoginsDefault_options_false": {
-    "message": "se skłaźone pśizjawjenja a gronidła njemarkowaś"
-  },
-  "policy_description_OfferToSaveLoginsDefault_options_true": {
-    "message": "se skłaźone pśizjawjenja a gronidła markowaś"
-  },
   "policy_description_OverrideFirstRunPage": {
     "message": "Bok pśepisaś, kótaryž se pśi prědnem starśe pokazujo. Prozne zapódawańske pólo bok dopołnje znjemóžnjujo."
   },

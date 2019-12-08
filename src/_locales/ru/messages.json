@@ -590,12 +590,6 @@
   "policy_description_OfferToSaveLoginsDefault": {
     "message": "Предлагать сохранение логинов и паролей (по умолчанию)"
   },
-  "policy_description_OfferToSaveLoginsDefault_options_false": {
-    "message": "не предлагать запоминать сохраненные логины и пароли"
-  },
-  "policy_description_OfferToSaveLoginsDefault_options_true": {
-    "message": "предлагать запоминать сохраненные логины и пароли"
-  },
   "policy_description_OverrideFirstRunPage": {
     "message": "Переопределить страницу первого запуска. Если пусто, то отключена."
   },

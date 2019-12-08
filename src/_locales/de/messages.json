@@ -590,12 +590,6 @@
   "policy_description_OfferToSaveLoginsDefault": {
     "message": "Standard-Einstellung, ob sich Firefox gespeicherte Logins und Passwörter merkt"
   },
-  "policy_description_OfferToSaveLoginsDefault_options_false": {
-    "message": "gespeicherte Logins und Passwörter nicht merken"
-  },
-  "policy_description_OfferToSaveLoginsDefault_options_true": {
-    "message": "gespeicherte Logins und Passwörter merken"
-  },
   "policy_description_OverrideFirstRunPage": {
     "message": "Die Seite überschreiben, die beim ersten Start erscheint. Ein leeres Eingabefeld deaktiviert die Seite vollständig."
   },
