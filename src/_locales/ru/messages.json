@@ -288,10 +288,10 @@
     "message": "Отключить встроенный инструмент скриншота (Firefox Screenshots)"
   },
   "policy_description_DisableFirefoxStudies": {
-    "message": "Запретить установку и запуск исследований, и контекстных рекомендаций"
+    "message": "Запретить установку и запуск исследований и рекомендаций"
   },
   "policy_description_DisableForgetButton": {
-    "message": "Отключить кнопку \"Забыть\", которая может быть использована для очистки истории"
+    "message": "Отключить кнопку \"Забыть\", очистки истории"
   },
   "policy_description_DisableFormHistory": {
     "message": "Отключить историю форм и поиска"
@@ -315,7 +315,7 @@
     "message": "Отключить кнопку \"Обновить Firefox\" в about:support"
   },
   "policy_description_DisableSafeMode": {
-    "message": "Отключить пункт меню \"Перезапустить без дополнений\" (безопасный режим)"
+    "message": "Отключить пункт меню \"Перезапустить без дополнений\""
   },
   "policy_description_DisableSecurityBypass": {
     "message": "Запретить обход некоторых предупреждений безопасности"
@@ -345,7 +345,7 @@
     "message": "Запретить Firefox устанавливать и обновлять системные дополнения"
   },
   "policy_description_DisableTelemetry": {
-    "message": "Запретить отправку технических данных и взаимодействие с Mozilla (телеметрия)"
+    "message": "Запретить отправку данных и взаимодействие с Mozilla (телеметрия)"
   },
   "policy_description_DisplayBookmarksToolbar": {
     "message": "Показывать панель закладок по умолчанию"
@@ -375,7 +375,7 @@
     "message": "Не проверять при запуске, является ли Firefox браузером по умолчанию"
   },
   "policy_description_DownloadDirectory": {
-    "message": "Установка и блокировка каталога загрузки"
+    "message": "Установить и заблокировать папку загрузки"
   },
   "policy_description_DownloadDirectory_Label": {
     "message": "Для нативного домашнего каталога используйте ${home}"
@@ -576,19 +576,19 @@
     "message": "Включить или отключить страницу новой вкладки"
   },
   "policy_description_NoDefaultBookmarks": {
-    "message": "Не создавать закладки по умолчанию Firefox, включая смарт-закладки (самые посещаемые, последние теги). Примечание: эта политика действует только для нового профиля"
+    "message": "Не создавать закладки по умолчанию Firefox, включая смарт-закладки (самые посещаемые, последние теги). Примечание: эта политика заработает только в новом профиле"
   },
   "policy_description_OfferToSaveLogins": {
-    "message": "Разрешить или запретить Firefox предлагать запоминать сохраненные логины и пароли"
+    "message": "Предлагать сохранение логинов и паролей"
   },
   "policy_description_OfferToSaveLogins_options_false": {
-    "message": "не предлагать запоминать сохраненные логины и пароли"
+    "message": "не предлагать"
   },
   "policy_description_OfferToSaveLogins_options_true": {
-    "message": "предлагать запомнить сохраненные логины и пароли"
+    "message": "предлагать"
   },
   "policy_description_OfferToSaveLoginsDefault": {
-    "message": "Значение по умолчанию для предложений запоминания сохраненных логинов и паролей"
+    "message": "Предлагать сохранение логинов и паролей (по умолчанию)"
   },
   "policy_description_OfferToSaveLoginsDefault_options_false": {
     "message": "не предлагать запоминать сохраненные логины и пароли"
@@ -597,16 +597,16 @@
     "message": "предлагать запоминать сохраненные логины и пароли"
   },
   "policy_description_OverrideFirstRunPage": {
-    "message": "Переопределить страницу первого запуска. Установите пустым, если хотите отключить."
+    "message": "Переопределить страницу первого запуска. Если пусто, то отключена."
   },
   "policy_description_OverridePostUpdatePage": {
-    "message": "Переопределить страницу \"Что нового\". Установите пустым, если хотите отключить."
+    "message": "Переопределить страницу \"Что нового\". Если пусто, то отключена."
   },
   "policy_description_PasswordManagerEnabled": {
     "message": "Включить или отключить менеджер паролей полностью"
   },
   "policy_description_Permissions": {
-    "message": "Настройка разрешений для местоположения, камеры, микрофона и уведомлений"
+    "message": "Разрешения для местоположения, камеры, микрофона, уведомлений"
   },
   "policy_description_Permissions_Camera": {
     "message": "Камера"
@@ -678,7 +678,7 @@
     "message": "Путь"
   },
   "policy_description_Preference_browser_fixup_dns_first_for_single_words": {
-    "message": "Отправлять отдельные слова из строки адреса в DNS, а не в поисковую систему"
+    "message": "Отправлять отдельные слова из строки адреса сначала в DNS, а не сразу в поисковую систему"
   },
   "policy_description_Preference_browser_search_update": {
     "message": "Обновлять поисковые системы"
@@ -903,7 +903,7 @@
     "message": "Имя поисковой системы по умолчани"
   },
   "policy_description_SearchEngines_DefaultPrivate": {
-    "message": "Name of the default search engine for private windows if different than for regular windows (Firefox ESR 78+)"
+    "message": "Имя поисковой системы по умолчанию для приватных окон, если она отличается от обычных окон (Firefox ESR 68+)"
   },
   "policy_description_SearchEngines_PreventInstalls": {
     "message": "Запретить установку новых поисковых систем"
@@ -963,7 +963,7 @@
     "message": "работает только в Windows и Linux"
   },
   "save_dialog_btn_cancel": {
-    "message": "Отмане"
+    "message": "Отмена"
   },
   "save_dialog_btn_ok": {
     "message": "Сохранить конфигурацию"
