@@ -98,6 +98,7 @@ const configurator = {
       el.addEventListener('change', () => {
         const elSubOptions = el.parentNode.getElementsByClassName('sub-options');
         const elExtraOptions = el.parentNode.getElementsByClassName('extra-options');
+        const excludePolicy = el.getAttribute('data-exclude');
 
         if (elSubOptions.length > 0) {
           elSubOptions[0].classList.toggle('disabled');
@@ -122,6 +123,20 @@ const configurator = {
             if (firstInputField) {
               firstInputField.focus();
             }
+          }
+        }
+
+        if (excludePolicy) {
+          const elExcludedPolicy = document.querySelector('[data-name="' + excludePolicy + '"]');
+          const elExcludedPolicyParent = elExcludedPolicy.parentNode;
+
+          if (el.checked) {
+            elExcludedPolicy.setAttribute('disabled', 'disabled');
+            elExcludedPolicyParent.classList.add('excluded');
+          }
+          else {
+            elExcludedPolicy.removeAttribute('disabled');
+            elExcludedPolicyParent.classList.remove('excluded');
           }
         }
       });
@@ -427,12 +442,16 @@ const configurator = {
    * Appends policy element to the appropriate UI category in the DOM.
    *
    * @param {HTMLElement} el - the DOM element
-   * @param {string} category - the name of the category
+   * @param {Object} policy - the policy object
    *
    * @returns {void}
    */
-  addOptionToUi (el, category) {
-    configurator.uiCategoryElements[category].appendChild(el);
+  addOptionToUi (el, policy) {
+    if (policy.exclude) {
+      el.getElementsByClassName('primary-checkbox')[0].setAttribute('data-exclude', policy.exclude);
+    }
+
+    configurator.uiCategoryElements[policy.ui_category].appendChild(el);
   },
 
   /**
@@ -458,7 +477,7 @@ const configurator = {
     configurator.addArrayFieldActionLinks(elSubOptions, key + '_1');
 
     // add option to UI
-    configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
+    configurator.addOptionToUi(elObjectWrapper, policy);
   },
 
   /**
@@ -474,7 +493,7 @@ const configurator = {
     const elObjectWrapper = configurator.addPolicyNode(key, policy, 'boolean', inverse);
 
     // add option to UI
-    configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
+    configurator.addOptionToUi(elObjectWrapper, policy);
   },
 
   /**
@@ -520,7 +539,7 @@ const configurator = {
     }
 
     // add option to UI
-    configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
+    configurator.addOptionToUi(elObjectWrapper, policy);
   },
 
   /**
@@ -562,7 +581,7 @@ const configurator = {
     configurator.addArrayFieldActionLinks(elSubOptions, key + '_1');
 
     // add option to UI
-    configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
+    configurator.addOptionToUi(elObjectWrapper, policy);
   },
 
   /**
@@ -637,7 +656,7 @@ const configurator = {
     configurator.addArrayFieldActionLinks(elSubOptions, key + '_1');
 
     // add option to UI
-    configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
+    configurator.addOptionToUi(elObjectWrapper, policy);
   },
 
   /**
@@ -685,7 +704,7 @@ const configurator = {
     configurator.addArrayFieldActionLinks(elSubOptions, key + '_1');
 
     // add option to UI
-    configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
+    configurator.addOptionToUi(elObjectWrapper, policy);
   },
 
   /**
@@ -714,7 +733,7 @@ const configurator = {
     }
 
     // add option to UI
-    configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
+    configurator.addOptionToUi(elObjectWrapper, policy);
   },
 
   /**
@@ -839,7 +858,7 @@ const configurator = {
     }
 
     // add option to UI
-    configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
+    configurator.addOptionToUi(elObjectWrapper, policy);
   },
 
   /**
@@ -887,7 +906,7 @@ const configurator = {
     elSubOptions.appendChild(elInput);
 
     // add option to UI
-    configurator.addOptionToUi(elObjectWrapper, policy.ui_category);
+    configurator.addOptionToUi(elObjectWrapper, policy);
   },
 
   /**

@@ -127,6 +127,16 @@ const serializer = {
             el.classList.remove('disabled');
           });
         }
+
+        // set "excluded" state
+        const excludePolicy = el.getAttribute('data-exclude');
+        if (excludePolicy) {
+          const elExcludedPolicy = document.querySelector('[data-name="' + excludePolicy + '"]');
+          const elExcludedPolicyParent = elExcludedPolicy.parentNode;
+
+          elExcludedPolicy.setAttribute('disabled', 'disabled');
+          elExcludedPolicyParent.classList.add('excluded');
+        }
       }
     });
   },
