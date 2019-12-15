@@ -10,6 +10,8 @@
   [#108](https://github.com/cadeyrn/enterprise-policy-generator/issues/108) (Thanks, varshannagarajan!)
 - added option to set the default search engine for private browsing mode (Firefox ESR 78+), see
   [#111](https://github.com/cadeyrn/enterprise-policy-generator/issues/111) (Thanks, varshannagarajan!)
+- updated wording for OfferToSaveLogins and OfferToSaveLoginsDefault policies,
+  see [#112](https://github.com/cadeyrn/enterprise-policy-generator/issues/112) (Thanks, musonius!)
   
 #### Translations
 
