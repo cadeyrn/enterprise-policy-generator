@@ -293,6 +293,10 @@ button:hover::before {
   overflow: hidden;
 }
 
+.excluded {
+  opacity: .2;
+}
+
 .disabled-link {
   cursor: not-allowed;
   opacity: .2;
