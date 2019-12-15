@@ -891,7 +891,7 @@
     "message": "Имя поисковой системы по умолчани"
   },
   "policy_description_SearchEngines_DefaultPrivate": {
-    "message": "Имя поисковой системы по умолчанию для приватных окон, если она отличается от обычных окон (Firefox ESR 78+)"
+    "message": "Name of the default search engine for private windows (Firefox Pre-Release 71+, Firefox ESR 78+)"
   },
   "policy_description_SearchEngines_PreventInstalls": {
     "message": "Запретить установку новых поисковых систем"
