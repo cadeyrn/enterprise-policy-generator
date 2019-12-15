@@ -579,7 +579,7 @@
     "message": "Не создавать закладки по умолчанию Firefox, включая смарт-закладки (самые посещаемые, последние теги). Примечание: эта политика заработает только в новом профиле"
   },
   "policy_description_OfferToSaveLogins": {
-    "message": "Предлагать сохранение логинов и паролей"
+    "message": "Allow Firefox to offer to remember logins and passwords (cannot be overwritten)"
   },
   "policy_description_OfferToSaveLogins_options_false": {
     "message": "не предлагать"
@@ -588,7 +588,7 @@
     "message": "предлагать"
   },
   "policy_description_OfferToSaveLoginsDefault": {
-    "message": "Предлагать сохранение логинов и паролей (по умолчанию)"
+    "message": "Allow Firefox to offer to remember logins and passwords (can be overwritten by the user)"
   },
   "policy_description_OverrideFirstRunPage": {
     "message": "Переопределить страницу первого запуска. Если пусто, то отключена."

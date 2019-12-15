@@ -579,7 +579,7 @@
     "message": "Žane standardne zapołožki inkluziwnje inteligentne zapołožki (najhusćišo wopytane strony, njedawno wužite klučowe słowa) wutworić. Pokazka: tuta směrnica je jenož skutkowna, hdyž so před prěnim wužiwanjom profila Firefox nałožuje"
   },
   "policy_description_OfferToSaveLogins": {
-    "message": "Firefox dowolić abo zakazać, sej składowane přizjewjenja a hesła spomjatkować"
+    "message": "Allow Firefox to offer to remember logins and passwords (cannot be overwritten)"
   },
   "policy_description_OfferToSaveLogins_options_false": {
     "message": "wužite přizjewjenja a hesła sej njespomjatkować"
@@ -588,7 +588,7 @@
     "message": "wužite přizjewjenja a hesła sej spomjatkować"
   },
   "policy_description_OfferToSaveLoginsDefault": {
-    "message": "Standardne nastajenje, hač sej Firefox składowane přizjewjenja a hesła spomjatkuje"
+    "message": "Allow Firefox to offer to remember logins and passwords (can be overwritten by the user)"
   },
   "policy_description_OverrideFirstRunPage": {
     "message": "Stronu přepisać, kotraž so při prěnim starće jewi. Prózdne zapodawanske polo stronu dospołnje znjemóžnja."

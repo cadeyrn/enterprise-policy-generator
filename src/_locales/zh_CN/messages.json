@@ -579,7 +579,7 @@
     "message": "不创建默认的书签集，包括智能书签（最常访问、最近的标签）。注意：该策略仅在配置文件首次启用时生效"
   },
   "policy_description_OfferToSaveLogins": {
-    "message": "允许或禁止 Firefox 记住登录的账号和密码"
+    "message": "Allow Firefox to offer to remember logins and passwords (cannot be overwritten)"
   },
   "policy_description_OfferToSaveLogins_options_false": {
     "message": "不记住登录的账号和密码"
@@ -588,7 +588,7 @@
     "message": "记住登录的账号和密码"
   },
   "policy_description_OfferToSaveLoginsDefault": {
-    "message": "允许 Firefox 提示记住已保存的登录信息和密码的默认值"
+    "message": "Allow Firefox to offer to remember logins and passwords (can be overwritten by the user)"
   },
   "policy_description_OverrideFirstRunPage": {
     "message": "允许覆盖首次运行时显示的页面。如果您想禁止显示，请将 URL 栏留空。"

@@ -579,7 +579,7 @@
     "message": "Don't create the default bookmarks bundled with Firefox, including the smart bookmarks (most visited, recent tags). Note: this policy is only effective if used before the first run of the profile"
   },
   "policy_description_OfferToSaveLogins": {
-    "message": "Allow or forbid Firefox to offer to remember saved logins and passwords"
+    "message": "Allow Firefox to offer to remember logins and passwords (cannot be overwritten)"
   },
   "policy_description_OfferToSaveLogins_options_false": {
     "message": "don't offer to remember saved logins and passwords"
@@ -588,7 +588,7 @@
     "message": "offer to remember saved logins and passwords"
   },
   "policy_description_OfferToSaveLoginsDefault": {
-    "message": "Default value for allowing Firefox to offer to remember saved logins and passwords"
+    "message": "Allow Firefox to offer to remember logins and passwords (can be overwritten by the user)"
   },
   "policy_description_OverrideFirstRunPage": {
     "message": "Override the first run page. Set this policy to blank if you want to disable the first run page."
