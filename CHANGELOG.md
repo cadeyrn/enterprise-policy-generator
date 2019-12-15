@@ -8,6 +8,11 @@
 
 - add mechanism to exclude policies from each other, for example it doesn't make sense to use both the OfferToSaveLogins
   and the OfferToSaveLoginsDefault policy, see [#120](https://github.com/cadeyrn/enterprise-policy-generator/issues/120)
+  
+#### Bugfixes
+
+- SearchEngines | PreventInstalls should be optional when using SearchEngines policy, see
+  [#121](https://github.com/cadeyrn/enterprise-policy-generator/issues/121)
 
 #### Enterprise Policies
 
