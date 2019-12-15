@@ -581,12 +581,6 @@
   "policy_description_OfferToSaveLogins": {
     "message": "Allow Firefox to offer to remember logins and passwords (cannot be overwritten)"
   },
-  "policy_description_OfferToSaveLogins_options_false": {
-    "message": "Ne pas offrir de se souvenir des logins et mots de passe sauvegardés"
-  },
-  "policy_description_OfferToSaveLogins_options_true": {
-    "message": "Offre de se souvenir des noms d'utilisateur et mots de passe sauvegardés"
-  },
   "policy_description_OfferToSaveLoginsDefault": {
     "message": "Allow Firefox to offer to remember logins and passwords (can be overwritten by the user)"
   },

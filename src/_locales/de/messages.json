@@ -581,12 +581,6 @@
   "policy_description_OfferToSaveLogins": {
     "message": "Firefox erlauben, das Merken von Zugangsdaten und Passwörtern anzubieten (kann nicht überschrieben werden)"
   },
-  "policy_description_OfferToSaveLogins_options_false": {
-    "message": "gespeicherte Logins und Passwörter nicht merken"
-  },
-  "policy_description_OfferToSaveLogins_options_true": {
-    "message": "gespeicherte Logins und Passwörter merken"
-  },
   "policy_description_OfferToSaveLoginsDefault": {
     "message": "Firefox erlauben, das Merken von Zugangsdaten und Passwörtern anzubieten (kann vom Benutzer überschrieben werden)"
   },

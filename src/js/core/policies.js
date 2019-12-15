@@ -1662,11 +1662,11 @@ const policies = {
     label : null,
     options : [
       {
-        label : browser.i18n.getMessage('policy_description_OfferToSaveLogins_options_true'),
+        label : browser.i18n.getMessage('enum_value_yes'),
         value : 'true'
       },
       {
-        label : browser.i18n.getMessage('policy_description_OfferToSaveLogins_options_false'),
+        label : browser.i18n.getMessage('enum_value_no'),
         value : 'false'
       }
     ]
@@ -1683,11 +1683,11 @@ const policies = {
     label : null,
     options : [
       {
-        label : browser.i18n.getMessage('enum_value_enable_yes'),
+        label : browser.i18n.getMessage('enum_value_yes'),
         value : 'true'
       },
       {
-        label : browser.i18n.getMessage('enum_value_enable_no'),
+        label : browser.i18n.getMessage('enum_value_no'),
         value : 'false'
       }
     ]
