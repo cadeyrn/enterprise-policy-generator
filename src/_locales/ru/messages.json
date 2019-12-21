@@ -579,10 +579,10 @@
     "message": "Не создавать закладки по умолчанию Firefox, включая смарт-закладки (самые посещаемые, последние теги). Примечание: эта политика заработает только в новом профиле"
   },
   "policy_description_OfferToSaveLogins": {
-    "message": "Allow Firefox to offer to remember logins and passwords (cannot be overwritten)"
+    "message": "Разрешить Firefox предлагать запоминать логины и пароли (не могут быть перезаписаны)"
   },
   "policy_description_OfferToSaveLoginsDefault": {
-    "message": "Allow Firefox to offer to remember logins and passwords (can be overwritten by the user)"
+    "message": "Разрешить Firefox предлагать запоминать логины и пароли (могут быть перезаписаны пользователем)"
   },
   "policy_description_OverrideFirstRunPage": {
     "message": "Переопределить страницу первого запуска. Если пусто, то отключена."
@@ -888,10 +888,10 @@
     "message": "URL поиска. Используйте {searchTerms} как замещение поискового запроса"
   },
   "policy_description_SearchEngines_Default": {
-    "message": "Имя поисковой системы по умолчани"
+    "message": "Имя поисковой системы по умолчанию"
   },
   "policy_description_SearchEngines_DefaultPrivate": {
-    "message": "Name of the default search engine for private windows (Firefox Pre-Release 71+, Firefox ESR 78+)"
+    "message": "Имя поисковой системы по умолчанию для приватных окон (Firefox Pre-Release 71+, Firefox ESR 78+)"
   },
   "policy_description_SearchEngines_PreventInstalls": {
     "message": "Запретить установку новых поисковых систем"
