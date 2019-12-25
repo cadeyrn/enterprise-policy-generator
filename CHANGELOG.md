@@ -36,7 +36,7 @@
 - updated gulp-stylelint from version 9.0.0 to 11.0.0
 - updated stylelint from version 11.1.1 to 12.0.0
 - updated stylelint-csstree-validator from version 1.6.1 to 1.7.0
-- updated web-ext from version 3.2.0 to 3.2.1
+- updated web-ext from version 3.2.0 to 4.0.0
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v5.0.0...master)
 
