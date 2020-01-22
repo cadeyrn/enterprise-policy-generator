@@ -12,28 +12,28 @@
     "message": "Konfiguration importieren"
   },
   "enum_value_block_no": {
-    "message": "nicht blockieren"
+    "message": "Nicht blockieren"
   },
   "enum_value_block_yes": {
-    "message": "blockieren"
+    "message": "Blockieren"
   },
   "enum_value_enable_no": {
-    "message": "deaktivieren"
+    "message": "Deaktivieren"
   },
   "enum_value_enable_yes": {
-    "message": "aktivieren"
+    "message": "Aktivieren"
   },
   "enum_value_no": {
-    "message": "nein"
+    "message": "Nein"
   },
   "enum_value_no_preference": {
-    "message": "keine Voreinstellung"
+    "message": "Keine Voreinstellung"
   },
   "enum_value_yes": {
-    "message": "ja"
+    "message": "Ja"
   },
   "enterprise_only_label": {
-    "message": "funktioniert nur in Firefox ESR"
+    "message": "Funktioniert nur in Firefox ESR"
   },
   "explanation_about_policies": {
     "message": "Unter about:policies gibt es eine Übersicht über alle aktiven Richtlinien sowie Fehler in der Datei „policies.json“."
@@ -42,16 +42,16 @@
     "message": "Anwendung"
   },
   "explanation_intro": {
-    "message": "Per Klick auf den Button wird ein Code generiert. Dieser muss in einer Datei „policies.json“ gespeichert werden, welche im Distributionsverzeichnis abgelegt werden muss."
+    "message": "Per Klick auf den Button wird ein Code generiert. Dieser muss in einer Datei „policies.json“ gespeichert werden, die im Distributionsverzeichnis abgelegt werden muss."
   },
   "explanation_intro_linux": {
-    "message": "erstellen Sie ein Verzeichnis mit dem Namen „distribution“ in dem Verzeichnis, in welchem sich Firefox befindet und platzieren Sie die Datei „policies.json“ dort."
+    "message": "Erstellen Sie ein Verzeichnis mit dem Namen „distribution“ in dem Verzeichnis, in dem sich Firefox befindet und platzieren Sie die Datei „policies.json“ dort."
   },
   "explanation_intro_macos": {
-    "message": "erstellen Sie ein Verzeichnis mit dem Namen „distribution“ in Firefox.app/Contents/Resources/ und platzieren Sie die Datei „policies.json“ dort."
+    "message": "Erstellen Sie ein Verzeichnis mit dem Namen „distribution“ in Firefox.app/Contents/Resources/ und platzieren Sie die Datei „policies.json“ dort."
   },
   "explanation_intro_windows": {
-    "message": "erstellen Sie ein Verzeichnis mit dem Namen „distribution“ in dem Verzeichnis, in welchem sich die Datei firefox.exe befindet und platzieren Sie die Datei „policies.json“ dort."
+    "message": "Erstellen Sie ein Verzeichnis mit dem Namen „distribution“ in dem Verzeichnis, in dem sich die Datei firefox.exe befindet und platzieren Sie die Datei „policies.json“ dort."
   },
   "extension_description": {
     "message": "Generiert Unternehmensrichtlinien für Firefox."
@@ -72,7 +72,7 @@
     "message": "policies.json herunterladen"
   },
   "link_learn_more": {
-    "message": "weitere Informationen"
+    "message": "Weitere Informationen"
   },
   "link_load_configuration": {
     "message": "Konfiguration laden"
@@ -123,7 +123,7 @@
     "message": "Sicherheit"
   },
   "policy_category_update_and_data": {
-    "message": "Updates & Datenerhebung"
+    "message": "Updates und Datenerhebung"
   },
   "policy_category_others": {
     "message": "Sonstige Richtlinien"
@@ -132,7 +132,7 @@
     "message": "Abweichende Server-URL für Firefox-Aktualisierungen"
   },
   "policy_description_Authentication": {
-    "message": "Webseiten, welche eine integrierte Authentifizierung unterstützen"
+    "message": "Webseiten, die eine integrierte Authentifizierung unterstützen"
   },
   "policy_description_Authentication_additional_note": {
     "message": "Option, Einstellung zu schützen, neu ab Firefox 71. Vorher immer geschützt."
@@ -162,13 +162,13 @@
     "message": "Blockiere Zugang zur Browser-Konfiguration (about:config)"
   },
   "policy_description_BlockAboutProfiles": {
-    "message": "Blockiere Zugang zur Profil-Verwaltung (about:profiles)"
+    "message": "Blockiere Zugang zur Profilverwaltung (about:profiles)"
   },
   "policy_description_BlockAboutSupport": {
     "message": "Blockiere Zugang zu den Informationen zur Fehlerbehebung (about:support)"
   },
   "policy_description_Bookmarks": {
-    "message": "Erstelle Standard-Lesezeichen"
+    "message": "Standard-Lesezeichen erstellen"
   },
   "policy_description_Bookmarks_Favicon": {
     "message": "Favicon"
@@ -210,7 +210,7 @@
     "message": "Zertifikate aus dem System-Zertifikatsspeicher lesen"
   },
   "policy_description_Certificates_Install": {
-    "message": "Zertifikate importieren (Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates oder %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: /Library/Application Support/Mozilla/Certificates oder ~/Library/Application Support/Mozilla/Certificates, Linux: /usr/lib/mozilla/certificates, /usr/lib64/mozilla/certificates oder ~/.mozilla/certificates)"
+    "message": "Zertifikate importieren (Windows: %USERPROFILE%\\AppData\\Local\\Mozilla\\Certificates oder %USERPROFILE%\\AppData\\Roaming\\Mozilla\\Certificates, macOS: /Library/Application Support/Mozilla/Certificates oder ~/Library/Application Support/Mozilla/Certificates, Linux: /usr/lib/mozilla/certificates, /usr/lib64/mozilla/certificates oder ~/.mozilla/certificates)"
   },
   "policy_description_Certificates_Install_Value": {
     "message": "Pfad zur .der- oder .pem-Datei"
@@ -219,31 +219,31 @@
     "message": "Webseiten erlauben oder verbieten, Cookies zu setzen"
   },
   "policy_description_Cookies_AcceptThirdParty": {
-    "message": "Der Standard-Wert für „Cookies und Website-Daten von Drittanbietern akzeptieren“"
+    "message": "Standardwert für „Cookies und Website-Daten von Drittanbietern akzeptieren“"
   },
   "policy_description_Cookies_AcceptThirdParty_always": {
-    "message": "immer"
+    "message": "Immer"
   },
   "policy_description_Cookies_AcceptThirdParty_from_visited": {
-    "message": "nur von besuchten Drittanbietern"
+    "message": "Nur von besuchten Drittanbietern"
   },
   "policy_description_Cookies_AcceptThirdParty_never": {
-    "message": "nie"
+    "message": "Nie"
   },
   "policy_description_Cookies_Allow": {
-    "message": "Domains, welche Cookies immer verwenden dürfen"
+    "message": "Domains, die Cookies immer verwenden dürfen"
   },
   "policy_description_Cookies_Allow_Domain": {
     "message": "Domain"
   },
   "policy_description_Cookies_Block": {
-    "message": "Domains, auf welchen Cookies blockiert werden"
+    "message": "Domains, auf denen Cookies blockiert werden"
   },
   "policy_description_Cookies_Block_Domain": {
     "message": "Domain"
   },
   "policy_description_Cookies_Default": {
-    "message": "Der Standard-Wert für „Cookies und Website-Daten annehmen“"
+    "message": "Standardwert für „Cookies und Website-Daten annehmen“"
   },
   "policy_description_Cookies_Default_false": {
     "message": "Cookies nicht akzeptieren"
@@ -252,13 +252,13 @@
     "message": "Cookies akzeptieren"
   },
   "policy_description_Cookies_ExpireAtSessionEnd": {
-    "message": "Behalte Cookies…"
+    "message": "Behalte Cookies, bis…"
   },
   "policy_description_Cookies_ExpireAtSessionEnd_false": {
-    "message": "… bis sie nicht mehr gültig sind"
+    "message": "… sie nicht mehr gültig sind"
   },
   "policy_description_Cookies_ExpireAtSessionEnd_true": {
-    "message": "… bis Firefox geschlossen wird"
+    "message": "… Firefox geschlossen wird"
   },
   "policy_description_Cookies_RejectTracker": {
     "message": "Tracking-Cookies blockieren"
@@ -291,7 +291,7 @@
     "message": "Firefox an der Installation und Ausführung von Studien sowie kontextbezogenen Feature-Empfehlungen hindern"
   },
   "policy_description_DisableForgetButton": {
-    "message": "Deaktiviere die „Vergessen“ Schaltfläche, welche benutzt werden kann, um die Chronik zu löschen"
+    "message": "Deaktiviere die Schaltfläche „Vergessen“, die benutzt werden kann, um die Chronik zu löschen"
   },
   "policy_description_DisableFormHistory": {
     "message": "Deaktiviere die Formular- und Such-Chronik"
@@ -309,10 +309,10 @@
     "message": "Deaktiviere den Privaten Modus"
   },
   "policy_description_DisableProfileImport": {
-    "message": "Deaktiviere den Menü-Eintrag „Daten von einem anderen Browser importieren“ in der Bibliothek"
+    "message": "Deaktiviere den Menü-Eintrag „Daten aus einem anderen Browser importieren“ in der Bibliothek"
   },
   "policy_description_DisableProfileRefresh": {
-    "message": "Deaktiviere die „Firefox bereinigen“-Schaltfläche in about:support"
+    "message": "Deaktiviere die Schaltfläche „Firefox bereinigen“ in about:support"
   },
   "policy_description_DisableSafeMode": {
     "message": "Deaktiviere den Menü-Eintrag, um Firefox mit deaktivierten Erweiterungen neu zu starten (Abgesicherter Modus)"
@@ -324,19 +324,19 @@
     "message": "Das Hinzufügen einer Ausnahme verhindern, wenn ein ungültiges Zertifikat angezeigt wird"
   },
   "policy_description_DisableSecurityBypass_InvalidCertificate_false": {
-    "message": "nicht verhindern"
+    "message": "Nicht verhindern"
   },
   "policy_description_DisableSecurityBypass_InvalidCertificate_true": {
-    "message": "verhindern"
+    "message": "Verhindern"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing": {
     "message": "Das Umgehen der Warnung und Besuchen einer schädlichen Webseite verhindern"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_false": {
-    "message": "nicht verhindern"
+    "message": "Nicht verhindern"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_true": {
-    "message": "verhindern"
+    "message": "Verhindern"
   },
   "policy_description_DisableSetDesktopBackground": {
     "message": "Deaktiviere die Funktion, eine Grafik als Hintergrundbild zu verwenden"
@@ -348,10 +348,10 @@
     "message": "Firefox hindern, Daten zu technischen Details und Interaktionen an Mozilla zu senden (Telemetrie)"
   },
   "policy_description_DisplayBookmarksToolbar": {
-    "message": "Zeige die Lesezeichen-Symbolleiste standardmäßig"
+    "message": "Lesezeichen-Symbolleiste standardmäßig anzeigen"
   },
   "policy_description_DisplayMenuBar": {
-    "message": "Zeige die Menüleiste standardmäßig"
+    "message": "Menüleiste standardmäßig anzeigen"
   },
   "policy_description_DNSOverHTTPS": {
     "message": "DNS über HTTPS konfigurieren"
@@ -366,13 +366,13 @@
     "message": "Provider-URL"
   },
   "policy_description_DontCheckDefaultBrowser": {
-    "message": "Prüfung konfigurieren, ob Firefox der Standard-Browser ist"
+    "message": "Prüfung konfigurieren, ob Firefox der Standardbrowser ist"
   },
   "policy_description_DontCheckDefaultBrowser_options_false": {
-    "message": "Beim Start prüfen, ob Firefox der Standard-Browser ist"
+    "message": "Beim Start prüfen, ob Firefox der Standardbrowser ist"
   },
   "policy_description_DontCheckDefaultBrowser_options_true": {
-    "message": "Beim Start nicht prüfen, ob Firefox der Standard-Browser ist"
+    "message": "Beim Start nicht prüfen, ob Firefox der Standardbrowser ist"
   },
   "policy_description_DownloadDirectory": {
     "message": "Downloadverzeichnis festlegen und sperren"
@@ -396,7 +396,7 @@
     "message": "Erweiterungen installieren, deinstallieren oder sperren"
   },
   "policy_description_Extensions_Deprecated": {
-    "message": "Veraltet. Die darunter liegende Richtlinie sollte verwendet werden."
+    "message": "Veraltet. Die darunterliegende Richtlinie sollte verwendet werden."
   },
   "policy_description_Extensions_Install": {
     "message": "Erweiterungen installieren. Es können URLs oder Pfade angegeben werden."
@@ -417,7 +417,7 @@
     "message": "Erweiterungs-ID"
   },
   "policy_description_ExtensionSettings": {
-    "message": "Die Installation und Deinstallation von Erweiterungen verwalten"
+    "message": "Installation und Deinstallation von Erweiterungen verwalten"
   },
   "policy_description_ExtensionSettings_allowed_types": {
     "message": "Erlaubte Erweiterungs-Typen"
@@ -435,10 +435,10 @@
     "message": "Themes"
   },
   "policy_description_ExtensionSettings_blocked_install_message_caption_all": {
-    "message": "Fehlermeldung, welche dem Nutzer angezeigt wird, wenn versucht wird, eine blockierte Erweiterung zu installieren"
+    "message": "Fehlermeldung, die dem Nutzer angezeigt wird, wenn versucht wird, eine blockierte Erweiterung zu installieren"
   },
   "policy_description_ExtensionSettings_blocked_install_message_caption_single": {
-    "message": "Fehlermeldung, welche dem Nutzer angezeigt wird, wenn versucht wird, die blockierte Erweiterung zu installieren"
+    "message": "Fehlermeldung, die dem Nutzer angezeigt wird, wenn versucht wird, die blockierte Erweiterung zu installieren"
   },
   "policy_description_ExtensionSettings_blocked_install_message_label": {
     "message": "Fehlermeldung"
@@ -450,7 +450,7 @@
     "message": "Konfiguration für alle Erweiterungen"
   },
   "policy_description_ExtensionSettings_install_sources": {
-    "message": "Erlaubte Installations-Quellen. Sowohl die Quelle der *.xpi-Datei als auch die Domain, von welcher der Download gestartet wird, müssen erlaubt sein."
+    "message": "Erlaubte Installationsquellen. Sowohl die Quelle der .xpi-Datei als auch die Domain, von welcher der Download gestartet wird, müssen erlaubt sein."
   },
   "policy_description_ExtensionSettings_install_url_caption": {
     "message": "Installations-URL. Wenn die Erweiterung vom lokalen Dateisystem installiert werden soll, bitte file:///-URI verwenden."
@@ -489,7 +489,7 @@
     "message": "Automatische Aktualisierung von Erweiterungen aktivieren"
   },
   "policy_description_FirefoxHome": {
-    "message": "Den Firefox-Startbildschirm anpassen"
+    "message": "Firefox-Startbildschirm anpassen"
   },
   "policy_description_FirefoxHome_Search": {
     "message": "Internetsuche"
@@ -507,7 +507,7 @@
     "message": "Kurzinformationen"
   },
   "policy_description_FlashPlugin": {
-    "message": "Die Verwendung des Flash-Plugins erlauben oder verbieten"
+    "message": "Verwendung des Flash-Plugins erlauben oder verbieten"
   },
   "policy_description_FlashPlugin_Allow": {
     "message": "Für diese URLs das Flash-Plugin standardmäßig aktivieren, außer wenn Flash vollständig deaktiviert ist"
@@ -549,7 +549,7 @@
     "message": "Webseiten erlauben, Erweiterungen zu installieren"
   },
   "policy_description_InstallAddonsPermission_Allow": {
-    "message": "Webseiten, welche Erweiterungen installieren können, sofern die Installation von Erweiterungen nicht deaktiviert ist (addons.mozilla.org ist bereits erlaubt)"
+    "message": "Webseiten, die Erweiterungen installieren können, sofern die Installation von Erweiterungen nicht deaktiviert ist (addons.mozilla.org ist bereits erlaubt)"
   },
   "policy_description_InstallAddonsPermission_Default_false": {
     "message": "Erweiterungen können vom Nutzer nicht installiert werden"
@@ -558,25 +558,25 @@
     "message": "Erweiterungen können vom Nutzer installiert werden"
   },
   "policy_description_InstallAddonsPermission_Deprecated": {
-    "message": "Veraltet. Die darunter liegende Richtlinie sollte verwendet werden."
+    "message": "Veraltet. Die darunterliegende Richtlinie sollte verwendet werden."
   },
   "policy_description_LocalFileLinks": {
     "message": "Bestimmten Websites erlauben, lokale Dateien zu verlinken"
   },
   "policy_description_NetworkPrediction": {
-    "message": "DNS Prefetching aktivieren oder deaktivieren"
+    "message": "DNS-Prefetching aktivieren oder deaktivieren"
   },
   "policy_description_NetworkPrediction_options_false": {
-    "message": "DNS Prefetching deaktivieren"
+    "message": "DNS-Prefetching deaktivieren"
   },
   "policy_description_NetworkPrediction_options_true": {
-    "message": "DNS Prefetching aktivieren"
+    "message": "DNS-Prefetching aktivieren"
   },
   "policy_description_NewTabPage": {
-    "message": "Die Seite, welche beim Öffnen eines neuen Tabs erscheint, aktivieren oder deaktivieren"
+    "message": "Seite, die beim Öffnen eines neuen Tabs erscheint, aktivieren oder deaktivieren"
   },
   "policy_description_NoDefaultBookmarks": {
-    "message": "Keine Standard-Lesezeichen, einschließlich der intelligenten Lesezeichen (Meistbesuchte Seiten, Kürzlich verwendete Schlagwörter), erstellen. Hinweis: diese Richtlinie ist nur wirksam, wenn sie vor der ersten Benutzung des Firefox-Profils angewendet wird"
+    "message": "Keine Standard-Lesezeichen, einschließlich der intelligenten Lesezeichen (Meistbesuchte Seiten, Kürzlich verwendete Schlagwörter), erstellen. Hinweis: Diese Richtlinie ist nur wirksam, wenn sie vor der ersten Benutzung des Firefox-Profils angewendet wird."
   },
   "policy_description_OfferToSaveLogins": {
     "message": "Firefox erlauben, das Merken von Zugangsdaten und Passwörtern anzubieten (kann nicht überschrieben werden)"
@@ -645,10 +645,10 @@
     "message": "Neue Anfragen zum Anzeigen von Benachrichtigungen blockieren"
   },
   "policy_description_PopupBlocking": {
-    "message": "Die Verwendung von Pop-ups erlauben oder verbieten"
+    "message": "Verwendung von Pop-ups erlauben oder verbieten"
   },
   "policy_description_PopupBlocking_Allow": {
-    "message": "Domains, für welche Pop-up-Fenster erlaubt sind"
+    "message": "Domains, für die Pop-up-Fenster erlaubt sind"
   },
   "policy_description_PopupBlocking_Default_false": {
     "message": "Pop-ups werden standardmäßig nicht blockiert"
@@ -657,7 +657,7 @@
     "message": "Pop-ups werden standardmäßig blockiert"
   },
   "policy_description_Preference_browser_cache_disk_enable": {
-    "message": "Festplatten-Cache aktivieren / deaktivieren"
+    "message": "Festplatten-Cache aktivieren oder deaktivieren"
   },
   "policy_description_Preference_browser_cache_disk_parent_directory": {
     "message": "Speicherort des Festplatten-Caches ändern"
@@ -696,10 +696,10 @@
     "message": "Websites erlauben, das Kontextmenü zu überschreiben"
   },
   "policy_description_Preference_dom_keyboardevent_keypress_hack_dispatch_non_printable_keys_addl": {
-    "message": "Webstandards: Altes Verhalten bezüglich keypress-Event und nicht druckbaren Tasten für bestimmte Domains wiederherstellen"
+    "message": "Webstandard: Altes Verhalten bezüglich keypress-Event und nicht druckbaren Tasten für bestimmte Domains wiederherstellen"
   },
   "policy_description_Preference_dom_keyboardevent_keypress_hack_use_legacy_keycode_and_charcode_addl": {
-    "message": "Webstandards: Altes Verhalten bezüglich keyCode und charCode für bestimmte Domains wiederherstellen"
+    "message": "Webstandard: Altes Verhalten bezüglich keyCode und charCode für bestimmte Domains wiederherstellen"
   },
   "policy_description_Preference_extensions_getAddons_showPane": {
     "message": "Reiter mit Empfehlungen in Erweiterungs-Verwaltung anzeigen"
@@ -714,7 +714,7 @@
     "message": "IPv6 DNS-Lookups durchführen"
   },
   "policy_description_Preference_network_IDN_show_punycode": {
-    "message": "Zeige die Punycode-Version von internationalisierten Domainnamen an"
+    "message": "Punycode-Version von internationalisierten Domainnamen anzeigen"
   },
   "policy_description_Preference_places_history_enabled": {
     "message": "Browser-Chronik merken"
@@ -723,13 +723,13 @@
     "message": "Lokalen Dateien den Zugriff auf andere lokale Dateien erlauben (Sicherheitsproblem!)"
   },
   "policy_description_Preference_security_default_personal_cert": {
-    "message": "Den Nutzer um Auswahl eines Zertifikats für Websites bitten, welche eines benötigen"
+    "message": "Den Nutzer um Auswahl eines Zertifikats für Websites bitten, die eines benötigen"
   },
   "policy_description_Preference_security_default_personal_cert_ask_every_time": {
-    "message": "jedes Mal nachfragen"
+    "message": "Jedes Mal nachfragen"
   },
   "policy_description_Preference_security_default_personal_cert_select_automatically": {
-    "message": "automatisch auswählen"
+    "message": "Automatisch auswählen"
   },
   "policy_description_Preference_security_ssl_errorReporting_enabled": {
     "message": "TLS-Fehler können an Mozilla gesendet werden"
@@ -756,7 +756,7 @@
     "message": "Keine Authentifizierungsanfrage anzeigen"
   },
   "policy_description_Proxy_HTTPProxy": {
-    "message": "HTTP-Proxy. Um eine Port-Nummer festzulegen bitte „:“ gefolgt von der Portnummer ergänzen"
+    "message": "HTTP-Proxy. Um eine Port-Nummer festzulegen, bitte „:“ gefolgt von der Portnummer ergänzen"
   },
   "policy_description_Proxy_Mode_autoConfig": {
     "message": "Automatische Proxy-Konfigurations-Adresse"
@@ -774,13 +774,13 @@
     "message": "Proxy-Einstellungen des Systems verwenden"
   },
   "policy_description_Proxy_FTPProxy": {
-    "message": "FTP-Proxy. Um eine Port-Nummer festzulegen bitte „:“ gefolgt von der Portnummer ergänzen"
+    "message": "FTP-Proxy. Um eine Port-Nummer festzulegen, bitte „:“ gefolgt von der Portnummer ergänzen"
   },
   "policy_description_Proxy_Passthrough": {
     "message": "Kein Proxy für…"
   },
   "policy_description_Proxy_SOCKSProxy": {
-    "message": "SOCKS-Host. Um eine Port-Nummer festzulegen bitte „:“ gefolgt von der Portnummer ergänzen"
+    "message": "SOCKS-Host. Um eine Port-Nummer festzulegen, bitte „:“ gefolgt von der Portnummer ergänzen"
   },
   "policy_description_Proxy_SOCKSVersion_v4": {
     "message": "SOCKS v4"
@@ -789,13 +789,13 @@
     "message": "SOCKS v5"
   },
   "policy_description_Proxy_SSLProxy": {
-    "message": "SSL-Proxy. Um eine Port-Nummer festzulegen bitte „:“ gefolgt von der Portnummer ergänzen"
+    "message": "SSL-Proxy. Um eine Port-Nummer festzulegen, bitte „:“ gefolgt von der Portnummer ergänzen"
   },
   "policy_description_Proxy_UseHTTPProxyForAllProtocols_false": {
-    "message": "diesen Proxy-Server nicht für alle Protokolle verwenden"
+    "message": "Diesen Proxy-Server nicht für alle Protokolle verwenden"
   },
   "policy_description_Proxy_UseHTTPProxyForAllProtocols_true": {
-    "message": "diesen Proxy-Server für alle Protokolle verwenden"
+    "message": "Diesen Proxy-Server für alle Protokolle verwenden"
   },
   "policy_description_Proxy_UseProxyForDNS": {
     "message": "Bei Verwendung von SOCKS v5 den Proxy für DNS-Anfragen verwenden"
@@ -816,7 +816,7 @@
     "message": "Sprachkürzel"
   },
   "policy_description_SanitizeOnShutdown": {
-    "message": "Lösche Browsing-Daten, wenn Firefox geschlossen wird"
+    "message": "Browsing-Daten löschen, wenn Firefox geschlossen wird"
   },
   "policy_description_SanitizeOnShutdown_Cache": {
     "message": "Cache"
@@ -846,19 +846,19 @@
     "message": "Legt fest, ob die Suchleiste mit der Adressleiste kombiniert oder separat ist"
   },
   "policy_description_SearchBar_options_separate": {
-    "message": "es gibt eine separate Suchleiste"
+    "message": "Es gibt eine separate Suchleiste."
   },
   "policy_description_SearchBar_options_unified": {
-    "message": "die Suchleiste ist mit der Adressleiste kombiniert"
+    "message": "Die Suchleiste ist mit der Adressleiste kombiniert."
   },
   "policy_description_SearchEngines": {
-    "message": "Ändere die Liste der in Firefox eingebauten Suchmaschinen"
+    "message": "Liste der in Firefox eingebauten Suchmaschinen ändern"
   },
   "policy_description_SearchEngines_Add": {
     "message": "Suchmaschine(n) hinzufügen"
   },
   "policy_description_SearchEngines_Add_Alias": {
-    "message": "Alias, welcher genutzt werden kann, um auf die Suchmaschine zuzugreifen"
+    "message": "Alias, der genutzt werden kann, um auf die Suchmaschine zuzugreifen"
   },
   "policy_description_SearchEngines_Add_Description": {
     "message": "Beschreibung"
@@ -867,7 +867,7 @@
     "message": "Icon-URL oder data:image…"
   },
   "policy_description_SearchEngines_Add_Method": {
-    "message": "Anfrage-Methode"
+    "message": "Anfragemethode"
   },
   "policy_description_SearchEngines_Add_Method_GET": {
     "message": "GET"
@@ -879,13 +879,13 @@
     "message": "Name"
   },
   "policy_description_SearchEngines_Add_PostData": {
-    "message": "POST Data (wenn POST-Methode gewählt wurde; z.B. q={searchTerms}&anotherParam=yes)"
+    "message": "POST Data (wenn POST-Methode gewählt wurde; z. B. q={searchTerms}&anotherParam=yes)"
   },
   "policy_description_SearchEngines_Add_SuggestURLTemplate": {
-    "message": "URL für Vorschläge. Bitte {searchTerms} als Platzhalter für den Suchbegriff verwenden"
+    "message": "URL für Vorschläge. Bitte {searchTerms} als Platzhalter für den Suchbegriff verwenden."
   },
   "policy_description_SearchEngines_Add_URL": {
-    "message": "URL für Suchen. Bitte {searchTerms} als Platzhalter für den Suchbegriff verwenden"
+    "message": "URL für Suchen. Bitte {searchTerms} als Platzhalter für den Suchbegriff verwenden."
   },
   "policy_description_SearchEngines_Default": {
     "message": "Name der Standard-Suchmaschine"
@@ -894,7 +894,7 @@
     "message": "Name der Standard-Suchmaschine für private Fenster (Firefox Pre-Release 71+, Firefox ESR 78+)"
   },
   "policy_description_SearchEngines_PreventInstalls": {
-    "message": "Die Installation neuer Suchmaschinen verhindern"
+    "message": "Installation neuer Suchmaschinen verhindern"
   },
   "policy_description_SearchEngines_PreventInstalls_false": {
     "message": "Installation nicht verhindern"
@@ -927,7 +927,7 @@
     "message": "Minimal erforderliche TLS-Version"
   },
   "policy_description_SupportMenu": {
-    "message": "Hinzufügen eines benutzerdefinierten Support-Menüpunktes zum Hilfemenü"
+    "message": "Benutzerdefinierten Support-Menüpunkt zum Hilfe-Menü hinzufügen"
   },
   "policy_description_SupportMenu_AccessKey": {
     "message": "Zugriffstaste (ein einzelner Buchstabe!)"
@@ -936,10 +936,10 @@
     "message": "Titel"
   },
   "policy_description_WebsiteFilter": {
-    "message": "Blockiere Besuche von Webseiten. Es kann „<all_urls>“ verwendet werden, um alle URLs zu blockieren. Siehe Info-Link für alle gültigen Eingaben, es werden jedoch nur HTTPS und HTTP unterstützt."
+    "message": "Besuche von Webseiten blockieren. Es kann „<all_urls>“ verwendet werden, um alle URLs zu blockieren. Siehe Info-Link für alle gültigen Eingaben, es werden jedoch nur HTTPS und HTTP unterstützt."
   },
   "policy_description_WebsiteFilter_Block": {
-    "message": "Blockiere die folgenden URLs"
+    "message": "Folgende URLs blockieren"
   },
   "policy_description_WebsiteFilter_Exceptions": {
     "message": "Ausnahmen"
@@ -948,7 +948,7 @@
     "message": "Standard"
   },
   "requirement_windows_or_linux": {
-    "message": "funktioniert nur auf Windows und Linux"
+    "message": "Funktioniert nur auf Windows und Linux"
   },
   "save_dialog_btn_cancel": {
     "message": "Abbrechen"
@@ -978,6 +978,6 @@
     "message": "oder höher"
   },
   "version_required": {
-    "message": "erfordert mindestens"
+    "message": "Erfordert mindestens"
   }
 }
