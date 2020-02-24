@@ -13,6 +13,8 @@
 
 - SearchEngines | PreventInstalls should be optional when using SearchEngines policy, see
   [#121](https://github.com/cadeyrn/enterprise-policy-generator/issues/121)
+- disabling the LocalFileLinks or RequestedLocales policy has only hidden the first field if more than one field was
+  visible, see [#130](https://github.com/cadeyrn/enterprise-policy-generator/issues/130)
 
 #### Enterprise Policies
 

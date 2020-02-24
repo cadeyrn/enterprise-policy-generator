@@ -101,7 +101,9 @@ const configurator = {
         const excludePolicy = el.getAttribute('data-exclude');
 
         if (elSubOptions.length > 0) {
-          elSubOptions[0].classList.toggle('disabled');
+          [...elSubOptions].forEach((el) => {
+            el.classList.toggle('disabled');
+          });
 
           // set focus to first input or select field after a policy checkbox has been checked
           if (!elSubOptions[0].classList.contains('disabled') && elExtraOptions.length === 0) {
