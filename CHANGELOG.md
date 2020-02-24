@@ -39,7 +39,7 @@
 - updated stylelint from version 11.1.1 to 13.2.0
 - updated stylelint-csstree-validator from version 1.6.1 to 1.8.0
 - updated stylelint-order from version 3.1.1 to 4.0.0
-- updated web-ext from version 3.2.0 to 4.0.0
+- updated web-ext from version 3.2.0 to 4.1.0
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v5.0.0...master)
 
