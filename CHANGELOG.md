@@ -36,7 +36,7 @@
 
 - removed optional properties from configuration to simplify the configuration file. In the future there will be
   an online developer documentation where you can find all possible options, , see
-  [#139](https://github.com/cadeyrn/enterprise-policy-generator/issues/139)
+  [#131](https://github.com/cadeyrn/enterprise-policy-generator/issues/131)
   
 #### Dependencies
 
