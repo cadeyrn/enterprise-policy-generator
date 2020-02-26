@@ -8,40 +8,28 @@ const policies = {
 
   BlockAboutAddons : {
     description : browser.i18n.getMessage('policy_description_BlockAboutAddons'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'block-access',
     type : 'boolean'
   },
 
   BlockAboutConfig : {
     description : browser.i18n.getMessage('policy_description_BlockAboutConfig'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'block-access',
     type : 'boolean'
   },
 
   BlockAboutProfiles : {
     description : browser.i18n.getMessage('policy_description_BlockAboutProfiles'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'block-access',
     type : 'boolean'
   },
 
   BlockAboutSupport : {
     description : browser.i18n.getMessage('policy_description_BlockAboutSupport'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'block-access',
     type : 'boolean'
   },
@@ -50,140 +38,98 @@ const policies = {
 
   DisablePrivateBrowsing : {
     description : browser.i18n.getMessage('policy_description_DisablePrivateBrowsing'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableFormHistory : {
     description : browser.i18n.getMessage('policy_description_DisableFormHistory'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableBuiltinPDFViewer : {
     description : browser.i18n.getMessage('policy_description_DisableBuiltinPDFViewer'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableFirefoxScreenshots : {
     description : browser.i18n.getMessage('policy_description_DisableFirefoxScreenshots'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableDeveloperTools : {
     description : browser.i18n.getMessage('policy_description_DisableDeveloperTools'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisablePocket : {
     description : browser.i18n.getMessage('policy_description_DisablePocket'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableFirefoxAccounts : {
     description : browser.i18n.getMessage('policy_description_DisableFirefoxAccounts'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableMasterPasswordCreation : {
     description : browser.i18n.getMessage('policy_description_DisableMasterPasswordCreation'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableSetDesktopBackground : {
     description : browser.i18n.getMessage('policy_description_DisableSetDesktopBackground'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableForgetButton : {
     description : browser.i18n.getMessage('policy_description_DisableForgetButton'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableProfileImport : {
     description : browser.i18n.getMessage('policy_description_DisableProfileImport'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableSafeMode : {
     description : browser.i18n.getMessage('policy_description_DisableSafeMode'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableProfileRefresh : {
     description : browser.i18n.getMessage('policy_description_DisableProfileRefresh'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableFeedbackCommands : {
     description : browser.i18n.getMessage('policy_description_DisableFeedbackCommands'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -192,37 +138,29 @@ const policies = {
 
   RequestedLocales : {
     description : browser.i18n.getMessage('policy_description_RequestedLocales'),
-    enterprise_only : false,
     additional_note : browser.i18n.getMessage('policy_description_RequestedLocales_Requirement'),
     first_available : { mainstream : '64.0', esr : '60.3.1' },
     info_link : 'https://addons.mozilla.org/firefox/language-tools/',
-    is_lockable : false,
     ui_category : 'customization',
     type : 'flat-array',
     value : {
       label : browser.i18n.getMessage('policy_description_RequestedLocales_Value'),
-      mandatory : false,
       allow_empty_value : true
     }
   },
 
   DisplayMenuBar : {
     description : browser.i18n.getMessage('policy_description_DisplayMenuBar'),
-    enterprise_only : false,
     additional_note : browser.i18n.getMessage('requirement_windows_or_linux'),
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'customization',
     type : 'boolean'
   },
 
   Preference_ui_key_menuAccessKeyFocuses : {
     description : browser.i18n.getMessage('policy_description_Preference_ui_key_menuAccessKeyFocuses'),
-    enterprise_only : false,
     additional_note : browser.i18n.getMessage('requirement_windows_or_linux'),
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
     ui_category : 'customization',
     type : 'preference',
     properties : {
@@ -234,19 +172,14 @@ const policies = {
 
   DisplayBookmarksToolbar : {
     description : browser.i18n.getMessage('policy_description_DisplayBookmarksToolbar'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'customization',
     type : 'boolean'
   },
 
   Homepage : {
     description : browser.i18n.getMessage('policy_description_Homepage'),
-    enterprise_only : false,
     first_available : { mainstream : '62.0', esr : '60.0' },
-    info_link : null,
     is_lockable : true,
     ui_category : 'customization',
     type : 'object',
@@ -254,7 +187,6 @@ const policies = {
       {
         name : 'StartPage',
         label : browser.i18n.getMessage('policy_description_Homepage_StartPage'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -274,13 +206,11 @@ const policies = {
       {
         name : 'URL',
         label : browser.i18n.getMessage('common_url'),
-        mandatory : false,
         type : 'url'
       },
       {
         name : 'Additional',
         label : browser.i18n.getMessage('policy_description_Homepage_Additional'),
-        mandatory : false,
         type : 'array',
         items : {
           label : browser.i18n.getMessage('common_url'),
@@ -292,9 +222,7 @@ const policies = {
 
   FirefoxHome : {
     description : browser.i18n.getMessage('policy_description_FirefoxHome'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
     is_lockable : true,
     ui_category : 'customization',
     type : 'object',
@@ -302,7 +230,6 @@ const policies = {
       {
         name : 'Search',
         label : browser.i18n.getMessage('policy_description_FirefoxHome_Search'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -322,7 +249,6 @@ const policies = {
       {
         name : 'TopSites',
         label : browser.i18n.getMessage('policy_description_FirefoxHome_TopSites'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -342,7 +268,6 @@ const policies = {
       {
         name : 'Highlights',
         label : browser.i18n.getMessage('policy_description_FirefoxHome_Highlights'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -362,7 +287,6 @@ const policies = {
       {
         name : 'Pocket',
         label : browser.i18n.getMessage('policy_description_FirefoxHome_Pocket'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -382,7 +306,6 @@ const policies = {
       {
         name : 'Snippets',
         label : browser.i18n.getMessage('policy_description_FirefoxHome_Snippets'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -404,10 +327,7 @@ const policies = {
 
   NewTabPage : {
     description : browser.i18n.getMessage('policy_description_NewTabPage'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'customization',
     type : 'enum',
     options : [
@@ -424,10 +344,7 @@ const policies = {
 
   SearchBar : {
     description : browser.i18n.getMessage('policy_description_SearchBar'),
-    enterprise_only : false,
     first_available : { mainstream : '62.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'customization',
     type : 'enum',
     options : [
@@ -446,27 +363,22 @@ const policies = {
     description : browser.i18n.getMessage('policy_description_SearchEngines'),
     enterprise_only : true,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'customization',
     type : 'object',
     properties : [
       {
         name : 'Default',
         label : browser.i18n.getMessage('policy_description_SearchEngines_Default'),
-        mandatory : false,
         type : 'string'
       },
       {
         name : 'DefaultPrivate',
         label : browser.i18n.getMessage('policy_description_SearchEngines_DefaultPrivate'),
-        mandatory : false,
         type : 'string'
       },
       {
         name : 'PreventInstalls',
         label : browser.i18n.getMessage('policy_description_SearchEngines_PreventInstalls'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -486,7 +398,6 @@ const policies = {
       {
         name : 'Add',
         label : browser.i18n.getMessage('policy_description_SearchEngines_Add'),
-        mandatory : false,
         type : 'object-array',
         items : [
           {
@@ -504,31 +415,26 @@ const policies = {
           {
             name : 'IconURL',
             label : browser.i18n.getMessage('policy_description_SearchEngines_Add_IconURL'),
-            mandatory : false,
             type : 'urlOrData'
           },
           {
             name : 'Alias',
             label : browser.i18n.getMessage('policy_description_SearchEngines_Add_Alias'),
-            mandatory : false,
             type : 'string'
           },
           {
             name : 'Description',
             label : browser.i18n.getMessage('policy_description_SearchEngines_Add_Description'),
-            mandatory : false,
             type : 'string'
           },
           {
             name : 'SuggestURLTemplate',
             label : browser.i18n.getMessage('policy_description_SearchEngines_Add_SuggestURLTemplate'),
-            mandatory : false,
             type : 'url'
           },
           {
             name : 'Method',
             label : browser.i18n.getMessage('policy_description_SearchEngines_Add_Method'),
-            mandatory : false,
             type : 'enum',
             options : [
               {
@@ -544,7 +450,6 @@ const policies = {
           {
             name : 'PostData',
             label : browser.i18n.getMessage('policy_description_SearchEngines_Add_PostData'),
-            mandatory : false,
             type : 'string'
           }
         ]
@@ -552,7 +457,6 @@ const policies = {
       {
         name : 'Remove',
         label : browser.i18n.getMessage('policy_description_SearchEngines_Remove'),
-        mandatory : false,
         type : 'array',
         items : {
           label : browser.i18n.getMessage('policy_description_SearchEngines_Remove_Name'),
@@ -564,20 +468,14 @@ const policies = {
 
   NoDefaultBookmarks : {
     description : browser.i18n.getMessage('policy_description_NoDefaultBookmarks'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'customization',
     type : 'boolean'
   },
 
   Bookmarks : {
     description : browser.i18n.getMessage('policy_description_Bookmarks'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'customization',
     type : 'array',
     items : [
@@ -596,19 +494,16 @@ const policies = {
       {
         name : 'Favicon',
         label : browser.i18n.getMessage('policy_description_Bookmarks_Favicon'),
-        mandatory : false,
         type : 'url'
       },
       {
         name : 'Folder',
         label : browser.i18n.getMessage('policy_description_Bookmarks_Folder'),
-        mandatory : false,
         type : 'string'
       },
       {
         name : 'Placement',
         label : browser.i18n.getMessage('policy_description_Bookmarks_Placement'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -626,9 +521,7 @@ const policies = {
 
   Preference_extensions_getAddons_showPane : {
     description : browser.i18n.getMessage('policy_description_Preference_extensions_getAddons_showPane'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
     ui_category : 'customization',
     type : 'preference',
     properties : {
@@ -640,18 +533,13 @@ const policies = {
 
   InstallAddonsPermission : {
     description : browser.i18n.getMessage('policy_description_InstallAddonsPermission'),
-    enterprise_only : false,
     deprecation_note : browser.i18n.getMessage('policy_description_InstallAddonsPermission_Deprecated'),
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'customization',
     type : 'object',
     properties : [
       {
         name : 'Default',
-        label : null,
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -667,7 +555,6 @@ const policies = {
       {
         name : 'Allow',
         label : browser.i18n.getMessage('policy_description_InstallAddonsPermission_Allow'),
-        mandatory : false,
         type : 'array',
         items : {
           label : browser.i18n.getMessage('common_url'),
@@ -679,18 +566,14 @@ const policies = {
 
   Extensions : {
     description : browser.i18n.getMessage('policy_description_Extensions'),
-    enterprise_only : false,
     deprecation_note : browser.i18n.getMessage('policy_description_Extensions_Deprecated'),
     first_available : { mainstream : '62.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'customization',
     type : 'object',
     properties : [
       {
         name : 'Install',
         label : browser.i18n.getMessage('policy_description_Extensions_Install'),
-        mandatory : false,
         type : 'array',
         items : {
           label : browser.i18n.getMessage('policy_description_Extensions_Install_URL_or_Path'),
@@ -700,7 +583,6 @@ const policies = {
       {
         name : 'Uninstall',
         label : browser.i18n.getMessage('policy_description_Extensions_Uninstall'),
-        mandatory : false,
         type : 'array',
         items : {
           label : browser.i18n.getMessage('policy_description_Extensions_Uninstall_ID'),
@@ -710,7 +592,6 @@ const policies = {
       {
         name : 'Locked',
         label : browser.i18n.getMessage('policy_description_Extensions_Locked'),
-        mandatory : false,
         type : 'array',
         items : {
           label : browser.i18n.getMessage('policy_description_Extensions_Locked_ID'),
@@ -722,10 +603,7 @@ const policies = {
 
   ExtensionSettings : {
     description : browser.i18n.getMessage('policy_description_ExtensionSettings'),
-    enterprise_only : false,
     first_available : { mainstream : '69.0', esr : '68.1' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'customization',
     type : 'key-object-list',
     label_key : browser.i18n.getMessage('policy_description_ExtensionSettings_Label_Key'),
@@ -737,7 +615,6 @@ const policies = {
         {
           name : 'installation_mode',
           label : browser.i18n.getMessage('policy_description_ExtensionSettings_installation_mode'),
-          mandatory : false,
           type : 'enum',
           options : [
             {
@@ -757,7 +634,6 @@ const policies = {
         {
           name : 'install_sources',
           label : browser.i18n.getMessage('policy_description_ExtensionSettings_install_sources'),
-          mandatory : false,
           type : 'array',
           items : {
             label : browser.i18n.getMessage('common_url'),
@@ -767,7 +643,6 @@ const policies = {
         {
           name : 'allowed_types',
           label : browser.i18n.getMessage('policy_description_ExtensionSettings_allowed_types'),
-          mandatory : false,
           type : 'multiselect',
           options : [
             {
@@ -792,7 +667,6 @@ const policies = {
           name : 'blocked_install_message',
           caption : browser.i18n.getMessage('policy_description_ExtensionSettings_blocked_install_message_caption_all'),
           label : browser.i18n.getMessage('policy_description_ExtensionSettings_blocked_install_message_label'),
-          mandatory : false,
           type : 'string'
         }
       ]
@@ -801,7 +675,6 @@ const policies = {
       {
         name : 'installation_mode',
         label : browser.i18n.getMessage('policy_description_ExtensionSettings_installation_mode'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -830,14 +703,12 @@ const policies = {
         name : 'install_url',
         caption : browser.i18n.getMessage('policy_description_ExtensionSettings_install_url_caption'),
         label : browser.i18n.getMessage('common_url'),
-        mandatory : false,
         type : 'url'
       },
       {
         name : 'blocked_install_message',
         caption : browser.i18n.getMessage('policy_description_ExtensionSettings_blocked_install_message_caption_single'),
         label : browser.i18n.getMessage('policy_description_ExtensionSettings_blocked_install_message_label'),
-        mandatory : false,
         type : 'string'
       }
     ]
@@ -847,17 +718,14 @@ const policies = {
 
   WebsiteFilter : {
     description : browser.i18n.getMessage('policy_description_WebsiteFilter'),
-    enterprise_only : false,
     first_available : { mainstream : '62.0', esr : '60.0' },
     info_link : 'https://developer.mozilla.org/Add-ons/WebExtensions/Match_patterns',
-    is_lockable : false,
     ui_category : 'network',
     type : 'object',
     properties : [
       {
         name : 'Block',
         label : browser.i18n.getMessage('policy_description_WebsiteFilter_Block'),
-        mandatory : false,
         type : 'array',
         items : {
           label : browser.i18n.getMessage('common_url'),
@@ -867,7 +735,6 @@ const policies = {
       {
         name : 'Exceptions',
         label : browser.i18n.getMessage('policy_description_WebsiteFilter_Exceptions'),
-        mandatory : false,
         type : 'array',
         items : {
           label : browser.i18n.getMessage('common_url'),
@@ -879,9 +746,7 @@ const policies = {
 
   DNSOverHTTPS : {
     description : browser.i18n.getMessage('policy_description_DNSOverHTTPS'),
-    enterprise_only : false,
     first_available : { mainstream : '63.0', esr : null },
-    info_link : null,
     is_lockable : true,
     ui_category : 'network',
     type : 'object',
@@ -889,7 +754,6 @@ const policies = {
       {
         name : 'Enabled',
         label : browser.i18n.getMessage('policy_description_DNSOverHTTPS_Enabled'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -905,7 +769,6 @@ const policies = {
       {
         name : 'ProviderURL',
         label : browser.i18n.getMessage('policy_description_DNSOverHTTPS_ProviderURL'),
-        mandatory : false,
         type : 'url'
       }
     ]
@@ -913,10 +776,7 @@ const policies = {
 
   NetworkPrediction : {
     description : browser.i18n.getMessage('policy_description_NetworkPrediction'),
-    enterprise_only : false,
     first_available : { mainstream : '67.0', esr : '60.7' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'network',
     type : 'enum',
     options : [
@@ -933,9 +793,7 @@ const policies = {
 
   Preference_network_dns_disableIPv6 : {
     description : browser.i18n.getMessage('policy_description_Preference_network_dns_disableIPv6'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
     ui_category : 'network',
     type : 'preference',
     properties : {
@@ -947,9 +805,7 @@ const policies = {
 
   Preference_browser_fixup_dns_first_for_single_words : {
     description : browser.i18n.getMessage('policy_description_Preference_browser_fixup_dns_first_for_single_words'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
     ui_category : 'network',
     type : 'preference',
     properties : {
@@ -961,17 +817,13 @@ const policies = {
 
   Proxy : {
     description : browser.i18n.getMessage('policy_description_Proxy'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
     is_lockable : true,
     ui_category : 'network',
     type : 'object',
     properties : [
       {
         name : 'Mode',
-        label : null,
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -999,12 +851,10 @@ const policies = {
       {
         name : 'HTTPProxy',
         label : browser.i18n.getMessage('policy_description_Proxy_HTTPProxy'),
-        mandatory : false,
         type : 'string'
       },
       {
         name : 'UseHTTPProxyForAllProtocols',
-        label : null,
         type : 'enum',
         options : [
           {
@@ -1020,24 +870,20 @@ const policies = {
       {
         name : 'SSLProxy',
         label : browser.i18n.getMessage('policy_description_Proxy_SSLProxy'),
-        mandatory : false,
         type : 'string'
       },
       {
         name : 'FTPProxy',
         label : browser.i18n.getMessage('policy_description_Proxy_FTPProxy'),
-        mandatory : false,
         type : 'string'
       },
       {
         name : 'SOCKSProxy',
         label : browser.i18n.getMessage('policy_description_Proxy_SOCKSProxy'),
-        mandatory : false,
         type : 'string'
       },
       {
         name : 'SOCKSVersion',
-        label : null,
         type : 'enum',
         options : [
           {
@@ -1053,13 +899,11 @@ const policies = {
       {
         name : 'Passthrough',
         label : browser.i18n.getMessage('policy_description_Proxy_Passthrough'),
-        mandatory : false,
         type : 'string'
       },
       {
         name : 'AutoConfigURL',
         label : browser.i18n.getMessage('policy_description_Proxy_AutoConfigURL'),
-        mandatory : false,
         type : 'url'
       },
       {
@@ -1097,7 +941,6 @@ const policies = {
 
   Authentication : {
     description : browser.i18n.getMessage('policy_description_Authentication'),
-    enterprise_only : false,
     additional_note : browser.i18n.getMessage('policy_description_Authentication_additional_note'),
     first_available : { mainstream : '62.0', esr : '60.0' },
     info_link : 'https://developer.mozilla.org/docs/Mozilla/Integrated_authentication',
@@ -1108,7 +951,6 @@ const policies = {
       {
         name : 'SPNEGO',
         label : browser.i18n.getMessage('policy_description_Authentication_SPNEGO'),
-        mandatory : false,
         type : 'array',
         items : {
           label : browser.i18n.getMessage('common_url'),
@@ -1118,7 +960,6 @@ const policies = {
       {
         name : 'Delegated',
         label : browser.i18n.getMessage('policy_description_Authentication_Delegated'),
-        mandatory : false,
         type : 'array',
         items : {
           label : browser.i18n.getMessage('common_url'),
@@ -1128,7 +969,6 @@ const policies = {
       {
         name : 'NTLM',
         label : browser.i18n.getMessage('policy_description_Authentication_NTLM'),
-        mandatory : false,
         type : 'array',
         items : {
           label : browser.i18n.getMessage('common_url'),
@@ -1138,7 +978,6 @@ const policies = {
       {
         name : 'AllowNonFQDN',
         label : browser.i18n.getMessage('policy_description_Authentication_AllowNonFQDN'),
-        mandatory : false,
         type : 'object',
         properties : [
           {
@@ -1158,10 +997,7 @@ const policies = {
 
   CaptivePortal : {
     description : browser.i18n.getMessage('policy_description_CaptivePortal'),
-    enterprise_only : false,
     first_available : { mainstream : '67.0', esr : '60.7' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'network',
     type : 'enum',
     options : [
@@ -1180,9 +1016,7 @@ const policies = {
 
   Cookies : {
     description : browser.i18n.getMessage('policy_description_Cookies'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
     is_lockable : true,
     ui_category : 'privacy',
     type : 'object',
@@ -1190,7 +1024,6 @@ const policies = {
       {
         name : 'Allow',
         label : browser.i18n.getMessage('policy_description_Cookies_Allow'),
-        mandatory : false,
         type : 'array',
         items : {
           label : browser.i18n.getMessage('policy_description_Cookies_Allow_Domain'),
@@ -1200,7 +1033,6 @@ const policies = {
       {
         name : 'Block',
         label : browser.i18n.getMessage('policy_description_Cookies_Block'),
-        mandatory : false,
         type : 'array',
         items : {
           label : browser.i18n.getMessage('policy_description_Cookies_Block_Domain'),
@@ -1210,7 +1042,6 @@ const policies = {
       {
         name : 'Default',
         label : browser.i18n.getMessage('policy_description_Cookies_Default'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -1226,7 +1057,6 @@ const policies = {
       {
         name : 'AcceptThirdParty',
         label : browser.i18n.getMessage('policy_description_Cookies_AcceptThirdParty'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -1246,7 +1076,6 @@ const policies = {
       {
         name : 'ExpireAtSessionEnd',
         label : browser.i18n.getMessage('policy_description_Cookies_ExpireAtSessionEnd'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -1269,17 +1098,13 @@ const policies = {
 
   SanitizeOnShutdown : {
     description : browser.i18n.getMessage('policy_description_SanitizeOnShutdown'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'privacy',
     type : 'object',
     properties : [
       {
         name : 'Cache',
         label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_Cache'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -1296,7 +1121,6 @@ const policies = {
       {
         name : 'Cookies',
         label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_Cookies'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -1313,7 +1137,6 @@ const policies = {
       {
         name : 'Downloads',
         label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_Downloads'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -1330,7 +1153,6 @@ const policies = {
       {
         name : 'FormData',
         label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_FormData'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -1347,7 +1169,6 @@ const policies = {
       {
         name : 'History',
         label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_History'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -1364,7 +1185,6 @@ const policies = {
       {
         name : 'Sessions',
         label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_Sessions'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -1381,7 +1201,6 @@ const policies = {
       {
         name : 'SiteSettings',
         label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_SiteSettings'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -1398,7 +1217,6 @@ const policies = {
       {
         name : 'OfflineApps',
         label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_OfflineApps'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -1417,9 +1235,7 @@ const policies = {
 
   EnableTrackingProtection : {
     description : browser.i18n.getMessage('policy_description_EnableTrackingProtection'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
     is_lockable : true,
     ui_category : 'privacy',
     type : 'object',
@@ -1427,7 +1243,6 @@ const policies = {
       {
         name : 'Value',
         label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Value'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -1447,7 +1262,6 @@ const policies = {
       {
         name : 'Cryptomining',
         label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Cryptomining'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -1467,7 +1281,6 @@ const policies = {
       {
         name : 'Fingerprinting',
         label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Fingerprinting'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -1489,24 +1302,19 @@ const policies = {
 
   Permissions : {
     description : browser.i18n.getMessage('policy_description_Permissions'),
-    enterprise_only : false,
     first_available : { mainstream : '62.0', esr : '60.2' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'privacy',
     type : 'object',
     properties : [
       {
         name : 'Location',
         label : browser.i18n.getMessage('policy_description_Permissions_Location'),
-        mandatory : false,
         is_lockable : true,
         type : 'object',
         properties : [
           {
             name : 'Allow',
             label : browser.i18n.getMessage('policy_description_Permissions_Location_Allow'),
-            mandatory : false,
             type : 'array',
             items : {
               label : browser.i18n.getMessage('common_url'),
@@ -1516,7 +1324,6 @@ const policies = {
           {
             name : 'Block',
             label : browser.i18n.getMessage('policy_description_Permissions_Location_Block'),
-            mandatory : false,
             type : 'array',
             items : {
               label : browser.i18n.getMessage('common_url'),
@@ -1533,14 +1340,12 @@ const policies = {
       {
         name : 'Camera',
         label : browser.i18n.getMessage('policy_description_Permissions_Camera'),
-        mandatory : false,
         is_lockable : true,
         type : 'object',
         properties : [
           {
             name : 'Allow',
             label : browser.i18n.getMessage('policy_description_Permissions_Camera_Allow'),
-            mandatory : false,
             type : 'array',
             items : {
               label : browser.i18n.getMessage('common_url'),
@@ -1550,7 +1355,6 @@ const policies = {
           {
             name : 'Block',
             label : browser.i18n.getMessage('policy_description_Permissions_Camera_Block'),
-            mandatory : false,
             type : 'array',
             items : {
               label : browser.i18n.getMessage('common_url'),
@@ -1567,14 +1371,12 @@ const policies = {
       {
         name : 'Microphone',
         label : browser.i18n.getMessage('policy_description_Permissions_Microphone'),
-        mandatory : false,
         is_lockable : true,
         type : 'object',
         properties : [
           {
             name : 'Allow',
             label : browser.i18n.getMessage('policy_description_Permissions_Microphone_Allow'),
-            mandatory : false,
             type : 'array',
             items : {
               label : browser.i18n.getMessage('common_url'),
@@ -1584,7 +1386,6 @@ const policies = {
           {
             name : 'Block',
             label : browser.i18n.getMessage('policy_description_Permissions_Microphone_Block'),
-            mandatory : false,
             type : 'array',
             items : {
               label : browser.i18n.getMessage('common_url'),
@@ -1601,14 +1402,12 @@ const policies = {
       {
         name : 'Notifications',
         label : browser.i18n.getMessage('policy_description_Permissions_Notifications'),
-        mandatory : false,
         is_lockable : true,
         type : 'object',
         properties : [
           {
             name : 'Allow',
             label : browser.i18n.getMessage('policy_description_Permissions_Notifications_Allow'),
-            mandatory : false,
             type : 'array',
             items : {
               label : browser.i18n.getMessage('common_url'),
@@ -1618,7 +1417,6 @@ const policies = {
           {
             name : 'Block',
             label : browser.i18n.getMessage('policy_description_Permissions_Notifications_Block'),
-            mandatory : false,
             type : 'array',
             items : {
               label : browser.i18n.getMessage('common_url'),
@@ -1639,9 +1437,7 @@ const policies = {
 
   Preference_network_IDN_show_punycode : {
     description : browser.i18n.getMessage('policy_description_Preference_network_IDN_show_punycode'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
     ui_category : 'security',
     type : 'preference',
     properties : {
@@ -1653,10 +1449,7 @@ const policies = {
 
   OfferToSaveLogins : {
     description : browser.i18n.getMessage('policy_description_OfferToSaveLogins'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     exclude : 'OfferToSaveLoginsDefault',
     ui_category : 'security',
     type : 'enum',
@@ -1674,10 +1467,7 @@ const policies = {
 
   OfferToSaveLoginsDefault : {
     description : browser.i18n.getMessage('policy_description_OfferToSaveLoginsDefault'),
-    enterprise_only : false,
     first_available : { mainstream : '70.0', esr : '68.2' },
-    info_link : null,
-    is_lockable : false,
     exclude : 'OfferToSaveLogins',
     ui_category : 'security',
     type : 'enum',
@@ -1695,10 +1485,7 @@ const policies = {
 
   PasswordManagerEnabled : {
     description : browser.i18n.getMessage('policy_description_PasswordManagerEnabled'),
-    enterprise_only : false,
     first_available : { mainstream : '70.0', esr : '68.2' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'security',
     type : 'enum',
     options : [
@@ -1715,19 +1502,14 @@ const policies = {
 
   DisablePasswordReveal : {
     description : browser.i18n.getMessage('policy_description_DisablePasswordReveal'),
-    enterprise_only : false,
     first_available : { mainstream : '71.0', esr : null },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'security',
     type : 'boolean'
   },
 
   FlashPlugin : {
     description : browser.i18n.getMessage('policy_description_FlashPlugin'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
     is_lockable : true,
     ui_category : 'security',
     type : 'object',
@@ -1735,7 +1517,6 @@ const policies = {
       {
         name : 'Default',
         label : browser.i18n.getMessage('policy_description_FlashPlugin_Default'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -1755,7 +1536,6 @@ const policies = {
       {
         name : 'Allow',
         label : browser.i18n.getMessage('policy_description_FlashPlugin_Allow'),
-        mandatory : false,
         type : 'array',
         items : {
           label : browser.i18n.getMessage('common_url'),
@@ -1765,7 +1545,6 @@ const policies = {
       {
         name : 'Block',
         label : browser.i18n.getMessage('policy_description_FlashPlugin_Block'),
-        mandatory : false,
         type : 'array',
         items : {
           label : browser.i18n.getMessage('common_url'),
@@ -1777,7 +1556,6 @@ const policies = {
 
   Preference_privacy_file_unique_origin : {
     description : browser.i18n.getMessage('policy_description_Preference_privacy_file_unique_origin'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0.1', esr : '68.1' },
     info_link : 'https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730',
     ui_category : 'security',
@@ -1791,17 +1569,13 @@ const policies = {
 
   DisableSecurityBypass : {
     description : browser.i18n.getMessage('policy_description_DisableSecurityBypass'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'security',
     type : 'object',
     properties : [
       {
         name : 'InvalidCertificate',
         label : browser.i18n.getMessage('policy_description_DisableSecurityBypass_InvalidCertificate'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -1821,7 +1595,6 @@ const policies = {
       {
         name : 'SafeBrowsing',
         label : browser.i18n.getMessage('policy_description_DisableSecurityBypass_SafeBrowsing'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -1843,10 +1616,7 @@ const policies = {
 
   SSLVersionMin : {
     description : browser.i18n.getMessage('policy_description_SSLVersionMin'),
-    enterprise_only : false,
     first_available : { mainstream : '66.0', esr : '60.6' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'security',
     type : 'enum',
     options : [
@@ -1872,10 +1642,7 @@ const policies = {
 
   SSLVersionMax : {
     description : browser.i18n.getMessage('policy_description_SSLVersionMax'),
-    enterprise_only : false,
     first_available : { mainstream : '66.0', esr : '60.6' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'security',
     type : 'enum',
     options : [
@@ -1901,9 +1668,7 @@ const policies = {
 
   Preference_security_default_personal_cert : {
     description : browser.i18n.getMessage('policy_description_Preference_security_default_personal_cert'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
     ui_category : 'security',
     type : 'preference',
     properties : {
@@ -1925,17 +1690,13 @@ const policies = {
 
   Certificates : {
     description : browser.i18n.getMessage('policy_description_Certificates'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'security',
     type : 'object',
     properties : [
       {
         name : 'ImportEnterpriseRoots',
         label : browser.i18n.getMessage('policy_description_Certificates_ImportEnterpriseRoots'),
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -1951,7 +1712,6 @@ const policies = {
       {
         name : 'Install',
         label : browser.i18n.getMessage('policy_description_Certificates_Install'),
-        mandatory : false,
         type : 'array',
         items : {
           label : browser.i18n.getMessage('policy_description_Certificates_Install_Value'),
@@ -1963,10 +1723,7 @@ const policies = {
 
   SecurityDevices : {
     description : browser.i18n.getMessage('policy_description_SecurityDevices'),
-    enterprise_only : false,
     first_available : { mainstream : '64.0', esr : '60.4' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'security',
     type : 'key-value-pairs',
     label_key : browser.i18n.getMessage('policy_description_SecurityDevices_label_key'),
@@ -1977,20 +1734,14 @@ const policies = {
 
   DisableAppUpdate : {
     description : browser.i18n.getMessage('policy_description_DisableAppUpdate'),
-    enterprise_only : false,
     first_available : { mainstream : '62.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
 
   AppUpdateURL : {
     description : browser.i18n.getMessage('policy_description_AppUpdateURL'),
-    enterprise_only : false,
     first_available : { mainstream : '62.0', esr : '60.2' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'updates-and-data',
     mandatory : true,
     type : 'url',
@@ -1999,10 +1750,7 @@ const policies = {
 
   ExtensionUpdate : {
     description : browser.i18n.getMessage('policy_description_ExtensionUpdate'),
-    enterprise_only : false,
     first_available : { mainstream : '67.0', esr : '60.7' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'updates-and-data',
     type : 'enum',
     options : [
@@ -2019,19 +1767,14 @@ const policies = {
 
   DisableSystemAddonUpdate : {
     description : browser.i18n.getMessage('policy_description_DisableSystemAddonUpdate'),
-    enterprise_only : false,
     first_available : { mainstream : '62.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
 
   Preference_browser_search_update : {
     description : browser.i18n.getMessage('policy_description_Preference_browser_search_update'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
     ui_category : 'updates-and-data',
     type : 'preference',
     properties : {
@@ -2043,29 +1786,21 @@ const policies = {
 
   DisableTelemetry : {
     description : browser.i18n.getMessage('policy_description_DisableTelemetry'),
-    enterprise_only : false,
     first_available : { mainstream : '62.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
 
   DisableFirefoxStudies : {
     description : browser.i18n.getMessage('policy_description_DisableFirefoxStudies'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
 
   Preference_security_ssl_errorReporting_enabled : {
     description : browser.i18n.getMessage('policy_description_Preference_security_ssl_errorReporting_enabled'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
     ui_category : 'updates-and-data',
     type : 'preference',
     properties : {
@@ -2077,9 +1812,7 @@ const policies = {
 
   Preference_media_gmp_widevinecdm_enabled : {
     description : browser.i18n.getMessage('policy_description_Preference_media_gmp_widevinecdm_enabled'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
     ui_category : 'updates-and-data',
     type : 'preference',
     properties : {
@@ -2091,9 +1824,7 @@ const policies = {
 
   Preference_media_gmp_gmpopenh264_enabled : {
     description : browser.i18n.getMessage('policy_description_Preference_media_gmp_gmpopenh264_enabled'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
     ui_category : 'updates-and-data',
     type : 'preference',
     properties : {
@@ -2107,10 +1838,7 @@ const policies = {
 
   DefaultDownloadDirectory : {
     description : browser.i18n.getMessage('policy_description_DefaultDownloadDirectory'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'others',
     mandatory : true,
     type : 'string',
@@ -2119,10 +1847,7 @@ const policies = {
 
   DownloadDirectory : {
     description : browser.i18n.getMessage('policy_description_DownloadDirectory'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'others',
     mandatory : true,
     type : 'string',
@@ -2131,10 +1856,7 @@ const policies = {
 
   PromptForDownloadLocation : {
     description : browser.i18n.getMessage('policy_description_PromptForDownloadLocation'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'others',
     mandatory : true,
     type : 'enum',
@@ -2152,9 +1874,7 @@ const policies = {
 
   Preference_browser_cache_disk_enable : {
     description : browser.i18n.getMessage('policy_description_Preference_browser_cache_disk_enable'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
     ui_category : 'others',
     type : 'preference',
     properties : {
@@ -2166,9 +1886,7 @@ const policies = {
 
   Preference_browser_cache_disk_parent_directory : {
     description : browser.i18n.getMessage('policy_description_Preference_browser_cache_disk_parent_directory'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
     ui_category : 'others',
     type : 'preference',
     properties : {
@@ -2180,27 +1898,20 @@ const policies = {
 
   HardwareAcceleration : {
     description : browser.i18n.getMessage('policy_description_HardwareAcceleration'),
-    enterprise_only : false,
     first_available : { mainstream : '62.0', esr : '60.2' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'others',
     type : 'boolean-inverse'
   },
 
   PopupBlocking : {
     description : browser.i18n.getMessage('policy_description_PopupBlocking'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
     is_lockable : true,
     ui_category : 'others',
     type : 'object',
     properties : [
       {
         name : 'Default',
-        label : null,
-        mandatory : false,
         type : 'enum',
         options : [
           {
@@ -2216,7 +1927,6 @@ const policies = {
       {
         name : 'Allow',
         label : browser.i18n.getMessage('policy_description_PopupBlocking_Allow'),
-        mandatory : false,
         type : 'array',
         items : {
           label : browser.i18n.getMessage('common_url'),
@@ -2228,11 +1938,7 @@ const policies = {
 
   LocalFileLinks : {
     description : browser.i18n.getMessage('policy_description_LocalFileLinks'),
-    enterprise_only : false,
-    additional_note : null,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'others',
     type : 'flat-array',
     value : {
@@ -2243,9 +1949,7 @@ const policies = {
 
   Preference_browser_tabs_warnOnClose : {
     description : browser.i18n.getMessage('policy_description_Preference_browser_tabs_warnOnClose'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
     ui_category : 'others',
     type : 'preference',
     properties : {
@@ -2257,9 +1961,7 @@ const policies = {
 
   Preference_places_history_enabled : {
     description : browser.i18n.getMessage('policy_description_Preference_places_history_enabled'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
     ui_category : 'others',
     type : 'preference',
     properties : {
@@ -2271,10 +1973,7 @@ const policies = {
 
   SearchSuggestEnabled : {
     description : browser.i18n.getMessage('policy_description_SearchSuggestEnabled'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'others',
     type : 'enum',
     options : [
@@ -2291,9 +1990,7 @@ const policies = {
 
   Preference_browser_urlbar_suggest_history : {
     description : browser.i18n.getMessage('policy_description_Preference_browser_urlbar_suggest_history'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
     ui_category : 'others',
     type : 'preference',
     properties : {
@@ -2305,9 +2002,7 @@ const policies = {
 
   Preference_browser_urlbar_suggest_bookmark : {
     description : browser.i18n.getMessage('policy_description_Preference_browser_urlbar_suggest_bookmark'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
     ui_category : 'others',
     type : 'preference',
     properties : {
@@ -2319,9 +2014,7 @@ const policies = {
 
   Preference_browser_urlbar_suggest_openpage : {
     description : browser.i18n.getMessage('policy_description_Preference_browser_urlbar_suggest_openpage'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
     ui_category : 'others',
     type : 'preference',
     properties : {
@@ -2333,9 +2026,7 @@ const policies = {
 
   Preference_dom_event_contextmenu_enabled : {
     description : browser.i18n.getMessage('policy_description_Preference_dom_event_contextmenu_enabled'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
     ui_category : 'others',
     type : 'preference',
     properties : {
@@ -2347,9 +2038,7 @@ const policies = {
 
   Preference_dom_disable_window_move_resize : {
     description : browser.i18n.getMessage('policy_description_Preference_dom_disable_window_move_resize'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
     ui_category : 'others',
     type : 'preference',
     properties : {
@@ -2361,9 +2050,7 @@ const policies = {
 
   Preference_dom_disable_window_flip : {
     description : browser.i18n.getMessage('policy_description_Preference_dom_disable_window_flip'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
     ui_category : 'others',
     type : 'preference',
     properties : {
@@ -2375,7 +2062,6 @@ const policies = {
 
   Preference_dom_keyboardevent_keypress_hack_dispatch_non_printable_keys_addl : {
     description : browser.i18n.getMessage('policy_description_Preference_dom_keyboardevent_keypress_hack_dispatch_non_printable_keys_addl'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
     info_link : 'https://www.fxsitecompat.dev/en-CA/docs/2018/non-printable-keys-no-longer-fire-keypress-event/',
     ui_category : 'others',
@@ -2392,7 +2078,6 @@ const policies = {
 
   Preference_dom_keyboardevent_keypress_hack_use_legacy_keycode_and_charcode_addl : {
     description : browser.i18n.getMessage('policy_description_Preference_dom_keyboardevent_keypress_hack_use_legacy_keycode_and_charcode_addl'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
     info_link : 'https://support.mozilla.org/kb/dom-events-changes-introduced-firefox-66',
     ui_category : 'others',
@@ -2409,10 +2094,7 @@ const policies = {
 
   DontCheckDefaultBrowser : {
     description : browser.i18n.getMessage('policy_description_DontCheckDefaultBrowser'),
-    enterprise_only : false,
     first_available : { mainstream : '60.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'others',
     type : 'enum',
     options : [
@@ -2429,9 +2111,7 @@ const policies = {
 
   Preference_datareporting_policy_dataSubmissionPolicyBypassNotification : {
     description : browser.i18n.getMessage('policy_description_Preference_datareporting_policy_dataSubmissionPolicyBypassNotification'),
-    enterprise_only : false,
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : null,
     ui_category : 'others',
     type : 'preference',
     properties : {
@@ -2443,34 +2123,23 @@ const policies = {
 
   OverrideFirstRunPage : {
     description : browser.i18n.getMessage('policy_description_OverrideFirstRunPage'),
-    enterprise_only : false,
     first_available : { mainstream : '62.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'others',
-    mandatory : false,
     type : 'url',
     label : browser.i18n.getMessage('common_url')
   },
 
   OverridePostUpdatePage : {
     description : browser.i18n.getMessage('policy_description_OverridePostUpdatePage'),
-    enterprise_only : false,
     first_available : { mainstream : '62.0', esr : '60.0' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'others',
-    mandatory : false,
     type : 'url',
     label : browser.i18n.getMessage('common_url')
   },
 
   SupportMenu : {
     description : browser.i18n.getMessage('policy_description_SupportMenu'),
-    enterprise_only : false,
     first_available : { mainstream : '67.0', esr : '60.7' },
-    info_link : null,
-    is_lockable : false,
     ui_category : 'others',
     type : 'object',
     properties : [
@@ -2489,7 +2158,6 @@ const policies = {
       {
         name : 'AccessKey',
         label : browser.i18n.getMessage('policy_description_SupportMenu_AccessKey'),
-        mandatory : false,
         type : 'string'
       }
     ]

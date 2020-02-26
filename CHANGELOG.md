@@ -32,6 +32,12 @@
 - fixed typo in German translation, see [#112](https://github.com/cadeyrn/enterprise-policy-generator/issues/112)
   (Thanks, musonius!)
   
+#### Code Quality
+
+- removed optional properties from configuration to simplify the configuration file. In the future there will be
+  an online developer documentation where you can find all possible options, , see
+  [#139](https://github.com/cadeyrn/enterprise-policy-generator/issues/139)
+  
 #### Dependencies
 
 - updated eslint from version 6.5.1 to 6.8.0 and updated configuration
