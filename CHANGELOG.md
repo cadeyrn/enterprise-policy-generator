@@ -40,6 +40,8 @@
 - it's no longer needed to define the description key for every policy in the configuration file, the Enterprise
   Policy Generator now automatically picks the description from the translation files, see
   [#132](https://github.com/cadeyrn/enterprise-policy-generator/issues/132)
+- removed the enterprise_only property because it was only used by one policy and the additional_note property looks
+  exactly the same, see [#133](https://github.com/cadeyrn/enterprise-policy-generator/issues/133)
   
 #### Dependencies
 

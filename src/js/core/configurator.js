@@ -1323,20 +1323,6 @@ const configurator = {
     elLabel.textContent = browser.i18n.getMessage('policy_description_' + key);
     elObjectWrapper.appendChild(elLabel);
 
-    // esr only notice
-    if (policy.enterprise_only) {
-      const elESRNotice = document.createElement('div');
-      elESRNotice.classList.add('esr-only');
-      elLabel.appendChild(elESRNotice);
-
-      const elESRImage = document.createElement('img');
-      elESRImage.src = '/images/warning.svg';
-      elESRNotice.appendChild(elESRImage);
-
-      const elESRText = document.createTextNode(browser.i18n.getMessage('enterprise_only_label'));
-      elESRNotice.appendChild(elESRText);
-    }
-
     // additional note
     if (policy.additional_note) {
       const elAdditionalNote = document.createElement('div');

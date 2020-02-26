@@ -334,7 +334,7 @@ const policies = {
   },
 
   SearchEngines : {
-    enterprise_only : true,
+    additional_note : browser.i18n.getMessage('enterprise_only_label'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'customization',
     type : 'object',
