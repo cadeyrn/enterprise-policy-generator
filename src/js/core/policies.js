@@ -410,7 +410,6 @@ const policies = {
     is_lockable : false,
     ui_category : 'customization',
     type : 'enum',
-    label : null,
     options : [
       {
         label : browser.i18n.getMessage('enum_value_enable_yes'),
@@ -1664,7 +1663,6 @@ const policies = {
     exclude : 'OfferToSaveLoginsDefault',
     ui_category : 'security',
     type : 'enum',
-    label : null,
     options : [
       {
         label : browser.i18n.getMessage('enum_value_yes'),
@@ -1686,7 +1684,6 @@ const policies = {
     exclude : 'OfferToSaveLogins',
     ui_category : 'security',
     type : 'enum',
-    label : null,
     options : [
       {
         label : browser.i18n.getMessage('enum_value_yes'),
@@ -1707,7 +1704,6 @@ const policies = {
     is_lockable : false,
     ui_category : 'security',
     type : 'enum',
-    label : null,
     options : [
       {
         label : browser.i18n.getMessage('enum_value_enable_yes'),
@@ -1856,7 +1852,6 @@ const policies = {
     is_lockable : false,
     ui_category : 'security',
     type : 'enum',
-    label : null,
     options : [
       {
         label : 'TLS 1.0 (' + browser.i18n.getMessage('policy_label_default') + ')',
@@ -1886,7 +1881,6 @@ const policies = {
     is_lockable : false,
     ui_category : 'security',
     type : 'enum',
-    label : null,
     options : [
       {
         label : 'TLS 1.0',
@@ -2014,7 +2008,6 @@ const policies = {
     is_lockable : false,
     ui_category : 'updates-and-data',
     type : 'enum',
-    label : null,
     options : [
       {
         label : browser.i18n.getMessage('policy_description_ExtensionUpdate_options_true'),
@@ -2287,7 +2280,6 @@ const policies = {
     is_lockable : false,
     ui_category : 'others',
     type : 'enum',
-    label : null,
     options : [
       {
         label : browser.i18n.getMessage('enum_value_enable_yes'),
@@ -2426,7 +2418,6 @@ const policies = {
     is_lockable : false,
     ui_category : 'others',
     type : 'enum',
-    label : null,
     options : [
       {
         label : browser.i18n.getMessage('policy_description_DontCheckDefaultBrowser_options_true'),

@@ -512,11 +512,6 @@ const configurator = {
     const elSelectWrapper = document.createElement('div');
     elSelectWrapper.classList.add('enum', 'sub-options', 'select-wrapper', 'disabled');
 
-    // label
-    if (policy.label) {
-      configurator.addSelectLabel(elSelectWrapper, key + '_select', policy);
-    }
-
     // add options to select element
     const elSelect = document.createElement('select');
     elSelect.setAttribute('id', key + '_Select');
