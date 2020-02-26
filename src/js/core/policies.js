@@ -430,7 +430,6 @@ const policies = {
     is_lockable : false,
     ui_category : 'customization',
     type : 'enum',
-    label : null,
     options : [
       {
         label : browser.i18n.getMessage('policy_description_SearchBar_options_unified'),
@@ -920,7 +919,6 @@ const policies = {
     is_lockable : false,
     ui_category : 'network',
     type : 'enum',
-    label : null,
     options : [
       {
         label : browser.i18n.getMessage('policy_description_NetworkPrediction_options_true'),
@@ -1166,7 +1164,6 @@ const policies = {
     is_lockable : false,
     ui_category : 'network',
     type : 'enum',
-    label : null,
     options : [
       {
         label : browser.i18n.getMessage('policy_description_CaptivePortal_options_true'),
