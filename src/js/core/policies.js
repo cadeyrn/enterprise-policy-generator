@@ -7,28 +7,24 @@ const policies = {
   // block access
 
   BlockAboutAddons : {
-    description : browser.i18n.getMessage('policy_description_BlockAboutAddons'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'block-access',
     type : 'boolean'
   },
 
   BlockAboutConfig : {
-    description : browser.i18n.getMessage('policy_description_BlockAboutConfig'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'block-access',
     type : 'boolean'
   },
 
   BlockAboutProfiles : {
-    description : browser.i18n.getMessage('policy_description_BlockAboutProfiles'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'block-access',
     type : 'boolean'
   },
 
   BlockAboutSupport : {
-    description : browser.i18n.getMessage('policy_description_BlockAboutSupport'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'block-access',
     type : 'boolean'
@@ -37,98 +33,84 @@ const policies = {
   // disable features
 
   DisablePrivateBrowsing : {
-    description : browser.i18n.getMessage('policy_description_DisablePrivateBrowsing'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableFormHistory : {
-    description : browser.i18n.getMessage('policy_description_DisableFormHistory'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableBuiltinPDFViewer : {
-    description : browser.i18n.getMessage('policy_description_DisableBuiltinPDFViewer'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableFirefoxScreenshots : {
-    description : browser.i18n.getMessage('policy_description_DisableFirefoxScreenshots'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableDeveloperTools : {
-    description : browser.i18n.getMessage('policy_description_DisableDeveloperTools'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisablePocket : {
-    description : browser.i18n.getMessage('policy_description_DisablePocket'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableFirefoxAccounts : {
-    description : browser.i18n.getMessage('policy_description_DisableFirefoxAccounts'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableMasterPasswordCreation : {
-    description : browser.i18n.getMessage('policy_description_DisableMasterPasswordCreation'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableSetDesktopBackground : {
-    description : browser.i18n.getMessage('policy_description_DisableSetDesktopBackground'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableForgetButton : {
-    description : browser.i18n.getMessage('policy_description_DisableForgetButton'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableProfileImport : {
-    description : browser.i18n.getMessage('policy_description_DisableProfileImport'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableSafeMode : {
-    description : browser.i18n.getMessage('policy_description_DisableSafeMode'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableProfileRefresh : {
-    description : browser.i18n.getMessage('policy_description_DisableProfileRefresh'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'disable-features',
     type : 'boolean'
   },
 
   DisableFeedbackCommands : {
-    description : browser.i18n.getMessage('policy_description_DisableFeedbackCommands'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'disable-features',
     type : 'boolean'
@@ -137,7 +119,6 @@ const policies = {
   // customization
 
   RequestedLocales : {
-    description : browser.i18n.getMessage('policy_description_RequestedLocales'),
     additional_note : browser.i18n.getMessage('policy_description_RequestedLocales_Requirement'),
     first_available : { mainstream : '64.0', esr : '60.3.1' },
     info_link : 'https://addons.mozilla.org/firefox/language-tools/',
@@ -150,7 +131,6 @@ const policies = {
   },
 
   DisplayMenuBar : {
-    description : browser.i18n.getMessage('policy_description_DisplayMenuBar'),
     additional_note : browser.i18n.getMessage('requirement_windows_or_linux'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'customization',
@@ -158,7 +138,6 @@ const policies = {
   },
 
   Preference_ui_key_menuAccessKeyFocuses : {
-    description : browser.i18n.getMessage('policy_description_Preference_ui_key_menuAccessKeyFocuses'),
     additional_note : browser.i18n.getMessage('requirement_windows_or_linux'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'customization',
@@ -171,14 +150,12 @@ const policies = {
   },
 
   DisplayBookmarksToolbar : {
-    description : browser.i18n.getMessage('policy_description_DisplayBookmarksToolbar'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'customization',
     type : 'boolean'
   },
 
   Homepage : {
-    description : browser.i18n.getMessage('policy_description_Homepage'),
     first_available : { mainstream : '62.0', esr : '60.0' },
     is_lockable : true,
     ui_category : 'customization',
@@ -221,7 +198,6 @@ const policies = {
   },
 
   FirefoxHome : {
-    description : browser.i18n.getMessage('policy_description_FirefoxHome'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     is_lockable : true,
     ui_category : 'customization',
@@ -326,7 +302,6 @@ const policies = {
   },
 
   NewTabPage : {
-    description : browser.i18n.getMessage('policy_description_NewTabPage'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'customization',
     type : 'enum',
@@ -343,7 +318,6 @@ const policies = {
   },
 
   SearchBar : {
-    description : browser.i18n.getMessage('policy_description_SearchBar'),
     first_available : { mainstream : '62.0', esr : '60.0' },
     ui_category : 'customization',
     type : 'enum',
@@ -360,7 +334,6 @@ const policies = {
   },
 
   SearchEngines : {
-    description : browser.i18n.getMessage('policy_description_SearchEngines'),
     enterprise_only : true,
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'customization',
@@ -467,14 +440,12 @@ const policies = {
   },
 
   NoDefaultBookmarks : {
-    description : browser.i18n.getMessage('policy_description_NoDefaultBookmarks'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'customization',
     type : 'boolean'
   },
 
   Bookmarks : {
-    description : browser.i18n.getMessage('policy_description_Bookmarks'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'customization',
     type : 'array',
@@ -520,7 +491,6 @@ const policies = {
   },
 
   Preference_extensions_getAddons_showPane : {
-    description : browser.i18n.getMessage('policy_description_Preference_extensions_getAddons_showPane'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'customization',
     type : 'preference',
@@ -532,7 +502,6 @@ const policies = {
   },
 
   InstallAddonsPermission : {
-    description : browser.i18n.getMessage('policy_description_InstallAddonsPermission'),
     deprecation_note : browser.i18n.getMessage('policy_description_InstallAddonsPermission_Deprecated'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'customization',
@@ -565,7 +534,6 @@ const policies = {
   },
 
   Extensions : {
-    description : browser.i18n.getMessage('policy_description_Extensions'),
     deprecation_note : browser.i18n.getMessage('policy_description_Extensions_Deprecated'),
     first_available : { mainstream : '62.0', esr : '60.0' },
     ui_category : 'customization',
@@ -602,7 +570,6 @@ const policies = {
   },
 
   ExtensionSettings : {
-    description : browser.i18n.getMessage('policy_description_ExtensionSettings'),
     first_available : { mainstream : '69.0', esr : '68.1' },
     ui_category : 'customization',
     type : 'key-object-list',
@@ -717,7 +684,6 @@ const policies = {
   // network
 
   WebsiteFilter : {
-    description : browser.i18n.getMessage('policy_description_WebsiteFilter'),
     first_available : { mainstream : '62.0', esr : '60.0' },
     info_link : 'https://developer.mozilla.org/Add-ons/WebExtensions/Match_patterns',
     ui_category : 'network',
@@ -745,7 +711,6 @@ const policies = {
   },
 
   DNSOverHTTPS : {
-    description : browser.i18n.getMessage('policy_description_DNSOverHTTPS'),
     first_available : { mainstream : '63.0', esr : null },
     is_lockable : true,
     ui_category : 'network',
@@ -775,7 +740,6 @@ const policies = {
   },
 
   NetworkPrediction : {
-    description : browser.i18n.getMessage('policy_description_NetworkPrediction'),
     first_available : { mainstream : '67.0', esr : '60.7' },
     ui_category : 'network',
     type : 'enum',
@@ -792,7 +756,6 @@ const policies = {
   },
 
   Preference_network_dns_disableIPv6 : {
-    description : browser.i18n.getMessage('policy_description_Preference_network_dns_disableIPv6'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'network',
     type : 'preference',
@@ -804,7 +767,6 @@ const policies = {
   },
 
   Preference_browser_fixup_dns_first_for_single_words : {
-    description : browser.i18n.getMessage('policy_description_Preference_browser_fixup_dns_first_for_single_words'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'network',
     type : 'preference',
@@ -816,7 +778,6 @@ const policies = {
   },
 
   Proxy : {
-    description : browser.i18n.getMessage('policy_description_Proxy'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     is_lockable : true,
     ui_category : 'network',
@@ -940,7 +901,6 @@ const policies = {
   },
 
   Authentication : {
-    description : browser.i18n.getMessage('policy_description_Authentication'),
     additional_note : browser.i18n.getMessage('policy_description_Authentication_additional_note'),
     first_available : { mainstream : '62.0', esr : '60.0' },
     info_link : 'https://developer.mozilla.org/docs/Mozilla/Integrated_authentication',
@@ -996,7 +956,6 @@ const policies = {
   },
 
   CaptivePortal : {
-    description : browser.i18n.getMessage('policy_description_CaptivePortal'),
     first_available : { mainstream : '67.0', esr : '60.7' },
     ui_category : 'network',
     type : 'enum',
@@ -1015,7 +974,6 @@ const policies = {
   // privacy
 
   Cookies : {
-    description : browser.i18n.getMessage('policy_description_Cookies'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     is_lockable : true,
     ui_category : 'privacy',
@@ -1097,7 +1055,6 @@ const policies = {
   },
 
   SanitizeOnShutdown : {
-    description : browser.i18n.getMessage('policy_description_SanitizeOnShutdown'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'privacy',
     type : 'object',
@@ -1234,7 +1191,6 @@ const policies = {
   },
 
   EnableTrackingProtection : {
-    description : browser.i18n.getMessage('policy_description_EnableTrackingProtection'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     is_lockable : true,
     ui_category : 'privacy',
@@ -1301,7 +1257,6 @@ const policies = {
   },
 
   Permissions : {
-    description : browser.i18n.getMessage('policy_description_Permissions'),
     first_available : { mainstream : '62.0', esr : '60.2' },
     ui_category : 'privacy',
     type : 'object',
@@ -1436,7 +1391,6 @@ const policies = {
   // security
 
   Preference_network_IDN_show_punycode : {
-    description : browser.i18n.getMessage('policy_description_Preference_network_IDN_show_punycode'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'security',
     type : 'preference',
@@ -1448,7 +1402,6 @@ const policies = {
   },
 
   OfferToSaveLogins : {
-    description : browser.i18n.getMessage('policy_description_OfferToSaveLogins'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     exclude : 'OfferToSaveLoginsDefault',
     ui_category : 'security',
@@ -1466,7 +1419,6 @@ const policies = {
   },
 
   OfferToSaveLoginsDefault : {
-    description : browser.i18n.getMessage('policy_description_OfferToSaveLoginsDefault'),
     first_available : { mainstream : '70.0', esr : '68.2' },
     exclude : 'OfferToSaveLogins',
     ui_category : 'security',
@@ -1484,7 +1436,6 @@ const policies = {
   },
 
   PasswordManagerEnabled : {
-    description : browser.i18n.getMessage('policy_description_PasswordManagerEnabled'),
     first_available : { mainstream : '70.0', esr : '68.2' },
     ui_category : 'security',
     type : 'enum',
@@ -1501,14 +1452,12 @@ const policies = {
   },
 
   DisablePasswordReveal : {
-    description : browser.i18n.getMessage('policy_description_DisablePasswordReveal'),
     first_available : { mainstream : '71.0', esr : null },
     ui_category : 'security',
     type : 'boolean'
   },
 
   FlashPlugin : {
-    description : browser.i18n.getMessage('policy_description_FlashPlugin'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     is_lockable : true,
     ui_category : 'security',
@@ -1555,7 +1504,6 @@ const policies = {
   },
 
   Preference_privacy_file_unique_origin : {
-    description : browser.i18n.getMessage('policy_description_Preference_privacy_file_unique_origin'),
     first_available : { mainstream : '68.0.1', esr : '68.1' },
     info_link : 'https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730',
     ui_category : 'security',
@@ -1568,7 +1516,6 @@ const policies = {
   },
 
   DisableSecurityBypass : {
-    description : browser.i18n.getMessage('policy_description_DisableSecurityBypass'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'security',
     type : 'object',
@@ -1615,7 +1562,6 @@ const policies = {
   },
 
   SSLVersionMin : {
-    description : browser.i18n.getMessage('policy_description_SSLVersionMin'),
     first_available : { mainstream : '66.0', esr : '60.6' },
     ui_category : 'security',
     type : 'enum',
@@ -1641,7 +1587,6 @@ const policies = {
   },
 
   SSLVersionMax : {
-    description : browser.i18n.getMessage('policy_description_SSLVersionMax'),
     first_available : { mainstream : '66.0', esr : '60.6' },
     ui_category : 'security',
     type : 'enum',
@@ -1667,7 +1612,6 @@ const policies = {
   },
 
   Preference_security_default_personal_cert : {
-    description : browser.i18n.getMessage('policy_description_Preference_security_default_personal_cert'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'security',
     type : 'preference',
@@ -1689,7 +1633,6 @@ const policies = {
   },
 
   Certificates : {
-    description : browser.i18n.getMessage('policy_description_Certificates'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'security',
     type : 'object',
@@ -1722,7 +1665,6 @@ const policies = {
   },
 
   SecurityDevices : {
-    description : browser.i18n.getMessage('policy_description_SecurityDevices'),
     first_available : { mainstream : '64.0', esr : '60.4' },
     ui_category : 'security',
     type : 'key-value-pairs',
@@ -1733,14 +1675,12 @@ const policies = {
   // udpates and data collection
 
   DisableAppUpdate : {
-    description : browser.i18n.getMessage('policy_description_DisableAppUpdate'),
     first_available : { mainstream : '62.0', esr : '60.0' },
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
 
   AppUpdateURL : {
-    description : browser.i18n.getMessage('policy_description_AppUpdateURL'),
     first_available : { mainstream : '62.0', esr : '60.2' },
     ui_category : 'updates-and-data',
     mandatory : true,
@@ -1749,7 +1689,6 @@ const policies = {
   },
 
   ExtensionUpdate : {
-    description : browser.i18n.getMessage('policy_description_ExtensionUpdate'),
     first_available : { mainstream : '67.0', esr : '60.7' },
     ui_category : 'updates-and-data',
     type : 'enum',
@@ -1766,14 +1705,12 @@ const policies = {
   },
 
   DisableSystemAddonUpdate : {
-    description : browser.i18n.getMessage('policy_description_DisableSystemAddonUpdate'),
     first_available : { mainstream : '62.0', esr : '60.0' },
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
 
   Preference_browser_search_update : {
-    description : browser.i18n.getMessage('policy_description_Preference_browser_search_update'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'updates-and-data',
     type : 'preference',
@@ -1785,21 +1722,18 @@ const policies = {
   },
 
   DisableTelemetry : {
-    description : browser.i18n.getMessage('policy_description_DisableTelemetry'),
     first_available : { mainstream : '62.0', esr : '60.0' },
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
 
   DisableFirefoxStudies : {
-    description : browser.i18n.getMessage('policy_description_DisableFirefoxStudies'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
 
   Preference_security_ssl_errorReporting_enabled : {
-    description : browser.i18n.getMessage('policy_description_Preference_security_ssl_errorReporting_enabled'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'updates-and-data',
     type : 'preference',
@@ -1811,7 +1745,6 @@ const policies = {
   },
 
   Preference_media_gmp_widevinecdm_enabled : {
-    description : browser.i18n.getMessage('policy_description_Preference_media_gmp_widevinecdm_enabled'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'updates-and-data',
     type : 'preference',
@@ -1823,7 +1756,6 @@ const policies = {
   },
 
   Preference_media_gmp_gmpopenh264_enabled : {
-    description : browser.i18n.getMessage('policy_description_Preference_media_gmp_gmpopenh264_enabled'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'updates-and-data',
     type : 'preference',
@@ -1837,7 +1769,6 @@ const policies = {
   // others
 
   DefaultDownloadDirectory : {
-    description : browser.i18n.getMessage('policy_description_DefaultDownloadDirectory'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'others',
     mandatory : true,
@@ -1846,7 +1777,6 @@ const policies = {
   },
 
   DownloadDirectory : {
-    description : browser.i18n.getMessage('policy_description_DownloadDirectory'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'others',
     mandatory : true,
@@ -1855,7 +1785,6 @@ const policies = {
   },
 
   PromptForDownloadLocation : {
-    description : browser.i18n.getMessage('policy_description_PromptForDownloadLocation'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'others',
     mandatory : true,
@@ -1873,7 +1802,6 @@ const policies = {
   },
 
   Preference_browser_cache_disk_enable : {
-    description : browser.i18n.getMessage('policy_description_Preference_browser_cache_disk_enable'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'others',
     type : 'preference',
@@ -1885,7 +1813,6 @@ const policies = {
   },
 
   Preference_browser_cache_disk_parent_directory : {
-    description : browser.i18n.getMessage('policy_description_Preference_browser_cache_disk_parent_directory'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'others',
     type : 'preference',
@@ -1897,14 +1824,12 @@ const policies = {
   },
 
   HardwareAcceleration : {
-    description : browser.i18n.getMessage('policy_description_HardwareAcceleration'),
     first_available : { mainstream : '62.0', esr : '60.2' },
     ui_category : 'others',
     type : 'boolean-inverse'
   },
 
   PopupBlocking : {
-    description : browser.i18n.getMessage('policy_description_PopupBlocking'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     is_lockable : true,
     ui_category : 'others',
@@ -1937,7 +1862,6 @@ const policies = {
   },
 
   LocalFileLinks : {
-    description : browser.i18n.getMessage('policy_description_LocalFileLinks'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'others',
     type : 'flat-array',
@@ -1948,7 +1872,6 @@ const policies = {
   },
 
   Preference_browser_tabs_warnOnClose : {
-    description : browser.i18n.getMessage('policy_description_Preference_browser_tabs_warnOnClose'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'others',
     type : 'preference',
@@ -1960,7 +1883,6 @@ const policies = {
   },
 
   Preference_places_history_enabled : {
-    description : browser.i18n.getMessage('policy_description_Preference_places_history_enabled'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'others',
     type : 'preference',
@@ -1972,7 +1894,6 @@ const policies = {
   },
 
   SearchSuggestEnabled : {
-    description : browser.i18n.getMessage('policy_description_SearchSuggestEnabled'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'others',
     type : 'enum',
@@ -1989,7 +1910,6 @@ const policies = {
   },
 
   Preference_browser_urlbar_suggest_history : {
-    description : browser.i18n.getMessage('policy_description_Preference_browser_urlbar_suggest_history'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'others',
     type : 'preference',
@@ -2001,7 +1921,6 @@ const policies = {
   },
 
   Preference_browser_urlbar_suggest_bookmark : {
-    description : browser.i18n.getMessage('policy_description_Preference_browser_urlbar_suggest_bookmark'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'others',
     type : 'preference',
@@ -2013,7 +1932,6 @@ const policies = {
   },
 
   Preference_browser_urlbar_suggest_openpage : {
-    description : browser.i18n.getMessage('policy_description_Preference_browser_urlbar_suggest_openpage'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'others',
     type : 'preference',
@@ -2025,7 +1943,6 @@ const policies = {
   },
 
   Preference_dom_event_contextmenu_enabled : {
-    description : browser.i18n.getMessage('policy_description_Preference_dom_event_contextmenu_enabled'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'others',
     type : 'preference',
@@ -2037,7 +1954,6 @@ const policies = {
   },
 
   Preference_dom_disable_window_move_resize : {
-    description : browser.i18n.getMessage('policy_description_Preference_dom_disable_window_move_resize'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'others',
     type : 'preference',
@@ -2049,7 +1965,6 @@ const policies = {
   },
 
   Preference_dom_disable_window_flip : {
-    description : browser.i18n.getMessage('policy_description_Preference_dom_disable_window_flip'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'others',
     type : 'preference',
@@ -2061,7 +1976,6 @@ const policies = {
   },
 
   Preference_dom_keyboardevent_keypress_hack_dispatch_non_printable_keys_addl : {
-    description : browser.i18n.getMessage('policy_description_Preference_dom_keyboardevent_keypress_hack_dispatch_non_printable_keys_addl'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     info_link : 'https://www.fxsitecompat.dev/en-CA/docs/2018/non-printable-keys-no-longer-fire-keypress-event/',
     ui_category : 'others',
@@ -2077,7 +1991,6 @@ const policies = {
   },
 
   Preference_dom_keyboardevent_keypress_hack_use_legacy_keycode_and_charcode_addl : {
-    description : browser.i18n.getMessage('policy_description_Preference_dom_keyboardevent_keypress_hack_use_legacy_keycode_and_charcode_addl'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     info_link : 'https://support.mozilla.org/kb/dom-events-changes-introduced-firefox-66',
     ui_category : 'others',
@@ -2093,7 +2006,6 @@ const policies = {
   },
 
   DontCheckDefaultBrowser : {
-    description : browser.i18n.getMessage('policy_description_DontCheckDefaultBrowser'),
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'others',
     type : 'enum',
@@ -2110,7 +2022,6 @@ const policies = {
   },
 
   Preference_datareporting_policy_dataSubmissionPolicyBypassNotification : {
-    description : browser.i18n.getMessage('policy_description_Preference_datareporting_policy_dataSubmissionPolicyBypassNotification'),
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'others',
     type : 'preference',
@@ -2122,7 +2033,6 @@ const policies = {
   },
 
   OverrideFirstRunPage : {
-    description : browser.i18n.getMessage('policy_description_OverrideFirstRunPage'),
     first_available : { mainstream : '62.0', esr : '60.0' },
     ui_category : 'others',
     type : 'url',
@@ -2130,7 +2040,6 @@ const policies = {
   },
 
   OverridePostUpdatePage : {
-    description : browser.i18n.getMessage('policy_description_OverridePostUpdatePage'),
     first_available : { mainstream : '62.0', esr : '60.0' },
     ui_category : 'others',
     type : 'url',
@@ -2138,7 +2047,6 @@ const policies = {
   },
 
   SupportMenu : {
-    description : browser.i18n.getMessage('policy_description_SupportMenu'),
     first_available : { mainstream : '67.0', esr : '60.7' },
     ui_category : 'others',
     type : 'object',

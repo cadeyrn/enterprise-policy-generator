@@ -35,8 +35,11 @@
 #### Code Quality
 
 - removed optional properties from configuration to simplify the configuration file. In the future there will be
-  an online developer documentation where you can find all possible options, , see
+  an online developer documentation where you can find all possible options, see
   [#131](https://github.com/cadeyrn/enterprise-policy-generator/issues/131)
+- it's no longer needed to define the description key for every policy in the configuration file, the Enterprise
+  Policy Generator now automatically picks the description from the translation files, see
+  [#132](https://github.com/cadeyrn/enterprise-policy-generator/issues/132)
   
 #### Dependencies
 

@@ -1320,7 +1320,7 @@ const configurator = {
     // label
     const elLabel = document.createElement('label');
     elLabel.setAttribute('for', key);
-    elLabel.textContent = policy.description;
+    elLabel.textContent = browser.i18n.getMessage('policy_description_' + key);
     elObjectWrapper.appendChild(elLabel);
 
     // esr only notice
