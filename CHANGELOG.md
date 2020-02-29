@@ -2,6 +2,17 @@
 
 ## Release Notes
 
+### (Work in Progress) Version 5.2.0
+
+#### Enhancements
+
+- for version compatibility notes the old Firefox shape was still used. Replaced the logo with the current one,
+  see [#134](https://github.com/cadeyrn/enterprise-policy-generator/issues/134)
+
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v5.1.0...master)
+
+---
+
 ### [Version 5.1.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v5.1.0) (2020-02-27)
 
 #### Enhancements
