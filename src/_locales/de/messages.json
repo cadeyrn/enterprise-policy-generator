@@ -597,10 +597,10 @@
     "message": "Automatische Wiedergabe"
   },
   "policy_description_Permissions_Autoplay_Allow": {
-    "message": "Zugriff für diese URLs erlauben"
+    "message": "Automatische Wiedergabe für diese URLs erlauben"
   },
   "policy_description_Permissions_Autoplay_Block": {
-    "message": "Zugriff für diese URLs blockieren"
+    "message": "Automatische Wiedergabe für diese URLs blockieren"
   },
   "policy_description_Permissions_Autoplay_Default": {
     "message": "Standard für alle Websites"

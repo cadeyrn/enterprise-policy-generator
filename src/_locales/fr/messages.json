@@ -597,10 +597,10 @@
     "message": "Autoplay"
   },
   "policy_description_Permissions_Autoplay_Allow": {
-    "message": "Allow access for these URLs"
+    "message": "Allow autoplay for these URLs"
   },
   "policy_description_Permissions_Autoplay_Block": {
-    "message": "Block access for these URLs"
+    "message": "Block autoplay for these URLs"
   },
   "policy_description_Permissions_Autoplay_Default": {
     "message": "Default for all websites"
