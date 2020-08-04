@@ -4,6 +4,11 @@
  * @exports migrator
  */
 const migrator = {
+  /**
+   * Executes migrations.
+   *
+   * @returns {void}
+   */
   async migrate () {
     const { schemaVersion } = await browser.storage.local.get({ schemaVersion : 1 });
 
