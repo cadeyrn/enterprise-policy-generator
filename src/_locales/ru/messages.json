@@ -348,7 +348,19 @@
     "message": "Показывать панель закладок по умолчанию"
   },
   "policy_description_DisplayMenuBar": {
-    "message": "Показывать строку меню по умолчанию"
+    "message": "Show the menu bar"
+  },
+  "policy_description_DisplayMenuBar_always": {
+    "message": "The menubar is always shown and cannot be hidden"
+  },
+  "policy_description_DisplayMenuBar_default_off": {
+    "message": "The menubar is off by default but can be shown"
+  },
+  "policy_description_DisplayMenuBar_default_on": {
+    "message": "The menubar is on by default but can be hidden"
+  },
+  "policy_description_DisplayMenuBar_never": {
+    "message": "The menubar is hidden and cannot be shown"
   },
   "policy_description_DNSOverHTTPS": {
     "message": "Настройка DNS через HTTPS"

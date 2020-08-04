@@ -22,6 +22,8 @@
 
 - enhanced permissions policy to control autoplay of media and access to virtual reality devices, see
   [#136](https://github.com/cadeyrn/enterprise-policy-generator/issues/136)
+- replaced menu bar policy with new one that accepts more options; the old policy will automatically be migrated in
+  saved configurations, see [#127](https://github.com/cadeyrn/enterprise-policy-generator/issues/127)
 - removed SearchEngines | DefaultPrivate because this feature never reached a stable release of Firefox, see
   [#140](https://github.com/cadeyrn/enterprise-policy-generator/issues/140)
 

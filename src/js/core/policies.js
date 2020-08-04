@@ -132,9 +132,27 @@ const policies = {
 
   DisplayMenuBar : {
     additional_note : browser.i18n.getMessage('requirement_windows_or_linux'),
-    first_available : { mainstream : '60.0', esr : '60.0' },
+    first_available : { mainstream : '73.0', esr : '68.5' },
     ui_category : 'customization',
-    type : 'boolean'
+    type : 'enum',
+    options : [
+      {
+        label : browser.i18n.getMessage('policy_description_DisplayMenuBar_always'),
+        value : 'always'
+      },
+      {
+        label : browser.i18n.getMessage('policy_description_DisplayMenuBar_never'),
+        value : 'never'
+      },
+      {
+        label : browser.i18n.getMessage('policy_description_DisplayMenuBar_default_on'),
+        value : 'default-on'
+      },
+      {
+        label : browser.i18n.getMessage('policy_description_DisplayMenuBar_default_off'),
+        value : 'default-off'
+      }
+    ]
   },
 
   Preference_ui_key_menuAccessKeyFocuses : {

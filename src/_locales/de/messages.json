@@ -348,7 +348,19 @@
     "message": "Zeige die Lesezeichen-Symbolleiste standardmäßig"
   },
   "policy_description_DisplayMenuBar": {
-    "message": "Zeige die Menüleiste standardmäßig"
+    "message": "Zeige die Menüleiste"
+  },
+  "policy_description_DisplayMenuBar_always": {
+    "message": "Die Menüleiste wird immer angezeigt und kann nicht ausgeblendet werden"
+  },
+  "policy_description_DisplayMenuBar_default_off": {
+    "message": "Die Menüleiste ist standardmäßig ausgeblendet, kann aber angezeigt werden"
+  },
+  "policy_description_DisplayMenuBar_default_on": {
+    "message": "Die Menüleiste wird standardmäßig angezeigt, kann aber ausgeblendet werden"
+  },
+  "policy_description_DisplayMenuBar_never": {
+    "message": "Die Menüleiste ist immer ausgeblendet und kann nicht angezeigt werden"
   },
   "policy_description_DNSOverHTTPS": {
     "message": "DNS über HTTPS konfigurieren"
