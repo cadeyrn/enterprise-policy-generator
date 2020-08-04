@@ -134,9 +134,6 @@
   "policy_description_Authentication": {
     "message": "Sites that support integrated authentication"
   },
-  "policy_description_Authentication_additional_note": {
-    "message": "Option to lock setting new from Firefox 71. Always protected before."
-  },
   "policy_description_Authentication_AllowNonFQDN": {
     "message": "Always allow SPNEGO or NTLM on non FQDNs (fully qualified domain names)"
   },
@@ -384,10 +381,10 @@
     "message": "Enhanced Tracking Protection"
   },
   "policy_description_EnableTrackingProtection_Cryptomining": {
-    "message": "block cryptominers (Firefox 70+, Firefox ESR 68.2+)"
+    "message": "block cryptominers"
   },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
-    "message": "block fingerprinters (Firefox 70+, Firefox ESR 68.2+)"
+    "message": "block fingerprinters"
   },
   "policy_description_EnableTrackingProtection_Value": {
     "message": "Tracking Content"

@@ -134,9 +134,6 @@
   "policy_description_Authentication": {
     "message": "Сайты, поддерживающие интегрированную аутентификацию"
   },
-  "policy_description_Authentication_additional_note": {
-    "message": "Блокировка настроек в Firefox 71 и выше. Ниже и так блокированы."
-  },
   "policy_description_Authentication_AllowNonFQDN": {
     "message": "Всегда разрешать SPNEGO или NTLM на не FQDNs (полные доменные имена)"
   },
@@ -384,10 +381,10 @@
     "message": "Улучшенная защита от слежения"
   },
   "policy_description_EnableTrackingProtection_Cryptomining": {
-    "message": "блокировать криптомайнеры (Firefox 70+, Firefox ESR 68.2+)"
+    "message": "блокировать криптомайнеры"
   },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
-    "message": "блокировать fingerprinters (Firefox 70+, Firefox ESR 68.2+)"
+    "message": "блокировать fingerprinters"
   },
   "policy_description_EnableTrackingProtection_Value": {
     "message": "Отслеживание содержимого"

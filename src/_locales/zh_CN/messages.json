@@ -134,9 +134,6 @@
   "policy_description_Authentication": {
     "message": "支持整合验证 (integrated authentication) 的站点"
   },
-  "policy_description_Authentication_additional_note": {
-    "message": "该选项用于锁定 Firefox 71 新增的设置。之前该选项始终受到保护。"
-  },
   "policy_description_Authentication_AllowNonFQDN": {
     "message": "始终允许在非 FQDN（完全限定性域名）上使用 SPNEGO 或 NTLM"
   },
@@ -384,10 +381,10 @@
     "message": "增强型跟踪保护"
   },
   "policy_description_EnableTrackingProtection_Cryptomining": {
-    "message": "拦截加密货币挖矿程序 (Firefox 70+，Firefox ESR 68.2+)"
+    "message": "拦截加密货币挖矿程序"
   },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
-    "message": "拦截数字指纹跟踪程序 (Firefox 70+，Firefox ESR 68.2+)"
+    "message": "拦截数字指纹跟踪程序"
   },
   "policy_description_EnableTrackingProtection_Value": {
     "message": "跟踪内容"

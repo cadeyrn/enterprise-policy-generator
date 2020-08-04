@@ -6,6 +6,9 @@
 
 #### Enhancements
 
+- deprecation of Firefox 68. Firefox Browser 78 or higher is required now. Also Enterprise Policy Generator no longer
+  shows minimum required Firefox version for policies older than Firefox 78.0, see
+  [#138](https://github.com/cadeyrn/enterprise-policy-generator/issues/138)
 - for version compatibility notes the old Firefox shape was still used. Replaced the logo with the current one,
   see [#134](https://github.com/cadeyrn/enterprise-policy-generator/issues/134)
   

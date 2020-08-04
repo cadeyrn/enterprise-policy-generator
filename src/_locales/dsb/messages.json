@@ -134,9 +134,6 @@
   "policy_description_Authentication": {
     "message": "Webboki, kótarež integrěrowanu awtentifikaciju pódpěraju"
   },
-  "policy_description_Authentication_additional_note": {
-    "message": "Móžnosć, nastajenje šćitaś, nowa wót Firefox 71. Do togo pśecej šćitane."
-  },
   "policy_description_Authentication_AllowNonFQDN": {
     "message": "Pśecej SPNEGO abo NTLM na nje-FQDN (połnokwalificěrowane domenowe mjenja) dowóliś"
   },
@@ -384,10 +381,10 @@
     "message": "Pólěpšony slědowański šćit"
   },
   "policy_description_EnableTrackingProtection_Cryptomining": {
-    "message": "Skšajźne kryptokopaki (eng. cryptominers) blokěrowaś (Firefox 70+, Firefox ESR 68.2+)"
+    "message": "Skšajźne kryptokopaki (eng. cryptominers) blokěrowaś"
   },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
-    "message": "Palcowe wótśišće (fingerprinters) blokować (Firefox 70+, Firefox ESR 68.2+)"
+    "message": "Palcowe wótśišće (fingerprinters) blokować"
   },
   "policy_description_EnableTrackingProtection_Value": {
     "message": "Slědujuce wopśimjeśe"

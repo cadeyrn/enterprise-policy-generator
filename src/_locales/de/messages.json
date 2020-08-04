@@ -134,9 +134,6 @@
   "policy_description_Authentication": {
     "message": "Webseiten, welche eine integrierte Authentifizierung unterstützen"
   },
-  "policy_description_Authentication_additional_note": {
-    "message": "Option, Einstellung zu schützen, neu ab Firefox 71. Vorher immer geschützt."
-  },
   "policy_description_Authentication_AllowNonFQDN": {
     "message": "Immer SPNEGO oder NTLM auf Nicht-FQDNs (vollqualifizierte Domainnamen) erlauben"
   },
@@ -384,10 +381,10 @@
     "message": "Verbesserter Schutz vor Aktivitätenverfolgung"
   },
   "policy_description_EnableTrackingProtection_Cryptomining": {
-    "message": "Heimliche Digitalwährungsberechner (Krypto-Miner) blockieren (Firefox 70+, Firefox ESR 68.2+)"
+    "message": "Heimliche Digitalwährungsberechner (Krypto-Miner) blockieren"
   },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
-    "message": "Identifizierer (Fingerprinter) blockieren (Firefox 70+, Firefox ESR 68.2+)"
+    "message": "Identifizierer (Fingerprinter) blockieren"
   },
   "policy_description_EnableTrackingProtection_Value": {
     "message": "Tracking-Content"

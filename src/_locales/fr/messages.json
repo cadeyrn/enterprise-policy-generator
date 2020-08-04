@@ -134,9 +134,6 @@
   "policy_description_Authentication": {
     "message": "Sites supportants l'authentification intégrée"
   },
-  "policy_description_Authentication_additional_note": {
-    "message": "Option pour verrouiller un nouveau paramètre à partir de Firefox 71. Toujours protégé avant."
-  },
   "policy_description_Authentication_AllowNonFQDN": {
     "message": "Toujours autoriser SPNEGO ou NTLM hors des FQDNs (noms de domaine entièrement qualifiés)"
   },
@@ -384,10 +381,10 @@
     "message": "Protection de traçage améliorée"
   },
   "policy_description_EnableTrackingProtection_Cryptomining": {
-    "message": "Bloquer les cryptomineurs (Firefox 70+, Firefox ESR 68.2+)"
+    "message": "Bloquer les cryptomineurs"
   },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
-    "message": "Bloquer les fingerprinters (Firefox 70+, Firefox ESR 68.2+)"
+    "message": "Bloquer les fingerprinters"
   },
   "policy_description_EnableTrackingProtection_Value": {
     "message": "Traçage du contenu"
