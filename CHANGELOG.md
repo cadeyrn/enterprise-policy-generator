@@ -9,8 +9,6 @@
 - for version compatibility notes the old Firefox shape was still used. Replaced the logo with the current one,
   see [#134](https://github.com/cadeyrn/enterprise-policy-generator/issues/134)
 
-[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v5.1.0...master)
-
 #### Dependencies
 
 - updated eslint from version 6.8.0 to 7.6.0
@@ -22,6 +20,8 @@
 - updated stylelint from version 13.2.0 to 13.6.1
 - updated stylelint-order from version 4.0.0 to 4.1.0
 - updated web-ext from version 4.1.0 to 5.0.0
+
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v5.1.0...master)
 
 ---
 
