@@ -11,7 +11,7 @@
     "url": "https://www.soeren-hentzschel.at/firefox-webextensions/enterprise-policy-generator/?utm_campaign=webext&utm_term=enterprise"
   },
   "background": {
-    "scripts": ["js/core/background.js"]
+    "scripts": ["js/core/background.js", "js/core/migrator.js"]
   },
   "browser_action": {
     "browser_style": false,

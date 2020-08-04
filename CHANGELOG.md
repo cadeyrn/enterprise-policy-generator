@@ -6,6 +6,8 @@
 
 #### Enhancements
 
+- implemented a schema migrator so that saved configurations can be migrated during extension updates when policies are
+  replaced by new or changed policies, see [#143](https://github.com/cadeyrn/enterprise-policy-generator/issues/143)
 - deprecation of Firefox 68. Firefox Browser 78 or higher is required now. Also Enterprise Policy Generator no longer
   shows minimum required Firefox version for policies older than Firefox 78.0, see
   [#138](https://github.com/cadeyrn/enterprise-policy-generator/issues/138)
