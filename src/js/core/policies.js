@@ -713,7 +713,6 @@ const policies = {
     properties : [
       {
         name : 'Enabled',
-        label : browser.i18n.getMessage('policy_description_DNSOverHTTPS_Enabled'),
         type : 'enum',
         options : [
           {

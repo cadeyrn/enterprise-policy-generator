@@ -12,6 +12,10 @@
 - for version compatibility notes the old Firefox shape was still used. Replaced the logo with the current one,
   see [#134](https://github.com/cadeyrn/enterprise-policy-generator/issues/134)
   
+#### Bugfixes
+
+- fixed error message in browser console, see [#141](https://github.com/cadeyrn/enterprise-policy-generator/issues/141)
+  
 #### Enterprise Policies
 
 - enhanced permissions policy to control autoplay of media and access to virtual reality devices, see
