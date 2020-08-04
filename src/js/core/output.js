@@ -294,6 +294,11 @@ const output = {
         }
       });
 
+      // enum fields
+      [...el.querySelectorAll(':scope > div > .enum select')].forEach((el) => {
+        obj[el.getAttribute('data-name')] = output.parseEnumContent(el);
+      });
+
       // only add non-empty policies
       if (Object.keys(obj).length > 0) {
         policy[el.getAttribute('data-name')] = obj;
