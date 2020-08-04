@@ -20,6 +20,7 @@
 - updated gulp-jsdoc3 from version 2.0.0 to 3.0.0
 - updated jsdoc from version 3.6.3 to 3.6.5
 - updated stylelint from version 13.2.0 to 13.6.1
+- updated stylelint-order from version 4.0.0 to 4.1.0
 - updated web-ext from version 4.1.0 to 5.0.0
 
 ---
