@@ -1378,6 +1378,55 @@ const policies = {
             type : 'boolean'
           }
         ]
+      },
+      {
+        name : 'Autoplay',
+        label : browser.i18n.getMessage('policy_description_Permissions_Autoplay'),
+        is_lockable : true,
+        type : 'object',
+        properties : [
+          {
+            name : 'Allow',
+            label : browser.i18n.getMessage('policy_description_Permissions_Autoplay_Allow'),
+            type : 'array',
+            items : {
+              label : browser.i18n.getMessage('common_url'),
+              type : 'url'
+            }
+          },
+          {
+            name : 'Block',
+            label : browser.i18n.getMessage('policy_description_Permissions_Autoplay_Block'),
+            type : 'array',
+            items : {
+              label : browser.i18n.getMessage('common_url'),
+              type : 'url'
+            }
+          },
+          {
+            name : 'Default',
+            label : browser.i18n.getMessage('policy_description_Permissions_Autoplay_Default'),
+            type : 'enum',
+            options : [
+              {
+                label : browser.i18n.getMessage('enum_value_no_preference'),
+                value : null
+              },
+              {
+                label : browser.i18n.getMessage('policy_description_Permissions_Autoplay_Default_allow_audio_video'),
+                value : 'allow-audio-video'
+              },
+              {
+                label : browser.i18n.getMessage('policy_description_Permissions_Autoplay_Default_block_audio'),
+                value : 'block-audio'
+              },
+              {
+                label : browser.i18n.getMessage('policy_description_Permissions_Autoplay_Default_block_audio_video'),
+                value : 'block-audio-video'
+              }
+            ]
+          }
+        ]
       }
     ]
   },

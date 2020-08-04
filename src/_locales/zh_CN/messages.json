@@ -591,7 +591,28 @@
     "message": "完全启用或禁用密码管理器"
   },
   "policy_description_Permissions": {
-    "message": "配置位置、摄像头、麦克风和通知的权限"
+    "message": "Configure permissions"
+  },
+  "policy_description_Permissions_Autoplay": {
+    "message": "Autoplay"
+  },
+  "policy_description_Permissions_Autoplay_Allow": {
+    "message": "Allow access for these URLs"
+  },
+  "policy_description_Permissions_Autoplay_Block": {
+    "message": "Block access for these URLs"
+  },
+  "policy_description_Permissions_Autoplay_Default": {
+    "message": "Default for all websites"
+  },
+  "policy_description_Permissions_Autoplay_Default_allow_audio_video": {
+    "message": "Allow Audio and Video"
+  },
+  "policy_description_Permissions_Autoplay_Default_block_audio": {
+    "message": "Block Audio"
+  },
+  "policy_description_Permissions_Autoplay_Default_block_audio_video": {
+    "message": "Block Audio and Video"
   },
   "policy_description_Permissions_Camera": {
     "message": "摄像头"

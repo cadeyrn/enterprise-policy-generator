@@ -591,7 +591,28 @@
     "message": "Passwort-Manager vollständig aktivieren oder deaktivieren"
   },
   "policy_description_Permissions": {
-    "message": "Berechtigungen für Standort, Kamera, Mikrofon und Benachrichtigungen konfigurieren"
+    "message": "Berechtigungen konfigurieren"
+  },
+  "policy_description_Permissions_Autoplay": {
+    "message": "Automatische Wiedergabe"
+  },
+  "policy_description_Permissions_Autoplay_Allow": {
+    "message": "Zugriff für diese URLs erlauben"
+  },
+  "policy_description_Permissions_Autoplay_Block": {
+    "message": "Zugriff für diese URLs blockieren"
+  },
+  "policy_description_Permissions_Autoplay_Default": {
+    "message": "Standard für alle Websites"
+  },
+  "policy_description_Permissions_Autoplay_Default_allow_audio_video": {
+    "message": "Audio und Video erlauben"
+  },
+  "policy_description_Permissions_Autoplay_Default_block_audio": {
+    "message": "Medien mit Audio blockieren"
+  },
+  "policy_description_Permissions_Autoplay_Default_block_audio_video": {
+    "message": "Audio und Video blockieren"
   },
   "policy_description_Permissions_Camera": {
     "message": "Kamera"

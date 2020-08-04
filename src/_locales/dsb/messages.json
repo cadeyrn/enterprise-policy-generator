@@ -591,7 +591,28 @@
     "message": "Zastojnik gronidłow dopołnje zmóžniś abo znjemóžniś"
   },
   "policy_description_Permissions": {
-    "message": "Pšawa za městno, kameru, mikrofon a powěźeńki konfigurěrowaś"
+    "message": "Configure permissions"
+  },
+  "policy_description_Permissions_Autoplay": {
+    "message": "Autoplay"
+  },
+  "policy_description_Permissions_Autoplay_Allow": {
+    "message": "Allow access for these URLs"
+  },
+  "policy_description_Permissions_Autoplay_Block": {
+    "message": "Block access for these URLs"
+  },
+  "policy_description_Permissions_Autoplay_Default": {
+    "message": "Default for all websites"
+  },
+  "policy_description_Permissions_Autoplay_Default_allow_audio_video": {
+    "message": "Allow Audio and Video"
+  },
+  "policy_description_Permissions_Autoplay_Default_block_audio": {
+    "message": "Block Audio"
+  },
+  "policy_description_Permissions_Autoplay_Default_block_audio_video": {
+    "message": "Block Audio and Video"
   },
   "policy_description_Permissions_Camera": {
     "message": "Kamera"
