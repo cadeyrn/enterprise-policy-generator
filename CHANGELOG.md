@@ -8,6 +8,11 @@
 
 - for version compatibility notes the old Firefox shape was still used. Replaced the logo with the current one,
   see [#134](https://github.com/cadeyrn/enterprise-policy-generator/issues/134)
+  
+#### Enterprise Policies
+
+- removed SearchEngines | DefaultPrivate because this feature never reached a stable release of Firefox, see
+  [#140](https://github.com/cadeyrn/enterprise-policy-generator/issues/140)
 
 #### Dependencies
 
