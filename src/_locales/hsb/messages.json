@@ -890,9 +890,6 @@
   "policy_description_SearchEngines_Default": {
     "message": "Mjeno standardneje pytawy"
   },
-  "policy_description_SearchEngines_DefaultPrivate": {
-    "message": "Name of the default search engine for private windows (Firefox Pre-Release 71+, Firefox ESR 78+)"
-  },
   "policy_description_SearchEngines_PreventInstalls": {
     "message": "Instalaciji nowych pytawow zadźěwać"
   },

@@ -890,9 +890,6 @@
   "policy_description_SearchEngines_Default": {
     "message": "Name der Standard-Suchmaschine"
   },
-  "policy_description_SearchEngines_DefaultPrivate": {
-    "message": "Name der Standard-Suchmaschine für private Fenster (Firefox Pre-Release 71+, Firefox ESR 78+)"
-  },
   "policy_description_SearchEngines_PreventInstalls": {
     "message": "Die Installation neuer Suchmaschinen verhindern"
   },

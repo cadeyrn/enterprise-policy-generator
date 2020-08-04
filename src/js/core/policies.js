@@ -345,11 +345,6 @@ const policies = {
         type : 'string'
       },
       {
-        name : 'DefaultPrivate',
-        label : browser.i18n.getMessage('policy_description_SearchEngines_DefaultPrivate'),
-        type : 'string'
-      },
-      {
         name : 'PreventInstalls',
         label : browser.i18n.getMessage('policy_description_SearchEngines_PreventInstalls'),
         type : 'enum',
