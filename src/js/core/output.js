@@ -296,7 +296,11 @@ const output = {
 
       // enum fields
       [...el.querySelectorAll(':scope > div > .enum select')].forEach((el) => {
-        obj[el.getAttribute('data-name')] = output.parseEnumContent(el);
+        const enumContent = output.parseEnumContent(el);
+
+        if (enumContent) {
+          obj[el.getAttribute('data-name')] = output.parseEnumContent(el);
+        }
       });
 
       // only add non-empty policies
