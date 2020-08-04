@@ -662,6 +662,18 @@
   "policy_description_Permissions_Notifications_BlockNewRequests": {
     "message": "Nowe napšašowanja blokěrowaś, kótarež pominaju, powěźeńki dowóliś"
   },
+  "policy_description_Permissions_VirtualReality": {
+    "message": "Virtual Reality (Firefox 80+, Firefox ESR 78.2+)"
+  },
+  "policy_description_Permissions_VirtualReality_Allow": {
+    "message": "Pśistup k toś tym URL dowóliś"
+  },
+  "policy_description_Permissions_VirtualReality_Block": {
+    "message": "Pśistup k toś tym URL blokěrowaś"
+  },
+  "policy_description_Permissions_VirtualReality_BlockNewRequests": {
+    "message": "Block new requests asking to access your virtual reality devices"
+  },
   "policy_description_PopupBlocking": {
     "message": "Wužywanje wuskokujucych woknow dowóliś abo zakazaś"
   },

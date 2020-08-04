@@ -14,7 +14,7 @@
   
 #### Enterprise Policies
 
-- enhanced permissions policy to control autoplay of media, see
+- enhanced permissions policy to control autoplay of media and access to virtual reality devices, see
   [#136](https://github.com/cadeyrn/enterprise-policy-generator/issues/136)
 - removed SearchEngines | DefaultPrivate because this feature never reached a stable release of Firefox, see
   [#140](https://github.com/cadeyrn/enterprise-policy-generator/issues/140)
