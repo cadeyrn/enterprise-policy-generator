@@ -18,6 +18,7 @@
 - updated eslint-plugin-no-unsanitized from version 3.0.2 to 3.1.2
 - updated gulp-htmllint from version 0.0.16 to 0.0.19
 - updated gulp-jsdoc3 from version 2.0.0 to 3.0.0
+- updated jsdoc from version 3.6.3 to 3.6.5
 - updated web-ext from version 4.1.0 to 5.0.0
 
 ---
