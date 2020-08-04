@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### (Work in Progress) Version 5.2.0
+### (Work in Progress) Version 6.0.0
 
 #### Enhancements
 
@@ -10,6 +10,10 @@
   see [#134](https://github.com/cadeyrn/enterprise-policy-generator/issues/134)
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v5.1.0...master)
+
+#### Dependencies
+
+- updated web-ext from version 4.1.0 to 5.0.0
 
 ---
 
