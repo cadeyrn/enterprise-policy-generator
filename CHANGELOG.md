@@ -15,6 +15,7 @@
 
 - updated eslint from version 6.8.0 to 7.6.0
 - updated eslint-plugin-compat from version 3.5.1 to 3.8.0
+- updated eslint-plugin-no-unsanitized from version 3.0.2 to 3.1.2
 - updated web-ext from version 4.1.0 to 5.0.0
 
 ---
