@@ -1437,24 +1437,6 @@ const policies = {
         type : 'object',
         properties : [
           {
-            name : 'Allow',
-            label : browser.i18n.getMessage('policy_description_Permissions_Autoplay_Allow'),
-            type : 'array',
-            items : {
-              label : browser.i18n.getMessage('common_url'),
-              type : 'url'
-            }
-          },
-          {
-            name : 'Block',
-            label : browser.i18n.getMessage('policy_description_Permissions_Autoplay_Block'),
-            type : 'array',
-            items : {
-              label : browser.i18n.getMessage('common_url'),
-              type : 'url'
-            }
-          },
-          {
             name : 'Default',
             label : browser.i18n.getMessage('policy_description_Permissions_Autoplay_Default'),
             type : 'enum',
@@ -1476,6 +1458,24 @@ const policies = {
                 value : 'block-audio-video'
               }
             ]
+          },
+          {
+            name : 'Allow',
+            label : browser.i18n.getMessage('policy_description_Permissions_Autoplay_Allow'),
+            type : 'array',
+            items : {
+              label : browser.i18n.getMessage('common_url'),
+              type : 'url'
+            }
+          },
+          {
+            name : 'Block',
+            label : browser.i18n.getMessage('policy_description_Permissions_Autoplay_Block'),
+            type : 'array',
+            items : {
+              label : browser.i18n.getMessage('common_url'),
+              type : 'url'
+            }
           }
         ]
       },
