@@ -116,6 +116,110 @@ const policies = {
     type : 'boolean'
   },
 
+  UserMessaging : {
+    first_available : { mainstream : '75.0', esr : '68.7' },
+    is_lockable : true,
+    ui_category : 'disable-features',
+    type : 'object',
+    properties : [
+      {
+        name : 'WhatsNew',
+        label : browser.i18n.getMessage('policy_description_UserMessaging_WhatsNew'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ]
+      },
+      {
+        name : 'ExtensionRecommendations',
+        label : browser.i18n.getMessage('policy_description_UserMessaging_ExtensionRecommendations'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ]
+      },
+      {
+        name : 'FeatureRecommendations',
+        label : browser.i18n.getMessage('policy_description_UserMessaging_FeatureRecommendations'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ]
+      },
+      {
+        name : 'UrlbarInterventions',
+        label : browser.i18n.getMessage('policy_description_UserMessaging_UrlbarInterventions'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ]
+      },
+      {
+        name : 'SkipOnboarding',
+        label : browser.i18n.getMessage('policy_description_UserMessaging_SkipOnboarding'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ]
+      }
+    ]
+  },
+
   // customization
 
   RequestedLocales : {

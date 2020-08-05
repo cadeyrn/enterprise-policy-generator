@@ -977,6 +977,24 @@
   "policy_description_SupportMenu_Title": {
     "message": "Заголовок"
   },
+  "policy_description_UserMessaging": {
+    "message": "Allow or prevent Firefox from messaging the user"
+  },
+  "policy_description_UserMessaging_ExtensionRecommendations": {
+    "message": "Recommend extensions while the user is visiting websites"
+  },
+  "policy_description_UserMessaging_FeatureRecommendations": {
+    "message": "Recommend browser features"
+  },
+  "policy_description_UserMessaging_SkipOnboarding": {
+    "message": "Disable onboarding screen for new users"
+  },
+  "policy_description_UserMessaging_UrlbarInterventions": {
+    "message": "Show Firefox specific suggestions in the URL bar"
+  },
+  "policy_description_UserMessaging_WhatsNew": {
+    "message": "Show the “What's New“ icon and menu item"
+  },
   "policy_description_WebsiteFilter": {
     "message": "Блокировать сайты от посещения. Используйте \"<all_urls>\" для блокировки всех URL. Поддерживаются только HTTPS и HTTP. Смотрите ссылку на информацию."
   },
