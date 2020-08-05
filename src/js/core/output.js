@@ -86,7 +86,11 @@ const output = {
 
         // enum fields
         [...el.querySelectorAll(':scope select')].forEach((el) => {
-          item[el.getAttribute('data-name')] = output.parseEnumContent(el);
+          const enumContent = output.parseEnumContent(el);
+
+          if (typeof enumContent !== 'undefined') {
+            item[el.getAttribute('data-name')] = enumContent;
+          }
         });
 
         items.push(item);
@@ -119,7 +123,11 @@ const output = {
    */
   generateOutputForEnums (el) {
     [...el.parentNode.querySelectorAll(':scope > .enum select')].forEach((el) => {
-      policymanager.add(el.getAttribute('data-name'), output.parseEnumContent(el));
+      const enumContent = output.parseEnumContent(el);
+
+      if (typeof enumContent !== 'undefined') {
+        policymanager.add(el.getAttribute('data-name'), enumContent);
+      }
     });
   },
 
@@ -214,10 +222,10 @@ const output = {
 
         // enum fields
         [...el.querySelectorAll(':scope > .enum select, :scope .sub-sub-options > .enum select')].forEach((el) => {
-          const value = output.parseEnumContent(el);
+          const enumContent = output.parseEnumContent(el);
 
-          if (value) {
-            properties[el.getAttribute('data-name')] = output.parseEnumContent(el);
+          if (typeof enumContent !== 'undefined') {
+            properties[el.getAttribute('data-name')] = enumContent;
           }
         });
 
@@ -298,8 +306,8 @@ const output = {
       [...el.querySelectorAll(':scope > div > .enum select')].forEach((el) => {
         const enumContent = output.parseEnumContent(el);
 
-        if (enumContent) {
-          obj[el.getAttribute('data-name')] = output.parseEnumContent(el);
+        if (typeof enumContent !== 'undefined') {
+          obj[el.getAttribute('data-name')] = enumContent;
         }
       });
 
@@ -340,7 +348,11 @@ const output = {
 
           // enum fields
           [...el.querySelectorAll(':scope > .enum select')].forEach((el) => {
-            obj[el.getAttribute('data-name')] = output.parseEnumContent(el);
+            const enumContent = output.parseEnumContent(el);
+
+            if (typeof enumContent !== 'undefined') {
+              obj[el.getAttribute('data-name')] = enumContent;
+            }
           });
 
           // only add non-empty objects
@@ -380,7 +392,11 @@ const output = {
 
     // enum fields
     [...el.parentNode.querySelectorAll(':scope > div > .enum select')].forEach((el) => {
-      policy[el.getAttribute('data-name')] = output.parseEnumContent(el);
+      const enumContent = output.parseEnumContent(el);
+
+      if (typeof enumContent !== 'undefined') {
+        policy[el.getAttribute('data-name')] = enumContent;
+      }
     });
 
     // input fields
