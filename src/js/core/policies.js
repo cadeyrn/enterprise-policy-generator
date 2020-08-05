@@ -1067,6 +1067,7 @@ const policies = {
 
   SanitizeOnShutdown : {
     first_available : { mainstream : '60.0', esr : '60.0' },
+    is_lockable : true,
     ui_category : 'privacy',
     type : 'object',
     properties : [
@@ -1076,6 +1077,10 @@ const policies = {
         type : 'enum',
         options : [
           {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
             label : browser.i18n.getMessage('enum_value_yes'),
             value : 'true'
           },
@@ -1083,8 +1088,7 @@ const policies = {
             label : browser.i18n.getMessage('enum_value_no'),
             value : 'false'
           }
-        ],
-        default : 'false'
+        ]
       },
       {
         name : 'Cookies',
@@ -1092,6 +1096,10 @@ const policies = {
         type : 'enum',
         options : [
           {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
             label : browser.i18n.getMessage('enum_value_yes'),
             value : 'true'
           },
@@ -1099,8 +1107,7 @@ const policies = {
             label : browser.i18n.getMessage('enum_value_no'),
             value : 'false'
           }
-        ],
-        default : 'false'
+        ]
       },
       {
         name : 'Downloads',
@@ -1108,6 +1115,10 @@ const policies = {
         type : 'enum',
         options : [
           {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
             label : browser.i18n.getMessage('enum_value_yes'),
             value : 'true'
           },
@@ -1115,8 +1126,7 @@ const policies = {
             label : browser.i18n.getMessage('enum_value_no'),
             value : 'false'
           }
-        ],
-        default : 'false'
+        ]
       },
       {
         name : 'FormData',
@@ -1124,6 +1134,10 @@ const policies = {
         type : 'enum',
         options : [
           {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
             label : browser.i18n.getMessage('enum_value_yes'),
             value : 'true'
           },
@@ -1131,8 +1145,7 @@ const policies = {
             label : browser.i18n.getMessage('enum_value_no'),
             value : 'false'
           }
-        ],
-        default : 'false'
+        ]
       },
       {
         name : 'History',
@@ -1140,6 +1153,10 @@ const policies = {
         type : 'enum',
         options : [
           {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
             label : browser.i18n.getMessage('enum_value_yes'),
             value : 'true'
           },
@@ -1147,8 +1164,7 @@ const policies = {
             label : browser.i18n.getMessage('enum_value_no'),
             value : 'false'
           }
-        ],
-        default : 'false'
+        ]
       },
       {
         name : 'Sessions',
@@ -1156,6 +1172,10 @@ const policies = {
         type : 'enum',
         options : [
           {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
             label : browser.i18n.getMessage('enum_value_yes'),
             value : 'true'
           },
@@ -1163,8 +1183,7 @@ const policies = {
             label : browser.i18n.getMessage('enum_value_no'),
             value : 'false'
           }
-        ],
-        default : 'false'
+        ]
       },
       {
         name : 'SiteSettings',
@@ -1172,6 +1191,10 @@ const policies = {
         type : 'enum',
         options : [
           {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
             label : browser.i18n.getMessage('enum_value_yes'),
             value : 'true'
           },
@@ -1179,8 +1202,7 @@ const policies = {
             label : browser.i18n.getMessage('enum_value_no'),
             value : 'false'
           }
-        ],
-        default : 'false'
+        ]
       },
       {
         name : 'OfflineApps',
@@ -1188,6 +1210,10 @@ const policies = {
         type : 'enum',
         options : [
           {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
             label : browser.i18n.getMessage('enum_value_yes'),
             value : 'true'
           },
@@ -1195,8 +1221,7 @@ const policies = {
             label : browser.i18n.getMessage('enum_value_no'),
             value : 'false'
           }
-        ],
-        default : 'false'
+        ]
       }
     ]
   },
