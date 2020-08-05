@@ -395,6 +395,9 @@
   "policy_description_EnableTrackingProtection_Cryptomining": {
     "message": "Heimliche Digitalwährungsberechner (Krypto-Miner) blockieren"
   },
+  "policy_description_EnableTrackingProtection_Exceptions": {
+    "message": "Ausnahmen"
+  },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
     "message": "Identifizierer (Fingerprinter) blockieren"
   },

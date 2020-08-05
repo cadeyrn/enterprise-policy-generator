@@ -395,6 +395,9 @@
   "policy_description_EnableTrackingProtection_Cryptomining": {
     "message": "拦截加密货币挖矿程序"
   },
+  "policy_description_EnableTrackingProtection_Exceptions": {
+    "message": "例外"
+  },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
     "message": "拦截数字指纹跟踪程序"
   },

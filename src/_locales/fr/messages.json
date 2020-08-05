@@ -395,6 +395,9 @@
   "policy_description_EnableTrackingProtection_Cryptomining": {
     "message": "Bloquer les cryptomineurs"
   },
+  "policy_description_EnableTrackingProtection_Exceptions": {
+    "message": "Exceptions"
+  },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
     "message": "Bloquer les fingerprinters"
   },

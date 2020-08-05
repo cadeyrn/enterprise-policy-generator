@@ -395,6 +395,9 @@
   "policy_description_EnableTrackingProtection_Cryptomining": {
     "message": "Skšajźne kryptokopaki (eng. cryptominers) blokěrowaś"
   },
+  "policy_description_EnableTrackingProtection_Exceptions": {
+    "message": "Wuwześa"
+  },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
     "message": "Palcowe wótśišće (fingerprinters) blokować"
   },

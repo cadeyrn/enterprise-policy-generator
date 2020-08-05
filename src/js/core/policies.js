@@ -1263,6 +1263,15 @@ const policies = {
             value : 'false'
           }
         ]
+      },
+      {
+        name : 'Exceptions',
+        label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Exceptions'),
+        type : 'array',
+        items : {
+          label : browser.i18n.getMessage('common_url'),
+          type : 'url'
+        }
       }
     ]
   },

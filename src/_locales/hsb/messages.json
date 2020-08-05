@@ -395,6 +395,9 @@
   "policy_description_EnableTrackingProtection_Cryptomining": {
     "message": "Skryte kryptokopaki (jendź. cryptominers) blokować"
   },
+  "policy_description_EnableTrackingProtection_Exceptions": {
+    "message": "Wuwzaća"
+  },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
     "message": "Porstowe wotćišće (fingerprinters) blokować"
   },

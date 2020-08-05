@@ -395,6 +395,9 @@
   "policy_description_EnableTrackingProtection_Cryptomining": {
     "message": "блокировать криптомайнеры"
   },
+  "policy_description_EnableTrackingProtection_Exceptions": {
+    "message": "Исключения"
+  },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
     "message": "блокировать fingerprinters"
   },

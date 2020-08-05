@@ -6,13 +6,13 @@
 
 #### Enhancements
 
-- implemented a schema migrator so that saved configurations can be migrated during extension updates when policies are
-  replaced by new or changed policies, see [#143](https://github.com/cadeyrn/enterprise-policy-generator/issues/143)
 - deprecation of Firefox 68. Firefox Browser 78 or higher is required now. Also Enterprise Policy Generator no longer
   shows minimum required Firefox version for policies older than Firefox 78.0, see
   [#138](https://github.com/cadeyrn/enterprise-policy-generator/issues/138)
 - for version compatibility notes the old Firefox shape was still used. Replaced the logo with the current one,
   see [#134](https://github.com/cadeyrn/enterprise-policy-generator/issues/134)
+- implemented a schema migrator so that saved configurations can be migrated during extension updates when policies are
+  replaced by new or changed policies, see [#143](https://github.com/cadeyrn/enterprise-policy-generator/issues/143)
   
 #### Bugfixes
 
@@ -22,6 +22,8 @@
 
 - enhanced permissions policy to control autoplay of media and access to virtual reality devices, see
   [#136](https://github.com/cadeyrn/enterprise-policy-generator/issues/136)
+- enhanced tracking protection policy to add exceptions, see
+  [#144](https://github.com/cadeyrn/enterprise-policy-generator/issues/144)
 - replaced menu bar policy with new one that accepts more options; the old policy will automatically be migrated in
   saved configurations, see [#127](https://github.com/cadeyrn/enterprise-policy-generator/issues/127)
 - removed SearchEngines | DefaultPrivate because this feature never reached a stable release of Firefox, see
