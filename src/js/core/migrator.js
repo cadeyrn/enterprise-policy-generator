@@ -20,14 +20,6 @@ const migrator = {
   /**
    * Version: EPG 6.0.0
    *
-   * Migrate from:
-   *
-   * "DisplayMenuBar": true
-   *
-   * to:
-   *
-   * "DisplayMenuBar": "default-on"
-   *
    * @returns {void}
    */
   async migration_1 () {
@@ -38,6 +30,15 @@ const migrator = {
       for (let i = 0; i < configurationLength; i++) {
         const { configuration } = configurations[i];
 
+        /*
+         * @from
+         *
+         * "DisplayMenuBar": true
+         *
+         * @to
+         *
+         * "DisplayMenuBar": "default-on"
+         */
         if (configuration.checkboxes.DisplayMenuBar) {
           configuration.select.DisplayMenuBar_Select = 'default-on';
         }
