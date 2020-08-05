@@ -1552,7 +1552,7 @@ const policies = {
   },
 
   DisablePasswordReveal : {
-    first_available : { mainstream : '71.0', esr : null },
+    first_available : { mainstream : '71.0', esr : '68.3' },
     ui_category : 'security',
     type : 'boolean'
   },
