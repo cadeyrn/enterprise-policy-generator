@@ -348,19 +348,19 @@
     "message": "Показывать панель закладок по умолчанию"
   },
   "policy_description_DisplayMenuBar": {
-    "message": "Show the menu bar"
+    "message": "Показывать строку меню"
   },
   "policy_description_DisplayMenuBar_always": {
-    "message": "The menubar is always shown and cannot be hidden"
+    "message": "Строка меню всегда отображается и не может быть скрыта"
   },
   "policy_description_DisplayMenuBar_default_off": {
-    "message": "The menubar is off by default but can be shown"
+    "message": "По умолчанию строка меню отключена, но ее можно отобразить"
   },
   "policy_description_DisplayMenuBar_default_on": {
-    "message": "The menubar is on by default but can be hidden"
+    "message": "По умолчанию строка меню включена, но может быть скрыта"
   },
   "policy_description_DisplayMenuBar_never": {
-    "message": "The menubar is hidden and cannot be shown"
+    "message": "Строка меню всегда скрыта и не может быть показана"
   },
   "policy_description_DNSOverHTTPS": {
     "message": "Настройка DNS через HTTPS"
@@ -588,7 +588,7 @@
     "message": "Включить или отключить страницу новой вкладки"
   },
   "policy_description_NoDefaultBookmarks": {
-    "message": "Не создавать закладки по умолчанию Firefox, включая смарт-закладки (самые посещаемые, последние теги). Примечание: эта политика заработает только в новом профиле"
+    "message": "Не создавать закладки по умолчанию Firefox, включая смарт-закладки (самые посещаемые, последние теги).\nПримечание: только для нового профиля"
   },
   "policy_description_OfferToSaveLogins": {
     "message": "Разрешить Firefox предлагать запоминать логины и пароли (не могут быть перезаписаны)"
@@ -606,28 +606,28 @@
     "message": "Включить или отключить менеджер паролей полностью"
   },
   "policy_description_Permissions": {
-    "message": "Configure permissions"
+    "message": "Настройка разрешений"
   },
   "policy_description_Permissions_Autoplay": {
-    "message": "Autoplay"
+    "message": "Автовоспроизведение"
   },
   "policy_description_Permissions_Autoplay_Allow": {
-    "message": "Allow autoplay for these URLs"
+    "message": "Разрешить автовоспроизведение для этих URL"
   },
   "policy_description_Permissions_Autoplay_Block": {
-    "message": "Block autoplay for these URLs"
+    "message": "Блокировать автовоспроизведение для этих URL"
   },
   "policy_description_Permissions_Autoplay_Default": {
-    "message": "Default for all websites"
+    "message": "По умолчанию для всех сайтов"
   },
   "policy_description_Permissions_Autoplay_Default_allow_audio_video": {
-    "message": "Allow Audio and Video"
+    "message": "Разрешить аудио и видео"
   },
   "policy_description_Permissions_Autoplay_Default_block_audio": {
-    "message": "Block Audio"
+    "message": "Блокировать аудио"
   },
   "policy_description_Permissions_Autoplay_Default_block_audio_video": {
-    "message": "Block Audio and Video"
+    "message": "Блокировать аудио и видео"
   },
   "policy_description_Permissions_Camera": {
     "message": "Камера"
@@ -678,7 +678,7 @@
     "message": "Блокировать новые запросы разрешения уведомлений"
   },
   "policy_description_Permissions_VirtualReality": {
-    "message": "Virtual Reality (Firefox 80+, Firefox ESR 78.2+)"
+    "message": "Устройства виртуальной реальности (Firefox 80+, ESR 78.2+)"
   },
   "policy_description_Permissions_VirtualReality_Allow": {
     "message": "Разрешить доступ к этим URL"
@@ -687,7 +687,7 @@
     "message": "Блокировать доступ к этим URL"
   },
   "policy_description_Permissions_VirtualReality_BlockNewRequests": {
-    "message": "Block new requests asking to access your virtual reality devices"
+    "message": "Блокировать новые запросы доступа к устройствам виртуальной реальности"
   },
   "policy_description_PopupBlocking": {
     "message": "Разрешить или запретить использование всплывающих окон"
@@ -978,25 +978,25 @@
     "message": "Заголовок"
   },
   "policy_description_UserMessaging": {
-    "message": "Allow or prevent Firefox from messaging the user"
+    "message": "Разрешить или запретить Firefox отправлять сообщения пользователю"
   },
   "policy_description_UserMessaging_ExtensionRecommendations": {
-    "message": "Recommend extensions while the user is visiting websites"
+    "message": "Рекомендовать расширения, когда пользователь посещает веб-сайты"
   },
   "policy_description_UserMessaging_FeatureRecommendations": {
-    "message": "Recommend browser features"
+    "message": "Рекомендовать функции браузера"
   },
   "policy_description_UserMessaging_SkipOnboarding": {
-    "message": "Disable onboarding screen for new users"
+    "message": "Отключить страницу приветствия для новых пользователей"
   },
   "policy_description_UserMessaging_UrlbarInterventions": {
-    "message": "Show Firefox specific suggestions in the URL bar"
+    "message": "Показать специфичные предложения Firefox в строке URL-адреса"
   },
   "policy_description_UserMessaging_WhatsNew": {
-    "message": "Show the “What's New“ icon and menu item"
+    "message": "Показать значок и пункт меню \"Что нового\""
   },
   "policy_description_WebsiteFilter": {
-    "message": "Блокировать сайты от посещения. Используйте \"<all_urls>\" для блокировки всех URL. Поддерживаются только HTTPS и HTTP. Смотрите ссылку на информацию."
+    "message": "Блокировать посещение сайтов. Используйте \"<all_urls>\" для блокировки всех URL. Поддерживаются только HTTPS и HTTP."
   },
   "policy_description_WebsiteFilter_Block": {
     "message": "Блокировать следующие URL"
