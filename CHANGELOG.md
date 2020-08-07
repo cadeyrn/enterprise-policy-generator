@@ -30,16 +30,16 @@
   [#145](https://github.com/cadeyrn/enterprise-policy-generator/issues/145)
 - new policy to enable or disable the picture in picture feature for videos, see
   [#151](https://github.com/cadeyrn/enterprise-policy-generator/issues/151)
-- new policy to require or prevent using a primary password; the value of the DisableMasterPasswordCreation policy will
-  automatically be migrated in saved configurations, see
+- new policy to require or prevent using a primary password; the DisableMasterPasswordCreation policy was removed, the
+  value of the DisableMasterPasswordCreation policy will automatically be migrated in saved configurations, see
   [#153](https://github.com/cadeyrn/enterprise-policy-generator/issues/153)
 - new policies to either enable the legacy default behaviour for SameSite cookies or to enable the legacy behaviour
   for specific websites; both policies excludes each other, see
   [#154](https://github.com/cadeyrn/enterprise-policy-generator/issues/154)
 - new policy to disable the default browser agent, see
   [#155](https://github.com/cadeyrn/enterprise-policy-generator/issues/155)
-- new policy to disable or configure the built-in PDF viewer; the value of the DisableBuiltinPDFViewer policy will
-  automatically be migrated in saved configurations, see
+- new policy to disable or configure the built-in PDF viewer; the DisableBuiltinPDFViewer policy was removed, the value
+  of the DisableBuiltinPDFViewer policy will automatically be migrated in saved configurations, see
   [#156](https://github.com/cadeyrn/enterprise-policy-generator/issues/156)
 - enhanced permissions policy to control autoplay of media and access to virtual reality devices, see
   [#136](https://github.com/cadeyrn/enterprise-policy-generator/issues/136)
