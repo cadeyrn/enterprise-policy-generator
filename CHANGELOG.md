@@ -43,7 +43,7 @@
   [#148](https://github.com/cadeyrn/enterprise-policy-generator/issues/148)
 - enhanced homepage policy to be able to set the homepage but to either allow or forbid to optionally start with the
   previous session, see [#149](https://github.com/cadeyrn/enterprise-policy-generator/issues/149)
-- enhanced authentication policy to enable or disable integrated authentication in prviate browsing, see
+- enhanced authentication policy to enable or disable integrated authentication in private browsing, see
   [#150](https://github.com/cadeyrn/enterprise-policy-generator/issues/150)
 - replaced menu bar policy with new one that accepts more options; the old policy will automatically be migrated in
   saved configurations, see [#127](https://github.com/cadeyrn/enterprise-policy-generator/issues/127)
