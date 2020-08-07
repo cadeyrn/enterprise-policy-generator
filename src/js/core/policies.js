@@ -74,12 +74,6 @@ const policies = {
     type : 'boolean'
   },
 
-  DisableMasterPasswordCreation : {
-    first_available : { mainstream : '60.0', esr : '60.0' },
-    ui_category : 'disable-features',
-    type : 'boolean'
-  },
-
   DisableSetDesktopBackground : {
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'disable-features',
@@ -1687,6 +1681,22 @@ const policies = {
       type : 'boolean',
       default : 'false'
     }
+  },
+
+  PrimaryPassword : {
+    first_available : { mainstream : '79.0', esr : '78.1' },
+    ui_category : 'security',
+    type : 'enum',
+    options : [
+      {
+        label : browser.i18n.getMessage('policy_description_PrimaryPassword_true'),
+        value : 'true'
+      },
+      {
+        label : browser.i18n.getMessage('policy_description_PrimaryPassword_false'),
+        value : 'false'
+      }
+    ]
   },
 
   OfferToSaveLogins : {

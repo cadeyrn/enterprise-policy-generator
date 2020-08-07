@@ -296,9 +296,6 @@
   "policy_description_DisableFormHistory": {
     "message": "Deaktiviere die Formular- und Such-Chronik"
   },
-  "policy_description_DisableMasterPasswordCreation": {
-    "message": "Deaktiviere die Master-Passwort-Funktion"
-  },
   "policy_description_DisablePasswordReveal": {
     "message": "Das Anzeigen gespeicherter Passwörter verhindern"
   },
@@ -793,6 +790,15 @@
   },
   "policy_description_Preference_ui_key_menuAccessKeyFocuses": {
     "message": "Die Alt-Taste kann benutzt werden, um die Menüleiste anzuzeigen"
+  },
+  "policy_description_PrimaryPassword": {
+    "message": "Hauptpasswort (ehemals Master-Passwort) erzwingen oder Funktion abschalten"
+  },
+  "policy_description_PrimaryPassword_false": {
+    "message": "Die Hauptpasswort-Funktion abschalten"
+  },
+  "policy_description_PrimaryPassword_true": {
+    "message": "Die Verwendung eines Hauptpassworts erzwingen"
   },
   "policy_description_PromptForDownloadLocation": {
     "message": "Vor dem Herunterladen jeder Datei fragen, wo diese gespeichert werden sollen"

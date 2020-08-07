@@ -296,9 +296,6 @@
   "policy_description_DisableFormHistory": {
     "message": "Отключить историю форм и поиска"
   },
-  "policy_description_DisableMasterPasswordCreation": {
-    "message": "Отключить функцию мастер-пароля"
-  },
   "policy_description_DisablePasswordReveal": {
     "message": "Отключить показ паролей для сохраненных логинов"
   },
@@ -793,6 +790,15 @@
   },
   "policy_description_Preference_ui_key_menuAccessKeyFocuses": {
     "message": "Клавиша Alt может использоваться для отображения строки меню"
+  },
+  "policy_description_PrimaryPassword": {
+    "message": "Require or prevent using a primary password (formerly known as  master password)"
+  },
+  "policy_description_PrimaryPassword_false": {
+    "message": "Remove the primary password functionality"
+  },
+  "policy_description_PrimaryPassword_true": {
+    "message": "A primary password is required"
   },
   "policy_description_PromptForDownloadLocation": {
     "message": "Запрашивать место сохранения файла перед загрузкой"

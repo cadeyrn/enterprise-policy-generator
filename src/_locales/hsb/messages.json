@@ -296,9 +296,6 @@
   "policy_description_DisableFormHistory": {
     "message": "Formularnu a pytansku historiju znjemóžnić"
   },
-  "policy_description_DisableMasterPasswordCreation": {
-    "message": "Funkciju hłowneho hesła znjemóžnić"
-  },
   "policy_description_DisablePasswordReveal": {
     "message": "Do not allow passwords to be revealed in saved logins"
   },
@@ -793,6 +790,15 @@
   },
   "policy_description_Preference_ui_key_menuAccessKeyFocuses": {
     "message": "Tasta Alt da so wužiwać, zo by menijowu lajstu pokazała"
+  },
+  "policy_description_PrimaryPassword": {
+    "message": "Require or prevent using a primary password (formerly known as  master password)"
+  },
+  "policy_description_PrimaryPassword_false": {
+    "message": "Remove the primary password functionality"
+  },
+  "policy_description_PrimaryPassword_true": {
+    "message": "A primary password is required"
   },
   "policy_description_PromptForDownloadLocation": {
     "message": "Před sćahowanjom kóždeje dataje so prašeć, hdźež maja so tute składować"

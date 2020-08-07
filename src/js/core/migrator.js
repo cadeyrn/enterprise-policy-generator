@@ -43,6 +43,21 @@ const migrator = {
           configuration.select.DisplayMenuBar_Select = 'default-on';
         }
 
+        /*
+         * @from
+         *
+         * "DisableMasterPasswordCreation": true
+         *
+         * @to
+         *
+         * "PrimaryPassword": false
+         */
+        if (configuration.checkboxes.DisableMasterPasswordCreation) {
+          configuration.checkboxes.PrimaryPassword = true;
+          configuration.select.PrimaryPassword_Select = 'false';
+          delete configuration.checkboxes.DisableMasterPasswordCreation;
+        }
+
         configurations[i].configuration = configuration;
       }
 

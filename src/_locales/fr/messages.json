@@ -296,9 +296,6 @@
   "policy_description_DisableFormHistory": {
     "message": "Désactiver le formulaire et l'historique de la barre de recherche"
   },
-  "policy_description_DisableMasterPasswordCreation": {
-    "message": "Désactiver la fonction mot de passe maître"
-  },
   "policy_description_DisablePasswordReveal": {
     "message": "Do not allow passwords to be revealed in saved logins"
   },
@@ -793,6 +790,15 @@
   },
   "policy_description_Preference_ui_key_menuAccessKeyFocuses": {
     "message": "La touche Alt permet d'afficher la barre de menu"
+  },
+  "policy_description_PrimaryPassword": {
+    "message": "Require or prevent using a primary password (formerly known as  master password)"
+  },
+  "policy_description_PrimaryPassword_false": {
+    "message": "Remove the primary password functionality"
+  },
+  "policy_description_PrimaryPassword_true": {
+    "message": "A primary password is required"
   },
   "policy_description_PromptForDownloadLocation": {
     "message": "Demander où enregistrer chaque fichier avant de le télécharger"

@@ -296,9 +296,6 @@
   "policy_description_DisableFormHistory": {
     "message": "禁用表单和搜索栏历史"
   },
-  "policy_description_DisableMasterPasswordCreation": {
-    "message": "禁用主密码功能"
-  },
   "policy_description_DisablePasswordReveal": {
     "message": "Do not allow passwords to be revealed in saved logins"
   },
@@ -793,6 +790,15 @@
   },
   "policy_description_Preference_ui_key_menuAccessKeyFocuses": {
     "message": "可按 Alt 键显示菜单栏"
+  },
+  "policy_description_PrimaryPassword": {
+    "message": "Require or prevent using a primary password (formerly known as  master password)"
+  },
+  "policy_description_PrimaryPassword_false": {
+    "message": "Remove the primary password functionality"
+  },
+  "policy_description_PrimaryPassword_true": {
+    "message": "A primary password is required"
   },
   "policy_description_PromptForDownloadLocation": {
     "message": "每次文件下载前询问保存位置"

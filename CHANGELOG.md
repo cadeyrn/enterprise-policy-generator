@@ -30,6 +30,9 @@
   [#145](https://github.com/cadeyrn/enterprise-policy-generator/issues/145)
 - new policy to enable or disable the picture in picture feature for videos, see
   [#151](https://github.com/cadeyrn/enterprise-policy-generator/issues/151)
+- new policy to require or prevent using a primary password; the value of the DisableMasterPasswordCreation policy will
+  automatically be migrated in saved configurations, see
+  [#153](https://github.com/cadeyrn/enterprise-policy-generator/issues/153)
 - enhanced permissions policy to control autoplay of media and access to virtual reality devices, see
   [#136](https://github.com/cadeyrn/enterprise-policy-generator/issues/136)
 - enhanced tracking protection policy to add exceptions, see

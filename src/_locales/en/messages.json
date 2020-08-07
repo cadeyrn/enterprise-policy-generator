@@ -296,9 +296,6 @@
   "policy_description_DisableFormHistory": {
     "message": "Disable the form and search bar history"
   },
-  "policy_description_DisableMasterPasswordCreation": {
-    "message": "Disable the master password feature"
-  },
   "policy_description_DisablePasswordReveal": {
     "message": "Do not allow passwords to be revealed in saved logins"
   },
@@ -793,6 +790,15 @@
   },
   "policy_description_Preference_ui_key_menuAccessKeyFocuses": {
     "message": "The Alt key can be used to show the menu bar"
+  },
+  "policy_description_PrimaryPassword": {
+    "message": "Require or prevent using a primary password (formerly known as  master password)"
+  },
+  "policy_description_PrimaryPassword_false": {
+    "message": "Remove the primary password functionality"
+  },
+  "policy_description_PrimaryPassword_true": {
+    "message": "A primary password is required"
   },
   "policy_description_PromptForDownloadLocation": {
     "message": "Ask where to save each file before downloading"
