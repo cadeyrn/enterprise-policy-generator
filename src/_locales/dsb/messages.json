@@ -275,6 +275,9 @@
   "policy_description_DisableBuiltinPDFViewer": {
     "message": "Zatwarjony PDF-wobglědowak (pdf.js) znjemóžniś"
   },
+  "policy_description_DisableDefaultBrowserAgent": {
+    "message": "Disable the default browser agent (Windows only)"
+  },
   "policy_description_DisableDeveloperTools": {
     "message": "Zatwarjone wuwijarske rědy znjemóžniś"
   },

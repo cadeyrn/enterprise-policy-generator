@@ -275,6 +275,9 @@
   "policy_description_DisableBuiltinPDFViewer": {
     "message": "Disable the built-in PDF viewer (pdf.js)"
   },
+  "policy_description_DisableDefaultBrowserAgent": {
+    "message": "Disable the default browser agent (Windows only)"
+  },
   "policy_description_DisableDeveloperTools": {
     "message": "Disable the built-in developer tools"
   },

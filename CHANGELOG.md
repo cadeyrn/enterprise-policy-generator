@@ -36,6 +36,8 @@
 - new policies to either enable the legacy default behaviour for SameSite cookies or to enable the legacy behaviour
   for specific websites; both policies excludes each other, see
   [#154](https://github.com/cadeyrn/enterprise-policy-generator/issues/154)
+- new policy to disable the default browser agent, see
+  [#155](https://github.com/cadeyrn/enterprise-policy-generator/issues/155)
 - enhanced permissions policy to control autoplay of media and access to virtual reality devices, see
   [#136](https://github.com/cadeyrn/enterprise-policy-generator/issues/136)
 - enhanced tracking protection policy to add exceptions, see

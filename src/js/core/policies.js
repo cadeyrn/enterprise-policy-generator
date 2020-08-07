@@ -241,6 +241,12 @@ const policies = {
     ]
   },
 
+  DisableDefaultBrowserAgent : {
+    first_available : { mainstream : '75.0', esr : '68.7' },
+    ui_category : 'disable-features',
+    type : 'boolean'
+  },
+
   // customization
 
   RequestedLocales : {
