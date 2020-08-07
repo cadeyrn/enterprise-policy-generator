@@ -116,6 +116,33 @@ const policies = {
     type : 'boolean'
   },
 
+  PictureInPicture : {
+    first_available : { mainstream : '78.0', esr : '78.0' },
+    is_lockable : true,
+    ui_category : 'disable-features',
+    type : 'object',
+    properties : [
+      {
+        name : 'Enabled',
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'false'
+          }
+        ]
+      }
+    ]
+  },
+
   UserMessaging : {
     first_available : { mainstream : '75.0', esr : '68.7' },
     is_lockable : true,

@@ -24,6 +24,8 @@
 
 - new policy to allow or prevent Firefox from messaging the user, see
   [#145](https://github.com/cadeyrn/enterprise-policy-generator/issues/145)
+- new policy to enable or disable the picture in picture feature for videos, see
+  [#151](https://github.com/cadeyrn/enterprise-policy-generator/issues/151)
 - enhanced permissions policy to control autoplay of media and access to virtual reality devices, see
   [#136](https://github.com/cadeyrn/enterprise-policy-generator/issues/136)
 - enhanced tracking protection policy to add exceptions, see

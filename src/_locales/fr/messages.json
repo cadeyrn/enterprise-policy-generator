@@ -698,6 +698,9 @@
   "policy_description_Permissions_VirtualReality_BlockNewRequests": {
     "message": "Block new requests asking to access your virtual reality devices"
   },
+  "policy_description_PictureInPicture": {
+    "message": "Enable or disable the picture in picture feature for videos"
+  },
   "policy_description_PopupBlocking": {
     "message": "Autoriser ou refuser l'utilisation des fenêtres pop-up"
   },
