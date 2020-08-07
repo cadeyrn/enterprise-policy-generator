@@ -60,6 +60,7 @@ input[type='text'], input[type='url'] {
   height: 30px;
   border: 2px solid var(--color-dark-border);
   border-radius: 2px;
+  outline: 0;
   transition: border ease 250ms;
 }
 
