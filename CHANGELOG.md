@@ -49,7 +49,7 @@
   nothing, see [#147](https://github.com/cadeyrn/enterprise-policy-generator/issues/147)
 - enhanced DNS over HTTPS policy to add excluded domains, see
   [#148](https://github.com/cadeyrn/enterprise-policy-generator/issues/148)
-- enhanced homepage policy to be able to set the homepage but to either allow or forbid to optionally start with the
+- enhanced homepage policy to be able to set the homepage to either allow or forbid to optionally start with the
   previous session, see [#149](https://github.com/cadeyrn/enterprise-policy-generator/issues/149)
 - enhanced authentication policy to enable or disable integrated authentication in private browsing, see
   [#150](https://github.com/cadeyrn/enterprise-policy-generator/issues/150)
