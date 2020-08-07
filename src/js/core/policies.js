@@ -1037,6 +1037,25 @@ const policies = {
     type : 'object',
     properties : [
       {
+        name : 'PrivateBrowsing',
+        label : browser.i18n.getMessage('policy_description_Authentication_PrivateBrowsing'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ]
+      },
+      {
         name : 'SPNEGO',
         label : browser.i18n.getMessage('policy_description_Authentication_SPNEGO'),
         type : 'array',

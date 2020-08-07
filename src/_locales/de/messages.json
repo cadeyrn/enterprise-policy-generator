@@ -149,6 +149,9 @@
   "policy_description_Authentication_NTLM": {
     "message": "NTLM"
   },
+  "policy_description_Authentication_PrivateBrowsing": {
+    "message": "Integrierte Authentifizierung im privaten Modus aktivieren"
+  },
   "policy_description_Authentication_SPNEGO": {
     "message": "SPNEGO"
   },

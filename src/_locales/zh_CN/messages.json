@@ -149,6 +149,9 @@
   "policy_description_Authentication_NTLM": {
     "message": "NTLM"
   },
+  "policy_description_Authentication_PrivateBrowsing": {
+    "message": "enable integrated authentication in prviate browsing"
+  },
   "policy_description_Authentication_SPNEGO": {
     "message": "SPNEGO"
   },
