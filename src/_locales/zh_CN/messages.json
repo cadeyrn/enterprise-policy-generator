@@ -237,7 +237,7 @@
     "message": "域名"
   },
   "policy_description_Cookies_AllowSession": {
-    "message": "Domains where cookies are only allowed for the current session"
+    "message": "Domains where cookies are only allowed for the current session (Firefox 79+, Firefox ESR 78.1+)"
   },
   "policy_description_Cookies_AllowSession_Domain": {
     "message": "域名"

@@ -237,7 +237,7 @@
     "message": "Domain"
   },
   "policy_description_Cookies_AllowSession": {
-    "message": "Domains, welche Cookies nur für die aktuelle Sitzung verwenden dürfen"
+    "message": "Domains, welche Cookies nur für die aktuelle Sitzung verwenden dürfen (Firefox 79+, Firefox ESR 78.1+)"
   },
   "policy_description_Cookies_AllowSession_Domain": {
     "message": "Domain"

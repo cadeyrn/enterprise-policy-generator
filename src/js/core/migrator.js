@@ -31,6 +31,15 @@ const migrator = {
         const { configuration } = configurations[i];
 
         /*
+         * @removed
+         *
+         * "SearchEngines": { "DefaultPrivate": "foo" }
+         */
+        if (configuration.input.SearchEngines_DefaultPrivate) {
+          delete configuration.select.SearchEngines_DefaultPrivate;
+        }
+
+        /*
          * @from
          *
          * "DisplayMenuBar": true
