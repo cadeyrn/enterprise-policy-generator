@@ -578,6 +578,12 @@
   "policy_description_InstallAddonsPermission_Deprecated": {
     "message": "Deprecated. The following policy should be used."
   },
+  "policy_description_LegacySameSiteCookieBehaviorEnabled": {
+    "message": "Enable the legacy default behaviour for SameSite cookies"
+  },
+  "policy_description_LegacySameSiteCookieBehaviorEnabledForDomainList": {
+    "message": "Enable the legacy behavior for SameSite cookies on specified websites"
+  },
   "policy_description_LocalFileLinks": {
     "message": "Allow specific websites to link to local files"
   },

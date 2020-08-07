@@ -2303,6 +2303,24 @@ const policies = {
     }
   },
 
+  LegacySameSiteCookieBehaviorEnabled : {
+    first_available : { mainstream : '76.0', esr : '78.0' },
+    exclude : 'LegacySameSiteCookieBehaviorEnabledForDomainList',
+    ui_category : 'others',
+    type : 'boolean'
+  },
+
+  LegacySameSiteCookieBehaviorEnabledForDomainList : {
+    first_available : { mainstream : '76.0', esr : '78.0' },
+    exclude : 'LegacySameSiteCookieBehaviorEnabled',
+    ui_category : 'others',
+    type : 'flat-array',
+    value : {
+      label : browser.i18n.getMessage('common_url'),
+      mandatory : true
+    }
+  },
+
   DontCheckDefaultBrowser : {
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'others',

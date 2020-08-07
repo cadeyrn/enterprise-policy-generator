@@ -578,6 +578,12 @@
   "policy_description_InstallAddonsPermission_Deprecated": {
     "message": "已不使用，请使用下面的策略。"
   },
+  "policy_description_LegacySameSiteCookieBehaviorEnabled": {
+    "message": "Enable default legacy SameSite cookie behavior setting"
+  },
+  "policy_description_LegacySameSiteCookieBehaviorEnabledForDomainList": {
+    "message": "Enable the legacy behavior for SameSite cookies on specified websites"
+  },
   "policy_description_LocalFileLinks": {
     "message": "允许指定网站链接到本地文件"
   },
