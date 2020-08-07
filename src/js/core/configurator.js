@@ -283,7 +283,7 @@ const configurator = {
     // increment array field counter
     const count = overrideCountValue ? parseInt(overrideCountValue) : parseInt(el.getAttribute('data-count')) + 1;
 
-    el.closest('.checkbox').querySelectorAll('[data-count]').forEach((el) => {
+    el.parentNode.parentNode.querySelectorAll('[data-count]').forEach((el) => {
       el.setAttribute('data-count', count);
     });
 
@@ -367,10 +367,14 @@ const configurator = {
     // remove the array item from the DOM
     if (!el.classList.contains('disabled-link')) {
       // set focus to previous input or select field
-      const previousField = el.parentNode.previousSibling.querySelector('input[type=text], input[type=url], select');
+      const previousSibling = el.parentNode.previousSibling;
 
-      if (previousField) {
-        previousField.focus();
+      if (previousSibling) {
+        const previousField = previousSibling.querySelector('input[type=text], input[type=url], select');
+
+        if (previousField) {
+          previousField.focus();
+        }
       }
 
       el.parentNode.remove();
@@ -619,7 +623,11 @@ const configurator = {
       elPostCaptionWrapper.appendChild(elPostCaption);
     }
 
-    const elSubOptions = configurator.addSubOptions(elObjectWrapper);
+    const elSubOptionsWrapper = document.createElement('div');
+    elSubOptionsWrapper.classList.add('sub-options-wrapper')
+    elObjectWrapper.appendChild(elSubOptionsWrapper);
+
+    const elSubOptions = configurator.addSubOptions(elSubOptionsWrapper);
 
     const elInputWrapperKey = document.createElement('div');
     elInputWrapperKey.classList.add('input');

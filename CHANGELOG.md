@@ -21,6 +21,8 @@
 - fixed error message in browser console, see [#141](https://github.com/cadeyrn/enterprise-policy-generator/issues/141)
 - improved enum fields so that these no longer causes empty policy objects if no value is set, see
   [#146](https://github.com/cadeyrn/enterprise-policy-generator/issues/146)
+- when adding configurations for more than one extension in the ExtensionSettings policy it was not possible to remove
+  these fields again, see [#160](https://github.com/cadeyrn/enterprise-policy-generator/issues/160)
   
 #### Enterprise Policies
 

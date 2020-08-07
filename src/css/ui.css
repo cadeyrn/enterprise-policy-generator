@@ -345,14 +345,14 @@ input[data-type='array'] ~ .sub-options, .object-array > div {
 
 input[data-type='array'] ~ .sub-options + .sub-options,
 input[data-type='key-value-pairs'] ~ .sub-options + .sub-options,
-input[data-type='key-object-list'] ~ .sub-options + .sub-options,
+input[data-type='key-object-list'] ~ .sub-options-wrapper .sub-options + .sub-options,
 .object-array > div:not(:nth-child(1)):not(:nth-child(2)) {
   margin-top: 30px;
 }
 
 input[data-type='array'] ~ .sub-options .array-action,
 input[data-type='key-value-pairs'] ~ .sub-options .array-action,
-input[data-type='key-object-list'] ~ .sub-options .array-action,
+input[data-type='key-object-list'] ~ .sub-options-wrapper .array-action,
 .object-array .array-action {
   position: absolute;
   top: 3px;
@@ -360,14 +360,14 @@ input[data-type='key-object-list'] ~ .sub-options .array-action,
 
 input[data-type='array'] ~ .sub-options .array-action[data-action='remove'],
 input[data-type='key-value-pairs'] ~ .sub-options .array-action[data-action='remove'],
-input[data-type='key-object-list'] ~ .sub-options .array-action[data-action='remove'],
+input[data-type='key-object-list'] ~ .sub-options-wrapper .array-action[data-action='remove'],
 .object-array .array-action[data-action='remove'] {
   right: 26px;
 }
 
 input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
 input[data-type='key-value-pairs'] ~ .sub-options .array-action[data-action='add'],
-input[data-type='key-object-list'] ~ .sub-options .array-action[data-action='add'],
+input[data-type='key-object-list'] ~ .sub-options-wrapper .array-action[data-action='add'],
 .object-array .array-action[data-action='add'] {
   right: 5px;
 }
