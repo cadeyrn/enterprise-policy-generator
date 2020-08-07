@@ -348,19 +348,19 @@
     "message": "Rědku cytańskich znamjenjow pó standarźe pokazaś"
   },
   "policy_description_DisplayMenuBar": {
-    "message": "Show the menu bar"
+    "message": "Menijowu rědku pokazaś"
   },
   "policy_description_DisplayMenuBar_always": {
-    "message": "The menubar is always shown and cannot be hidden"
+    "message": "Menijowa rědka se pśecej pokazujo a njedajo se schowaś"
   },
   "policy_description_DisplayMenuBar_default_off": {
-    "message": "The menubar is off by default but can be shown"
+    "message": "Menijowa rědka jo pó standarźe schowana, dajo se pak pokazaś"
   },
   "policy_description_DisplayMenuBar_default_on": {
-    "message": "The menubar is on by default but can be hidden"
+    "message": "Menijowa rědka se pó standarźe pokazujo, dajo se pak schowaś"
   },
   "policy_description_DisplayMenuBar_never": {
-    "message": "The menubar is hidden and cannot be shown"
+    "message": "Menijowa rědka jo pśecej schowana a njedajo se pokazaś"
   },
   "policy_description_DNSOverHTTPS": {
     "message": "DNS pśez HTTPS konfigurěrowaś"
@@ -606,28 +606,28 @@
     "message": "Zastojnik gronidłow dopołnje zmóžniś abo znjemóžniś"
   },
   "policy_description_Permissions": {
-    "message": "Configure permissions"
+    "message": "Pšawa konfigurěrowaś"
   },
   "policy_description_Permissions_Autoplay": {
-    "message": "Autoplay"
+    "message": "Awtomatiske wótgraśe"
   },
   "policy_description_Permissions_Autoplay_Allow": {
-    "message": "Allow autoplay for these URLs"
+    "message": "Awtomatiske wótgraśe za toś te URL dowóliś"
   },
   "policy_description_Permissions_Autoplay_Block": {
-    "message": "Block autoplay for these URLs"
+    "message": "Awtomatiske wótgraśe za toś te URL blokěrowaś"
   },
   "policy_description_Permissions_Autoplay_Default": {
-    "message": "Default for all websites"
+    "message": "Standard za wšykne websedła"
   },
   "policy_description_Permissions_Autoplay_Default_allow_audio_video": {
-    "message": "Allow Audio and Video"
+    "message": "Awdio a wideo dowóliś"
   },
   "policy_description_Permissions_Autoplay_Default_block_audio": {
-    "message": "Block Audio"
+    "message": "Awdio blokěrowaś"
   },
   "policy_description_Permissions_Autoplay_Default_block_audio_video": {
-    "message": "Block Audio and Video"
+    "message": "Awdio a wideo blokěrowaś"
   },
   "policy_description_Permissions_Camera": {
     "message": "Kamera"
@@ -678,7 +678,7 @@
     "message": "Nowe napšašowanja blokěrowaś, kótarež pominaju, powěźeńki dowóliś"
   },
   "policy_description_Permissions_VirtualReality": {
-    "message": "Virtual Reality (Firefox 80+, Firefox ESR 78.2+)"
+    "message": "Wirtuelna realita (Firefox 80+, Firefox ESR 78.2+)"
   },
   "policy_description_Permissions_VirtualReality_Allow": {
     "message": "Pśistup k toś tym URL dowóliś"
@@ -687,7 +687,7 @@
     "message": "Pśistup k toś tym URL blokěrowaś"
   },
   "policy_description_Permissions_VirtualReality_BlockNewRequests": {
-    "message": "Block new requests asking to access your virtual reality devices"
+    "message": "Nowe napšašowanja za pśistup k rědam wirtuelneje reality blokěrowaś"
   },
   "policy_description_PopupBlocking": {
     "message": "Wužywanje wuskokujucych woknow dowóliś abo zakazaś"
@@ -978,22 +978,22 @@
     "message": "Titel"
   },
   "policy_description_UserMessaging": {
-    "message": "Allow or prevent Firefox from messaging the user"
+    "message": "Dowóliś abo njedowóliś, až Firefox wužywarja informěrujo"
   },
   "policy_description_UserMessaging_ExtensionRecommendations": {
-    "message": "Recommend extensions while the user is visiting websites"
+    "message": "Rozšyrjenja dopórucyś, mjaztym až se wužywaŕ k websedłam woglědujo"
   },
   "policy_description_UserMessaging_FeatureRecommendations": {
-    "message": "Recommend browser features"
+    "message": "Funkcije wobglědowaka dopórucyś"
   },
   "policy_description_UserMessaging_SkipOnboarding": {
-    "message": "Disable onboarding screen for new users"
+    "message": "Witańsku wobrazowku za nowe wužywarje znjemóžniś"
   },
   "policy_description_UserMessaging_UrlbarInterventions": {
-    "message": "Show Firefox specific suggestions in the URL bar"
+    "message": "Specifiske naraźenja Firefox w adresowem pólu pokazaś"
   },
   "policy_description_UserMessaging_WhatsNew": {
-    "message": "Show the “What's New“ icon and menu item"
+    "message": "Symbol a menijowy zapisk „Nowe funkcije a změny“ pokazaś"
   },
   "policy_description_WebsiteFilter": {
     "message": "Zajźujo, až se websedła woglěduju. Móžośo „<all_urls>“ za blokěrowanje wšych URL wužywaś. Glejśo informaciski wótkaz za wšykne płaśiwe zapiski, ale jano HTTPS a HTTP se pódpěratej."
