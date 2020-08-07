@@ -58,6 +58,21 @@ const migrator = {
           delete configuration.checkboxes.DisableMasterPasswordCreation;
         }
 
+        /*
+         * @from
+         *
+         * "DisableBuiltinPDFViewer": true
+         *
+         * @to
+         *
+         * "PDFjs": { "Enabled": false }
+         */
+        if (configuration.checkboxes.DisableBuiltinPDFViewer) {
+          configuration.checkboxes.PDFjs = true;
+          configuration.select.PDFjs_Enabled = 'false';
+          delete configuration.checkboxes.DisableBuiltinPDFViewer;
+        }
+
         configurations[i].configuration = configuration;
       }
 

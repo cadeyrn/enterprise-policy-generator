@@ -44,12 +44,6 @@ const policies = {
     type : 'boolean'
   },
 
-  DisableBuiltinPDFViewer : {
-    first_available : { mainstream : '60.0', esr : '60.0' },
-    ui_category : 'disable-features',
-    type : 'boolean'
-  },
-
   DisableFirefoxScreenshots : {
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'disable-features',
@@ -2071,6 +2065,52 @@ const policies = {
   },
 
   // others
+
+  PDFjs : {
+    first_available : { mainstream : '77.0', esr : '68.9' },
+    ui_category : 'others',
+    type : 'object',
+    properties : [
+      {
+        name : 'Enabled',
+        type : 'enum',
+        label : browser.i18n.getMessage('policy_description_PDFjs_Enabled'),
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'false'
+          }
+        ]
+      },
+      {
+        name : 'EnablePermissions',
+        type : 'enum',
+        label : browser.i18n.getMessage('policy_description_PDFjs_EnablePermissions'),
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ]
+      }
+    ]
+  },
 
   DefaultDownloadDirectory : {
     first_available : { mainstream : '68.0', esr : '68.0' },
