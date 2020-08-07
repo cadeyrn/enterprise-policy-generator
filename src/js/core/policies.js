@@ -1157,6 +1157,15 @@ const policies = {
         }
       },
       {
+        name : 'AllowSession',
+        label : browser.i18n.getMessage('policy_description_Cookies_AllowSession'),
+        type : 'array',
+        items : {
+          label : browser.i18n.getMessage('policy_description_Cookies_AllowSession_Domain'),
+          type : 'url'
+        }
+      },
+      {
         name : 'Block',
         label : browser.i18n.getMessage('policy_description_Cookies_Block'),
         type : 'array',

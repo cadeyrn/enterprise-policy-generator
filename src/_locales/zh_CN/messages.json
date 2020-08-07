@@ -236,6 +236,12 @@
   "policy_description_Cookies_Allow_Domain": {
     "message": "域名"
   },
+  "policy_description_Cookies_AllowSession": {
+    "message": "Domains where cookies are only allowed for the current session"
+  },
+  "policy_description_Cookies_AllowSession_Domain": {
+    "message": "域名"
+  },
   "policy_description_Cookies_Block": {
     "message": "始终阻止设置 Cookies 的域名"
   },

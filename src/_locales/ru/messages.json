@@ -236,6 +236,12 @@
   "policy_description_Cookies_Allow_Domain": {
     "message": "Домен"
   },
+  "policy_description_Cookies_AllowSession": {
+    "message": "Domains where cookies are only allowed for the current session"
+  },
+  "policy_description_Cookies_AllowSession_Domain": {
+    "message": "Домен"
+  },
   "policy_description_Cookies_Block": {
     "message": "Домены, для которых cookie всегда блокируются"
   },

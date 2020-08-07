@@ -53,6 +53,8 @@
   previous session, see [#149](https://github.com/cadeyrn/enterprise-policy-generator/issues/149)
 - enhanced authentication policy to enable or disable integrated authentication in private browsing, see
   [#150](https://github.com/cadeyrn/enterprise-policy-generator/issues/150)
+- enhanced cookies policy to allow to configure domains where cookies are only allowed for the current session, see
+  [#157](https://github.com/cadeyrn/enterprise-policy-generator/issues/157)
 - replaced menu bar policy with new one that accepts more options; the old policy will automatically be migrated in
   saved configurations, see [#127](https://github.com/cadeyrn/enterprise-policy-generator/issues/127)
 - removed SearchEngines | DefaultPrivate because this feature never reached a stable release of Firefox, see
