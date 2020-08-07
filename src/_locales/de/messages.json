@@ -552,7 +552,10 @@
     "message": "Starte Firefox mit…"
   },
   "policy_description_Homepage_StartPage_Homepage": {
-    "message": "… der eingestellten Startseite"
+    "message": "… der eingestellten Startseite (der Nutzer kann optional aber auch mit der letzten Browser-Sitzung starten)"
+  },
+  "policy_description_Homepage_StartPage_Homepage_locked": {
+    "message": "… der eingestellten Startseite (der Nutzer kann nicht mit der letzten Browser-Sitzung starten)"
   },
   "policy_description_Homepage_StartPage_None": {
     "message": "… einer leeren Seite"

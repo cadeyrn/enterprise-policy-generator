@@ -552,7 +552,10 @@
     "message": "Démarrer Firefox avec…"
   },
   "policy_description_Homepage_StartPage_Homepage": {
-    "message": "… le site web définis comme page d'accueil"
+    "message": "… le site web définis comme page d'accueil (but the user can also optionally start with the previous browser session)"
+  },
+  "policy_description_Homepage_StartPage_Homepage_locked": {
+    "message": "… le site web définis comme page d'accueil (the user cannot start with the previous browser session)"
   },
   "policy_description_Homepage_StartPage_None": {
     "message": "… une page vide"

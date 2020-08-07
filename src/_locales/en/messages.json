@@ -552,7 +552,10 @@
     "message": "Start Firefox with…"
   },
   "policy_description_Homepage_StartPage_Homepage": {
-    "message": "… the website defined as homepage"
+    "message": "… the website defined as homepage (but the user can also optionally start with the previous browser session)"
+  },
+  "policy_description_Homepage_StartPage_Homepage_locked": {
+    "message": "… the website defined as homepage (the user cannot start with the previous browser session)"
   },
   "policy_description_Homepage_StartPage_None": {
     "message": "… an empty page"

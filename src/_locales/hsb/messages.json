@@ -552,7 +552,10 @@
     "message": "Firefox startować z…"
   },
   "policy_description_Homepage_StartPage_Homepage": {
-    "message": "… nastajenej startowej stronu"
+    "message": "… nastajenej startowej stronu (but the user can also optionally start with the previous browser session)"
+  },
+  "policy_description_Homepage_StartPage_Homepage_locked": {
+    "message": "… nastajenej startowej stronu (the user cannot start with the previous browser session)"
   },
   "policy_description_Homepage_StartPage_None": {
     "message": "… prózdnej stronu"

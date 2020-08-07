@@ -293,6 +293,10 @@ const policies = {
             value : 'homepage'
           },
           {
+            label : browser.i18n.getMessage('policy_description_Homepage_StartPage_Homepage_locked'),
+            value : 'homepage-locked'
+          },
+          {
             label : browser.i18n.getMessage('policy_description_Homepage_StartPage_None'),
             value : 'none'
           },

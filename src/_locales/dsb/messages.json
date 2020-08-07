@@ -552,7 +552,10 @@
     "message": "Firefox startowaś z…"
   },
   "policy_description_Homepage_StartPage_Homepage": {
-    "message": "… nastajonym startowym bokom"
+    "message": "… nastajonym startowym bokom (but the user can also optionally start with the previous browser session)"
+  },
+  "policy_description_Homepage_StartPage_Homepage_locked": {
+    "message": "… nastajonym startowym bokom (the user cannot start with the previous browser session)"
   },
   "policy_description_Homepage_StartPage_None": {
     "message": "… proznym bokom"

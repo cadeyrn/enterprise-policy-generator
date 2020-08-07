@@ -552,7 +552,10 @@
     "message": "Firefox 启动时显示…"
   },
   "policy_description_Homepage_StartPage_Homepage": {
-    "message": "… 设置为主页的网站"
+    "message": "… 设置为主页的网站 (but the user can also optionally start with the previous browser session)"
+  },
+  "policy_description_Homepage_StartPage_Homepage_locked": {
+    "message": "… 设置为主页的网站 (the user cannot start with the previous browser session)"
   },
   "policy_description_Homepage_StartPage_None": {
     "message": "… 空白页"

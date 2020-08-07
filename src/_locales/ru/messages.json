@@ -552,7 +552,10 @@
     "message": "Запускать Firefox с…"
   },
   "policy_description_Homepage_StartPage_Homepage": {
-    "message": "… сайтом назначенным домашней страницей"
+    "message": "… сайтом назначенным домашней страницей (but the user can also optionally start with the previous browser session)"
+  },
+  "policy_description_Homepage_StartPage_Homepage_locked": {
+    "message": "… сайтом назначенным домашней страницей (the user cannot start with the previous browser session)"
   },
   "policy_description_Homepage_StartPage_None": {
     "message": "… пустой страницей"
