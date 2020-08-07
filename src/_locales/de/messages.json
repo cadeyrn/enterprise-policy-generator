@@ -272,9 +272,6 @@
   "policy_description_DisableAppUpdate": {
     "message": "Firefox am Aktualisieren hindern"
   },
-  "policy_description_DisableBuiltinPDFViewer": {
-    "message": "Deaktiviere den eingebauten PDF-Betrachter (pdf.js)"
-  },
   "policy_description_DisableDefaultBrowserAgent": {
     "message": "Deaktiviere den Standard-Browser-Agent (nur Windows)"
   },
@@ -619,6 +616,15 @@
   },
   "policy_description_PasswordManagerEnabled": {
     "message": "Passwort-Manager vollständig aktivieren oder deaktivieren"
+  },
+  "policy_description_PDFjs": {
+    "message": "Deaktivieren oder Konfigurieren des integrierten PDF-Betrachters"
+  },
+  "policy_description_PDFjs_Enabled": {
+    "message": "Den integrierten PDF-Betrachter deaktivieren"
+  },
+  "policy_description_PDFjs_EnablePermissions": {
+    "message": "Dokumenten-Berechtigungen wie das Verhindern des Kopierens von Text berücksichtigen"
   },
   "policy_description_Permissions": {
     "message": "Berechtigungen konfigurieren"

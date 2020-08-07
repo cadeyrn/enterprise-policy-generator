@@ -272,9 +272,6 @@
   "policy_description_DisableAppUpdate": {
     "message": "Empêcher Firefox de se mettre à jour"
   },
-  "policy_description_DisableBuiltinPDFViewer": {
-    "message": "Désactiver la visionneuse PDF intégrée (pdf.js)"
-  },
   "policy_description_DisableDefaultBrowserAgent": {
     "message": "Disable the default browser agent (Windows only)"
   },
@@ -619,6 +616,15 @@
   },
   "policy_description_PasswordManagerEnabled": {
     "message": "Activer ou désactiver complètement le gestionnaire de mots de passe"
+  },
+  "policy_description_PDFjs": {
+    "message": "Disable or configure the built-in PDF viewer"
+  },
+  "policy_description_PDFjs_Enabled": {
+    "message": "Enable or disable the built-in PDF viewer"
+  },
+  "policy_description_PDFjs_EnablePermissions": {
+    "message": "Honor document permissions like preventing the copying of text"
   },
   "policy_description_Permissions": {
     "message": "Configure permissions"

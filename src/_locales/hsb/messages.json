@@ -272,9 +272,6 @@
   "policy_description_DisableAppUpdate": {
     "message": "Firefox při aktualizowanju haćić"
   },
-  "policy_description_DisableBuiltinPDFViewer": {
-    "message": "Zatwarjeny PDF-wobhladowak (pdf.js) znjemóžnić"
-  },
   "policy_description_DisableDefaultBrowserAgent": {
     "message": "Disable the default browser agent (Windows only)"
   },
@@ -619,6 +616,15 @@
   },
   "policy_description_PasswordManagerEnabled": {
     "message": "Zrjadowak hesłow dospołnje zmóžnić abo znjemóžnić"
+  },
+  "policy_description_PDFjs": {
+    "message": "Disable or configure the built-in PDF viewer"
+  },
+  "policy_description_PDFjs_Enabled": {
+    "message": "Enable or disable the built-in PDF viewer"
+  },
+  "policy_description_PDFjs_EnablePermissions": {
+    "message": "Honor document permissions like preventing the copying of text"
   },
   "policy_description_Permissions": {
     "message": "Prawa konfigurować"

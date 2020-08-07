@@ -272,9 +272,6 @@
   "policy_description_DisableAppUpdate": {
     "message": "阻止 Firefox 进行更新"
   },
-  "policy_description_DisableBuiltinPDFViewer": {
-    "message": "禁用内置的 PDF 阅读器 (pdf.js)"
-  },
   "policy_description_DisableDefaultBrowserAgent": {
     "message": "Disable the default browser agent (Windows only)"
   },
@@ -619,6 +616,15 @@
   },
   "policy_description_PasswordManagerEnabled": {
     "message": "完全启用或禁用密码管理器"
+  },
+  "policy_description_PDFjs": {
+    "message": "Disable or configure the built-in PDF viewer"
+  },
+  "policy_description_PDFjs_Enabled": {
+    "message": "Enable or disable the built-in PDF viewer"
+  },
+  "policy_description_PDFjs_EnablePermissions": {
+    "message": "Honor document permissions like preventing the copying of text"
   },
   "policy_description_Permissions": {
     "message": "Configure permissions"
