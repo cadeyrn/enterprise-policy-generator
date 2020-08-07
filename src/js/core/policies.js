@@ -851,6 +851,15 @@ const policies = {
         name : 'ProviderURL',
         label : browser.i18n.getMessage('policy_description_DNSOverHTTPS_ProviderURL'),
         type : 'url'
+      },
+      {
+        name : 'ExcludedDomains',
+        label : browser.i18n.getMessage('policy_description_DNSOverHTTPS_ExcludedDomains'),
+        type : 'array',
+        items : {
+          label : browser.i18n.getMessage('common_url'),
+          type : 'url'
+        }
       }
     ]
   },

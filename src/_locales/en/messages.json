@@ -371,6 +371,9 @@
   "policy_description_DNSOverHTTPS_Enabled_true": {
     "message": "Enable DNS over HTTPS"
   },
+  "policy_description_DNSOverHTTPS_ExcludedDomains": {
+    "message": "Exclude domains from DNS over HTTPS"
+  },
   "policy_description_DNSOverHTTPS_ProviderURL": {
     "message": "Provider URL"
   },

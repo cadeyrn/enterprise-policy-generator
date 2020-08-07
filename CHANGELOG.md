@@ -30,6 +30,8 @@
   [#144](https://github.com/cadeyrn/enterprise-policy-generator/issues/144)
 - enhanced policy to clear browser data on shutdown to be lockable and to allow setting some and not only all or
   nothing, see [#147](https://github.com/cadeyrn/enterprise-policy-generator/issues/147)
+- enhanced DNS over HTTPS policy to add excluded domains, see
+  [#148](https://github.com/cadeyrn/enterprise-policy-generator/issues/148)
 - replaced menu bar policy with new one that accepts more options; the old policy will automatically be migrated in
   saved configurations, see [#127](https://github.com/cadeyrn/enterprise-policy-generator/issues/127)
 - removed SearchEngines | DefaultPrivate because this feature never reached a stable release of Firefox, see
