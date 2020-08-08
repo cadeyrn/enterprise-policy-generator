@@ -23,6 +23,9 @@
   [#146](https://github.com/cadeyrn/enterprise-policy-generator/issues/146)
 - when adding configurations for more than one extension in the ExtensionSettings policy it was not possible to remove
   these fields again, see [#160](https://github.com/cadeyrn/enterprise-policy-generator/issues/160)
+- the RequestedLocales policy allows an empty string to use the operating system's language. However, empty strings
+  should not be allowed if more than one value is used. Also it shouldn't be possible to add duplicate language codes,
+  see [#161](https://github.com/cadeyrn/enterprise-policy-generator/issues/161)
   
 #### Enterprise Policies
 

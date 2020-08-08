@@ -158,7 +158,10 @@ const output = {
         policymanager.add(el.getAttribute('data-name'), '');
       }
       else {
-        policymanager.add(el.getAttribute('data-name'), items);
+        // only allow unique and non-empty values
+        const uniqueItems = [...new Set(items.filter((item) => item))];
+
+        policymanager.add(el.getAttribute('data-name'), uniqueItems);
       }
     }
   },
