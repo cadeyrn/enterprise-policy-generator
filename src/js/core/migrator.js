@@ -82,6 +82,46 @@ const migrator = {
           delete configuration.checkboxes.DisableBuiltinPDFViewer;
         }
 
+        /*
+         * @from
+         *
+         * "InstallAddonsPermission": { "Allow": [], "Default": true|false }
+         *
+         * @to
+         *
+         * "ExtensionSettings": { "*" : { "install_sources": [], "installation_mode": "allowed"|"blocked" } }
+         */
+        if (configuration.checkboxes.InstallAddonsPermission && !configuration.checkboxes.ExtensionSettings) {
+          configuration.checkboxes.ExtensionSettings = true;
+
+          // installation_mode
+          const mode = configuration.select.InstallAddonsPermission_Default === 'true' ? 'allowed' : 'blocked';
+          configuration.select.ExtensionSettings_installation_mode_installation_mode = mode;
+          delete configuration.select.InstallAddonsPermission_Default;
+
+          // install_sources
+          if (!configuration.arrayfields.ExtensionSettings_install_sources_install_sources) {
+            configuration.arrayfields.ExtensionSettings_install_sources_install_sources = [];
+          }
+
+          for (const idx of Object.values(configuration.arrayfields.InstallAddonsPermission_Allow)) {
+            configuration.arrayfields.ExtensionSettings_install_sources_install_sources.push(idx);
+          }
+
+          delete configuration.arrayfields.InstallAddonsPermission_Allow;
+
+          for (const [key, url] of Object.entries(configuration.input)) {
+            const matches = key.match(/^InstallAddonsPermission_Allow_(\d+)/i);
+            // eslint-disable-next-line max-depth
+            if (matches) {
+              configuration.input['ExtensionSettings_install_sources_install_sources_' + matches[1]] = url;
+              delete configuration.input['InstallAddonsPermission_Allow_' + matches[1]];
+            }
+          }
+
+          delete configuration.checkboxes.InstallAddonsPermission;
+        }
+
         configurations[i].configuration = configuration;
       }
 

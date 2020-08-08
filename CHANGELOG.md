@@ -63,6 +63,8 @@
   [#157](https://github.com/cadeyrn/enterprise-policy-generator/issues/157)
 - replaced menu bar policy with new one that accepts more options; the old policy will automatically be migrated in
   saved configurations, see [#127](https://github.com/cadeyrn/enterprise-policy-generator/issues/127)
+- removed InstallAddonsPermission policy and migrated all data to ExtensionSettings policy in saved configurations, see
+  [#168](https://github.com/cadeyrn/enterprise-policy-generator/issues/168)
 - removed SearchEngines | DefaultPrivate because this feature never reached a stable release of Firefox, see
   [#140](https://github.com/cadeyrn/enterprise-policy-generator/issues/140)
 

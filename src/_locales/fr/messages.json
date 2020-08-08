@@ -572,21 +572,6 @@
   "policy_description_Homepage_StartPage_Previous_Session": {
     "message": "… la session de navigation précédente"
   },
-  "policy_description_InstallAddonsPermission": {
-    "message": "Permettre aux sites web d'installer des add-ons"
-  },
-  "policy_description_InstallAddonsPermission_Allow": {
-    "message": "Les sites Web qui peuvent installer des extensions à moins que l'installation d'add-ons soit désactivée (addons.mozilla.org est déjà autorisé)."
-  },
-  "policy_description_InstallAddonsPermission_Default_false": {
-    "message": "les add-ons ne peuvent pas être installés par l'utilisateur"
-  },
-  "policy_description_InstallAddonsPermission_Default_true": {
-    "message": "les add-ons peuvent être installés par l'utilisateur"
-  },
-  "policy_description_InstallAddonsPermission_Deprecated": {
-    "message": "Déprécié. La politique suivante devrait être utilisée."
-  },
   "policy_description_LegacySameSiteCookieBehaviorEnabled": {
     "message": "Enable default legacy SameSite cookie behavior setting"
   },

@@ -572,21 +572,6 @@
   "policy_description_Homepage_StartPage_Previous_Session": {
     "message": "… предыдущей сессией браузера"
   },
-  "policy_description_InstallAddonsPermission": {
-    "message": "Разрешить сайтам устанавливать дополнения"
-  },
-  "policy_description_InstallAddonsPermission_Allow": {
-    "message": "Сайты, которые могут устанавливать расширения, если установка дополнений не отключена (addons.mozilla.org уже разрешен)"
-  },
-  "policy_description_InstallAddonsPermission_Default_false": {
-    "message": "дополнения не могут быть установлены пользователем"
-  },
-  "policy_description_InstallAddonsPermission_Default_true": {
-    "message": "дополнения могут быть установлены пользователем"
-  },
-  "policy_description_InstallAddonsPermission_Deprecated": {
-    "message": "Устаревшее. Следует использовать следующую политику."
-  },
   "policy_description_LegacySameSiteCookieBehaviorEnabled": {
     "message": "Enable default legacy SameSite cookie behavior setting"
   },

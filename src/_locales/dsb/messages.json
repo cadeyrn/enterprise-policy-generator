@@ -572,21 +572,6 @@
   "policy_description_Homepage_StartPage_Previous_Session": {
     "message": "… slědnym pósejźenim wobglědowaka"
   },
-  "policy_description_InstallAddonsPermission": {
-    "message": "Websedłam dowóliś, rozšyrjenja instalěrowaś"
-  },
-  "policy_description_InstallAddonsPermission_Allow": {
-    "message": "Websedła, kótarež mógu rozšyrjenja instalěrowaś, snaźkuli instalacija dodankow jo znjemóžnjona (addons.mozilla.org jo pśecej dowólony)"
-  },
-  "policy_description_InstallAddonsPermission_Default_false": {
-    "message": "Rozšyrjenja njedaju se wót wužywarja instalěrowaś"
-  },
-  "policy_description_InstallAddonsPermission_Default_true": {
-    "message": "Rozšyrjenja daju se wót wužywarja instalěrowaś"
-  },
-  "policy_description_InstallAddonsPermission_Deprecated": {
-    "message": "Zestarjony. Pšawidło pód tym ma se wužywaś."
-  },
   "policy_description_LegacySameSiteCookieBehaviorEnabled": {
     "message": "Enable default legacy SameSite cookie behavior setting"
   },

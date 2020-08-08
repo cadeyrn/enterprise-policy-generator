@@ -643,38 +643,6 @@ const policies = {
     }
   },
 
-  InstallAddonsPermission : {
-    deprecation_note : browser.i18n.getMessage('policy_description_InstallAddonsPermission_Deprecated'),
-    first_available : { mainstream : '60.0', esr : '60.0' },
-    ui_category : 'customization',
-    type : 'object',
-    properties : [
-      {
-        name : 'Default',
-        type : 'enum',
-        options : [
-          {
-            label : browser.i18n.getMessage('policy_description_InstallAddonsPermission_Default_true'),
-            value : 'true'
-          },
-          {
-            label : browser.i18n.getMessage('policy_description_InstallAddonsPermission_Default_false'),
-            value : 'false'
-          }
-        ]
-      },
-      {
-        name : 'Allow',
-        label : browser.i18n.getMessage('policy_description_InstallAddonsPermission_Allow'),
-        type : 'array',
-        items : {
-          label : browser.i18n.getMessage('common_url'),
-          type : 'url'
-        }
-      }
-    ]
-  },
-
   Extensions : {
     deprecation_note : browser.i18n.getMessage('policy_description_Extensions_Deprecated'),
     first_available : { mainstream : '62.0', esr : '60.0' },
