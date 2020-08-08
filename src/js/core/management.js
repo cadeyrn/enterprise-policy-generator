@@ -315,8 +315,16 @@ const management = {
     // if the downloads permission is granted hide the link for granting permission and show the
     // real export link instead
     if (granted) {
-      document.querySelector('.fake-export-link').classList.add('hidden');
-      document.querySelector('.export-link').classList.remove('hidden');
+      const elFakeExportLink = document.querySelector('.fake-export-link');
+      const elExportLink = document.querySelector('.export-link');
+
+      if (elFakeExportLink) {
+        elFakeExportLink.classList.add('hidden');
+      }
+
+      if (elExportLink) {
+        elExportLink.classList.remove('hidden');
+      }
     }
   },
 
