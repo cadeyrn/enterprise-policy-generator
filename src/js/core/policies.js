@@ -1951,14 +1951,14 @@ const policies = {
 
   DisableAppUpdate : {
     first_available : { mainstream : '62.0', esr : '60.0' },
-    exclude: 'AppAutoUpdate',
+    exclude : 'AppAutoUpdate',
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
 
   AppAutoUpdate : {
     first_available : { mainstream : '75.0', esr : '68.7' },
-    exclude: 'DisableAppUpdate',
+    exclude : 'DisableAppUpdate',
     ui_category : 'updates-and-data',
     type : 'enum',
     options : [
