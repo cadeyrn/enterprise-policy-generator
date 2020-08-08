@@ -36,7 +36,7 @@ const migrator = {
          * "SearchEngines": { "DefaultPrivate": "foo" }
          */
         if (configuration.input.SearchEngines_DefaultPrivate) {
-          delete configuration.select.SearchEngines_DefaultPrivate;
+          delete configuration.input.SearchEngines_DefaultPrivate;
         }
 
         /*
