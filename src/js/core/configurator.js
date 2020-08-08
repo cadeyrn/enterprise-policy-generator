@@ -367,7 +367,7 @@ const configurator = {
     // remove the array item from the DOM
     if (!el.classList.contains('disabled-link')) {
       // set focus to previous input or select field
-      const previousSibling = el.parentNode.previousSibling;
+      const { previousSibling } = el.parentNode;
 
       if (previousSibling) {
         const previousField = previousSibling.querySelector('input[type=text], input[type=url], select');
@@ -624,7 +624,7 @@ const configurator = {
     }
 
     const elSubOptionsWrapper = document.createElement('div');
-    elSubOptionsWrapper.classList.add('sub-options-wrapper')
+    elSubOptionsWrapper.classList.add('sub-options-wrapper');
     elObjectWrapper.appendChild(elSubOptionsWrapper);
 
     const elSubOptions = configurator.addSubOptions(elSubOptionsWrapper);
