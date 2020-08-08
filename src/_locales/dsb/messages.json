@@ -128,6 +128,9 @@
   "policy_category_others": {
     "message": "Druge směrnice"
   },
+  "policy_description_AppAutoUpdate": {
+    "message": "Install Firefox updates automatically"
+  },
   "policy_description_AppUpdateURL": {
     "message": "Wótchylny serwerowy URL za aktualizacije Firefox"
   },
