@@ -153,7 +153,7 @@
     "message": "NTLM"
   },
   "policy_description_Authentication_PrivateBrowsing": {
-    "message": "enable integrated authentication in prviate browsing"
+    "message": "Enable integrated authentication in prviate browsing"
   },
   "policy_description_Authentication_SPNEGO": {
     "message": "SPNEGO"

@@ -153,7 +153,7 @@
     "message": "NTLM"
   },
   "policy_description_Authentication_PrivateBrowsing": {
-    "message": "enable integrated authentication in prviate browsing"
+    "message": "Integrowanu awtentifikaciju w priwatnym modusu zmóžnić"
   },
   "policy_description_Authentication_SPNEGO": {
     "message": "SPNEGO"
@@ -240,7 +240,7 @@
     "message": "Domena"
   },
   "policy_description_Cookies_AllowSession": {
-    "message": "Domains where cookies are only allowed for the current session (Firefox 79+, Firefox ESR 78.1+)"
+    "message": "Domeny, kotrež smědźa placki jenož za aktualne posedźenje wužiwać (Firefox 79+, Firefox ESR 78.1+)"
   },
   "policy_description_Cookies_AllowSession_Domain": {
     "message": "Domena"
@@ -282,7 +282,7 @@
     "message": "Firefox při aktualizowanju haćić"
   },
   "policy_description_DisableDefaultBrowserAgent": {
-    "message": "Disable the default browser agent (Windows only)"
+    "message": "Standardny agent wobhladowaka znjemóžnić (jenož Windows)"
   },
   "policy_description_DisableDeveloperTools": {
     "message": "Zatwarjene wuwiwarske nastroje znjemóžnić"
@@ -381,7 +381,7 @@
     "message": "DNS přez HTTPS zmóžnić"
   },
   "policy_description_DNSOverHTTPS_ExcludedDomains": {
-    "message": "Exclude domains from DNS over HTTPS"
+    "message": "Domeny z DNS over HTTPS wuzamknyć"
   },
   "policy_description_DNSOverHTTPS_ProviderURL": {
     "message": "URL poskićowarja"
@@ -561,10 +561,10 @@
     "message": "Firefox startować z…"
   },
   "policy_description_Homepage_StartPage_Homepage": {
-    "message": "… nastajenej startowej stronu (but the user can also optionally start with the previous browser session)"
+    "message": "… nastajenej startowej stronu (wužiwar móže na přeće tež z poslednim posedźenjom wobhladowaka startować)"
   },
   "policy_description_Homepage_StartPage_Homepage_locked": {
-    "message": "… nastajenej startowej stronu (the user cannot start with the previous browser session)"
+    "message": "… nastajenej startowej stronu (wužiwar njemóže z poslednim posedźenjom wobhladowaka startować)"
   },
   "policy_description_Homepage_StartPage_None": {
     "message": "… prózdnej stronu"
@@ -573,10 +573,10 @@
     "message": "… poslednim posedźenjom wobhladowaka"
   },
   "policy_description_LegacySameSiteCookieBehaviorEnabled": {
-    "message": "Enable default legacy SameSite cookie behavior setting"
+    "message": "Zestarjene standardne zadźerženje plackow SameSite zmóžnić"
   },
   "policy_description_LegacySameSiteCookieBehaviorEnabledForDomainList": {
-    "message": "Enable the legacy behavior for SameSite cookies on specified websites"
+    "message": "Na wěstych websydłach zestarjene zadźerženje plackow SameSite zmóžnić"
   },
   "policy_description_LocalFileLinks": {
     "message": "Wěstym websydłam dowolić, na lokalne dataje wotkazać"
@@ -612,13 +612,13 @@
     "message": "Zrjadowak hesłow dospołnje zmóžnić abo znjemóžnić"
   },
   "policy_description_PDFjs": {
-    "message": "Disable or configure the built-in PDF viewer"
+    "message": "Integrowany PDF-wobhladowak znjemóžnić abo konfigurować"
   },
   "policy_description_PDFjs_Enabled": {
-    "message": "Enable or disable the built-in PDF viewer"
+    "message": "Integrowany PDF-wobhladowak znjemóžnić"
   },
   "policy_description_PDFjs_EnablePermissions": {
-    "message": "Honor document permissions like preventing the copying of text"
+    "message": "Dokumentowe prawa kaž zadźěwanje kopěrowanja teksta wobkedźbować"
   },
   "policy_description_Permissions": {
     "message": "Prawa konfigurować"
@@ -705,7 +705,7 @@
     "message": "Nowe naprašowanja za přistup ke gratam wirtualneje reality blokować"
   },
   "policy_description_PictureInPicture": {
-    "message": "Enable or disable the picture in picture feature for videos"
+    "message": "Modus wobraz-we-wobrazu za wideja zmóžnić abo znjemóžnić"
   },
   "policy_description_PopupBlocking": {
     "message": "Wužiwanje wuskakowacych woknow dowolić abo zakazać"
@@ -801,13 +801,13 @@
     "message": "Tasta Alt da so wužiwać, zo by menijowu lajstu pokazała"
   },
   "policy_description_PrimaryPassword": {
-    "message": "Require or prevent using a primary password (formerly known as  master password)"
+    "message": "Hłowne hesło wunuzować abo funkciju wotpinać"
   },
   "policy_description_PrimaryPassword_false": {
-    "message": "Remove the primary password functionality"
+    "message": "Funkciju hłowneho hesła wotpinać"
   },
   "policy_description_PrimaryPassword_true": {
-    "message": "A primary password is required"
+    "message": "Wužiwanje hłowneho hesła wunuzować"
   },
   "policy_description_PromptForDownloadLocation": {
     "message": "Před sćahowanjom kóždeje dataje so prašeć, hdźež maja so tute składować"
