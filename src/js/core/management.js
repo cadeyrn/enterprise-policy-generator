@@ -1,6 +1,6 @@
 'use strict';
 
-/* global DOWNLOAD_PERMISSION, output, serializer */
+/* global DOWNLOAD_PERMISSION, migrator, output, serializer */
 
 const elConfigurationTable = document.getElementById('list-configurations-table');
 const elImportConfigurationLink = document.getElementById('import-configuration');
@@ -474,7 +474,9 @@ const management = {
 
       configurations.push(configuration);
 
-      await browser.storage.local.set({ configurations : configurations });
+      // migrate old configuration files and set the schemaVersion to 1 to run all migrations
+      await browser.storage.local.set({ configurations : configurations, schemaVersion : 1 });
+      migrator.migrate();
 
       management.showListConfigurationsDialog();
     });
