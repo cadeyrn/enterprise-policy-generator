@@ -104,11 +104,14 @@ const migrator = {
             configuration.arrayfields.ExtensionSettings_install_sources_install_sources = [];
           }
 
-          for (const idx of Object.values(configuration.arrayfields.InstallAddonsPermission_Allow)) {
-            configuration.arrayfields.ExtensionSettings_install_sources_install_sources.push(idx);
-          }
+          if (configuration.arrayfields.InstallAddonsPermission_Allow) {
+            // eslint-disable-next-line max-depth
+            for (const idx of Object.values(configuration.arrayfields.InstallAddonsPermission_Allow)) {
+              configuration.arrayfields.ExtensionSettings_install_sources_install_sources.push(idx);
+            }
 
-          delete configuration.arrayfields.InstallAddonsPermission_Allow;
+            delete configuration.arrayfields.InstallAddonsPermission_Allow;
+          }
 
           for (const [key, url] of Object.entries(configuration.input)) {
             const matches = key.match(/^InstallAddonsPermission_Allow_(\d+)/i);
