@@ -46,12 +46,14 @@
 - new policy to disable or configure the built-in PDF viewer; the DisableBuiltinPDFViewer policy was removed, the value
   of the DisableBuiltinPDFViewer policy will automatically be migrated in saved configurations, see
   [#156](https://github.com/cadeyrn/enterprise-policy-generator/issues/156)
-- new policy to enable or disable the automatic installation of Firefox updates; this policy and the policy to
-  completely disable Firefox updates excludes each other, see
-  [#166](https://github.com/cadeyrn/enterprise-policy-generator/issues/166)
+- new policy to enable or disable specific cryptographic ciphers, see
+  [#163](https://github.com/cadeyrn/enterprise-policy-generator/issues/163)
 - new policy to enable or disable Encrypted Media Extensions; the policy to enable or disable the download of the
   Widevine CDM was removed, the value will automatically be migrated in saved configurations, see
   [#164](https://github.com/cadeyrn/enterprise-policy-generator/issues/164)
+- new policy to enable or disable the automatic installation of Firefox updates; this policy and the policy to
+  completely disable Firefox updates excludes each other, see
+  [#166](https://github.com/cadeyrn/enterprise-policy-generator/issues/166)
 - enhanced permissions policy to control autoplay of media and access to virtual reality devices, see
   [#136](https://github.com/cadeyrn/enterprise-policy-generator/issues/136)
 - enhanced tracking protection policy to add exceptions, see
@@ -72,10 +74,10 @@
   [#165](https://github.com/cadeyrn/enterprise-policy-generator/issues/165)
 - replaced menu bar policy with new one that accepts more options; the old policy will automatically be migrated in
   saved configurations, see [#127](https://github.com/cadeyrn/enterprise-policy-generator/issues/127)
-- removed InstallAddonsPermission policy and migrated all data to ExtensionSettings policy in saved configurations, see
-  [#168](https://github.com/cadeyrn/enterprise-policy-generator/issues/168)
 - removed SearchEngines | DefaultPrivate because this feature never reached a stable release of Firefox, see
   [#140](https://github.com/cadeyrn/enterprise-policy-generator/issues/140)
+- removed InstallAddonsPermission policy and migrated all data to ExtensionSettings policy in saved configurations, see
+  [#168](https://github.com/cadeyrn/enterprise-policy-generator/issues/168)
 
 #### Dependencies
 

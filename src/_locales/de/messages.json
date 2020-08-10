@@ -290,6 +290,9 @@
   "policy_description_DisableAppUpdate": {
     "message": "Firefox am Aktualisieren hindern"
   },
+  "policy_description_DisabledCiphers": {
+    "message": "Bestimmte kryptographische Chiffren aktivieren oder deaktivieren"
+  },
   "policy_description_DisableDefaultBrowserAgent": {
     "message": "Deaktiviere den Standard-Browser-Agent (nur Windows)"
   },

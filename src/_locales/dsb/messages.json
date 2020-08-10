@@ -290,6 +290,9 @@
   "policy_description_DisableAppUpdate": {
     "message": "Firefox aktualizěrowanje zawoboraś"
   },
+  "policy_description_DisabledCiphers": {
+    "message": "Enable or disable specific cryptographic ciphers"
+  },
   "policy_description_DisableDefaultBrowserAgent": {
     "message": "Standardny agent wobglědowaka znjemóžniś (jano Windows)"
   },

@@ -1912,6 +1912,223 @@ const policies = {
     default : 'tls1.3'
   },
 
+  DisabledCiphers : {
+    first_available : { mainstream : '76.0', esr : '68.8' },
+    ui_category : 'security',
+    type : 'object',
+    properties : [
+      {
+        name : 'TLS_DHE_RSA_WITH_AES_128_CBC_SHA',
+        type : 'enum',
+        label : 'TLS_DHE_RSA_WITH_AES_128_CBC_SHA',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'true'
+          }
+        ]
+      },
+      {
+        name : 'TLS_DHE_RSA_WITH_AES_256_CBC_SHA',
+        type : 'enum',
+        label : 'TLS_DHE_RSA_WITH_AES_256_CBC_SHA',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'true'
+          }
+        ]
+      },
+      {
+        name : 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA',
+        type : 'enum',
+        label : 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'true'
+          }
+        ]
+      },
+      {
+        name : 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA',
+        type : 'enum',
+        label : 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'true'
+          }
+        ]
+      },
+      {
+        name : 'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256',
+        type : 'enum',
+        label : 'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'true'
+          }
+        ]
+      },
+      {
+        name : 'TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256',
+        type : 'enum',
+        label : 'TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'true'
+          }
+        ]
+      },
+      {
+        name : 'TLS_RSA_WITH_AES_128_CBC_SHA',
+        type : 'enum',
+        label : 'TLS_RSA_WITH_AES_128_CBC_SHA',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'true'
+          }
+        ]
+      },
+      {
+        name : 'TLS_RSA_WITH_AES_256_CBC_SHA',
+        type : 'enum',
+        label : 'TLS_RSA_WITH_AES_256_CBC_SHA',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'true'
+          }
+        ]
+      },
+      {
+        name : 'TLS_RSA_WITH_3DES_EDE_CBC_SHA',
+        type : 'enum',
+        label : 'TLS_RSA_WITH_3DES_EDE_CBC_SHA',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'true'
+          }
+        ]
+      },
+      {
+        name : 'TLS_RSA_WITH_AES_128_GCM_SHA256',
+        type : 'enum',
+        label : 'TLS_RSA_WITH_AES_128_GCM_SHA256',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'true'
+          }
+        ]
+      },
+      {
+        name : 'TLS_RSA_WITH_AES_256_GCM_SHA384',
+        type : 'enum',
+        label : 'TLS_RSA_WITH_AES_256_GCM_SHA384',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'true'
+          }
+        ]
+      }
+    ]
+  },
+
   Preference_security_default_personal_cert : {
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'security',
