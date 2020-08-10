@@ -830,7 +830,7 @@ const policies = {
   },
 
   DNSOverHTTPS : {
-    first_available : { mainstream : '63.0', esr : null },
+    first_available : { mainstream : '63.0', esr : '68.0' },
     is_lockable : true,
     ui_category : 'network',
     type : 'object',
