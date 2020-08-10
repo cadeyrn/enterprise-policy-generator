@@ -46,7 +46,7 @@
   of the DisableBuiltinPDFViewer policy will automatically be migrated in saved configurations, see
   [#156](https://github.com/cadeyrn/enterprise-policy-generator/issues/156)
 - new policy to enable or disable the automatic installation of Firefox updates; this policy and the policy to
-  completely disable Firefox updates exludes each other, see
+  completely disable Firefox updates excludes each other, see
   [#166](https://github.com/cadeyrn/enterprise-policy-generator/issues/166)
 - enhanced permissions policy to control autoplay of media and access to virtual reality devices, see
   [#136](https://github.com/cadeyrn/enterprise-policy-generator/issues/136)
