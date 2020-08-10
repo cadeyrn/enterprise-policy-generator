@@ -63,6 +63,8 @@
   [#150](https://github.com/cadeyrn/enterprise-policy-generator/issues/150)
 - enhanced cookies policy to allow to configure domains where cookies are only allowed for the current session, see
   [#157](https://github.com/cadeyrn/enterprise-policy-generator/issues/157)
+- enhanced authentication policy by option for proxy servers, see
+  [#162](https://github.com/cadeyrn/enterprise-policy-generator/issues/162)
 - replaced menu bar policy with new one that accepts more options; the old policy will automatically be migrated in
   saved configurations, see [#127](https://github.com/cadeyrn/enterprise-policy-generator/issues/127)
 - removed InstallAddonsPermission policy and migrated all data to ExtensionSettings policy in saved configurations, see

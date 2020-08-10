@@ -1087,6 +1087,23 @@ const policies = {
             type : 'boolean'
           }
         ]
+      },
+      {
+        name : 'AllowProxies',
+        label : browser.i18n.getMessage('policy_description_Authentication_AllowProxies'),
+        type : 'object',
+        properties : [
+          {
+            name : 'SPNEGO',
+            label : browser.i18n.getMessage('policy_description_Authentication_AllowProxies_SPNEGO'),
+            type : 'boolean'
+          },
+          {
+            name : 'NTLM',
+            label : browser.i18n.getMessage('policy_description_Authentication_AllowProxies_NTLM'),
+            type : 'boolean'
+          }
+        ]
       }
     ]
   },

@@ -152,6 +152,15 @@
   "policy_description_Authentication_NTLM": {
     "message": "NTLM"
   },
+  "policy_description_Authentication_AllowProxies": {
+    "message": "Always allow SPNEGO or NTLM with proxy servers"
+  },
+  "policy_description_Authentication_AllowProxies_NTLM": {
+    "message": "Always allow NTLM with proxy servers"
+  },
+  "policy_description_Authentication_AllowProxies_SPNEGO": {
+    "message": "Always allow NTLM with proxy servers"
+  },
   "policy_description_Authentication_PrivateBrowsing": {
     "message": "Enable integrated authentication in prviate browsing"
   },

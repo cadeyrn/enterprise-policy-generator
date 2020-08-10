@@ -146,6 +146,15 @@
   "policy_description_Authentication_AllowNonFQDN_SPNEGO": {
     "message": "Immer SPNEGO auf Nicht-FQDNs erlauben"
   },
+  "policy_description_Authentication_AllowProxies": {
+    "message": "Immer SPNEGO oder NTLM bei Proxy-Servern erlauben"
+  },
+  "policy_description_Authentication_AllowProxies_NTLM": {
+    "message": "Immer NTLM bei Proxy-Servern erlauben"
+  },
+  "policy_description_Authentication_AllowProxies_SPNEGO": {
+    "message": "Immer SPNEGO bei Proxy-Servern erlauben"
+  },
   "policy_description_Authentication_Delegated": {
     "message": "Delegiert"
   },
