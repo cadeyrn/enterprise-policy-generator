@@ -425,6 +425,12 @@
   "policy_description_EnableTrackingProtection_Value": {
     "message": "Slědowacy wobsah"
   },
+  "policy_description_EncryptedMediaExtensions": {
+    "message": "Enable or disable Encrypted Media Extensions (needed for video streaming portals)"
+  },
+  "policy_description_EncryptedMediaExtensions_Enabled": {
+    "message": "If disabled, Firefox will not download the Widevine CDM unless the user consents to installing it. If disabled and locked the user will not be asked to download Widevine."
+  },
   "policy_description_Extensions": {
     "message": "Rozšěrjenja instalować, wotinstalować abo zawrěć"
   },
@@ -781,9 +787,6 @@
   },
   "policy_description_Preference_media_gmp_gmpopenh264_enabled": {
     "message": "Tykač OpenH264 za WebRTC-komunikaciju sćahnyć"
-  },
-  "policy_description_Preference_media_gmp_widevinecdm_enabled": {
-    "message": "Tykač Widevine za streaming z DRM sćahnyć"
   },
   "policy_description_Preference_network_dns_disableIPv6": {
     "message": "IPv6 DNS-pytanja přewjesć"

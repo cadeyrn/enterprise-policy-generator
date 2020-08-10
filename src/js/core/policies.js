@@ -2063,17 +2063,6 @@ const policies = {
     }
   },
 
-  Preference_media_gmp_widevinecdm_enabled : {
-    first_available : { mainstream : '68.0', esr : '68.0' },
-    ui_category : 'updates-and-data',
-    type : 'preference',
-    properties : {
-      option : 'media.gmp-widevinecdm.enabled',
-      type : 'boolean',
-      default : 'true'
-    }
-  },
-
   Preference_media_gmp_gmpopenh264_enabled : {
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'updates-and-data',
@@ -2126,6 +2115,34 @@ const policies = {
           },
           {
             label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ]
+      }
+    ]
+  },
+
+  EncryptedMediaExtensions : {
+    first_available : { mainstream : '77.0', esr : '68.9' },
+    is_lockable : true,
+    ui_category : 'others',
+    type : 'object',
+    properties : [
+      {
+        name : 'Enabled',
+        type : 'enum',
+        label : browser.i18n.getMessage('policy_description_EncryptedMediaExtensions_Enabled'),
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
             value : 'false'
           }
         ]

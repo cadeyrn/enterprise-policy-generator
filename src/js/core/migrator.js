@@ -125,6 +125,24 @@ const migrator = {
           delete configuration.checkboxes.InstallAddonsPermission;
         }
 
+        /*
+         * @from
+         *
+         * "Preferences": { "media.gmp-widevinecdm.enabled": true|false }
+         *
+         * @to
+         *
+         * "EncryptedMediaExtensions": { "Enabled": true|false, "Locked": true }
+         */
+        if (configuration.checkboxes.Preference_media_gmp_widevinecdm_enabled) {
+          const boolean = configuration.select.Preference_media_gmp_widevinecdm_enabled_Select === 'true';
+          configuration.checkboxes.EncryptedMediaExtensions = true;
+          configuration.checkboxes.EncryptedMediaExtensions_Locked = true;
+          configuration.select.EncryptedMediaExtensions_Enabled = boolean.toString();
+          delete configuration.checkboxes.Preference_media_gmp_widevinecdm_enabled;
+          delete configuration.select.Preference_media_gmp_widevinecdm_enabled_Select;
+        }
+
         configurations[i].configuration = configuration;
       }
 

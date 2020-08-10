@@ -425,6 +425,12 @@
   "policy_description_EnableTrackingProtection_Value": {
     "message": "Отслеживание содержимого"
   },
+  "policy_description_EncryptedMediaExtensions": {
+    "message": "Enable or disable Encrypted Media Extensions (needed for video streaming portals)"
+  },
+  "policy_description_EncryptedMediaExtensions_Enabled": {
+    "message": "If disabled, Firefox will not download the Widevine CDM unless the user consents to installing it. If disabled and locked the user will not be asked to download Widevine."
+  },
   "policy_description_Extensions": {
     "message": "Установка, удаление или блокировка дополнений"
   },
@@ -781,9 +787,6 @@
   },
   "policy_description_Preference_media_gmp_gmpopenh264_enabled": {
     "message": "Скачать OpenH264 плагин для WebRTC общения"
-  },
-  "policy_description_Preference_media_gmp_widevinecdm_enabled": {
-    "message": "Скачать Widevine плагин для потоковой передачи с DRM"
   },
   "policy_description_Preference_network_dns_disableIPv6": {
     "message": "Выполнять поиск IPv6 DNS"
