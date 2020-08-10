@@ -512,6 +512,9 @@
   "policy_description_ExtensionSettings_Label_Key": {
     "message": "Rozšěrjenski ID"
   },
+  "policy_description_ExtensionSettings_restricted_domains": {
+    "message": "Domains on which content scripts can't be run"
+  },
   "policy_description_ExtensionUpdate": {
     "message": "Awtomatiske aktualizowanje rozšěrjenjow zmóžnić abo znjemóžnić"
   },

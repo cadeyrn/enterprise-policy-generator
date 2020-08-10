@@ -718,6 +718,15 @@ const policies = {
           }
         },
         {
+          name : 'restricted_domains',
+          label : browser.i18n.getMessage('policy_description_ExtensionSettings_restricted_domains'),
+          type : 'array',
+          items : {
+            label : browser.i18n.getMessage('common_url'),
+            type : 'string'
+          }
+        },
+        {
           name : 'allowed_types',
           label : browser.i18n.getMessage('policy_description_ExtensionSettings_allowed_types'),
           type : 'multiselect',

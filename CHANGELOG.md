@@ -65,6 +65,8 @@
   [#157](https://github.com/cadeyrn/enterprise-policy-generator/issues/157)
 - enhanced authentication policy by option for proxy servers, see
   [#162](https://github.com/cadeyrn/enterprise-policy-generator/issues/162)
+- enhanced extension settings policy to be able to define domains on which content scripts can't be run, see
+  [#165](https://github.com/cadeyrn/enterprise-policy-generator/issues/165)
 - replaced menu bar policy with new one that accepts more options; the old policy will automatically be migrated in
   saved configurations, see [#127](https://github.com/cadeyrn/enterprise-policy-generator/issues/127)
 - removed InstallAddonsPermission policy and migrated all data to ExtensionSettings policy in saved configurations, see
