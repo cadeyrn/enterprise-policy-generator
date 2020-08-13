@@ -945,6 +945,9 @@ const configurator = {
       case 'object-array':
         configurator.addObjectArrayProperty(el, parentName, policy);
         break;
+      case 'object-list':
+        configurator.addObjectListProperty(el, parentName, policy);
+        break;
       case 'string':
         configurator.addStringProperty(el, parentName, policy, false, false, isArrayProperty, hideArrayActionLinks);
         break;
@@ -1219,6 +1222,66 @@ const configurator = {
     const arrayAddName = parentName + '_' + policy.name + '_1';
     elSubOptions.parentNode.classList.add('array-action-links');
     configurator.addArrayFieldActionLinks(elSubOptions, arrayAddName);
+  },
+
+  /**
+   * Adds property of the type "object-list" to a policy.
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   * @param {string} parentName - the name of the parent policy object
+   * @param {Object} policy - the policy object
+   *
+   * @returns {void}
+   */
+  addObjectListProperty (el, parentName, policy) {
+    const elObjectWrapper = document.createElement('div');
+    elObjectWrapper.classList.add('object-list');
+    elObjectWrapper.setAttribute('data-name', policy.name);
+
+    // label
+    const elCaptionWrapper = document.createElement('div');
+    elCaptionWrapper.classList.add('label');
+    elObjectWrapper.appendChild(elCaptionWrapper);
+
+    const elCaption = document.createTextNode(policy.label);
+    elCaptionWrapper.appendChild(elCaption);
+
+    el.appendChild(elObjectWrapper);
+
+    const elSubOptionsWrapper = document.createElement('div');
+    elSubOptionsWrapper.classList.add('sub-options-wrapper');
+    elObjectWrapper.appendChild(elSubOptionsWrapper);
+
+    const elSubOptions = configurator.addSubOptions(elSubOptionsWrapper);
+
+    const elInputWrapperKey = document.createElement('div');
+    elInputWrapperKey.classList.add('input');
+
+    const elInputKey = document.createElement('input');
+    elInputKey.setAttribute('type', 'text');
+    elInputKey.setAttribute('id', parentName + '_Key_1');
+    elInputKey.setAttribute('name', parentName + '_Key_1');
+    elInputKey.setAttribute('data-name', parentName);
+    elInputKey.setAttribute('placeholder', policy.placeholder_key);
+    elInputKey.classList.add('key');
+    elInputWrapperKey.appendChild(elInputKey);
+    elSubOptions.appendChild(elInputWrapperKey);
+
+    const elSubSubOptions = document.createElement('div');
+    elSubSubOptions.classList.add('sub-sub-options');
+
+    // add properties
+    if (policy.items) {
+      const optionsLength = policy.items.length;
+      for (let i = 0; i < optionsLength; i++) {
+        configurator.addProperty(elSubSubOptions, parentName + '_' + policy.items[i].name, policy.items[i], true, true);
+      }
+    }
+
+    elSubOptions.appendChild(elSubSubOptions);
+
+    // add array field action links
+    configurator.addArrayFieldActionLinks(elSubOptions, parentName + '_1');
   },
 
   /**

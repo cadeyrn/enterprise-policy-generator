@@ -371,6 +371,58 @@ const output = {
       }
     });
 
+    // object lists
+    [...el.parentNode.querySelectorAll(':scope > div > .object-list')].forEach((el) => {
+      const category = {};
+
+      [...el.querySelectorAll(':scope .sub-options')].forEach((el) => {
+        const obj = {};
+
+        // enum fields
+        [...el.querySelectorAll(':scope .enum select')].forEach((el) => {
+          const enumContent = output.parseEnumContent(el);
+
+          if (typeof enumContent !== 'undefined') {
+            obj[el.getAttribute('data-name')] = enumContent;
+          }
+        });
+
+        [...el.parentNode.querySelectorAll(':scope .object-array')].forEach((el) => {
+          const items = [];
+
+          [...el.querySelectorAll(':scope > div:not(.label)')].forEach((el) => {
+            const innerObj = {};
+
+            // input fields
+            /* eslint-disable max-nested-callbacks */
+            [...el.querySelectorAll(':scope > .input input')].forEach((arrEl) => {
+              output.addInputValue(arrEl, innerObj);
+            });
+
+            // allow empty objects
+            items.push(innerObj);
+          });
+
+          // only add non-empty arrays
+          if (items.length > 0) {
+            obj[el.getAttribute('data-name')] = items;
+          }
+        });
+
+        const key = el.querySelector(':scope > .input input').value;
+
+        // only add non-empty objects
+        if (key && Object.keys(obj).length > 0) {
+          category[key] = obj;
+        }
+      });
+
+      // only add non-empty arrays
+      if (Object.keys(category).length > 0) {
+        policy[el.getAttribute('data-name')] = category;
+      }
+    });
+
     // simple arrays
     [...el.parentNode.querySelectorAll(':scope > div > .array')].forEach((el) => {
       const items = [];
