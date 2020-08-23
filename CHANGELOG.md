@@ -28,6 +28,8 @@
 - the RequestedLocales policy allows an empty string to use the operating system's language. However, empty strings
   should not be allowed if more than one value is used. Also it shouldn't be possible to add duplicate language codes,
   see [#161](https://github.com/cadeyrn/enterprise-policy-generator/issues/161)
+- integer values were parsed as strings in preference policies, see
+  [#171](https://github.com/cadeyrn/enterprise-policy-generator/issues/171)
   
 #### Enterprise Policies
 

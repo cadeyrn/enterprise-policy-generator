@@ -504,8 +504,7 @@ const output = {
 
     // enum fields
     [...el.parentNode.querySelectorAll(':scope > .enum')].forEach((el) => {
-      const { value } = el.firstChild.options[el.firstChild.selectedIndex];
-      output.preferences[el.getAttribute('data-name')] = value;
+      output.preferences[el.getAttribute('data-name')] = output.parseEnumContent(el.firstChild);
     });
 
     // input fields
