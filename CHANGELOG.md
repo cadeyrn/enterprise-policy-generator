@@ -83,7 +83,7 @@
 
 #### Dependencies
 
-- updated eslint from version 6.8.0 to 7.8.1
+- updated eslint from version 6.8.0 to 7.9.0
 - updated eslint-plugin-compat from version 3.5.1 to 3.8.0
 - updated eslint-plugin-no-unsanitized from version 3.0.2 to 3.1.2
 - updated gulp-htmllint from version 0.0.16 to 0.0.19
