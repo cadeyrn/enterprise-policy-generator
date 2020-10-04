@@ -91,7 +91,7 @@
 - updated jsdoc from version 3.6.3 to 3.6.6
 - updated stylelint from version 13.2.0 to 13.7.2
 - updated stylelint-order from version 4.0.0 to 4.1.0
-- updated web-ext from version 4.1.0 to 5.0.0
+- updated web-ext from version 4.1.0 to 5.1.0
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v5.1.0...master)
 
