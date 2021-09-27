@@ -16,7 +16,7 @@
   [#143](https://github.com/cadeyrn/enterprise-policy-generator/issues/143)
 - disabled native CSS outlines for input fields because we have our own focus style, see
   [#159](https://github.com/cadeyrn/enterprise-policy-generator/issues/159)
-  
+
 #### Bugfixes
 
 - fixed error messages in browser console, see [#141](https://github.com/cadeyrn/enterprise-policy-generator/issues/141)
@@ -30,7 +30,7 @@
   see [#161](https://github.com/cadeyrn/enterprise-policy-generator/issues/161)
 - integer values were parsed as strings in preference policies, see
   [#171](https://github.com/cadeyrn/enterprise-policy-generator/issues/171)
-  
+
 #### Enterprise Policies
 
 - new policy to allow or prevent Firefox from messaging the user, see
@@ -103,7 +103,7 @@
 
 - add mechanism to exclude policies from each other, for example it doesn't make sense to use both the OfferToSaveLogins
   and the OfferToSaveLoginsDefault policy, see [#120](https://github.com/cadeyrn/enterprise-policy-generator/issues/120)
-  
+
 #### Bugfixes
 
 - SearchEngines | PreventInstalls should be optional when using SearchEngines policy, see
@@ -117,7 +117,7 @@
   [#108](https://github.com/cadeyrn/enterprise-policy-generator/issues/108) (Thanks, varshannagarajan!)
 - added option to set the default search engine for private browsing mode (Firefox Pre-Release 71+, Firefox ESR 78+),
   see [#111](https://github.com/cadeyrn/enterprise-policy-generator/issues/111) (Thanks, varshannagarajan!)
-  
+
 #### Translations
 
 - added Russian translation, see [#115](https://github.com/cadeyrn/enterprise-policy-generator/issues/115)
@@ -126,7 +126,7 @@
   see [#112](https://github.com/cadeyrn/enterprise-policy-generator/issues/112) (Thanks, musonius!)
 - fixed typo in German translation, see [#112](https://github.com/cadeyrn/enterprise-policy-generator/issues/112)
   (Thanks, musonius!)
-  
+
 #### Code Quality
 
 - removed optional properties from configuration to simplify the configuration file. In the future there will be
@@ -137,7 +137,7 @@
   [#132](https://github.com/cadeyrn/enterprise-policy-generator/issues/132)
 - removed the enterprise_only property because it was only used by one policy and the additional_note property looks
   exactly the same, see [#133](https://github.com/cadeyrn/enterprise-policy-generator/issues/133)
-  
+
 #### Dependencies
 
 - updated eslint from version 6.5.1 to 6.8.0 and updated configuration
@@ -261,7 +261,7 @@
   [#100](https://github.com/cadeyrn/enterprise-policy-generator/issues/100)
 - Authentication policy can optionally be locked starting with Firefox 71, was always locked before, see
   [#104](https://github.com/cadeyrn/enterprise-policy-generator/issues/104)
-  
+
 #### Translations
 
 - fixed broken French translation (some translations were not used because of broken translation keys)
@@ -376,12 +376,12 @@
 ---
 
 ### [Version 4.1.1](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v4.1.1) (2018-11-18)
-  
+
 #### Bugfixes
 
 - fixed a bug that caused saved configurations not to load under certain circumstances, fixes
   [#63](https://github.com/cadeyrn/enterprise-policy-generator/issues/63)
-  
+
 #### Translations
 
 - fixed typo in English translation (Thanks, a1346054!), fixes [#62](https://github.com/cadeyrn/enterprise-policy-generator/pull/62)
@@ -403,12 +403,12 @@
 
 - added support for additional policy notes, for example if a policy is not supported on all operating systems, fixes
   [#57](https://github.com/cadeyrn/enterprise-policy-generator/issues/57)
-  
+
 #### Bugfixes
 
 - fixed a bug which caused that the order of bookmarks was wrong when loading a saved configuration, fixes
   [#47](https://github.com/cadeyrn/enterprise-policy-generator/issues/47)
-  
+
 #### Enterprise Policies
 
 - new policy to configure DNS over HTTPS (Firefox 63+), fixes
@@ -466,7 +466,7 @@
   Firefox ESR 60.2, see [#36](https://github.com/cadeyrn/enterprise-policy-generator/issues/36)
 - policy to set a different server URL for Firefox updates is also available from Firefox 62 and Firefox ESR 60.2, see
   [#36](https://github.com/cadeyrn/enterprise-policy-generator/issues/36)
-  
+
 #### Translations
 
 - updated Simplified Chinese translation (Thanks, fang5566!), fixes [#37](https://github.com/cadeyrn/enterprise-policy-generator/issues/37)
