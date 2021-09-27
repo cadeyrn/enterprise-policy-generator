@@ -207,7 +207,7 @@
   [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
 - new policy to control the preference to suggest open tabs when using the address bar, see
   [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
-- new policy to hide the the privacy policy tab on first run, see
+- new policy to hide the privacy policy tab on first run, see
   [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
 - new policy to restore old behavior regarding keypress event and non-printable keys for certain domains, see
   [#89](https://github.com/cadeyrn/enterprise-policy-generator/issues/89)
