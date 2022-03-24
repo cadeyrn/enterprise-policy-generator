@@ -204,10 +204,10 @@
     "message": "Activer ou désactiver le support de portail captif"
   },
   "policy_description_CaptivePortal_options_false": {
-    "message": "Désactiver support portail captif"
+    "message": "Désactiver le support de portail captif"
   },
   "policy_description_CaptivePortal_options_true": {
-    "message": "Désactiver support portail captif"
+    "message": "Activer le support de portail captif"
   },
   "policy_description_Certificates": {
     "message": "Configurer certificats"
