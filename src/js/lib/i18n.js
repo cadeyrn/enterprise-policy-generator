@@ -39,7 +39,7 @@ const i18n = {
    * This method is used to get the translation for a given key.
    *
    * @param {string} string - not used parameter
-   * @param {string} key - translsation key
+   * @param {string} key - translation key
    *
    * @returns {string} - translation
    */
