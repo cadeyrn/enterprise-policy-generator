@@ -1758,52 +1758,6 @@ const policies = {
     type : 'boolean'
   },
 
-  FlashPlugin : {
-    first_available : { mainstream : '60.0', esr : '60.0' },
-    is_lockable : true,
-    ui_category : 'security',
-    type : 'object',
-    properties : [
-      {
-        name : 'Default',
-        label : browser.i18n.getMessage('policy_description_FlashPlugin_Default'),
-        type : 'enum',
-        options : [
-          {
-            label : browser.i18n.getMessage('enum_value_no_preference'),
-            value : null
-          },
-          {
-            label : browser.i18n.getMessage('policy_description_FlashPlugin_Default_true'),
-            value : 'true'
-          },
-          {
-            label : browser.i18n.getMessage('policy_description_FlashPlugin_Default_false'),
-            value : 'false'
-          }
-        ]
-      },
-      {
-        name : 'Allow',
-        label : browser.i18n.getMessage('policy_description_FlashPlugin_Allow'),
-        type : 'array',
-        items : {
-          label : browser.i18n.getMessage('common_url'),
-          type : 'url'
-        }
-      },
-      {
-        name : 'Block',
-        label : browser.i18n.getMessage('policy_description_FlashPlugin_Block'),
-        type : 'array',
-        items : {
-          label : browser.i18n.getMessage('common_url'),
-          type : 'url'
-        }
-      }
-    ]
-  },
-
   Preference_privacy_file_unique_origin : {
     first_available : { mainstream : '68.0.1', esr : '68.1' },
     info_link : 'https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730',

@@ -551,24 +551,6 @@
   "policy_description_FirefoxHome_Snippets": {
     "message": "Snippets"
   },
-  "policy_description_FlashPlugin": {
-    "message": "Allow or deny Flash plugin usage"
-  },
-  "policy_description_FlashPlugin_Allow": {
-    "message": "Enable the Flash plugin for these URLs by default, unless Flash is completely disabled"
-  },
-  "policy_description_FlashPlugin_Block": {
-    "message": "Block the Flash plugin for these URLs"
-  },
-  "policy_description_FlashPlugin_Default": {
-    "message": "Always enable or disable Flash"
-  },
-  "policy_description_FlashPlugin_Default_false": {
-    "message": "Flash is always disabled"
-  },
-  "policy_description_FlashPlugin_Default_true": {
-    "message": "Flash is always enabled"
-  },
   "policy_description_HardwareAcceleration": {
     "message": "Disable hardware acceleration"
   },

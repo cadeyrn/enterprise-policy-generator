@@ -551,24 +551,6 @@
   "policy_description_FirefoxHome_Snippets": {
     "message": "只言片语"
   },
-  "policy_description_FlashPlugin": {
-    "message": "允许或阻止使用 Flash 插件"
-  },
-  "policy_description_FlashPlugin_Allow": {
-    "message": "在这些 URL 下默认启用 Flash 插件，除非已完全禁用 Flash"
-  },
-  "policy_description_FlashPlugin_Block": {
-    "message": "阻止 Flash 插件在这些 URL 下使用"
-  },
-  "policy_description_FlashPlugin_Default": {
-    "message": "始终启用或禁用 Flash"
-  },
-  "policy_description_FlashPlugin_Default_false": {
-    "message": "始终禁用 Flash"
-  },
-  "policy_description_FlashPlugin_Default_true": {
-    "message": "始终启用 Flash"
-  },
   "policy_description_HardwareAcceleration": {
     "message": "禁用硬件加速"
   },

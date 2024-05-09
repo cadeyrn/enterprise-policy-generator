@@ -551,24 +551,6 @@
   "policy_description_FirefoxHome_Snippets": {
     "message": "Сниппеты"
   },
-  "policy_description_FlashPlugin": {
-    "message": "Разрешить или запретить использование Flash"
-  },
-  "policy_description_FlashPlugin_Allow": {
-    "message": "Включить Flash для этих URL по умолчанию, если Flash не отключен полностью"
-  },
-  "policy_description_FlashPlugin_Block": {
-    "message": "Блокировать Flash для этих URL"
-  },
-  "policy_description_FlashPlugin_Default": {
-    "message": "Всегда включать или отключать Flash"
-  },
-  "policy_description_FlashPlugin_Default_false": {
-    "message": "Flash всегда отключен"
-  },
-  "policy_description_FlashPlugin_Default_true": {
-    "message": "Flash всегда включен"
-  },
   "policy_description_HardwareAcceleration": {
     "message": "Отключить аппаратное ускорение"
   },

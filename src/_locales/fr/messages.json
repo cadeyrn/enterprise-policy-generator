@@ -551,24 +551,6 @@
   "policy_description_FirefoxHome_Snippets": {
     "message": "Snippets"
   },
-  "policy_description_FlashPlugin": {
-    "message": "Autoriser ou refuser l'utilisation du plugin Flash"
-  },
-  "policy_description_FlashPlugin_Allow": {
-    "message": "Activer le plugin Flash pour ces adresses par défaut, sauf si Flash est complètement désactivé."
-  },
-  "policy_description_FlashPlugin_Block": {
-    "message": "Bloquer le plugin Flash pour ces adresses"
-  },
-  "policy_description_FlashPlugin_Default": {
-    "message": "Toujours activer ou désactiver Flash"
-  },
-  "policy_description_FlashPlugin_Default_false": {
-    "message": "Flash est toujours désactivé"
-  },
-  "policy_description_FlashPlugin_Default_true": {
-    "message": "Flash est toujours activé"
-  },
   "policy_description_HardwareAcceleration": {
     "message": "Désactiver l'accélération matérielle"
   },

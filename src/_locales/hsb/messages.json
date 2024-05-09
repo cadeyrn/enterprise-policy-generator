@@ -551,24 +551,6 @@
   "policy_description_FirefoxHome_Snippets": {
     "message": "Krótke informacije"
   },
-  "policy_description_FlashPlugin": {
-    "message": "Wužiwanje tykača Flash dowolić abo zakazać"
-  },
-  "policy_description_FlashPlugin_Allow": {
-    "message": "Za tute URL tykač Flash po standardźe zmóžnić, chibazo Flash je dospołnje znjemóžnjeny"
-  },
-  "policy_description_FlashPlugin_Block": {
-    "message": "Tykač Flash za tute URL blokować"
-  },
-  "policy_description_FlashPlugin_Default": {
-    "message": "Flash přeco zmóžnić abo znjemóžnić"
-  },
-  "policy_description_FlashPlugin_Default_false": {
-    "message": "Flash je přeco znjemóžnjeny"
-  },
-  "policy_description_FlashPlugin_Default_true": {
-    "message": "Flash je přeco zmóžnjeny"
-  },
   "policy_description_HardwareAcceleration": {
     "message": "Hardwarowe pospěšenje znjemóžnić"
   },
