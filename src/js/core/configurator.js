@@ -1098,7 +1098,7 @@ const configurator = {
       configurator.addSelectLabel(elObjectWrapper, policy.name, policy);
     }
 
-    // we need an unique and deterministic name as DOM id and name
+    // we need a unique and deterministic name as DOM id and name
     const domName = isArrayProperty ? parentName + '_1' : parentName + '_' + policy.name;
 
     // add select element
@@ -1301,7 +1301,7 @@ const configurator = {
     const elObjectWrapper = document.createElement('div');
     elObjectWrapper.classList.add('input');
 
-    // we need an unique and deterministic name as DOM id and name
+    // we need a unique and deterministic name as DOM id and name
     const domName = isArrayProperty ? parentName + '_1' : parentName + '_' + policy.name;
 
     // optional caption

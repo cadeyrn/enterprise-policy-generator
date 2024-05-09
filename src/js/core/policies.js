@@ -2144,7 +2144,7 @@ const policies = {
     label_value : browser.i18n.getMessage('policy_description_SecurityDevices_label_value')
   },
 
-  // udpates and data collection
+  // updates and data collection
 
   DisableAppUpdate : {
     first_available : { mainstream : '62.0', esr : '60.0' },
