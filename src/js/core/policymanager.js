@@ -7,7 +7,7 @@ const policymanager = {
   /**
    * Contains the policy object.
    *
-   * @type {Object}
+   * @type {object}
    */
   data : null,
 
@@ -35,9 +35,9 @@ const policymanager = {
   /**
    * This method sorts the output alphabetically.
    *
-   * @param {Object} object - object to be sorted alphabetically
+   * @param {object} object - object to be sorted alphabetically
    *
-   * @returns {Object} - the sorted object
+   * @returns {object} - the sorted object
    */
   sort (object) {
     if (object instanceof Array) {

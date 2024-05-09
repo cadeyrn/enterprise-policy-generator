@@ -9,7 +9,7 @@ const output = {
   /**
    * Contains the values of the policies of the type "preferences".
    *
-   * @type {Object}
+   * @type {object}
    */
   preferences : {},
 
@@ -518,8 +518,6 @@ const output = {
   /**
    * Generates output for policies of type "preference", collected before in collectPreferences().
    *
-   * @param {HTMLElement} el - the DOM element of the policy
-   *
    * @returns {void}
    */
   generateOutputForPreferences () {
@@ -608,7 +606,7 @@ const output = {
    * Adds the value of an input field to the output.
    *
    * @param {HTMLInputElement} el - the DOM element of the policy
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    *
    * @returns {void}
    */
@@ -622,7 +620,7 @@ const output = {
    * Adds the value of a checkbox field to the output.
    *
    * @param {HTMLInputElement} el - the DOM element of the policy
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    *
    * @returns {void}
    */
@@ -636,7 +634,7 @@ const output = {
    * Adds the value of the "Locked" field to the output.
    *
    * @param {HTMLElement} el - the DOM element of the policy
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    *
    * @returns {void}
    */

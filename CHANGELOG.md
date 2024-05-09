@@ -85,15 +85,22 @@
 
 #### Dependencies
 
-- updated eslint from version 6.8.0 to 7.10.0
-- updated eslint-plugin-compat from version 3.5.1 to 3.8.0
-- updated eslint-plugin-no-unsanitized from version 3.0.2 to 3.1.4
+- added eslint-plugin-jsdoc 48.2.3
+- updated eslint from version 6.8.0 to 9.2.0 and updated configuration
+- updated eslint-plugin-xss from version 0.1.10 to 0.1.12
+- updated gulp from version 4.0.2 to 5.0.0
 - updated gulp-htmllint from version 0.0.16 to 0.0.19
 - updated gulp-jsdoc3 from version 2.0.0 to 3.0.0
-- updated jsdoc from version 3.6.3 to 3.6.6
-- updated stylelint from version 13.2.0 to 13.7.2
-- updated stylelint-order from version 4.0.0 to 4.1.0
-- updated web-ext from version 4.1.0 to 5.2.0
+- updated htmllint configuration
+- updated jsdoc from version 3.6.3 to 4.0.3
+- updated stylelint from version 13.2.0 to 15.11.0 and updated configuration
+- updated stylelint-csstree-validator from version 1.8.0 to 3.0.0
+- updated stylelint-order from version 4.0.0 to 6.0.4
+- updated web-ext from version 4.1.0 to 7.11.0
+- replaced gulp-eslint with gulp-eslint-new 2.0.0
+- removed eslint-plugin-compat
+- removed eslint-plugin-no-unsanitized
+- removed eslint-plugin-promise
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v5.1.0...master)
 

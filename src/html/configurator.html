@@ -1,169 +1,169 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset='utf-8' />
-  <title data-i18n='extension_name'></title>
-  <link rel='stylesheet' href='../css/ui.css' />
-  <link rel='icon' type='image/png' href='../images/icon.svg' />
+  <meta charset="utf-8" />
+  <title data-i18n="extension_name"></title>
+  <link rel="stylesheet" href="../css/ui.css" />
+  <link rel="icon" type="image/png" href="../images/icon.svg" />
 </head>
 <body>
-  <div id='header-wrapper' class='default'>
-    <header id='header'>
-      <a id='logo' href='configurator.html'></a>
-      <div id='filter-wrapper'>
-        <input type='text' id='filter' placeholder='' />
-        <div id='filter-style-helper'></div>
+  <div id="header-wrapper" class="default">
+    <header id="header">
+      <a id="logo" href="configurator.html"></a>
+      <div id="filter-wrapper">
+        <input type="text" id="filter" placeholder="" />
+        <div id="filter-style-helper"></div>
       </div>
     </header>
   </div>
-  <main id='main'>
-    <form id='generator-form' novalidate>
-      <h3 data-i18n='policy_category_block_access'></h3>
-      <div id='options-block-access' class='options-block'></div>
-      <h3 data-i18n='policy_category_disable_features'></h3>
-      <div id='options-disable-features' class='options-block'></div>
-      <h3 data-i18n='policy_category_customization'></h3>
-      <div id='options-customization' class='options-block'></div>
-      <h3 data-i18n='policy_category_network'></h3>
-      <div id='options-network' class='options-block'></div>
-      <h3 data-i18n='policy_category_privacy'></h3>
-      <div id='options-privacy' class='options-block'></div>
-      <h3 data-i18n='policy_category_security'></h3>
-      <div id='options-security' class='options-block'></div>
-      <h3 data-i18n='policy_category_update_and_data'></h3>
-      <div id='options-updates-and-data' class='options-block'></div>
-      <h3 data-i18n='policy_category_others'></h3>
-      <div id='options-others' class='options-block'></div>
+  <main id="main">
+    <form id="generator-form" novalidate>
+      <h3 data-i18n="policy_category_block_access"></h3>
+      <div id="options-block-access" class="options-block"></div>
+      <h3 data-i18n="policy_category_disable_features"></h3>
+      <div id="options-disable-features" class="options-block"></div>
+      <h3 data-i18n="policy_category_customization"></h3>
+      <div id="options-customization" class="options-block"></div>
+      <h3 data-i18n="policy_category_network"></h3>
+      <div id="options-network" class="options-block"></div>
+      <h3 data-i18n="policy_category_privacy"></h3>
+      <div id="options-privacy" class="options-block"></div>
+      <h3 data-i18n="policy_category_security"></h3>
+      <div id="options-security" class="options-block"></div>
+      <h3 data-i18n="policy_category_update_and_data"></h3>
+      <div id="options-updates-and-data" class="options-block"></div>
+      <h3 data-i18n="policy_category_others"></h3>
+      <div id="options-others" class="options-block"></div>
     </form>
-    <section id='secondary-section'>
-      <h3 data-i18n='explanation_headline_usage'></h3>
-      <p data-i18n='explanation_intro'></p>
+    <section id="secondary-section">
+      <h3 data-i18n="explanation_headline_usage"></h3>
+      <p data-i18n="explanation_intro"></p>
       <p>
-        <strong>Microsoft Windows:</strong> <span data-i18n='explanation_intro_windows'></span><br /><br />
-        <strong>Apple macOS:</strong> <span data-i18n='explanation_intro_macos'></span><br /><br />
-        <strong>Linux:</strong> <span data-i18n='explanation_intro_linux'></span>
+        <strong>Microsoft Windows:</strong> <span data-i18n="explanation_intro_windows"></span><br /><br />
+        <strong>Apple macOS:</strong> <span data-i18n="explanation_intro_macos"></span><br /><br />
+        <strong>Linux:</strong> <span data-i18n="explanation_intro_linux"></span>
       </p>
-      <p data-i18n='explanation_about_policies'></p>
-      <button id='generate' data-i18n='generate_button'></button>
-      <pre id='policy-output-wrapper'><code id='policy-output'></code></pre>
-      <div id='action-links' class='hidden'>
+      <p data-i18n="explanation_about_policies"></p>
+      <button id="generate" data-i18n="generate_button"></button>
+      <pre id="policy-output-wrapper"><code id="policy-output"></code></pre>
+      <div id="action-links" class="hidden">
         <div>
-          <a href='#' id='select-all' class='icon'>
-            <img src='../images/mouse-pointer.svg' alt='' />
-            <span data-i18n='link_select_all'></span>
+          <a href="#" id="select-all" class="icon">
+            <img src="../images/mouse-pointer.svg" alt="" />
+            <span data-i18n="link_select_all"></span>
           </a>
         </div>
         <div>
-          <a href='#' id='grant-download-permission' class='icon'>
-            <img src='../images/download.svg' alt='' />
-            <span data-i18n='link_download'></span>
+          <a href="#" id="grant-download-permission" class="icon">
+            <img src="../images/download.svg" alt="" />
+            <span data-i18n="link_download"></span>
           </a>
         </div>
         <div>
-          <a href='#' id='download' class='icon hidden'>
-            <img src='../images/download.svg' alt='' />
-            <span data-i18n='link_download'></span>
+          <a href="#" id="download" class="icon hidden">
+            <img src="../images/download.svg" alt="" />
+            <span data-i18n="link_download"></span>
           </a>
         </div>
         <div>
-          <a href='#' id='save-configuration' class='icon'>
-            <img src='../images/save.svg' alt='' />
-            <span data-i18n='link_save_configuration'></span>
+          <a href="#" id="save-configuration" class="icon">
+            <img src="../images/save.svg" alt="" />
+            <span data-i18n="link_save_configuration"></span>
           </a>
         </div>
       </div>
       <hr />
       <div>
-        <a href='#' id='list-configurations' class='icon'>
-          <img src='../images/cog.svg' alt='' />
-          <span data-i18n='link_load_configuration'></span>
+        <a href="#" id="list-configurations" class="icon">
+          <img src="../images/cog.svg" alt="" />
+          <span data-i18n="link_load_configuration"></span>
         </a>
       </div>
       <div>
-        <a href='#' id='import-configuration' class='icon'>
-          <img src='../images/export.svg' alt='' />
-          <span data-i18n='configuration_import'></span>
+        <a href="#" id="import-configuration" class="icon">
+          <img src="../images/export.svg" alt="" />
+          <span data-i18n="configuration_import"></span>
         </a>
       </div>
     </section>
   </main>
-  <footer id='footer'>
-    <a href='https://www.soeren-hentzschel.at/firefox-webextensions/enterprise-policy-generator/?utm_campaign=webext&utm_term=enterprise' target='_blank' rel='noopener'>
-      <span data-i18n='extension_name'></span> © 2018 - 2020, soeren-hentzschel.at
+  <footer id="footer">
+    <a href="https://www.soeren-hentzschel.at/firefox-webextensions/enterprise-policy-generator/?utm_campaign=webext&utm_term=enterprise" target="_blank" rel="noopener">
+      <span data-i18n="extension_name"></span> © 2018 - 2020, soeren-hentzschel.at
     </a>
   </footer>
-  <div id='modal-save-dialog' class='modal-dialog'>
+  <div id="modal-save-dialog" class="modal-dialog">
     <div>
       <header>
-        <div data-i18n='save_dialog_window_title'></div>
+        <div data-i18n="save_dialog_window_title"></div>
       </header>
       <section>
         <form>
           <div>
-            <label for='save-dialog-name' data-i18n='save_dialog_form_name'></label>
-            <input type='text' name='save-dialog-name' id='save-dialog-name' />
+            <label for="save-dialog-name" data-i18n="save_dialog_form_name"></label>
+            <input type="text" name="save-dialog-name" id="save-dialog-name" />
           </div>
         </form>
       </section>
       <aside>
-        <button id='button-save-dialog-cancel' class='secondary-action' data-i18n='save_dialog_btn_cancel'></button>
-        <button id='button-save-dialog-ok' class='primary-action' data-i18n='save_dialog_btn_ok' disabled></button>
+        <button id="button-save-dialog-cancel" class="secondary-action" data-i18n="save_dialog_btn_cancel"></button>
+        <button id="button-save-dialog-ok" class="primary-action" data-i18n="save_dialog_btn_ok" disabled></button>
       </aside>
     </div>
   </div>
-  <div id='modal-list-dialog' class='modal-dialog'>
+  <div id="modal-list-dialog" class="modal-dialog">
     <div>
       <header>
-        <div data-i18n='list_dialog_window_title'></div>
+        <div data-i18n="list_dialog_window_title"></div>
       </header>
       <section>
-        <div id='no-saved-configurations' class='hidden' data-i18n='list_dialog_no_saved_configurations'></div>
-        <table id='list-configurations-table' class='hidden'>
+        <div id="no-saved-configurations" class="hidden" data-i18n="list_dialog_no_saved_configurations"></div>
+        <table id="list-configurations-table" class="hidden">
           <thead>
             <tr>
-              <th data-i18n='list_table_name'></th>
-              <th class='time' data-i18n='list_table_time'></th>
-              <th class='actions'></th>
+              <th data-i18n="list_table_name"></th>
+              <th class="time" data-i18n="list_table_time"></th>
+              <th class="actions"></th>
             </tr>
           </thead>
           <tbody></tbody>
         </table>
       </section>
       <aside>
-        <button id='button-list-dialog-cancel' class='secondary-action' data-i18n='list_dialog_btn_cancel'></button>
+        <button id="button-list-dialog-cancel" class="secondary-action" data-i18n="list_dialog_btn_cancel"></button>
       </aside>
     </div>
   </div>
-  <div id='import-configuration-dialog' class='modal-dialog'>
+  <div id="import-configuration-dialog" class="modal-dialog">
     <div>
       <header>
-        <div data-i18n='configuration_import'></div>
+        <div data-i18n="configuration_import"></div>
       </header>
       <section>
         <form>
           <div>
-            <label for='import-dialog-name' data-i18n='save_dialog_form_name'></label>
-            <input type='text' name='import-dialog-name' id='import-dialog-name' />
+            <label for="import-dialog-name" data-i18n="save_dialog_form_name"></label>
+            <input type="text" name="import-dialog-name" id="import-dialog-name" />
           </div>
-          <div class='file-input-wrapper'>
-            <input type='file' id='import-file-input' accept='.policy' />
+          <div class="file-input-wrapper">
+            <input type="file" id="import-file-input" accept=".policy" />
           </div>
         </form>
       </section>
       <aside>
-        <button id='button-import-config-cancel' class='secondary-action' data-i18n='save_dialog_btn_cancel'></button>
-        <button id='button-import-config-ok' class='primary-action' data-i18n='configuration_import' disabled></button>
+        <button id="button-import-config-cancel" class="secondary-action" data-i18n="save_dialog_btn_cancel"></button>
+        <button id="button-import-config-ok" class="primary-action" data-i18n="configuration_import" disabled></button>
       </aside>
     </div>
   </div>
-  <div class='modal-dialog-bg'></div>
-  <script src='../js/lib/i18n.js'></script>
-  <script src='../js/core/serializer.js'></script>
-  <script src='../js/core/policies.js'></script>
-  <script src='../js/core/policymanager.js'></script>
-  <script src='../js/core/output.js'></script>
-  <script src='../js/core/configurator.js'></script>
-  <script src='../js/core/migrator.js'></script>
-  <script src='../js/core/management.js'></script>
+  <div class="modal-dialog-bg"></div>
+  <script src="../js/lib/i18n.js"></script>
+  <script src="../js/core/serializer.js"></script>
+  <script src="../js/core/policies.js"></script>
+  <script src="../js/core/policymanager.js"></script>
+  <script src="../js/core/output.js"></script>
+  <script src="../js/core/configurator.js"></script>
+  <script src="../js/core/migrator.js"></script>
+  <script src="../js/core/management.js"></script>
 </body>
 </html>

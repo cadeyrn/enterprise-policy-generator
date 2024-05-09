@@ -69,7 +69,7 @@ input[type='text'].mandatory-style, input[type='url'].mandatory-style, input[typ
 }
 
 input[type='text']:not(.mandatory-style):focus,
-input[type='url']:not(.mandatory-style):not(.invalid-url-style):focus,
+input[type='url']:not(.mandatory-style, .invalid-url-style):focus,
 select:focus {
   border-color: var(--color-blue-dark);
 }
@@ -267,10 +267,7 @@ button::before {
   content: '';
   position: absolute;
   z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  inset: 0;
   transform: scaleX(0);
   border-radius: 2px;
   background: var(--color-blue-dark);
@@ -339,16 +336,15 @@ button:hover::before {
   margin-bottom: 10px;
 }
 
-input[data-type='array'] ~ .sub-options, .object-array > div,
-input[data-type='array'] ~ .sub-options, .object-list > div {
+input[data-type='array'] ~ .sub-options, .object-array > div, .object-list > div {
   position: relative;
 }
 
 input[data-type='array'] ~ .sub-options + .sub-options,
 input[data-type='key-value-pairs'] ~ .sub-options + .sub-options,
 input[data-type='key-object-list'] ~ .sub-options-wrapper .sub-options + .sub-options,
-.object-array > div:not(:nth-child(1)):not(:nth-child(2)),
-.object-list > div:not(:nth-child(1)):not(:nth-child(2)) {
+.object-array > div:not(:nth-child(1), :nth-child(2)),
+.object-list > div:not(:nth-child(1), :nth-child(2)) {
   margin-top: 30px;
 }
 
@@ -507,10 +503,7 @@ input[data-type='key-object-list'] ~ .sub-options-wrapper .array-action[data-act
   justify-content: center;
   position: fixed;
   z-index: 200;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  inset: 0;
   transform: scale(.7);
   opacity: 0;
   transition: all 300ms;
@@ -545,11 +538,11 @@ input[data-type='key-object-list'] ~ .sub-options-wrapper .array-action[data-act
   width: 550px;
   max-width: 98%;
   max-height: 90vh;
-  overflow: auto;
   border-width: 0;
   border-radius: 5px;
   background-color: var(--color-white);
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .3);
+  overflow: auto;
 }
 
 .modal-dialog header {

@@ -1,7 +1,7 @@
 'use strict';
 
 const gulp = require('gulp');
-const gulpEslint = require('gulp-eslint');
+const gulpEslint = require('gulp-eslint-new');
 const gulpHtmllint = require('gulp-htmllint');
 const gulpStylelint = require('gulp-stylelint');
 const jsdoc = require('gulp-jsdoc3');
@@ -11,7 +11,7 @@ gulp.task('lint-html', () => gulp.src(['./src/html/*.html'])
 );
 
 gulp.task('lint-js', () => gulp.src(['gulpfile.js', './src/js/**/*.js'])
-  .pipe(gulpEslint({ configFile : '.eslintrc.json' }))
+  .pipe(gulpEslint({ overrideConfigFile : '.eslintrc.json', configType : 'eslintrc' }))
   .pipe(gulpEslint.format())
 );
 

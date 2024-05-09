@@ -448,7 +448,7 @@ const configurator = {
    * Appends policy element to the appropriate UI category in the DOM.
    *
    * @param {HTMLElement} el - the DOM element
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    *
    * @returns {void}
    */
@@ -464,7 +464,7 @@ const configurator = {
    * Adds policy of the type "array" to the DOM.
    *
    * @param {string} key - the name of the policy
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    *
    * @returns {void}
    */
@@ -490,7 +490,7 @@ const configurator = {
    * Adds policy of the type "boolean" to the DOM.
    *
    * @param {string} key - the name of the policy
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    * @param {boolean} inverse - if true, the value for the policy will be false instead of true
    *
    * @returns {void}
@@ -506,7 +506,7 @@ const configurator = {
    * Adds policy of the type "enum" to the DOM.
    *
    * @param {string} key - the name of the policy
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    *
    * @returns {void}
    */
@@ -547,7 +547,7 @@ const configurator = {
    * Adds policy of the type "flat-array" to the DOM.
    *
    * @param {string} key - the name of the policy
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    *
    * @returns {void}
    */
@@ -589,7 +589,7 @@ const configurator = {
    * Adds policy of the type "key-object-list" to the DOM.
    *
    * @param {string} key - the name of the policy
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    *
    * @returns {void}
    */
@@ -668,7 +668,7 @@ const configurator = {
    * Adds policy of the type "key-value-pairs" to the DOM.
    *
    * @param {string} key - the name of the policy
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    *
    * @returns {void}
    */
@@ -716,7 +716,7 @@ const configurator = {
    * Adds policy of the type "object" to the DOM.
    *
    * @param {string} key - the name of the policy
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    *
    * @returns {void}
    */
@@ -745,7 +745,7 @@ const configurator = {
    * Adds policy of the type "preference" to the DOM.
    *
    * @param {string} key - the name of the policy
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    *
    * @returns {void}
    */
@@ -870,7 +870,7 @@ const configurator = {
    * Adds policy of the type "string" to the DOM.
    *
    * @param {string} key - the name of the policy
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    * @param {boolean} isUrl - if true, the option is of the type "url", otherwise it's of the type "string"
    *
    * @returns {void}
@@ -919,7 +919,7 @@ const configurator = {
    *
    * @param {HTMLElement} el - the DOM element of the policy
    * @param {string} parentName - the name of the parent policy object
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    * @param {boolean} isArrayProperty - whether this call is within an array field or not
    * @param {boolean} hideArrayActionLinks - whether this is an array item but no action links should be added
    *
@@ -967,7 +967,7 @@ const configurator = {
    *
    * @param {HTMLElement} el - the DOM element of the policy
    * @param {string} parentName - the name of the parent policy object
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    *
    * @returns {void}
    */
@@ -996,7 +996,7 @@ const configurator = {
    *
    * @param {HTMLElement} el - the DOM element of the policy
    * @param {string} parentName - the name of the parent policy object
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    *
    * @returns {void}
    */
@@ -1036,7 +1036,7 @@ const configurator = {
    *
    * @param {HTMLElement} el - the DOM element of the policy
    * @param {string} parentName - the name of the parent policy object
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    *
    * @returns {void}
    */
@@ -1084,7 +1084,7 @@ const configurator = {
    *
    * @param {HTMLElement} el - the DOM element of the policy
    * @param {string} parentName - the name of the parent policy object
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    * @param {boolean} isArrayProperty - whether this call is within an array field or not
    *
    * @returns {void}
@@ -1141,7 +1141,7 @@ const configurator = {
    *
    * @param {HTMLElement} el - the DOM element of the policy
    * @param {string} parentName - the name of the parent policy object
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    *
    * @returns {void}
    */
@@ -1189,7 +1189,7 @@ const configurator = {
    *
    * @param {HTMLElement} el - the DOM element of the policy
    * @param {string} parentName - the name of the parent policy object
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    *
    * @returns {void}
    */
@@ -1229,7 +1229,7 @@ const configurator = {
    *
    * @param {HTMLElement} el - the DOM element of the policy
    * @param {string} parentName - the name of the parent policy object
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    *
    * @returns {void}
    */
@@ -1289,7 +1289,7 @@ const configurator = {
    *
    * @param {HTMLElement} el - the DOM element of the policy
    * @param {string} parentName - the name of the parent policy object
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    * @param {boolean} isUrl - if true, the property is of the type "url", otherwise it's of the type "string"
    * @param {boolean} dataUriAllowed - if true, data URIs are allowed as input, only considered if isUrl is true
    * @param {boolean} isArrayProperty - whether this call is within an array field or not
@@ -1361,7 +1361,7 @@ const configurator = {
    * Adds a policy node the DOM. This method generates the common code which is the same for all object types.
    *
    * @param {string} key - the name of the policy
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    * @param {string} type - the type of the policy
    * @param {boolean} inverse - if true, the value for the policy will be false instead of true
    *
@@ -1481,7 +1481,7 @@ const configurator = {
    *
    * @param {HTMLElement} elSelectWrapper - the DOM node of the wrapping element
    * @param {string} name - the name of the policy
-   * @param {Object} policy - the policy object
+   * @param {object} policy - the policy object
    *
    * @returns {void}
    */
