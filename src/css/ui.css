@@ -685,6 +685,12 @@ input[data-type='key-object-list'] ~ .sub-options-wrapper .array-action[data-act
   height: 36px;
 }
 
+#filter-wrapper label {
+  position: absolute;
+  text-indent: -9999px;
+  color: transparent;
+}
+
 #filter {
   position: relative;
   z-index: 2;
