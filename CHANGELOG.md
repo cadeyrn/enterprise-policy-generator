@@ -31,8 +31,10 @@
 - integer values were parsed as strings in preference policies, see
   [#171](https://github.com/cadeyrn/enterprise-policy-generator/issues/171)
 
-#### Notable Changes
+#### Notable Changes and Code Quality
 
+- optimized the file size of a few images, fixes
+  [#222](https://github.com/cadeyrn/enterprise-policy-generator/issues/222)
 - replaced the translation mechanism with the newest version to share more code with other extensions and improve the
   maintainability, fixes [#221](https://github.com/cadeyrn/enterprise-policy-generator/issues/221)
 - changed copyright year from 2020 to 2024, fixes
