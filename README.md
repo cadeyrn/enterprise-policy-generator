@@ -1,4 +1,4 @@
-# Firefox Add-on: Enterprise Policy Generator (WebExtension)
+# Firefox Add-on: Enterprise Policy Generator
 
 <img src="src/images/logo-large.png" alt="Logo" width="790" border="0" />
 
@@ -88,6 +88,10 @@ interface.
 _(since 2.0.0)_
 
 The storage permission is needed so that you can save and load configurations.
+
+## Compatibility
+
+
 
 ## Download
 
