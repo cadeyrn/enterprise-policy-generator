@@ -33,6 +33,8 @@
 
 #### Notable Changes
 
+- replaced the translation mechanism with the newest version to share more code with other extensions and improve the
+  maintainability, fixes [#221](https://github.com/cadeyrn/enterprise-policy-generator/issues/221)
 - changed copyright year from 2020 to 2024, fixes
   [#220](https://github.com/cadeyrn/enterprise-policy-generator/issues/220)
   
