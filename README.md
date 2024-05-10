@@ -89,10 +89,6 @@ _(since 2.0.0)_
 
 The storage permission is needed so that you can save and load configurations.
 
-## Compatibility
-
-
-
 ## Download
 
 [Download Enterprise Policy Generator](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/)
