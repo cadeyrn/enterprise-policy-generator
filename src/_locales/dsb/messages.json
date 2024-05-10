@@ -249,7 +249,7 @@
     "message": "Domena"
   },
   "policy_description_Cookies_AllowSession": {
-    "message": "Domeny, kótarež směju cookieje jano za aktualne pósejźenje wužywaś (Firefox 79+, Firefox ESR 78.1+)"
+    "message": "Domeny, kótarež směju cookieje jano za aktualne pósejźenje wužywaś"
   },
   "policy_description_Cookies_AllowSession_Domain": {
     "message": "Domena"
@@ -696,7 +696,7 @@
     "message": "Nowe napšašowanja blokěrowaś, kótarež pominaju, powěźeńki dowóliś"
   },
   "policy_description_Permissions_VirtualReality": {
-    "message": "Wirtuelna realita (Firefox 80+, Firefox ESR 78.2+)"
+    "message": "Wirtuelna realita"
   },
   "policy_description_Permissions_VirtualReality_Allow": {
     "message": "Pśistup k toś tym URL dowóliś"

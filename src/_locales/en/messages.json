@@ -249,7 +249,7 @@
     "message": "Domain"
   },
   "policy_description_Cookies_AllowSession": {
-    "message": "Domains where cookies are only allowed for the current session (Firefox 79+, Firefox ESR 78.1+)"
+    "message": "Domains where cookies are only allowed for the current session"
   },
   "policy_description_Cookies_AllowSession_Domain": {
     "message": "Domain"
@@ -696,7 +696,7 @@
     "message": "Block new requests asking to allow notifications"
   },
   "policy_description_Permissions_VirtualReality": {
-    "message": "Virtual Reality (Firefox 80+, Firefox ESR 78.2+)"
+    "message": "Virtual Reality"
   },
   "policy_description_Permissions_VirtualReality_Allow": {
     "message": "Allow access for these URLs"

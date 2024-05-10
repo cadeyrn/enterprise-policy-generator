@@ -249,7 +249,7 @@
     "message": "域名"
   },
   "policy_description_Cookies_AllowSession": {
-    "message": "Domains where cookies are only allowed for the current session (Firefox 79+, Firefox ESR 78.1+)"
+    "message": "Domains where cookies are only allowed for the current session"
   },
   "policy_description_Cookies_AllowSession_Domain": {
     "message": "域名"
@@ -696,7 +696,7 @@
     "message": "禁止请求向您传送通知"
   },
   "policy_description_Permissions_VirtualReality": {
-    "message": "Virtual Reality (Firefox 80+, Firefox ESR 78.2+)"
+    "message": "Virtual Reality"
   },
   "policy_description_Permissions_VirtualReality_Allow": {
     "message": "允许下列 URL 操控"
@@ -972,7 +972,7 @@
     "message": "阻止安装"
   },
   "policy_description_SearchEngines_Remove": {
-    "message": "移除搜索引擎 (Firefox 62+)"
+    "message": "移除搜索引擎"
   },
   "policy_description_SearchEngines_Remove_Name": {
     "message": "名称"

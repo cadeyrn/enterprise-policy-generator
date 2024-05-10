@@ -249,7 +249,7 @@
     "message": "Домен"
   },
   "policy_description_Cookies_AllowSession": {
-    "message": "Domains where cookies are only allowed for the current session (Firefox 79+, Firefox ESR 78.1+)"
+    "message": "Domains where cookies are only allowed for the current session"
   },
   "policy_description_Cookies_AllowSession_Domain": {
     "message": "Домен"
@@ -696,7 +696,7 @@
     "message": "Блокировать новые запросы разрешения уведомлений"
   },
   "policy_description_Permissions_VirtualReality": {
-    "message": "Устройства виртуальной реальности (Firefox 80+, ESR 78.2+)"
+    "message": "Устройства виртуальной реальности"
   },
   "policy_description_Permissions_VirtualReality_Allow": {
     "message": "Разрешить доступ к этим URL"
