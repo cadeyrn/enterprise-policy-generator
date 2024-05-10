@@ -20,7 +20,7 @@ const configurator = {
   /**
    * Contains the UI categories.
    *
-   * @type {Array.<string>}
+   * @type {Array.<HTMLElement>}
    */
   uiCategoryElements : [],
 
@@ -59,7 +59,7 @@ const configurator = {
         configurator.addArrayOption(key, policies[key]);
       }
       else if (policies[key].type === 'boolean') {
-        configurator.addBooleanOption(key, policies[key]);
+        configurator.addBooleanOption(key, policies[key], false);
       }
       else if (policies[key].type === 'boolean-inverse') {
         configurator.addBooleanOption(key, policies[key], true);
@@ -243,7 +243,7 @@ const configurator = {
 
     switch (e.target.getAttribute('data-action')) {
       case 'add':
-        configurator.addArrayField(e.target);
+        configurator.addArrayField(e.target, null, null);
         break;
       case 'remove':
         configurator.removeArrayField(e.target);
@@ -257,8 +257,8 @@ const configurator = {
    * Executes the add action for array fields, called by executeArrayFieldActions().
    *
    * @param {HTMLElement} el - the DOM element of the array field which should be duplicated
-   * @param {string} key - (optional) the array field index which should be used for DOM IDs and names
-   * @param {number} overrideCountValue - (optional) use this value for the data-count attribute
+   * @param {string|null} key - (optional) the array field index which should be used for DOM IDs and names
+   * @param {number|null} overrideCountValue - (optional) use this value for the data-count attribute
    *
    * @returns {void}
    */
@@ -281,10 +281,10 @@ const configurator = {
     }
 
     // increment array field counter
-    const count = overrideCountValue ? parseInt(overrideCountValue) : parseInt(el.getAttribute('data-count')) + 1;
+    const count = overrideCountValue ? overrideCountValue : parseInt(el.getAttribute('data-count')) + 1;
 
     el.parentNode.parentNode.querySelectorAll('[data-count]').forEach((el) => {
-      el.setAttribute('data-count', count);
+      el.setAttribute('data-count', count.toString());
     });
 
     // copy the array item
@@ -469,7 +469,7 @@ const configurator = {
    * @returns {void}
    */
   addArrayOption (key, policy) {
-    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'array');
+    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'array', false);
     const elSubOptions = configurator.addSubOptions(elObjectWrapper);
 
     // add array properties
@@ -511,7 +511,7 @@ const configurator = {
    * @returns {void}
    */
   addEnumOption (key, policy) {
-    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'enum');
+    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'enum', false);
 
     const elSelectWrapper = document.createElement('div');
     elSelectWrapper.classList.add('enum', 'sub-options', 'select-wrapper', 'disabled');
@@ -552,7 +552,7 @@ const configurator = {
    * @returns {void}
    */
   addFlatArrayOption (key, policy) {
-    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'flat-array');
+    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'flat-array', false);
     const elSubOptions = configurator.addSubOptions(elObjectWrapper);
 
     const elInputWrapper = document.createElement('div');
@@ -594,7 +594,7 @@ const configurator = {
    * @returns {void}
    */
   addKeyObjectListOption (key, policy) {
-    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'key-object-list');
+    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'key-object-list', false);
 
     // add extra properties
     if (policy.extra && policy.extra.properties) {
@@ -612,7 +612,7 @@ const configurator = {
 
       const optionsLength = policy.extra.properties.length;
       for (let i = 0; i < optionsLength; i++) {
-        configurator.addProperty(elExtraOptions, key + '_' + policy.extra.properties[i].name, policy.extra.properties[i]);
+        configurator.addProperty(elExtraOptions, key + '_' + policy.extra.properties[i].name, policy.extra.properties[i], false, false);
       }
 
       const elPostCaptionWrapper = document.createElement('div');
@@ -673,7 +673,7 @@ const configurator = {
    * @returns {void}
    */
   addKeyValuePairsOption (key, policy) {
-    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'key-value-pairs');
+    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'key-value-pairs', false);
     const elSubOptions = configurator.addSubOptions(elObjectWrapper);
 
     const elInputWrapperKey = document.createElement('div');
@@ -721,7 +721,7 @@ const configurator = {
    * @returns {void}
    */
   addObjectOption (key, policy) {
-    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'object');
+    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'object', false);
     const elSubOptions = configurator.addSubOptions(elObjectWrapper);
 
     // policy can be locked
@@ -733,7 +733,7 @@ const configurator = {
     if (policy.properties) {
       const optionsLength = policy.properties.length;
       for (let i = 0; i < optionsLength; i++) {
-        configurator.addProperty(elSubOptions, key, policy.properties[i]);
+        configurator.addProperty(elSubOptions, key, policy.properties[i], false, false);
       }
     }
 
@@ -750,7 +750,7 @@ const configurator = {
    * @returns {void}
    */
   addPreferenceOption (key, policy) {
-    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'preference');
+    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'preference', false);
 
     if (policy.properties.type === 'array') {
       const elArrayWrapper = document.createElement('div');
@@ -761,7 +761,7 @@ const configurator = {
       // add array items
       if (policy.properties.items) {
         const parentName = policy.properties.option.replace(/\./g, '_');
-        configurator.addProperty(elArrayWrapper, parentName, policy.properties.items, true);
+        configurator.addProperty(elArrayWrapper, parentName, policy.properties.items, true, false);
       }
     }
     else if (policy.properties.type === 'boolean' || policy.properties.type === 'boolean-inverse') {
@@ -877,7 +877,7 @@ const configurator = {
    */
   addStringOption (key, policy, isUrl) {
     const type = isUrl ? 'url' : 'string';
-    const elObjectWrapper = configurator.addPolicyNode(key, policy, type);
+    const elObjectWrapper = configurator.addPolicyNode(key, policy, type, false);
     const elSubOptions = configurator.addSubOptions(elObjectWrapper);
 
     // input field
@@ -985,7 +985,7 @@ const configurator = {
 
     // add array items
     if (policy.items) {
-      configurator.addProperty(elObjectWrapper, parentName + '_' + policy.name, policy.items, true);
+      configurator.addProperty(elObjectWrapper, parentName + '_' + policy.name, policy.items, true, false);
     }
 
     el.appendChild(elObjectWrapper);
@@ -1180,7 +1180,7 @@ const configurator = {
         name = parentName + '_' + policy.name + '_' + policy.properties[i].name;
       }
 
-      configurator.addProperty(elSubOptions, name, policy.properties[i]);
+      configurator.addProperty(elSubOptions, name, policy.properties[i], false, false);
     }
   },
 
@@ -1665,7 +1665,7 @@ const configurator = {
   /**
    * This method sets or removes an attribute based on the content of the filter field.
    *
-   * @param {MouseEvent} e - event
+   * @param {Event} e - event
    *
    * @returns {void}
    */
@@ -1725,4 +1725,4 @@ const configurator = {
   }
 };
 
-configurator.init();
+configurator.init(false);

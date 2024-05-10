@@ -39,6 +39,7 @@
   maintainability, fixes [#221](https://github.com/cadeyrn/enterprise-policy-generator/issues/221)
 - changed copyright year from 2020 to 2024, fixes
   [#220](https://github.com/cadeyrn/enterprise-policy-generator/issues/220)
+- several code quality and code style improvements
   
 #### Enterprise Policies
 

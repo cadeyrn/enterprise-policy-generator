@@ -57,7 +57,7 @@ const management = {
         elSubmitButton.removeAttribute('disabled');
       }
       else {
-        elSubmitButton.setAttribute('disabled', true);
+        elSubmitButton.setAttribute('disabled', 'disabled');
       }
     };
 
@@ -102,7 +102,7 @@ const management = {
   closeSaveConfigurationDialog (elModal, elSubmitButton) {
     elModal.classList.remove('visible');
     elModal.querySelector('#save-dialog-name').value = '';
-    elSubmitButton.setAttribute('disabled', true);
+    elSubmitButton.setAttribute('disabled', 'disabled');
   },
 
   /**
@@ -149,7 +149,7 @@ const management = {
       }
     };
 
-    management.listConfigurations(elModal);
+    management.listConfigurations();
   },
 
   /**
@@ -214,7 +214,7 @@ const management = {
       const elRemoveLink = document.createElement('a');
       elRemoveLink.setAttribute('href', '#');
       elRemoveLink.setAttribute('title', browser.i18n.getMessage('title_remove_configuration'));
-      elRemoveLink.setAttribute('data-idx', i);
+      elRemoveLink.setAttribute('data-idx', i.toString());
       elRemoveLink.classList.add('icon', 'trash-icon');
       elRemoveLink.addEventListener('click', management.removeConfiguration);
       elIconColumn.appendChild(elRemoveLink);
@@ -228,7 +228,7 @@ const management = {
       const elFakeExportLink = document.createElement('a');
       elFakeExportLink.setAttribute('href', '#');
       elFakeExportLink.setAttribute('title', browser.i18n.getMessage('configuration_export'));
-      elFakeExportLink.setAttribute('data-idx', i);
+      elFakeExportLink.setAttribute('data-idx', i.toString());
       elFakeExportLink.classList.add('icon', 'fake-export-link');
       elFakeExportLink.addEventListener('click', management.grantDownloadPermission);
       elIconColumn.appendChild(elFakeExportLink);
@@ -242,7 +242,7 @@ const management = {
       const elExportLink = document.createElement('a');
       elExportLink.setAttribute('href', '#');
       elExportLink.setAttribute('title', browser.i18n.getMessage('configuration_export'));
-      elExportLink.setAttribute('data-idx', i);
+      elExportLink.setAttribute('data-idx', i.toString());
       elExportLink.classList.add('icon', 'export-link', 'hidden');
       elExportLink.addEventListener('click', management.exportConfiguration);
       elIconColumn.appendChild(elExportLink);
@@ -256,7 +256,7 @@ const management = {
       const elLoadLink = document.createElement('a');
       elLoadLink.setAttribute('href', '#');
       elLoadLink.setAttribute('title', browser.i18n.getMessage('title_apply_configuration'));
-      elLoadLink.setAttribute('data-idx', i);
+      elLoadLink.setAttribute('data-idx', i.toString());
       elLoadLink.classList.add('icon');
       elLoadLink.addEventListener('click', management.applyConfiguration);
       elIconColumn.appendChild(elLoadLink);
@@ -391,7 +391,7 @@ const management = {
         elSubmitButton.removeAttribute('disabled');
       }
       else {
-        elSubmitButton.setAttribute('disabled', true);
+        elSubmitButton.setAttribute('disabled', 'disabled');
       }
     };
 
@@ -401,7 +401,7 @@ const management = {
         elSubmitButton.removeAttribute('disabled');
       }
       else {
-        elSubmitButton.setAttribute('disabled', true);
+        elSubmitButton.setAttribute('disabled', 'disabled');
       }
     };
 
@@ -447,7 +447,7 @@ const management = {
     elModal.classList.remove('visible');
     elModal.querySelector('#import-dialog-name').value = '';
     elModal.querySelector('#import-file-input').value = '';
-    elSubmitButton.setAttribute('disabled', true);
+    elSubmitButton.setAttribute('disabled', 'disabled');
   },
 
   /**
@@ -464,7 +464,7 @@ const management = {
     reader.readAsText(elLocalFile.files[0]);
     reader.addEventListener('loadend', async () => {
       const { configurations } = await browser.storage.local.get({ configurations : [] });
-      const file = reader.result;
+      const file = reader.result.toString();
 
       const configuration = {
         name : name,

@@ -560,7 +560,7 @@ const output = {
   /**
    * Checks if a policy has invalid values.
    *
-   * @param {HTMLElement} el - the DOM element of the policy
+   * @param {HTMLElement|ParentNode} el - the DOM element of the policy
    *
    * @returns {boolean} - whether the policy has invalid values or not
    */

@@ -459,7 +459,8 @@ input[data-type='key-object-list'] ~ .sub-options-wrapper .array-action[data-act
 #footer a {
   display: block;
   padding-left: 40px;
-  background: url('../images/sh-at.png') no-repeat;
+  background-image: url('../images/sh-at.png');
+  background-repeat: no-repeat;
   background-size: 32px 32px;
   background-position: center left;
   color: var(--color-black);
