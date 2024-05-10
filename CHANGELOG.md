@@ -30,6 +30,11 @@
   see [#161](https://github.com/cadeyrn/enterprise-policy-generator/issues/161)
 - integer values were parsed as strings in preference policies, see
   [#171](https://github.com/cadeyrn/enterprise-policy-generator/issues/171)
+
+#### Notable Changes
+
+- changed copyright year from 2020 to 2024, fixes
+  [#220](https://github.com/cadeyrn/enterprise-policy-generator/issues/220)
   
 #### Enterprise Policies
 
