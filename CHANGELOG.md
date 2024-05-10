@@ -6,6 +6,8 @@
 
 #### Enhancements
 
+- Enterprise Policy Generator now uses Manifest v3, fixes
+  [#188](https://github.com/cadeyrn/enterprise-policy-generator/issues/188)
 - deprecation of old Firefox versions. Firefox 115 or higher is required now. Also, Enterprise Policy Generator no
   longer shows minimum required Firefox version for policies older than Firefox 115.0, see
   [#138](https://github.com/cadeyrn/enterprise-policy-generator/issues/138)

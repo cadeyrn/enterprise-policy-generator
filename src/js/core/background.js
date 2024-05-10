@@ -31,10 +31,13 @@ const background = {
 };
 
 browser.runtime.onInstalled.addListener(background.onInstalledHandler);
-browser.browserAction.onClicked.addListener(background.openUserInterface);
+browser.action.onClicked.addListener(background.openUserInterface);
 
-browser.menus.create({
-  title : browser.i18n.getMessage('extension_name'),
-  contexts : ['tools_menu'],
-  command : '_execute_browser_action'
+browser.runtime.onInstalled.addListener(() => {
+  browser.menus.create({
+    id : 'epg-tools-menu-entry',
+    title : browser.i18n.getMessage('extension_name'),
+    contexts : ['tools_menu'],
+    command : '_execute_action'
+  });
 });
