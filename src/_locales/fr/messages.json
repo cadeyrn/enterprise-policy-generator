@@ -45,13 +45,13 @@
     "message": "En cliquant sur le bouton, un code sera généré. Ce code doit être stocké dans un fichier \"policies.json\" qui doit être stocké dans le répertoire de distribution."
   },
   "explanation_intro_linux": {
-    "message": "créer un répertoire appelé \"distribution\" dans le répertoire où se trouve Firefox et y placer le fichier \"policies.json\"."
+    "message": "Créer un répertoire appelé \"distribution\" dans le répertoire où se trouve Firefox et y placer le fichier \"policies.json\"."
   },
   "explanation_intro_macos": {
-    "message": "créer un répertoire appelé \"distribution\" dans Firefox.app/Contents/Resources/ et y placer le fichier \"policies.json\"."
+    "message": "Create a \"distribution\" directory inside the /Contents/Resources/ directory of the Firefox application package and place the file \"policies.json\" there. To open the application package, right-click on the Firefox application in the Finder and choose \"show package contents\" from the context menu."
   },
   "explanation_intro_windows": {
-    "message": "créer un répertoire appelé \"distribution\" où se trouve le fichier firefox.exe et y placer le fichier \"policies.json\"."
+    "message": "Créer un répertoire appelé \"distribution\" où se trouve le fichier firefox.exe et y placer le fichier \"policies.json\"."
   },
   "extension_description": {
     "message": "Générer Règles d'Entreprise pour Firefox."

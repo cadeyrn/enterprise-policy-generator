@@ -48,7 +48,7 @@
     "message": "在 Firefox 安装目录中创建一个名为 “distribution” 的文件夹，并将 “policies.json” 文件放到该文件夹。"
   },
   "explanation_intro_macos": {
-    "message": "在 Firefox.app/Contents/Resources/ 中创建一个名为 “distribution” 的文件夹，并将 “policies.json” 文件放到该文件夹。"
+    "message": "Create a “distribution” directory inside the /Contents/Resources/ directory of the Firefox application package and place the file “policies.json” there. To open the application package, right-click on the Firefox application in the Finder and choose “show package contents” from the context menu."
   },
   "explanation_intro_windows": {
     "message": "在 firefox.exe 文件所在的目录创建一个名为 “distribution” 的文件夹，并将 “policies.json” 文件放到该文件夹。"

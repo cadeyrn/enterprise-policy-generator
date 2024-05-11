@@ -48,7 +48,7 @@
     "message": "Wutworće rjadowak z mjenom „distribution“ w rjadowaku, w kotrymž je Firefox a składujće tam dataju „policies.json“."
   },
   "explanation_intro_macos": {
-    "message": "Wutworće rjadowak z mjenom „distribution“ w Firefox.app/Contents/Resources/ a składujće tam dataju „policies.json“."
+    "message": "Create a „distribution“ directory inside the /Contents/Resources/ directory of the Firefox application package and place the file „policies.json“ there. To open the application package, right-click on the Firefox application in the Finder and choose „show package contents“ from the context menu."
   },
   "explanation_intro_windows": {
     "message": "Wutworće rjadowak z mjenom „distribution“ w tym rjadowaku, hdźež je dataja firefox.exe a składujće tam dataju „policies.json“."

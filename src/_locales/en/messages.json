@@ -45,13 +45,13 @@
     "message": "By clicking on the button a code will be generated. This code must be stored in a file “policies.json” which must be stored in the distribution directory."
   },
   "explanation_intro_linux": {
-    "message": "create a directory called “distribution” in the directory where Firefox is located and place the file “policies.json” there."
+    "message": "Create a directory called “distribution” in the directory where Firefox is located and place the file “policies.json” there."
   },
   "explanation_intro_macos": {
-    "message": "create a directory called “distribution” in Firefox.app/Contents/Resources/ and place the file “policies.json” there."
+    "message": "Create a “distribution” directory inside the /Contents/Resources/ directory of the Firefox application package and place the file “policies.json” there. To open the application package, right-click on the Firefox application in the Finder and choose “show package contents” from the context menu."
   },
   "explanation_intro_windows": {
-    "message": "create a directory called “distribution” where the firefox.exe file is located and place the file “policies.json” there."
+    "message": "Create a directory called “distribution” where the firefox.exe file is located and place the file “policies.json” there."
   },
   "extension_description": {
     "message": "Generates Enterprise Policies for Firefox."

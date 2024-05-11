@@ -45,13 +45,13 @@
     "message": "Per Klick auf den Button wird ein Code generiert. Dieser muss in einer Datei „policies.json“ gespeichert werden, welche im Distributionsverzeichnis abgelegt werden muss."
   },
   "explanation_intro_linux": {
-    "message": "erstellen Sie ein Verzeichnis mit dem Namen „distribution“ in dem Verzeichnis, in welchem sich Firefox befindet und platzieren Sie die Datei „policies.json“ dort."
+    "message": "Erstellen Sie ein Verzeichnis mit dem Namen „distribution“ in dem Verzeichnis, in welchem sich Firefox befindet, und platzieren Sie die Datei „policies.json“ dort."
   },
   "explanation_intro_macos": {
-    "message": "erstellen Sie ein Verzeichnis mit dem Namen „distribution“ in Firefox.app/Contents/Resources/ und platzieren Sie die Datei „policies.json“ dort."
+    "message": "Erstellen Sie ein Verzeichnis mit dem Namen „distribution“ innerhalb ds Verzeichnisses /Contents/Resources/ im Anwendungspaket von Firefox und platzieren Sie die Datei „policies.json“ dort. Um das Anwendungspaket zu öffnen, klicken Sie mit der rechten Maustaste auf die Firefox-Anwendung im Finder und wählen Sie „Paketinhalt zeigen“ aus dem Kontextmenü."
   },
   "explanation_intro_windows": {
-    "message": "erstellen Sie ein Verzeichnis mit dem Namen „distribution“ in dem Verzeichnis, in welchem sich die Datei firefox.exe befindet und platzieren Sie die Datei „policies.json“ dort."
+    "message": "Erstellen Sie ein Verzeichnis mit dem Namen „distribution“ in dem Verzeichnis, in welchem sich die Datei firefox.exe befindet, und platzieren Sie die Datei „policies.json“ dort."
   },
   "extension_description": {
     "message": "Generiert Unternehmensrichtlinien für Firefox."
