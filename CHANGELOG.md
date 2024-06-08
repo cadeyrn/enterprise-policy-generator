@@ -110,7 +110,7 @@
 - updated stylelint from version 13.2.0 to 15.11.0 and updated configuration
 - updated stylelint-csstree-validator from version 1.8.0 to 3.0.0
 - updated stylelint-order from version 4.0.0 to 6.0.4
-- updated web-ext from version 4.1.0 to 7.11.0
+- updated web-ext from version 4.1.0 to 8.0.0
 - replaced gulp-eslint with gulp-eslint-new 2.0.0
 - removed eslint-plugin-compat
 - removed eslint-plugin-no-unsanitized
