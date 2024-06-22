@@ -91,6 +91,8 @@
   [#162](https://github.com/cadeyrn/enterprise-policy-generator/issues/162)
 - enhanced extension settings policy to be able to define domains on which content scripts can't be run, see
   [#165](https://github.com/cadeyrn/enterprise-policy-generator/issues/165)
+- enhanced extension settings policy to be able to disallow automatic updates for individual extensions, see
+  [#230](https://github.com/cadeyrn/enterprise-policy-generator/issues/230)
 - replaced menu bar policy with new one that accepts more options; the old policy will automatically be migrated in
   saved configurations, see [#127](https://github.com/cadeyrn/enterprise-policy-generator/issues/127)
 - removed SearchEngines | DefaultPrivate because this feature never reached a stable release of Firefox, see

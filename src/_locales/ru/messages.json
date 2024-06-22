@@ -524,6 +524,9 @@
   "policy_description_ExtensionSettings_restricted_domains": {
     "message": "Domains on which content scripts can't be run"
   },
+  "policy_description_ExtensionSettings_updates_disabled": {
+    "message": "Allow automatic updates"
+  },
   "policy_description_ExtensionUpdate": {
     "message": "Включение или отключение автоматического обновления расширений"
   },

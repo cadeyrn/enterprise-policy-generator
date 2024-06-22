@@ -524,6 +524,9 @@
   "policy_description_ExtensionSettings_restricted_domains": {
     "message": "Domains, auf denen Content-Scripts nicht ausgeführt werden können"
   },
+  "policy_description_ExtensionSettings_updates_disabled": {
+    "message": "Automatische Updates erlauben"
+  },
   "policy_description_ExtensionUpdate": {
     "message": "Automatische Aktualisierung von Erweiterungen aktivieren oder deaktivieren"
   },

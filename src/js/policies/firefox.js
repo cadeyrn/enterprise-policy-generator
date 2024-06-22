@@ -812,7 +812,26 @@ const policies = {
         caption : browser.i18n.getMessage('policy_description_ExtensionSettings_blocked_install_message_caption_single'),
         label : browser.i18n.getMessage('policy_description_ExtensionSettings_blocked_install_message_label'),
         type : 'string'
-      }
+      },
+      {
+        name : 'updates_disabled',
+        label : browser.i18n.getMessage('policy_description_ExtensionSettings_updates_disabled'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'true'
+          }
+        ]
+      },
     ]
   },
 
