@@ -176,7 +176,7 @@ const output = {
   generateOutputForKeyObjectList (el) {
     const items = {};
 
-    [...el.parentNode.querySelectorAll(':scope > div')].forEach((el) => {
+    [...el.parentNode.querySelectorAll(':scope .extra-options, :scope .sub-options')].forEach((el) => {
       const elKey = el.getElementsByClassName('key')[0];
       const key = elKey ? elKey.value : el.getAttribute('data-key');
 
