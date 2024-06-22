@@ -303,7 +303,7 @@
     "message": "Отключить пункты \"Отправить отзыв\" и \"Сообщить о мошенническом сайте\" в меню Справка"
   },
   "policy_description_DisableFirefoxAccounts": {
-    "message": "Отключить сервисы акаунта Firefox, такие как Firefox Sync"
+    "message": "Disable Mozilla account based services like Firefox Sync"
   },
   "policy_description_DisableFirefoxScreenshots": {
     "message": "Отключить встроенный инструмент скриншота (Firefox Screenshots)"

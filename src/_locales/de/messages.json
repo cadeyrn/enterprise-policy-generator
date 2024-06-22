@@ -303,7 +303,7 @@
     "message": "Deaktiviere die Menü-Einträge „Feedback senden“ und „Betrügerische Website melden“ im Hilfe-Menü"
   },
   "policy_description_DisableFirefoxAccounts": {
-    "message": "Deaktiviere auf Firefox Accounts basierende Dienste wie Firefox Sync"
+    "message": "Deaktiviere auf dem Mozilla-Konto basierende Dienste wie Firefox Sync"
   },
   "policy_description_DisableFirefoxScreenshots": {
     "message": "Deaktiviere die eingebaute Funktion für Bildschirmfotos (Firefox Screenshots)"

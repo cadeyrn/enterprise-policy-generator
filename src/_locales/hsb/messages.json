@@ -303,7 +303,7 @@
     "message": "Menijowej zapiskaj „Posudk pósłać“ a „Wobšudne websydło zdźělić“ w meniju Pomoc znjemóžnić"
   },
   "policy_description_DisableFirefoxAccounts": {
-    "message": "Słužby, kotrež na Firefox Accounts bazěruja, kaž na přikład Firefox Sync, znjemóžnić"
+    "message": "Disable Mozilla account based services like Firefox Sync"
   },
   "policy_description_DisableFirefoxScreenshots": {
     "message": "Zatwarjenu funkciju za fota wobrazowki (Firefox Screenshots) znjemóžnić"

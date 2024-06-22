@@ -303,7 +303,7 @@
     "message": "Menijowej zapiska „Pósudk pósłaś“ a „Wobšudnikojske websedło k wěsći daś“ w meniju Pomoc znjemóžniś"
   },
   "policy_description_DisableFirefoxAccounts": {
-    "message": "Słužby, kótarež na Firefox Accounts bazěruju, ako na pśikład Firefox Sync, znjemóžniś"
+    "message": "Disable Mozilla account based services like Firefox Sync"
   },
   "policy_description_DisableFirefoxScreenshots": {
     "message": "Zatwarjonu funkciju za fota wobrazowki (Firefox Screenshots) znjemóžniś"

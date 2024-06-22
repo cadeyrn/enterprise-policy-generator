@@ -303,7 +303,7 @@
     "message": "Désactiver les options de menu \"Soumettre un feedback\" et \"Signaler un site trompeur\" dans le menu d'aide"
   },
   "policy_description_DisableFirefoxAccounts": {
-    "message": "Désactiver les services basés sur les comptes Firefox comme Firefox Sync"
+    "message": "Disable Mozilla account based services like Firefox Sync"
   },
   "policy_description_DisableFirefoxScreenshots": {
     "message": "Désactiver l'outil de capture d'écran intégré (Firefox Screenshots)"

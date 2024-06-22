@@ -98,6 +98,8 @@
   [#168](https://github.com/cadeyrn/enterprise-policy-generator/issues/168)
 - removed FlashPlugin policy as Flash is no longer a thing, see
   [#218](https://github.com/cadeyrn/enterprise-policy-generator/issues/218)
+- renamed Firefox Account to Mozilla account in DisableFirefoxAccounts policy, see
+  [#268](https://github.com/cadeyrn/enterprise-policy-generator/issues/268)
 
 #### Dependencies
 

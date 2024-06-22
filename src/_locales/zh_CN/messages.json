@@ -303,7 +303,7 @@
     "message": "禁用“帮助”菜单中的“提交反馈”和“举报诈骗网站”菜单"
   },
   "policy_description_DisableFirefoxAccounts": {
-    "message": "禁用基于 Firefox 账户的 Firefox 同步等服务"
+    "message": "Disable Mozilla account based services like Firefox Sync"
   },
   "policy_description_DisableFirefoxScreenshots": {
     "message": "禁用内置的截图工具（Firefox Screenshots）"
