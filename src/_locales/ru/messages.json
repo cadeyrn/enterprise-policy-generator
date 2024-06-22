@@ -989,6 +989,9 @@
   "policy_description_SecurityDevices_label_value": {
     "message": "Путь к библиотеке для устройства"
   },
+  "policy_description_ShowHomeButton": {
+    "message": "Show the home button on the toolbar"
+  },
   "policy_description_SSLVersionMax": {
     "message": "Максимальная поддерживаемая версия TLS"
   },

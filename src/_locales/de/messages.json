@@ -989,6 +989,9 @@
   "policy_description_SecurityDevices_label_value": {
     "message": "Pfad zur Bibliothek für das Gerät"
   },
+  "policy_description_ShowHomeButton": {
+    "message": "Startseiten-Schaltfläche in der Symbolleiste anzeigen"
+  },
   "policy_description_SSLVersionMax": {
     "message": "Maximal unterstützte TLS-Version"
   },

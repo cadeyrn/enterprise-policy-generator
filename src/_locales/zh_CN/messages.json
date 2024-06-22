@@ -989,6 +989,9 @@
   "policy_description_SecurityDevices_label_value": {
     "message": "设备库的路径"
   },
+  "policy_description_ShowHomeButton": {
+    "message": "Show the home button on the toolbar"
+  },
   "policy_description_SSLVersionMax": {
     "message": "最高支持的 TLS 版本"
   },

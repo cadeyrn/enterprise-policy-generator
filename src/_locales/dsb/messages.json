@@ -989,6 +989,9 @@
   "policy_description_SecurityDevices_label_value": {
     "message": "Sćažka k bibliotece za rěd"
   },
+  "policy_description_ShowHomeButton": {
+    "message": "Show the home button on the toolbar"
+  },
   "policy_description_SSLVersionMax": {
     "message": "Maksimalnje pódpěrana TLS-wersija"
   },

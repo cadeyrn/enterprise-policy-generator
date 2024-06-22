@@ -298,6 +298,22 @@ const policies = {
     type : 'boolean'
   },
 
+  ShowHomeButton : {
+    first_available : { mainstream : '88.0', esr : '78.10' },
+    ui_category : 'customization',
+    type : 'enum',
+    options : [
+      {
+        label : browser.i18n.getMessage('enum_value_yes'),
+        value : 'true'
+      },
+      {
+        label : browser.i18n.getMessage('enum_value_no'),
+        value : 'false'
+      },
+    ]
+  },
+
   Homepage : {
     first_available : { mainstream : '62.0', esr : '60.0' },
     is_lockable : true,
