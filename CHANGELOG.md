@@ -99,8 +99,8 @@
 
 #### Dependencies
 
-- added eslint-plugin-jsdoc 48.2.9
-- updated eslint from version 6.8.0 to 9.4.0 and updated configuration
+- added eslint-plugin-jsdoc 48.2.13
+- updated eslint from version 6.8.0 to 9.5.0 and updated configuration
 - updated eslint-plugin-xss from version 0.1.10 to 0.1.12
 - updated gulp from version 4.0.2 to 5.0.0
 - updated gulp-htmllint from version 0.0.16 to 0.0.19
@@ -110,8 +110,8 @@
 - updated stylelint from version 13.2.0 to 15.11.0 and updated configuration
 - updated stylelint-csstree-validator from version 1.8.0 to 3.0.0
 - updated stylelint-order from version 4.0.0 to 6.0.4
-- updated web-ext from version 4.1.0 to 8.0.0
-- replaced gulp-eslint with gulp-eslint-new 2.0.0
+- updated web-ext from version 4.1.0 to 8.2.0
+- replaced gulp-eslint with gulp-eslint-new 2.1.0
 - removed eslint-plugin-compat
 - removed eslint-plugin-no-unsanitized
 - removed eslint-plugin-promise
