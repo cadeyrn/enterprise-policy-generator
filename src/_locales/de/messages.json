@@ -905,6 +905,15 @@
   "policy_description_SanitizeOnShutdown_History": {
     "message": "Besuchte Seiten"
   },
+  "policy_description_SanitizeOnShutdown_Locked_false": {
+    "message": "Keine Optionen vor Veränderung schützen"
+  },
+  "policy_description_SanitizeOnShutdown_Locked_null": {
+    "message": "Alle Optionen vor Veränderung schützen"
+  },
+  "policy_description_SanitizeOnShutdown_Locked_true": {
+    "message": "Nur die gesetzten Optionen vor Veränderung schützen"
+  },
   "policy_description_SanitizeOnShutdown_Sessions": {
     "message": "Aktive Logins"
   },

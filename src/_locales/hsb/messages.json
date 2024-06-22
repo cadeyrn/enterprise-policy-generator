@@ -905,6 +905,15 @@
   "policy_description_SanitizeOnShutdown_History": {
     "message": "Wopytane strony"
   },
+  "policy_description_SanitizeOnShutdown_Locked_false": {
+    "message": "Protect no options from changes"
+  },
+  "policy_description_SanitizeOnShutdown_Locked_null": {
+    "message": "Protect all options from changes"
+  },
+  "policy_description_SanitizeOnShutdown_Locked_true": {
+    "message": "Protect only the set options from changes"
+  },
   "policy_description_SanitizeOnShutdown_Sessions": {
     "message": "Aktiwne přizjewjenja"
   },

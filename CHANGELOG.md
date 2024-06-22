@@ -76,8 +76,9 @@
   [#136](https://github.com/cadeyrn/enterprise-policy-generator/issues/136)
 - enhanced tracking protection policy to add exceptions, see
   [#144](https://github.com/cadeyrn/enterprise-policy-generator/issues/144)
-- enhanced policy to clear browser data on shutdown to be lockable and to allow setting some and not only all or
-  nothing, see [#147](https://github.com/cadeyrn/enterprise-policy-generator/issues/147)
+- enhanced policy to clear browser data on shutdown, so that you can only set some of them instead of all or
+  nothing, and to be able to lock only some these options, all or none, see
+  [#147](https://github.com/cadeyrn/enterprise-policy-generator/issues/147)
 - enhanced DNS over HTTPS policy to add excluded domains, see
   [#148](https://github.com/cadeyrn/enterprise-policy-generator/issues/148)
 - enhanced homepage policy to be able to set the homepage to either allow or forbid to optionally start with the

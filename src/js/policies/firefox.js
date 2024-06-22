@@ -1243,7 +1243,7 @@ const policies = {
 
   SanitizeOnShutdown : {
     first_available : { mainstream : '60.0', esr : '60.0' },
-    is_lockable : true,
+    is_lockable : false,
     ui_category : 'privacy',
     type : 'object',
     properties : [
@@ -1398,7 +1398,26 @@ const policies = {
             value : 'false'
           }
         ]
-      }
+      },
+      {
+        name : 'Locked',
+        label : browser.i18n.getMessage('lock_preference'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_Locked_false'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_Locked_true'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_Locked_null'),
+            value : null
+          }
+        ]
+      },
     ]
   },
 
