@@ -236,7 +236,7 @@ const policies = {
   },
 
   DisableDefaultBrowserAgent : {
-    first_available : { mainstream : '75.0', esr : '68.7' },
+    first_available : { mainstream : '75.0', esr : '78.0' },
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -2248,7 +2248,7 @@ const policies = {
   // others
 
   PDFjs : {
-    first_available : { mainstream : '77.0', esr : '68.9' },
+    first_available : { mainstream : '77.0', esr : '78.0' },
     ui_category : 'others',
     type : 'object',
     properties : [
