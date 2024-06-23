@@ -310,7 +310,7 @@ const policies = {
       {
         label : browser.i18n.getMessage('enum_value_no'),
         value : 'false'
-      },
+      }
     ]
   },
 
@@ -1451,7 +1451,7 @@ const policies = {
             value : null
           }
         ]
-      },
+      }
     ]
   },
 
