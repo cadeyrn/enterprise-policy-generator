@@ -65,6 +65,9 @@
   "generate_button": {
     "message": "Směrnicy generować"
   },
+  "invalid_json_label": {
+    "message": "invalid JSON"
+  },
   "invalid_url_label": {
     "message": "njepłaćiwy URL"
   },
@@ -127,6 +130,15 @@
   },
   "policy_category_others": {
     "message": "Druhe směrnicy"
+  },
+  "policy_description_3rdParty": {
+    "message": "Preconfiguration of settings for extensions that use chrome.storage.managed"
+  },
+  "policy_description_3rdparty_Json": {
+    "message": "JSON (configuration must be surrounded by curly brackets {})"
+  },
+  "policy_description_3rdParty_Label_Key": {
+    "message": "ID přidatka"
   },
   "policy_description_AppAutoUpdate": {
     "message": "Install Firefox updates automatically"

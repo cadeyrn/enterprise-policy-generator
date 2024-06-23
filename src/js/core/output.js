@@ -39,6 +39,9 @@ const output = {
         else if (el.getAttribute('data-type') === 'flat-array') {
           output.generateOutputForFlatArrays(el);
         }
+        else if (el.getAttribute('data-type') === 'json-array') {
+          output.generateOutputForJsonArrays(el);
+        }
         else if (el.getAttribute('data-type') === 'key-object-list') {
           output.generateOutputForKeyObjectList(el);
         }
@@ -163,6 +166,61 @@ const output = {
 
         policymanager.add(el.getAttribute('data-name'), uniqueItems);
       }
+    }
+  },
+
+  /**
+   * Generates output for policies of type "json-array".
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   *
+   * @returns {void}
+   */
+  generateOutputForJsonArrays (el) {
+    const subKey = el.getAttribute('data-sub-key');
+    const items = {};
+
+    [...el.parentNode.querySelectorAll(':scope .sub-options')].forEach((el) => {
+      const elKey = el.getElementsByClassName('key')[0];
+      const key = elKey ? elKey.value : el.getAttribute('data-key');
+
+      if (key) {
+        let properties = null;
+
+        // textarea fields
+        [...el.querySelectorAll(':scope textarea')].forEach((el) => {
+          if (el.value) {
+            properties = el.value.replace(/\n/g, '');
+
+            try {
+              properties = JSON.parse(properties);
+            }
+            /* eslint-disable no-unused-vars */
+            catch (e) {
+              properties = null;
+            }
+          }
+        });
+
+        // only add non-empty properties
+        if (properties) {
+          if (subKey) {
+            if (!items[subKey]) {
+              items[subKey] = {};
+            }
+
+            items[subKey][key] = properties;
+          }
+          else {
+            items[key] = properties;
+          }
+        }
+      }
+    });
+
+    // only add non-empty policies
+    if (Object.keys(items).length > 0) {
+      policymanager.add(el.getAttribute('data-name'), items);
     }
   },
 

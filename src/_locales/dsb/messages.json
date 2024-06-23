@@ -128,6 +128,15 @@
   "policy_category_others": {
     "message": "Druge směrnice"
   },
+  "policy_description_3rdParty": {
+    "message": "Preconfiguration of settings for extensions that use chrome.storage.managed"
+  },
+  "policy_description_3rdparty_Json": {
+    "message": "JSON (configuration must be surrounded by curly brackets {})"
+  },
+  "policy_description_3rdParty_Label_Key": {
+    "message": "ID dodanka"
+  },
   "policy_description_AppAutoUpdate": {
     "message": "Install Firefox updates automatically"
   },

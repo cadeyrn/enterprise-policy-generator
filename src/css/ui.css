@@ -49,27 +49,40 @@ label.deprecated {
   color: rgba(19, 69, 99, .4);
 }
 
-label + .sub-options:not(.disabled) {
+label + .sub-options:not(.disabled), label + .sub-options-wrapper {
   margin-top: 10px;
 }
 
-input[type='text'], input[type='url'] {
+input[type='text'], input[type='url'], textarea {
   box-sizing: border-box;
-  padding: 0 10px;
   width: calc(100% - 50px);
-  height: 30px;
   border: 2px solid var(--color-dark-border);
   border-radius: 2px;
   outline: 0;
   transition: border ease 250ms;
 }
 
-input[type='text'].mandatory-style, input[type='url'].mandatory-style, input[type='url'].invalid-url-style {
+input[type='text'], input[type='url'] {
+  padding: 0 10px;
+  height: 30px;
+}
+
+textarea {
+  padding: 10px;
+  height: 100px;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+input[type='text'].mandatory-style,
+input[type='url'].mandatory-style,
+input[type='url'].invalid-url-style,
+textarea.invalid-json-style {
   border-color: var(--color-red);
 }
 
 input[type='text']:not(.mandatory-style):focus,
-input[type='url']:not(.mandatory-style, .invalid-url-style):focus,
+input[type='url']:not(.mandatory-style, .invalid-json-style, .invalid-url-style):focus,
 select:focus {
   border-color: var(--color-blue-dark);
 }
@@ -78,11 +91,11 @@ select:focus {
   position: relative;
 }
 
-.input + .input > input {
+.input + .input > input, .input + .input > textarea {
   margin-top: 2px;
 }
 
-.mandatory-label, .invalid-url-label {
+.mandatory-label, .invalid-json-label, .invalid-url-label {
   position: absolute;
   top: 4px;
   right: 54px;
@@ -93,7 +106,7 @@ select:focus {
   color: var(--color-white);
 }
 
-.input + .input .mandatory-label, .input + .input .invalid-url-label {
+.input + .input .mandatory-label, .input + .input .invalid-url-label, .input + .input .invalid-json-label {
   top: 6px;
 }
 
@@ -342,6 +355,7 @@ input[data-type='array'] ~ .sub-options, .object-array > div, .object-list > div
 }
 
 input[data-type='array'] ~ .sub-options + .sub-options,
+input[data-type='json-array'] ~ .sub-options-wrapper .sub-options + .sub-options,
 input[data-type='key-value-pairs'] ~ .sub-options + .sub-options,
 input[data-type='key-object-list'] ~ .sub-options-wrapper .sub-options + .sub-options,
 .object-array > div:not(:nth-child(1), :nth-child(2)),
@@ -350,6 +364,7 @@ input[data-type='key-object-list'] ~ .sub-options-wrapper .sub-options + .sub-op
 }
 
 input[data-type='array'] ~ .sub-options .array-action,
+input[data-type='json-array'] ~ .sub-options-wrapper .array-action,
 input[data-type='key-value-pairs'] ~ .sub-options .array-action,
 input[data-type='key-object-list'] ~ .sub-options-wrapper .array-action,
 .object-array .array-action,
@@ -359,6 +374,7 @@ input[data-type='key-object-list'] ~ .sub-options-wrapper .array-action,
 }
 
 input[data-type='array'] ~ .sub-options .array-action[data-action='remove'],
+input[data-type='json-array'] ~ .sub-options-wrapper .array-action[data-action='remove'],
 input[data-type='key-value-pairs'] ~ .sub-options .array-action[data-action='remove'],
 input[data-type='key-object-list'] ~ .sub-options-wrapper .array-action[data-action='remove'],
 .object-array .array-action[data-action='remove'],
@@ -367,6 +383,7 @@ input[data-type='key-object-list'] ~ .sub-options-wrapper .array-action[data-act
 }
 
 input[data-type='array'] ~ .sub-options .array-action[data-action='add'],
+input[data-type='json-array'] ~ .sub-options-wrapper .array-action[data-action='add'],
 input[data-type='key-value-pairs'] ~ .sub-options .array-action[data-action='add'],
 input[data-type='key-object-list'] ~ .sub-options-wrapper .array-action[data-action='add'],
 .object-array .array-action[data-action='add'],

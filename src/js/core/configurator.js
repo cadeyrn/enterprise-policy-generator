@@ -70,6 +70,9 @@ const configurator = {
       else if (policies[key].type === 'flat-array') {
         configurator.addFlatArrayOption(key, policies[key]);
       }
+      else if (policies[key].type === 'json-array') {
+        configurator.addJsonArrayOption(key, policies[key]);
+      }
       else if (policies[key].type === 'key-object-list') {
         configurator.addKeyObjectListOption(key, policies[key]);
       }
@@ -152,6 +155,11 @@ const configurator = {
     // add event listener for mandatory field validation
     [...document.querySelectorAll('input[data-mandatory]')].forEach((el) => {
       el.addEventListener('input', configurator.validateMandatoryFields);
+    });
+
+    // add event listener for JSON field validation
+    [...document.querySelectorAll('textarea[data-json]')].forEach((el) => {
+      el.addEventListener('input', configurator.validateJsonFields);
     });
 
     // add event listener for URL field validation
@@ -290,8 +298,8 @@ const configurator = {
     // copy the array item
     const addedNode = el.parentNode.cloneNode(true);
 
-    // we want an empty input field for the copied array item, we also need a new DOM ID
-    addedNode.querySelectorAll('input').forEach((el) => {
+    // we want an empty input / textarea field for the copied array item, we also need a new DOM ID
+    addedNode.querySelectorAll('input, textarea').forEach((el) => {
       const id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (key ? key : count));
 
       el.value = '';
@@ -318,6 +326,13 @@ const configurator = {
       el.addEventListener('input', configurator.validateMandatoryFields);
       el.classList.add('mandatory-style');
       el.parentNode.querySelector('.mandatory-label').classList.remove('hidden');
+    });
+
+    // we also have to re-add the event listener for the validation of JSON fields
+    addedNode.querySelectorAll('textarea[data-json]').forEach((el) => {
+      el.addEventListener('input', configurator.validateJsonFields);
+      el.classList.add('invalid-json');
+      el.parentNode.querySelector('.invalid-json').classList.remove('hidden');
     });
 
     // we also have to re-add the event listener for the validation of URL fields
@@ -403,6 +418,35 @@ const configurator = {
     else {
       e.target.classList.add('mandatory-style');
       e.target.parentNode.querySelector('.mandatory-label').classList.remove('hidden');
+    }
+  },
+
+  /**
+   * Validation for JSON fields.
+   *
+   * @param {InputEvent} e - event
+   *
+   * @returns {void}
+   */
+  validateJsonFields (e) {
+    let valid = true;
+    try {
+      JSON.parse(e.target.value.replace(/\n/g, ''));
+    }
+    /* eslint-disable no-unused-vars */
+    catch (e) {
+      valid = false;
+    }
+
+    // the textarea field contains valid JSON, hide visual indication
+    if (valid || e.target.value === '') {
+      e.target.classList.remove('invalid-json-style');
+      e.target.parentNode.querySelector('.invalid-json-label').classList.add('hidden');
+    }
+    // the textarea field does not contain valid JSON, add visual indication
+    else {
+      e.target.classList.add('invalid-json-style');
+      e.target.parentNode.querySelector('.invalid-json-label').classList.remove('hidden');
     }
   },
 
@@ -576,6 +620,60 @@ const configurator = {
     }
 
     elSubOptions.appendChild(elInput);
+
+    // add array field action links
+    elSubOptions.parentNode.classList.add('array-action-links');
+    configurator.addArrayFieldActionLinks(elSubOptions, key + '_1');
+
+    // add option to UI
+    configurator.addOptionToUi(elObjectWrapper, policy);
+  },
+
+  /**
+   * Adds policy of the type "json-array" to the DOM.
+   *
+   * @param {string} key - the name of the policy
+   * @param {object} policy - the policy object
+   *
+   * @returns {void}
+   */
+  addJsonArrayOption (key, policy) {
+    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'json-array', false);
+
+    const elSubOptionsWrapper = document.createElement('div');
+    elSubOptionsWrapper.classList.add('sub-options-wrapper');
+    elObjectWrapper.appendChild(elSubOptionsWrapper);
+
+    const elSubOptions = configurator.addSubOptions(elSubOptionsWrapper);
+
+    const elInputWrapperKey = document.createElement('div');
+    elInputWrapperKey.classList.add('input');
+
+    const elInputKey = document.createElement('input');
+    elInputKey.setAttribute('type', 'text');
+    elInputKey.setAttribute('id', key + '_Key_1');
+    elInputKey.setAttribute('name', key + '_Key_1');
+    elInputKey.setAttribute('data-name', key);
+    elInputKey.setAttribute('placeholder', policy.label_key);
+    elInputKey.classList.add('key');
+
+    configurator.addMandatoryLabel(elInputKey, elInputWrapperKey);
+
+    elInputWrapperKey.appendChild(elInputKey);
+    elSubOptions.appendChild(elInputWrapperKey);
+
+    const elSubSubOptions = document.createElement('div');
+    elSubSubOptions.classList.add('sub-sub-options');
+
+    // add properties
+    if (policy.properties) {
+      const optionsLength = policy.properties.length;
+      for (let i = 0; i < optionsLength; i++) {
+        configurator.addProperty(elSubSubOptions, key + '_1', policy.properties[i], true, true);
+      }
+    }
+
+    elSubOptions.appendChild(elSubSubOptions);
 
     // add array field action links
     elSubOptions.parentNode.classList.add('array-action-links');
@@ -936,6 +1034,9 @@ const configurator = {
       case 'enum':
         configurator.addEnumProperty(el, parentName, policy, isArrayProperty);
         break;
+      case 'json':
+        configurator.addJsonProperty(el, parentName, policy);
+        break;
       case 'multiselect':
         configurator.addMultiselectProperty(el, parentName, policy);
         break;
@@ -1132,6 +1233,45 @@ const configurator = {
     }
 
     elSelectWrapper.appendChild(elSelect);
+
+    el.appendChild(elObjectWrapper);
+  },
+
+  /**
+   * Adds property of the type "json" to a policy.
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   * @param {string} parentName - the name of the parent policy object
+   * @param {object} policy - the policy object
+   *
+   * @returns {void}
+   */
+  addJsonProperty (el, parentName, policy) {
+    const elObjectWrapper = document.createElement('div');
+    elObjectWrapper.classList.add('input');
+
+    // caption
+    if (policy.caption) {
+      const elCaptionWrapper = document.createElement('div');
+      elCaptionWrapper.classList.add('label');
+      elObjectWrapper.appendChild(elCaptionWrapper);
+
+      const elCaption = document.createTextNode(policy.caption);
+      elCaptionWrapper.appendChild(elCaption);
+    }
+
+    // input field
+    const elTextarea = document.createElement('textarea');
+
+    elTextarea.setAttribute('id', parentName);
+    elTextarea.setAttribute('name', parentName);
+    elTextarea.setAttribute('placeholder', policy.label);
+    elTextarea.setAttribute('data-name', policy.name);
+    elTextarea.setAttribute('data-json', 'true');
+
+    elObjectWrapper.appendChild(elTextarea);
+
+    configurator.addInvalidJsonLabel(elObjectWrapper);
 
     el.appendChild(elObjectWrapper);
   },
@@ -1386,6 +1526,11 @@ const configurator = {
       elCheckbox.setAttribute('data-inverse', 'true');
     }
 
+    // sub key
+    if (policy.sub_key) {
+      elCheckbox.setAttribute('data-sub-key', policy.sub_key);
+    }
+
     elObjectWrapper.appendChild(elCheckbox);
 
     // label
@@ -1586,6 +1731,20 @@ const configurator = {
     elMandatoryLabel.classList.add('mandatory-label');
     elMandatoryLabel.innerText = browser.i18n.getMessage('mandatory_label');
     elMandatoryWrapper.appendChild(elMandatoryLabel);
+  },
+
+  /**
+   * Adds a label for invalid JSON.
+   *
+   * @param {HTMLElement} elObjectWrapper - the DOM node of the wrapping element
+   *
+   * @returns {void}
+   */
+  addInvalidJsonLabel (elObjectWrapper) {
+    const elLabel = document.createElement('div');
+    elLabel.classList.add('invalid-json-label', 'hidden');
+    elLabel.innerText = browser.i18n.getMessage('invalid_json_label');
+    elObjectWrapper.appendChild(elLabel);
   },
 
   /**

@@ -65,6 +65,9 @@
   "generate_button": {
     "message": "Richtlinien generieren"
   },
+  "invalid_json_label": {
+    "message": "ungültiges JSON"
+  },
   "invalid_url_label": {
     "message": "ungültige URL"
   },
@@ -127,6 +130,18 @@
   },
   "policy_category_others": {
     "message": "Sonstige Richtlinien"
+  },
+  "policy_description_3rdParty": {
+    "message": "Vorkonfiguration der Einstellungen für Erweiterungen, die chrome.storage.managed verwenden"
+  },
+  "policy_description_3rdparty_JSON_caption": {
+    "message": "JSON-Konfiguration"
+  },
+  "policy_description_3rdparty_JSON_label": {
+    "message": "JSON (geschweifte Klammern {} nicht vergessen)"
+  },
+  "policy_description_3rdParty_Label_Key": {
+    "message": "Erweiterungs-ID"
   },
   "policy_description_AppAutoUpdate": {
     "message": "Firefox-Updates automatisch installieren"

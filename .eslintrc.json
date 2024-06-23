@@ -125,7 +125,7 @@
     "lines-around-comment":[ "error", { "beforeBlockComment": false }],
     "logical-assignment-operators": ["error", "never"],
     "max-classes-per-file": "off",
-    "max-depth": "error",
+    "max-depth": ["error", { "max": 5 }],
     "max-len": ["off"],
     "max-lines": "off",
     "max-lines-per-function": "off",

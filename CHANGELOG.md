@@ -16,6 +16,8 @@
 - implemented a schema migrator so that saved configurations can be migrated during extension updates or when old
   configurations get imported on newer versions of the extension, see
   [#143](https://github.com/cadeyrn/enterprise-policy-generator/issues/143)
+- added support for a new policy type, needed for the 3rdParty policy, see
+  [#78](https://github.com/cadeyrn/enterprise-policy-generator/issues/78)
 - improved instruction for users of Apple macOS, see
   [#210](https://github.com/cadeyrn/enterprise-policy-generator/issues/210)
 - disabled native CSS outlines for input fields because we have our own focus style, see

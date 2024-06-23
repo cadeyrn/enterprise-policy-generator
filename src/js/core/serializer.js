@@ -19,6 +19,7 @@ const serializer = {
     data.arrayfields = { };
     data.checkboxes = { };
     data.input = { };
+    data.textareas = { };
     data.select = { };
 
     // array fields
@@ -58,6 +59,12 @@ const serializer = {
       else if (node.type === 'text' || node.type === 'url') {
         if (serializer.isPolicyEnabled(node) && node.value && !node.classList.contains('invalid-url-style')) {
           data.input[node.id] = node.value;
+        }
+      }
+      // textarea fields
+      else if (node.type === 'textarea') {
+        if (serializer.isPolicyEnabled(node) && node.value && !node.classList.contains('invalid-json-style')) {
+          data.textareas[node.id] = node.value;
         }
       }
     }
@@ -115,6 +122,15 @@ const serializer = {
           el.classList.remove('mandatory-style');
           el.parentNode.querySelector('.mandatory-label').classList.add('hidden');
         }
+      }
+    });
+
+    // textarea fields
+    Object.keys(data.textareas).forEach((id) => {
+      const el = document.getElementById(id);
+
+      if (el) {
+        el.value = data.textareas[id];
       }
     });
 
