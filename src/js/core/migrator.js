@@ -83,6 +83,30 @@ const migrator = {
         }
 
         /*
+         * @removed
+         *
+         * "FlashPlugin"
+         */
+        if (configuration.checkboxes.FlashPlugin) {
+          delete configuration.checkboxes.FlashPlugin;
+          delete configuration.checkboxes.FlashPlugin_Locked;
+          delete configuration.arrayfields.FlashPlugin_Allow;
+          delete configuration.select.FlashPlugin_Default;
+
+          for (const [key] of Object.entries(configuration.input)) {
+            const allowMatches = key.match(/^FlashPlugin_Allow_(\d+)/i);
+            if (allowMatches) {
+              delete configuration.input['FlashPlugin_Allow_' + allowMatches[1]];
+            }
+
+            const blockMatches = key.match(/^FlashPlugin_Block_(\d+)/i);
+            if (blockMatches) {
+              delete configuration.input['FlashPlugin_Block_' + blockMatches[1]];
+            }
+          }
+        }
+
+        /*
          * @from
          *
          * "InstallAddonsPermission": { "Allow": [], "Default": true|false }
