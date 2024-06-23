@@ -599,9 +599,6 @@ const configurator = {
     const elObjectWrapper = configurator.addPolicyNode(key, policy, 'flat-array', false);
     const elSubOptions = configurator.addSubOptions(elObjectWrapper);
 
-    const elInputWrapper = document.createElement('div');
-    elInputWrapper.classList.add('input');
-
     const elInput = document.createElement('input');
     elInput.setAttribute('type', 'text');
     elInput.setAttribute('id', key + '_Value_1');
