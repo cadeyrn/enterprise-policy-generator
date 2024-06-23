@@ -831,7 +831,22 @@ const policies = {
             value : 'true'
           }
         ]
-      },
+      }
+    ]
+  },
+
+  '3rdparty' : {
+    first_available : { mainstream : '67.0', esr : '68.0' },
+    ui_category : 'customization',
+    type : 'json-array',
+    sub_key : 'Extensions',
+    label_key : browser.i18n.getMessage('policy_description_3rdparty_Label_Key'),
+    properties : [
+      {
+        caption : browser.i18n.getMessage('policy_description_3rdparty_JSON_caption'),
+        label : browser.i18n.getMessage('policy_description_3rdparty_JSON_label'),
+        type : 'json'
+      }
     ]
   },
 
