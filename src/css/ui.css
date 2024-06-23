@@ -134,6 +134,7 @@ select {
   height: 100%;
   border: 2px solid var(--color-dark-border);
   outline: 0;
+  background-color: var(--color-white);
   box-shadow: none;
   cursor: pointer;
 }
@@ -385,7 +386,7 @@ input[data-type='key-object-list'] ~ .sub-options-wrapper .array-action[data-act
 
 .select-label {
   display: block;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 5px;
   font-size: 14px;
 }
