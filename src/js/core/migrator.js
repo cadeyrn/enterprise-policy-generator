@@ -31,28 +31,6 @@ const migrator = {
         const { configuration } = configurations[i];
 
         /*
-         * @removed
-         *
-         * "SearchEngines": { "DefaultPrivate": "foo" }
-         */
-        if (configuration.input.SearchEngines_DefaultPrivate) {
-          delete configuration.input.SearchEngines_DefaultPrivate;
-        }
-
-        /*
-         * @from
-         *
-         * "DisplayMenuBar": true
-         *
-         * @to
-         *
-         * "DisplayMenuBar": "default-on"
-         */
-        if (configuration.checkboxes.DisplayMenuBar) {
-          configuration.select.DisplayMenuBar_Select = 'default-on';
-        }
-
-        /*
          * @from
          *
          * "DisableMasterPasswordCreation": true
@@ -80,6 +58,19 @@ const migrator = {
           configuration.checkboxes.PDFjs = true;
           configuration.select.PDFjs_Enabled = 'false';
           delete configuration.checkboxes.DisableBuiltinPDFViewer;
+        }
+
+        /*
+         * @from
+         *
+         * "DisplayMenuBar": true
+         *
+         * @to
+         *
+         * "DisplayMenuBar": "default-on"
+         */
+        if (configuration.checkboxes.DisplayMenuBar) {
+          configuration.select.DisplayMenuBar_Select = 'default-on';
         }
 
         /*
@@ -165,6 +156,15 @@ const migrator = {
           configuration.select.EncryptedMediaExtensions_Enabled = boolean.toString();
           delete configuration.checkboxes.Preference_media_gmp_widevinecdm_enabled;
           delete configuration.select.Preference_media_gmp_widevinecdm_enabled_Select;
+        }
+
+        /*
+         * @removed
+         *
+         * "SearchEngines": { "DefaultPrivate": "foo" }
+         */
+        if (configuration.input.SearchEngines_DefaultPrivate) {
+          delete configuration.input.SearchEngines_DefaultPrivate;
         }
 
         configurations[i].configuration = configuration;
