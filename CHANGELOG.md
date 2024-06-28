@@ -16,6 +16,8 @@
 - implemented a schema migrator so that saved configurations can be migrated during extension updates or when old
   configurations get imported on newer versions of the extension, see
   [#143](https://github.com/cadeyrn/enterprise-policy-generator/issues/143)
+- added support for a new policy type, needed for the Handlers policy, see
+  [#152](https://github.com/cadeyrn/enterprise-policy-generator/issues/152)
 - added support for a new policy type, needed for the 3rdParty policy, see
   [#78](https://github.com/cadeyrn/enterprise-policy-generator/issues/78)
 - improved instruction for users of Apple macOS, see
@@ -78,6 +80,8 @@
   [#232](https://github.com/cadeyrn/enterprise-policy-generator/issues/232)
 - new policy to preconfigure the settings for extensions that use chrome.storage.managed, see
   [#78](https://github.com/cadeyrn/enterprise-policy-generator/issues/78)
+- new policy to configure the application handlers, see
+  [#152](https://github.com/cadeyrn/enterprise-policy-generator/issues/152)
 - enhanced permissions policy to control autoplay of media and access to virtual reality devices, see
   [#136](https://github.com/cadeyrn/enterprise-policy-generator/issues/136)
 - enhanced tracking protection policy to add exceptions, see

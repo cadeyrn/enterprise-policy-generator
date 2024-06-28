@@ -569,6 +569,60 @@
   "policy_description_FirefoxHome_Snippets": {
     "message": "Kurzinformationen"
   },
+  "policy_description_Handlers": {
+    "message": "Umgang mit unterschiedlichen Dateiformaten konfigurieren"
+  },
+  "policy_description_Handlers_type_file_extension": {
+    "message": "Dateiendung"
+  },
+  "policy_description_Handlers_type_file_extension_placeholder": {
+    "message": "zum Beispiel „pdf“"
+  },
+  "policy_description_Handlers_type_mime_type": {
+    "message": "MIME-Type"
+  },
+  "policy_description_Handlers_type_mime_type_placeholder": {
+    "message": "zum Beispiel „application/msword“"
+  },
+  "policy_description_Handlers_type_schema": {
+    "message": "Schema"
+  },
+  "policy_description_Handlers_type_schema_placeholder": {
+    "message": "zum Beispiel „mailto“"
+  },
+  "policy_description_Handlers_property_action": {
+    "message": "Aktion"
+  },
+  "policy_description_Handlers_property_action_saveToDisk": {
+    "message": "Datei speichern"
+  },
+  "policy_description_Handlers_property_action_useHelperApp": {
+    "message": "mit Anwendung öffnen"
+  },
+  "policy_description_Handlers_property_action_useSystemDefault": {
+    "message": "System-Standard verwenden"
+  },
+  "policy_description_Handlers_property_ask": {
+    "message": "Den Benutzer fragen, was er mit der Datei tun möchte"
+  },
+  "policy_description_Handlers_property_ask_false": {
+    "message": "Die Aktion wird ohne Benutzereingriff ausgeführt"
+  },
+  "policy_description_Handlers_property_ask_true": {
+    "message": "Der Benutzer wird gefragt, was er mit der Datei tun möchte"
+  },
+  "policy_description_Handlers_property_handlers": {
+    "message": "Eine Liste von Handlern, wobei der erste Handler der Standard-Handler ist. Wenn es keinen Standard-Handler geben soll, ist ein leeres Objekt für den ersten Handler zu verwenden. Es kann entweder der Pfad zu einer lokalen Anwendung oder die URL zu einem webbasierten Handler angegeben werden."
+  },
+  "policy_description_Handlers_property_handlers_name": {
+    "message": "Der Anzeigename des Handlers (wird möglicherweise nicht verwendet)"
+  },
+  "policy_description_Handlers_property_handlers_path": {
+    "message": "Pfad zu einer ausführbaren Datei"
+  },
+  "policy_description_Handlers_property_handlers_uriTemplate": {
+    "message": "URL für webbasierten Handler. Muss mit https:// starten und „%s“ für die Ersetzung enthalten"
+  },
   "policy_description_HardwareAcceleration": {
     "message": "Hardwarebeschleunigung deaktivieren"
   },

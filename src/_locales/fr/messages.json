@@ -569,6 +569,60 @@
   "policy_description_FirefoxHome_Snippets": {
     "message": "Snippets"
   },
+  "policy_description_Handlers": {
+    "message": "Configuring the handling of different file formats"
+  },
+  "policy_description_Handlers_type_file_extension": {
+    "message": "File extension"
+  },
+  "policy_description_Handlers_type_file_extension_placeholder": {
+    "message": "e.g. “pdf”"
+  },
+  "policy_description_Handlers_type_mime_type": {
+    "message": "MIME type"
+  },
+  "policy_description_Handlers_type_mime_type_placeholder": {
+    "message": "e.g. “application/msword”"
+  },
+  "policy_description_Handlers_type_schema": {
+    "message": "Scheme"
+  },
+  "policy_description_Handlers_type_schema_placeholder": {
+    "message": "e.g. “mailto”"
+  },
+  "policy_description_Handlers_property_action": {
+    "message": "Action"
+  },
+  "policy_description_Handlers_property_action_saveToDisk": {
+    "message": "Save to disk"
+  },
+  "policy_description_Handlers_property_action_useHelperApp": {
+    "message": "open with application"
+  },
+  "policy_description_Handlers_property_action_useSystemDefault": {
+    "message": "use system default"
+  },
+  "policy_description_Handlers_property_ask": {
+    "message": "Ask the user what they want to do with the file"
+  },
+  "policy_description_Handlers_property_ask_false": {
+    "message": "The action is taken without user intervention"
+  },
+  "policy_description_Handlers_property_ask_true": {
+    "message": "The user is asked what they want to do with the file"
+  },
+  "policy_description_Handlers_property_handlers": {
+    "message": "A list of handlers, where the first handler is the default handler. If there is to be no standard handler, an empty object is to be used for the first handler. Either the path to a local application or the URL to a web-based handler can be specified."
+  },
+  "policy_description_Handlers_property_handlers_name": {
+    "message": "The display name of the handler (might not be used)"
+  },
+  "policy_description_Handlers_property_handlers_path": {
+    "message": "The path to an executable"
+  },
+  "policy_description_Handlers_property_handlers_uriTemplate": {
+    "message": "URL to a web-based handler. Must start with https:// and contain \"%s\" for the substitution"
+  },
   "policy_description_HardwareAcceleration": {
     "message": "Désactiver l'accélération matérielle"
   },

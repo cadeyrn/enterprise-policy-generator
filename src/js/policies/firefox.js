@@ -2280,6 +2280,206 @@ const policies = {
     }
   },
 
+  Handlers : {
+    first_available : { mainstream : '78.0', esr : '78.0' },
+    ui_category : 'others',
+    type : 'object',
+    properties : [
+      {
+        name : 'mimeTypes',
+        label : browser.i18n.getMessage('policy_description_Handlers_type_mime_type'),
+        placeholder_key : browser.i18n.getMessage('policy_description_Handlers_type_mime_type_placeholder'),
+        type : 'object-list',
+        items : [
+          {
+            name : 'action',
+            label : browser.i18n.getMessage('policy_description_Handlers_property_action'),
+            type : 'enum',
+            options : [
+              {
+                label : browser.i18n.getMessage('policy_description_Handlers_property_action_saveToDisk'),
+                value : 'saveToDisk'
+              },
+              {
+                label : browser.i18n.getMessage('policy_description_Handlers_property_action_useHelperApp'),
+                value : 'useHelperApp'
+              },
+              {
+                label : browser.i18n.getMessage('policy_description_Handlers_property_action_useSystemDefault'),
+                value : 'useSystemDefault'
+              }
+            ]
+          },
+          {
+            name : 'ask',
+            label : browser.i18n.getMessage('policy_description_Handlers_property_ask'),
+            type : 'enum',
+            options : [
+              {
+                label : browser.i18n.getMessage('policy_description_Handlers_property_ask_true'),
+                value : 'true'
+              },
+              {
+                label : browser.i18n.getMessage('policy_description_Handlers_property_ask_false'),
+                value : 'false'
+              }
+            ]
+          },
+          {
+            name : 'handlers',
+            label : browser.i18n.getMessage('policy_description_Handlers_property_handlers'),
+            type : 'object-array',
+            items : [
+              {
+                name : 'name',
+                label : browser.i18n.getMessage('policy_description_Handlers_property_handlers_name'),
+                type : 'string'
+              },
+              {
+                name : 'path',
+                label : browser.i18n.getMessage('policy_description_Handlers_property_handlers_path'),
+                type : 'string'
+              },
+              {
+                name : 'uriTemplate',
+                label : browser.i18n.getMessage('policy_description_Handlers_property_handlers_uriTemplate'),
+                type : 'string'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        name : 'schemes',
+        label : browser.i18n.getMessage('policy_description_Handlers_type_schema'),
+        placeholder_key : browser.i18n.getMessage('policy_description_Handlers_type_schema_placeholder'),
+        type : 'object-list',
+        items : [
+          {
+            name : 'action',
+            label : browser.i18n.getMessage('policy_description_Handlers_property_action'),
+            type : 'enum',
+            options : [
+              {
+                label : browser.i18n.getMessage('policy_description_Handlers_property_action_saveToDisk'),
+                value : 'saveToDisk'
+              },
+              {
+                label : browser.i18n.getMessage('policy_description_Handlers_property_action_useHelperApp'),
+                value : 'useHelperApp'
+              },
+              {
+                label : browser.i18n.getMessage('policy_description_Handlers_property_action_useSystemDefault'),
+                value : 'useSystemDefault'
+              }
+            ]
+          },
+          {
+            name : 'ask',
+            label : browser.i18n.getMessage('policy_description_Handlers_property_ask'),
+            type : 'enum',
+            options : [
+              {
+                label : browser.i18n.getMessage('policy_description_Handlers_property_ask_true'),
+                value : 'true'
+              },
+              {
+                label : browser.i18n.getMessage('policy_description_Handlers_property_ask_false'),
+                value : 'false'
+              }
+            ]
+          },
+          {
+            name : 'handlers',
+            label : browser.i18n.getMessage('policy_description_Handlers_property_handlers'),
+            type : 'object-array',
+            items : [
+              {
+                name : 'name',
+                label : browser.i18n.getMessage('policy_description_Handlers_property_handlers_name'),
+                type : 'string'
+              },
+              {
+                name : 'path',
+                label : browser.i18n.getMessage('policy_description_Handlers_property_handlers_path'),
+                type : 'string'
+              },
+              {
+                name : 'uriTemplate',
+                label : browser.i18n.getMessage('policy_description_Handlers_property_handlers_uriTemplate'),
+                type : 'string'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        name : 'extensions',
+        label : browser.i18n.getMessage('policy_description_Handlers_type_file_extension'),
+        placeholder_key : browser.i18n.getMessage('policy_description_Handlers_type_file_extension_placeholder'),
+        type : 'object-list',
+        items : [
+          {
+            name : 'action',
+            label : browser.i18n.getMessage('policy_description_Handlers_property_action'),
+            type : 'enum',
+            options : [
+              {
+                label : browser.i18n.getMessage('policy_description_Handlers_property_action_saveToDisk'),
+                value : 'saveToDisk'
+              },
+              {
+                label : browser.i18n.getMessage('policy_description_Handlers_property_action_useHelperApp'),
+                value : 'useHelperApp'
+              },
+              {
+                label : browser.i18n.getMessage('policy_description_Handlers_property_action_useSystemDefault'),
+                value : 'useSystemDefault'
+              }
+            ]
+          },
+          {
+            name : 'ask',
+            label : browser.i18n.getMessage('policy_description_Handlers_property_ask'),
+            type : 'enum',
+            options : [
+              {
+                label : browser.i18n.getMessage('policy_description_Handlers_property_ask_true'),
+                value : 'true'
+              },
+              {
+                label : browser.i18n.getMessage('policy_description_Handlers_property_ask_false'),
+                value : 'false'
+              }
+            ]
+          },
+          {
+            name : 'handlers',
+            label : browser.i18n.getMessage('policy_description_Handlers_property_handlers'),
+            type : 'object-array',
+            items : [
+              {
+                name : 'name',
+                label : browser.i18n.getMessage('policy_description_Handlers_property_handlers_name'),
+                type : 'string'
+              },
+              {
+                name : 'path',
+                label : browser.i18n.getMessage('policy_description_Handlers_property_handlers_path'),
+                type : 'string'
+              },
+              {
+                name : 'uriTemplate',
+                label : browser.i18n.getMessage('policy_description_Handlers_property_handlers_uriTemplate'),
+                type : 'string'
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
   DisableTelemetry : {
     first_available : { mainstream : '62.0', esr : '60.0' },
     ui_category : 'updates-and-data',
