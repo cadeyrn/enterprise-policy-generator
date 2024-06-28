@@ -110,8 +110,8 @@
 
 #### Dependencies
 
-- added eslint-plugin-jsdoc 48.2.13
-- updated eslint from version 6.8.0 to 9.5.0 and updated configuration
+- added eslint-plugin-jsdoc 48.5.0
+- updated eslint from version 6.8.0 to 9.6.0 and updated configuration
 - updated eslint-plugin-xss from version 0.1.10 to 0.1.12
 - updated gulp from version 4.0.2 to 5.0.0
 - updated gulp-htmllint from version 0.0.16 to 0.0.19

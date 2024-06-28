@@ -21,8 +21,8 @@
     "Firefox >= 115"
   ],
   "devDependencies": {
-    "eslint": "9.5.0",
-    "eslint-plugin-jsdoc": "48.2.13",
+    "eslint": "9.6.0",
+    "eslint-plugin-jsdoc": "48.5.0",
     "eslint-plugin-sort-requires": "2.1.0",
     "eslint-plugin-xss": "0.1.12",
     "gulp": "5.0.0",
