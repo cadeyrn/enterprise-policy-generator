@@ -65,6 +65,9 @@
   "generate_button": {
     "message": "Směrnice generěrowaś"
   },
+  "invalid_json_label": {
+    "message": "invalid JSON"
+  },
   "invalid_url_label": {
     "message": "njepłaśiwy URL"
   },
@@ -131,7 +134,10 @@
   "policy_description_3rdParty": {
     "message": "Preconfiguration of settings for extensions that use chrome.storage.managed"
   },
-  "policy_description_3rdparty_Json": {
+  "policy_description_3rdparty_JSON_caption": {
+    "message": "JSON configuration"
+  },
+  "policy_description_3rdparty_JSON_label": {
     "message": "JSON (configuration must be surrounded by curly brackets {})"
   },
   "policy_description_3rdParty_Label_Key": {
