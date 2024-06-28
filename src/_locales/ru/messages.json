@@ -570,7 +570,7 @@
     "message": "Сниппеты"
   },
   "policy_description_Handlers": {
-    "message": "Configuring the handling of different file formats"
+    "message": "Configure default application handlers"
   },
   "policy_description_Handlers_type_file_extension": {
     "message": "File extension"

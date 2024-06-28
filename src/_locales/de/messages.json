@@ -570,7 +570,7 @@
     "message": "Kurzinformationen"
   },
   "policy_description_Handlers": {
-    "message": "Umgang mit unterschiedlichen Dateiformaten konfigurieren"
+    "message": "Standardanwendungen für das Öffnen von Dateien, Protokollen und MIME-Typen festlegen"
   },
   "policy_description_Handlers_type_file_extension": {
     "message": "Dateiendung"
