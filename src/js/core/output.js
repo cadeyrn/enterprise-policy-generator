@@ -598,6 +598,10 @@ const output = {
   generateOutputForPreferences () {
     // only add non-empty arrays
     if (Object.keys(output.preferences).length > 0) {
+      if (policymanager.data.policies['Preferences']) {
+        output.preferences = { ...output.preferences, ...policymanager.data.policies['Preferences'] };
+      }
+
       policymanager.add('Preferences', output.preferences);
     }
   },
