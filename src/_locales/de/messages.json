@@ -107,6 +107,9 @@
   "mandatory_label": {
     "message": "erforderlich"
   },
+  "non_allowed_preference_label": {
+    "message": "Einstellungsname nicht erlaubt"
+  },
   "policy_category_block_access": {
     "message": "Zugang blockieren"
   },
@@ -872,6 +875,42 @@
   "policy_description_Preference_ui_key_menuAccessKeyFocuses": {
     "message": "Die Alt-Taste kann benutzt werden, um die Menüleiste anzuzeigen"
   },
+  "policy_description_Preferences": {
+    "message": "Benutzerdefinierte Einstellungen festlegen (about:config)"
+  },
+  "policy_description_Preferences_Label_Key": {
+    "message": "Einstellungsname"
+  },
+  "policy_description_Preferences_Status": {
+    "message": "Status"
+  },
+  "policy_description_Preferences_Status_clear": {
+    "message": "Einstellung wird bei jedem Start auf Standard zurückgesetzt, Wert hat keinen Effekt"
+  },
+  "policy_description_Preferences_Status_default": {
+    "message": "Einstellung kann verändert werden und erscheint bei Abweichung als Standard"
+  },
+  "policy_description_Preferences_Status_locked": {
+    "message": "Einstellung kann nicht verändert werden und erscheint bei Abweichung als Standard"
+  },
+  "policy_description_Preferences_Status_user": {
+    "message": "Einstellung kann verändert werden und erscheint bei Abweichung als Benutzerdefiniert"
+  },
+  "policy_description_Preferences_Type": {
+    "message": "Typ"
+  },
+  "policy_description_Preferences_Type_boolean": {
+    "message": "Boolean"
+  },
+  "policy_description_Preferences_Type_number": {
+    "message": "Nummer"
+  },
+  "policy_description_Preferences_Type_string": {
+    "message": "Text"
+  },
+  "policy_description_Preferences_Value": {
+    "message": "Wert"
+  },
   "policy_description_PrimaryPassword": {
     "message": "Hauptpasswort (ehemals Master-Passwort) erzwingen oder Funktion abschalten"
   },
@@ -1117,6 +1156,9 @@
   },
   "policy_label_default": {
     "message": "Standard"
+  },
+  "requirement_windows": {
+    "message": "funktioniert nur auf Windows"
   },
   "requirement_windows_or_linux": {
     "message": "funktioniert nur auf Windows und Linux"

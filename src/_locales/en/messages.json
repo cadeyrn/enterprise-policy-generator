@@ -107,6 +107,9 @@
   "mandatory_label": {
     "message": "mandatory"
   },
+  "non_allowed_preference_label": {
+    "message": "Preference name not allowed"
+  },
   "policy_category_block_access": {
     "message": "Block Access"
   },
@@ -872,6 +875,42 @@
   "policy_description_Preference_ui_key_menuAccessKeyFocuses": {
     "message": "The Alt key can be used to show the menu bar"
   },
+  "policy_description_Preferences": {
+    "message": "Specify user-defined preferences (about:config)"
+  },
+  "policy_description_Preferences_Label_Key": {
+    "message": "Preference name"
+  },
+  "policy_description_Preferences_Status": {
+    "message": "Status"
+  },
+  "policy_description_Preferences_Status_clear": {
+    "message": "Preference will be reset to default at every start, value has no effect"
+  },
+  "policy_description_Preferences_Status_default": {
+    "message": "Preference can be changed and appears as default in case of non-default value"
+  },
+  "policy_description_Preferences_Status_locked": {
+    "message": "Preference can not be changed and appears as default in case of non-default value"
+  },
+  "policy_description_Preferences_Status_user": {
+    "message": "Preference can be changed and appears as modified in case of non-default value"
+  },
+  "policy_description_Preferences_Type": {
+    "message": "Type"
+  },
+  "policy_description_Preferences_Type_boolean": {
+    "message": "Boolean"
+  },
+  "policy_description_Preferences_Type_number": {
+    "message": "Number"
+  },
+  "policy_description_Preferences_Type_string": {
+    "message": "Text"
+  },
+  "policy_description_Preferences_Value": {
+    "message": "Value"
+  },
   "policy_description_PrimaryPassword": {
     "message": "Require or prevent using a primary password (formerly known as  master password)"
   },
@@ -1117,6 +1156,9 @@
   },
   "policy_label_default": {
     "message": "default"
+  },
+  "requirement_windows": {
+    "message": "works only on Windows"
   },
   "requirement_windows_or_linux": {
     "message": "works only on Windows and Linux"

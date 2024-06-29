@@ -851,6 +851,69 @@ const policies = {
     ]
   },
 
+  Preferences : {
+    first_available : { mainstream : '81.0', esr : '78.3' },
+    ui_category : 'customization',
+    type : 'key-object-list',
+    validator : 'preference',
+    label_key : browser.i18n.getMessage('policy_description_Preferences_Label_Key'),
+    properties : [
+      {
+        name : 'Value',
+        mandatory : true,
+        caption : browser.i18n.getMessage('policy_description_Preferences_Value'),
+        label : browser.i18n.getMessage('policy_description_Preferences_Value'),
+        type : 'string'
+      },
+      {
+        name : 'Type',
+        label : browser.i18n.getMessage('policy_description_Preferences_Type'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Preferences_Type_string'),
+            value : 'string'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Preferences_Type_number'),
+            value : 'number'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Preferences_Type_boolean'),
+            value : 'boolean'
+          }
+        ]
+      },
+      {
+        name : 'Status',
+        label : browser.i18n.getMessage('policy_description_Preferences_Status'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('policy_description_Preferences_Status_user'),
+            value : 'user'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Preferences_Status_default'),
+            value : 'default'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Preferences_Status_locked'),
+            value : 'locked'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Preferences_Status_clear'),
+            value : 'clear'
+          }
+        ]
+      }
+    ]
+  },
+
   // network
 
   WebsiteFilter : {
