@@ -276,7 +276,7 @@ const output = {
 
         // input fields
         [...el.querySelectorAll(':scope > .input input:not(.key), :scope .sub-sub-options > .input input')].forEach((el) => {
-          let value = el.value;
+          let { value } = el;
 
           if (value && !el.classList.contains('invalid-url-style')) {
             if (el.getAttribute('data-preference-policy')) {

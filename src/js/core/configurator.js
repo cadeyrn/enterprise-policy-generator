@@ -1563,7 +1563,7 @@ const configurator = {
 
     // input field
     const elInput = document.createElement('input');
-    let elInputWrapper;
+    let elInputWrapper = null;
 
     if (parentName === 'Preferences_Value') {
       elInput.setAttribute('data-preference-policy', 'true');
