@@ -157,6 +157,11 @@ const configurator = {
       el.addEventListener('input', configurator.validateMandatoryFields);
     });
 
+    // add event listener for preference field validation
+    [...document.querySelectorAll('input[data-preference]')].forEach((el) => {
+      el.addEventListener('input', configurator.validatePreferenceFields);
+    });
+
     // add event listener for JSON field validation
     [...document.querySelectorAll('textarea[data-json]')].forEach((el) => {
       el.addEventListener('input', configurator.validateJsonFields);
@@ -328,6 +333,13 @@ const configurator = {
       el.parentNode.querySelector('.mandatory-label').classList.remove('hidden');
     });
 
+    // we also have to re-add the event listener for the validation of preference fields
+    addedNode.querySelectorAll('input[data-preference]').forEach((el) => {
+      el.addEventListener('input', configurator.validatePreferenceFields);
+      el.classList.add('invalid-preference');
+      el.parentNode.querySelector('.invalid-preference').classList.remove('hidden');
+    });
+
     // we also have to re-add the event listener for the validation of JSON fields
     addedNode.querySelectorAll('textarea[data-json]').forEach((el) => {
       el.addEventListener('input', configurator.validateJsonFields);
@@ -418,6 +430,93 @@ const configurator = {
     else {
       e.target.classList.add('mandatory-style');
       e.target.parentNode.querySelector('.mandatory-label').classList.remove('hidden');
+    }
+  },
+
+  /**
+   * Validation for preference fields.
+   *
+   * @param {InputEvent} e - event
+   *
+   * @returns {void}
+   */
+  validatePreferenceFields (e) {
+    const validPrefixes = [
+      'accessibility.',
+      'alerts.',
+      'app.update.',
+      'browser.',
+      'datareporting.policy.',
+      'dom.',
+      'extensions.',
+      'general.autoScroll',
+      'general.smoothScroll',
+      'geo.',
+      'gfx.',
+      'intl.',
+      'keyword.enabled',
+      'layers.',
+      'layout.',
+      'media.',
+      'network.',
+      'pdfjs.',
+      'places.',
+      'pref.',
+      'print.',
+      'privacy.globalprivacycontrol.enabled',
+      'privacy.userContext.enabled',
+      'privacy.userContext.ui.enabled',
+      'security.default_personal_cert',
+      'security.disable_button.openCertManager',
+      'security.disable_button.openDeviceManager',
+      'security.insecure_connection_text.enabled',
+      'security.insecure_connection_text.pbmode.enabled',
+      'security.mixed_content.block_active_content',
+      'security.mixed_content.block_display_content',
+      'security.mixed_content.upgrade_display_content',
+      'security.osclientcerts.autoload',
+      'security.OCSP.enabled',
+      'security.OCSP.require',
+      'security.osclientcerts.assume_rsa_pss_support',
+      'security.ssl.enable_ocsp_stapling',
+      'security.ssl.errorReporting.enabled',
+      'security.ssl.require_safe_negotiation',
+      'security.tls.enable_0rtt_data',
+      'security.tls.hello_downgrade_check',
+      'security.tls.version.enable-deprecated',
+      'security.warn_submit_secure_to_insecure',
+      'signon.',
+      'spellchecker.',
+      'toolkit.legacyUserProfileCustomizations.stylesheets',
+      'ui.',
+      'widget.',
+      'xpinstall.signatures.required',
+      'xpinstall.whitelist.required'
+    ];
+
+    const validateName = (name) => {
+      if (!name) {
+        return true;
+      }
+
+      return validPrefixes.some((prefix) => {
+        if (prefix.endsWith('.')) {
+          return name.startsWith(prefix) && name !== prefix;
+        }
+
+        return name === prefix;
+      });
+    };
+
+    // the preference field contains a valid value, hide visual indication
+    if (validateName(e.target.value)) {
+      e.target.classList.remove('invalid-preference-style');
+      e.target.parentNode.querySelector('.invalid-preference-label').classList.add('hidden');
+    }
+    // the preference is not allowed, add visual indication
+    else {
+      e.target.classList.add('invalid-preference-style');
+      e.target.parentNode.querySelector('.invalid-preference-label').classList.remove('hidden');
     }
   },
 
@@ -734,6 +833,17 @@ const configurator = {
     elInputKey.setAttribute('data-name', key);
     elInputKey.setAttribute('placeholder', policy.label_key);
     elInputKey.classList.add('key');
+
+    // preference validation
+    if (policy.validator && policy.validator === 'preference') {
+      elInputKey.setAttribute('data-preference', 'true');
+
+      const elPreferenceLabel = document.createElement('div');
+      elPreferenceLabel.classList.add('invalid-preference-label', 'hidden');
+      elPreferenceLabel.innerText = browser.i18n.getMessage('non_allowed_preference_label');
+      elInputWrapperKey.appendChild(elPreferenceLabel);
+    }
+
     configurator.addMandatoryLabel(elInputKey, elInputWrapperKey);
     elInputWrapperKey.appendChild(elInputKey);
     elSubOptions.appendChild(elInputWrapperKey);
@@ -1453,6 +1563,15 @@ const configurator = {
 
     // input field
     const elInput = document.createElement('input');
+    let elInputWrapper;
+
+    if (parentName === 'Preferences_Value') {
+      elInput.setAttribute('data-preference-policy', 'true');
+      elInputWrapper = document.createElement('div');
+      elInputWrapper.classList.add('position-relative');
+      elInputWrapper.appendChild(elInput);
+      elObjectWrapper.appendChild(elInputWrapper);
+    }
 
     if (isUrl) {
       elInput.setAttribute('type', 'url');
@@ -1475,7 +1594,12 @@ const configurator = {
 
     // mandatory field
     if (policy.mandatory) {
-      configurator.addMandatoryLabel(elInput, elObjectWrapper);
+      if (parentName === 'Preferences_Value') {
+        configurator.addMandatoryLabel(elInput, elInputWrapper);
+      }
+      else {
+        configurator.addMandatoryLabel(elInput, elObjectWrapper);
+      }
     }
 
     // URL validation label

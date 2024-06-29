@@ -20,6 +20,8 @@
   [#152](https://github.com/cadeyrn/enterprise-policy-generator/issues/152)
 - added support for a new policy type, needed for the 3rdParty policy, see
   [#78](https://github.com/cadeyrn/enterprise-policy-generator/issues/78)
+- added support for a new policy type, needed for the Preferences policy, see
+  [#142](https://github.com/cadeyrn/enterprise-policy-generator/issues/142)
 - improved instruction for users of Apple macOS, see
   [#210](https://github.com/cadeyrn/enterprise-policy-generator/issues/210)
 - disabled native CSS outlines for input fields because we have our own focus style, see

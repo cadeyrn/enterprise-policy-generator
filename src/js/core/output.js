@@ -238,7 +238,7 @@ const output = {
       const elKey = el.getElementsByClassName('key')[0];
       const key = elKey ? elKey.value : el.getAttribute('data-key');
 
-      if (key) {
+      if (key && !output.hasInvalidFields(el) && !output.hasInvalidPreferenceFields(el)) {
         const properties = {};
 
         // arrays
@@ -276,8 +276,25 @@ const output = {
 
         // input fields
         [...el.querySelectorAll(':scope > .input input:not(.key), :scope .sub-sub-options > .input input')].forEach((el) => {
-          if (el.value && !el.classList.contains('invalid-url-style')) {
-            properties[el.getAttribute('data-name')] = el.value;
+          let value = el.value;
+
+          if (value && !el.classList.contains('invalid-url-style')) {
+            if (el.getAttribute('data-preference-policy')) {
+              const type = el.closest('.sub-sub-options').querySelector('[data-name="Type"]').value;
+
+              if (type === 'number') {
+                if (!isNaN(value)) {
+                  value = parseInt(value);
+                }
+              }
+              else if (type === 'boolean') {
+                if (value === 'true' || value === 'false') {
+                  value = JSON.parse(value);
+                }
+              }
+            }
+
+            properties[el.getAttribute('data-name')] = value;
           }
         });
 
@@ -626,6 +643,23 @@ const output = {
     let hasInvalidFields = false;
 
     if (el.querySelectorAll(':scope .mandatory-style').length > 0) {
+      hasInvalidFields = true;
+    }
+
+    return hasInvalidFields;
+  },
+
+  /**
+   * Checks if a policy has invalid preference values.
+   *
+   * @param {HTMLElement|ParentNode} el - the DOM element of the policy
+   *
+   * @returns {boolean} - whether the policy has invalid values or not
+   */
+  hasInvalidPreferenceFields (el) {
+    let hasInvalidFields = false;
+
+    if (el.querySelectorAll(':scope .invalid-preference-style').length > 0) {
       hasInvalidFields = true;
     }
 

@@ -49,7 +49,7 @@ label.deprecated {
   color: rgba(19, 69, 99, .4);
 }
 
-label + .sub-options:not(.disabled), label + .sub-options-wrapper {
+label + .sub-options:not(.disabled), input:checked + label + .sub-options-wrapper {
   margin-top: 10px;
 }
 
@@ -75,14 +75,15 @@ textarea {
 }
 
 input[type='text'].mandatory-style,
+input[type='text'].invalid-preference-style,
 input[type='url'].mandatory-style,
 input[type='url'].invalid-url-style,
 textarea.invalid-json-style {
   border-color: var(--color-red);
 }
 
-input[type='text']:not(.mandatory-style):focus,
-input[type='url']:not(.mandatory-style, .invalid-json-style, .invalid-url-style):focus,
+input[type='text']:not(.mandatory-style, .invalid-preference-style, .invalid-json-style):focus,
+input[type='url']:not(.mandatory-style, .invalid-url-style):focus,
 select:focus {
   border-color: var(--color-blue-dark);
 }
@@ -95,7 +96,11 @@ select:focus {
   margin-top: 2px;
 }
 
-.mandatory-label, .invalid-json-label, .invalid-url-label {
+.position-relative {
+  position: relative;
+}
+
+.mandatory-label, .invalid-url-label, .invalid-preference-label, .invalid-json-label {
   position: absolute;
   top: 4px;
   right: 54px;
@@ -106,7 +111,10 @@ select:focus {
   color: var(--color-white);
 }
 
-.input + .input .mandatory-label, .input + .input .invalid-url-label, .input + .input .invalid-json-label {
+.input + .input .mandatory-label,
+.input + .input .invalid-preference-label,
+.input + .input .invalid-url-label,
+.input + .input .invalid-json-label {
   top: 6px;
 }
 
