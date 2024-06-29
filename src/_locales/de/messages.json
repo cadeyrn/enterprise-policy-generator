@@ -309,7 +309,7 @@
     "message": "Bestimmte kryptographische Chiffren aktivieren oder deaktivieren"
   },
   "policy_description_DisableDefaultBrowserAgent": {
-    "message": "Deaktiviere den Standard-Browser-Agent (nur Windows)"
+    "message": "Deaktiviere den Standard-Browser-Agent"
   },
   "policy_description_DisableDeveloperTools": {
     "message": "Deaktiviere die eingebauten Entwickler-Werkzeuge"

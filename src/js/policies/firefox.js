@@ -236,6 +236,7 @@ const policies = {
   },
 
   DisableDefaultBrowserAgent : {
+    additional_note : browser.i18n.getMessage('requirement_windows'),
     first_available : { mainstream : '75.0', esr : '78.0' },
     ui_category : 'disable-features',
     type : 'boolean'

@@ -309,7 +309,7 @@
     "message": "Enable or disable specific cryptographic ciphers"
   },
   "policy_description_DisableDefaultBrowserAgent": {
-    "message": "Disable the default browser agent (Windows only)"
+    "message": "Disable the default browser agent"
   },
   "policy_description_DisableDeveloperTools": {
     "message": "Отключить встроенные инструменты разработчика"

@@ -309,7 +309,7 @@
     "message": "Enable or disable specific cryptographic ciphers"
   },
   "policy_description_DisableDefaultBrowserAgent": {
-    "message": "Standardny agent wobglědowaka znjemóžniś (jano Windows)"
+    "message": "Standardny agent wobglědowaka znjemóžniś"
   },
   "policy_description_DisableDeveloperTools": {
     "message": "Zatwarjone wuwijarske rědy znjemóžniś"
