@@ -48,7 +48,7 @@
     "message": "Napórajśo zarědnik z mjenim „distribution“ w zarědniku, w kótaremž jo Firefox a składujśo tam dataju „policies.json“."
   },
   "explanation_intro_macos": {
-    "message": "Napórajśo zapis z mjenim „distribution“ w zapisu /Contents/Resources/ w nałožeńskem pakeśe Firefox a placěrujśo tam dataju „policies.json“. Aby nałožeński paket wócynił, klikniśo z pšaweju tastu myški na nałoženje Firefox w Finder a wubjeŕśo „Paketinhalt anzeigen“ z kontekstowego menija."
+    "message": "Napórajśo zapis z mjenim „distribution“ w zapisu /Contents/Resources/ w nałožeńskem pakeśe Firefox a placěrujśo tam dataju „policies.json“. Aby nałožeński paket wócynił, klikniśo z pšaweju tastu myški na nałoženje Firefox w Finder a wubjeŕśo „Paketinhalt zeigen“ z kontekstowego menija."
   },
   "explanation_intro_windows": {
     "message": "Napórajśo zarědnik z mjenim „distribution“ w tom zarědniku, źož jo dataja firefox.exe a składujśo tam dataju „policies.json“."

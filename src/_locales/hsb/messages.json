@@ -48,7 +48,7 @@
     "message": "Wutworće rjadowak z mjenom „distribution“ w rjadowaku, w kotrymž je Firefox a składujće tam dataju „policies.json“."
   },
   "explanation_intro_macos": {
-    "message": "Wutworće zapis z mjenom „distribution“ w zapisu /Contents/Resources/ w nałoženskim pakeće Firefox a placěrujće tam dataju „policies.json“. Zo byšće nałoženski paket wočinił, klikńće z prawej tastu myški na nałoženje Firefox w Finder a wubjerće „Paketinhalt anzeigen“ z kontekstoweho menija."
+    "message": "Wutworće zapis z mjenom „distribution“ w zapisu /Contents/Resources/ w nałoženskim pakeće Firefox a placěrujće tam dataju „policies.json“. Zo byšće nałoženski paket wočinił, klikńće z prawej tastu myški na nałoženje Firefox w Finder a wubjerće „Paketinhalt zeigen“ z kontekstoweho menija."
   },
   "explanation_intro_windows": {
     "message": "Wutworće rjadowak z mjenom „distribution“ w tym rjadowaku, hdźež je dataja firefox.exe a składujće tam dataju „policies.json“."
