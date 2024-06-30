@@ -624,7 +624,7 @@
     "message": "The path to an executable"
   },
   "policy_description_Handlers_property_handlers_uriTemplate": {
-    "message": "URL to a web-based handler. Must start with https:// and contain \"%s\" for the substitution"
+    "message": "URL to a web-based handler. Must start with https:// and contain “%s“ for the substitution"
   },
   "policy_description_HardwareAcceleration": {
     "message": "Disable hardware acceleration"
