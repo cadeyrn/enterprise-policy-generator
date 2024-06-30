@@ -48,7 +48,7 @@
     "message": "Wutworće rjadowak z mjenom „distribution“ w rjadowaku, w kotrymž je Firefox a składujće tam dataju „policies.json“."
   },
   "explanation_intro_macos": {
-    "message": "Create a „distribution“ directory inside the /Contents/Resources/ directory of the Firefox application package and place the file „policies.json“ there. To open the application package, right-click on the Firefox application in the Finder and choose „show package contents“ from the context menu."
+    "message": "Wutworće zapis z mjenom „distribution“ w zapisu /Contents/Resources/ w nałoženskim pakeće Firefox a placěrujće tam dataju „policies.json“. Zo byšće nałoženski paket wočinił, klikńće z prawej tastu myški na nałoženje Firefox w Finder a wubjerće „Paketinhalt anzeigen“ z kontekstoweho menija."
   },
   "explanation_intro_windows": {
     "message": "Wutworće rjadowak z mjenom „distribution“ w tym rjadowaku, hdźež je dataja firefox.exe a składujće tam dataju „policies.json“."
@@ -66,7 +66,7 @@
     "message": "Směrnicy generować"
   },
   "invalid_json_label": {
-    "message": "invalid JSON"
+    "message": "njepłaćiwy JSON"
   },
   "invalid_url_label": {
     "message": "njepłaćiwy URL"
@@ -107,6 +107,9 @@
   "mandatory_label": {
     "message": "obligatoriski"
   },
+  "non_allowed_preference_label": {
+    "message": "Mjeno nastajenja dowolene njeje"
+  },
   "policy_category_block_access": {
     "message": "Přistup blokować"
   },
@@ -132,19 +135,19 @@
     "message": "Druhe směrnicy"
   },
   "policy_description_3rdParty": {
-    "message": "Preconfiguration of settings for extensions that use chrome.storage.managed"
+    "message": "Předkonfiguracija nastajenjow za rozšěrjenjow, kotrež chrome.storage.managed wužiwaja"
   },
   "policy_description_3rdparty_JSON_caption": {
-    "message": "JSON configuration"
+    "message": "JSON-konfiguracija"
   },
   "policy_description_3rdparty_JSON_label": {
-    "message": "JSON (configuration must be surrounded by curly brackets {})"
+    "message": "JSON (njezabywajće kwaklate spinki {})"
   },
   "policy_description_3rdParty_Label_Key": {
     "message": "ID přidatka"
   },
   "policy_description_AppAutoUpdate": {
-    "message": "Install Firefox updates automatically"
+    "message": "Aktualizacije Firefox awtomatisce instalować"
   },
   "policy_description_AppUpdateURL": {
     "message": "Wotchilny serwerowy URL za aktualizacije Firefox"
@@ -162,13 +165,13 @@
     "message": "Přeco SPNEGO na nje-FQDNs dowolić"
   },
   "policy_description_Authentication_AllowProxies": {
-    "message": "Always allow SPNEGO or NTLM with proxy servers"
+    "message": "Přeco SPNEGO abo NTLM za proksyjowe serwery dowolić"
   },
   "policy_description_Authentication_AllowProxies_NTLM": {
-    "message": "Always allow NTLM with proxy servers"
+    "message": "NTLM za proksyjowe serwery přeco dowolić"
   },
   "policy_description_Authentication_AllowProxies_SPNEGO": {
-    "message": "Always allow NTLM with proxy servers"
+    "message": "SPNEGO za proksyjowe serwery přeco dowolić"
   },
   "policy_description_Authentication_Delegated": {
     "message": "Delegowany"
@@ -177,7 +180,7 @@
     "message": "NTLM"
   },
   "policy_description_Authentication_PrivateBrowsing": {
-    "message": "Integrowanu awtentifikaciju w priwatnym modusu zmóžnić"
+    "message": "Integrowana awtentifikacija w priwatnym modusu zmóžnić"
   },
   "policy_description_Authentication_SPNEGO": {
     "message": "SPNEGO"
@@ -306,7 +309,7 @@
     "message": "Firefox při aktualizowanju haćić"
   },
   "policy_description_DisabledCiphers": {
-    "message": "Enable or disable specific cryptographic ciphers"
+    "message": "Wěste kryptografiske šifry zmóžnić abo znjemóžnić"
   },
   "policy_description_DisableDefaultBrowserAgent": {
     "message": "Standardny agent wobhladowaka znjemóžnić"
@@ -318,7 +321,7 @@
     "message": "Menijowej zapiskaj „Posudk pósłać“ a „Wobšudne websydło zdźělić“ w meniju Pomoc znjemóžnić"
   },
   "policy_description_DisableFirefoxAccounts": {
-    "message": "Disable Mozilla account based services like Firefox Sync"
+    "message": "Znjemóžńće słužby kaž Firefox Sync, kotrež na konće Mozilla bazuja"
   },
   "policy_description_DisableFirefoxScreenshots": {
     "message": "Zatwarjenu funkciju za fota wobrazowki (Firefox Screenshots) znjemóžnić"
@@ -444,10 +447,10 @@
     "message": "Slědowacy wobsah"
   },
   "policy_description_EncryptedMediaExtensions": {
-    "message": "Enable or disable Encrypted Media Extensions (needed for video streaming portals)"
+    "message": "Encrypted Media Extensions zmóžnić abo znjemóžnićn (za widejostreamingowe portale trěbne)"
   },
   "policy_description_EncryptedMediaExtensions_Enabled": {
-    "message": "If disabled, Firefox will not download the Widevine CDM unless the user consents to installing it. If disabled and locked the user will not be asked to download Widevine."
+    "message": "Jeli su znjemóžnjene, Firefox Widevine CDM njesćehnje, chibazo wužiwar instalaciji přihłosuje. Jeli su znjemóžnjene a škitane, wužiwar namołwu njedóstanje, Widevine sćahnyć."
   },
   "policy_description_Extensions": {
     "message": "Rozšěrjenja instalować, wotinstalować abo zawrěć"
@@ -537,10 +540,10 @@
     "message": "Rozšěrjenski ID"
   },
   "policy_description_ExtensionSettings_restricted_domains": {
-    "message": "Domains on which content scripts can't be run"
+    "message": "Domeny, na kotrychž wobsahowe skripty njedadźa so wuwjesć"
   },
   "policy_description_ExtensionSettings_updates_disabled": {
-    "message": "Allow automatic updates"
+    "message": "Awtomatiske aktualizacije dowolić"
   },
   "policy_description_ExtensionUpdate": {
     "message": "Awtomatiske aktualizowanje rozšěrjenjow zmóžnić abo znjemóžnić"
@@ -570,58 +573,58 @@
     "message": "Krótke informacije"
   },
   "policy_description_Handlers": {
-    "message": "Configure default application handlers"
+    "message": "Standardne nałoženja za wočinjenje datajow, protokolow a MIME-typow postajić"
   },
   "policy_description_Handlers_type_file_extension": {
-    "message": "File extension"
+    "message": "Datajowa kóncowka"
   },
   "policy_description_Handlers_type_file_extension_placeholder": {
-    "message": "e.g. “pdf”"
+    "message": "na přikład „pdf“"
   },
   "policy_description_Handlers_type_mime_type": {
-    "message": "MIME type"
+    "message": "MIME-Typ"
   },
   "policy_description_Handlers_type_mime_type_placeholder": {
-    "message": "e.g. “application/msword”"
+    "message": "na přikład „application/msword“"
   },
   "policy_description_Handlers_type_schema": {
-    "message": "Scheme"
+    "message": "Šema"
   },
   "policy_description_Handlers_type_schema_placeholder": {
-    "message": "e.g. “mailto”"
+    "message": "na přikład „mailto“"
   },
   "policy_description_Handlers_property_action": {
-    "message": "Action"
+    "message": "Akcija"
   },
   "policy_description_Handlers_property_action_saveToDisk": {
-    "message": "Save to disk"
+    "message": "Dataju składować"
   },
   "policy_description_Handlers_property_action_useHelperApp": {
-    "message": "open with application"
+    "message": "z nałoženjom wočinić"
   },
   "policy_description_Handlers_property_action_useSystemDefault": {
-    "message": "use system default"
+    "message": "Systemowy standard wužiwać"
   },
   "policy_description_Handlers_property_ask": {
-    "message": "Ask the user what they want to do with the file"
+    "message": "Wužiwarja so prašeć, štož chce z dataju činić"
   },
   "policy_description_Handlers_property_ask_false": {
-    "message": "The action is taken without user intervention"
+    "message": "Akcija so bjez zapřimjenja wužiwarja wuwjedźe"
   },
   "policy_description_Handlers_property_ask_true": {
-    "message": "The user is asked what they want to do with the file"
+    "message": "Praša so wužiwarja, štož chce z dataju činić"
   },
   "policy_description_Handlers_property_handlers": {
-    "message": "A list of handlers, where the first handler is the default handler. If there is to be no standard handler, an empty object is to be used for the first handler. Either the path to a local application or the URL to a web-based handler can be specified."
+    "message": "Lisćina předźěłakow, při čimž prěni předźěłak je standardny předźěłak. Jeli nima standardny předźěłak być, dyrbi so prózdny objekt jako prěni předźěłak wužiwać. Da so pak šćežka k lokalnemu nałoženju pak URL k webbazowenemu předźěłakej podać."
   },
   "policy_description_Handlers_property_handlers_name": {
-    "message": "The display name of the handler (might not be used)"
+    "message": "Pokazowanske mjeno předźěłaka (so snano njewužiwa)"
   },
   "policy_description_Handlers_property_handlers_path": {
-    "message": "The path to an executable"
+    "message": "Šćežka k wuwjedźomnej dataji"
   },
   "policy_description_Handlers_property_handlers_uriTemplate": {
-    "message": "URL to a web-based handler. Must start with https:// and contain \"%s\" for the substitution"
+    "message": "URL za webbazowany předźěłak. Dyrbi z https:// započeć a „%s“ za narunanje wobsahować"
   },
   "policy_description_HardwareAcceleration": {
     "message": "Hardwarowe pospěšenje znjemóžnić"
@@ -873,40 +876,40 @@
     "message": "Tasta Alt da so wužiwać, zo by menijowu lajstu pokazała"
   },
   "policy_description_Preferences": {
-    "message": "Specify user-defined preferences (about:config)"
+    "message": "Swójske nastajenja postajić (about:config)"
   },
   "policy_description_Preferences_Label_Key": {
-    "message": "Preference name"
+    "message": "Mjeno nastajenja"
   },
   "policy_description_Preferences_Status": {
     "message": "Status"
   },
   "policy_description_Preferences_Status_clear": {
-    "message": "Preference will be reset to default at every start, value has no effect"
+    "message": "Nastajenje so při kóždym starće na standard wróćo staja, hódnota wuskutk nima"
   },
   "policy_description_Preferences_Status_default": {
-    "message": "Preference can be changed and appears as default in case of non-default value"
+    "message": "Nastajenje da so změnić a jewi so při wotchilenju jako standard"
   },
   "policy_description_Preferences_Status_locked": {
-    "message": "Preference can not be changed and appears as default in case of non-default value"
+    "message": "Nastajenje njeda so změnić a jewi so při wotchilenju jako standard"
   },
   "policy_description_Preferences_Status_user": {
-    "message": "Preference can be changed and appears as modified in case of non-default value"
+    "message": "Nastajenje da so změnić a jewi so při wotchilenju jako Swójske"
   },
   "policy_description_Preferences_Type": {
-    "message": "Type"
+    "message": "Typ"
   },
   "policy_description_Preferences_Type_boolean": {
     "message": "Boolean"
   },
   "policy_description_Preferences_Type_number": {
-    "message": "Number"
+    "message": "Ličba"
   },
   "policy_description_Preferences_Type_string": {
-    "message": "Text"
+    "message": "Tekst"
   },
   "policy_description_Preferences_Value": {
-    "message": "Value"
+    "message": "Hódnota"
   },
   "policy_description_PrimaryPassword": {
     "message": "Hłowne hesło wunuzować abo funkciju wotpinać"
@@ -1014,13 +1017,13 @@
     "message": "Wopytane strony"
   },
   "policy_description_SanitizeOnShutdown_Locked_false": {
-    "message": "Protect no options from changes"
+    "message": "Žane nastajenja před změnu nješkitać"
   },
   "policy_description_SanitizeOnShutdown_Locked_null": {
-    "message": "Protect all options from changes"
+    "message": "Wšě nastajenja před změnu škitać"
   },
   "policy_description_SanitizeOnShutdown_Locked_true": {
-    "message": "Protect only the set options from changes"
+    "message": "Jenož wubrane nastajenja před změnu škitać"
   },
   "policy_description_SanitizeOnShutdown_Sessions": {
     "message": "Aktiwne přizjewjenja"
@@ -1107,7 +1110,7 @@
     "message": "Šćežka k bibliotece za grat"
   },
   "policy_description_ShowHomeButton": {
-    "message": "Show the home button on the toolbar"
+    "message": "Tłóčatko startoweje strony w symbolowej lajsće pokazać"
   },
   "policy_description_SSLVersionMax": {
     "message": "Maksimalnje podpěrana TLS-wersija"
