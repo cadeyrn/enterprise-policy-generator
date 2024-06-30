@@ -2,142 +2,144 @@
 
 ## Release Notes
 
-### (Work in Progress) Version 6.0.0
+### [Version 6.0.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v6.0.0) (2024-06-30)
 
 #### Enhancements
 
 - Enterprise Policy Generator now uses Manifest v3, fixes
   [#188](https://github.com/cadeyrn/enterprise-policy-generator/issues/188)
-- deprecation of old Firefox versions. Firefox 115 or higher is required now. Also, Enterprise Policy Generator no
-  longer shows minimum required Firefox version for policies older than Firefox 115.0, see
+- Firefox 115 or higher is required now. Also, Enterprise Policy Generator no
+  longer displays the minimum required Firefox version for policies implemented before Firefox 115.0, see
   [#138](https://github.com/cadeyrn/enterprise-policy-generator/issues/138)
-- for version compatibility notes the old Firefox shape was still used. Replaced the logo with the current one,
-  see [#134](https://github.com/cadeyrn/enterprise-policy-generator/issues/134)
-- implemented a schema migrator so that saved configurations can be migrated during extension updates or when old
-  configurations get imported on newer versions of the extension, see
+- Implemented a schema migrator so that policies in saved configurations can be migrated during extension updates or 
+  when old configurations get imported on newer versions of the extension, see
   [#143](https://github.com/cadeyrn/enterprise-policy-generator/issues/143)
-- added support for a new policy type, needed for the Handlers policy, see
+- Added support for a new policy type, needed for the Handlers policy, see
   [#152](https://github.com/cadeyrn/enterprise-policy-generator/issues/152)
-- added support for a new policy type, needed for the 3rdParty policy, see
+- Added support for a new policy type, needed for the 3rdParty policy, see
   [#78](https://github.com/cadeyrn/enterprise-policy-generator/issues/78)
-- added support for a new policy type, needed for the Preferences policy, see
+- Added support for a new policy type, needed for the Preferences policy, see
   [#142](https://github.com/cadeyrn/enterprise-policy-generator/issues/142)
-- improved instruction for users of Apple macOS, see
-  [#210](https://github.com/cadeyrn/enterprise-policy-generator/issues/210)
-- disabled native CSS outlines for input fields because we have our own focus style, see
-  [#159](https://github.com/cadeyrn/enterprise-policy-generator/issues/159)
+- Support for many new policies, including big ones like policies to set arbitrary preferences or to configure
+  application handlers, see detailed list below
   
 #### Bugfixes
 
-- fixed error messages in browser console, see [#141](https://github.com/cadeyrn/enterprise-policy-generator/issues/141)
+- Fixed error messages in browser console, see [#141](https://github.com/cadeyrn/enterprise-policy-generator/issues/141)
   and [#169](https://github.com/cadeyrn/enterprise-policy-generator/issues/169)
-- improved enum fields so that these no longer causes empty policy objects if no value is set, see
-  [#146](https://github.com/cadeyrn/enterprise-policy-generator/issues/146)
-- when adding configurations for more than one extension in the ExtensionSettings policy it was not possible to remove
-  these fields again, see [#160](https://github.com/cadeyrn/enterprise-policy-generator/issues/160)
-- configuring more than one extension in ExtensionSettings policy was broken, see
+- Improved enum fields so that these no longer causes empty policy objects if no value is set, see
+  [#146](https://github.com/cadeyrn/enterprise-policy-generator/issues/146) 
+- Configuring more than one extension in ExtensionSettings policy was broken, see
+  [#160](https://github.com/cadeyrn/enterprise-policy-generator/issues/160) and
   [#269](https://github.com/cadeyrn/enterprise-policy-generator/issues/269)
-- the RequestedLocales policy allows an empty string to use the operating system's language. However, empty strings
+- The RequestedLocales policy allows an empty string to use the operating system's language. However, empty strings
   should not be allowed if more than one value is used. Also, it shouldn't be possible to add duplicate language codes,
   see [#161](https://github.com/cadeyrn/enterprise-policy-generator/issues/161)
-- integer values were parsed as strings in preference policies, see
+- Integer values were parsed as strings in preference policies, see
   [#171](https://github.com/cadeyrn/enterprise-policy-generator/issues/171)
 
 #### Notable Changes and Code Quality
 
-- optimized the file size of a few images, fixes
+- For version compatibility notes, the old Firefox shape was still used. The logo has been replaced with the current
+  one, see [#134](https://github.com/cadeyrn/enterprise-policy-generator/issues/134)
+- Optimized the file size of a few images, fixes
   [#222](https://github.com/cadeyrn/enterprise-policy-generator/issues/222)
-- replaced the translation mechanism with the newest version to share more code with other extensions and improve the
+- Replaced the translation mechanism with the newest version to share more code with other extensions and improve the
   maintainability, fixes [#221](https://github.com/cadeyrn/enterprise-policy-generator/issues/221)
-- changed copyright year from 2020 to 2024, fixes
+- Changed copyright year from 2020 to 2024, fixes
   [#220](https://github.com/cadeyrn/enterprise-policy-generator/issues/220)
-- several code quality and code style improvements
+- Improved instruction for users of Apple macOS, see
+  [#210](https://github.com/cadeyrn/enterprise-policy-generator/issues/210)
+- Disabled native CSS outlines for input fields because we have our own focus style, see
+  [#159](https://github.com/cadeyrn/enterprise-policy-generator/issues/159)
+- Several code quality and code style improvements
   
 #### Enterprise Policies
 
-- new policy to allow or prevent Firefox from messaging the user, see
+- New policy to allow or prevent Firefox from messaging the user, see
   [#145](https://github.com/cadeyrn/enterprise-policy-generator/issues/145)
-- new policy to enable or disable the picture in picture feature for videos, see
+- New policy to enable or disable the picture in picture (PiP) feature for videos, see
   [#151](https://github.com/cadeyrn/enterprise-policy-generator/issues/151)
-- new policy to require or prevent using a primary password; the DisableMasterPasswordCreation policy was removed, the
+- New policy to require or prevent using a primary password; the DisableMasterPasswordCreation policy was removed, the
   value of the DisableMasterPasswordCreation policy will automatically be migrated in saved configurations, see
   [#153](https://github.com/cadeyrn/enterprise-policy-generator/issues/153)
-- new policies to either enable the legacy default behaviour for SameSite cookies or to enable the legacy behaviour
+- New policies to either enable the legacy default behaviour for SameSite cookies or to enable the legacy behaviour
   for specific websites; both policies excludes each other, see
   [#154](https://github.com/cadeyrn/enterprise-policy-generator/issues/154)
-- new policy to disable the default browser agent, see
+- New policy to disable the default browser agent, see
   [#155](https://github.com/cadeyrn/enterprise-policy-generator/issues/155)
-- new policy to disable or configure the built-in PDF viewer; the DisableBuiltinPDFViewer policy was removed, the value
+- New policy to disable or configure the built-in PDF viewer; the DisableBuiltinPDFViewer policy was removed, the value
   of the DisableBuiltinPDFViewer policy will automatically be migrated in saved configurations, see
   [#156](https://github.com/cadeyrn/enterprise-policy-generator/issues/156)
-- new policy to enable or disable specific cryptographic ciphers, see
+- New policy to enable or disable specific cryptographic ciphers, see
   [#163](https://github.com/cadeyrn/enterprise-policy-generator/issues/163)
-- new policy to enable or disable Encrypted Media Extensions; the policy to enable or disable the download of the
+- New policy to enable or disable Encrypted Media Extensions; the policy to enable or disable the download of the
   Widevine CDM was removed, the value will automatically be migrated in saved configurations, see
   [#164](https://github.com/cadeyrn/enterprise-policy-generator/issues/164)
-- new policy to enable or disable the automatic installation of Firefox updates; this policy and the policy to
+- New policy to enable or disable the automatic installation of Firefox updates; this policy and the policy to
   completely disable Firefox updates excludes each other, see
   [#166](https://github.com/cadeyrn/enterprise-policy-generator/issues/166)
-- new policy to show the home button on the toolbar, see
+- New policy to show the home button on the toolbar, see
   [#232](https://github.com/cadeyrn/enterprise-policy-generator/issues/232)
-- new policy to preconfigure the settings for extensions that use chrome.storage.managed, see
+- New policy to preconfigure the settings for extensions that use chrome.storage.managed, see
   [#78](https://github.com/cadeyrn/enterprise-policy-generator/issues/78)
-- new policy to specify user-defined preferences (about:config), see
+- New policy to specify user-defined preferences (about:config), see
   [#142](https://github.com/cadeyrn/enterprise-policy-generator/issues/142)
-- new policy to configure the application handlers, see
+- New policy to configure the application handlers, see
   [#152](https://github.com/cadeyrn/enterprise-policy-generator/issues/152)
-- enhanced permissions policy to control autoplay of media and access to virtual reality devices, see
+- Enhanced permissions policy to control autoplay of media and access to virtual reality devices, see
   [#136](https://github.com/cadeyrn/enterprise-policy-generator/issues/136)
-- enhanced tracking protection policy to add exceptions, see
+- Enhanced tracking protection policy to be able to add exceptions, see
   [#144](https://github.com/cadeyrn/enterprise-policy-generator/issues/144)
-- enhanced policy to clear browser data on shutdown, so that you can only set some of them instead of all or
+- Enhanced policy to clear browser data on shutdown, so that you can only set some of them instead of all or
   nothing, and to be able to lock only some these options, all or none, see
   [#147](https://github.com/cadeyrn/enterprise-policy-generator/issues/147)
-- enhanced DNS over HTTPS policy to add excluded domains, see
+- Enhanced DNS over HTTPS policy to be able to add excluded domains, see
   [#148](https://github.com/cadeyrn/enterprise-policy-generator/issues/148)
-- enhanced homepage policy to be able to set the homepage to either allow or forbid to optionally start with the
+- Enhanced homepage policy to be able to set the homepage to either allow or forbid to optionally start with the
   previous session, see [#149](https://github.com/cadeyrn/enterprise-policy-generator/issues/149)
-- enhanced authentication policy to enable or disable integrated authentication in private browsing, see
+- Enhanced authentication policy to enable or disable integrated authentication in private browsing, see
   [#150](https://github.com/cadeyrn/enterprise-policy-generator/issues/150)
-- enhanced cookies policy to allow to configure domains where cookies are only allowed for the current session, see
+- Enhanced cookies policy to allow to configure domains where cookies are only allowed for the current session, see
   [#157](https://github.com/cadeyrn/enterprise-policy-generator/issues/157)
-- enhanced authentication policy by option for proxy servers, see
+- Enhanced authentication policy with an option for proxy servers, see
   [#162](https://github.com/cadeyrn/enterprise-policy-generator/issues/162)
-- enhanced extension settings policy to be able to define domains on which content scripts can't be run, see
+- Enhanced extension settings policy to be able to define domains on which content scripts can't be run, see
   [#165](https://github.com/cadeyrn/enterprise-policy-generator/issues/165)
-- enhanced extension settings policy to be able to disallow automatic updates for individual extensions, see
+- Enhanced extension settings policy to be able to disallow automatic updates for individual extensions, see
   [#230](https://github.com/cadeyrn/enterprise-policy-generator/issues/230)
-- replaced menu bar policy with new one that accepts more options; the old policy will automatically be migrated in
+- Replaced menu bar policy with new one that accepts more options; the old policy will automatically be migrated in
   saved configurations, see [#127](https://github.com/cadeyrn/enterprise-policy-generator/issues/127)
-- removed SearchEngines | DefaultPrivate because this feature never reached a stable release of Firefox, see
+- Removed SearchEngines | DefaultPrivate because this feature never reached a stable release of Firefox, see
   [#140](https://github.com/cadeyrn/enterprise-policy-generator/issues/140)
-- removed InstallAddonsPermission policy and migrated all data to ExtensionSettings policy in saved configurations, see
+- Removed InstallAddonsPermission policy and migrated all data to ExtensionSettings policy in saved configurations, see
   [#168](https://github.com/cadeyrn/enterprise-policy-generator/issues/168)
-- removed FlashPlugin policy as Flash is no longer a thing, see
+- Removed FlashPlugin policy as Flash is no longer a thing and removed it in saved configurations, see
   [#218](https://github.com/cadeyrn/enterprise-policy-generator/issues/218)
-- renamed Firefox Account to Mozilla account in DisableFirefoxAccounts policy, see
+- Renamed Firefox Account to Mozilla account in DisableFirefoxAccounts policy, see
   [#268](https://github.com/cadeyrn/enterprise-policy-generator/issues/268)
 
 #### Dependencies
 
-- added eslint-plugin-jsdoc 48.5.0
-- updated eslint from version 6.8.0 to 9.6.0 and updated configuration
-- updated eslint-plugin-xss from version 0.1.10 to 0.1.12
-- updated gulp from version 4.0.2 to 5.0.0
-- updated gulp-htmllint from version 0.0.16 to 0.0.19
-- updated gulp-jsdoc3 from version 2.0.0 to 3.0.0
-- updated htmllint configuration
-- updated jsdoc from version 3.6.3 to 4.0.3
-- updated stylelint from version 13.2.0 to 15.11.0 and updated configuration
-- updated stylelint-csstree-validator from version 1.8.0 to 3.0.0
-- updated stylelint-order from version 4.0.0 to 6.0.4
-- updated web-ext from version 4.1.0 to 8.2.0
-- replaced gulp-eslint with gulp-eslint-new 2.1.0
-- removed eslint-plugin-compat
-- removed eslint-plugin-no-unsanitized
-- removed eslint-plugin-promise
+- Added eslint-plugin-jsdoc 48.5.0
+- Updated eslint from version 6.8.0 to 9.6.0 and updated configuration
+- Updated eslint-plugin-xss from version 0.1.10 to 0.1.12
+- Updated gulp from version 4.0.2 to 5.0.0
+- Updated gulp-htmllint from version 0.0.16 to 0.0.19
+- Updated gulp-jsdoc3 from version 2.0.0 to 3.0.0
+- Updated htmllint configuration
+- Updated jsdoc from version 3.6.3 to 4.0.3
+- Updated stylelint from version 13.2.0 to 15.11.0 and updated configuration
+- Updated stylelint-csstree-validator from version 1.8.0 to 3.0.0
+- Updated stylelint-order from version 4.0.0 to 6.0.4
+- Updated web-ext from version 4.1.0 to 8.2.0
+- Replaced gulp-eslint with gulp-eslint-new 2.1.0
+- Removed eslint-plugin-compat
+- Removed eslint-plugin-no-unsanitized
+- Removed eslint-plugin-promise
 
-[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v5.1.0...master)
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v5.1.0...v6.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-6.0.0)
 
 ---
 
