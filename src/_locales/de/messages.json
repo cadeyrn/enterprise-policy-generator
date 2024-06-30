@@ -48,7 +48,7 @@
     "message": "Erstellen Sie ein Verzeichnis mit dem Namen „distribution“ in dem Verzeichnis, in welchem sich Firefox befindet, und platzieren Sie die Datei „policies.json“ dort."
   },
   "explanation_intro_macos": {
-    "message": "Erstellen Sie ein Verzeichnis mit dem Namen „distribution“ innerhalb ds Verzeichnisses /Contents/Resources/ im Anwendungspaket von Firefox und platzieren Sie die Datei „policies.json“ dort. Um das Anwendungspaket zu öffnen, klicken Sie mit der rechten Maustaste auf die Firefox-Anwendung im Finder und wählen Sie „Paketinhalt zeigen“ aus dem Kontextmenü."
+    "message": "Erstellen Sie ein Verzeichnis mit dem Namen „distribution“ innerhalb des Verzeichnisses /Contents/Resources/ im Anwendungspaket von Firefox und platzieren Sie die Datei „policies.json“ dort. Um das Anwendungspaket zu öffnen, klicken Sie mit der rechten Maustaste auf die Firefox-Anwendung im Finder und wählen Sie „Paketinhalt zeigen“ aus dem Kontextmenü."
   },
   "explanation_intro_windows": {
     "message": "Erstellen Sie ein Verzeichnis mit dem Namen „distribution“ in dem Verzeichnis, in welchem sich die Datei firefox.exe befindet, und platzieren Sie die Datei „policies.json“ dort."
@@ -624,7 +624,7 @@
     "message": "Pfad zu einer ausführbaren Datei"
   },
   "policy_description_Handlers_property_handlers_uriTemplate": {
-    "message": "URL für webbasierten Handler. Muss mit https:// starten und „%s“ für die Ersetzung enthalten"
+    "message": "URL für webbasierten Handler. Muss mit https:// beginnen und „%s“ für die Ersetzung enthalten"
   },
   "policy_description_HardwareAcceleration": {
     "message": "Hardwarebeschleunigung deaktivieren"
@@ -903,7 +903,7 @@
     "message": "Boolean"
   },
   "policy_description_Preferences_Type_number": {
-    "message": "Nummer"
+    "message": "Zahl"
   },
   "policy_description_Preferences_Type_string": {
     "message": "Text"
