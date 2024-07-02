@@ -135,7 +135,7 @@
     "message": "Druge směrnice"
   },
   "policy_description_3rdParty": {
-    "message": "Pśedkonfiguracija nastajenjow za rozšyrjenjow, kótarež chrome.storage.managed wužywaju"
+    "message": "Pśedkonfiguracija nastajenjow za rozšyrjenja, kótarež chrome.storage.managed wužywaju"
   },
   "policy_description_3rdparty_JSON_caption": {
     "message": "JSON-konfiguracija"
@@ -321,7 +321,7 @@
     "message": "Menijowej zapiska „Pósudk pósłaś“ a „Wobšudnikojske websedło k wěsći daś“ w meniju Pomoc znjemóžniś"
   },
   "policy_description_DisableFirefoxAccounts": {
-    "message": "Znjemóžniśo słužby ako Firefox Sync, kótarež na konśe Mozilla bazěruju"
+    "message": "Słužby ako Firefox Sync znjemóžniś, kótarež na konśe Mozilla bazěruju"
   },
   "policy_description_DisableFirefoxScreenshots": {
     "message": "Zatwarjonu funkciju za fota wobrazowki (Firefox Screenshots) znjemóžniś"
@@ -336,7 +336,7 @@
     "message": "Formularnu a pytańsku historiju znjemóžniś"
   },
   "policy_description_DisablePasswordReveal": {
-    "message": "Do not allow passwords to be revealed in saved logins"
+    "message": "Njedówoliś, až se gronidła w skłaźonych pśizjawjenjach wótekšywaju"
   },
   "policy_description_DisablePocket": {
     "message": "Integraciju słužby Mozilla Pocket znjemóžniś"
@@ -675,10 +675,10 @@
     "message": "Žedne standardne cytańske znamjenja inkluziwnje inteligentne cytańske znamjenja (nejcesćej woglědane boki, njedawno wužyte klucowe słowa) napóraś. Pokazka: toś ta směrnica jo jano statkowna, gaž se pśed prědnym wužywanim profila Firefox nałožujo"
   },
   "policy_description_OfferToSaveLogins": {
-    "message": "Allow Firefox to offer to remember logins and passwords (cannot be overwritten)"
+    "message": "Firefox dowóliś, spomnjenje pśizjawjenjow a gronidłow póbitowaś (njedajo se pśepisaś)"
   },
   "policy_description_OfferToSaveLoginsDefault": {
-    "message": "Allow Firefox to offer to remember logins and passwords (can be overwritten by the user)"
+    "message": "Firefox dowóliś, spomnjenje pśizjawjenjow a gronidłow póbitowaś (dajo se wót wužywarja pśepisaś)"
   },
   "policy_description_OverrideFirstRunPage": {
     "message": "Bok pśepisaś, kótaryž se pśi prědnem starśe pokazujo. Prozne zapódawańske pólo bok dopołnje znjemóžnjujo."
