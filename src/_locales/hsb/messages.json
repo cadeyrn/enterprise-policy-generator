@@ -135,7 +135,7 @@
     "message": "Druhe směrnicy"
   },
   "policy_description_3rdParty": {
-    "message": "Předkonfiguracija nastajenjow za rozšěrjenjow, kotrež chrome.storage.managed wužiwaja"
+    "message": "Předkonfiguracija nastajenjow za rozšěrjenja, kotrež chrome.storage.managed wužiwaja"
   },
   "policy_description_3rdparty_JSON_caption": {
     "message": "JSON-konfiguracija"
@@ -321,7 +321,7 @@
     "message": "Menijowej zapiskaj „Posudk pósłać“ a „Wobšudne websydło zdźělić“ w meniju Pomoc znjemóžnić"
   },
   "policy_description_DisableFirefoxAccounts": {
-    "message": "Znjemóžńće słužby kaž Firefox Sync, kotrež na konće Mozilla bazuja"
+    "message": "Słužby kaž Firefox Sync znjemóžnić, kotrež na konće Mozilla bazuja"
   },
   "policy_description_DisableFirefoxScreenshots": {
     "message": "Zatwarjenu funkciju za fota wobrazowki (Firefox Screenshots) znjemóžnić"
@@ -336,7 +336,7 @@
     "message": "Formularnu a pytansku historiju znjemóžnić"
   },
   "policy_description_DisablePasswordReveal": {
-    "message": "Do not allow passwords to be revealed in saved logins"
+    "message": "Njedowolić, zo so hesła w składowanych přizjewjenjach wotkrywaja"
   },
   "policy_description_DisablePocket": {
     "message": "Integraciju słužby Mozilla Pocket znjemóžnić"
@@ -675,10 +675,10 @@
     "message": "Žane standardne zapołožki inkluziwnje inteligentne zapołožki (najhusćišo wopytane strony, njedawno wužite klučowe słowa) wutworić. Pokazka: tuta směrnica je jenož skutkowna, hdyž so před prěnim wužiwanjom profila Firefox nałožuje"
   },
   "policy_description_OfferToSaveLogins": {
-    "message": "Allow Firefox to offer to remember logins and passwords (cannot be overwritten)"
+    "message": "Firefox dowolić, spomjatkowanje přizjewjenjow a hesłow poskićić (njeda so přepisać)"
   },
   "policy_description_OfferToSaveLoginsDefault": {
-    "message": "Allow Firefox to offer to remember logins and passwords (can be overwritten by the user)"
+    "message": "Firefox dowolić, spomjatkowanje přizjewjenjow a hesłow poskićić (da so wot wužiwarja přepisać)"
   },
   "policy_description_OverrideFirstRunPage": {
     "message": "Stronu přepisać, kotraž so při prěnim starće jewi. Prózdne zapodawanske polo stronu dospołnje znjemóžnja."
