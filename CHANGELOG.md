@@ -1,6 +1,16 @@
-# Firefox Add-on: Enterprise Policy Generator (WebExtension)
+# Firefox Add-on: Enterprise Policy Generator
 
 ## Release Notes
+
+### Version 6.1.0 (Work in Progress)
+
+#### Dependencies
+
+- Updated eslint from version 9.6.0 to 9.7.0
+- Updated eslint-plugin-jsdoc from version 48.5.0 to 48.7.0
+- Updated gulp-eslint from version 2.1.0 to 2.2.0
+
+---
 
 ### [Version 6.0.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v6.0.0) (2024-06-30)
 
