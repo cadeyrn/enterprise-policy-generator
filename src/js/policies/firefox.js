@@ -2407,7 +2407,7 @@ const policies = {
               {
                 name : 'uriTemplate',
                 label : browser.i18n.getMessage('policy_description_Handlers_property_handlers_uriTemplate'),
-                type : 'string'
+                type : 'url'
               }
             ]
           }
@@ -2471,7 +2471,7 @@ const policies = {
               {
                 name : 'uriTemplate',
                 label : browser.i18n.getMessage('policy_description_Handlers_property_handlers_uriTemplate'),
-                type : 'string'
+                type : 'url'
               }
             ]
           }
@@ -2535,7 +2535,7 @@ const policies = {
               {
                 name : 'uriTemplate',
                 label : browser.i18n.getMessage('policy_description_Handlers_property_handlers_uriTemplate'),
-                type : 'string'
+                type : 'url'
               }
             ]
           }
