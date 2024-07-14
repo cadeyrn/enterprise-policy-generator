@@ -276,6 +276,9 @@ const configurator = {
    * @returns {void}
    */
   addArrayField (el, key, overrideCountValue) {
+    const trigger = el;
+    const removeBtn = el.previousElementSibling;
+
     // if the key parameter is used, this method is called by the unserializer. Let's make sure that we append new
     // items always to the end to preserve the original order
     if (key) {
@@ -289,14 +292,14 @@ const configurator = {
     }
 
     // after adding a new array item the remove link of the first one shouldn't be disabled
-    if (el.parentNode.parentNode.querySelector('.disabled-link')) {
-      el.parentNode.parentNode.querySelector('.disabled-link').classList.remove('disabled-link');
+    if (removeBtn.classList.contains('disabled-link')) {
+      removeBtn.classList.remove('disabled-link');
     }
 
     // increment array field counter
     const count = overrideCountValue ? overrideCountValue : parseInt(el.getAttribute('data-count')) + 1;
 
-    el.parentNode.parentNode.querySelectorAll('[data-count]').forEach((el) => {
+    el.parentNode.parentNode.querySelectorAll(':scope > div > [data-count]').forEach((el) => {
       el.setAttribute('data-count', count.toString());
     });
 
@@ -409,7 +412,7 @@ const configurator = {
 
     // if there is only one array item after removing another array item the remove link should be disabled
     if (newLength === 1) {
-      elGrandParent.querySelector('[data-action="remove"]').classList.add('disabled-link');
+      elGrandParent.querySelector(':scope > div > [data-action="remove"]').classList.add('disabled-link');
     }
   },
 
