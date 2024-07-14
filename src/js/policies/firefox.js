@@ -547,7 +547,8 @@ const policies = {
           {
             name : 'IconURL',
             label : browser.i18n.getMessage('policy_description_SearchEngines_Add_IconURL'),
-            type : 'urlOrData'
+            type : 'url',
+            dataUriAllowed : true
           },
           {
             name : 'Alias',

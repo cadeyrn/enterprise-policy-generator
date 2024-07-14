@@ -557,8 +557,11 @@ const configurator = {
    * @returns {void}
    */
   validateUrlFields (e) {
+    const secure = e.target.getAttribute('data-secure') === 'true';
+    const dataUriAllowed = e.target.getAttribute('data-data-uri-allowed') === 'true';
+
     // the URL field has a valid URL, hide visual indication
-    if (!e.target.value || configurator.isValidURL(e.target.value, e.target.getAttribute('data-data-uri-allowed'))) {
+    if (!e.target.value || configurator.isValidURL(e.target.value, secure, dataUriAllowed)) {
       e.target.classList.remove('invalid-url-style');
       e.target.parentNode.querySelector('.invalid-url-label').classList.add('hidden');
     }
@@ -573,15 +576,23 @@ const configurator = {
    * Tests if a given string is a valid URL.
    *
    * @param {string} string - the string to check
+   * @param {boolean} secure - whether url must start with https:// or not
    * @param {boolean} dataUriAllowed - whether data URIs are allowed or not
    *
    * @returns {boolean} - whether the given string is a valid URL or not
    */
-  isValidURL (string, dataUriAllowed) {
-    let pattern = new RegExp(/^(https?|file):\/\//, 'gi');
+  isValidURL (string, secure, dataUriAllowed) {
+    let pattern = null;
+
+    if (secure) {
+      return string.toLowerCase().startsWith('https://');
+    }
 
     if (dataUriAllowed) {
       pattern = new RegExp(/^((https?|file):\/\/|data:image\/)/, 'gi');
+    }
+    else {
+      pattern = new RegExp(/^(https?|file):\/\//, 'gi');
     }
 
     return pattern.test(encodeURI(string));
@@ -1157,13 +1168,13 @@ const configurator = {
         configurator.addObjectListProperty(el, parentName, policy);
         break;
       case 'string':
-        configurator.addStringProperty(el, parentName, policy, false, false, isArrayProperty, hideArrayActionLinks);
+        configurator.addStringProperty(el, parentName, policy, false, isArrayProperty, hideArrayActionLinks);
         break;
       case 'url':
-        configurator.addStringProperty(el, parentName, policy, true, false, isArrayProperty, hideArrayActionLinks);
+        configurator.addStringProperty(el, parentName, policy, true, isArrayProperty, hideArrayActionLinks);
         break;
       case 'urlOrData':
-        configurator.addStringProperty(el, parentName, policy, true, true, isArrayProperty, hideArrayActionLinks);
+        configurator.addStringProperty(el, parentName, policy, true, isArrayProperty, hideArrayActionLinks);
         break;
       default:
       // do nothing
@@ -1538,13 +1549,12 @@ const configurator = {
    * @param {string} parentName - the name of the parent policy object
    * @param {object} policy - the policy object
    * @param {boolean} isUrl - if true, the property is of the type "url", otherwise it's of the type "string"
-   * @param {boolean} dataUriAllowed - if true, data URIs are allowed as input, only considered if isUrl is true
    * @param {boolean} isArrayProperty - whether this call is within an array field or not
    * @param {boolean} hideArrayActionLinks - whether this is an array item but no action links should be added
    *
    * @returns {void}
    */
-  addStringProperty (el, parentName, policy, isUrl, dataUriAllowed, isArrayProperty, hideArrayActionLinks) {
+  addStringProperty (el, parentName, policy, isUrl, isArrayProperty, hideArrayActionLinks) {
     const elObjectWrapper = document.createElement('div');
     elObjectWrapper.classList.add('input');
 
@@ -1576,7 +1586,10 @@ const configurator = {
     if (isUrl) {
       elInput.setAttribute('type', 'url');
 
-      if (dataUriAllowed) {
+      if (policy.secure) {
+        elInput.setAttribute('data-secure', 'true');
+      }
+      else if (policy.dataUriAllowed) {
         elInput.setAttribute('data-data-uri-allowed', 'true');
       }
     }
