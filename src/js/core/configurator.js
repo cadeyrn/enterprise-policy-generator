@@ -311,7 +311,19 @@ const configurator = {
 
     // we want an empty input / textarea field for the copied array item, we also need a new DOM ID
     addedNode.querySelectorAll('input, textarea').forEach((el) => {
-      const id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (key ? key : count));
+      let id = null;
+
+      if (trigger.parentNode?.parentNode?.parentNode?.classList.contains('object-list')) {
+        if (el.classList.contains('key')) {
+          id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (key ? key : count));
+        }
+        else {
+          id = el.id.replace(/^(\w+)_(\d+)_(\w+)_(\d+)$/i, (fullMatch, name, baz, foo, bar) => name + '_' + parseInt(trigger.dataset.count) + '_' + foo + '_' + bar);
+        }
+      }
+      else {
+        id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (key ? key : count));
+      }
 
       el.value = '';
       el.setAttribute('id', id);
@@ -1521,11 +1533,14 @@ const configurator = {
     const elInputWrapperKey = document.createElement('div');
     elInputWrapperKey.classList.add('input');
 
+    // we need to make sure that we have a unique name per object-list item
+    const id = parentName + '_' + policy.name;
+
     const elInputKey = document.createElement('input');
     elInputKey.setAttribute('type', 'text');
-    elInputKey.setAttribute('id', parentName + '_Key_1');
-    elInputKey.setAttribute('name', parentName + '_Key_1');
-    elInputKey.setAttribute('data-name', parentName);
+    elInputKey.setAttribute('id', id + '_Key_1');
+    elInputKey.setAttribute('name', id + '_Key_1');
+    elInputKey.setAttribute('data-name', id);
     elInputKey.setAttribute('placeholder', policy.placeholder_key);
     elInputKey.classList.add('key');
     elInputWrapperKey.appendChild(elInputKey);
@@ -1538,7 +1553,7 @@ const configurator = {
     if (policy.items) {
       const optionsLength = policy.items.length;
       for (let i = 0; i < optionsLength; i++) {
-        configurator.addProperty(elSubSubOptions, parentName + '_' + policy.items[i].name, policy.items[i], true, true);
+        configurator.addProperty(elSubSubOptions, id + '_' + policy.items[i].name + '_1', policy.items[i], true, true);
       }
     }
 
