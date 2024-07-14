@@ -318,7 +318,7 @@ const configurator = {
           id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (key ? key : count));
         }
         else {
-          id = el.id.replace(/^(\w+)_(\d+)_(\w+)_(\d+)$/i, (fullMatch, name, baz, foo, bar) => name + '_' + parseInt(trigger.dataset.count) + '_' + foo + '_' + bar);
+          id = el.id.replace(/^(\w+)_(\d+)_(\w+)_(\d+)$/i, (fullMatch, name, parentCount, key, count) => name + '_' + parseInt(trigger.dataset.count) + '_' + key + '_' + count);
         }
       }
       else {
