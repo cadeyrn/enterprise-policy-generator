@@ -306,6 +306,9 @@ const configurator = {
     // copy the array item
     const addedNode = el.parentNode.cloneNode(true);
 
+    // remove the disabled link class for cloned items
+    addedNode.querySelector(':scope > .disabled-link')?.classList.remove('disabled-link');
+
     // we want an empty input / textarea field for the copied array item, we also need a new DOM ID
     addedNode.querySelectorAll('input, textarea').forEach((el) => {
       const id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (key ? key : count));
