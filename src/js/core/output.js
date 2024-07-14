@@ -462,7 +462,7 @@ const output = {
           }
         });
 
-        [...el.parentNode.querySelectorAll(':scope .object-array')].forEach((el) => {
+        [...el.querySelectorAll(':scope .object-array')].forEach((el) => {
           const items = [];
 
           [...el.querySelectorAll(':scope > div:not(.label)')].forEach((el) => {
