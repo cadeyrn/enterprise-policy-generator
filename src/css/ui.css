@@ -403,6 +403,10 @@ input[data-type='key-object-list'] ~ .sub-options-wrapper .array-action[data-act
   padding-right: 50px;
 }
 
+.object-list .sub-options + .sub-options {
+  margin-top: 30px;
+}
+
 .label {
   margin-top: 10px;
   margin-bottom: 5px;
