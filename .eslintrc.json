@@ -73,6 +73,7 @@
     "jsdoc/check-property-names": "warn",
     "jsdoc/check-syntax": "warn",
     "jsdoc/check-tag-names": "warn",
+    "jsdoc/check-template-names": "error",
     "jsdoc/check-types": "warn",
     "jsdoc/check-values": "warn",
     "jsdoc/convert-to-jsdoc-comments": "off",
