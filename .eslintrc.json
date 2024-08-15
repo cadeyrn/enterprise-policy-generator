@@ -81,6 +81,7 @@
     "jsdoc/implements-on-classes": "warn",
     "jsdoc/imports-as-dependencies": "warn",
     "jsdoc/informative-docs": "off",
+    "jsdoc/lines-before-block": "off",
     "jsdoc/match-description": "off",
     "jsdoc/match-name": "off",
     "jsdoc/multiline-blocks": "warn",
