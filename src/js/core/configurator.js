@@ -310,12 +310,15 @@ const configurator = {
     addedNode.querySelector(':scope > .disabled-link')?.classList.remove('disabled-link');
 
     // we want an empty input / textarea field for the copied array item, we also need a new DOM ID
-    addedNode.querySelectorAll('input, textarea').forEach((el) => {
+    addedNode.querySelectorAll('input, textarea, select, a').forEach((el) => {
       let id = null;
 
       if (trigger.parentNode?.parentNode?.parentNode?.classList.contains('object-list')) {
-        if (el.classList.contains('key')) {
+        if (el.classList.contains('key') || el.parentNode?.querySelector('input')?.classList.contains('key')) {
           id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (key ? key : count));
+        }
+        else if (el.nodeName === 'SELECT') {
+          id = el.id.replace(/^(\w+)_(\d+)_(\d+)$/i, (fullMatch, name, parentCount, count) => name + '_' + parseInt(trigger.dataset.count) + '_' + count);
         }
         else {
           id = el.id.replace(/^(\w+)_(\d+)_(\w+)_(\d+)$/i, (fullMatch, name, parentCount, key, count) => name + '_' + parseInt(trigger.dataset.count) + '_' + key + '_' + count);
@@ -325,23 +328,19 @@ const configurator = {
         id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (key ? key : count));
       }
 
-      el.value = '';
-      el.setAttribute('id', id);
-      el.setAttribute('name', id);
-    });
-
-    // for select fields we also need a new DOM ID
-    addedNode.querySelectorAll('select').forEach((el) => {
-      const id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (key ? key : count));
-      el.setAttribute('id', id);
-      el.setAttribute('name', id);
-    });
-
-    // we have to re-add our event listener for executing the array field actions
-    addedNode.querySelectorAll('a').forEach((el) => {
-      const id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (key ? key : count));
-      el.setAttribute('id', id);
-      el.addEventListener('click', configurator.executeArrayFieldActions);
+      if (el.nodeName === 'INPUT' || el.nodeName === 'TEXTAREA') {
+        el.value = '';
+        el.setAttribute('id', id);
+        el.setAttribute('name', id);
+      }
+      else if (el.nodeName === 'SELECT') {
+        el.setAttribute('id', id);
+        el.setAttribute('name', id);
+      }
+      else if (el.nodeName === 'A') {
+        el.setAttribute('id', id);
+        el.addEventListener('click', configurator.executeArrayFieldActions);
+      }
     });
 
     // we also have to re-add the event listener for the validation of mandatory fields

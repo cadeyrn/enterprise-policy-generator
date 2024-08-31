@@ -88,7 +88,11 @@ const serializer = {
       const newCountValue = Math.max(...data.arrayfields[id]);
 
       data.arrayfields[id].forEach((key) => {
-        configurator.addArrayField(document.getElementById('Array_Add_' + id + '_1'), key, newCountValue);
+        const el = document.getElementById('Array_Add_' + id + '_1');
+
+        if (el) {
+          configurator.addArrayField(el, key, newCountValue);
+        }
       });
     });
 
