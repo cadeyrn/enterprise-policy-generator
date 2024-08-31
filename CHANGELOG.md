@@ -17,7 +17,7 @@
   [#272](https://github.com/cadeyrn/enterprise-policy-generator/issues/272),
   [#273](https://github.com/cadeyrn/enterprise-policy-generator/issues/273),
   [#275](https://github.com/cadeyrn/enterprise-policy-generator/issues/275),
-  [#276](https://github.com/cadeyrn/enterprise-policy-generator/issues/276),
+  [#276](https://github.com/cadeyrn/enterprise-policy-generator/issues/276) and
   [#278](https://github.com/cadeyrn/enterprise-policy-generator/issues/278)
 
 #### Dependencies
