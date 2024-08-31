@@ -2943,7 +2943,7 @@ const policies = {
   OverrideFirstRunPage : {
     first_available : { mainstream : '62.0', esr : '60.0' },
     ui_category : 'others',
-    type : 'url',
+    type : 'split-url',
     label : browser.i18n.getMessage('common_url')
   },
 

@@ -22,6 +22,11 @@
   [#276](https://github.com/cadeyrn/enterprise-policy-generator/issues/276) and
   [#278](https://github.com/cadeyrn/enterprise-policy-generator/issues/278)
 
+#### Enterprise Policies
+
+- Updated OverrideFirstRunPage policy to allow multiple URLs, see
+  [#270](https://github.com/cadeyrn/enterprise-policy-generator/issues/270)
+
 #### Dependencies
 
 - Updated eslint from version 9.6.0 to 9.9.1
