@@ -24,7 +24,7 @@
 
 #### Enterprise Policies
 
-- Updated OverrideFirstRunPage policy to allow multiple URLs, see
+- Updated OverrideFirstRunPage policy to allow multiple URLs, and migrated existing configurations, see
   [#270](https://github.com/cadeyrn/enterprise-policy-generator/issues/270)
 
 #### Dependencies

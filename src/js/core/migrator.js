@@ -173,5 +173,38 @@ const migrator = {
       await browser.storage.local.set({ configurations : configurations, schemaVersion : 2 });
       migrator.migrate();
     }
+  },
+
+  /**
+   * Version: EPG 6.1.0
+   *
+   * @returns {void}
+   */
+  async migration_2 () {
+    const { configurations } = await browser.storage.local.get({ configurations : [] });
+    const configurationLength = configurations.length;
+
+    if (configurationLength > 0) {
+      for (let i = 0; i < configurationLength; i++) {
+        const { configuration } = configurations[i];
+
+        /*
+         * @from
+         *
+         * "OverrideFirstRunPage": [url]
+         *
+         * @to
+         *
+         * "OverrideFirstRunPage": [split-url]
+         */
+        if (configuration.checkboxes.OverrideFirstRunPage) {
+          configuration.input.OverrideFirstRunPage_Value_1 = configuration.input.OverrideFirstRunPage_Text;
+          delete configuration.input.OverrideFirstRunPage_Text;
+        }
+      }
+
+      await browser.storage.local.set({ configurations : configurations, schemaVersion : 3 });
+      migrator.migrate();
+    }
   }
 };
