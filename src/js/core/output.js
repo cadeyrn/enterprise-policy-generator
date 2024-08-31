@@ -54,6 +54,9 @@ const output = {
         else if (el.getAttribute('data-type') === 'preference') {
           output.collectPreferences(el);
         }
+        else if (el.getAttribute('data-type') === 'split-url') {
+          output.generateOutputForSplitUrls(el);
+        }
         else if (el.getAttribute('data-type') === 'string') {
           output.generateOutputForStrings(el);
         }
@@ -603,6 +606,36 @@ const output = {
       }
 
       policymanager.add('Preferences', output.preferences);
+    }
+  },
+
+  /**
+   * Generates output for policies of type "split-url".
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   *
+   * @returns {void}
+   */
+  generateOutputForSplitUrls (el) {
+    const items = [];
+
+    [...el.parentNode.querySelectorAll(':scope > div')].forEach((el) => {
+      if (!output.hasInvalidFields(el)) {
+        [...el.querySelectorAll(':scope input')].forEach((el) => {
+          items.push(el.value);
+        });
+      }
+    });
+
+    // add empty string if there is only one empty item
+    if (items.length === 1 && items[0] === '') {
+      policymanager.add(el.getAttribute('data-name'), '');
+    }
+    else {
+      // only allow unique and non-empty values
+      const uniqueItems = [...new Set(items.filter((item) => item))];
+
+      policymanager.add(el.getAttribute('data-name'), uniqueItems.join('|'));
     }
   },
 

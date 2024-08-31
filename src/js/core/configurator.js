@@ -1100,6 +1100,38 @@ const configurator = {
   },
 
   /**
+   * Adds policy of the type "split-url" to the DOM.
+   *
+   * @param {string} key - the name of the policy
+   * @param {object} policy - the policy object
+   *
+   * @returns {void}
+   */
+  addSplitUrlOption (key, policy) {
+    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'split-url', false);
+    const elSubOptions = configurator.addSubOptions(elObjectWrapper);
+
+    const elInput = document.createElement('input');
+    elInput.setAttribute('type', 'url');
+    elInput.setAttribute('id', key + '_Value_1');
+    elInput.setAttribute('name', key + '_Value_1');
+    elInput.setAttribute('data-name', key);
+    elInput.setAttribute('placeholder', policy.label);
+
+    // URL validation label
+    configurator.addInvalidUrlLabel(elSubOptions);
+
+    elSubOptions.appendChild(elInput);
+
+    // add array field action links
+    elSubOptions.parentNode.classList.add('array-action-links');
+    configurator.addArrayFieldActionLinks(elSubOptions, key + '_1');
+
+    // add option to UI
+    configurator.addOptionToUi(elObjectWrapper, policy);
+  },
+
+  /**
    * Adds policy of the type "string" to the DOM.
    *
    * @param {string} key - the name of the policy

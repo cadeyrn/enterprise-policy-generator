@@ -6,6 +6,8 @@
 
 #### Enhancements
 
+- Added support for a new policy type, needed for the updated OverrideFirstRunPage policy, see
+  [#270](https://github.com/cadeyrn/enterprise-policy-generator/issues/270)
 - Added option for URL fields to require secure connection (https://), see
   [#277](https://github.com/cadeyrn/enterprise-policy-generator/issues/277)
 - For fields with multiple possible values, it should be possible to remove the last one, see
