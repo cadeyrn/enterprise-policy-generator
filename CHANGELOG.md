@@ -4,6 +4,22 @@
 
 ### Version 6.1.0 (Work in Progress)
 
+#### Enhancements
+
+- Added option for URL fields to require secure connection (https://), see
+  [#277](https://github.com/cadeyrn/enterprise-policy-generator/issues/277)
+- For fields with multiple possible values, it should be possible to remove the last one, see
+  [#274](https://github.com/cadeyrn/enterprise-policy-generator/issues/274)
+
+#### Bugfixes
+
+- Fixed several issues with the Handlers policy, especially when loaded from saved configurations, see
+  [#272](https://github.com/cadeyrn/enterprise-policy-generator/issues/272),
+  [#273](https://github.com/cadeyrn/enterprise-policy-generator/issues/273),
+  [#275](https://github.com/cadeyrn/enterprise-policy-generator/issues/275),
+  [#276](https://github.com/cadeyrn/enterprise-policy-generator/issues/276),
+  [#278](https://github.com/cadeyrn/enterprise-policy-generator/issues/278)
+
 #### Dependencies
 
 - Updated eslint from version 9.6.0 to 9.9.1
