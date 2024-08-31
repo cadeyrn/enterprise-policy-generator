@@ -146,6 +146,9 @@
   "policy_description_3rdParty_Label_Key": {
     "message": "Erweiterungs-ID"
   },
+  "policy_description_AllowedDomainsForApps": {
+    "message": "Domains festlegen, die auf Google Workspace zugreifen dürfen"
+  },
   "policy_description_AppAutoUpdate": {
     "message": "Firefox-Updates automatisch installieren"
   },

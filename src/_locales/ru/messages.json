@@ -146,6 +146,9 @@
   "policy_description_3rdParty_Label_Key": {
     "message": "ID дополнения"
   },
+  "policy_description_AllowedDomainsForApps": {
+    "message": "Define domains allowed to access Google Workspace"
+  },
   "policy_description_AppAutoUpdate": {
     "message": "Install Firefox updates automatically"
   },

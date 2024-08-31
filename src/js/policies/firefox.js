@@ -2865,6 +2865,13 @@ const policies = {
     }
   },
 
+  AllowedDomainsForApps : {
+    first_available : { mainstream : '89.0', esr : '78.11' },
+    ui_category : 'others',
+    type : 'split-string',
+    label : browser.i18n.getMessage('common_domain')
+  },
+
   Preference_dom_keyboardevent_keypress_hack_dispatch_non_printable_keys_addl : {
     first_available : { mainstream : '68.0', esr : '68.0' },
     info_link : 'https://www.fxsitecompat.dev/en-CA/docs/2018/non-printable-keys-no-longer-fire-keypress-event/',

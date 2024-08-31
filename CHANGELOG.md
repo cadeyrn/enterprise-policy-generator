@@ -26,6 +26,8 @@
 
 #### Enterprise Policies
 
+- Added support for AllowedDomainsForApps policy to define domains that are allowed to access Google Workspace, see
+  [#228](https://github.com/cadeyrn/enterprise-policy-generator/issues/228)
 - Updated OverrideFirstRunPage policy to allow multiple URLs, and migrated existing configurations, see
   [#270](https://github.com/cadeyrn/enterprise-policy-generator/issues/270)
 
