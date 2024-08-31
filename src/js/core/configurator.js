@@ -85,6 +85,9 @@ const configurator = {
       else if (policies[key].type === 'preference') {
         configurator.addPreferenceOption(key, policies[key]);
       }
+      else if (policies[key].type === 'split-url') {
+        configurator.addSplitUrlOption(key, policies[key]);
+      }
       else if (policies[key].type === 'string') {
         configurator.addStringOption(key, policies[key], false);
       }
