@@ -54,6 +54,9 @@ const output = {
         else if (el.getAttribute('data-type') === 'preference') {
           output.collectPreferences(el);
         }
+        else if (el.getAttribute('data-type') === 'split-string') {
+          output.generateOutputForSplitStrings(el);
+        }
         else if (el.getAttribute('data-type') === 'split-url') {
           output.generateOutputForSplitUrls(el);
         }
@@ -607,6 +610,30 @@ const output = {
 
       policymanager.add('Preferences', output.preferences);
     }
+  },
+
+  /**
+   * Generates output for policies of type "split-string".
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   *
+   * @returns {void}
+   */
+  generateOutputForSplitStrings (el) {
+    const items = [];
+
+    [...el.parentNode.querySelectorAll(':scope > div')].forEach((el) => {
+      if (!output.hasInvalidFields(el)) {
+        [...el.querySelectorAll(':scope input')].forEach((el) => {
+          if (el.value) {
+            items.push(el.value);
+          }
+        });
+      }
+    });
+
+    const uniqueItems = [...new Set(items.filter((item) => item))];
+    policymanager.add(el.getAttribute('data-name'), uniqueItems.join(','));
   },
 
   /**

@@ -6,6 +6,8 @@
 
 #### Enhancements
 
+- Added support for a new policy type, needed for the new AllowedDomainsForApps policy, see
+  [#228](https://github.com/cadeyrn/enterprise-policy-generator/issues/228)
 - Added support for a new policy type, needed for the updated OverrideFirstRunPage policy, see
   [#270](https://github.com/cadeyrn/enterprise-policy-generator/issues/270)
 - Added option for URL fields to require secure connection (https://), see

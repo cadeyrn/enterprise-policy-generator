@@ -85,6 +85,9 @@ const configurator = {
       else if (policies[key].type === 'preference') {
         configurator.addPreferenceOption(key, policies[key]);
       }
+      else if (policies[key].type === 'split-string') {
+        configurator.addSplitStringOption(key, policies[key]);
+      }
       else if (policies[key].type === 'split-url') {
         configurator.addSplitUrlOption(key, policies[key]);
       }
@@ -1097,6 +1100,35 @@ const configurator = {
       // preferences of type "string" should always be a mandatory field
       configurator.addMandatoryLabel(elInput, elInputWrapper);
     }
+
+    // add option to UI
+    configurator.addOptionToUi(elObjectWrapper, policy);
+  },
+
+  /**
+   * Adds policy of the type "split-string" to the DOM.
+   *
+   * @param {string} key - the name of the policy
+   * @param {object} policy - the policy object
+   *
+   * @returns {void}
+   */
+  addSplitStringOption (key, policy) {
+    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'split-string', false);
+    const elSubOptions = configurator.addSubOptions(elObjectWrapper);
+
+    const elInput = document.createElement('input');
+    elInput.setAttribute('type', 'text');
+    elInput.setAttribute('id', key + '_Value_1');
+    elInput.setAttribute('name', key + '_Value_1');
+    elInput.setAttribute('data-name', key);
+    elInput.setAttribute('placeholder', policy.label);
+
+    elSubOptions.appendChild(elInput);
+
+    // add array field action links
+    elSubOptions.parentNode.classList.add('array-action-links');
+    configurator.addArrayFieldActionLinks(elSubOptions, key + '_1');
 
     // add option to UI
     configurator.addOptionToUi(elObjectWrapper, policy);
