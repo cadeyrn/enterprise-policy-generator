@@ -18,6 +18,8 @@
   [#279](https://github.com/cadeyrn/enterprise-policy-generator/issues/279)
 - For fields with multiple possible values, it should be possible to remove the last one, see
   [#274](https://github.com/cadeyrn/enterprise-policy-generator/issues/274)
+- Legacy preference policies now use the syntax of the new Preferences policy, see
+  [#280](https://github.com/cadeyrn/enterprise-policy-generator/issues/280)
 
 #### Bugfixes
 

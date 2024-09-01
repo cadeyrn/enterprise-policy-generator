@@ -592,25 +592,41 @@ const output = {
 
       // only add non-empty arrays
       if (items.length > 0) {
-        output.preferences[innerEl.getAttribute('data-name')] = items.join(',');
+        output.preferences[innerEl.getAttribute('data-name')] = {
+          'Status': 'locked',
+          'Type': 'string',
+          'Value': items.join(',')
+        };
       }
     });
 
     // boolean fields
     [...el.parentNode.querySelectorAll(':scope > .boolean')].forEach((el) => {
       const value = JSON.parse(el.firstChild.options[el.firstChild.selectedIndex].value);
-      output.preferences[el.getAttribute('data-name')] = value;
+      output.preferences[el.getAttribute('data-name')] = {
+        'Status': 'locked',
+        'Type': 'boolean',
+        'Value': value
+      };
     });
 
     // enum fields
     [...el.parentNode.querySelectorAll(':scope > .enum')].forEach((el) => {
-      output.preferences[el.getAttribute('data-name')] = output.parseEnumContent(el.firstChild);
+      output.preferences[el.getAttribute('data-name')] = {
+        'Status': 'locked',
+        'Type': 'string',
+        'Value': output.parseEnumContent(el.firstChild)
+      };
     });
 
     // input fields
     [...el.parentNode.querySelectorAll(':scope > .input')].forEach((el) => {
       if (el.firstChild.value) {
-        output.preferences[el.getAttribute('data-name')] = el.firstChild.value;
+        output.preferences[el.getAttribute('data-name')] = {
+          'Status': 'locked',
+          'Type': 'string',
+          'Value': el.firstChild.value
+        };
       }
     });
   },
