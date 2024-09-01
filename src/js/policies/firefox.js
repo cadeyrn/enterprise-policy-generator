@@ -2346,6 +2346,42 @@ const policies = {
     }
   },
 
+  DisableTelemetry : {
+    first_available : { mainstream : '62.0', esr : '60.0' },
+    ui_category : 'updates-and-data',
+    type : 'boolean'
+  },
+
+  DisableFirefoxStudies : {
+    first_available : { mainstream : '60.0', esr : '60.0' },
+    ui_category : 'updates-and-data',
+    type : 'boolean'
+  },
+
+  Preference_security_ssl_errorReporting_enabled : {
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    ui_category : 'updates-and-data',
+    type : 'preference',
+    properties : {
+      option : 'security.ssl.errorReporting.enabled',
+      type : 'boolean',
+      default : 'true'
+    }
+  },
+
+  Preference_media_gmp_gmpopenh264_enabled : {
+    first_available : { mainstream : '68.0', esr : '68.0' },
+    ui_category : 'updates-and-data',
+    type : 'preference',
+    properties : {
+      option : 'media.gmp-gmpopenh264.enabled',
+      type : 'boolean',
+      default : 'true'
+    }
+  },
+
+  // others
+
   Handlers : {
     first_available : { mainstream : '78.0', esr : '78.0' },
     ui_category : 'others',
@@ -2548,42 +2584,6 @@ const policies = {
       }
     ]
   },
-
-  DisableTelemetry : {
-    first_available : { mainstream : '62.0', esr : '60.0' },
-    ui_category : 'updates-and-data',
-    type : 'boolean'
-  },
-
-  DisableFirefoxStudies : {
-    first_available : { mainstream : '60.0', esr : '60.0' },
-    ui_category : 'updates-and-data',
-    type : 'boolean'
-  },
-
-  Preference_security_ssl_errorReporting_enabled : {
-    first_available : { mainstream : '68.0', esr : '68.0' },
-    ui_category : 'updates-and-data',
-    type : 'preference',
-    properties : {
-      option : 'security.ssl.errorReporting.enabled',
-      type : 'boolean',
-      default : 'true'
-    }
-  },
-
-  Preference_media_gmp_gmpopenh264_enabled : {
-    first_available : { mainstream : '68.0', esr : '68.0' },
-    ui_category : 'updates-and-data',
-    type : 'preference',
-    properties : {
-      option : 'media.gmp-gmpopenh264.enabled',
-      type : 'boolean',
-      default : 'true'
-    }
-  },
-
-  // others
 
   PDFjs : {
     first_available : { mainstream : '77.0', esr : '78.0' },
