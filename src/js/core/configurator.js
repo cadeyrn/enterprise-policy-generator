@@ -1286,6 +1286,11 @@ const configurator = {
     const elCaption = document.createTextNode(policy.label);
     elCaptionWrapper.appendChild(elCaption);
 
+    // info link
+    if (policy.info_link) {
+      configurator.addInfoLink(elCaptionWrapper, policy.info_link);
+    }
+
     // add array items
     if (policy.items) {
       configurator.addProperty(elObjectWrapper, parentName + '_' + policy.name, policy.items, true, false);
