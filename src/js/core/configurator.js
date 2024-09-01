@@ -330,16 +330,14 @@ const configurator = {
           id = el.id.replace(/^(\w+)_(\d+)_(\w+)_(\d+)$/i, (fullMatch, name, parentCount, key, count) => name + '_' + parseInt(trigger.dataset.count) + '_' + key + '_' + count);
         }
       }
+      else if (
+        trigger.closest('.checkbox').querySelector('.primary-checkbox[data-type="array"]') &&
+        el.parentNode?.parentNode?.classList.contains('array')
+      ) {
+        id = el.id.replace(/^(\w+)_(\d+)_(\w+)_(\d+)$/i, (fullMatch, name, parentCount, key, count) => name + '_' + parseInt(trigger.dataset.count) + '_' + key + '_' + count);
+      }
       else {
-        if (
-          trigger.closest('.checkbox').querySelector('.primary-checkbox[data-type="array"]') &&
-          el.parentNode?.parentNode?.classList.contains('array')
-        ) {
-          id = el.id.replace(/^(\w+)_(\d+)_(\w+)_(\d+)$/i, (fullMatch, name, parentCount, key, count) => name + '_' + parseInt(trigger.dataset.count) + '_' + key + '_' + count);
-        }
-        else {
-          id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (key ? key : count));
-        }
+        id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (key ? key : count));
       }
 
       if (el.nodeName === 'INPUT' || el.nodeName === 'TEXTAREA') {
