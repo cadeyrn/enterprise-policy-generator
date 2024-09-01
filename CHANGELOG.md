@@ -32,7 +32,7 @@
   [#228](https://github.com/cadeyrn/enterprise-policy-generator/issues/228)
 - Updated OverrideFirstRunPage policy to allow multiple URLs, and migrated existing configurations, see
   [#270](https://github.com/cadeyrn/enterprise-policy-generator/issues/270)
-- Added info link to install_sources property of ExtensionSettings policy to make clear that Match patterns are allowed
+- Added info link to install_sources property of ExtensionSettings policy to make clear that match patterns are allowed
   for URLs, see [#279](https://github.com/cadeyrn/enterprise-policy-generator/issues/279)
 
 #### Dependencies
