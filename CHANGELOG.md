@@ -124,26 +124,26 @@
   [#142](https://github.com/cadeyrn/enterprise-policy-generator/issues/142)
 - New policy to configure the application handlers, see
   [#152](https://github.com/cadeyrn/enterprise-policy-generator/issues/152)
-- Enhanced permissions policy to control autoplay of media and access to virtual reality devices, see
+- Updated permissions policy to control autoplay of media and access to virtual reality devices, see
   [#136](https://github.com/cadeyrn/enterprise-policy-generator/issues/136)
-- Enhanced tracking protection policy to be able to add exceptions, see
+- Updated tracking protection policy to be able to add exceptions, see
   [#144](https://github.com/cadeyrn/enterprise-policy-generator/issues/144)
-- Enhanced policy to clear browser data on shutdown, so that you can only set some of them instead of all or
+- Updated policy to clear browser data on shutdown, so that you can only set some of them instead of all or
   nothing, and to be able to lock only some these options, all or none, see
   [#147](https://github.com/cadeyrn/enterprise-policy-generator/issues/147)
-- Enhanced DNS over HTTPS policy to be able to add excluded domains, see
+- Updated DNS over HTTPS policy to be able to add excluded domains, see
   [#148](https://github.com/cadeyrn/enterprise-policy-generator/issues/148)
-- Enhanced homepage policy to be able to set the homepage to either allow or forbid to optionally start with the
+- Updated homepage policy to be able to set the homepage to either allow or forbid to optionally start with the
   previous session, see [#149](https://github.com/cadeyrn/enterprise-policy-generator/issues/149)
-- Enhanced authentication policy to enable or disable integrated authentication in private browsing, see
+- Updated authentication policy to enable or disable integrated authentication in private browsing, see
   [#150](https://github.com/cadeyrn/enterprise-policy-generator/issues/150)
-- Enhanced cookies policy to allow to configure domains where cookies are only allowed for the current session, see
+- Updated cookies policy to allow to configure domains where cookies are only allowed for the current session, see
   [#157](https://github.com/cadeyrn/enterprise-policy-generator/issues/157)
-- Enhanced authentication policy with an option for proxy servers, see
+- Updated authentication policy with an option for proxy servers, see
   [#162](https://github.com/cadeyrn/enterprise-policy-generator/issues/162)
-- Enhanced extension settings policy to be able to define domains on which content scripts can't be run, see
+- Updated extension settings policy to be able to define domains on which content scripts can't be run, see
   [#165](https://github.com/cadeyrn/enterprise-policy-generator/issues/165)
-- Enhanced extension settings policy to be able to disallow automatic updates for individual extensions, see
+- Updated extension settings policy to be able to disallow automatic updates for individual extensions, see
   [#230](https://github.com/cadeyrn/enterprise-policy-generator/issues/230)
 - Replaced menu bar policy with new one that accepts more options; the old policy will automatically be migrated in
   saved configurations, see [#127](https://github.com/cadeyrn/enterprise-policy-generator/issues/127)
@@ -151,7 +151,7 @@
   [#140](https://github.com/cadeyrn/enterprise-policy-generator/issues/140)
 - Removed InstallAddonsPermission policy and migrated all data to ExtensionSettings policy in saved configurations, see
   [#168](https://github.com/cadeyrn/enterprise-policy-generator/issues/168)
-- Removed FlashPlugin policy as Flash is no longer a thing and removed it in saved configurations, see
+- Removed FlashPlugin policy as Flash is no longer a thing, and removed it in saved configurations, see
   [#218](https://github.com/cadeyrn/enterprise-policy-generator/issues/218)
 - Renamed Firefox Account to Mozilla account in DisableFirefoxAccounts policy, see
   [#268](https://github.com/cadeyrn/enterprise-policy-generator/issues/268)
