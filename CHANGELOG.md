@@ -12,7 +12,7 @@
   [#270](https://github.com/cadeyrn/enterprise-policy-generator/issues/270)
 - Added option for URL fields to require secure connection (https://), see
   [#277](https://github.com/cadeyrn/enterprise-policy-generator/issues/277)
-- Added support for info links in array properties, see
+- Added option to set info link for array properties, see
   [#279](https://github.com/cadeyrn/enterprise-policy-generator/issues/279)
 - For fields with multiple possible values, it should be possible to remove the last one, see
   [#274](https://github.com/cadeyrn/enterprise-policy-generator/issues/274)
