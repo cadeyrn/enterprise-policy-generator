@@ -1821,22 +1821,7 @@ const configurator = {
 
     // info link
     if (policy.info_link) {
-      const elInfoLinkWrapper = document.createElement('div');
-      elInfoLinkWrapper.classList.add('info-link');
-      elLabel.appendChild(elInfoLinkWrapper);
-
-      const elInfoLink = document.createElement('a');
-      elInfoLink.setAttribute('href', policy.info_link);
-      elInfoLink.setAttribute('target', '_blank');
-      elInfoLink.setAttribute('rel', 'noopener');
-      elInfoLinkWrapper.appendChild(elInfoLink);
-
-      const elInfoLinkImage = document.createElement('img');
-      elInfoLinkImage.src = '/images/link.svg';
-      elInfoLink.appendChild(elInfoLinkImage);
-
-      const elInfoLinkText = document.createTextNode(browser.i18n.getMessage('link_learn_more'));
-      elInfoLink.appendChild(elInfoLinkText);
+      configurator.addInfoLink(elLabel, policy.info_link);
     }
 
     return elObjectWrapper;
@@ -1857,6 +1842,32 @@ const configurator = {
     elSelectLabel.classList.add('select-label');
     elSelectLabel.textContent = policy.label;
     elSelectWrapper.appendChild(elSelectLabel);
+  },
+
+  /**
+   * Adds an info link.
+   *
+   * @param {HTMLElement} label - the DOM node of the label element
+   * @param {string} link - the URL of the info link
+   *
+   * @returns {void}
+   */
+  addInfoLink (label, link) {
+    const elInfoLinkWrapper = document.createElement('div');
+    elInfoLinkWrapper.classList.add('info-link');
+    label.appendChild(elInfoLinkWrapper);
+
+    const elInfoLink = document.createElement('a');
+    elInfoLink.setAttribute('href', link);
+    elInfoLink.setAttribute('target', '_blank');
+    elInfoLinkWrapper.appendChild(elInfoLink);
+
+    const elInfoLinkImage = document.createElement('img');
+    elInfoLinkImage.src = '/images/link.svg';
+    elInfoLink.appendChild(elInfoLinkImage);
+
+    const elInfoLinkText = document.createTextNode(browser.i18n.getMessage('link_learn_more'));
+    elInfoLink.appendChild(elInfoLinkText);
   },
 
   /**
