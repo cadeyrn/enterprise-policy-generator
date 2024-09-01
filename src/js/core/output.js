@@ -85,40 +85,42 @@ const output = {
     const items = [];
 
     [...el.parentNode.querySelectorAll(':scope > div')].forEach((el) => {
-      if (!output.hasInvalidFields(el)) {
-        const item = { };
+      const item = { };
+
+      // input fields
+      [...el.querySelectorAll(':scope > .input input')].forEach((el) => {
+        if (el.value && !el.classList.contains('invalid-url-style')) {
+          output.addInputValue(el, item);
+        }
+      });
+
+      // enum fields
+      [...el.querySelectorAll(':scope > .enum select')].forEach((el) => {
+        const enumContent = output.parseEnumContent(el);
+
+        if (typeof enumContent !== 'undefined') {
+          item[el.getAttribute('data-name')] = enumContent;
+        }
+      });
+
+      // simple arrays
+      [...el.querySelectorAll(':scope .array')].forEach((innerEl) => {
+        const items = [];
 
         // input fields
-        [...el.querySelectorAll(':scope > .input input')].forEach((el) => {
-          output.addInputValue(el, item);
-        });
-
-        // enum fields
-        [...el.querySelectorAll(':scope > .enum select')].forEach((el) => {
-          const enumContent = output.parseEnumContent(el);
-
-          if (typeof enumContent !== 'undefined') {
-            item[el.getAttribute('data-name')] = enumContent;
+        [...innerEl.querySelectorAll(':scope > .input input')].forEach((arrEl) => {
+          if (arrEl.value && !arrEl.classList.contains('invalid-url-style')) {
+            items.push(arrEl.value);
           }
         });
 
-        // simple arrays
-        [...el.querySelectorAll(':scope .array')].forEach((innerEl) => {
-          const items = [];
+        // only add non-empty arrays
+        if (items.length > 0) {
+          item[innerEl.getAttribute('data-name')] = items;
+        }
+      });
 
-          // input fields
-          [...innerEl.querySelectorAll(':scope > .input input')].forEach((arrEl) => {
-            if (arrEl.value && !arrEl.classList.contains('invalid-url-style')) {
-              items.push(arrEl.value);
-            }
-          });
-
-          // only add non-empty arrays
-          if (items.length > 0) {
-            item[innerEl.getAttribute('data-name')] = items;
-          }
-        });
-
+      if (Object.keys(item).length > 0) {
         items.push(item);
       }
     });
