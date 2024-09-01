@@ -729,6 +729,7 @@ const policies = {
         {
           name : 'install_sources',
           label : browser.i18n.getMessage('policy_description_ExtensionSettings_install_sources'),
+          info_link : 'https://developer.mozilla.org/Add-ons/WebExtensions/Match_patterns',
           type : 'array',
           items : {
             label : browser.i18n.getMessage('common_url'),

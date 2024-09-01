@@ -513,7 +513,7 @@
     "message": "Конфигурация для всех дополнений"
   },
   "policy_description_ExtensionSettings_install_sources": {
-    "message": "Разрешенные источники установки. Должны быть разрешены, как расположение *.xpi, так и страница загрузки."
+    "message": "Разрешенные источники установки. Должны быть разрешены, как расположение *.xpi, так и страница загрузки. Match patterns allowed, see info link."
   },
   "policy_description_ExtensionSettings_install_url_caption": {
     "message": "URL установки. При установке с диска - file:/// URI."

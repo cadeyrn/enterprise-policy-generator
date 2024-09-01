@@ -513,7 +513,7 @@
     "message": "Konfiguration für alle Erweiterungen"
   },
   "policy_description_ExtensionSettings_install_sources": {
-    "message": "Erlaubte Installations-Quellen. Sowohl die Quelle der *.xpi-Datei als auch die Domain, von welcher der Download gestartet wird, müssen erlaubt sein."
+    "message": "Erlaubte Installations-Quellen. Sowohl die Quelle der *.xpi-Datei als auch die Domain, von welcher der Download gestartet wird, müssen erlaubt sein. Match-Patterns erlaubt, siehe Info-Link."
   },
   "policy_description_ExtensionSettings_install_url_caption": {
     "message": "Installations-URL. Wenn die Erweiterung vom lokalen Dateisystem installiert werden soll, bitte file:///-URI verwenden."

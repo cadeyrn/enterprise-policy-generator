@@ -513,7 +513,7 @@
     "message": "Configuration pour tous les add-ons"
   },
   "policy_description_ExtensionSettings_install_sources": {
-    "message": "Sources d'installation autorisées. L'emplacement du fichier *.xpi et la page à partir de laquelle le téléchargement est lancé doivent être autorisés."
+    "message": "Sources d'installation autorisées. L'emplacement du fichier *.xpi et la page à partir de laquelle le téléchargement est lancé doivent être autorisés. Match patterns allowed, see info link."
   },
   "policy_description_ExtensionSettings_install_url_caption": {
     "message": "installer l'URL. Si vous installez à partir du système de fichiers local, utilisez un fichier://// URI."

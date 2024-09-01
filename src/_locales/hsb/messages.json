@@ -513,7 +513,7 @@
     "message": "Konfiguracija za wšě rozšěrjenja"
   },
   "policy_description_ExtensionSettings_install_sources": {
-    "message": "Dowolene instalaciske žórła. Žórło *.xpi-dataje kaž tež domena, z kotrejež so sćehnjenje startuje, dyrbitej dowolenej być."
+    "message": "Dowolene instalaciske žórła. Žórło *.xpi-dataje kaž tež domena, z kotrejež so sćehnjenje startuje, dyrbitej dowolenej być. Match patterns allowed, see info link."
   },
   "policy_description_ExtensionSettings_install_url_caption": {
     "message": "Instalowanski URL. Jeli ma so rozšěrjenje z lokalneho datajoweho systema instalować, wužiwajće prošu file:///-URI."

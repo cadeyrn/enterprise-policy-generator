@@ -513,7 +513,7 @@
     "message": "针对所有附加组件的配置"
   },
   "policy_description_ExtensionSettings_install_sources": {
-    "message": "所允许的安装来源。必须允许 *.xpi 文件的路径和开始下载的页面这两个来源。"
+    "message": "所允许的安装来源。必须允许 *.xpi 文件的路径和开始下载的页面这两个来源。 Match patterns allowed, see info link."
   },
   "policy_description_ExtensionSettings_install_url_caption": {
     "message": "安装 URL。如果是从本地文件系统安装，请使用 file:/// 形式的 URI。"

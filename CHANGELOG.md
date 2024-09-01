@@ -12,6 +12,8 @@
   [#270](https://github.com/cadeyrn/enterprise-policy-generator/issues/270)
 - Added option for URL fields to require secure connection (https://), see
   [#277](https://github.com/cadeyrn/enterprise-policy-generator/issues/277)
+- Added support for info links in array properties, see
+  [#279](https://github.com/cadeyrn/enterprise-policy-generator/issues/279)
 - For fields with multiple possible values, it should be possible to remove the last one, see
   [#274](https://github.com/cadeyrn/enterprise-policy-generator/issues/274)
 
@@ -30,6 +32,8 @@
   [#228](https://github.com/cadeyrn/enterprise-policy-generator/issues/228)
 - Updated OverrideFirstRunPage policy to allow multiple URLs, and migrated existing configurations, see
   [#270](https://github.com/cadeyrn/enterprise-policy-generator/issues/270)
+- Added info link to install_sources property of ExtensionSettings policy to make clear that Match patterns are allowed
+  for URLs, see [#279](https://github.com/cadeyrn/enterprise-policy-generator/issues/279)
 
 #### Dependencies
 

@@ -513,7 +513,7 @@
     "message": "Konfiguracija za wšykne rozšyrjenja"
   },
   "policy_description_ExtensionSettings_install_sources": {
-    "message": "Dowólone instalaciske žrědła. Žrědło *.xpi-dataje ako teke domena, z kótarejež se ześěgnjenje startujo, musytej dowólonej byś."
+    "message": "Dowólone instalaciske žrědła. Žrědło *.xpi-dataje ako teke domena, z kótarejež se ześěgnjenje startujo, musytej dowólonej byś. Match patterns allowed, see info link."
   },
   "policy_description_ExtensionSettings_install_url_caption": {
     "message": "Instalěrowański URL. Jolic ma se rozšyrjenje z lokalnego datajowego systema instalěrowaś, wužywajśo pšosym file:///-URI."
