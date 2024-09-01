@@ -2,6 +2,9 @@
   "common_domain": {
     "message": "Domena"
   },
+  "common_origin": {
+    "message": "Origin (scheme://host)"
+  },
   "common_url": {
     "message": "URL"
   },
@@ -187,6 +190,15 @@
   },
   "policy_description_Authentication_SPNEGO": {
     "message": "SPNEGO"
+  },
+  "policy_description_AutoLaunchProtocolsFromOrigins": {
+    "message": "Define a list of external protocols that can be used from listed origins without prompting the user"
+  },
+  "policy_description_AutoLaunchProtocolsFromOrigins_allowed_origins": {
+    "message": "Allowed origins"
+  },
+  "policy_description_AutoLaunchProtocolsFromOrigins_protocol": {
+    "message": "Protocol"
   },
   "policy_description_BlockAboutAddons": {
     "message": "Přistup k zrjadowakej přidatkow (about:addons) blokować"

@@ -2,6 +2,9 @@
   "common_domain": {
     "message": "Domain"
   },
+  "common_origin": {
+    "message": "Quelle (schema://host)"
+  },
   "common_url": {
     "message": "URL"
   },
@@ -187,6 +190,15 @@
   },
   "policy_description_Authentication_SPNEGO": {
     "message": "SPNEGO"
+  },
+  "policy_description_AutoLaunchProtocolsFromOrigins": {
+    "message": "Eine Liste externer Protokolle festlegen, die von aufgelisteten Quellen aus verwendet werden können, ohne dass der Benutzer dazu aufgefordert wird"
+  },
+  "policy_description_AutoLaunchProtocolsFromOrigins_allowed_origins": {
+    "message": "Erlaubte Quellen"
+  },
+  "policy_description_AutoLaunchProtocolsFromOrigins_protocol": {
+    "message": "Protokoll"
   },
   "policy_description_BlockAboutAddons": {
     "message": "Blockiere Zugang zur Erweiterungs-Verwaltung (about:addons)"

@@ -2585,6 +2585,30 @@ const policies = {
     ]
   },
 
+  AutoLaunchProtocolsFromOrigins : {
+    first_available : { mainstream : '90.0', esr : '78.12' },
+    ui_category : 'others',
+    type : 'array',
+    items : [
+      {
+        name : 'protocol',
+        label : browser.i18n.getMessage('policy_description_AutoLaunchProtocolsFromOrigins_protocol'),
+        mandatory : true,
+        type : 'string'
+      },
+      {
+        name : 'allowed_origins',
+        label : browser.i18n.getMessage('policy_description_AutoLaunchProtocolsFromOrigins_allowed_origins'),
+        type : 'array',
+        items : {
+          label : browser.i18n.getMessage('common_origin'),
+          mandatory : true,
+          type : 'url'
+        }
+      }
+    ]
+  },
+
   PDFjs : {
     first_available : { mainstream : '77.0', esr : '78.0' },
     ui_category : 'others',

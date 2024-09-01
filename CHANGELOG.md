@@ -32,6 +32,9 @@
 
 - Added support for AllowedDomainsForApps policy to define domains that are allowed to access Google Workspace, see
   [#228](https://github.com/cadeyrn/enterprise-policy-generator/issues/228)
+- Added support for AutoLaunchProtocolsFromOrigins policy to define a list of external protocols that can be used from
+  listed origins without prompting the user, see
+  [#229](https://github.com/cadeyrn/enterprise-policy-generator/issues/229)
 - Updated OverrideFirstRunPage policy to allow multiple URLs, and migrated existing configurations, see
   [#270](https://github.com/cadeyrn/enterprise-policy-generator/issues/270)
 - Updated description and added info link to install_sources property of ExtensionSettings policy to make clear that
