@@ -89,16 +89,33 @@ const output = {
         const item = { };
 
         // input fields
-        [...el.querySelectorAll(':scope input')].forEach((el) => {
+        [...el.querySelectorAll(':scope > .input input')].forEach((el) => {
           output.addInputValue(el, item);
         });
 
         // enum fields
-        [...el.querySelectorAll(':scope select')].forEach((el) => {
+        [...el.querySelectorAll(':scope > .enum select')].forEach((el) => {
           const enumContent = output.parseEnumContent(el);
 
           if (typeof enumContent !== 'undefined') {
             item[el.getAttribute('data-name')] = enumContent;
+          }
+        });
+
+        // simple arrays
+        [...el.querySelectorAll(':scope .array')].forEach((innerEl) => {
+          const items = [];
+
+          // input fields
+          [...innerEl.querySelectorAll(':scope > .input input')].forEach((arrEl) => {
+            if (arrEl.value && !arrEl.classList.contains('invalid-url-style')) {
+              items.push(arrEl.value);
+            }
+          });
+
+          // only add non-empty arrays
+          if (items.length > 0) {
+            item[innerEl.getAttribute('data-name')] = items;
           }
         });
 

@@ -331,7 +331,15 @@ const configurator = {
         }
       }
       else {
-        id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (key ? key : count));
+        if (
+          trigger.closest('.checkbox').querySelector('.primary-checkbox[data-type="array"]') &&
+          el.parentNode?.parentNode?.classList.contains('array')
+        ) {
+          id = el.id.replace(/^(\w+)_(\d+)_(\w+)_(\d+)$/i, (fullMatch, name, parentCount, key, count) => name + '_' + parseInt(trigger.dataset.count) + '_' + key + '_' + count);
+        }
+        else {
+          id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (key ? key : count));
+        }
       }
 
       if (el.nodeName === 'INPUT' || el.nodeName === 'TEXTAREA') {
@@ -652,7 +660,12 @@ const configurator = {
     // add array properties
     const optionsLength = policy.items.length;
     for (let i = 0; i < optionsLength; i++) {
-      configurator.addProperty(elSubOptions, key + '_' + policy.items[i].name, policy.items[i], true, true);
+      if (policy.items[i].type === 'array') {
+        configurator.addProperty(elSubOptions, key, policy.items[i], true, true);
+      }
+      else {
+        configurator.addProperty(elSubOptions, key + '_' + policy.items[i].name, policy.items[i], true, true);
+      }
     }
 
     // add array field action links
@@ -1293,7 +1306,12 @@ const configurator = {
 
     // add array items
     if (policy.items) {
-      configurator.addProperty(elObjectWrapper, parentName + '_' + policy.name, policy.items, true, false);
+      if (policy.type === 'array') {
+        configurator.addProperty(elObjectWrapper, parentName + '_1_' + policy.name, policy.items, true, false);
+      }
+      else {
+        configurator.addProperty(elObjectWrapper, parentName + policy.name, policy.items, true, false);
+      }
     }
 
     el.appendChild(elObjectWrapper);
