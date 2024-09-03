@@ -3,7 +3,7 @@
     "message": "Domena"
   },
   "common_origin": {
-    "message": "Origin (scheme://host)"
+    "message": "Žórło (schema://host)"
   },
   "common_url": {
     "message": "URL"
@@ -150,7 +150,7 @@
     "message": "ID přidatka"
   },
   "policy_description_AllowedDomainsForApps": {
-    "message": "Define domains allowed to access Google Workspace"
+    "message": "Domeny postajić, kotrež maja přistup ke Google Workspace"
   },
   "policy_description_AppAutoUpdate": {
     "message": "Aktualizacije Firefox awtomatisce instalować"
@@ -192,13 +192,13 @@
     "message": "SPNEGO"
   },
   "policy_description_AutoLaunchProtocolsFromOrigins": {
-    "message": "Define a list of external protocols that can be used from listed origins without prompting the user"
+    "message": "Lisćinu eksternych protokolow postajić, kotrež dadźa so z nalistowanych žórłow wužiwać, bjeztoho zo by wužiwar namołwu dóstał"
   },
   "policy_description_AutoLaunchProtocolsFromOrigins_allowed_origins": {
-    "message": "Allowed origins"
+    "message": "Dowolone žórła"
   },
   "policy_description_AutoLaunchProtocolsFromOrigins_protocol": {
-    "message": "Protocol"
+    "message": "Protokol"
   },
   "policy_description_BlockAboutAddons": {
     "message": "Přistup k zrjadowakej přidatkow (about:addons) blokować"
@@ -525,7 +525,7 @@
     "message": "Konfiguracija za wšě rozšěrjenja"
   },
   "policy_description_ExtensionSettings_install_sources": {
-    "message": "Dowolene instalaciske žórła. Žórło *.xpi-dataje kaž tež domena, z kotrejež so sćehnjenje startuje, dyrbitej dowolenej być. Match patterns allowed, see info link."
+    "message": "Dowolene instalaciske žórła. Žórło *.xpi-dataje kaž tež domena, z kotrejež so sćehnjenje startuje, dyrbitej dowolenej być. Přirunowanske mustry su dowolene, hlej informaciski wotkaz."
   },
   "policy_description_ExtensionSettings_install_url_caption": {
     "message": "Instalowanski URL. Jeli ma so rozšěrjenje z lokalneho datajoweho systema instalować, wužiwajće prošu file:///-URI."
