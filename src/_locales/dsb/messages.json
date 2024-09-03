@@ -3,7 +3,7 @@
     "message": "Domena"
   },
   "common_origin": {
-    "message": "Origin (scheme://host)"
+    "message": "Žrědło (schema://host)"
   },
   "common_url": {
     "message": "URL"
@@ -150,7 +150,7 @@
     "message": "ID dodanka"
   },
   "policy_description_AllowedDomainsForApps": {
-    "message": "Define domains allowed to access Google Workspace"
+    "message": "Domeny póstajiś, kótarež maju pśistup ku Google Workspace"
   },
   "policy_description_AppAutoUpdate": {
     "message": "Aktualizacije Firefox awtomatiski instalěrowaś"
@@ -192,13 +192,13 @@
     "message": "SPNEGO"
   },
   "policy_description_AutoLaunchProtocolsFromOrigins": {
-    "message": "Define a list of external protocols that can be used from listed origins without prompting the user"
+    "message": "Lisćinu eksternych protokolow póstajiś, kótarež daju se z naliconych žrědłow wužywaś, bźez togo aby wužywaŕ naspominanje dostał"
   },
   "policy_description_AutoLaunchProtocolsFromOrigins_allowed_origins": {
-    "message": "Allowed origins"
+    "message": "Dowólone žrědła"
   },
   "policy_description_AutoLaunchProtocolsFromOrigins_protocol": {
-    "message": "Protocol"
+    "message": "Protokol"
   },
   "policy_description_BlockAboutAddons": {
     "message": "Pśistup k zastojnikoju dodankow (about:addons) blokěrowaś"
@@ -525,7 +525,7 @@
     "message": "Konfiguracija za wšykne rozšyrjenja"
   },
   "policy_description_ExtensionSettings_install_sources": {
-    "message": "Dowólone instalaciske žrědła. Žrědło *.xpi-dataje ako teke domena, z kótarejež se ześěgnjenje startujo, musytej dowólonej byś. Match patterns allowed, see info link."
+    "message": "Dowólone instalaciske žrědła. Žrědło *.xpi-dataje ako teke domena, z kótarejež se ześěgnjenje startujo, musytej dowólonej byś. Pśirownowańske mustry su dowólone, glědaj informaciski wótkaz."
   },
   "policy_description_ExtensionSettings_install_url_caption": {
     "message": "Instalěrowański URL. Jolic ma se rozšyrjenje z lokalnego datajowego systema instalěrowaś, wužywajśo pšosym file:///-URI."
