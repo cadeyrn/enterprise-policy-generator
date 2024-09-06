@@ -57,7 +57,11 @@ const serializer = {
       }
       // text and url fields
       else if (node.type === 'text' || node.type === 'url') {
-        if (serializer.isPolicyEnabled(node) && node.value && !node.classList.contains('invalid-url-style')) {
+        if (
+          serializer.isPolicyEnabled(node) && node.value &&
+          !node.classList.contains('invalid-url-style') &&
+          !node.classList.contains('invalid-preference-style')
+        ) {
           data.input[node.id] = node.value;
         }
       }

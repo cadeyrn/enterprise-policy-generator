@@ -29,6 +29,8 @@
   [#275](https://github.com/cadeyrn/enterprise-policy-generator/issues/275),
   [#276](https://github.com/cadeyrn/enterprise-policy-generator/issues/276) and
   [#278](https://github.com/cadeyrn/enterprise-policy-generator/issues/278)
+- It was possible to save preferences with an invalid preference name and use it in policies.json when loaded from
+  saved configurations, see [#282](https://github.com/cadeyrn/enterprise-policy-generator/issues/282)
 
 #### Enterprise Policies
 
