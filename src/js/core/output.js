@@ -593,9 +593,9 @@ const output = {
       // only add non-empty arrays
       if (items.length > 0) {
         output.preferences[innerEl.getAttribute('data-name')] = {
-          'Status': 'locked',
-          'Type': 'string',
-          'Value': items.join(',')
+          Status : 'locked',
+          Type : 'string',
+          Value : items.join(',')
         };
       }
     });
@@ -604,18 +604,18 @@ const output = {
     [...el.parentNode.querySelectorAll(':scope > .boolean')].forEach((el) => {
       const value = JSON.parse(el.firstChild.options[el.firstChild.selectedIndex].value);
       output.preferences[el.getAttribute('data-name')] = {
-        'Status': 'locked',
-        'Type': 'boolean',
-        'Value': value
+        Status : 'locked',
+        Type : 'boolean',
+        Value : value
       };
     });
 
     // enum fields
     [...el.parentNode.querySelectorAll(':scope > .enum')].forEach((el) => {
       output.preferences[el.getAttribute('data-name')] = {
-        'Status': 'locked',
-        'Type': 'string',
-        'Value': output.parseEnumContent(el.firstChild)
+        Status : 'locked',
+        Type : 'string',
+        Value : output.parseEnumContent(el.firstChild)
       };
     });
 
@@ -623,9 +623,9 @@ const output = {
     [...el.parentNode.querySelectorAll(':scope > .input')].forEach((el) => {
       if (el.firstChild.value) {
         output.preferences[el.getAttribute('data-name')] = {
-          'Status': 'locked',
-          'Type': 'string',
-          'Value': el.firstChild.value
+          Status : 'locked',
+          Type : 'string',
+          Value : el.firstChild.value
         };
       }
     });
