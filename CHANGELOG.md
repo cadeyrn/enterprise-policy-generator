@@ -36,7 +36,7 @@
 
 #### Enterprise Policies
 
-- Added support for ManagedBookmarks policy to configures bookmarks managed by an administrator that cannot be
+- Added support for ManagedBookmarks policy to configure bookmarks managed by an administrator that cannot be
   changed by the user. Support for folders will be added in a future release, see
   [#231](https://github.com/cadeyrn/enterprise-policy-generator/issues/231)
 - Added support for AllowedDomainsForApps policy to define domains that are allowed to access Google Workspace, see
