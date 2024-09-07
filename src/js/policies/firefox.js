@@ -650,6 +650,34 @@ const policies = {
     ]
   },
 
+  ManagedBookmarks : {
+    first_available : { mainstream : '83.0', esr : '78.5' },
+    ui_category : 'customization',
+    type : 'nested-object',
+    extra : {
+      name : 'toplevel_name',
+      label : browser.i18n.getMessage('policy_description_ManagedBookmarks_toplevel_name'),
+      type : 'string',
+      mandatory : true
+    },
+    children : {
+      properties : [
+        {
+          name : 'name',
+          label : browser.i18n.getMessage('policy_description_ManagedBookmarks_name'),
+          type : 'string',
+          mandatory : true
+        },
+        {
+          name : 'url',
+          label : browser.i18n.getMessage('common_url'),
+          type : 'url',
+          mandatory : true
+        }
+      ]
+    }
+  },
+
   Preference_extensions_getAddons_showPane : {
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'customization',

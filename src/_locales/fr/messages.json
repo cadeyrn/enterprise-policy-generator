@@ -674,6 +674,15 @@
   "policy_description_LocalFileLinks": {
     "message": "Autoriser des sites Web spécifiques à créer des liens vers des fichiers locaux"
   },
+  "policy_description_ManagedBookmarks": {
+    "message": "Managed bookmarks (cannot be changed or removed by the user)"
+  },
+  "policy_description_ManagedBookmarks_toplevel_name": {
+    "message": "Name of the bookmarks folder"
+  },
+  "policy_description_ManagedBookmarks_name": {
+    "message": "Name"
+  },
   "policy_description_NetworkPrediction": {
     "message": "Activer ou désactiver prédiction réseau (Pré-recherche DNS)"
   },

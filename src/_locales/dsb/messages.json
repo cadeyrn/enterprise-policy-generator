@@ -674,6 +674,15 @@
   "policy_description_LocalFileLinks": {
     "message": "Wěstym websedłam dowóliś, na lokalne dataje wótkazaś"
   },
+  "policy_description_ManagedBookmarks": {
+    "message": "Zastojane cytańske znamjenja (wót wužywarja njezměnjobne abo njelašujobne)"
+  },
+  "policy_description_ManagedBookmarks_toplevel_name": {
+    "message": "Mě zarědnika cytańskich znamjenjow"
+  },
+  "policy_description_ManagedBookmarks_name": {
+    "message": "Mě"
+  },
   "policy_description_NetworkPrediction": {
     "message": "DNS-pśedzacytanje zmóžniś abo znjemóžniś"
   },

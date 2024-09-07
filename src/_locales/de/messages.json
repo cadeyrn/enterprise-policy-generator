@@ -674,6 +674,15 @@
   "policy_description_LocalFileLinks": {
     "message": "Bestimmten Websites erlauben, lokale Dateien zu verlinken"
   },
+  "policy_description_ManagedBookmarks": {
+    "message": "Verwaltete Lesezeichen (nicht durch den Benutzer veränderbar oder löschbar)"
+  },
+  "policy_description_ManagedBookmarks_toplevel_name": {
+    "message": "Name des Lesezeichen-Ordners"
+  },
+  "policy_description_ManagedBookmarks_name": {
+    "message": "Name"
+  },
   "policy_description_NetworkPrediction": {
     "message": "DNS Prefetching aktivieren oder deaktivieren"
   },

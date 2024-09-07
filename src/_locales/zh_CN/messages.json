@@ -674,6 +674,15 @@
   "policy_description_LocalFileLinks": {
     "message": "允许指定网站链接到本地文件"
   },
+  "policy_description_ManagedBookmarks": {
+    "message": "Managed bookmarks (cannot be changed or removed by the user)"
+  },
+  "policy_description_ManagedBookmarks_toplevel_name": {
+    "message": "Name of the bookmarks folder"
+  },
+  "policy_description_ManagedBookmarks_name": {
+    "message": "Name"
+  },
   "policy_description_NetworkPrediction": {
     "message": "启用或禁用网络预测 (DNS 预读取)"
   },

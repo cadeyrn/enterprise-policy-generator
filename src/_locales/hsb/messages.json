@@ -674,6 +674,15 @@
   "policy_description_LocalFileLinks": {
     "message": "Wěstym websydłam dowolić, na lokalne dataje wotkazać"
   },
+  "policy_description_ManagedBookmarks": {
+    "message": "Zrjadowane zapołožki (wot wužiwarja njezměnjomne abo njezhašomne)"
+  },
+  "policy_description_ManagedBookmarks_toplevel_name": {
+    "message": "Mjeno rjadowaka zapołožkow"
+  },
+  "policy_description_ManagedBookmarks_name": {
+    "message": "Mjeno"
+  },
   "policy_description_NetworkPrediction": {
     "message": "DNS-předzačitanje zmóžnić abo znjemóžnić"
   },

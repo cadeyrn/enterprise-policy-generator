@@ -674,6 +674,15 @@
   "policy_description_LocalFileLinks": {
     "message": "Allow specific websites to link to local files"
   },
+  "policy_description_ManagedBookmarks": {
+    "message": "Managed bookmarks (cannot be changed or removed by the user)"
+  },
+  "policy_description_ManagedBookmarks_toplevel_name": {
+    "message": "Name of the bookmarks folder"
+  },
+  "policy_description_ManagedBookmarks_name": {
+    "message": "Name"
+  },
   "policy_description_NetworkPrediction": {
     "message": "Enable or disable network prediction (DNS prefetching)"
   },
