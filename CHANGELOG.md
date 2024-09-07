@@ -6,6 +6,8 @@
 
 #### Enhancements
 
+- Added support for a new policy type, needed for the new ManagedBookmarks policy, see
+  [#231](https://github.com/cadeyrn/enterprise-policy-generator/issues/231)
 - Added support for a new policy type, needed for the new AllowedDomainsForApps policy, see
   [#228](https://github.com/cadeyrn/enterprise-policy-generator/issues/228)
 - Added support for a new policy type, needed for the updated OverrideFirstRunPage policy, see

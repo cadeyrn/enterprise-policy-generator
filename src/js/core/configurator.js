@@ -79,6 +79,9 @@ const configurator = {
       else if (policies[key].type === 'key-value-pairs') {
         configurator.addKeyValuePairsOption(key, policies[key]);
       }
+      else if (policies[key].type === 'nested-object') {
+        configurator.addNestedObjectOption(key, policies[key]);
+      }
       else if (policies[key].type === 'object') {
         configurator.addObjectOption(key, policies[key]);
       }
@@ -957,6 +960,48 @@ const configurator = {
     // add array field action links
     elSubOptions.parentNode.classList.add('array-action-links');
     configurator.addArrayFieldActionLinks(elSubOptions, key + '_1');
+
+    // add option to UI
+    configurator.addOptionToUi(elObjectWrapper, policy);
+  },
+
+  /**
+   * Adds policy of the type "nested-object" to the DOM.
+   *
+   * @param {string} key - the name of the policy
+   * @param {object} policy - the policy object
+   *
+   * @returns {void}
+   */
+  addNestedObjectOption (key, policy) {
+    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'nested-object', false);
+
+    // add extra property
+    if (policy.extra) {
+      const elExtraOptions = document.createElement('div');
+      elExtraOptions.classList.add('extra-options', 'disabled');
+      elExtraOptions.setAttribute('data-key', policy.extra.name);
+      elObjectWrapper.appendChild(elExtraOptions);
+
+      configurator.addProperty(elExtraOptions, key, policy.extra, false, false);
+    }
+
+    if (policy.children.properties) {
+      const elSubOptionsWrapper = document.createElement('div');
+      elSubOptionsWrapper.classList.add('sub-options-wrapper');
+      elObjectWrapper.appendChild(elSubOptionsWrapper);
+
+      const elSubOptions = configurator.addSubOptions(elSubOptionsWrapper);
+
+      const optionsLength = policy.children.properties.length;
+      for (let i = 0; i < optionsLength; i++) {
+        configurator.addProperty(elSubOptions, key + '_' + policy.children.properties[i].name, policy.children.properties[i], true, true);
+      }
+
+      // add array field action links
+      elSubOptions.parentElement.classList.add('array-action-links');
+      configurator.addArrayFieldActionLinks(elSubOptions, key + '_children_1');
+    }
 
     // add option to UI
     configurator.addOptionToUi(elObjectWrapper, policy);

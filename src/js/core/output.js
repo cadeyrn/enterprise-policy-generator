@@ -48,6 +48,9 @@ const output = {
         else if (el.getAttribute('data-type') === 'key-value-pairs') {
           output.generateOutputForKeyValuePairs(el);
         }
+        else if (el.getAttribute('data-type') === 'nested-object') {
+          output.generateOutputForNestedObjects(el);
+        }
         else if (el.getAttribute('data-type') === 'object') {
           output.generateOutputForObjects(el);
         }
@@ -365,6 +368,43 @@ const output = {
 
     // only add non-empty policies
     if (Object.keys(items).length > 0) {
+      policymanager.add(el.getAttribute('data-name'), items);
+    }
+  },
+
+  /**
+   * Generates output for policies of type "nested-object".
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   *
+   * @returns {void}
+   */
+  generateOutputForNestedObjects (el) {
+    const extra = el.parentElement.querySelector('.extra-options input');
+    const items = [];
+
+    if (extra && extra.value) {
+      const data = {};
+      data[extra.dataset.name] = extra.value;
+      items.push(data);
+    }
+
+    [...el.parentElement.querySelectorAll(':scope .sub-options')].forEach((innerEl) => {
+      const item = {};
+
+      [...innerEl.querySelectorAll(':scope .input input')].forEach((arrEl) => {
+        if (arrEl.value && !arrEl.classList.contains('invalid-url-style')) {
+          item[arrEl.dataset.name] = arrEl.value;
+        }
+      });
+
+      if (!output.hasInvalidFields(innerEl)) {
+        items.push(item);
+      }
+    });
+
+    // only add non-empty policies
+    if (items.length > 0) {
       policymanager.add(el.getAttribute('data-name'), items);
     }
   },
