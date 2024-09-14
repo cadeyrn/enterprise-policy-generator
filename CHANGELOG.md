@@ -2,6 +2,15 @@
 
 ## Release Notes
 
+### Version 6.2.0 (Work in Progress)
+
+#### Dependencies
+
+- Updated eslint from version 9.9.1 to 9.10.0
+- Updated eslint-plugin-jsdoc from version 50.2.2 to 50.2.3
+
+---
+
 ### [Version 6.1.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v6.1.0) (2024-09-07)
 
 #### Enhancements
