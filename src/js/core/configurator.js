@@ -141,20 +141,9 @@ const configurator = {
         }
 
         if (excludePolicy) {
-          const elExcludedPolicy = document.querySelector('[data-name="' + excludePolicy + '"]');
-          const elExcludedPolicyParent = elExcludedPolicy.parentNode;
-          const elExcludedPolicySelect = elExcludedPolicyParent.querySelector('select');
-
-          if (el.checked) {
-            elExcludedPolicy.setAttribute('disabled', 'disabled');
-            elExcludedPolicyParent.classList.add('excluded');
-            elExcludedPolicySelect?.setAttribute('disabled', 'disabled');
-          }
-          else {
-            elExcludedPolicy.removeAttribute('disabled');
-            elExcludedPolicyParent.classList.remove('excluded');
-            elExcludedPolicySelect?.removeAttribute('disabled');
-          }
+          excludePolicy.split(',').forEach(policy => {
+            configurator.handlePolicyExclusion(el, policy);
+          });
         }
       });
     });
@@ -2060,6 +2049,63 @@ const configurator = {
     elLabel.classList.add('invalid-url-label', 'hidden');
     elLabel.innerText = browser.i18n.getMessage('invalid_url_label');
     elObjectWrapper.appendChild(elLabel);
+  },
+
+  /**
+   * Handles the exclusion of policies.
+   *
+   * @param {HTMLElement} elPolicy - the DOM node of the current element
+   * @param {string} excludedPolicyName - the name of the excluded element
+   *
+   * @returns {void}
+   */
+  handlePolicyExclusion (elPolicy, excludedPolicyName) {
+    let elExcludedPolicy;
+
+    if (excludedPolicyName.includes('=')) {
+      const excludePolicyArray = excludedPolicyName.split('=');
+      elExcludedPolicy = document.querySelector('[data-name="' + excludePolicyArray[0] + '"]');
+      const elExcludedPolicyParent = elExcludedPolicy.parentElement;
+      const elExcludedPolicySelect = elExcludedPolicyParent.querySelector('select');
+
+      if (elExcludedPolicySelect) {
+        if (elExcludedPolicySelect.value !== excludePolicyArray[1]) {
+          elExcludedPolicy = null;
+        }
+
+        elExcludedPolicySelect.addEventListener('change', () => {
+          if (elExcludedPolicySelect.value === excludePolicyArray[1]) {
+            elPolicy.setAttribute('disabled', 'disabled');
+            elPolicy.parentElement.classList.add('excluded');
+            elPolicy.parentElement.querySelector('select')?.setAttribute('disabled', 'disabled');
+          }
+          else {
+            elPolicy.removeAttribute('disabled');
+            elPolicy.parentElement.classList.remove('excluded');
+            elPolicy.parentElement.querySelector('select')?.removeAttribute('disabled');
+          }
+        });
+      }
+    }
+    else {
+      elExcludedPolicy = document.querySelector('[data-name="' + excludedPolicyName + '"]');
+    }
+
+    if (elExcludedPolicy) {
+      const elExcludedPolicyParent = elExcludedPolicy.parentNode;
+      const elExcludedPolicySelect = elExcludedPolicyParent.querySelector('select');
+
+      if (elPolicy.checked) {
+        elExcludedPolicy.setAttribute('disabled', 'disabled');
+        elExcludedPolicyParent.classList.add('excluded');
+        elExcludedPolicySelect?.setAttribute('disabled', 'disabled');
+      }
+      else {
+        elExcludedPolicy.removeAttribute('disabled');
+        elExcludedPolicyParent.classList.remove('excluded');
+        elExcludedPolicySelect?.removeAttribute('disabled');
+      }
+    }
   },
 
   /**

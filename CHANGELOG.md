@@ -4,6 +4,11 @@
 
 ### Version 6.2.0 (Work in Progress)
 
+#### Enhancements
+
+- Allow to exclude multiple policies and to exclude a policy by its value, fixes
+  [#288](https://github.com/cadeyrn/enterprise-policy-generator/issues/288)
+
 #### Bugfixes
 
 - It was possible to enter a scenario in which a policy with an enum field is first enabled and then excluded by
