@@ -21,6 +21,8 @@
   when the application is not running, see [#233](https://github.com/cadeyrn/enterprise-policy-generator/issues/233)
 - Added support for ManualAppUpdateOnly policy to disable prompts for Firefox updates, see
   [#237](https://github.com/cadeyrn/enterprise-policy-generator/issues/237)
+- Added support for PasswordManagerExceptions policy to prevent Firefox from saving passwords for specific sites, see
+  [#238](https://github.com/cadeyrn/enterprise-policy-generator/issues/238)
 - Added SponsoredTopSites and SponsoredPocket options to FirefoxHome policy, removed Snippets option (also from existing
   configurations), updated order and translations of all options to reflect the current order and naming in Firefox, see
   [#236](https://github.com/cadeyrn/enterprise-policy-generator/issues/236)
@@ -31,9 +33,9 @@
 
 #### Notable Changes and Code Quality
 
-- Enabled linting for translation files
 - Changed copyright year from 2024 to 2025, fixes
   [#289](https://github.com/cadeyrn/enterprise-policy-generator/issues/289)
+- Enabled linting for translation files
 
 #### Dependencies
 
