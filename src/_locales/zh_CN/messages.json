@@ -14,6 +14,9 @@
   "configuration_import": {
     "message": "导入配置"
   },
+  "enterprise_only_label": {
+    "message": "仅在 Firefox ESR 生效"
+  },
   "enum_value_block_no": {
     "message": "不屏蔽"
   },
@@ -34,9 +37,6 @@
   },
   "enum_value_yes": {
     "message": "是"
-  },
-  "enterprise_only_label": {
-    "message": "仅在 Firefox ESR 生效"
   },
   "explanation_about_policies": {
     "message": "所有活跃的策略和错误都会在 about:policies 页面对应的“policies.json”文件中显示一个摘要。"
@@ -116,14 +116,17 @@
   "policy_category_block_access": {
     "message": "阻止访问"
   },
-  "policy_category_disable_features": {
-    "message": "禁用功能"
-  },
   "policy_category_customization": {
     "message": "定制"
   },
+  "policy_category_disable_features": {
+    "message": "禁用功能"
+  },
   "policy_category_network": {
     "message": "网络"
+  },
+  "policy_category_others": {
+    "message": "其他策略"
   },
   "policy_category_privacy": {
     "message": "隐私"
@@ -133,9 +136,6 @@
   },
   "policy_category_update_and_data": {
     "message": "更新和数据收集"
-  },
-  "policy_category_others": {
-    "message": "其他策略"
   },
   "policy_description_3rdParty": {
     "message": "Preconfiguration of settings for extensions that use chrome.storage.managed"
@@ -170,12 +170,6 @@
   "policy_description_Authentication_AllowNonFQDN_SPNEGO": {
     "message": "始终允许在非 FQDN 上使用 SPNEGO"
   },
-  "policy_description_Authentication_Delegated": {
-    "message": "委托（Delegated）"
-  },
-  "policy_description_Authentication_NTLM": {
-    "message": "NTLM"
-  },
   "policy_description_Authentication_AllowProxies": {
     "message": "Always allow SPNEGO or NTLM with proxy servers"
   },
@@ -184,6 +178,12 @@
   },
   "policy_description_Authentication_AllowProxies_SPNEGO": {
     "message": "Always allow NTLM with proxy servers"
+  },
+  "policy_description_Authentication_Delegated": {
+    "message": "委托（Delegated）"
+  },
+  "policy_description_Authentication_NTLM": {
+    "message": "NTLM"
   },
   "policy_description_Authentication_PrivateBrowsing": {
     "message": "Enable integrated authentication in private browsing"
@@ -572,41 +572,23 @@
   "policy_description_FirefoxHome": {
     "message": "自定义 Firefox 主页"
   },
-  "policy_description_FirefoxHome_Search": {
-    "message": "网络搜索"
-  },
-  "policy_description_FirefoxHome_TopSites": {
-    "message": "常用网站"
-  },
   "policy_description_FirefoxHome_Highlights": {
     "message": "集锦"
   },
   "policy_description_FirefoxHome_Pocket": {
     "message": "Pocket 推荐"
   },
+  "policy_description_FirefoxHome_Search": {
+    "message": "网络搜索"
+  },
   "policy_description_FirefoxHome_Snippets": {
     "message": "只言片语"
   },
+  "policy_description_FirefoxHome_TopSites": {
+    "message": "常用网站"
+  },
   "policy_description_Handlers": {
     "message": "Configure default application handlers"
-  },
-  "policy_description_Handlers_type_file_extension": {
-    "message": "File extension"
-  },
-  "policy_description_Handlers_type_file_extension_placeholder": {
-    "message": "e.g. “pdf”"
-  },
-  "policy_description_Handlers_type_mime_type": {
-    "message": "MIME type"
-  },
-  "policy_description_Handlers_type_mime_type_placeholder": {
-    "message": "e.g. “application/msword”"
-  },
-  "policy_description_Handlers_type_schema": {
-    "message": "Scheme"
-  },
-  "policy_description_Handlers_type_schema_placeholder": {
-    "message": "e.g. “mailto”"
   },
   "policy_description_Handlers_property_action": {
     "message": "Action"
@@ -640,6 +622,24 @@
   },
   "policy_description_Handlers_property_handlers_uriTemplate": {
     "message": "URL to a web-based handler. Must start with https:// and contain \"%s\" for the substitution"
+  },
+  "policy_description_Handlers_type_file_extension": {
+    "message": "File extension"
+  },
+  "policy_description_Handlers_type_file_extension_placeholder": {
+    "message": "e.g. “pdf”"
+  },
+  "policy_description_Handlers_type_mime_type": {
+    "message": "MIME type"
+  },
+  "policy_description_Handlers_type_mime_type_placeholder": {
+    "message": "e.g. “application/msword”"
+  },
+  "policy_description_Handlers_type_schema": {
+    "message": "Scheme"
+  },
+  "policy_description_Handlers_type_schema_placeholder": {
+    "message": "e.g. “mailto”"
   },
   "policy_description_HardwareAcceleration": {
     "message": "禁用硬件加速"
@@ -677,11 +677,11 @@
   "policy_description_ManagedBookmarks": {
     "message": "Managed bookmarks (cannot be changed or removed by the user)"
   },
-  "policy_description_ManagedBookmarks_toplevel_name": {
-    "message": "Name of the bookmarks folder"
-  },
   "policy_description_ManagedBookmarks_name": {
     "message": "Name"
+  },
+  "policy_description_ManagedBookmarks_toplevel_name": {
+    "message": "Name of the bookmarks folder"
   },
   "policy_description_NetworkPrediction": {
     "message": "启用或禁用网络预测 (DNS 预读取)"
@@ -962,6 +962,9 @@
   "policy_description_Proxy_AutoLogin_true": {
     "message": "不提示身份验证"
   },
+  "policy_description_Proxy_FTPProxy": {
+    "message": "FTP 代理。要配置端口号，请在端口号前添加 “:”"
+  },
   "policy_description_Proxy_HTTPProxy": {
     "message": "HTTP 代理。要配置端口号，请在端口号前添加 “:”"
   },
@@ -979,9 +982,6 @@
   },
   "policy_description_Proxy_Mode_system": {
     "message": "使用系统代理设置"
-  },
-  "policy_description_Proxy_FTPProxy": {
-    "message": "FTP 代理。要配置端口号，请在端口号前添加 “:”"
   },
   "policy_description_Proxy_Passthrough": {
     "message": "不使用代理的 URL…"
@@ -1049,14 +1049,14 @@
   "policy_description_SanitizeOnShutdown_Locked_true": {
     "message": "Protect only the set options from changes"
   },
+  "policy_description_SanitizeOnShutdown_OfflineApps": {
+    "message": "脱机网站数据"
+  },
   "policy_description_SanitizeOnShutdown_Sessions": {
     "message": "活跃的登录"
   },
   "policy_description_SanitizeOnShutdown_SiteSettings": {
     "message": "网站首选项"
-  },
-  "policy_description_SanitizeOnShutdown_OfflineApps": {
-    "message": "脱机网站数据"
   },
   "policy_description_SearchBar": {
     "message": "搜索栏合并或分开显示"

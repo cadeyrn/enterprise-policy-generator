@@ -14,6 +14,9 @@
   "configuration_import": {
     "message": "Konfiguration importieren"
   },
+  "enterprise_only_label": {
+    "message": "funktioniert nur in Firefox ESR"
+  },
   "enum_value_block_no": {
     "message": "nicht blockieren"
   },
@@ -34,9 +37,6 @@
   },
   "enum_value_yes": {
     "message": "ja"
-  },
-  "enterprise_only_label": {
-    "message": "funktioniert nur in Firefox ESR"
   },
   "explanation_about_policies": {
     "message": "Unter about:policies gibt es eine Übersicht über alle aktiven Richtlinien sowie Fehler in der Datei „policies.json“."
@@ -116,14 +116,17 @@
   "policy_category_block_access": {
     "message": "Zugang blockieren"
   },
-  "policy_category_disable_features": {
-    "message": "Funktionen deaktivieren"
-  },
   "policy_category_customization": {
     "message": "Anpassung"
   },
+  "policy_category_disable_features": {
+    "message": "Funktionen deaktivieren"
+  },
   "policy_category_network": {
     "message": "Netzwerk"
+  },
+  "policy_category_others": {
+    "message": "Sonstige Richtlinien"
   },
   "policy_category_privacy": {
     "message": "Privatsphäre"
@@ -133,9 +136,6 @@
   },
   "policy_category_update_and_data": {
     "message": "Updates & Datenerhebung"
-  },
-  "policy_category_others": {
-    "message": "Sonstige Richtlinien"
   },
   "policy_description_3rdParty": {
     "message": "Vorkonfiguration der Einstellungen für Erweiterungen, die chrome.storage.managed verwenden"
@@ -572,41 +572,23 @@
   "policy_description_FirefoxHome": {
     "message": "Den Firefox-Startbildschirm anpassen"
   },
-  "policy_description_FirefoxHome_Search": {
-    "message": "Internetsuche"
-  },
-  "policy_description_FirefoxHome_TopSites": {
-    "message": "Wichtige Seiten"
-  },
   "policy_description_FirefoxHome_Highlights": {
     "message": "Überblick"
   },
   "policy_description_FirefoxHome_Pocket": {
     "message": "Pocket-Empfehlungen"
   },
+  "policy_description_FirefoxHome_Search": {
+    "message": "Internetsuche"
+  },
   "policy_description_FirefoxHome_Snippets": {
     "message": "Kurzinformationen"
   },
+  "policy_description_FirefoxHome_TopSites": {
+    "message": "Wichtige Seiten"
+  },
   "policy_description_Handlers": {
     "message": "Standardanwendungen für das Öffnen von Dateien, Protokollen und MIME-Typen festlegen"
-  },
-  "policy_description_Handlers_type_file_extension": {
-    "message": "Dateiendung"
-  },
-  "policy_description_Handlers_type_file_extension_placeholder": {
-    "message": "zum Beispiel „pdf“"
-  },
-  "policy_description_Handlers_type_mime_type": {
-    "message": "MIME-Type"
-  },
-  "policy_description_Handlers_type_mime_type_placeholder": {
-    "message": "zum Beispiel „application/msword“"
-  },
-  "policy_description_Handlers_type_schema": {
-    "message": "Schema"
-  },
-  "policy_description_Handlers_type_schema_placeholder": {
-    "message": "zum Beispiel „mailto“"
   },
   "policy_description_Handlers_property_action": {
     "message": "Aktion"
@@ -640,6 +622,24 @@
   },
   "policy_description_Handlers_property_handlers_uriTemplate": {
     "message": "URL für webbasierten Handler. Muss mit https:// beginnen und „%s“ für die Ersetzung enthalten"
+  },
+  "policy_description_Handlers_type_file_extension": {
+    "message": "Dateiendung"
+  },
+  "policy_description_Handlers_type_file_extension_placeholder": {
+    "message": "zum Beispiel „pdf“"
+  },
+  "policy_description_Handlers_type_mime_type": {
+    "message": "MIME-Type"
+  },
+  "policy_description_Handlers_type_mime_type_placeholder": {
+    "message": "zum Beispiel „application/msword“"
+  },
+  "policy_description_Handlers_type_schema": {
+    "message": "Schema"
+  },
+  "policy_description_Handlers_type_schema_placeholder": {
+    "message": "zum Beispiel „mailto“"
   },
   "policy_description_HardwareAcceleration": {
     "message": "Hardwarebeschleunigung deaktivieren"
@@ -677,11 +677,11 @@
   "policy_description_ManagedBookmarks": {
     "message": "Verwaltete Lesezeichen (nicht durch den Benutzer veränderbar oder löschbar)"
   },
-  "policy_description_ManagedBookmarks_toplevel_name": {
-    "message": "Name des Lesezeichen-Ordners"
-  },
   "policy_description_ManagedBookmarks_name": {
     "message": "Name"
+  },
+  "policy_description_ManagedBookmarks_toplevel_name": {
+    "message": "Name des Lesezeichen-Ordners"
   },
   "policy_description_NetworkPrediction": {
     "message": "DNS Prefetching aktivieren oder deaktivieren"
@@ -962,6 +962,9 @@
   "policy_description_Proxy_AutoLogin_true": {
     "message": "Keine Authentifizierungsanfrage anzeigen"
   },
+  "policy_description_Proxy_FTPProxy": {
+    "message": "FTP-Proxy. Um eine Port-Nummer festzulegen bitte „:“ gefolgt von der Portnummer ergänzen"
+  },
   "policy_description_Proxy_HTTPProxy": {
     "message": "HTTP-Proxy. Um eine Port-Nummer festzulegen bitte „:“ gefolgt von der Portnummer ergänzen"
   },
@@ -979,9 +982,6 @@
   },
   "policy_description_Proxy_Mode_system": {
     "message": "Proxy-Einstellungen des Systems verwenden"
-  },
-  "policy_description_Proxy_FTPProxy": {
-    "message": "FTP-Proxy. Um eine Port-Nummer festzulegen bitte „:“ gefolgt von der Portnummer ergänzen"
   },
   "policy_description_Proxy_Passthrough": {
     "message": "Kein Proxy für…"
@@ -1049,14 +1049,14 @@
   "policy_description_SanitizeOnShutdown_Locked_true": {
     "message": "Nur die gesetzten Optionen vor Veränderung schützen"
   },
+  "policy_description_SanitizeOnShutdown_OfflineApps": {
+    "message": "Offline-Website-Daten"
+  },
   "policy_description_SanitizeOnShutdown_Sessions": {
     "message": "Aktive Logins"
   },
   "policy_description_SanitizeOnShutdown_SiteSettings": {
     "message": "Website-Einstellungen"
-  },
-  "policy_description_SanitizeOnShutdown_OfflineApps": {
-    "message": "Offline-Website-Daten"
   },
   "policy_description_SearchBar": {
     "message": "Legt fest, ob die Suchleiste mit der Adressleiste kombiniert oder separat ist"

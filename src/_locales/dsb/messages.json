@@ -14,6 +14,9 @@
   "configuration_import": {
     "message": "konfiguraciju importěrowaś"
   },
+  "enterprise_only_label": {
+    "message": "funkcioněrujo jano w Firefox ESR"
+  },
   "enum_value_block_no": {
     "message": "njeblokěrowaś"
   },
@@ -34,9 +37,6 @@
   },
   "enum_value_yes": {
     "message": "jo"
-  },
-  "enterprise_only_label": {
-    "message": "funkcioněrujo jano w Firefox ESR"
   },
   "explanation_about_policies": {
     "message": "Pód about:policies jo pśeglěd wó wšych aktiwnych pšawidłach ako teke wó zmólkach w dataji „policies.json“."
@@ -116,14 +116,17 @@
   "policy_category_block_access": {
     "message": "Pśistup blokěrowaś"
   },
-  "policy_category_disable_features": {
-    "message": "Funkcije znjemóžniś"
-  },
   "policy_category_customization": {
     "message": "Pśiměrjenje"
   },
+  "policy_category_disable_features": {
+    "message": "Funkcije znjemóžniś"
+  },
   "policy_category_network": {
     "message": "Seś"
+  },
+  "policy_category_others": {
+    "message": "Druge směrnice"
   },
   "policy_category_privacy": {
     "message": "Priwatnosć"
@@ -133,9 +136,6 @@
   },
   "policy_category_update_and_data": {
     "message": "Aktualizacije a zběranje datow"
-  },
-  "policy_category_others": {
-    "message": "Druge směrnice"
   },
   "policy_description_3rdParty": {
     "message": "Pśedkonfiguracija nastajenjow za rozšyrjenja, kótarež chrome.storage.managed wužywaju"
@@ -572,41 +572,23 @@
   "policy_description_FirefoxHome": {
     "message": "Startowu wobrazowku Firefox pśiměriś"
   },
-  "policy_description_FirefoxHome_Search": {
-    "message": "Internetne pytanje"
-  },
-  "policy_description_FirefoxHome_TopSites": {
-    "message": "Wažne boki"
-  },
   "policy_description_FirefoxHome_Highlights": {
     "message": "Pśeglěd"
   },
   "policy_description_FirefoxHome_Pocket": {
     "message": "Dopórucenja Pocket"
   },
+  "policy_description_FirefoxHome_Search": {
+    "message": "Internetne pytanje"
+  },
   "policy_description_FirefoxHome_Snippets": {
     "message": "Krotke informacije"
   },
+  "policy_description_FirefoxHome_TopSites": {
+    "message": "Wažne boki"
+  },
   "policy_description_Handlers": {
     "message": "Standardne nałoženja za wócynjanje datajow, protokolow a MIME-typow póstajiś"
-  },
-  "policy_description_Handlers_type_file_extension": {
-    "message": "Datajowa kóńcowka"
-  },
-  "policy_description_Handlers_type_file_extension_placeholder": {
-    "message": "na pśikład „pdf“"
-  },
-  "policy_description_Handlers_type_mime_type": {
-    "message": "MIME-Typ"
-  },
-  "policy_description_Handlers_type_mime_type_placeholder": {
-    "message": "na pśikład „application/msword“"
-  },
-  "policy_description_Handlers_type_schema": {
-    "message": "Šema"
-  },
-  "policy_description_Handlers_type_schema_placeholder": {
-    "message": "na pśikład „mailto“"
   },
   "policy_description_Handlers_property_action": {
     "message": "Akcija"
@@ -640,6 +622,24 @@
   },
   "policy_description_Handlers_property_handlers_uriTemplate": {
     "message": "URL za webbazěrowany pśeźěłak. Musy z https:// zachopiś a „%s“ za narownanje wopśimowaś"
+  },
+  "policy_description_Handlers_type_file_extension": {
+    "message": "Datajowa kóńcowka"
+  },
+  "policy_description_Handlers_type_file_extension_placeholder": {
+    "message": "na pśikład „pdf“"
+  },
+  "policy_description_Handlers_type_mime_type": {
+    "message": "MIME-Typ"
+  },
+  "policy_description_Handlers_type_mime_type_placeholder": {
+    "message": "na pśikład „application/msword“"
+  },
+  "policy_description_Handlers_type_schema": {
+    "message": "Šema"
+  },
+  "policy_description_Handlers_type_schema_placeholder": {
+    "message": "na pśikład „mailto“"
   },
   "policy_description_HardwareAcceleration": {
     "message": "Hardwarowe póspěšenje znjemóžniś"
@@ -677,11 +677,11 @@
   "policy_description_ManagedBookmarks": {
     "message": "Zastojane cytańske znamjenja (wót wužywarja njezměnjobne abo njelašujobne)"
   },
-  "policy_description_ManagedBookmarks_toplevel_name": {
-    "message": "Mě zarědnika cytańskich znamjenjow"
-  },
   "policy_description_ManagedBookmarks_name": {
     "message": "Mě"
+  },
+  "policy_description_ManagedBookmarks_toplevel_name": {
+    "message": "Mě zarědnika cytańskich znamjenjow"
   },
   "policy_description_NetworkPrediction": {
     "message": "DNS-pśedzacytanje zmóžniś abo znjemóžniś"
@@ -962,6 +962,9 @@
   "policy_description_Proxy_AutoLogin_true": {
     "message": "Awtentificěrowańske napšašowanje njepokazaś"
   },
+  "policy_description_Proxy_FTPProxy": {
+    "message": "FTP-proksy. Aby portowy numer konfigurěrował, pśidajśo pšosym „:“ slědowany pśez portowy numer"
+  },
   "policy_description_Proxy_HTTPProxy": {
     "message": "HTTP-proksy. Aby portowy numer konfigurěrował, pśidajśo pšosym „:“ slědowany pśez portowy numer"
   },
@@ -979,9 +982,6 @@
   },
   "policy_description_Proxy_Mode_system": {
     "message": "Nastajenja proksy systema wužywaś"
-  },
-  "policy_description_Proxy_FTPProxy": {
-    "message": "FTP-proksy. Aby portowy numer konfigurěrował, pśidajśo pšosym „:“ slědowany pśez portowy numer"
   },
   "policy_description_Proxy_Passthrough": {
     "message": "Žeden proksy za…"
@@ -1049,14 +1049,14 @@
   "policy_description_SanitizeOnShutdown_Locked_true": {
     "message": "Jano wubrane nastajenja pśed změnu šćitaś"
   },
+  "policy_description_SanitizeOnShutdown_OfflineApps": {
+    "message": "Daty websedła offline"
+  },
   "policy_description_SanitizeOnShutdown_Sessions": {
     "message": "Aktiwne pśizjawjenja"
   },
   "policy_description_SanitizeOnShutdown_SiteSettings": {
     "message": "Nastajenja websedła"
-  },
-  "policy_description_SanitizeOnShutdown_OfflineApps": {
-    "message": "Daty websedła offline"
   },
   "policy_description_SearchBar": {
     "message": "Póstaja, lěc pytańske pólo jo kombiněrowane z adresowym pólom abo separatne"

@@ -14,6 +14,9 @@
   "configuration_import": {
     "message": "konfiguraciju importować"
   },
+  "enterprise_only_label": {
+    "message": "funguje jenož w Firefox ESR"
+  },
   "enum_value_block_no": {
     "message": "njeblokować"
   },
@@ -34,9 +37,6 @@
   },
   "enum_value_yes": {
     "message": "haj"
-  },
-  "enterprise_only_label": {
-    "message": "funguje jenož w Firefox ESR"
   },
   "explanation_about_policies": {
     "message": "Pod about:policies je přehlad wo wšěch aktiwnych prawidłach kaž tež wo zmylkach w dataji „policies.json“."
@@ -116,14 +116,17 @@
   "policy_category_block_access": {
     "message": "Přistup blokować"
   },
-  "policy_category_disable_features": {
-    "message": "Funkcije znjemóžnić"
-  },
   "policy_category_customization": {
     "message": "Přiměrjenje"
   },
+  "policy_category_disable_features": {
+    "message": "Funkcije znjemóžnić"
+  },
   "policy_category_network": {
     "message": "Syć"
+  },
+  "policy_category_others": {
+    "message": "Druhe směrnicy"
   },
   "policy_category_privacy": {
     "message": "Priwatnosć"
@@ -133,9 +136,6 @@
   },
   "policy_category_update_and_data": {
     "message": "Aktualizacije a zběranje datow"
-  },
-  "policy_category_others": {
-    "message": "Druhe směrnicy"
   },
   "policy_description_3rdParty": {
     "message": "Předkonfiguracija nastajenjow za rozšěrjenja, kotrež chrome.storage.managed wužiwaja"
@@ -572,41 +572,23 @@
   "policy_description_FirefoxHome": {
     "message": "Startowu wobrazowku Firefox přiměrić"
   },
-  "policy_description_FirefoxHome_Search": {
-    "message": "Internetne pytanje"
-  },
-  "policy_description_FirefoxHome_TopSites": {
-    "message": "Wažne strony"
-  },
   "policy_description_FirefoxHome_Highlights": {
     "message": "Přehlad"
   },
   "policy_description_FirefoxHome_Pocket": {
     "message": "Doporučenja Pocket"
   },
+  "policy_description_FirefoxHome_Search": {
+    "message": "Internetne pytanje"
+  },
   "policy_description_FirefoxHome_Snippets": {
     "message": "Krótke informacije"
   },
+  "policy_description_FirefoxHome_TopSites": {
+    "message": "Wažne strony"
+  },
   "policy_description_Handlers": {
     "message": "Standardne nałoženja za wočinjenje datajow, protokolow a MIME-typow postajić"
-  },
-  "policy_description_Handlers_type_file_extension": {
-    "message": "Datajowa kóncowka"
-  },
-  "policy_description_Handlers_type_file_extension_placeholder": {
-    "message": "na přikład „pdf“"
-  },
-  "policy_description_Handlers_type_mime_type": {
-    "message": "MIME-Typ"
-  },
-  "policy_description_Handlers_type_mime_type_placeholder": {
-    "message": "na přikład „application/msword“"
-  },
-  "policy_description_Handlers_type_schema": {
-    "message": "Šema"
-  },
-  "policy_description_Handlers_type_schema_placeholder": {
-    "message": "na přikład „mailto“"
   },
   "policy_description_Handlers_property_action": {
     "message": "Akcija"
@@ -640,6 +622,24 @@
   },
   "policy_description_Handlers_property_handlers_uriTemplate": {
     "message": "URL za webbazowany předźěłak. Dyrbi z https:// započeć a „%s“ za narunanje wobsahować"
+  },
+  "policy_description_Handlers_type_file_extension": {
+    "message": "Datajowa kóncowka"
+  },
+  "policy_description_Handlers_type_file_extension_placeholder": {
+    "message": "na přikład „pdf“"
+  },
+  "policy_description_Handlers_type_mime_type": {
+    "message": "MIME-Typ"
+  },
+  "policy_description_Handlers_type_mime_type_placeholder": {
+    "message": "na přikład „application/msword“"
+  },
+  "policy_description_Handlers_type_schema": {
+    "message": "Šema"
+  },
+  "policy_description_Handlers_type_schema_placeholder": {
+    "message": "na přikład „mailto“"
   },
   "policy_description_HardwareAcceleration": {
     "message": "Hardwarowe pospěšenje znjemóžnić"
@@ -677,11 +677,11 @@
   "policy_description_ManagedBookmarks": {
     "message": "Zrjadowane zapołožki (wot wužiwarja njezměnjomne abo njezhašomne)"
   },
-  "policy_description_ManagedBookmarks_toplevel_name": {
-    "message": "Mjeno rjadowaka zapołožkow"
-  },
   "policy_description_ManagedBookmarks_name": {
     "message": "Mjeno"
+  },
+  "policy_description_ManagedBookmarks_toplevel_name": {
+    "message": "Mjeno rjadowaka zapołožkow"
   },
   "policy_description_NetworkPrediction": {
     "message": "DNS-předzačitanje zmóžnić abo znjemóžnić"
@@ -962,6 +962,9 @@
   "policy_description_Proxy_AutoLogin_true": {
     "message": "Awtentifikowanske naprašowanje njepokazać"
   },
+  "policy_description_Proxy_FTPProxy": {
+    "message": "FTP-proksy. Zo byšće portowe čisło konfigurował, přidajće prošu „:“ slědowany přez portowe čisło"
+  },
   "policy_description_Proxy_HTTPProxy": {
     "message": "HTTP-proksy. Zo byšće portowe čisło konfigurował, přidajće prošu „:“ slědowany přez portowe čisło"
   },
@@ -979,9 +982,6 @@
   },
   "policy_description_Proxy_Mode_system": {
     "message": "Nastajenja proksy systema wužiwać"
-  },
-  "policy_description_Proxy_FTPProxy": {
-    "message": "FTP-proksy. Zo byšće portowe čisło konfigurował, přidajće prošu „:“ slědowany přez portowe čisło"
   },
   "policy_description_Proxy_Passthrough": {
     "message": "Žadyn proksy za…"
@@ -1049,14 +1049,14 @@
   "policy_description_SanitizeOnShutdown_Locked_true": {
     "message": "Jenož wubrane nastajenja před změnu škitać"
   },
+  "policy_description_SanitizeOnShutdown_OfflineApps": {
+    "message": "Daty websydła offline"
+  },
   "policy_description_SanitizeOnShutdown_Sessions": {
     "message": "Aktiwne přizjewjenja"
   },
   "policy_description_SanitizeOnShutdown_SiteSettings": {
     "message": "Nastajenja websydła"
-  },
-  "policy_description_SanitizeOnShutdown_OfflineApps": {
-    "message": "Daty websydła offline"
   },
   "policy_description_SearchBar": {
     "message": "Postaja, hač pytanske polo je kombinowane z adresowym polom abo separatne"

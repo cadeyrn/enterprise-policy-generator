@@ -10,7 +10,7 @@ gulp.task('lint-html', () => gulp.src(['./src/html/*.html'])
   .pipe(gulpHtmllint({ config : '.htmllintrc.json' }))
 );
 
-gulp.task('lint-js', () => gulp.src(['gulpfile.js', './src/js/**/*.js'])
+gulp.task('lint-js', () => gulp.src(['gulpfile.js', './src/js/**/*.js', './src/_locales/**/*.json'])
   .pipe(gulpEslint())
   .pipe(gulpEslint.format())
 );

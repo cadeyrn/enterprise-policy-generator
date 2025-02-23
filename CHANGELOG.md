@@ -4,6 +4,10 @@
 
 ### Version 6.2.0 (Work in Progress)
 
+#### Code Quality
+
+- enabled linting for JSON files
+
 #### Dependencies
 
 - Updated eslint from version 9.9.1 to 9.21.0, switched to new flat configuration and replaced / removed deprecations

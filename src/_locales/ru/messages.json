@@ -14,6 +14,9 @@
   "configuration_import": {
     "message": "импорт конфигурации"
   },
+  "enterprise_only_label": {
+    "message": "работает только в Firefox ESR"
+  },
   "enum_value_block_no": {
     "message": "не блокировать"
   },
@@ -34,9 +37,6 @@
   },
   "enum_value_yes": {
     "message": "да"
-  },
-  "enterprise_only_label": {
-    "message": "работает только в Firefox ESR"
   },
   "explanation_about_policies": {
     "message": "По адресу about:policies имеется обзор всех активных политик и ошибок в файле \"policies.json\"."
@@ -116,14 +116,17 @@
   "policy_category_block_access": {
     "message": "Заблокировать доступ"
   },
-  "policy_category_disable_features": {
-    "message": "Отключить функции"
-  },
   "policy_category_customization": {
     "message": "Настройки"
   },
+  "policy_category_disable_features": {
+    "message": "Отключить функции"
+  },
   "policy_category_network": {
     "message": "Сеть"
+  },
+  "policy_category_others": {
+    "message": "Другие политики"
   },
   "policy_category_privacy": {
     "message": "Приватность"
@@ -133,9 +136,6 @@
   },
   "policy_category_update_and_data": {
     "message": "Обновления и сбор данных"
-  },
-  "policy_category_others": {
-    "message": "Другие политики"
   },
   "policy_description_3rdParty": {
     "message": "Preconfiguration of settings for extensions that use chrome.storage.managed"
@@ -572,41 +572,23 @@
   "policy_description_FirefoxHome": {
     "message": "Настройка домашней страницы Firefox"
   },
-  "policy_description_FirefoxHome_Search": {
-    "message": "Поиск"
-  },
-  "policy_description_FirefoxHome_TopSites": {
-    "message": "Топ сайтов"
-  },
   "policy_description_FirefoxHome_Highlights": {
     "message": "Основные моменты"
   },
   "policy_description_FirefoxHome_Pocket": {
     "message": "Pocket рекомендации"
   },
+  "policy_description_FirefoxHome_Search": {
+    "message": "Поиск"
+  },
   "policy_description_FirefoxHome_Snippets": {
     "message": "Сниппеты"
   },
+  "policy_description_FirefoxHome_TopSites": {
+    "message": "Топ сайтов"
+  },
   "policy_description_Handlers": {
     "message": "Configure default application handlers"
-  },
-  "policy_description_Handlers_type_file_extension": {
-    "message": "File extension"
-  },
-  "policy_description_Handlers_type_file_extension_placeholder": {
-    "message": "e.g. “pdf”"
-  },
-  "policy_description_Handlers_type_mime_type": {
-    "message": "MIME type"
-  },
-  "policy_description_Handlers_type_mime_type_placeholder": {
-    "message": "e.g. “application/msword”"
-  },
-  "policy_description_Handlers_type_schema": {
-    "message": "Scheme"
-  },
-  "policy_description_Handlers_type_schema_placeholder": {
-    "message": "e.g. “mailto”"
   },
   "policy_description_Handlers_property_action": {
     "message": "Action"
@@ -640,6 +622,24 @@
   },
   "policy_description_Handlers_property_handlers_uriTemplate": {
     "message": "URL to a web-based handler. Must start with https:// and contain \"%s\" for the substitution"
+  },
+  "policy_description_Handlers_type_file_extension": {
+    "message": "File extension"
+  },
+  "policy_description_Handlers_type_file_extension_placeholder": {
+    "message": "e.g. “pdf”"
+  },
+  "policy_description_Handlers_type_mime_type": {
+    "message": "MIME type"
+  },
+  "policy_description_Handlers_type_mime_type_placeholder": {
+    "message": "e.g. “application/msword”"
+  },
+  "policy_description_Handlers_type_schema": {
+    "message": "Scheme"
+  },
+  "policy_description_Handlers_type_schema_placeholder": {
+    "message": "e.g. “mailto”"
   },
   "policy_description_HardwareAcceleration": {
     "message": "Отключить аппаратное ускорение"
@@ -677,11 +677,11 @@
   "policy_description_ManagedBookmarks": {
     "message": "Managed bookmarks (cannot be changed or removed by the user)"
   },
-  "policy_description_ManagedBookmarks_toplevel_name": {
-    "message": "Name of the bookmarks folder"
-  },
   "policy_description_ManagedBookmarks_name": {
     "message": "Name"
+  },
+  "policy_description_ManagedBookmarks_toplevel_name": {
+    "message": "Name of the bookmarks folder"
   },
   "policy_description_NetworkPrediction": {
     "message": "Включить или отключить предвыборку DNS (прогнозирование)"
@@ -962,6 +962,9 @@
   "policy_description_Proxy_AutoLogin_true": {
     "message": "Не запрашивать аутентификацию"
   },
+  "policy_description_Proxy_FTPProxy": {
+    "message": "FTP прокси. Чтобы настроить номера портов, добавьте \":\", а затем номер порта"
+  },
   "policy_description_Proxy_HTTPProxy": {
     "message": "HTTP прокси. Чтобы настроить номера портов, добавьте \":\", а затем номер порта"
   },
@@ -979,9 +982,6 @@
   },
   "policy_description_Proxy_Mode_system": {
     "message": "системные настройки прокси"
-  },
-  "policy_description_Proxy_FTPProxy": {
-    "message": "FTP прокси. Чтобы настроить номера портов, добавьте \":\", а затем номер порта"
   },
   "policy_description_Proxy_Passthrough": {
     "message": "Нет прокси для…"
@@ -1049,14 +1049,14 @@
   "policy_description_SanitizeOnShutdown_Locked_true": {
     "message": "Protect only the set options from changes"
   },
+  "policy_description_SanitizeOnShutdown_OfflineApps": {
+    "message": "Данные автономных сайтов"
+  },
   "policy_description_SanitizeOnShutdown_Sessions": {
     "message": "Активные логины (сеансы)"
   },
   "policy_description_SanitizeOnShutdown_SiteSettings": {
     "message": "Настройки сайтов"
-  },
-  "policy_description_SanitizeOnShutdown_OfflineApps": {
-    "message": "Данные автономных сайтов"
   },
   "policy_description_SearchBar": {
     "message": "Строка поиска - единая или отдельная"
