@@ -2073,47 +2073,9 @@ const policies = {
         ]
       },
       {
-        name : 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA',
+        name : 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA',
         type : 'enum',
-        label : 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA',
-        options : [
-          {
-            label : browser.i18n.getMessage('enum_value_no_preference'),
-            value : null
-          },
-          {
-            label : browser.i18n.getMessage('enum_value_enable_yes'),
-            value : 'false'
-          },
-          {
-            label : browser.i18n.getMessage('enum_value_enable_no'),
-            value : 'true'
-          }
-        ]
-      },
-      {
-        name : 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA',
-        type : 'enum',
-        label : 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA',
-        options : [
-          {
-            label : browser.i18n.getMessage('enum_value_no_preference'),
-            value : null
-          },
-          {
-            label : browser.i18n.getMessage('enum_value_enable_yes'),
-            value : 'false'
-          },
-          {
-            label : browser.i18n.getMessage('enum_value_enable_no'),
-            value : 'true'
-          }
-        ]
-      },
-      {
-        name : 'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256',
-        type : 'enum',
-        label : 'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256',
+        label : 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA',
         options : [
           {
             label : browser.i18n.getMessage('enum_value_no_preference'),
@@ -2149,9 +2111,9 @@ const policies = {
         ]
       },
       {
-        name : 'TLS_RSA_WITH_AES_128_CBC_SHA',
+        name : 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA',
         type : 'enum',
-        label : 'TLS_RSA_WITH_AES_128_CBC_SHA',
+        label : 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA',
         options : [
           {
             label : browser.i18n.getMessage('enum_value_no_preference'),
@@ -2168,9 +2130,123 @@ const policies = {
         ]
       },
       {
-        name : 'TLS_RSA_WITH_AES_256_CBC_SHA',
+        name : 'TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384',
         type : 'enum',
-        label : 'TLS_RSA_WITH_AES_256_CBC_SHA',
+        label : 'TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'true'
+          }
+        ]
+      },
+      {
+        name : 'TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256',
+        type : 'enum',
+        label : 'TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'true'
+          }
+        ]
+      },
+      {
+        name : 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA',
+        type : 'enum',
+        label : 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'true'
+          }
+        ]
+      },
+      {
+        name : 'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256',
+        type : 'enum',
+        label : 'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'true'
+          }
+        ]
+      },
+      {
+        name : 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA',
+        type : 'enum',
+        label : 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'true'
+          }
+        ]
+      },
+      {
+        name : 'TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384',
+        type : 'enum',
+        label : 'TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'true'
+          }
+        ]
+      },
+      {
+        name : 'TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256',
+        type : 'enum',
+        label : 'TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256',
         options : [
           {
             label : browser.i18n.getMessage('enum_value_no_preference'),
@@ -2206,9 +2282,47 @@ const policies = {
         ]
       },
       {
+        name : 'TLS_RSA_WITH_AES_128_CBC_SHA',
+        type : 'enum',
+        label : 'TLS_RSA_WITH_AES_128_CBC_SHA',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'true'
+          }
+        ]
+      },
+      {
         name : 'TLS_RSA_WITH_AES_128_GCM_SHA256',
         type : 'enum',
         label : 'TLS_RSA_WITH_AES_128_GCM_SHA256',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'true'
+          }
+        ]
+      },
+      {
+        name : 'TLS_RSA_WITH_AES_256_CBC_SHA',
+        type : 'enum',
+        label : 'TLS_RSA_WITH_AES_256_CBC_SHA',
         options : [
           {
             label : browser.i18n.getMessage('enum_value_no_preference'),

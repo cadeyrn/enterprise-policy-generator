@@ -21,6 +21,8 @@
   when the application is not running, see [#233](https://github.com/cadeyrn/enterprise-policy-generator/issues/233)
 - Added support for ManualAppUpdateOnly policy to disable prompts for Firefox updates, see
   [#237](https://github.com/cadeyrn/enterprise-policy-generator/issues/237)
+- Added several new cryptographic ciphers to DisabledCiphers policy and sorted them alphabetically, see
+  [#235](https://github.com/cadeyrn/enterprise-policy-generator/issues/235)
 
 #### Notable Changes and Code Quality
 
