@@ -141,7 +141,7 @@ const configurator = {
         }
 
         if (excludePolicy) {
-          excludePolicy.split(',').forEach(policy => {
+          excludePolicy.split(',').forEach((policy) => {
             configurator.handlePolicyExclusion(el, policy);
           });
         }
@@ -2060,7 +2060,7 @@ const configurator = {
    * @returns {void}
    */
   handlePolicyExclusion (elPolicy, excludedPolicyName) {
-    let elExcludedPolicy;
+    let elExcludedPolicy = null;
 
     if (excludedPolicyName.includes('=')) {
       const excludePolicyArray = excludedPolicyName.split('=');
@@ -2068,10 +2068,26 @@ const configurator = {
       const elExcludedPolicyParent = elExcludedPolicy.parentElement;
       const elExcludedPolicySelect = elExcludedPolicyParent.querySelector('select');
 
+      // let's create a copy of the DOM element as elExcludedPolicy may be null later in the code below
+      const elExcludedPolicyCopy = elExcludedPolicy;
+
       if (elExcludedPolicySelect) {
         if (elExcludedPolicySelect.value !== excludePolicyArray[1]) {
           elExcludedPolicy = null;
         }
+
+        elExcludedPolicyCopy.addEventListener('change', () => {
+          if (elExcludedPolicyCopy.checked && elExcludedPolicySelect.value === excludePolicyArray[1]) {
+            elPolicy.setAttribute('disabled', 'disabled');
+            elPolicy.parentElement.classList.add('excluded');
+            elPolicy.parentElement.querySelector('select')?.setAttribute('disabled', 'disabled');
+          }
+          else {
+            elPolicy.removeAttribute('disabled');
+            elPolicy.parentElement.classList.remove('excluded');
+            elPolicy.parentElement.querySelector('select')?.removeAttribute('disabled');
+          }
+        });
 
         elExcludedPolicySelect.addEventListener('change', () => {
           if (elExcludedPolicySelect.value === excludePolicyArray[1]) {
