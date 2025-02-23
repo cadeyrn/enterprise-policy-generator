@@ -25,7 +25,7 @@ const output = {
     output.preferences = {};
 
     // iterate over all checked policy fields and generate output
-    [...document.querySelectorAll('.primary-checkbox')].forEach((el) => {
+    [...document.querySelectorAll('.primary-checkbox:not([disabled])')].forEach((el) => {
       if (el.checked) {
         if (el.getAttribute('data-type') === 'array') {
           output.generateOutputForArrays(el);

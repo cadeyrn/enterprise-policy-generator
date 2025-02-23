@@ -143,14 +143,17 @@ const configurator = {
         if (excludePolicy) {
           const elExcludedPolicy = document.querySelector('[data-name="' + excludePolicy + '"]');
           const elExcludedPolicyParent = elExcludedPolicy.parentNode;
+          const elExcludedPolicySelect = elExcludedPolicyParent.querySelector('select');
 
           if (el.checked) {
             elExcludedPolicy.setAttribute('disabled', 'disabled');
             elExcludedPolicyParent.classList.add('excluded');
+            elExcludedPolicySelect?.setAttribute('disabled', 'disabled');
           }
           else {
             elExcludedPolicy.removeAttribute('disabled');
             elExcludedPolicyParent.classList.remove('excluded');
+            elExcludedPolicySelect?.removeAttribute('disabled');
           }
         }
       });

@@ -4,7 +4,11 @@
 
 ### Version 6.2.0 (Work in Progress)
 
-#### Code Quality
+#### Bugfixes
+
+- It was possible to enter a scenario in which a policy with an enum field is first enabled and then excluded by
+  another policy. In this case, the visually correctly disabled policy was actually still active, fixes
+  [#290](https://github.com/cadeyrn/enterprise-policy-generator/issues/290)
 
 #### Notable Changes and Code Quality
 
