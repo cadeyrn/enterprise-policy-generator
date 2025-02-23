@@ -2054,7 +2054,7 @@ const configurator = {
   /**
    * Handles the exclusion of policies.
    *
-   * @param {HTMLElement} elPolicy - the DOM node of the current element
+   * @param {HTMLInputElement} elPolicy - the DOM node of the current element
    * @param {string} excludedPolicyName - the name of the excluded element
    *
    * @returns {void}
