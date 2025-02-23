@@ -2311,7 +2311,7 @@ const policies = {
 
   DisableAppUpdate : {
     first_available : { mainstream : '62.0', esr : '60.0' },
-    exclude : ['AppAutoUpdate', 'BackgroundAppUpdate'],
+    exclude : ['AppAutoUpdate', 'BackgroundAppUpdate', 'ManualAppUpdateOnly'],
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
@@ -2349,6 +2349,13 @@ const policies = {
         value : 'false'
       }
     ]
+  },
+
+  ManualAppUpdateOnly : {
+    exclude : 'DisableAppUpdate',
+    first_available : { mainstream : '87.0', esr : '91.0' },
+    ui_category : 'updates-and-data',
+    type : 'boolean'
   },
 
   AppUpdateURL : {

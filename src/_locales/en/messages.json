@@ -686,6 +686,9 @@
   "policy_description_ManagedBookmarks_toplevel_name": {
     "message": "Name of the bookmarks folder"
   },
+  "policy_description_ManualAppUpdateOnly": {
+    "message": "Do not prompt for Firefox updates"
+  },
   "policy_description_NetworkPrediction": {
     "message": "Enable or disable network prediction (DNS prefetching)"
   },

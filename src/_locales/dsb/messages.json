@@ -686,6 +686,9 @@
   "policy_description_ManagedBookmarks_toplevel_name": {
     "message": "Mě zarědnika cytańskich znamjenjow"
   },
+  "policy_description_ManualAppUpdateOnly": {
+    "message": "Do not prompt for Firefox updates"
+  },
   "policy_description_NetworkPrediction": {
     "message": "DNS-pśedzacytanje zmóžniś abo znjemóžniś"
   },

@@ -686,6 +686,9 @@
   "policy_description_ManagedBookmarks_toplevel_name": {
     "message": "Name des Lesezeichen-Ordners"
   },
+  "policy_description_ManualAppUpdateOnly": {
+    "message": "Keine Aufforderung zur Aktualisierung von Firefox"
+  },
   "policy_description_NetworkPrediction": {
     "message": "DNS Prefetching aktivieren oder deaktivieren"
   },

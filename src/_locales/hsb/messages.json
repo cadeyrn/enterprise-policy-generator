@@ -686,6 +686,9 @@
   "policy_description_ManagedBookmarks_toplevel_name": {
     "message": "Mjeno rjadowaka zapołožkow"
   },
+  "policy_description_ManualAppUpdateOnly": {
+    "message": "Do not prompt for Firefox updates"
+  },
   "policy_description_NetworkPrediction": {
     "message": "DNS-předzačitanje zmóžnić abo znjemóžnić"
   },

@@ -19,6 +19,8 @@
 
 - Added support for BackgroundAppUpdate policy to allow or disallow installing updates of Firefox in the background,
   when the application is not running, see [#233](https://github.com/cadeyrn/enterprise-policy-generator/issues/233)
+- Added support for ManualAppUpdateOnly policy to disable prompts for Firefox updates, see
+  [#237](https://github.com/cadeyrn/enterprise-policy-generator/issues/237)
 
 #### Notable Changes and Code Quality
 
