@@ -26,6 +26,8 @@
   [#236](https://github.com/cadeyrn/enterprise-policy-generator/issues/236)
 - Added several new cryptographic ciphers to DisabledCiphers policy and sorted them alphabetically, see
   [#235](https://github.com/cadeyrn/enterprise-policy-generator/issues/235)
+- Added Encoding option to SearchEngines policy, see
+  [#239](https://github.com/cadeyrn/enterprise-policy-generator/issues/239)
 
 #### Notable Changes and Code Quality
 

@@ -1088,6 +1088,9 @@
   "policy_description_SearchEngines_Add_Description": {
     "message": "Beschreibung"
   },
+  "policy_description_SearchEngines_Add_Encoding": {
+    "message": "Kodierung (Standard: UTF-8)"
+  },
   "policy_description_SearchEngines_Add_IconURL": {
     "message": "Icon-URL oder data:image…"
   },

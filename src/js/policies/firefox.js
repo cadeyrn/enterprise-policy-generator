@@ -603,6 +603,11 @@ const policies = {
             name : 'PostData',
             label : browser.i18n.getMessage('policy_description_SearchEngines_Add_PostData'),
             type : 'string'
+          },
+          {
+            name : 'Encoding',
+            label : browser.i18n.getMessage('policy_description_SearchEngines_Add_Encoding'),
+            type : 'string'
           }
         ]
       },
