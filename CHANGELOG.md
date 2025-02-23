@@ -37,7 +37,7 @@
 
 #### Dependencies
 
-- Updated eslint from version 9.9.1 to 9.21.0, switched to new flat configuration and replaced / removed deprecations
+- Updated eslint from version 9.9.1 to 9.21.0, switched to flat configuration and replaced / removed deprecated rules
 - Updated eslint-plugin-jsdoc from version 50.2.2 to 50.6.3
 - Updated gulp-eslint-new from version 2.3.0 to 2.4.0
 - Updated jsdoc from version 4.0.3 to 4.0.4
