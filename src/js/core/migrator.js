@@ -120,7 +120,6 @@ const migrator = {
           }
 
           if (configuration.arrayfields.InstallAddonsPermission_Allow) {
-            // eslint-disable-next-line max-depth
             for (const idx of Object.values(configuration.arrayfields.InstallAddonsPermission_Allow)) {
               configuration.arrayfields.ExtensionSettings_install_sources_install_sources.push(idx);
             }
@@ -130,7 +129,6 @@ const migrator = {
 
           for (const [key, url] of Object.entries(configuration.input)) {
             const matches = key.match(/^InstallAddonsPermission_Allow_(\d+)/i);
-            // eslint-disable-next-line max-depth
             if (matches) {
               configuration.input['ExtensionSettings_install_sources_install_sources_' + matches[1]] = url;
               delete configuration.input['InstallAddonsPermission_Allow_' + matches[1]];

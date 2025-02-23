@@ -11,7 +11,7 @@ gulp.task('lint-html', () => gulp.src(['./src/html/*.html'])
 );
 
 gulp.task('lint-js', () => gulp.src(['gulpfile.js', './src/js/**/*.js'])
-  .pipe(gulpEslint({ overrideConfigFile : '.eslintrc.json', configType : 'eslintrc' }))
+  .pipe(gulpEslint())
   .pipe(gulpEslint.format())
 );
 
