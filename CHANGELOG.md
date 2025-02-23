@@ -15,6 +15,11 @@
   another policy. In this case, the visually correctly disabled policy was actually still active, fixes
   [#290](https://github.com/cadeyrn/enterprise-policy-generator/issues/290)
 
+#### Enterprise Policies
+
+- Added support for BackgroundAppUpdate policy to allow or disallow installing updates of Firefox in the background,
+  when the application is not running, see [#233](https://github.com/cadeyrn/enterprise-policy-generator/issues/233)
+
 #### Notable Changes and Code Quality
 
 - Enabled linting for translation files

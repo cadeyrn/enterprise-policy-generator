@@ -2311,7 +2311,7 @@ const policies = {
 
   DisableAppUpdate : {
     first_available : { mainstream : '62.0', esr : '60.0' },
-    exclude : 'AppAutoUpdate',
+    exclude : ['AppAutoUpdate', 'BackgroundAppUpdate'],
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
@@ -2319,6 +2319,24 @@ const policies = {
   AppAutoUpdate : {
     first_available : { mainstream : '75.0', esr : '68.7' },
     exclude : 'DisableAppUpdate',
+    ui_category : 'updates-and-data',
+    type : 'enum',
+    options : [
+      {
+        label : browser.i18n.getMessage('enum_value_yes'),
+        value : 'true'
+      },
+      {
+        label : browser.i18n.getMessage('enum_value_no'),
+        value : 'false'
+      }
+    ]
+  },
+
+  BackgroundAppUpdate : {
+    additional_note : browser.i18n.getMessage('requirement_windows'),
+    first_available : { mainstream : '90.0', esr : '91.0' },
+    exclude : ['DisableAppUpdate', 'AppAutoUpdate=false'],
     ui_category : 'updates-and-data',
     type : 'enum',
     options : [

@@ -200,6 +200,9 @@
   "policy_description_AutoLaunchProtocolsFromOrigins_protocol": {
     "message": "Protokoll"
   },
+  "policy_description_BackgroundAppUpdate": {
+    "message": "Firefox-Updates im Hintergrund installieren, wenn die Anwendung nicht läuft"
+  },
   "policy_description_BlockAboutAddons": {
     "message": "Blockiere Zugang zur Erweiterungs-Verwaltung (about:addons)"
   },

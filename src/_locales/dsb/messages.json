@@ -200,6 +200,9 @@
   "policy_description_AutoLaunchProtocolsFromOrigins_protocol": {
     "message": "Protokol"
   },
+  "policy_description_BackgroundAppUpdate": {
+    "message": "Install Firefox updates in the background, when the application is not running"
+  },
   "policy_description_BlockAboutAddons": {
     "message": "Pśistup k zastojnikoju dodankow (about:addons) blokěrowaś"
   },
