@@ -6,7 +6,7 @@
 
 #### Dependencies
 
-- Updated eslint from version 9.9.1 to 9.21.0 and switch to new flat configuration
+- Updated eslint from version 9.9.1 to 9.21.0, switched to new flat configuration and replaced / removed deprecations
 - Updated eslint-plugin-jsdoc from version 50.2.2 to 50.6.3
 - Updated gulp-eslint-new from version 2.3.0 to 2.4.0
 - Updated jsdoc from version 4.0.3 to 4.0.4
@@ -41,7 +41,7 @@
   [#272](https://github.com/cadeyrn/enterprise-policy-generator/issues/272),
   [#273](https://github.com/cadeyrn/enterprise-policy-generator/issues/273),
   [#275](https://github.com/cadeyrn/enterprise-policy-generator/issues/275),
-  [#276](https://github.com/cadeyrn/enterprise-policy-generator/issues/276) and
+  [#276](https://github.com/cadeyrn/enterprise-policy-generator/issues/276), and
   [#278](https://github.com/cadeyrn/enterprise-policy-generator/issues/278)
 - It was possible to save preferences with an invalid preference name and use it in policies.json when loaded from
   saved configurations, see [#282](https://github.com/cadeyrn/enterprise-policy-generator/issues/282)
