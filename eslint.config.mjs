@@ -36,6 +36,7 @@ export default [{
     '@stylistic/js/dot-location': ['error', 'property'],
     '@stylistic/js/eol-last': 'error',
     '@stylistic/js/function-call-argument-newline': ['error', 'consistent'],
+    '@stylistic/js/function-call-spacing': ['error', 'never'],
     '@stylistic/js/func-call-spacing': 'error',
     '@stylistic/js/function-paren-newline': 'off',
     '@stylistic/js/generator-star-spacing': 'error',
@@ -179,6 +180,7 @@ export default [{
     'jsdoc/require-yields-check': 'warn',
     'jsdoc/sort-tags': 'off',
     'jsdoc/tag-lines': 'off',
+    'jsdoc/text-escaping': 'off',
     'jsdoc/valid-types': 'warn',
     'logical-assignment-operators': ['error', 'never'],
     'max-classes-per-file': 'off',
@@ -350,6 +352,7 @@ export default [{
     'valid-typeof': 'error',
     'vars-on-top': 'error',
     'xss/no-location-href-assign': 'error',
+    'xss/no-mixed-html': 'off',
     'yoda': 'error'
   }
 }];
