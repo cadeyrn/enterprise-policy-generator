@@ -6,7 +6,11 @@
 
 #### Code Quality
 
-- enabled linting for JSON files
+#### Notable Changes and Code Quality
+
+- Enabled linting for translation files
+- Changed copyright year from 2024 to 2025, fixes
+  [#289](https://github.com/cadeyrn/enterprise-policy-generator/issues/289)
 
 #### Dependencies
 
