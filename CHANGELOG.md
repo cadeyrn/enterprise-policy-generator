@@ -6,8 +6,11 @@
 
 #### Dependencies
 
-- Updated eslint from version 9.9.1 to 9.10.0
-- Updated eslint-plugin-jsdoc from version 50.2.2 to 50.2.3
+- Updated eslint from version 9.9.1 to 9.21.0
+- Updated eslint-plugin-jsdoc from version 50.2.2 to 50.6.3
+- Updated gulp-eslint-new from version 2.3.0 to 2.4.0
+- Updated jsdoc from version 4.0.3 to 4.0.4
+- Updated web-ext from version  8.2.0 to 8.4.0
 
 ---
 
