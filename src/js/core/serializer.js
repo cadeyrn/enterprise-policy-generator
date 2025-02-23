@@ -155,11 +155,20 @@ const serializer = {
         // set "excluded" state
         const excludePolicy = el.getAttribute('data-exclude');
         if (excludePolicy) {
-          const elExcludedPolicy = document.querySelector('[data-name="' + excludePolicy + '"]');
-          const elExcludedPolicyParent = elExcludedPolicy.parentNode;
+          excludePolicy.split(',').forEach((excludedPolicyName) => {
+            if (excludedPolicyName.includes('=')) {
+              const excludePolicyArray = excludedPolicyName.split('=');
 
-          elExcludedPolicy.setAttribute('disabled', 'disabled');
-          elExcludedPolicyParent.classList.add('excluded');
+              // eslint-disable-next-line no-param-reassign
+              excludedPolicyName = excludePolicyArray[0];
+            }
+
+            const elExcludedPolicy = document.querySelector('[data-name="' + excludedPolicyName + '"]');
+            const elExcludedPolicyParent = elExcludedPolicy.parentNode;
+
+            elExcludedPolicy.setAttribute('disabled', 'disabled');
+            elExcludedPolicyParent.classList.add('excluded');
+          });
         }
       }
     });
