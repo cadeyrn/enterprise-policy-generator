@@ -576,19 +576,22 @@
     "message": "Personnaliser la page d'accueil de Firefox"
   },
   "policy_description_FirefoxHome_Highlights": {
-    "message": "Mis en avant"
+    "message": "Activité récente"
   },
   "policy_description_FirefoxHome_Pocket": {
-    "message": "Recommendations Pocket"
+    "message": "Articles recommandés"
   },
   "policy_description_FirefoxHome_Search": {
-    "message": "Recherche Web"
+    "message": "Champ de recherche"
   },
-  "policy_description_FirefoxHome_Snippets": {
-    "message": "Snippets"
+  "policy_description_FirefoxHome_SponsoredPocket": {
+    "message": "Articles recommandés sponsorisés"
+  },
+  "policy_description_FirefoxHome_SponsoredTopSites": {
+    "message": "Raccourcis sponsorisés"
   },
   "policy_description_FirefoxHome_TopSites": {
-    "message": "Top Sites"
+    "message": "Raccourcis"
   },
   "policy_description_Handlers": {
     "message": "Configure default application handlers"

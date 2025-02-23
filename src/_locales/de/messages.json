@@ -576,19 +576,22 @@
     "message": "Den Firefox-Startbildschirm anpassen"
   },
   "policy_description_FirefoxHome_Highlights": {
-    "message": "Überblick"
+    "message": "Neueste Aktivität"
   },
   "policy_description_FirefoxHome_Pocket": {
-    "message": "Pocket-Empfehlungen"
+    "message": "Empfohlene Geschichten"
   },
   "policy_description_FirefoxHome_Search": {
-    "message": "Internetsuche"
+    "message": "Suchfeld"
   },
-  "policy_description_FirefoxHome_Snippets": {
-    "message": "Kurzinformationen"
+  "policy_description_FirefoxHome_SponsoredPocket": {
+    "message": "Gesponserte empfohlene Geschichten"
+  },
+  "policy_description_FirefoxHome_SponsoredTopSites": {
+    "message": "Gesponserte Verknüpfungen"
   },
   "policy_description_FirefoxHome_TopSites": {
-    "message": "Wichtige Seiten"
+    "message": "Verknüpfungen"
   },
   "policy_description_Handlers": {
     "message": "Standardanwendungen für das Öffnen von Dateien, Protokollen und MIME-Typen festlegen"

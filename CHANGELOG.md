@@ -21,6 +21,9 @@
   when the application is not running, see [#233](https://github.com/cadeyrn/enterprise-policy-generator/issues/233)
 - Added support for ManualAppUpdateOnly policy to disable prompts for Firefox updates, see
   [#237](https://github.com/cadeyrn/enterprise-policy-generator/issues/237)
+- Added SponsoredTopSites and SponsoredPocket options to FirefoxHome policy, removed Snippets option (also from existing
+  configurations), updated order and translations of all options to reflect the current order and naming in Firefox, see
+  [#236](https://github.com/cadeyrn/enterprise-policy-generator/issues/236)
 - Added several new cryptographic ciphers to DisabledCiphers policy and sorted them alphabetically, see
   [#235](https://github.com/cadeyrn/enterprise-policy-generator/issues/235)
 

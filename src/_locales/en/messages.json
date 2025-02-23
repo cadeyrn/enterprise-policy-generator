@@ -576,19 +576,22 @@
     "message": "Customize the Firefox home page"
   },
   "policy_description_FirefoxHome_Highlights": {
-    "message": "Highlights"
+    "message": "Recent activity"
   },
   "policy_description_FirefoxHome_Pocket": {
-    "message": "Pocket Recommendations"
+    "message": "Recommended stories"
   },
   "policy_description_FirefoxHome_Search": {
-    "message": "Web Search"
+    "message": "Search field"
   },
-  "policy_description_FirefoxHome_Snippets": {
-    "message": "Snippets"
+  "policy_description_FirefoxHome_SponsoredPocket": {
+    "message": "Sponsored recommended stories"
+  },
+  "policy_description_FirefoxHome_SponsoredTopSites": {
+    "message": "Sponsored shortcuts"
   },
   "policy_description_FirefoxHome_TopSites": {
-    "message": "Top Sites"
+    "message": "Shortcuts"
   },
   "policy_description_Handlers": {
     "message": "Configure default application handlers"

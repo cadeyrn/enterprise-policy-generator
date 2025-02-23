@@ -576,19 +576,22 @@
     "message": "Настройка домашней страницы Firefox"
   },
   "policy_description_FirefoxHome_Highlights": {
-    "message": "Основные моменты"
+    "message": "Последние действия"
   },
   "policy_description_FirefoxHome_Pocket": {
-    "message": "Pocket рекомендации"
+    "message": "Рекомендуемые истории"
   },
   "policy_description_FirefoxHome_Search": {
-    "message": "Поиск"
+    "message": "Search field"
   },
-  "policy_description_FirefoxHome_Snippets": {
-    "message": "Сниппеты"
+  "policy_description_FirefoxHome_SponsoredPocket": {
+    "message": "Спонсируемые Рекомендуемые истории"
+  },
+  "policy_description_FirefoxHome_SponsoredTopSites": {
+    "message": "Спонсируемые ярлыки"
   },
   "policy_description_FirefoxHome_TopSites": {
-    "message": "Топ сайтов"
+    "message": "Ярлыки"
   },
   "policy_description_Handlers": {
     "message": "Configure default application handlers"

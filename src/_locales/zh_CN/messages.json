@@ -576,19 +576,22 @@
     "message": "自定义 Firefox 主页"
   },
   "policy_description_FirefoxHome_Highlights": {
-    "message": "集锦"
+    "message": "近期动态"
   },
   "policy_description_FirefoxHome_Pocket": {
-    "message": "Pocket 推荐"
+    "message": "推荐文章"
   },
   "policy_description_FirefoxHome_Search": {
-    "message": "网络搜索"
+    "message": "Search field"
   },
-  "policy_description_FirefoxHome_Snippets": {
-    "message": "只言片语"
+  "policy_description_FirefoxHome_SponsoredPocket": {
+    "message": "Sponsored recommended stories"
+  },
+  "policy_description_FirefoxHome_SponsoredTopSites": {
+    "message": "赞助商网站"
   },
   "policy_description_FirefoxHome_TopSites": {
-    "message": "常用网站"
+    "message": "快捷方式"
   },
   "policy_description_Handlers": {
     "message": "Configure default application handlers"

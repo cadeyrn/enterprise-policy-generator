@@ -204,5 +204,33 @@ const migrator = {
       await browser.storage.local.set({ configurations : configurations, schemaVersion : 3 });
       migrator.migrate();
     }
+  },
+
+  /**
+   * Version: EPG 6.2.0
+   *
+   * @returns {void}
+   */
+  async migration_3 () {
+    const { configurations } = await browser.storage.local.get({ configurations : [] });
+    const configurationLength = configurations.length;
+
+    if (configurationLength > 0) {
+      for (let i = 0; i < configurationLength; i++) {
+        const { configuration } = configurations[i];
+
+        /*
+         * @removed
+         *
+         * "FirefoxHome": { "Snippets" }
+         */
+        if (configuration.select.FirefoxHome_Snippets) {
+          delete configuration.select.FirefoxHome_Snippets;
+        }
+      }
+
+      await browser.storage.local.set({ configurations : configurations, schemaVersion : 4 });
+      migrator.migrate();
+    }
   }
 };

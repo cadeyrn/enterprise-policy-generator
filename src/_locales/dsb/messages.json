@@ -576,19 +576,22 @@
     "message": "Startowu wobrazowku Firefox pśiměriś"
   },
   "policy_description_FirefoxHome_Highlights": {
-    "message": "Pśeglěd"
+    "message": "Nejnowša aktiwita"
   },
   "policy_description_FirefoxHome_Pocket": {
-    "message": "Dopórucenja Pocket"
+    "message": "Dopórucone tšojeńka"
   },
   "policy_description_FirefoxHome_Search": {
-    "message": "Internetne pytanje"
+    "message": "Search field"
   },
-  "policy_description_FirefoxHome_Snippets": {
-    "message": "Krotke informacije"
+  "policy_description_FirefoxHome_SponsoredPocket": {
+    "message": "Sponserowane dopórucone tšojeńka"
+  },
+  "policy_description_FirefoxHome_SponsoredTopSites": {
+    "message": "Sponserowane zwězanja"
   },
   "policy_description_FirefoxHome_TopSites": {
-    "message": "Wažne boki"
+    "message": "Zwězanja"
   },
   "policy_description_Handlers": {
     "message": "Standardne nałoženja za wócynjanje datajow, protokolow a MIME-typow póstajiś"
