@@ -1193,6 +1193,9 @@
   "policy_description_WebsiteFilter_Exceptions": {
     "message": "例外"
   },
+  "policy_description_WindowsSSO": {
+    "message": "Allow Windows single sign-on for Microsoft, work, and school accounts"
+  },
   "policy_label_default": {
     "message": "默认"
   },

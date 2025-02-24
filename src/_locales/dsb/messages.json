@@ -725,6 +725,9 @@
   "policy_description_PasswordManagerExceptions": {
     "message": "Prevent Firefox from saving passwords for specific sites"
   },
+  "policy_description_WindowsSSO": {
+    "message": "Allow Windows single sign-on for Microsoft, work, and school accounts"
+  },
   "policy_description_PDFjs": {
     "message": "Integrěrowany PDF-wobglědowak znjemóžniś abo konfigurěrowaś"
   },
