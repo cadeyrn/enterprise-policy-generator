@@ -722,6 +722,9 @@
   "policy_description_PasswordManagerEnabled": {
     "message": "Zrjadowak hesłow dospołnje zmóžnić abo znjemóžnić"
   },
+  "policy_description_PasswordManagerExceptions": {
+    "message": "Prevent Firefox from saving passwords for specific sites"
+  },
   "policy_description_PDFjs": {
     "message": "Integrowany PDF-wobhladowak znjemóžnić abo konfigurować"
   },

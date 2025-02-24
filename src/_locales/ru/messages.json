@@ -722,6 +722,9 @@
   "policy_description_PasswordManagerEnabled": {
     "message": "Включить или отключить менеджер паролей полностью"
   },
+  "policy_description_PasswordManagerExceptions": {
+    "message": "Prevent Firefox from saving passwords for specific sites"
+  },
   "policy_description_PDFjs": {
     "message": "Disable or configure the built-in PDF viewer"
   },

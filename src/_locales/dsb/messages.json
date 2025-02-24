@@ -722,6 +722,9 @@
   "policy_description_PasswordManagerEnabled": {
     "message": "Zastojnik gronidłow dopołnje zmóžniś abo znjemóžniś"
   },
+  "policy_description_PasswordManagerExceptions": {
+    "message": "Prevent Firefox from saving passwords for specific sites"
+  },
   "policy_description_PDFjs": {
     "message": "Integrěrowany PDF-wobglědowak znjemóžniś abo konfigurěrowaś"
   },

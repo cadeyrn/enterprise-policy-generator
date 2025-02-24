@@ -1939,6 +1939,17 @@ const policies = {
     ]
   },
 
+  PasswordManagerExceptions : {
+    first_available : { mainstream : '101.0', esr : '91.10' },
+    ui_category : 'security',
+    type : 'flat-array',
+    value : {
+      label : browser.i18n.getMessage('common_url'),
+      mandatory : true,
+      url : true
+    }
+  },
+
   DisablePasswordReveal : {
     first_available : { mainstream : '71.0', esr : '68.3' },
     ui_category : 'security',
