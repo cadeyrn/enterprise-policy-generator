@@ -740,6 +740,14 @@ const configurator = {
 
     const elInput = document.createElement('input');
     elInput.setAttribute('type', 'text');
+
+    if (policy.value.url) {
+      elInput.setAttribute('type', 'url');
+    }
+    else {
+      elInput.setAttribute('type', 'text');
+    }
+
     elInput.setAttribute('id', key + '_Value_1');
     elInput.setAttribute('name', key + '_Value_1');
     elInput.setAttribute('data-name', key);
@@ -748,6 +756,11 @@ const configurator = {
     // mandatory field
     if (policy.value.mandatory) {
       configurator.addMandatoryLabel(elInput, elSubOptions);
+    }
+
+    // URL validation label
+    if (policy.value.url) {
+      configurator.addInvalidUrlLabel(elSubOptions);
     }
 
     // empty value is allowed

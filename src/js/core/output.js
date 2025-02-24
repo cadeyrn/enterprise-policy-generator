@@ -176,7 +176,9 @@ const output = {
       if (!output.hasInvalidFields(el)) {
         [...el.querySelectorAll(':scope input')].forEach((el) => {
           if (el.value || el.getAttribute('data-empty-value-allowed')) {
-            items.push(el.value);
+            if (!el.classList.contains('invalid-url-style')) {
+              items.push(el.value);
+            }
           }
         });
       }
