@@ -1310,6 +1310,95 @@ const policies = {
     type : 'object',
     properties : [
       {
+        name : 'Behavior',
+        label : browser.i18n.getMessage('policy_description_Cookies_Behavior'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Cookies_Behavior_accept'),
+            value : 'accept'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Cookies_Behavior_reject'),
+            value : 'reject'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Cookies_Behavior_reject_foreign'),
+            value : 'reject-foreign'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Cookies_Behavior_limit_foreign'),
+            value : 'limit-foreign'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Cookies_Behavior_reject_tracker'),
+            value : 'reject-tracker'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Cookies_Behavior_reject_tracker_and_partition_foreign'),
+            value : 'reject-tracker-and-partition-foreign'
+          }
+        ]
+      },
+      {
+        name : 'BehaviorPrivateBrowsing',
+        label : browser.i18n.getMessage('policy_description_Cookies_BehaviorPrivateBrowsing'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Cookies_Behavior_accept'),
+            value : 'accept'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Cookies_Behavior_reject'),
+            value : 'reject'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Cookies_Behavior_reject_foreign'),
+            value : 'reject-foreign'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Cookies_Behavior_limit_foreign'),
+            value : 'limit-foreign'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Cookies_BehaviorPrivateBrowsing_reject_tracker'),
+            value : 'reject-tracker'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Cookies_BehaviorPrivateBrowsing_reject_tracker_and_partition_foreign'),
+            value : 'reject-tracker-and-partition-foreign'
+          }
+        ]
+      },
+      {
+        name : 'ExpireAtSessionEnd',
+        label : browser.i18n.getMessage('policy_description_Cookies_ExpireAtSessionEnd'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Cookies_ExpireAtSessionEnd_true'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_Cookies_ExpireAtSessionEnd_false'),
+            value : 'false'
+          }
+        ]
+      },
+      {
         name : 'Allow',
         label : browser.i18n.getMessage('policy_description_Cookies_Allow'),
         type : 'array',
@@ -1335,60 +1424,6 @@ const policies = {
           label : browser.i18n.getMessage('policy_description_Cookies_Block_Domain'),
           type : 'url'
         }
-      },
-      {
-        name : 'Default',
-        label : browser.i18n.getMessage('policy_description_Cookies_Default'),
-        type : 'enum',
-        options : [
-          {
-            label : browser.i18n.getMessage('policy_description_Cookies_Default_true'),
-            value : 'true'
-          },
-          {
-            label : browser.i18n.getMessage('policy_description_Cookies_Default_false'),
-            value : 'false'
-          }
-        ]
-      },
-      {
-        name : 'AcceptThirdParty',
-        label : browser.i18n.getMessage('policy_description_Cookies_AcceptThirdParty'),
-        type : 'enum',
-        options : [
-          {
-            label : browser.i18n.getMessage('policy_description_Cookies_AcceptThirdParty_always'),
-            value : 'always'
-          },
-          {
-            label : browser.i18n.getMessage('policy_description_Cookies_AcceptThirdParty_never'),
-            value : 'never'
-          },
-          {
-            label : browser.i18n.getMessage('policy_description_Cookies_AcceptThirdParty_from_visited'),
-            value : 'from-visited'
-          }
-        ]
-      },
-      {
-        name : 'ExpireAtSessionEnd',
-        label : browser.i18n.getMessage('policy_description_Cookies_ExpireAtSessionEnd'),
-        type : 'enum',
-        options : [
-          {
-            label : browser.i18n.getMessage('policy_description_Cookies_ExpireAtSessionEnd_true'),
-            value : 'true'
-          },
-          {
-            label : browser.i18n.getMessage('policy_description_Cookies_ExpireAtSessionEnd_false'),
-            value : 'false'
-          }
-        ]
-      },
-      {
-        name : 'RejectTracker',
-        label : browser.i18n.getMessage('policy_description_Cookies_RejectTracker'),
-        type : 'boolean'
       }
     ]
   },

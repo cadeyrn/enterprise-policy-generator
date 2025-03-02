@@ -266,18 +266,6 @@
   "policy_description_Cookies": {
     "message": "Webbokam dowóliś abo zakazaś, cookieje stajiś"
   },
-  "policy_description_Cookies_AcceptThirdParty": {
-    "message": "Standardna gódnota za „Cookieje a sedłowe daty tśeśich póbitowarjow akceptěrowaś“"
-  },
-  "policy_description_Cookies_AcceptThirdParty_always": {
-    "message": "pśecej"
-  },
-  "policy_description_Cookies_AcceptThirdParty_from_visited": {
-    "message": "jano wót woglědanych tśeśich"
-  },
-  "policy_description_Cookies_AcceptThirdParty_never": {
-    "message": "nigda"
-  },
   "policy_description_Cookies_Allow": {
     "message": "Domeny, kótarež pśecej směju cookieje wužywaś"
   },
@@ -290,20 +278,41 @@
   "policy_description_Cookies_AllowSession_Domain": {
     "message": "Domena"
   },
+  "policy_description_Cookies_Behavior": {
+    "message": "Default behavior for cookies"
+  },
+  "policy_description_Cookies_Behavior_accept": {
+    "message": "Accept all cookies"
+  },
+  "policy_description_Cookies_Behavior_limit_foreign": {
+    "message": "Reject third party cookies for sites you haven’t visited"
+  },
+  "policy_description_Cookies_Behavior_reject": {
+    "message": "Reject all cookies"
+  },
+  "policy_description_Cookies_Behavior_reject_foreign": {
+    "message": "Reject third party cookies"
+  },
+  "policy_description_Cookies_Behavior_reject_tracker": {
+    "message": "Reject cookies for known trackers (Default)"
+  },
+  "policy_description_Cookies_Behavior_reject_tracker_and_partition_foreign": {
+    "message": "Reject cookies for known trackers and partition third-party cookies"
+  },
+  "policy_description_Cookies_BehaviorPrivateBrowsing": {
+    "message": "Default behavior for cookies in private windows"
+  },
+  "policy_description_Cookies_BehaviorPrivateBrowsing_reject_tracker": {
+    "message": "Reject cookies for known trackers"
+  },
+  "policy_description_Cookies_BehaviorPrivateBrowsing_reject_tracker_and_partition_foreign": {
+    "message": "Reject cookies for known trackers and partition third-party cookies (Default)"
+  },
   "policy_description_Cookies_Block": {
     "message": "Domeny, na kótarychž se cookieje blokěruju"
   },
   "policy_description_Cookies_Block_Domain": {
     "message": "Domena"
-  },
-  "policy_description_Cookies_Default": {
-    "message": "Standardna gódnota za „Cookieje a sedłowe daty z websedłow akceptěrowaś“"
-  },
-  "policy_description_Cookies_Default_false": {
-    "message": "Cookieje njeakceptěrowaś"
-  },
-  "policy_description_Cookies_Default_true": {
-    "message": "Cookieje akceptěrowaś"
   },
   "policy_description_Cookies_ExpireAtSessionEnd": {
     "message": "Cookieje wobchowaś…"
@@ -313,9 +322,6 @@
   },
   "policy_description_Cookies_ExpireAtSessionEnd_true": {
     "message": "… daniž Firefox se njezacynijo"
-  },
-  "policy_description_Cookies_RejectTracker": {
-    "message": "Slědowańske cookieje blokěrowaś"
   },
   "policy_description_DefaultDownloadDirectory": {
     "message": "Standardny zapis ześěgnjenjow póstajiś"
@@ -724,9 +730,6 @@
   },
   "policy_description_PasswordManagerExceptions": {
     "message": "Prevent Firefox from saving passwords for specific sites"
-  },
-  "policy_description_WindowsSSO": {
-    "message": "Allow Windows single sign-on for Microsoft, work, and school accounts"
   },
   "policy_description_PDFjs": {
     "message": "Integrěrowany PDF-wobglědowak znjemóžniś abo konfigurěrowaś"
@@ -1195,6 +1198,9 @@
   },
   "policy_description_WebsiteFilter_Exceptions": {
     "message": "Wuwześa"
+  },
+  "policy_description_WindowsSSO": {
+    "message": "Allow Windows single sign-on for Microsoft, work, and school accounts"
   },
   "policy_label_default": {
     "message": "default"

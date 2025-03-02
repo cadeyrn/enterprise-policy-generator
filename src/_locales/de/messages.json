@@ -266,18 +266,6 @@
   "policy_description_Cookies": {
     "message": "Webseiten erlauben oder verbieten, Cookies zu setzen"
   },
-  "policy_description_Cookies_AcceptThirdParty": {
-    "message": "Der Standard-Wert für „Cookies und Website-Daten von Drittanbietern akzeptieren“"
-  },
-  "policy_description_Cookies_AcceptThirdParty_always": {
-    "message": "immer"
-  },
-  "policy_description_Cookies_AcceptThirdParty_from_visited": {
-    "message": "nur von besuchten Drittanbietern"
-  },
-  "policy_description_Cookies_AcceptThirdParty_never": {
-    "message": "nie"
-  },
   "policy_description_Cookies_Allow": {
     "message": "Domains, welche Cookies immer verwenden dürfen"
   },
@@ -290,20 +278,41 @@
   "policy_description_Cookies_AllowSession_Domain": {
     "message": "Domain"
   },
+  "policy_description_Cookies_Behavior": {
+    "message": "Standard-Verhalten für Cookies"
+  },
+  "policy_description_Cookies_Behavior_accept": {
+    "message": "Alle Cookies akzeptieren"
+  },
+  "policy_description_Cookies_Behavior_limit_foreign": {
+    "message": "Cookies von Drittanbietern für Websites ablehnen, die Sie nicht besucht haben"
+  },
+  "policy_description_Cookies_Behavior_reject": {
+    "message": "Alle Cookies ablehnen"
+  },
+  "policy_description_Cookies_Behavior_reject_foreign": {
+    "message": "Cookies von Drittanbietern ablehnen"
+  },
+  "policy_description_Cookies_Behavior_reject_tracker": {
+    "message": "Cookies von bekannten Trackern ablehnen (Standard)"
+  },
+  "policy_description_Cookies_Behavior_reject_tracker_and_partition_foreign": {
+    "message": "Cookies von bekannten Trackern ablehnen und Cookies von Drittanbietern partitionieren"
+  },
+  "policy_description_Cookies_BehaviorPrivateBrowsing": {
+    "message": "Standard-Verhalten für Cookies in privaten Fenstern"
+  },
+  "policy_description_Cookies_BehaviorPrivateBrowsing_reject_tracker": {
+    "message": "Cookies von bekannten Trackern ablehnen"
+  },
+  "policy_description_Cookies_BehaviorPrivateBrowsing_reject_tracker_and_partition_foreign": {
+    "message": "Cookies von bekannten Trackern ablehnen und Cookies von Drittanbietern partitionieren (Standard)"
+  },
   "policy_description_Cookies_Block": {
     "message": "Domains, auf welchen Cookies blockiert werden"
   },
   "policy_description_Cookies_Block_Domain": {
     "message": "Domain"
-  },
-  "policy_description_Cookies_Default": {
-    "message": "Der Standard-Wert für „Cookies und Website-Daten annehmen“"
-  },
-  "policy_description_Cookies_Default_false": {
-    "message": "Cookies nicht akzeptieren"
-  },
-  "policy_description_Cookies_Default_true": {
-    "message": "Cookies akzeptieren"
   },
   "policy_description_Cookies_ExpireAtSessionEnd": {
     "message": "Behalte Cookies…"
@@ -313,9 +322,6 @@
   },
   "policy_description_Cookies_ExpireAtSessionEnd_true": {
     "message": "… bis Firefox geschlossen wird"
-  },
-  "policy_description_Cookies_RejectTracker": {
-    "message": "Tracking-Cookies blockieren"
   },
   "policy_description_DefaultDownloadDirectory": {
     "message": "Standard-Downloadverzeichnis festlegen"

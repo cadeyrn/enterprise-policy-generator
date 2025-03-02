@@ -266,18 +266,6 @@
   "policy_description_Cookies": {
     "message": "Разрешить или запретить сайтам установку cookie"
   },
-  "policy_description_Cookies_AcceptThirdParty": {
-    "message": "Значение по умолчанию для \"Принимать сторонние куки и данные сайта\""
-  },
-  "policy_description_Cookies_AcceptThirdParty_always": {
-    "message": "всегда"
-  },
-  "policy_description_Cookies_AcceptThirdParty_from_visited": {
-    "message": "с посещенных"
-  },
-  "policy_description_Cookies_AcceptThirdParty_never": {
-    "message": "никогда"
-  },
   "policy_description_Cookies_Allow": {
     "message": "Домены, для которых всегда разрешены cookie"
   },
@@ -290,20 +278,41 @@
   "policy_description_Cookies_AllowSession_Domain": {
     "message": "Домен"
   },
+  "policy_description_Cookies_Behavior": {
+    "message": "Default behavior for cookies"
+  },
+  "policy_description_Cookies_Behavior_accept": {
+    "message": "Accept all cookies"
+  },
+  "policy_description_Cookies_Behavior_limit_foreign": {
+    "message": "Reject third party cookies for sites you haven’t visited"
+  },
+  "policy_description_Cookies_Behavior_reject": {
+    "message": "Reject all cookies"
+  },
+  "policy_description_Cookies_Behavior_reject_foreign": {
+    "message": "Reject third party cookies"
+  },
+  "policy_description_Cookies_Behavior_reject_tracker": {
+    "message": "Reject cookies for known trackers (Default)"
+  },
+  "policy_description_Cookies_Behavior_reject_tracker_and_partition_foreign": {
+    "message": "Reject cookies for known trackers and partition third-party cookies"
+  },
+  "policy_description_Cookies_BehaviorPrivateBrowsing": {
+    "message": "Default behavior for cookies in private windows"
+  },
+  "policy_description_Cookies_BehaviorPrivateBrowsing_reject_tracker": {
+    "message": "Reject cookies for known trackers"
+  },
+  "policy_description_Cookies_BehaviorPrivateBrowsing_reject_tracker_and_partition_foreign": {
+    "message": "Reject cookies for known trackers and partition third-party cookies (Default)"
+  },
   "policy_description_Cookies_Block": {
     "message": "Домены, для которых cookie всегда блокируются"
   },
   "policy_description_Cookies_Block_Domain": {
     "message": "Домен"
-  },
-  "policy_description_Cookies_Default": {
-    "message": "Значение по умолчанию для \"Принимать куки и данные сайта\""
-  },
-  "policy_description_Cookies_Default_false": {
-    "message": "не принимать куки"
-  },
-  "policy_description_Cookies_Default_true": {
-    "message": "принимать куки"
   },
   "policy_description_Cookies_ExpireAtSessionEnd": {
     "message": "Хранить куки до…"
@@ -313,9 +322,6 @@
   },
   "policy_description_Cookies_ExpireAtSessionEnd_true": {
     "message": "… закрытия Firefox"
-  },
-  "policy_description_Cookies_RejectTracker": {
-    "message": "Отклонять трекинг куки"
   },
   "policy_description_DefaultDownloadDirectory": {
     "message": "Установить папку загрузки по умолчанию"

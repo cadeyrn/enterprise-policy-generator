@@ -266,18 +266,6 @@
   "policy_description_Cookies": {
     "message": "Webstronam dowolić abo zakazać, placki stajić"
   },
-  "policy_description_Cookies_AcceptThirdParty": {
-    "message": "Standardna hódnota za „Placki a sydłowe daty třećich poskićowarjow akceptować“"
-  },
-  "policy_description_Cookies_AcceptThirdParty_always": {
-    "message": "přeco"
-  },
-  "policy_description_Cookies_AcceptThirdParty_from_visited": {
-    "message": "jenož wot wopytanych třećich"
-  },
-  "policy_description_Cookies_AcceptThirdParty_never": {
-    "message": "ženje"
-  },
   "policy_description_Cookies_Allow": {
     "message": "Domeny, kotrež přeco smědźa placki wužiwać"
   },
@@ -290,20 +278,41 @@
   "policy_description_Cookies_AllowSession_Domain": {
     "message": "Domena"
   },
+  "policy_description_Cookies_Behavior": {
+    "message": "Default behavior for cookies"
+  },
+  "policy_description_Cookies_Behavior_accept": {
+    "message": "Accept all cookies"
+  },
+  "policy_description_Cookies_Behavior_limit_foreign": {
+    "message": "Reject third party cookies for sites you haven’t visited"
+  },
+  "policy_description_Cookies_Behavior_reject": {
+    "message": "Reject all cookies"
+  },
+  "policy_description_Cookies_Behavior_reject_foreign": {
+    "message": "Reject third party cookies"
+  },
+  "policy_description_Cookies_Behavior_reject_tracker": {
+    "message": "Reject cookies for known trackers (Default)"
+  },
+  "policy_description_Cookies_Behavior_reject_tracker_and_partition_foreign": {
+    "message": "Reject cookies for known trackers and partition third-party cookies"
+  },
+  "policy_description_Cookies_BehaviorPrivateBrowsing": {
+    "message": "Default behavior for cookies in private windows"
+  },
+  "policy_description_Cookies_BehaviorPrivateBrowsing_reject_tracker": {
+    "message": "Reject cookies for known trackers"
+  },
+  "policy_description_Cookies_BehaviorPrivateBrowsing_reject_tracker_and_partition_foreign": {
+    "message": "Reject cookies for known trackers and partition third-party cookies (Default)"
+  },
   "policy_description_Cookies_Block": {
     "message": "Domeny, na kotrychž so placki blokuja"
   },
   "policy_description_Cookies_Block_Domain": {
     "message": "Domena"
-  },
-  "policy_description_Cookies_Default": {
-    "message": "Standardna hódnota za „Placki a sydłowe daty z websydłow akceptować“"
-  },
-  "policy_description_Cookies_Default_false": {
-    "message": "Placki njeakceptować"
-  },
-  "policy_description_Cookies_Default_true": {
-    "message": "Placki akceptować"
   },
   "policy_description_Cookies_ExpireAtSessionEnd": {
     "message": "Placki wobchować…"
@@ -313,9 +322,6 @@
   },
   "policy_description_Cookies_ExpireAtSessionEnd_true": {
     "message": "… doniž Firefox so njezačini"
-  },
-  "policy_description_Cookies_RejectTracker": {
-    "message": "Slědowanske placki blokować"
   },
   "policy_description_DefaultDownloadDirectory": {
     "message": "Standardny zapis sćehnjenjow postajić"

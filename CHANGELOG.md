@@ -26,6 +26,9 @@
 - Added SponsoredTopSites and SponsoredPocket options to FirefoxHome policy, removed Snippets option (also from existing
   configurations), updated order and translations of all options to reflect the current order and naming in Firefox, see
   [#236](https://github.com/cadeyrn/enterprise-policy-generator/issues/236)
+  Added Behavior and BehaviorPrivateBrowsing options to Cookies policy, removed Default, AcceptThirdParty and
+  RejectTracker options, migrated them to Behavior option in existing configurations and made ExpireAtSessionEnd option
+  optional, see [#234](https://github.com/cadeyrn/enterprise-policy-generator/issues/234)
 - Added support for PasswordManagerExceptions policy to prevent Firefox from saving passwords for specific sites, see
   [#238](https://github.com/cadeyrn/enterprise-policy-generator/issues/238)
 - Added support for WindowsSSO policy to allow or disallow Windows single sign-on for Microsoft, work, and school

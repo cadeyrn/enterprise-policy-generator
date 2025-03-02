@@ -227,6 +227,42 @@ const migrator = {
         if (configuration.select.FirefoxHome_Snippets) {
           delete configuration.select.FirefoxHome_Snippets;
         }
+
+        /*
+         * @from
+         *
+         * "Cookies": { "Default", "AcceptThirdParty", "RejectTracker" }
+         *
+         * @to
+         *
+         * "Cookies": { "Behavior" }
+         */
+        if (configuration.checkboxes.Cookies) {
+          if (configuration.checkboxes.Cookies_RejectTracker && configuration.select.Cookies_Default === 'true') {
+            configuration.select.Cookies_Behavior = 'reject-tracker';
+          }
+          else if (configuration.select.Cookies_Default === 'true') {
+            if (configuration.select.Cookies_AcceptThirdParty === 'always') {
+              configuration.select.Cookies_Behavior = 'accept';
+            }
+            else if (configuration.select.Cookies_AcceptThirdParty === 'never') {
+              configuration.select.Cookies_Behavior = 'reject-foreign';
+            }
+            else if (configuration.select.Cookies_AcceptThirdParty === 'from-visited') {
+              configuration.select.Cookies_Behavior = 'limit-foreign';
+            }
+          }
+          else if (configuration.select.Cookies_Default === 'false') {
+            configuration.select.Cookies_Behavior = 'reject';
+          }
+
+          if (configuration.checkboxes.Cookies_RejectTracker) {
+            delete configuration.checkboxes.Cookies_RejectTracker;
+          }
+
+          delete configuration.select.Cookies_Default;
+          delete configuration.select.Cookies_AcceptThirdParty;
+        }
       }
 
       await browser.storage.local.set({ configurations : configurations, schemaVersion : 4 });
