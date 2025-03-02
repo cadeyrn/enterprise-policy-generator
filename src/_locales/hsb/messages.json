@@ -201,7 +201,7 @@
     "message": "Protokol"
   },
   "policy_description_BackgroundAppUpdate": {
-    "message": "Install Firefox updates in the background, when the application is not running"
+    "message": "Aktualizacije Firefox w pozadku instalować, hdyž nałoženje njeběži"
   },
   "policy_description_BlockAboutAddons": {
     "message": "Přistup k zrjadowakej přidatkow (about:addons) blokować"
@@ -279,34 +279,34 @@
     "message": "Domena"
   },
   "policy_description_Cookies_Behavior": {
-    "message": "Default behavior for cookies"
+    "message": "Standardne zadźerženje plackow"
   },
   "policy_description_Cookies_Behavior_accept": {
-    "message": "Accept all cookies"
+    "message": "Wšě placki akceptować"
   },
   "policy_description_Cookies_Behavior_limit_foreign": {
-    "message": "Reject third party cookies for sites you haven’t visited"
+    "message": "Placki třećich poskićowarjow za websydła wotpokazać, kotrež njejsće wopytał"
   },
   "policy_description_Cookies_Behavior_reject": {
-    "message": "Reject all cookies"
+    "message": "Wšě placki wotpokazać"
   },
   "policy_description_Cookies_Behavior_reject_foreign": {
-    "message": "Reject third party cookies"
+    "message": "Placki třećich poskićowarjow wotpokazać"
   },
   "policy_description_Cookies_Behavior_reject_tracker": {
-    "message": "Reject cookies for known trackers (Default)"
+    "message": "Placki wot znatych přesćěhowakow wotpokazać (standard)"
   },
   "policy_description_Cookies_Behavior_reject_tracker_and_partition_foreign": {
-    "message": "Reject cookies for known trackers and partition third-party cookies"
+    "message": "Placki wot znatych přeśćěhowakow wotpokazać a placki třećich poskićowarjow particioněrować"
   },
   "policy_description_Cookies_BehaviorPrivateBrowsing": {
-    "message": "Default behavior for cookies in private windows"
+    "message": "Standardne zadźerženje za placki w priwatnych woknach"
   },
   "policy_description_Cookies_BehaviorPrivateBrowsing_reject_tracker": {
-    "message": "Reject cookies for known trackers"
+    "message": "Placki wot znatych přesćěhowakow wotpokazać"
   },
   "policy_description_Cookies_BehaviorPrivateBrowsing_reject_tracker_and_partition_foreign": {
-    "message": "Reject cookies for known trackers and partition third-party cookies (Default)"
+    "message": "Placki wot znatych přeśćěhowakow wotpokazać a placki třećich poskićowarjow particioněrować (standard)"
   },
   "policy_description_Cookies_Block": {
     "message": "Domeny, na kotrychž so placki blokuja"
@@ -588,7 +588,7 @@
     "message": "Doporučene stawiznički"
   },
   "policy_description_FirefoxHome_Search": {
-    "message": "Search field"
+    "message": "Pytanske polo"
   },
   "policy_description_FirefoxHome_SponsoredPocket": {
     "message": "Sponserowane doporučene stawiznički"
@@ -696,7 +696,7 @@
     "message": "Mjeno rjadowaka zapołožkow"
   },
   "policy_description_ManualAppUpdateOnly": {
-    "message": "Do not prompt for Firefox updates"
+    "message": "Žana namołwa k aktualizowanju Firefox"
   },
   "policy_description_NetworkPrediction": {
     "message": "DNS-předzačitanje zmóžnić abo znjemóžnić"
@@ -729,7 +729,7 @@
     "message": "Zrjadowak hesłow dospołnje zmóžnić abo znjemóžnić"
   },
   "policy_description_PasswordManagerExceptions": {
-    "message": "Prevent Firefox from saving passwords for specific sites"
+    "message": "Zadźěwać, zo Firefox hesła za wěste websydła składuje"
   },
   "policy_description_PDFjs": {
     "message": "Integrowany PDF-wobhladowak znjemóžnić abo konfigurować"
@@ -1098,7 +1098,7 @@
     "message": "Wopisanje"
   },
   "policy_description_SearchEngines_Add_Encoding": {
-    "message": "Encoding (Default: UTF-8)"
+    "message": "Kodowanje (standard: UTF-8)"
   },
   "policy_description_SearchEngines_Add_IconURL": {
     "message": "Symbolowy URL abo data:image…"
@@ -1200,7 +1200,7 @@
     "message": "Wuwzaća"
   },
   "policy_description_WindowsSSO": {
-    "message": "Allow Windows single sign-on for Microsoft, work, and school accounts"
+    "message": "Windows Single Sign-On za konta Microsoft, dźěłowe konta a šulske konta dopušćić"
   },
   "policy_label_default": {
     "message": "default"
