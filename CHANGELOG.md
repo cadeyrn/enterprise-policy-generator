@@ -43,6 +43,8 @@
 
 #### Dependencies
 
+- Added stylistic/eslint-plugin-js 4.1.0 as a new development dependency
+- Added eslint/json 0.10.0 as a new development dependency
 - Updated eslint from version 9.9.1 to 9.21.0, switched to flat configuration and replaced / removed deprecated rules
 - Updated eslint-plugin-jsdoc from version 50.2.2 to 50.6.3
 - Updated gulp-eslint-new from version 2.3.0 to 2.4.0
