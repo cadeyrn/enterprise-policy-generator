@@ -1,6 +1,6 @@
 {
   "name": "enterprise-policy-generator",
-  "version": "6.1.0",
+  "version": "6.2.0",
   "description": "Generates Enterprise Policies for Firefox.",
   "author": {
     "name": "Sören Hentzschel",
