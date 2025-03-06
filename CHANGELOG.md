@@ -2,6 +2,14 @@
 
 ## Release Notes
 
+### Version 6.3.0 (Work in Progress)
+
+#### Dependencies
+
+- Updated stylistic/eslint-plugin-js from version 4.1.0 to 4.2.0
+
+---
+
 ### [Version 6.2.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v6.2.0) (2025-03-02)
 
 #### Enhancements
