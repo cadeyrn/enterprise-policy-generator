@@ -6,6 +6,7 @@
 
 #### Dependencies
 
+- Updated eslint from version 9.21.0 to 9.22.0
 - Updated stylistic/eslint-plugin-js from version 4.1.0 to 4.2.0
 
 ---
