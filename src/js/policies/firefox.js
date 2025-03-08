@@ -1197,7 +1197,7 @@ const policies = {
 
   Authentication : {
     first_available : { mainstream : '62.0', esr : '60.0' },
-    info_link : 'https://developer.mozilla.org/docs/Mozilla/Integrated_authentication',
+    info_link : 'https://htmlpreview.github.io/?https://github.com/mdn/archived-content/blob/main/files/en-us/mozilla/integrated_authentication/raw.html',
     is_lockable : true,
     ui_category : 'network',
     type : 'object',
@@ -3154,7 +3154,7 @@ const policies = {
 
   Preference_dom_keyboardevent_keypress_hack_dispatch_non_printable_keys_addl : {
     first_available : { mainstream : '68.0', esr : '68.0' },
-    info_link : 'https://www.fxsitecompat.dev/en-CA/docs/2018/non-printable-keys-no-longer-fire-keypress-event/',
+    info_link : 'https://support.mozilla.org/kb/dom-events-changes-introduced-firefox-66',
     ui_category : 'others',
     type : 'preference',
     properties : {

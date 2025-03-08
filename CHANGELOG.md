@@ -4,6 +4,11 @@
 
 ### Version 6.3.0 (Work in Progress)
 
+#### Enterprise Policies
+
+- Fixed broken info links for two policies, see
+  [#292](https://github.com/cadeyrn/enterprise-policy-generator/issues/292)
+
 #### Dependencies
 
 - Updated eslint from version 9.21.0 to 9.22.0
