@@ -1181,6 +1181,9 @@
   "policy_description_UserMessaging_FeatureRecommendations": {
     "message": "Browser-Funktionen empfehlen"
   },
+  "policy_description_UserMessaging_MoreFromMozilla": {
+    "message": "Abschnitt „Mehr von Mozilla“ in den Einstellungen anzeigen"
+  },
   "policy_description_UserMessaging_SkipOnboarding": {
     "message": "Willkommens-Bildschirm für neue Benutzer deaktivieren"
   },

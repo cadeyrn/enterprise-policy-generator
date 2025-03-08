@@ -1181,6 +1181,9 @@
   "policy_description_UserMessaging_FeatureRecommendations": {
     "message": "Funkcije wobhladowaka doporučić"
   },
+  "policy_description_UserMessaging_MoreFromMozilla": {
+    "message": "Show “More from Mozilla” section in the settings"
+  },
   "policy_description_UserMessaging_SkipOnboarding": {
     "message": "Witansku wobrazowku za nowych wužiwarjow znjemóžnić"
   },

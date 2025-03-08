@@ -6,6 +6,8 @@
 
 #### Enterprise Policies
 
+- Added MoreFromMozilla option to UserMessaging policy to show or hide “More from Mozilla” section in the settings, see
+  [#248](https://github.com/cadeyrn/enterprise-policy-generator/issues/248)
 - Fixed broken info links for two policies, see
   [#292](https://github.com/cadeyrn/enterprise-policy-generator/issues/292)
 
