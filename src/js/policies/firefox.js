@@ -2532,7 +2532,7 @@ const policies = {
 
   DisableAppUpdate : {
     first_available : { mainstream : '62.0', esr : '60.0' },
-    exclude : ['AppAutoUpdate', 'BackgroundAppUpdate', 'ManualAppUpdateOnly'],
+    exclude : ['AppAutoUpdate', 'AppUpdateURL', 'BackgroundAppUpdate', 'ManualAppUpdateOnly'],
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
@@ -2580,6 +2580,7 @@ const policies = {
   },
 
   AppUpdateURL : {
+    exclude: 'DisableAppUpdate',
     first_available : { mainstream : '62.0', esr : '60.2' },
     ui_category : 'updates-and-data',
     mandatory : true,
