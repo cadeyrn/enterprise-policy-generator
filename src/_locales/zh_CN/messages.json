@@ -1208,6 +1208,9 @@
   "policy_description_UserMessaging_WhatsNew": {
     "message": "Show the “What's New“ icon and menu item"
   },
+  "policy_description_UseSystemPrintDialog": {
+    "message": "Use the system print dialog instead of the print preview window"
+  },
   "policy_description_WebsiteFilter": {
     "message": "阻止访问特定网站。您可以使用 “<all_urls>” 屏蔽所有 URL。点击更多信息链接可以查看所有有效项，仅支持 HTTPS 和 HTTP 的 URL。"
   },

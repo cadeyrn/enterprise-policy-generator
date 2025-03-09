@@ -3009,6 +3009,22 @@ const policies = {
     ]
   },
 
+  UseSystemPrintDialog : {
+    first_available : { mainstream : '102.0', esr : '102.0' },
+    ui_category : 'others',
+    type : 'enum',
+    options : [
+      {
+        label : browser.i18n.getMessage('enum_value_yes'),
+        value : 'true'
+      },
+      {
+        label : browser.i18n.getMessage('enum_value_no'),
+        value : 'false'
+      }
+    ]
+  },
+
   Preference_browser_cache_disk_enable : {
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'others',

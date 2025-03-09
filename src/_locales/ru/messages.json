@@ -1208,6 +1208,9 @@
   "policy_description_UserMessaging_WhatsNew": {
     "message": "Показать значок и пункт меню \"Что нового\""
   },
+  "policy_description_UseSystemPrintDialog": {
+    "message": "Use the system print dialog instead of the print preview window"
+  },
   "policy_description_WebsiteFilter": {
     "message": "Блокировать посещение сайтов. Используйте \"<all_urls>\" для блокировки всех URL. Поддерживаются только HTTPS и HTTP."
   },

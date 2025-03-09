@@ -1208,6 +1208,9 @@
   "policy_description_UserMessaging_WhatsNew": {
     "message": "Symbol a menijowy zapisk „Nowe funkcije a změny“ pokazać"
   },
+  "policy_description_UseSystemPrintDialog": {
+    "message": "Use the system print dialog instead of the print preview window"
+  },
   "policy_description_WebsiteFilter": {
     "message": "Zadźěwa, zo so websydła wopytuja. Móžeće „<all_urls>“ za blokowanje wšěch URL wužiwać. Hlejće informaciski wotkaz za wšě płaćiwe zapiski, ale jenož HTTPS a HTTP so podpěrujetej."
   },

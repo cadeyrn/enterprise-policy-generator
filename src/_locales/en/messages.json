@@ -1208,6 +1208,9 @@
   "policy_description_UserMessaging_WhatsNew": {
     "message": "Show the “What's New“ icon and menu item"
   },
+  "policy_description_UseSystemPrintDialog": {
+    "message": "Use the system print dialog instead of the print preview window"
+  },
   "policy_description_WebsiteFilter": {
     "message": "Blocks websites from being visited. You can use “<all_urls>” for blocking all URLs. See info link for all valid entries, but only HTTPS and HTTP are supported."
   },
