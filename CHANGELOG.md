@@ -8,6 +8,8 @@
 
 - Added support for version pattern validations, needed for AppUpdatePin policy, see
   [#294](https://github.com/cadeyrn/enterprise-policy-generator/issues/294)
+- Added support for boolean options in key-object-list policies, needed for updated ExtensionSettings policy, see
+  [#295](https://github.com/cadeyrn/enterprise-policy-generator/issues/295)
 
 #### Enterprise Policies
 

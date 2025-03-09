@@ -291,11 +291,18 @@ const output = {
           }
         });
 
+        // checkboxes
+        [...el.querySelectorAll(':scope > .checkbox > input')].forEach((innerEl) => {
+          if (innerEl.checked) {
+            properties[innerEl.getAttribute('data-name')] = true;
+          }
+        });
+
         // multiselect checkboxes
         [...el.querySelectorAll(':scope > .multiselect')].forEach((innerEl) => {
           const items = [];
 
-          [...el.querySelectorAll(':scope .checkbox > input')].forEach((arrEl) => {
+          [...innerEl.querySelectorAll(':scope .checkbox > input')].forEach((arrEl) => {
             if (arrEl.checked) {
               items.push(arrEl.value);
             }
