@@ -1181,6 +1181,9 @@
   "policy_description_SSLVersionMin": {
     "message": "Minimalnje trěbna TLS-wersija"
   },
+  "policy_description_StartDownloadsInTempDirectory": {
+    "message": "Force downloads to start off in a temporary location rather than the default download directory"
+  },
   "policy_description_SupportMenu": {
     "message": "Přidawanje swójskeho menijoweho zapiska za meni Pomoc"
   },

@@ -15,6 +15,8 @@
 
 - Added support for AppUpdatePin policy to prevent Firefox from being updated beyond the specified version, see
   [#241](https://github.com/cadeyrn/enterprise-policy-generator/issues/241)
+- Added support for StartDownloadsInTempDirectory policy to force downloads to start off in a temporary location rather
+  than the default download directory, see [#247](https://github.com/cadeyrn/enterprise-policy-generator/issues/247)
 - Added support for UseSystemPrintDialog policy to use the system print dialog instead of the print preview window, see
   [#249](https://github.com/cadeyrn/enterprise-policy-generator/issues/249)
 - Added support for GoToIntranetSiteForSingleWordEntryInAddressBar policy to force direct intranet site navigation

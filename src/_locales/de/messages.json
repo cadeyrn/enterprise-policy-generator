@@ -1181,6 +1181,9 @@
   "policy_description_SSLVersionMin": {
     "message": "Minimal erforderliche TLS-Version"
   },
+  "policy_description_StartDownloadsInTempDirectory": {
+    "message": "Erzwingen, dass Downloads in einem temporären Verzeichnis beginnen und nicht im Standard-Download-Verzeichnis"
+  },
   "policy_description_SupportMenu": {
     "message": "Hinzufügen eines benutzerdefinierten Support-Menüpunktes zum Hilfemenü"
   },
