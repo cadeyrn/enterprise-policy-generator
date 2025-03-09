@@ -268,5 +268,49 @@ const migrator = {
       await browser.storage.local.set({ configurations : configurations, schemaVersion : 4 });
       migrator.migrate();
     }
+  },
+
+  /**
+   * Version: EPG 6.3.0
+   *
+   * @returns {void}
+   */
+  async migration_4 () {
+    const { configurations } = await browser.storage.local.get({ configurations : [] });
+    const configurationLength = configurations.length;
+
+    if (configurationLength > 0) {
+      for (let i = 0; i < configurationLength; i++) {
+        const { configuration } = configurations[i];
+
+        /*
+         * @updated
+         *
+         * "ExtensionSettings": { "*" }
+         */
+        if (configuration.input.ExtensionSettings_install_sources_1_install_sources_1) {
+          configuration.input.ExtensionSettings_1_install_sources_1 = configuration.input.ExtensionSettings_install_sources_1_install_sources_1;
+          delete configuration.input.ExtensionSettings_install_sources_1_install_sources_1;
+        }
+
+        if (configuration.input.ExtensionSettings_restricted_domains_1_restricted_domains_1) {
+          configuration.input.ExtensionSettings_1_restricted_domains_1 = configuration.input.ExtensionSettings_restricted_domains_1_restricted_domains_1;
+          delete configuration.input.ExtensionSettings_restricted_domains_1_restricted_domains_1;
+        }
+
+        if (configuration.input.ExtensionSettings_blocked_install_message_blocked_install_message) {
+          configuration.input.ExtensionSettings_1_restricted_domains_1 = configuration.input.ExtensionSettings_blocked_install_message_blocked_install_message;
+          delete configuration.input.ExtensionSettings_blocked_install_message;
+        }
+
+        if (configuration.select.ExtensionSettings_installation_mode_installation_mode) {
+          configuration.select.ExtensionSettings_installation_mode = configuration.select.ExtensionSettings_installation_mode_installation_mode;
+          delete configuration.select.ExtensionSettings_installation_mode_installation_mode;
+        }
+      }
+
+      await browser.storage.local.set({ configurations : configurations, schemaVersion : 5 });
+      migrator.migrate();
+    }
   }
 };

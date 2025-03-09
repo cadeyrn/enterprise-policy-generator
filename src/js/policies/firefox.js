@@ -798,6 +798,11 @@ const policies = {
           ]
         },
         {
+          name : 'temporarily_allow_weak_signatures',
+          label : browser.i18n.getMessage('policy_description_ExtensionSettings_temporarily_allow_weak_signatures'),
+          type : 'boolean'
+        },
+        {
           name : 'install_sources',
           label : browser.i18n.getMessage('policy_description_ExtensionSettings_install_sources'),
           info_link : 'https://developer.mozilla.org/Add-ons/WebExtensions/Match_patterns',

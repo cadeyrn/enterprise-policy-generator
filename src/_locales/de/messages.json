@@ -578,6 +578,9 @@
   "policy_description_ExtensionSettings_restricted_domains": {
     "message": "Domains, auf denen Content-Scripts nicht ausgeführt werden können"
   },
+  "policy_description_ExtensionSettings_temporarily_allow_weak_signatures": {
+    "message": "Installation von Erweiterungen mit einem schwachen Signaturalgorithmus zulassen (Firefox 127+)"
+  },
   "policy_description_ExtensionSettings_updates_disabled": {
     "message": "Automatische Updates erlauben"
   },

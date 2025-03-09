@@ -17,7 +17,11 @@
   [#241](https://github.com/cadeyrn/enterprise-policy-generator/issues/241)
 - Added MoreFromMozilla option to UserMessaging policy to show or hide “More from Mozilla” section in the settings, see
   [#248](https://github.com/cadeyrn/enterprise-policy-generator/issues/248)
-- Added sitepermission as possible type for the allowed_types option in the ExtensionSettings policy, see
+- Added temporarily_allow_weak_signatures option in the ExtensionSettings policy to allow installation of extensions
+  with a weak signature algorithm (Firefox 127+), see
+  [#263](https://github.com/cadeyrn/enterprise-policy-generator/issues/263)
+- Added sitepermission as possible type for the allowed_types option in the ExtensionSettings policy to allow the
+  installation of site permission but no other types of add-ons, see
   [#244](https://github.com/cadeyrn/enterprise-policy-generator/issues/244)
 - AppUpdateURL and DisableAppUpdate should exclude each other, see
   [#293](https://github.com/cadeyrn/enterprise-policy-generator/issues/293)

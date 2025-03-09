@@ -906,7 +906,7 @@ const configurator = {
 
       const optionsLength = policy.extra.properties.length;
       for (let i = 0; i < optionsLength; i++) {
-        configurator.addProperty(elExtraOptions, key + '_' + policy.extra.properties[i].name, policy.extra.properties[i], false, false);
+        configurator.addProperty(elExtraOptions, key, policy.extra.properties[i], false, false);
       }
 
       const elPostCaptionWrapper = document.createElement('div');

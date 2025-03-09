@@ -578,6 +578,9 @@
   "policy_description_ExtensionSettings_restricted_domains": {
     "message": "Domeny, na kotrychž wobsahowe skripty njedadźa so wuwjesć"
   },
+  "policy_description_ExtensionSettings_temporarily_allow_weak_signatures": {
+    "message": "Allow installation of extensions with a weak signature algorithm (Firefox 127+)"
+  },
   "policy_description_ExtensionSettings_updates_disabled": {
     "message": "Awtomatiske aktualizacije dowolić"
   },
