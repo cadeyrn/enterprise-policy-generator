@@ -15,6 +15,8 @@
   [#241](https://github.com/cadeyrn/enterprise-policy-generator/issues/241)
 - Added MoreFromMozilla option to UserMessaging policy to show or hide “More from Mozilla” section in the settings, see
   [#248](https://github.com/cadeyrn/enterprise-policy-generator/issues/248)
+- Added sitepermission as possible type for the allowed_types option in the ExtensionSettings policy, see
+  [#244](https://github.com/cadeyrn/enterprise-policy-generator/issues/244)
 - AppUpdateURL and DisableAppUpdate should exclude each other, see
   [#293](https://github.com/cadeyrn/enterprise-policy-generator/issues/293)
 - Fixed broken info links for two policies, see

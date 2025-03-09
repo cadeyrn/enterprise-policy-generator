@@ -836,6 +836,10 @@ const policies = {
             {
               value : 'langpack',
               label : browser.i18n.getMessage('policy_description_ExtensionSettings_allowed_types_langpack')
+            },
+            {
+              value : 'sitepermission',
+              label : browser.i18n.getMessage('policy_description_ExtensionSettings_allowed_types_sitepermission')
             }
           ]
         },

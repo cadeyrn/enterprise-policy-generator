@@ -524,6 +524,9 @@
   "policy_description_ExtensionSettings_allowed_types_langpack": {
     "message": "Rěčne pakćiki"
   },
+  "policy_description_ExtensionSettings_allowed_types_sitepermission": {
+    "message": "Site permissions"
+  },
   "policy_description_ExtensionSettings_allowed_types_theme": {
     "message": "Drasty"
   },

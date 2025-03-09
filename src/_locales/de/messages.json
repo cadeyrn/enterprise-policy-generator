@@ -524,6 +524,9 @@
   "policy_description_ExtensionSettings_allowed_types_langpack": {
     "message": "Sprachpakete"
   },
+  "policy_description_ExtensionSettings_allowed_types_sitepermission": {
+    "message": "Seitenberechtigungen"
+  },
   "policy_description_ExtensionSettings_allowed_types_theme": {
     "message": "Themes"
   },
