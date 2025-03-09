@@ -1329,6 +1329,22 @@ const policies = {
     ]
   },
 
+  GoToIntranetSiteForSingleWordEntryInAddressBar : {
+    first_available : { mainstream : '104.0', esr : '102.2' },
+    ui_category : 'network',
+    type : 'enum',
+    options : [
+      {
+        label : browser.i18n.getMessage('enum_value_yes'),
+        value : 'true'
+      },
+      {
+        label : browser.i18n.getMessage('enum_value_no'),
+        value : 'false'
+      }
+    ]
+  },
+
   // privacy
 
   Cookies : {

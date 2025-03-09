@@ -614,6 +614,9 @@
   "policy_description_FirefoxHome_TopSites": {
     "message": "Zwězanja"
   },
+  "policy_description_GoToIntranetSiteForSingleWordEntryInAddressBar": {
+    "message": "Force direct intranet site navigation instead of searching when typing single word entries in the address bar"
+  },
   "policy_description_Handlers": {
     "message": "Standardne nałoženja za wócynjanje datajow, protokolow a MIME-typow póstajiś"
   },

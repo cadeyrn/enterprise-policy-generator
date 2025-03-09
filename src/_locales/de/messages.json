@@ -614,6 +614,9 @@
   "policy_description_FirefoxHome_TopSites": {
     "message": "Verknüpfungen"
   },
+  "policy_description_GoToIntranetSiteForSingleWordEntryInAddressBar": {
+    "message": "Direkte Navigation zu Intranet-Websites erzwingen, anstatt beim Eintippen von Einzelworteinträgen in die Adressleiste eine Suche zu starten"
+  },
   "policy_description_Handlers": {
     "message": "Standardanwendungen für das Öffnen von Dateien, Protokollen und MIME-Typen festlegen"
   },
