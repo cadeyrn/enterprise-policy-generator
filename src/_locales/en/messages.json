@@ -74,6 +74,9 @@
   "invalid_url_label": {
     "message": "invalid URL"
   },
+  "invalid_version_pattern_label": {
+    "message": "invalid version pattern"
+  },
   "link_download": {
     "message": "download policies.json"
   },

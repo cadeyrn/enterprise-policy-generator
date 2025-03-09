@@ -95,10 +95,13 @@ const configurator = {
         configurator.addSplitUrlOption(key, policies[key]);
       }
       else if (policies[key].type === 'string') {
-        configurator.addStringOption(key, policies[key], false);
+        configurator.addStringOption(key, policies[key], 'string');
       }
       else if (policies[key].type === 'url') {
-        configurator.addStringOption(key, policies[key], true);
+        configurator.addStringOption(key, policies[key], 'url');
+      }
+      else if (policies[key].type === 'version') {
+        configurator.addStringOption(key, policies[key], 'version');
       }
     }
 
@@ -171,6 +174,11 @@ const configurator = {
     // add event listener for URL field validation
     [...document.querySelectorAll('input[type=url]')].forEach((el) => {
       el.addEventListener('input', configurator.validateUrlFields);
+    });
+
+    // add event listener for version pattern field validation
+    [...document.querySelectorAll('input[data-type=version-pattern]')].forEach((el) => {
+      el.addEventListener('input', configurator.validateVersionPatternFields);
     });
 
     // action for clicking the "generate policies" button
@@ -375,6 +383,12 @@ const configurator = {
     addedNode.querySelectorAll('input[type=url]').forEach((el) => {
       el.addEventListener('input', configurator.validateUrlFields);
       el.parentNode.querySelector('.invalid-url-label').classList.add('hidden');
+    });
+
+    // we also have to re-add the event listener for the validation of version pattern fields
+    addedNode.querySelectorAll('input[data-type=version-pattern]').forEach((el) => {
+      el.addEventListener('input', configurator.validateVersionPatternFields);
+      el.parentNode.querySelector('.invalid-version-pattern-label').classList.add('hidden');
     });
 
     // add the copied array item to the DOM
@@ -618,6 +632,39 @@ const configurator = {
     else {
       pattern = new RegExp(/^(https?|file):\/\//, 'gi');
     }
+
+    return pattern.test(encodeURI(string));
+  },
+
+  /**
+   * Validation for version pattern fields.
+   *
+   * @param {InputEvent} e - event
+   *
+   * @returns {void}
+   */
+  validateVersionPatternFields (e) {
+    // the field has a valid version pattern, hide visual indication
+    if (!e.target.value || configurator.isValidVersionPattern(e.target.value)) {
+      e.target.classList.remove('invalid-version-pattern-style');
+      e.target.parentNode.querySelector('.invalid-version-pattern-label').classList.add('hidden');
+    }
+    // the field has not a valid version pattern, add visual indication
+    else {
+      e.target.classList.add('invalid-version-pattern-style');
+      e.target.parentNode.querySelector('.invalid-version-pattern-label').classList.remove('hidden');
+    }
+  },
+
+  /**
+   * Tests if a given string is a valid version pattern.
+   *
+   * @param {string} string - the string to check
+   *
+   * @returns {boolean} - whether the given string is a valid version pattern or not
+   */
+  isValidVersionPattern (string) {
+    const pattern = new RegExp(/^\d{3}\.?(?:\d{1,3}\.?)?$/);
 
     return pattern.test(encodeURI(string));
   },
@@ -1232,12 +1279,11 @@ const configurator = {
    *
    * @param {string} key - the name of the policy
    * @param {object} policy - the policy object
-   * @param {boolean} isUrl - if true, the option is of the type "url", otherwise it's of the type "string"
+   * @param {string} type - "string", "url", or "version"
    *
    * @returns {void}
    */
-  addStringOption (key, policy, isUrl) {
-    const type = isUrl ? 'url' : 'string';
+  addStringOption (key, policy, type) {
     const elObjectWrapper = configurator.addPolicyNode(key, policy, type, false);
     const elSubOptions = configurator.addSubOptions(elObjectWrapper);
 
@@ -1247,11 +1293,15 @@ const configurator = {
 
     const elInput = document.createElement('input');
 
-    if (isUrl) {
+    if (type === 'url') {
       elInput.setAttribute('type', 'url');
     }
     else {
       elInput.setAttribute('type', 'text');
+    }
+
+    if (type === 'version') {
+      elInput.setAttribute('data-type', 'version-pattern');
     }
 
     elInput.setAttribute('id', key + '_Text');
@@ -1264,9 +1314,12 @@ const configurator = {
       configurator.addMandatoryLabel(elInput, elSubOptions);
     }
 
-    // URL validation label
-    if (isUrl) {
+    // validation labels
+    if (type === 'url') {
       configurator.addInvalidUrlLabel(elSubOptions);
+    }
+    else if (type === 'version') {
+      configurator.addInvalidVersionPatternLabel(elSubOptions);
     }
 
     elSubOptions.appendChild(elInput);
@@ -2061,6 +2114,20 @@ const configurator = {
     const elLabel = document.createElement('div');
     elLabel.classList.add('invalid-url-label', 'hidden');
     elLabel.innerText = browser.i18n.getMessage('invalid_url_label');
+    elObjectWrapper.appendChild(elLabel);
+  },
+
+  /**
+   * Adds a label for invalid version patterns.
+   *
+   * @param {HTMLElement} elObjectWrapper - the DOM node of the wrapping element
+   *
+   * @returns {void}
+   */
+  addInvalidVersionPatternLabel (elObjectWrapper) {
+    const elLabel = document.createElement('div');
+    elLabel.classList.add('invalid-version-pattern-label', 'hidden');
+    elLabel.innerText = browser.i18n.getMessage('invalid_version_pattern_label');
     elObjectWrapper.appendChild(elLabel);
   },
 

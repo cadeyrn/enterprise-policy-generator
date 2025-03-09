@@ -76,13 +76,15 @@ textarea {
 
 input[type='text'].mandatory-style,
 input[type='text'].invalid-preference-style,
+input[type='text'].invalid-version-pattern-style,
 input[type='url'].mandatory-style,
 input[type='url'].invalid-url-style,
 textarea.invalid-json-style {
   border-color: var(--color-red);
 }
 
-input[type='text']:not(.mandatory-style, .invalid-preference-style, .invalid-json-style):focus,
+input[type='text']:not(.mandatory-style, .invalid-preference-style, .invalid-version-pattern-style):focus,
+input[type='text']:not(.invalid-json-style):focus,
 input[type='url']:not(.mandatory-style, .invalid-url-style):focus,
 select:focus {
   border-color: var(--color-blue-dark);
@@ -100,7 +102,7 @@ select:focus {
   position: relative;
 }
 
-.mandatory-label, .invalid-url-label, .invalid-preference-label, .invalid-json-label {
+.mandatory-label, .invalid-url-label, .invalid-version-pattern-label, .invalid-preference-label, .invalid-json-label {
   position: absolute;
   top: 4px;
   right: 54px;
@@ -114,6 +116,7 @@ select:focus {
 .input + .input .mandatory-label,
 .input + .input .invalid-preference-label,
 .input + .input .invalid-url-label,
+.input + .input .invalid-version-pattern-label,
 .input + .input .invalid-json-label {
   top: 6px;
 }

@@ -74,6 +74,9 @@
   "invalid_url_label": {
     "message": "无效的 URL"
   },
+  "invalid_version_pattern_label": {
+    "message": "invalid version pattern"
+  },
   "link_download": {
     "message": "下载 policies.json"
   },

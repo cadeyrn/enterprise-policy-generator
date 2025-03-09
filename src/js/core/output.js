@@ -69,6 +69,9 @@ const output = {
         else if (el.getAttribute('data-type') === 'url') {
           output.generateOutputForUrls(el);
         }
+        else if (el.getAttribute('data-type') === 'version') {
+          output.generateOutputForVersionPatterns(el);
+        }
       }
     });
 
@@ -769,6 +772,29 @@ const output = {
 
       if (!inputField.classList.contains('invalid-url-style')) {
         policymanager.add(el.getAttribute('data-name'), inputField.value);
+      }
+    }
+  },
+
+  /**
+   * Generates output for policies of type "version".
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   *
+   * @returns {void}
+   */
+  generateOutputForVersionPatterns (el) {
+    if (!output.hasInvalidFields(el.parentNode)) {
+      const inputField = el.parentNode.querySelector('input[data-type=version-pattern]');
+
+      if (!inputField.classList.contains('invalid-version-pattern-style')) {
+        let { value } = inputField;
+
+        if (!value.endsWith('.')) {
+          value += '.';
+        }
+
+        policymanager.add(el.getAttribute('data-name'), value);
       }
     }
   },

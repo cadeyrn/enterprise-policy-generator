@@ -4,6 +4,11 @@
 
 ### Version 6.3.0 (Work in Progress)
 
+#### Enhancements
+
+- Added support for version pattern validations, needed for AppUpdatePin policy, see
+  [#294](https://github.com/cadeyrn/enterprise-policy-generator/issues/294)
+
 #### Enterprise Policies
 
 - Added MoreFromMozilla option to UserMessaging policy to show or hide “More from Mozilla” section in the settings, see
