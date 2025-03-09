@@ -419,6 +419,15 @@
   "policy_description_DisplayBookmarksToolbar": {
     "message": "Lajstu zapołožkow po standardźe pokazać"
   },
+  "policy_description_DisplayBookmarksToolbar_always": {
+    "message": "Always show"
+  },
+  "policy_description_DisplayBookmarksToolbar_never": {
+    "message": "Never show"
+  },
+  "policy_description_DisplayBookmarksToolbar_newtab": {
+    "message": "Only show on new tab"
+  },
   "policy_description_DisplayMenuBar": {
     "message": "Menijowu lajstu pokazać"
   },

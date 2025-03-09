@@ -417,7 +417,16 @@
     "message": "Firefox hindern, Daten zu technischen Details und Interaktionen an Mozilla zu senden (Telemetrie)"
   },
   "policy_description_DisplayBookmarksToolbar": {
-    "message": "Zeige die Lesezeichen-Symbolleiste standardmäßig"
+    "message": "Zeige die Lesezeichen-Symbolleiste standardmäßig an"
+  },
+  "policy_description_DisplayBookmarksToolbar_always": {
+    "message": "Immer anzeigen"
+  },
+  "policy_description_DisplayBookmarksToolbar_never": {
+    "message": "Nie anzeigen"
+  },
+  "policy_description_DisplayBookmarksToolbar_newtab": {
+    "message": "Nur bei neuem Tab anzeigen"
   },
   "policy_description_DisplayMenuBar": {
     "message": "Zeige die Menüleiste"

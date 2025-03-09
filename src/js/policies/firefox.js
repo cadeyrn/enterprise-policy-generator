@@ -313,9 +313,23 @@ const policies = {
   },
 
   DisplayBookmarksToolbar : {
-    first_available : { mainstream : '60.0', esr : '60.0' },
+    first_available : { mainstream : '109.0', esr : '102.7' },
     ui_category : 'customization',
-    type : 'boolean'
+    type : 'enum',
+    options : [
+      {
+        label : browser.i18n.getMessage('policy_description_DisplayBookmarksToolbar_always'),
+        value : 'always'
+      },
+      {
+        label : browser.i18n.getMessage('policy_description_DisplayBookmarksToolbar_never'),
+        value : 'never'
+      },
+      {
+        label : browser.i18n.getMessage('policy_description_DisplayBookmarksToolbar_newtab'),
+        value : 'newtab'
+      }
+    ]
   },
 
   ShowHomeButton : {

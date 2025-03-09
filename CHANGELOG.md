@@ -32,6 +32,8 @@
 - Added sitepermission as possible type for the allowed_types option in the ExtensionSettings policy to allow the
   installation of site permission but no other types of add-ons, see
   [#244](https://github.com/cadeyrn/enterprise-policy-generator/issues/244)
+- Updated DisplayBookmarksToolbar policy to support only showing the bookmarks toolbar for new tabs, and migrated policy
+  in existing configurations, see [#242](https://github.com/cadeyrn/enterprise-policy-generator/issues/242)
 - AppUpdateURL and DisableAppUpdate should exclude each other, see
   [#293](https://github.com/cadeyrn/enterprise-policy-generator/issues/293)
 - Fixed broken info links for two policies, see

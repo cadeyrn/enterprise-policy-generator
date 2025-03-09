@@ -284,6 +284,19 @@ const migrator = {
         const { configuration } = configurations[i];
 
         /*
+         * @from
+         *
+         * "DisplayBookmarksToolbar": true
+         *
+         * @to
+         *
+         * "DisplayBookmarksToolbar": "always"
+         */
+        if (configuration.checkboxes.DisplayBookmarksToolbar) {
+          configuration.select.DisplayBookmarksToolbar_Select = 'always';
+        }
+
+        /*
          * @updated
          *
          * "ExtensionSettings": { "*" }
