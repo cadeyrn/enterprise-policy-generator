@@ -485,6 +485,15 @@
   "policy_description_EncryptedMediaExtensions_Enabled": {
     "message": "Jeli su znjemóžnjene, Firefox Widevine CDM njesćehnje, chibazo wužiwar instalaciji přihłosuje. Jeli su znjemóžnjene a škitane, wužiwar namołwu njedóstanje, Widevine sćahnyć."
   },
+  "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings": {
+    "message": "Disable download warnings based on file extensions and domains"
+  },
+  "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_domains": {
+    "message": "Domains"
+  },
+  "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_file_extension": {
+    "message": "File extension"
+  },
   "policy_description_Extensions": {
     "message": "Rozšěrjenja instalować, wotinstalować abo zawrěć"
   },

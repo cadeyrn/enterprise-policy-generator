@@ -3041,6 +3041,30 @@ const policies = {
     ]
   },
 
+  ExemptDomainFileTypePairsFromFileTypeDownloadWarnings : {
+    first_available : { mainstream : '102.0', esr : '102.0' },
+    ui_category : 'others',
+    type : 'array',
+    items : [
+      {
+        name : 'file_extension',
+        label : browser.i18n.getMessage('policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_file_extension'),
+        mandatory : true,
+        type : 'string'
+      },
+      {
+        name : 'domains',
+        label : browser.i18n.getMessage('policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_domains'),
+        type : 'array',
+        items : {
+          label : browser.i18n.getMessage('common_domain'),
+          mandatory : true,
+          type : 'string'
+        }
+      }
+    ]
+  },
+
   UseSystemPrintDialog : {
     first_available : { mainstream : '102.0', esr : '102.0' },
     ui_category : 'others',

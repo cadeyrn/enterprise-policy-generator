@@ -485,6 +485,15 @@
   "policy_description_EncryptedMediaExtensions_Enabled": {
     "message": "Jolic su znjemóžnjone, Firefox Widevine CDM njeześěgnjo, snaźkuli wužywaŕ instalaciji pśigłosujo. Jolic su znjemóžnjone a šćitane, wužywaŕ naspominanje njedostanjo, Widevine ześěgnuś."
   },
+  "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings": {
+    "message": "Disable download warnings based on file extensions and domains"
+  },
+  "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_domains": {
+    "message": "Domains"
+  },
+  "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_file_extension": {
+    "message": "File extension"
+  },
   "policy_description_Extensions": {
     "message": "Rozšyrjenja instalěrowaś, wótinstalěrowaś abo zastajiś"
   },

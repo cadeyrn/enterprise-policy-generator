@@ -485,6 +485,15 @@
   "policy_description_EncryptedMediaExtensions_Enabled": {
     "message": "If disabled, Firefox will not download the Widevine CDM unless the user consents to installing it. If disabled and locked the user will not be asked to download Widevine."
   },
+  "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings": {
+    "message": "Disable download warnings based on file extensions and domains"
+  },
+  "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_domains": {
+    "message": "Domains"
+  },
+  "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_file_extension": {
+    "message": "File extension"
+  },
   "policy_description_Extensions": {
     "message": "安装、卸载或锁定特定扩展"
   },

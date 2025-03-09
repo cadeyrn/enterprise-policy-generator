@@ -485,6 +485,15 @@
   "policy_description_EncryptedMediaExtensions_Enabled": {
     "message": "Wenn deaktiviert, wird Firefox das Widevine CDM nicht herunterladen, es sei denn, der Nutzer stimmt der Installation zu. Wenn deaktiviert und geschützt, wird der Nutzer nicht aufgefordert, Widevine herunterzuladen."
   },
+  "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings": {
+    "message": "Deaktivieren von Download-Warnungen auf Basis von Dateiendungen und Domains"
+  },
+  "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_domains": {
+    "message": "Domains"
+  },
+  "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_file_extension": {
+    "message": "Dateiendung"
+  },
   "policy_description_Extensions": {
     "message": "Erweiterungen installieren, deinstallieren oder sperren"
   },
