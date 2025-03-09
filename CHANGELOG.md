@@ -11,6 +11,8 @@
 
 #### Enterprise Policies
 
+- Added support for AppUpdatePin policy to prevent Firefox from being updated beyond the specified version, see
+  [#241](https://github.com/cadeyrn/enterprise-policy-generator/issues/241)
 - Added MoreFromMozilla option to UserMessaging policy to show or hide “More from Mozilla” section in the settings, see
   [#248](https://github.com/cadeyrn/enterprise-policy-generator/issues/248)
 - AppUpdateURL and DisableAppUpdate should exclude each other, see

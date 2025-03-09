@@ -2532,7 +2532,7 @@ const policies = {
 
   DisableAppUpdate : {
     first_available : { mainstream : '62.0', esr : '60.0' },
-    exclude : ['AppAutoUpdate', 'AppUpdateURL', 'BackgroundAppUpdate', 'ManualAppUpdateOnly'],
+    exclude : ['AppAutoUpdate', 'AppUpdatePin', 'AppUpdateURL', 'BackgroundAppUpdate', 'ManualAppUpdateOnly'],
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
@@ -2579,8 +2579,17 @@ const policies = {
     type : 'boolean'
   },
 
+  AppUpdatePin : {
+    exclude : 'DisableAppUpdate',
+    first_available : { mainstream : '102.0', esr : '102.0' },
+    ui_category : 'updates-and-data',
+    mandatory : true,
+    type : 'version',
+    label : browser.i18n.getMessage('policy_description_AppUpdatePin_placeholder')
+  },
+
   AppUpdateURL : {
-    exclude: 'DisableAppUpdate',
+    exclude : 'DisableAppUpdate',
     first_available : { mainstream : '62.0', esr : '60.2' },
     ui_category : 'updates-and-data',
     mandatory : true,

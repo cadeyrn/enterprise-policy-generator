@@ -158,6 +158,12 @@
   "policy_description_AppAutoUpdate": {
     "message": "Install Firefox updates automatically"
   },
+  "policy_description_AppUpdatePin": {
+    "message": "Prevent Firefox from being updated beyond the specified version"
+  },
+  "policy_description_AppUpdatePin_placeholder": {
+    "message": "Firefox version (expected: “xxx” oder “xxx.xx”)"
+  },
   "policy_description_AppUpdateURL": {
     "message": "用于 Firefox 更新的不同服务器 URL"
   },

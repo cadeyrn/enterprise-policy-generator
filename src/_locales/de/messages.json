@@ -158,6 +158,12 @@
   "policy_description_AppAutoUpdate": {
     "message": "Firefox-Updates automatisch installieren"
   },
+  "policy_description_AppUpdatePin": {
+    "message": "Verhindern, dass Firefox über die angegebene Version hinaus aktualisiert wird"
+  },
+  "policy_description_AppUpdatePin_placeholder": {
+    "message": "Firefox-Version (erwartet: „xxx“ oder „xxx.xx“)"
+  },
   "policy_description_AppUpdateURL": {
     "message": "Abweichende Server-URL für Firefox-Aktualisierungen"
   },
