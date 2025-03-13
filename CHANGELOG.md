@@ -42,7 +42,7 @@
 #### Dependencies
 
 - Updated eslint from version 9.21.0 to 9.22.0
-- Updated eslint-plugin-jsdoc from version 50.6.3 to 50.6.4
+- Updated eslint-plugin-jsdoc from version 50.6.3 to 50.6.6
 - Updated stylistic/eslint-plugin-js from version 4.1.0 to 4.2.0
 
 ---

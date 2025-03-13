@@ -24,7 +24,7 @@
     "@eslint/json": "0.10.0",
     "@stylistic/eslint-plugin-js": "4.2.0",
     "eslint": "9.22.0",
-    "eslint-plugin-jsdoc": "50.6.4",
+    "eslint-plugin-jsdoc": "50.6.6",
     "eslint-plugin-sort-requires": "2.1.0",
     "eslint-plugin-xss": "0.1.12",
     "gulp": "5.0.0",
