@@ -11,7 +11,7 @@
 - Added support for boolean options in key-object-list policies, needed for updated ExtensionSettings policy, see
   [#295](https://github.com/cadeyrn/enterprise-policy-generator/issues/295)
 - Added support for key-value-pairs options in object policies, needed for updated SecurityDevices policy, see
-  [#295](https://github.com/cadeyrn/enterprise-policy-generator/issues/295)
+  [#297](https://github.com/cadeyrn/enterprise-policy-generator/issues/297)
 
 #### Enterprise Policies
 
@@ -36,6 +36,8 @@
   [#244](https://github.com/cadeyrn/enterprise-policy-generator/issues/244)
 - Updated DisplayBookmarksToolbar policy to support only showing the bookmarks toolbar for new tabs, and migrated policy
   in existing configurations, see [#242](https://github.com/cadeyrn/enterprise-policy-generator/issues/242)
+- Updated SecurityDevices policy to support new syntax for adding devices, to support removing devices, and added
+  migration for existing configurations, see [#246](https://github.com/cadeyrn/enterprise-policy-generator/issues/246)
 - AppUpdateURL and DisableAppUpdate should exclude each other, see
   [#293](https://github.com/cadeyrn/enterprise-policy-generator/issues/293)
 - Fixed broken info links for two policies, see

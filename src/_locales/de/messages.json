@@ -1182,7 +1182,13 @@
     "message": "Suchmaschinen-Vorschläge aktivieren oder deaktivieren"
   },
   "policy_description_SecurityDevices": {
-    "message": "PKCS#11-Module installieren"
+    "message": "PKCS#11-Module installieren oder entfernen"
+  },
+  "policy_description_SecurityDevices_Add": {
+    "message": "Installieren"
+  },
+  "policy_description_SecurityDevices_Delete": {
+    "message": "Entfernen"
   },
   "policy_description_SecurityDevices_label_key": {
     "message": "Name des Gerätes"

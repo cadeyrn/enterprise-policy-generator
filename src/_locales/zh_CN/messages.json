@@ -1182,7 +1182,13 @@
     "message": "启用或禁用搜索建议"
   },
   "policy_description_SecurityDevices": {
-    "message": "添加 PKCS #11 模块"
+    "message": "Install or delete PKCS #11 modules"
+  },
+  "policy_description_SecurityDevices_Add": {
+    "message": "Install"
+  },
+  "policy_description_SecurityDevices_Delete": {
+    "message": "Delete"
   },
   "policy_description_SecurityDevices_label_key": {
     "message": "设备名称"

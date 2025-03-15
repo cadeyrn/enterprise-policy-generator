@@ -1182,7 +1182,13 @@
     "message": "Enable or disable search suggestions"
   },
   "policy_description_SecurityDevices": {
-    "message": "Add PKCS #11 modules"
+    "message": "Install or delete PKCS #11 modules"
+  },
+  "policy_description_SecurityDevices_Add": {
+    "message": "Install"
+  },
+  "policy_description_SecurityDevices_Delete": {
+    "message": "Delete"
   },
   "policy_description_SecurityDevices_label_key": {
     "message": "Name of device"

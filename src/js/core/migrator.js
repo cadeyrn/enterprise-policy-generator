@@ -199,6 +199,8 @@ const migrator = {
           configuration.input.OverrideFirstRunPage_Value_1 = configuration.input.OverrideFirstRunPage_Text;
           delete configuration.input.OverrideFirstRunPage_Text;
         }
+
+        configurations[i].configuration = configuration;
       }
 
       await browser.storage.local.set({ configurations : configurations, schemaVersion : 3 });
@@ -263,6 +265,8 @@ const migrator = {
           delete configuration.select.Cookies_Default;
           delete configuration.select.Cookies_AcceptThirdParty;
         }
+
+        configurations[i].configuration = configuration;
       }
 
       await browser.storage.local.set({ configurations : configurations, schemaVersion : 4 });
@@ -320,6 +324,29 @@ const migrator = {
           configuration.select.ExtensionSettings_installation_mode = configuration.select.ExtensionSettings_installation_mode_installation_mode;
           delete configuration.select.ExtensionSettings_installation_mode_installation_mode;
         }
+
+        /*
+         * @from
+         *
+         * "SecurityDevices": { "Key" : "Value" }
+         *
+         * @to
+         *
+         * "SecurityDevices": { "Add" : { "Key" : "Value" } }
+         */
+        if (configuration.checkboxes.SecurityDevices) {
+          configuration.arrayfields.SecurityDevices_Add = configuration.arrayfields.SecurityDevices;
+          delete configuration.arrayfields.SecurityDevices;
+
+          for (let i = 1; i <= configuration.arrayfields.SecurityDevices_Add[0]; i++) {
+            configuration.input['SecurityDevices_Add_Key_' + i] = configuration.input['SecurityDevices_Key_Value_' + i];
+            configuration.input['SecurityDevices_Add_Value_' + i] = configuration.input['SecurityDevices_Value_Value_' + i];
+            delete configuration.input['SecurityDevices_Key_Value_' + i];
+            delete configuration.input['SecurityDevices_Value_Value_' + i];
+          }
+        }
+
+        configurations[i].configuration = configuration;
       }
 
       await browser.storage.local.set({ configurations : configurations, schemaVersion : 5 });

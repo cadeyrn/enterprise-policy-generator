@@ -2560,11 +2560,27 @@ const policies = {
   },
 
   SecurityDevices : {
-    first_available : { mainstream : '64.0', esr : '60.4' },
+    first_available : { mainstream : '114.0', esr : '102.12' },
     ui_category : 'security',
-    type : 'key-value-pairs',
-    label_key : browser.i18n.getMessage('policy_description_SecurityDevices_label_key'),
-    label_value : browser.i18n.getMessage('policy_description_SecurityDevices_label_value')
+    type : 'object',
+    properties : [
+      {
+        name : 'Add',
+        label : browser.i18n.getMessage('policy_description_SecurityDevices_Add'),
+        type : 'key-value-pairs',
+        label_key : browser.i18n.getMessage('policy_description_SecurityDevices_label_key'),
+        label_value : browser.i18n.getMessage('policy_description_SecurityDevices_label_value')
+      },
+      {
+        name : 'Delete',
+        label : browser.i18n.getMessage('policy_description_SecurityDevices_Delete'),
+        type : 'array',
+        items : {
+          label : 'Name',
+          type : 'string'
+        }
+      }
+    ]
   },
 
   // updates and data collection
