@@ -495,7 +495,7 @@
     "message": "Wenn deaktiviert, wird Firefox das Widevine CDM nicht herunterladen, es sei denn, der Nutzer stimmt der Installation zu. Wenn deaktiviert und geschützt, wird der Nutzer nicht aufgefordert, Widevine herunterzuladen."
   },
   "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings": {
-    "message": "Deaktivieren von Download-Warnungen auf Basis von Dateiendungen und Domains"
+    "message": "Deaktivieren von Download-Warnungen auf Basis von Dateiendung und Domains"
   },
   "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_domains": {
     "message": "Domains"
@@ -1206,7 +1206,7 @@
     "message": "Minimal erforderliche TLS-Version"
   },
   "policy_description_StartDownloadsInTempDirectory": {
-    "message": "Erzwingen, dass Downloads in einem temporären Verzeichnis beginnen und nicht im Standard-Download-Verzeichnis"
+    "message": "Downloads in einem temporären Verzeichnis beginnen und nicht im Standard-Download-Verzeichnis"
   },
   "policy_description_SupportMenu": {
     "message": "Hinzufügen eines benutzerdefinierten Support-Menüpunktes zum Hilfemenü"

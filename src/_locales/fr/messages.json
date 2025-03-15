@@ -1206,7 +1206,7 @@
     "message": "Version TLS minimale requise"
   },
   "policy_description_StartDownloadsInTempDirectory": {
-    "message": "Force downloads to start off in a temporary location rather than the default download directory"
+    "message": "Start downloads in a temporary location rather than in the default download directory"
   },
   "policy_description_SupportMenu": {
     "message": "Ajouter un élément de menu d'assistance personnalisé au menu d'aide"

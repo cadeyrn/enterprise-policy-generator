@@ -1206,7 +1206,7 @@
     "message": "最低要求的 TLS 版本"
   },
   "policy_description_StartDownloadsInTempDirectory": {
-    "message": "Force downloads to start off in a temporary location rather than the default download directory"
+    "message": "Start downloads in a temporary location rather than in the default download directory"
   },
   "policy_description_SupportMenu": {
     "message": "在帮助菜单添加一个自定义的支持菜单项"

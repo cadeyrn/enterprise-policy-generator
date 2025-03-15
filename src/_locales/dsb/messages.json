@@ -75,7 +75,7 @@
     "message": "njepłaśiwy URL"
   },
   "invalid_version_pattern_label": {
-    "message": "invalid version pattern"
+    "message": "njepłaśiwe wersijowe pódaśe"
   },
   "link_download": {
     "message": "policies.json ześěgnuś"
@@ -159,10 +159,10 @@
     "message": "Aktualizacije Firefox awtomatiski instalěrowaś"
   },
   "policy_description_AppUpdatePin": {
-    "message": "Prevent Firefox from being updated beyond the specified version"
+    "message": "Tomu zajźowaś, až se Firefox wušej pódaneje wersije aktualizěrujo"
   },
   "policy_description_AppUpdatePin_placeholder": {
-    "message": "Firefox version (expected: „xxx“ oder „xxx.xx“)"
+    "message": "Wersija Firefox (wótcakana: „xxx“ abo „xxx.xx“)"
   },
   "policy_description_AppUpdateURL": {
     "message": "Wótchylny serwerowy URL za aktualizacije Firefox"
@@ -420,13 +420,13 @@
     "message": "Rědku cytańskich znamjenjow pó standarźe pokazaś"
   },
   "policy_description_DisplayBookmarksToolbar_always": {
-    "message": "Always show"
+    "message": "Pśecej pokazaś"
   },
   "policy_description_DisplayBookmarksToolbar_never": {
-    "message": "Never show"
+    "message": "Nigda njepokazaś"
   },
   "policy_description_DisplayBookmarksToolbar_newtab": {
-    "message": "Only show on new tab"
+    "message": "Jano z nowym rejtarikom pokazaś"
   },
   "policy_description_DisplayMenuBar": {
     "message": "Menijowu rědku pokazaś"
@@ -495,13 +495,13 @@
     "message": "Jolic su znjemóžnjone, Firefox Widevine CDM njeześěgnjo, snaźkuli wužywaŕ instalaciji pśigłosujo. Jolic su znjemóžnjone a šćitane, wužywaŕ naspominanje njedostanjo, Widevine ześěgnuś."
   },
   "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings": {
-    "message": "Disable download warnings based on file extensions and domains"
+    "message": "Warnowanja ześěgnjenjow na zakłaźe datajoweje kóńcowki a domenow znjemóžniś"
   },
   "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_domains": {
-    "message": "Domains"
+    "message": "Domeny"
   },
   "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_file_extension": {
-    "message": "File extension"
+    "message": "Datajowa kóńcowka"
   },
   "policy_description_Extensions": {
     "message": "Rozšyrjenja instalěrowaś, wótinstalěrowaś abo zastajiś"
@@ -543,7 +543,7 @@
     "message": "Rěcne pakśiki"
   },
   "policy_description_ExtensionSettings_allowed_types_sitepermission": {
-    "message": "Site permissions"
+    "message": "Pšawa bokow"
   },
   "policy_description_ExtensionSettings_allowed_types_theme": {
     "message": "Drastwy"
@@ -597,7 +597,7 @@
     "message": "Domeny, na kótarychž wopśimjeśowe skripty njedaju se wuwjasć"
   },
   "policy_description_ExtensionSettings_temporarily_allow_weak_signatures": {
-    "message": "Allow installation of extensions with a weak signature algorithm (Firefox 127+)"
+    "message": "Instalaciju rozšyrjenjow ze słabym signaturowym algoritmusom dopušćiś (Firefox 127+)"
   },
   "policy_description_ExtensionSettings_updates_disabled": {
     "message": "Awtomatiske aktualizacije dowóliś"
@@ -633,7 +633,7 @@
     "message": "Zwězanja"
   },
   "policy_description_GoToIntranetSiteForSingleWordEntryInAddressBar": {
-    "message": "Force direct intranet site navigation instead of searching when typing single word entries in the address bar"
+    "message": "Direktnu nawigaciju k intranetowym websedłam wunuzkaś, město togo aby se pytanje pśi zapodawanju zapiskow z jadnotliwych słowow do adresowego póla startowało"
   },
   "policy_description_Handlers": {
     "message": "Standardne nałoženja za wócynjanje datajow, protokolow a MIME-typow póstajiś"
@@ -1182,13 +1182,13 @@
     "message": "Naraźenja pytnicow zmóžniś abo znjemóžniś"
   },
   "policy_description_SecurityDevices": {
-    "message": "Install or delete PKCS #11 modules"
+    "message": "Module PKCS#11 instalěrowaś abo wotstroniś"
   },
   "policy_description_SecurityDevices_Add": {
-    "message": "Install"
+    "message": "Instalěrowaś"
   },
   "policy_description_SecurityDevices_Delete": {
-    "message": "Delete"
+    "message": "Wótwónoźeś"
   },
   "policy_description_SecurityDevices_label_key": {
     "message": "Mě rěda"
@@ -1206,7 +1206,7 @@
     "message": "Minimalnje trěbna TLS-wersija"
   },
   "policy_description_StartDownloadsInTempDirectory": {
-    "message": "Force downloads to start off in a temporary location rather than the default download directory"
+    "message": "Ześěgnjenja w nachylnem zapisu zachopiś a nic w standardnem ześěgnjeńskem zapisu"
   },
   "policy_description_SupportMenu": {
     "message": "Pśidawanje swójskego menijowego zapiska za meni Pomoc"
@@ -1227,7 +1227,7 @@
     "message": "Funkcije wobglědowaka dopórucyś"
   },
   "policy_description_UserMessaging_MoreFromMozilla": {
-    "message": "Show “More from Mozilla” section in the settings"
+    "message": "Wótrězk „Wěcej wót Mozilla“ w nastajenjach pokazaś"
   },
   "policy_description_UserMessaging_SkipOnboarding": {
     "message": "Witańsku wobrazowku za nowe wužywarje znjemóžniś"
@@ -1239,7 +1239,7 @@
     "message": "Symbol a menijowy zapisk „Nowe funkcije a změny“ pokazaś"
   },
   "policy_description_UseSystemPrintDialog": {
-    "message": "Use the system print dialog instead of the print preview window"
+    "message": "Systemowy śišćaŕski dialog město wokna śišćaŕskego pśeglěda wužywaś"
   },
   "policy_description_WebsiteFilter": {
     "message": "Zajźujo, až se websedła woglěduju. Móžośo „<all_urls>“ za blokěrowanje wšych URL wužywaś. Glejśo informaciski wótkaz za wšykne płaśiwe zapiski, ale jano HTTPS a HTTP se pódpěratej."
