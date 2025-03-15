@@ -575,6 +575,24 @@ const output = {
       }
     });
 
+    // key-value-pairs
+    [...el.parentNode.querySelectorAll(':scope > div > .key-value-pairs')].forEach((el) => {
+      const items = {};
+
+      [...el.parentNode.querySelectorAll(':scope .sub-options')].forEach((el) => {
+        const key = el.getElementsByClassName('key')[0];
+        const value = el.getElementsByClassName('value')[0];
+        if (!output.hasInvalidFields(el)) {
+          items[key.value] = value.value;
+        }
+      });
+
+      // only add non-empty policies
+      if (Object.keys(items).length > 0) {
+        policy[el.getAttribute('data-name')] = items;
+      }
+    });
+
     // simple arrays
     [...el.parentNode.querySelectorAll(':scope > div > .array')].forEach((el) => {
       const items = [];

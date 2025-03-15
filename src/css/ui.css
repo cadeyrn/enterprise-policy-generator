@@ -393,7 +393,8 @@ input[data-type='key-object-list'] ~ .sub-options-wrapper .array-action,
 input[data-type='key-value-pairs'] ~ .sub-options .array-action,
 input[data-type='nested-object'] ~ .sub-options-wrapper .array-action,
 .object-array .array-action,
-.object-list .array-action {
+.object-list .array-action,
+.key-value-pairs .array-action {
   position: absolute;
   top: 3px;
 }
@@ -404,7 +405,8 @@ input[data-type='key-object-list'] ~ .sub-options-wrapper .array-action[data-act
 input[data-type='key-value-pairs'] ~ .sub-options .array-action[data-action='remove'],
 input[data-type='nested-object'] ~ .sub-options-wrapper .array-action[data-action='remove'],
 .object-array .array-action[data-action='remove'],
-.object-list .array-action[data-action='remove'] {
+.object-list .array-action[data-action='remove'],
+.key-value-pairs .array-action[data-action='remove'] {
   right: 26px;
 }
 
@@ -414,7 +416,8 @@ input[data-type='key-object-list'] ~ .sub-options-wrapper .array-action[data-act
 input[data-type='key-value-pairs'] ~ .sub-options .array-action[data-action='add'],
 input[data-type='nested-object'] ~ .sub-options-wrapper .array-action[data-action='add'],
 .object-array .array-action[data-action='add'],
-.object-list .array-action[data-action='add'] {
+.object-list .array-action[data-action='add'],
+.key-value-pairs .array-action[data-action='add'] {
   right: 5px;
 }
 
@@ -422,7 +425,8 @@ input[data-type='nested-object'] ~ .sub-options-wrapper .array-action[data-actio
   padding-right: 50px;
 }
 
-.object-list .sub-options + .sub-options {
+.object-list .sub-options + .sub-options,
+.key-value-pairs .sub-options + .sub-options {
   margin-top: 30px;
 }
 

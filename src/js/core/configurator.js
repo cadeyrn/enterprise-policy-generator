@@ -1353,6 +1353,9 @@ const configurator = {
       case 'json':
         configurator.addJsonProperty(el, parentName, policy);
         break;
+      case 'key-value-pairs':
+        configurator.addKeyValuePairsProperty(el, parentName, policy);
+        break;
       case 'multiselect':
         configurator.addMultiselectProperty(el, parentName, policy);
         break;
@@ -1375,7 +1378,7 @@ const configurator = {
         configurator.addStringProperty(el, parentName, policy, true, isArrayProperty, hideArrayActionLinks);
         break;
       default:
-      // do nothing
+        // do nothing
     }
   },
 
@@ -1598,6 +1601,67 @@ const configurator = {
     elObjectWrapper.appendChild(elTextarea);
 
     configurator.addInvalidJsonLabel(elObjectWrapper);
+
+    el.appendChild(elObjectWrapper);
+  },
+
+  /**
+   * Adds property of the type "key-value-pairs" to a policy.
+   *
+   * @param {HTMLElement} el - the DOM element of the policy
+   * @param {string} parentName - the name of the parent policy object
+   * @param {object} policy - the policy object
+   *
+   * @returns {void}
+   */
+  addKeyValuePairsProperty (el, parentName, policy) {
+    const elObjectWrapper = document.createElement('div');
+    elObjectWrapper.classList.add('key-value-pairs');
+    elObjectWrapper.setAttribute('data-name', policy.name);
+
+    // label
+    const elCaptionWrapper = document.createElement('div');
+    elCaptionWrapper.classList.add('label');
+    elObjectWrapper.appendChild(elCaptionWrapper);
+
+    const elCaption = document.createTextNode(policy.label);
+    elCaptionWrapper.appendChild(elCaption);
+
+    // key-value-pairs
+    const elSubOptions = configurator.addSubOptions(elObjectWrapper);
+    const elInputWrapperKey = document.createElement('div');
+    elInputWrapperKey.classList.add('input');
+
+    const key = parentName + '_' + policy.name;
+
+    const elInputKey = document.createElement('input');
+    elInputKey.setAttribute('type', 'text');
+    elInputKey.setAttribute('id', key + '_Key_1');
+    elInputKey.setAttribute('name', key + '_Key_1');
+    elInputKey.setAttribute('data-name', key);
+    elInputKey.setAttribute('placeholder', policy.label_key);
+    elInputKey.classList.add('key');
+    configurator.addMandatoryLabel(elInputKey, elInputWrapperKey);
+    elInputWrapperKey.appendChild(elInputKey);
+    elSubOptions.appendChild(elInputWrapperKey);
+
+    const elInputWrapperValue = document.createElement('div');
+    elInputWrapperValue.classList.add('input');
+
+    const elInputValue = document.createElement('input');
+    elInputValue.setAttribute('type', 'text');
+    elInputValue.setAttribute('id', key + '_Value_1');
+    elInputValue.setAttribute('name', key + '_Value_1');
+    elInputValue.setAttribute('data-name', key);
+    elInputValue.setAttribute('placeholder', policy.label_value);
+    elInputValue.classList.add('value');
+    configurator.addMandatoryLabel(elInputValue, elInputWrapperValue);
+    elInputWrapperValue.appendChild(elInputValue);
+    elSubOptions.appendChild(elInputWrapperValue);
+
+    // add array field action links
+    elSubOptions.parentNode.classList.add('array-action-links');
+    configurator.addArrayFieldActionLinks(elSubOptions, key + '_1');
 
     el.appendChild(elObjectWrapper);
   },

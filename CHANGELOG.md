@@ -10,6 +10,8 @@
   [#294](https://github.com/cadeyrn/enterprise-policy-generator/issues/294)
 - Added support for boolean options in key-object-list policies, needed for updated ExtensionSettings policy, see
   [#295](https://github.com/cadeyrn/enterprise-policy-generator/issues/295)
+- Added support for key-value-pairs options in object policies, needed for updated SecurityDevices policy, see
+  [#295](https://github.com/cadeyrn/enterprise-policy-generator/issues/295)
 
 #### Enterprise Policies
 
