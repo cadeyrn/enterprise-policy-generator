@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### [Version 6.3.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v6.3.0) (2025-03-15)
+### [Version 6.3.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v6.3.0) (2025-03-16)
 
 #### Enhancements
 
@@ -17,8 +17,8 @@
 
 - Added support for AppUpdatePin policy to prevent Firefox from being updated beyond the specified version, see
   [#241](https://github.com/cadeyrn/enterprise-policy-generator/issues/241)
-- Added support for StartDownloadsInTempDirectory policy to force downloads to start off in a temporary location rather
-  than the default download directory, see [#247](https://github.com/cadeyrn/enterprise-policy-generator/issues/247)
+- Added support for StartDownloadsInTempDirectory policy to force downloads to start in a temporary location rather than
+  in the default download directory, see [#247](https://github.com/cadeyrn/enterprise-policy-generator/issues/247)
 - Added support for UseSystemPrintDialog policy to use the system print dialog instead of the print preview window, see
   [#249](https://github.com/cadeyrn/enterprise-policy-generator/issues/249)
 - Added support for ExemptDomainFileTypePairsFromFileTypeDownloadWarnings policy to disable download warnings based on
@@ -32,7 +32,7 @@
   with a weak signature algorithm (Firefox 127+), see
   [#263](https://github.com/cadeyrn/enterprise-policy-generator/issues/263)
 - Added sitepermission as possible type for the allowed_types option in the ExtensionSettings policy to allow the
-  installation of site permission but no other types of add-ons, see
+  installation of site permission but not other types of add-ons, see
   [#244](https://github.com/cadeyrn/enterprise-policy-generator/issues/244)
 - Updated DisplayBookmarksToolbar policy to support only showing the bookmarks toolbar for new tabs, and migrated policy
   in existing configurations, see [#242](https://github.com/cadeyrn/enterprise-policy-generator/issues/242)
