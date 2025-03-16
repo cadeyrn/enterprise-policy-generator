@@ -479,6 +479,9 @@
   "policy_description_EnableTrackingProtection_Cryptomining": {
     "message": "Skšajźne kryptokopaki (eng. cryptominers) blokěrowaś"
   },
+  "policy_description_EnableTrackingProtection_EmailTracking": {
+    "message": "Block e-mail tracking"
+  },
   "policy_description_EnableTrackingProtection_Exceptions": {
     "message": "Wuwześa"
   },

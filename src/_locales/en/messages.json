@@ -477,13 +477,16 @@
     "message": "Enhanced Tracking Protection"
   },
   "policy_description_EnableTrackingProtection_Cryptomining": {
-    "message": "block cryptominers"
+    "message": "Block cryptominers"
+  },
+  "policy_description_EnableTrackingProtection_EmailTracking": {
+    "message": "Block e-mail tracking"
   },
   "policy_description_EnableTrackingProtection_Exceptions": {
     "message": "Exceptions"
   },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
-    "message": "block fingerprinters"
+    "message": "Block fingerprinters"
   },
   "policy_description_EnableTrackingProtection_Value": {
     "message": "Tracking Content"

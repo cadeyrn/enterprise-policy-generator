@@ -6,8 +6,10 @@
 
 #### Enterprise Policies
 
-- Added default_area option in the ExtensionSettings policy to define the initial placement of the extension button, see
+- Added default_area option to ExtensionSettings policy to define the initial placement of the extension button, see
   [#255](https://github.com/cadeyrn/enterprise-policy-generator/issues/255)
+- Added EmailTracking option to EnableTrackingProtection policy to block e-mail tracking, see
+  [#254](https://github.com/cadeyrn/enterprise-policy-generator/issues/254)
 
 ---
 

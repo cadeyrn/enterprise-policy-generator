@@ -479,6 +479,9 @@
   "policy_description_EnableTrackingProtection_Cryptomining": {
     "message": "Heimliche Digitalwährungsberechner (Krypto-Miner) blockieren"
   },
+  "policy_description_EnableTrackingProtection_EmailTracking": {
+    "message": "E-Mail-Tracking blockieren"
+  },
   "policy_description_EnableTrackingProtection_Exceptions": {
     "message": "Ausnahmen"
   },
