@@ -2,6 +2,15 @@
 
 ## Release Notes
 
+### Version 6.4.0 (Work in Progress)
+
+#### Enterprise Policies
+
+- Added default_area option in the ExtensionSettings policy to define the initial placement of the extension button, see
+  [#255](https://github.com/cadeyrn/enterprise-policy-generator/issues/255)
+
+---
+
 ### [Version 6.3.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v6.3.0) (2025-03-16)
 
 #### Enhancements

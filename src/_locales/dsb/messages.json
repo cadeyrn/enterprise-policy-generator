@@ -557,6 +557,15 @@
   "policy_description_ExtensionSettings_blocked_install_message_label": {
     "message": "Zmólkowa powěźeńka"
   },
+  "policy_description_ExtensionSettings_default_area": {
+    "message": "Initial placement of the extension button"
+  },
+  "policy_description_ExtensionSettings_default_area_menupanel": {
+    "message": "Within the extension menu"
+  },
+  "policy_description_ExtensionSettings_default_area_navbar": {
+    "message": "Pinned to the navigation toolbar"
+  },
   "policy_description_ExtensionSettings_extra_caption_post": {
     "message": "Konfiguracija za jadnotliwe rozšyrjenja"
   },

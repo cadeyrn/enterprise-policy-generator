@@ -928,6 +928,25 @@ const policies = {
             value : 'true'
           }
         ]
+      },
+      {
+        name : 'default_area',
+        label : browser.i18n.getMessage('policy_description_ExtensionSettings_default_area'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_ExtensionSettings_default_area_menupanel'),
+            value : 'menupanel'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_ExtensionSettings_default_area_navbar'),
+            value : 'navbar'
+          }
+        ]
       }
     ]
   },

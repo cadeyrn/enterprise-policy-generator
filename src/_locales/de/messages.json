@@ -557,6 +557,15 @@
   "policy_description_ExtensionSettings_blocked_install_message_label": {
     "message": "Fehlermeldung"
   },
+  "policy_description_ExtensionSettings_default_area": {
+    "message": "Anfängliche Positionierung der Erweiterungs-Schaltfläche"
+  },
+  "policy_description_ExtensionSettings_default_area_menupanel": {
+    "message": "Innerhalb des Erweiterungs-Menüs"
+  },
+  "policy_description_ExtensionSettings_default_area_navbar": {
+    "message": "An die Navigations-Symbolleiste angeheftet"
+  },
   "policy_description_ExtensionSettings_extra_caption_post": {
     "message": "Konfiguration für einzelne Erweiterungen"
   },
