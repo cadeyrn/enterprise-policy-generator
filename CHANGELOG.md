@@ -14,6 +14,7 @@
 #### Dependencies
 
 - Updated eslint from version 9.22.0 to 9.23.0
+- Updated eslint-plugin-jsdoc from version 50.6.6 to 50.6.9
 
 ---
 
