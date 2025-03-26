@@ -15,6 +15,7 @@
 
 - Updated eslint from version 9.22.0 to 9.23.0
 - Updated eslint-plugin-jsdoc from version 50.6.6 to 50.6.9
+- Updated web-ext from version 8.4.0 to 8.5.0
 
 ---
 
@@ -121,7 +122,7 @@
 - Updated eslint-plugin-jsdoc from version 50.2.2 to 50.6.3
 - Updated gulp-eslint-new from version 2.3.0 to 2.4.0
 - Updated jsdoc from version 4.0.3 to 4.0.4
-- Updated web-ext from version  8.2.0 to 8.4.0
+- Updated web-ext from version 8.2.0 to 8.4.0
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v6.1.0...v6.2.0)<br />
 [Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-6.2.0)
