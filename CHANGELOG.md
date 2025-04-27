@@ -13,7 +13,7 @@
 
 #### Dependencies
 
-- Updated eslint from version 9.22.0 to 9.23.0
+- Updated eslint from version 9.23.0 to 9.25.1
 - Updated eslint-plugin-jsdoc from version 50.6.6 to 50.6.9
 - Updated web-ext from version 8.4.0 to 8.5.0
 
