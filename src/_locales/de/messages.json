@@ -1232,6 +1232,9 @@
   "policy_description_ShowHomeButton": {
     "message": "Startseiten-Schaltfläche in der Symbolleiste anzeigen"
   },
+  "policy_description_SkipTermsOfUse": {
+    "message": "Nutzungsbedingungen und Datenschutzhinweis beim ersten Start von Firefox anzeigen. Werden diese nicht angezeigt, wird damit erklärt, dass die Nutzungsbedingungen im Namen aller Personen akzeptiert werden, die Zugriff auf den Browser haben, und dass die Berechtigung besteht, diese stellvertretend zu akzeptieren."
+  },
   "policy_description_SSLVersionMax": {
     "message": "Maximal unterstützte TLS-Version"
   },

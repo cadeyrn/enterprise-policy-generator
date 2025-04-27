@@ -14,6 +14,8 @@
   [#256](https://github.com/cadeyrn/enterprise-policy-generator/issues/256)
 - Added support for PrintingEnabled policy to enable or disable printing, see
   [#257](https://github.com/cadeyrn/enterprise-policy-generator/issues/257)
+- Added support for SkipTermsOfUse policy to skip the terms of use and privacy notice when Firefox is started for the
+  first time (Firefox 138+), see [#299](https://github.com/cadeyrn/enterprise-policy-generator/issues/299)
 - Added default_area option to ExtensionSettings policy to define the initial placement of the extension button, see
   [#255](https://github.com/cadeyrn/enterprise-policy-generator/issues/255)
 - Added EmailTracking option to EnableTrackingProtection policy to block e-mail tracking, see

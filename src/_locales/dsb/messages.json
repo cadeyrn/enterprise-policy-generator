@@ -1232,6 +1232,9 @@
   "policy_description_ShowHomeButton": {
     "message": "Tłocašk startowego boka w symbolowej rědce pokazaś"
   },
+  "policy_description_SkipTermsOfUse": {
+    "message": "Show terms of use and privacy notice when Firefox is started for the first time. If you disable it, it means that the terms of use are accepted on behalf of all persons who have access to the browser, and that you have the authority to accept them on their behalf."
+  },
   "policy_description_SSLVersionMax": {
     "message": "Maksimalnje pódpěrana TLS-wersija"
   },

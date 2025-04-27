@@ -3519,6 +3519,22 @@ const policies = {
     }
   },
 
+  SkipTermsOfUse : {
+    first_available : { mainstream : '138.0', esr : '140.0' },
+    ui_category : 'others',
+    type : 'enum',
+    options : [
+      {
+        label : browser.i18n.getMessage('enum_value_yes'),
+        value : 'false'
+      },
+      {
+        label : browser.i18n.getMessage('enum_value_no'),
+        value : 'true'
+      }
+    ]
+  },
+
   OverrideFirstRunPage : {
     first_available : { mainstream : '62.0', esr : '60.0' },
     ui_category : 'others',
