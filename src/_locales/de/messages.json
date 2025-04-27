@@ -644,6 +644,18 @@
   "policy_description_FirefoxHome_TopSites": {
     "message": "Verknüpfungen"
   },
+  "policy_description_FirefoxSuggest": {
+    "message": "Firefox Suggest konfigurieren (nur USA)"
+  },
+  "policy_description_FirefoxSuggest_ImproveSuggest": {
+    "message": "Datenerfassung für Vorschläge in der Adressleiste aktivieren"
+  },
+  "policy_description_FirefoxSuggest_SponsoredSuggestions": {
+    "message": "Gesponserte Vorschläge in der Adressleiste anzeigen"
+  },
+  "policy_description_FirefoxSuggest_WebSuggestions": {
+    "message": "Nicht gesponserte Vorschläge in der Adressleiste anzeigen"
+  },
   "policy_description_GoToIntranetSiteForSingleWordEntryInAddressBar": {
     "message": "Direkte Navigation zu Intranet-Websites erzwingen, anstatt beim Eintippen von Einzelworteinträgen in die Adressleiste eine Suche zu starten"
   },

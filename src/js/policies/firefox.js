@@ -517,6 +517,72 @@ const policies = {
     ]
   },
 
+  FirefoxSuggest : {
+    first_available : { mainstream : '118.0', esr : '115.3' },
+    is_lockable : true,
+    ui_category : 'customization',
+    type : 'object',
+    properties : [
+      {
+        name : 'WebSuggestions',
+        label : browser.i18n.getMessage('policy_description_FirefoxSuggest_WebSuggestions'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ]
+      },
+      {
+        name : 'SponsoredSuggestions',
+        label : browser.i18n.getMessage('policy_description_FirefoxSuggest_SponsoredSuggestions'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ]
+      },
+      {
+        name : 'ImproveSuggest',
+        label : browser.i18n.getMessage('policy_description_FirefoxSuggest_ImproveSuggest'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ]
+      }
+    ]
+  },
+
   NewTabPage : {
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'customization',

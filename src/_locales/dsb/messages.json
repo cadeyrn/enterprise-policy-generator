@@ -644,6 +644,18 @@
   "policy_description_FirefoxHome_TopSites": {
     "message": "Zwězanja"
   },
+  "policy_description_FirefoxSuggest": {
+    "message": "Configure Firefox Suggest (US only)"
+  },
+  "policy_description_FirefoxSuggest_ImproveSuggest": {
+    "message": "Enable data collection for quick suggest results in the address bar"
+  },
+  "policy_description_FirefoxSuggest_SponsoredSuggestions": {
+    "message": "Show sponsored quick suggest results in the address bar"
+  },
+  "policy_description_FirefoxSuggest_WebSuggestions": {
+    "message": "Show non-sponsored quick suggest results in the address bar"
+  },
   "policy_description_GoToIntranetSiteForSingleWordEntryInAddressBar": {
     "message": "Direktnu nawigaciju k intranetowym websedłam wunuzkaś, město togo aby se pytanje pśi zapodawanju zapiskow z jadnotliwych słowow do adresowego póla startowało"
   },
