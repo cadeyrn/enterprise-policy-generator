@@ -888,7 +888,7 @@
     "message": "pop-ups are blocked by default"
   },
   "policy_description_Preference_browser_cache_disk_enable": {
-    "message": "Enable / disable storing cache on the hard drive"
+    "message": "Enable or disable storing cache on the hard drive"
   },
   "policy_description_Preference_browser_cache_disk_parent_directory": {
     "message": "Change the location of the disk cache"

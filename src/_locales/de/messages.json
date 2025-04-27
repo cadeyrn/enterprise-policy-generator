@@ -888,7 +888,7 @@
     "message": "Pop-ups werden standardmäßig blockiert"
   },
   "policy_description_Preference_browser_cache_disk_enable": {
-    "message": "Festplatten-Cache aktivieren / deaktivieren"
+    "message": "Festplatten-Cache aktivieren oder deaktivieren"
   },
   "policy_description_Preference_browser_cache_disk_parent_directory": {
     "message": "Speicherort des Festplatten-Caches ändern"
