@@ -15,6 +15,7 @@
 
 - Updated eslint from version 9.23.0 to 9.25.1
 - Updated eslint-plugin-jsdoc from version 50.6.6 to 50.6.9
+- Updated eslint/json from version 0.11.0 to 0.12.0
 - Updated web-ext from version 8.4.0 to 8.5.0
 
 ---
