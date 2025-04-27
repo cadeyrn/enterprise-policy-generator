@@ -932,9 +932,6 @@
   "policy_description_Preference_browser_urlbar_suggest_openpage": {
     "message": "Suggest open tabs when using the address bar"
   },
-  "policy_description_Preference_datareporting_policy_dataSubmissionPolicyBypassNotification": {
-    "message": "Show the privacy policy tab on first run"
-  },
   "policy_description_Preference_dom_disable_window_flip": {
     "message": "Allow websites to monkey with window focus"
   },

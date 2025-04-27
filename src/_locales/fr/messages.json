@@ -932,9 +932,6 @@
   "policy_description_Preference_browser_urlbar_suggest_openpage": {
     "message": "Suggérer d'ouvrir les onglets lors de l'utilisation de la barre d'adresse"
   },
-  "policy_description_Preference_datareporting_policy_dataSubmissionPolicyBypassNotification": {
-    "message": "Afficher l'onglet Politique de confidentialité lors de la première exécution"
-  },
   "policy_description_Preference_dom_disable_window_flip": {
     "message": "Permettre aux sites Web de singe avec le foyer de fenêtre"
   },

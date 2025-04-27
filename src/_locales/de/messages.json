@@ -932,9 +932,6 @@
   "policy_description_Preference_browser_urlbar_suggest_openpage": {
     "message": "Beim Verwenden der Adressleiste offene Tabs vorschlagen"
   },
-  "policy_description_Preference_datareporting_policy_dataSubmissionPolicyBypassNotification": {
-    "message": "Datenschutzhinweis beim ersten Start von Firefox anzeigen"
-  },
   "policy_description_Preference_dom_disable_window_flip": {
     "message": "Websites erlauben, den Fenster-Fokus zu manipulieren"
   },

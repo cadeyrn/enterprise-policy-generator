@@ -932,9 +932,6 @@
   "policy_description_Preference_browser_urlbar_suggest_openpage": {
     "message": "Při wužiwanju adresoweho pola wočinjene rajtarki namjetować"
   },
-  "policy_description_Preference_datareporting_policy_dataSubmissionPolicyBypassNotification": {
-    "message": "Pokazku priwatnosće při prěnim starće Firefox pokazać"
-  },
   "policy_description_Preference_dom_disable_window_flip": {
     "message": "Websydłam dowolić, woknowy fokus manipulować"
   },

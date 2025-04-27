@@ -3508,17 +3508,6 @@ const policies = {
     ]
   },
 
-  Preference_datareporting_policy_dataSubmissionPolicyBypassNotification : {
-    first_available : { mainstream : '68.0', esr : '68.0' },
-    ui_category : 'others',
-    type : 'preference',
-    properties : {
-      option : 'datareporting.policy.dataSubmissionPolicyBypassNotification',
-      type : 'boolean-inverse',
-      default : 'false'
-    }
-  },
-
   SkipTermsOfUse : {
     first_available : { mainstream : '138.0', esr : '140.0' },
     ui_category : 'others',
