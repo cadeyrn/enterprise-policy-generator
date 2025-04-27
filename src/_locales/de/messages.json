@@ -1010,6 +1010,9 @@
   "policy_description_PrimaryPassword_true": {
     "message": "Die Verwendung eines Hauptpassworts erzwingen"
   },
+  "policy_description_PrintingEnabled": {
+    "message": "Drucken-Funktion aktivieren oder deaktivieren"
+  },
   "policy_description_PromptForDownloadLocation": {
     "message": "Vor dem Herunterladen jeder Datei fragen, wo diese gespeichert werden sollen"
   },

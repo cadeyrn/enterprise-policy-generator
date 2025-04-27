@@ -1010,6 +1010,9 @@
   "policy_description_PrimaryPassword_true": {
     "message": "A primary password is required"
   },
+  "policy_description_PrintingEnabled": {
+    "message": "Enable or disable printing"
+  },
   "policy_description_PromptForDownloadLocation": {
     "message": "Demander où enregistrer chaque fichier avant de le télécharger"
   },

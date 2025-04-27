@@ -3133,6 +3133,22 @@ const policies = {
     ]
   },
 
+  PrintingEnabled : {
+    first_available : { mainstream : '120.0', esr : '115.5' },
+    ui_category : 'others',
+    type : 'enum',
+    options : [
+      {
+        label : browser.i18n.getMessage('enum_value_enable_yes'),
+        value : 'true'
+      },
+      {
+        label : browser.i18n.getMessage('enum_value_enable_no'),
+        value : 'false'
+      }
+    ]
+  },
+
   UseSystemPrintDialog : {
     first_available : { mainstream : '102.0', esr : '102.0' },
     ui_category : 'others',

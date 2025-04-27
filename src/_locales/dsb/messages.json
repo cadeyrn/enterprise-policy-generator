@@ -1010,6 +1010,9 @@
   "policy_description_PrimaryPassword_true": {
     "message": "Wužywanje głownego gronidła wunuźiś"
   },
+  "policy_description_PrintingEnabled": {
+    "message": "Enable or disable printing"
+  },
   "policy_description_PromptForDownloadLocation": {
     "message": "Pśed ześěgowanim kuždeje dataje se pšašaś, źož maju se toś te składowaś"
   },

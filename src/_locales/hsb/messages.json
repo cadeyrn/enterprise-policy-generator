@@ -1010,6 +1010,9 @@
   "policy_description_PrimaryPassword_true": {
     "message": "Wužiwanje hłowneho hesła wunuzować"
   },
+  "policy_description_PrintingEnabled": {
+    "message": "Enable or disable printing"
+  },
   "policy_description_PromptForDownloadLocation": {
     "message": "Před sćahowanjom kóždeje dataje so prašeć, hdźež maja so tute składować"
   },
