@@ -1446,6 +1446,38 @@ const policies = {
 
   // privacy
 
+  AutofillAddressEnabled : {
+    first_available : { mainstream : '125.0', esr : '115.10' },
+    ui_category : 'privacy',
+    type : 'enum',
+    options : [
+      {
+        label : browser.i18n.getMessage('enum_value_enable_yes'),
+        value : 'true'
+      },
+      {
+        label : browser.i18n.getMessage('enum_value_enable_no'),
+        value : 'false'
+      }
+    ]
+  },
+
+  AutofillCreditCardEnabled : {
+    first_available : { mainstream : '125.0', esr : '115.10' },
+    ui_category : 'privacy',
+    type : 'enum',
+    options : [
+      {
+        label : browser.i18n.getMessage('enum_value_enable_yes'),
+        value : 'true'
+      },
+      {
+        label : browser.i18n.getMessage('enum_value_enable_no'),
+        value : 'false'
+      }
+    ]
+  },
+
   Cookies : {
     first_available : { mainstream : '60.0', esr : '60.0' },
     is_lockable : true,

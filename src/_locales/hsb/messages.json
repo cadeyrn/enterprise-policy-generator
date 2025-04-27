@@ -200,6 +200,12 @@
   "policy_description_Authentication_SPNEGO": {
     "message": "SPNEGO"
   },
+  "policy_description_AutofillAddressEnabled": {
+    "message": "Enable or disable automatic saving and filling for addresses"
+  },
+  "policy_description_AutofillCreditCardEnabled": {
+    "message": "Enable or disable autofill saving and filling for payment methods"
+  },
   "policy_description_AutoLaunchProtocolsFromOrigins": {
     "message": "Lisćinu eksternych protokolow postajić, kotrež dadźa so z nalistowanych žórłow wužiwać, bjeztoho zo by wužiwar namołwu dóstał"
   },

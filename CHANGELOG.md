@@ -6,10 +6,14 @@
 
 #### Enterprise Policies
 
-- Added support for PrintingEnabled policy to enable or disable printing, see
-  [#257](https://github.com/cadeyrn/enterprise-policy-generator/issues/257)
+- Added support for AutofillAddressEnabled policy to enable or disable the automatic saving and filling for addresses,
+  see [#250](https://github.com/cadeyrn/enterprise-policy-generator/issues/250)
+- Added support for AutofillCreditCardEnabled policy to enable or disable the automatic saving and filling for payment
+  methods, see [#251](https://github.com/cadeyrn/enterprise-policy-generator/issues/251)
 - Added support for FirefoxSuggest policy to configure Firefox Suggest feature (US only), see
   [#256](https://github.com/cadeyrn/enterprise-policy-generator/issues/256)
+- Added support for PrintingEnabled policy to enable or disable printing, see
+  [#257](https://github.com/cadeyrn/enterprise-policy-generator/issues/257)
 - Added default_area option to ExtensionSettings policy to define the initial placement of the extension button, see
   [#255](https://github.com/cadeyrn/enterprise-policy-generator/issues/255)
 - Added EmailTracking option to EnableTrackingProtection policy to block e-mail tracking, see
