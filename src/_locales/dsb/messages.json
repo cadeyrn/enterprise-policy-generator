@@ -201,10 +201,10 @@
     "message": "SPNEGO"
   },
   "policy_description_AutofillAddressEnabled": {
-    "message": "Enable or disable automatic saving and filling for addresses"
+    "message": "Awtomatiske składowanje a wupołnjenje adresow zmóžniś abo znjemóžniś"
   },
   "policy_description_AutofillCreditCardEnabled": {
-    "message": "Enable or disable autofill saving and filling for payment methods"
+    "message": "Awtomatiske składowanje a wupołnjenje płaśeńskich metodow zmóžniś abo znjemóžniś"
   },
   "policy_description_AutoLaunchProtocolsFromOrigins": {
     "message": "Lisćinu eksternych protokolow póstajiś, kótarež daju se z naliconych žrědłow wužywaś, bźez togo aby wužywaŕ naspominanje dostał"
@@ -486,7 +486,7 @@
     "message": "Skšajźne kryptokopaki (eng. cryptominers) blokěrowaś"
   },
   "policy_description_EnableTrackingProtection_EmailTracking": {
-    "message": "Block e-mail tracking"
+    "message": "E-mailowe slědowanje blokěrowaś"
   },
   "policy_description_EnableTrackingProtection_Exceptions": {
     "message": "Wuwześa"
@@ -567,13 +567,13 @@
     "message": "Zmólkowa powěźeńka"
   },
   "policy_description_ExtensionSettings_default_area": {
-    "message": "Initial placement of the extension button"
+    "message": "Zachopne pozicioněrowanje tłocaška rozšyrjenjow"
   },
   "policy_description_ExtensionSettings_default_area_menupanel": {
-    "message": "Within the extension menu"
+    "message": "W meniju rozšyrjenjow"
   },
   "policy_description_ExtensionSettings_default_area_navbar": {
-    "message": "Pinned to the navigation toolbar"
+    "message": "K nawigaciskej symbolowej rědce pśipěty"
   },
   "policy_description_ExtensionSettings_extra_caption_post": {
     "message": "Konfiguracija za jadnotliwe rozšyrjenja"
@@ -651,16 +651,16 @@
     "message": "Zwězanja"
   },
   "policy_description_FirefoxSuggest": {
-    "message": "Configure Firefox Suggest (US only)"
+    "message": "Firefox Suggest konfigurěrowaś (jano USA)"
   },
   "policy_description_FirefoxSuggest_ImproveSuggest": {
-    "message": "Enable data collection for quick suggest results in the address bar"
+    "message": "Zapśimjeśe datow za naraźenja w adresowem pólu zmóžniś"
   },
   "policy_description_FirefoxSuggest_SponsoredSuggestions": {
-    "message": "Show sponsored quick suggest results in the address bar"
+    "message": "Sponserowane naraźenja w adresowem pólu pokazaś"
   },
   "policy_description_FirefoxSuggest_WebSuggestions": {
-    "message": "Show non-sponsored quick suggest results in the address bar"
+    "message": "Njesponserowane naraźenja w adresowem pólu pokazaś"
   },
   "policy_description_GoToIntranetSiteForSingleWordEntryInAddressBar": {
     "message": "Direktnu nawigaciju k intranetowym websedłam wunuzkaś, město togo aby se pytanje pśi zapodawanju zapiskow z jadnotliwych słowow do adresowego póla startowało"
@@ -1026,7 +1026,7 @@
     "message": "Wužywanje głownego gronidła wunuźiś"
   },
   "policy_description_PrintingEnabled": {
-    "message": "Enable or disable printing"
+    "message": "Śišćaŕsku funkciju zmóžniś abo znjemóžniś"
   },
   "policy_description_PromptForDownloadLocation": {
     "message": "Pśed ześěgowanim kuždeje dataje se pšašaś, źož maju se toś te składowaś"
@@ -1230,7 +1230,7 @@
     "message": "Tłocašk startowego boka w symbolowej rědce pokazaś"
   },
   "policy_description_SkipTermsOfUse": {
-    "message": "Show terms of use and privacy notice when Firefox is started for the first time. If you disable it, it means that the terms of use are accepted on behalf of all persons who have access to the browser, and that you have the authority to accept them on their behalf."
+    "message": "Wužywańske wuměnjenja a pokazku šćita datow pśi prědnem starśe Firefox pokazaś. Jolic se njepokazuju, se z tym deklarěrujo, až se wužywańske wuměnjenja w mjenju wšych wósobow akceptěruju, kótarež pśistup k wobglědowakoju maju a až pšawo wobstoj, te w zastupnistwje akceptěrowaś."
   },
   "policy_description_SSLVersionMax": {
     "message": "Maksimalnje pódpěrana TLS-wersija"
