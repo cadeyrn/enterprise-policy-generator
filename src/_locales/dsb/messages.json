@@ -201,10 +201,10 @@
     "message": "SPNEGO"
   },
   "policy_description_AutofillAddressEnabled": {
-    "message": "Awtomatiske składowanje a wupołnjenje adresow zmóžniś abo znjemóžniś"
+    "message": "Składowanje a awtomatiske wupołnjenje adresow zmóžniś abo znjemóžniś"
   },
   "policy_description_AutofillCreditCardEnabled": {
-    "message": "Awtomatiske składowanje a wupołnjenje płaśeńskich metodow zmóžniś abo znjemóžniś"
+    "message": "Składowanje a awtomatiske wupołnjenje płaśeńskich metodow zmóžniś abo znjemóžniś"
   },
   "policy_description_AutoLaunchProtocolsFromOrigins": {
     "message": "Lisćinu eksternych protokolow póstajiś, kótarež daju se z naliconych žrědłow wužywaś, bźez togo aby wužywaŕ naspominanje dostał"

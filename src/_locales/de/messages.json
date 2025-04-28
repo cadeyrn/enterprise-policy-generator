@@ -201,10 +201,10 @@
     "message": "SPNEGO"
   },
   "policy_description_AutofillAddressEnabled": {
-    "message": "Automatisches Speichern und Ausfüllen von Adressen aktivieren oder deaktivieren"
+    "message": "Speichern und automatisches Ausfüllen von Adressen aktivieren oder deaktivieren"
   },
   "policy_description_AutofillCreditCardEnabled": {
-    "message": "Automatisches Speichern und Ausfüllen von Zahlungsmethoden aktivieren oder deaktivieren"
+    "message": "Speichern und automatisches Ausfüllen von Zahlungsmethoden aktivieren oder deaktivieren"
   },
   "policy_description_AutoLaunchProtocolsFromOrigins": {
     "message": "Eine Liste externer Protokolle festlegen, die von aufgelisteten Quellen aus verwendet werden können, ohne dass der Benutzer dazu aufgefordert wird"
