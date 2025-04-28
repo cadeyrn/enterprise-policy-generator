@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### Version 6.4.0 (Work in Progress)
+### [Version 6.4.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v6.4.0) (2025-04-28)
 
 #### Enterprise Policies
 
@@ -27,6 +27,9 @@
 - Updated eslint-plugin-jsdoc from version 50.6.6 to 50.6.11
 - Updated eslint/json from version 0.11.0 to 0.12.0
 - Updated web-ext from version 8.4.0 to 8.6.0
+
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v6.3.0...v6.4.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-6.4.0)
 
 ---
 
