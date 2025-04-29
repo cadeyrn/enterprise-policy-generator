@@ -53,7 +53,7 @@ The add-on is currently available in the following languages:
 - German
 - French (Thanks, Rom and Toinane!)
 - Simplified Chinese (Thanks, fang5566 and yfdyh000!)
-- Russian (Thanks, wvxwxvw!)
+- Russian (Thanks, wvxwxvw and solokot!)
 - Upper Sorbian (Thanks, milupo!)
 - Lower Sorbian (Thanks, milupo!)
 

@@ -2,6 +2,15 @@
 
 ## Release Notes
 
+### Version 6.5.0 (Work in Progress)
+
+#### Translations
+
+- updated wording for AutofillAddressEnabled and AutofillCreditCardEnabled policies
+- updated Russian translation, see [#301](https://github.com/cadeyrn/enterprise-policy-generator/issues/301)
+
+---
+
 ### [Version 6.4.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v6.4.0) (2025-04-28)
 
 #### Enterprise Policies
