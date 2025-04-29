@@ -3,7 +3,7 @@
     "message": "Домен"
   },
   "common_origin": {
-    "message": "Origin (scheme://host)"
+    "message": "Источник (схема://узел)"
   },
   "common_url": {
     "message": "URL"
@@ -39,22 +39,22 @@
     "message": "да"
   },
   "explanation_about_policies": {
-    "message": "По адресу about:policies имеется обзор всех активных политик и ошибок в файле \"policies.json\"."
+    "message": "По адресу about:policies находится обзор всех активных политик и ошибок в файле \"policies.json\"."
   },
   "explanation_headline_usage": {
     "message": "Использование"
   },
   "explanation_intro": {
-    "message": "При нажатии на кнопку будет сгенерирован код. Этот код должен храниться в файле \"policies.json\", в папке \"distribution\", в каталоге установки."
+    "message": "При нажатии на кнопку будет сгенерирован код. Этот код должен храниться в файле \"policies.json\" в папке \"distribution\", находящейся в каталоге установки."
   },
   "explanation_intro_linux": {
-    "message": "создайте папку \"distribution\" в каталоге установки Firefox, и поместите в него файл \"policies.json\"."
+    "message": "Создайте папку \"distribution\" в каталоге установки Firefox и поместите туда файл \"policies.json\"."
   },
   "explanation_intro_macos": {
-    "message": "Create a \"distribution\" directory inside the /Contents/Resources/ directory of the Firefox application package and place the file \"policies.json\" there. To open the application package, right-click on the Firefox application in the Finder and choose \"show package contents\" from the context menu."
+    "message": "Создайте папку \"distribution\" в каталоге /Contents/Resources/ пакета приложения Firefox поместите туда файл \"policies.json\". Чтобы открыть пакет приложения, нажмите правой кнопкой мыши на приложении Firefox в Finder и выберите \"Показать содержимое пакета\" из контекстного меню."
   },
   "explanation_intro_windows": {
-    "message": "создайте папку \"distribution\" в каталоге где находится firefox.exe, и поместите в него файл \"policies.json\"."
+    "message": "Создайте папку \"distribution\" в каталоге с файлом firefox.exe и поместите туда файл \"policies.json\"."
   },
   "extension_description": {
     "message": "Генерирует корпоративные политики для Firefox."
@@ -69,13 +69,13 @@
     "message": "Создать политики"
   },
   "invalid_json_label": {
-    "message": "invalid JSON"
+    "message": "неправильный JSON"
   },
   "invalid_url_label": {
-    "message": "неверный URL"
+    "message": "неправильный URL"
   },
   "invalid_version_pattern_label": {
-    "message": "invalid version pattern"
+    "message": "неправильная версия шаблона"
   },
   "link_download": {
     "message": "загрузить policies.json"
@@ -96,7 +96,7 @@
     "message": "Отмена"
   },
   "list_dialog_no_saved_configurations": {
-    "message": "Конфигурации еще не сохранены."
+    "message": "Конфигурация ещё не сохранена."
   },
   "list_dialog_window_title": {
     "message": "Загрузить конфигурацию"
@@ -114,7 +114,7 @@
     "message": "обязательный"
   },
   "non_allowed_preference_label": {
-    "message": "Preference name not allowed"
+    "message": "Название параметра не разрешено"
   },
   "policy_category_block_access": {
     "message": "Заблокировать доступ"
@@ -141,31 +141,31 @@
     "message": "Обновления и сбор данных"
   },
   "policy_description_3rdParty": {
-    "message": "Preconfiguration of settings for extensions that use chrome.storage.managed"
+    "message": "Предварительная настройка параметров для расширений, использующих chrome.storage.managed"
   },
   "policy_description_3rdparty_JSON_caption": {
-    "message": "JSON configuration"
+    "message": "Конфигурация JSON"
   },
   "policy_description_3rdparty_JSON_label": {
-    "message": "JSON (configuration must be surrounded by curly brackets {})"
+    "message": "JSON (конфигурация должна заключаться в фигурные скобки {})"
   },
   "policy_description_3rdParty_Label_Key": {
-    "message": "ID дополнения"
+    "message": "ID расширения"
   },
   "policy_description_AllowedDomainsForApps": {
-    "message": "Define domains allowed to access Google Workspace"
+    "message": "Домены, для которых разрешён доступ к Google Workspace"
   },
   "policy_description_AppAutoUpdate": {
-    "message": "Install Firefox updates automatically"
+    "message": "Автоматическая установка обновлений Firefox"
   },
   "policy_description_AppUpdatePin": {
-    "message": "Prevent Firefox from being updated beyond the specified version"
+    "message": "Запретить обновления Firefox после указанной версии"
   },
   "policy_description_AppUpdatePin_placeholder": {
-    "message": "Firefox version (expected: \"xxx\" oder \"xxx.xx\")"
+    "message": "Версия Firefox (параметр: \"xxx\" или \"xxx.xx\")"
   },
   "policy_description_AppUpdateURL": {
-    "message": "Другой URL-адрес сервера обновлений Firefox"
+    "message": "Другой URL сервера обновлений Firefox"
   },
   "policy_description_Authentication": {
     "message": "Сайты, поддерживающие интегрированную аутентификацию"
@@ -180,13 +180,13 @@
     "message": "Всегда разрешать SPNEGO на не FQDNs"
   },
   "policy_description_Authentication_AllowProxies": {
-    "message": "Always allow SPNEGO or NTLM with proxy servers"
+    "message": "Всегда разрешать SPNEGO или NTLM через прокси"
   },
   "policy_description_Authentication_AllowProxies_NTLM": {
-    "message": "Always allow NTLM with proxy servers"
+    "message": "Всегда разрешать NTLM через прокси"
   },
   "policy_description_Authentication_AllowProxies_SPNEGO": {
-    "message": "Always allow NTLM with proxy servers"
+    "message": "Всегда разрешать SPNEGO через прокси"
   },
   "policy_description_Authentication_Delegated": {
     "message": "Делегированные"
@@ -195,28 +195,28 @@
     "message": "NTLM"
   },
   "policy_description_Authentication_PrivateBrowsing": {
-    "message": "Enable integrated authentication in private browsing"
+    "message": "Включить встроенную аутентификацию в режиме приватного просмотра"
   },
   "policy_description_Authentication_SPNEGO": {
     "message": "SPNEGO"
   },
   "policy_description_AutofillAddressEnabled": {
-    "message": "Enable or disable saving and automatic filling for addresses"
+    "message": "Включить или отключить сохранение и автоматическое заполнение адресов"
   },
   "policy_description_AutofillCreditCardEnabled": {
-    "message": "Enable or disable saving and automatic filling for payment methods"
+    "message": "Включить или отключить сохранение и автоматическое заполнение методов оплаты"
   },
   "policy_description_AutoLaunchProtocolsFromOrigins": {
-    "message": "Define a list of external protocols that can be used from listed origins without prompting the user"
+    "message": "Список внешних протоколов, которые могут быть использованы из перечисленных источников без запроса пользователя"
   },
   "policy_description_AutoLaunchProtocolsFromOrigins_allowed_origins": {
     "message": "Allowed origins"
   },
   "policy_description_AutoLaunchProtocolsFromOrigins_protocol": {
-    "message": "Protocol"
+    "message": "Протокол"
   },
   "policy_description_BackgroundAppUpdate": {
-    "message": "Install Firefox updates in the background, when the application is not running"
+    "message": "Установка обновления Firefox в фоновом режиме, когда приложение не запущено"
   },
   "policy_description_BlockAboutAddons": {
     "message": "Блокировать доступ к менеджеру дополнений (about:addons)"
@@ -252,13 +252,13 @@
     "message": "Заголовок"
   },
   "policy_description_CaptivePortal": {
-    "message": "Включить или отключить captive portal support"
+    "message": "Включить или отключить поддержку перехватывающего портала"
   },
   "policy_description_CaptivePortal_options_false": {
-    "message": "Отключить captive portal support"
+    "message": "Отключить поддержку перехватывающего портала"
   },
   "policy_description_CaptivePortal_options_true": {
-    "message": "Включить captive portal support"
+    "message": "Включить поддержку перехватывающего портала"
   },
   "policy_description_Certificates": {
     "message": "Настройка сертификатов"
@@ -279,52 +279,52 @@
     "message": "Путь к файлу .der или .pem"
   },
   "policy_description_Cookies": {
-    "message": "Разрешить или запретить сайтам установку cookie"
+    "message": "Разрешить или запретить сайтам установку куки"
   },
   "policy_description_Cookies_Allow": {
-    "message": "Домены, для которых всегда разрешены cookie"
+    "message": "Домены, для которых всегда разрешены куки"
   },
   "policy_description_Cookies_Allow_Domain": {
     "message": "Домен"
   },
   "policy_description_Cookies_AllowSession": {
-    "message": "Domains where cookies are only allowed for the current session"
+    "message": "Домены, для которых куки разрешены только в текущей сессии"
   },
   "policy_description_Cookies_AllowSession_Domain": {
     "message": "Домен"
   },
   "policy_description_Cookies_Behavior": {
-    "message": "Default behavior for cookies"
+    "message": "Поведение куков по умолчанию"
   },
   "policy_description_Cookies_Behavior_accept": {
-    "message": "Accept all cookies"
+    "message": "Принимать все куки"
   },
   "policy_description_Cookies_Behavior_limit_foreign": {
-    "message": "Reject third party cookies for sites you haven’t visited"
+    "message": "Отклонять межсайтовые куки с непосещённых сайтов"
   },
   "policy_description_Cookies_Behavior_reject": {
-    "message": "Reject all cookies"
+    "message": "Отклонять все куки"
   },
   "policy_description_Cookies_Behavior_reject_foreign": {
-    "message": "Reject third party cookies"
+    "message": "Отклонять межсайтовые куки"
   },
   "policy_description_Cookies_Behavior_reject_tracker": {
-    "message": "Reject cookies for known trackers (Default)"
+    "message": "Отклонять куки известных трекеров (по умолчанию)"
   },
   "policy_description_Cookies_Behavior_reject_tracker_and_partition_foreign": {
-    "message": "Reject cookies for known trackers and partition third-party cookies"
+    "message": "Отклонять куки известных трекеров и изолировать межсайтовые куки"
   },
   "policy_description_Cookies_BehaviorPrivateBrowsing": {
-    "message": "Default behavior for cookies in private windows"
+    "message": "Отношение к кукам по умолчанию в приватном окне"
   },
   "policy_description_Cookies_BehaviorPrivateBrowsing_reject_tracker": {
-    "message": "Reject cookies for known trackers"
+    "message": "Отклонять куки известных трекеров"
   },
   "policy_description_Cookies_BehaviorPrivateBrowsing_reject_tracker_and_partition_foreign": {
-    "message": "Reject cookies for known trackers and partition third-party cookies (Default)"
+    "message": "Отклонять куки известных трекеров и изолировать межсайтовые куки (по умолчанию)"
   },
   "policy_description_Cookies_Block": {
-    "message": "Домены, для которых cookie всегда блокируются"
+    "message": "Домены, для которых куки всегда блокируются"
   },
   "policy_description_Cookies_Block_Domain": {
     "message": "Домен"
@@ -333,49 +333,49 @@
     "message": "Хранить куки до…"
   },
   "policy_description_Cookies_ExpireAtSessionEnd_false": {
-    "message": "… истечения срока действия"
+    "message": "…истечения срока действия"
   },
   "policy_description_Cookies_ExpireAtSessionEnd_true": {
-    "message": "… закрытия Firefox"
+    "message": "…закрытия Firefox"
   },
   "policy_description_DefaultDownloadDirectory": {
-    "message": "Установить папку загрузки по умолчанию"
+    "message": "Установить папку загрузок по умолчанию"
   },
   "policy_description_DefaultDownloadDirectory_Label": {
-    "message": "Для нативного домашнего каталога используйте ${home}"
+    "message": "Для домашнего каталога ОС используйте ${home}"
   },
   "policy_description_DisableAppUpdate": {
     "message": "Запретить обновление Firefox"
   },
   "policy_description_DisabledCiphers": {
-    "message": "Enable or disable specific cryptographic ciphers"
+    "message": "Включить или отключить определённые криптографические шифры"
   },
   "policy_description_DisableDefaultBrowserAgent": {
-    "message": "Disable the default browser agent"
+    "message": "Отключить агент браузера по умолчанию"
   },
   "policy_description_DisableDeveloperTools": {
     "message": "Отключить встроенные инструменты разработчика"
   },
   "policy_description_DisableFeedbackCommands": {
-    "message": "Отключить пункты \"Отправить отзыв\" и \"Сообщить о мошенническом сайте\" в меню Справка"
+    "message": "Отключить пункты \"Отправить отзыв\" и \"Сообщить о мошенническом сайте\" в меню \"Справка\""
   },
   "policy_description_DisableFirefoxAccounts": {
-    "message": "Disable Mozilla account based services like Firefox Sync"
+    "message": "Отключить сервисы на основе аккаунта Mozilla, такие как Firefox Sync"
   },
   "policy_description_DisableFirefoxScreenshots": {
-    "message": "Отключить встроенный инструмент скриншота (Firefox Screenshots)"
+    "message": "Отключить встроенный инструмент снимка экрана (Firefox Screenshots)"
   },
   "policy_description_DisableFirefoxStudies": {
     "message": "Запретить установку и запуск исследований и рекомендаций"
   },
   "policy_description_DisableForgetButton": {
-    "message": "Отключить кнопку \"Забыть\", очистки истории"
+    "message": "Отключить кнопку \"Забыть\", очищающую историю"
   },
   "policy_description_DisableFormHistory": {
     "message": "Отключить историю форм и поиска"
   },
   "policy_description_DisablePasswordReveal": {
-    "message": "Отключить показ паролей для сохраненных логинов"
+    "message": "Отключить показ паролей для сохранённых логинов"
   },
   "policy_description_DisablePocket": {
     "message": "Отключить интеграцию Pocket, сервиса Mozilla"
@@ -384,7 +384,7 @@
     "message": "Отключить режим приватного просмотра"
   },
   "policy_description_DisableProfileImport": {
-    "message": "Отключить пункт меню \"Импорт из другого браузера\" в библиотеке"
+    "message": "Отключить пункт меню \"Импорт из другого браузера\" в \"Библиотеке\""
   },
   "policy_description_DisableProfileRefresh": {
     "message": "Отключить кнопку \"Обновить Firefox\" в about:support"
@@ -426,13 +426,13 @@
     "message": "Показывать панель закладок по умолчанию"
   },
   "policy_description_DisplayBookmarksToolbar_always": {
-    "message": "Always show"
+    "message": "Всегда отображать"
   },
   "policy_description_DisplayBookmarksToolbar_never": {
-    "message": "Never show"
+    "message": "Никогда не отображать"
   },
   "policy_description_DisplayBookmarksToolbar_newtab": {
-    "message": "Only show on new tab"
+    "message": "Отображать только на новой вкладке"
   },
   "policy_description_DisplayMenuBar": {
     "message": "Показывать строку меню"
@@ -441,13 +441,13 @@
     "message": "Строка меню всегда отображается и не может быть скрыта"
   },
   "policy_description_DisplayMenuBar_default_off": {
-    "message": "По умолчанию строка меню отключена, но ее можно отобразить"
+    "message": "По умолчанию строка меню скрыта, но её можно отобразить"
   },
   "policy_description_DisplayMenuBar_default_on": {
-    "message": "По умолчанию строка меню включена, но может быть скрыта"
+    "message": "По умолчанию строка меню отображается, но может быть скрыта"
   },
   "policy_description_DisplayMenuBar_never": {
-    "message": "Строка меню всегда скрыта и не может быть показана"
+    "message": "Строка меню всегда скрыта и не может быть отображена"
   },
   "policy_description_DNSOverHTTPS": {
     "message": "Настройка DNS через HTTPS"
@@ -459,7 +459,7 @@
     "message": "Включить DNS через HTTPS"
   },
   "policy_description_DNSOverHTTPS_ExcludedDomains": {
-    "message": "Exclude domains from DNS over HTTPS"
+    "message": "Исключить домены из DNS через HTTPS"
   },
   "policy_description_DNSOverHTTPS_ProviderURL": {
     "message": "URL провайдера"
@@ -474,43 +474,43 @@
     "message": "Не проверять при запуске, является ли Firefox браузером по умолчанию"
   },
   "policy_description_DownloadDirectory": {
-    "message": "Установить и заблокировать папку загрузки"
+    "message": "Установить и заблокировать папку загрузок"
   },
   "policy_description_DownloadDirectory_Label": {
-    "message": "Для нативного домашнего каталога используйте ${home}"
+    "message": "Для домашнего каталога ОС используйте ${home}"
   },
   "policy_description_EnableTrackingProtection": {
-    "message": "Улучшенная защита от слежения"
+    "message": "Улучшенная защита от отслеживания"
   },
   "policy_description_EnableTrackingProtection_Cryptomining": {
-    "message": "блокировать криптомайнеры"
+    "message": "Блокировать криптомайнеры"
   },
   "policy_description_EnableTrackingProtection_EmailTracking": {
-    "message": "Block e-mail tracking"
+    "message": "Блокировать отслеживание электронной почты"
   },
   "policy_description_EnableTrackingProtection_Exceptions": {
     "message": "Исключения"
   },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
-    "message": "блокировать fingerprinters"
+    "message": "Блокировать отпечатки"
   },
   "policy_description_EnableTrackingProtection_Value": {
-    "message": "Отслеживание содержимого"
+    "message": "Защита от отслеживания"
   },
   "policy_description_EncryptedMediaExtensions": {
-    "message": "Enable or disable Encrypted Media Extensions (needed for video streaming portals)"
+    "message": "Включить или отключить зашифрованные расширения мультимедиа (нужны для потоковых видеопорталов)"
   },
   "policy_description_EncryptedMediaExtensions_Enabled": {
-    "message": "If disabled, Firefox will not download the Widevine CDM unless the user consents to installing it. If disabled and locked the user will not be asked to download Widevine."
+    "message": "Если отключено, Firefox не будет загружать зашифрованные мультимедийные расширения (например, Widevine) без явного согласия  пользователя на их установку. Если отключено и заблокировано, пользователю не будет предлагаться загрузка расширения."
   },
   "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings": {
-    "message": "Disable download warnings based on file extensions and domains"
+    "message": "Отключить предупреждения о загрузке на основе расширений файлов и доменов"
   },
   "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_domains": {
-    "message": "Domains"
+    "message": "Домены"
   },
   "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_file_extension": {
-    "message": "File extension"
+    "message": "Расширения файлов"
   },
   "policy_description_Extensions": {
     "message": "Установка, удаление или блокировка дополнений"
@@ -519,28 +519,28 @@
     "message": "Устаревшее. Следует использовать следующую политику."
   },
   "policy_description_Extensions_Install": {
-    "message": "Установка дополнений. Вы можете указать URL или путь."
+    "message": "Расширения для установки. Можно указать URL или путь."
   },
   "policy_description_Extensions_Install_URL_or_Path": {
     "message": "URL или путь"
   },
   "policy_description_Extensions_Locked": {
-    "message": "Заблокированные расширения нельзя отключить или удалить. Укажите ID дополнений."
+    "message": "Заблокированные расширения нельзя отключить или удалить. Укажите ID расширений."
   },
   "policy_description_Extensions_Locked_ID": {
-    "message": "ID дополнения"
+    "message": "ID расширения"
   },
   "policy_description_Extensions_Uninstall": {
-    "message": "Удалять дополнения. Укажите ID дополнений."
+    "message": "Расширения для удаления. Укажите ID расширений."
   },
   "policy_description_Extensions_Uninstall_ID": {
-    "message": "ID дополнения"
+    "message": "ID расширения"
   },
   "policy_description_ExtensionSettings": {
-    "message": "Управление установкой и удалением дополнений"
+    "message": "Управление установкой и удалением расширений"
   },
   "policy_description_ExtensionSettings_allowed_types": {
-    "message": "Разрешенные типы дополнений"
+    "message": "Разрешённые типы расширений"
   },
   "policy_description_ExtensionSettings_allowed_types_dictionary": {
     "message": "Словари"
@@ -552,73 +552,73 @@
     "message": "Языковые пакеты"
   },
   "policy_description_ExtensionSettings_allowed_types_sitepermission": {
-    "message": "Site permissions"
+    "message": "Разрешения сайта"
   },
   "policy_description_ExtensionSettings_allowed_types_theme": {
     "message": "Темы"
   },
   "policy_description_ExtensionSettings_blocked_install_message_caption_all": {
-    "message": "Отображаемое сообщение об ошибке при попытке установить заблокированное дополнение"
+    "message": "Отображаемое сообщение об ошибке при попытке установить заблокированное расширение"
   },
   "policy_description_ExtensionSettings_blocked_install_message_caption_single": {
-    "message": "Отображаемое сообщение об ошибке при попытке установить заблокированное дополнение"
+    "message": "Отображаемое сообщение об ошибке при попытке установить заблокированное расширение"
   },
   "policy_description_ExtensionSettings_blocked_install_message_label": {
     "message": "сообщение об ошибке"
   },
   "policy_description_ExtensionSettings_default_area": {
-    "message": "Initial placement of the extension button"
+    "message": "Начальное размещение расширения"
   },
   "policy_description_ExtensionSettings_default_area_menupanel": {
-    "message": "Within the extension menu"
+    "message": "В меню расширений"
   },
   "policy_description_ExtensionSettings_default_area_navbar": {
-    "message": "Pinned to the navigation toolbar"
+    "message": "На навигационной панели инструментов"
   },
   "policy_description_ExtensionSettings_extra_caption_post": {
-    "message": "Конфигурация для отдельных дополнений"
+    "message": "Конфигурация для отдельных расширений"
   },
   "policy_description_ExtensionSettings_extra_caption_pre": {
-    "message": "Конфигурация для всех дополнений"
+    "message": "Конфигурация для всех расширений"
   },
   "policy_description_ExtensionSettings_install_sources": {
-    "message": "Разрешенные источники установки. Должны быть разрешены, как расположение *.xpi, так и страница загрузки. Match patterns allowed, see info link."
+    "message": "Разрешённые источники установки. Должны быть разрешены как расположение *.xpi, так и страница загрузки. Допускается использовать шаблоны, см. информационную ссылку."
   },
   "policy_description_ExtensionSettings_install_url_caption": {
-    "message": "URL установки. При установке с диска - file:/// URI."
+    "message": "URL установки. При установке с диска: file:/// URI."
   },
   "policy_description_ExtensionSettings_installation_mode": {
     "message": "установка"
   },
   "policy_description_ExtensionSettings_installation_mode_allowed_all": {
-    "message": "установка дополнений разрешена"
+    "message": "установка расширений разрешена"
   },
   "policy_description_ExtensionSettings_installation_mode_allowed_single": {
-    "message": "установка этого дополнения разрешена"
+    "message": "установка этого расширения разрешена"
   },
   "policy_description_ExtensionSettings_installation_mode_blocked_all": {
-    "message": "установка дополнений пользователем не допускается, а уже установленные дополнения будут удалены с устройства"
+    "message": "установка расширений пользователю не разрешена, уже установленные расширения будут удалены с устройства"
   },
   "policy_description_ExtensionSettings_installation_mode_blocked_single": {
-    "message": "установка этого дополнения пользователем не допускается, а, если оно уже установлено, то будет удалено с устройства"
+    "message": "установка этого расширения пользователю не разрешена, уже установленное расширение будет удалено с устройства"
   },
   "policy_description_ExtensionSettings_installation_mode_force_installed": {
-    "message": "дополнение устанавливается автоматически и не может быть удалено пользователем (требуется url установки)"
+    "message": "расширение устанавливается автоматически и не может быть удалено пользователем (требуется URL установки)"
   },
   "policy_description_ExtensionSettings_installation_mode_normal_installed": {
-    "message": "дополнение устанавливается автоматически, но может быть отключено пользователем (требуется url установки)"
+    "message": "расширение устанавливается автоматически, но может быть отключено пользователем (требуется URL установки)"
   },
   "policy_description_ExtensionSettings_Label_Key": {
-    "message": "ID дополнения"
+    "message": "ID расширения"
   },
   "policy_description_ExtensionSettings_restricted_domains": {
-    "message": "Domains on which content scripts can't be run"
+    "message": "Домены, для которых запрещено выполнять скрипты"
   },
   "policy_description_ExtensionSettings_temporarily_allow_weak_signatures": {
-    "message": "Allow installation of extensions with a weak signature algorithm (Firefox 127+)"
+    "message": "Разрешить установку расширений со слабым алгоритмом подписи (Firefox 127+)"
   },
   "policy_description_ExtensionSettings_updates_disabled": {
-    "message": "Allow automatic updates"
+    "message": "Разрешить автоматическое обновление"
   },
   "policy_description_ExtensionUpdate": {
     "message": "Включение или отключение автоматического обновления расширений"
@@ -639,85 +639,85 @@
     "message": "Рекомендуемые истории"
   },
   "policy_description_FirefoxHome_Search": {
-    "message": "Search field"
+    "message": "Поле поиска"
   },
   "policy_description_FirefoxHome_SponsoredPocket": {
-    "message": "Спонсируемые Рекомендуемые истории"
+    "message": "Спонсируемые истории Pocket"
   },
   "policy_description_FirefoxHome_SponsoredTopSites": {
-    "message": "Спонсируемые ярлыки"
+    "message": "Спонсируемые популярные сайты"
   },
   "policy_description_FirefoxHome_TopSites": {
     "message": "Ярлыки"
   },
   "policy_description_FirefoxSuggest": {
-    "message": "Configure Firefox Suggest (US only)"
+    "message": "Настройка Firefox Suggest (только для США)"
   },
   "policy_description_FirefoxSuggest_ImproveSuggest": {
-    "message": "Enable data collection for quick suggest results in the address bar"
+    "message": "Включить сбор данных для быстрого отображения предложений в адресной строке"
   },
   "policy_description_FirefoxSuggest_SponsoredSuggestions": {
-    "message": "Show sponsored quick suggest results in the address bar"
+    "message": "Показывать спонсированные предложения в адресной строке"
   },
   "policy_description_FirefoxSuggest_WebSuggestions": {
-    "message": "Show non-sponsored quick suggest results in the address bar"
+    "message": "Показывать неспонсируемые предложения в адресной панели"
   },
   "policy_description_GoToIntranetSiteForSingleWordEntryInAddressBar": {
-    "message": "Force direct intranet site navigation instead of searching when typing single word entries in the address bar"
+    "message": "Принудительная непосредственная навигация по сайту в интрасети вместо поиска при вводе отдельных слов в адресной строке"
   },
   "policy_description_Handlers": {
-    "message": "Configure default application handlers"
+    "message": "Настройка обработчиков приложений по умолчанию"
   },
   "policy_description_Handlers_property_action": {
-    "message": "Action"
+    "message": "Действие"
   },
   "policy_description_Handlers_property_action_saveToDisk": {
-    "message": "Save to disk"
+    "message": "Сохранить на диск"
   },
   "policy_description_Handlers_property_action_useHelperApp": {
-    "message": "open with application"
+    "message": "открыть в приложении"
   },
   "policy_description_Handlers_property_action_useSystemDefault": {
-    "message": "use system default"
+    "message": "использовать системную настройку"
   },
   "policy_description_Handlers_property_ask": {
-    "message": "Ask the user what they want to do with the file"
+    "message": "Запрашивать пользователя о действии с файлом"
   },
   "policy_description_Handlers_property_ask_false": {
-    "message": "The action is taken without user intervention"
+    "message": "Выполнить действие без вмешательства пользователя"
   },
   "policy_description_Handlers_property_ask_true": {
-    "message": "The user is asked what they want to do with the file"
+    "message": "Спросить пользователя о действии с файлом"
   },
   "policy_description_Handlers_property_handlers": {
-    "message": "A list of handlers, where the first handler is the default handler. If there is to be no standard handler, an empty object is to be used for the first handler. Either the path to a local application or the URL to a web-based handler can be specified."
+    "message": "Список обработчиков, где первый обработчик - это обработчик по умолчанию. Если обработчика по умолчанию не должно быть, то в качестве первого должен использоваться пустой объект. Можно указать либо путь к локальному приложению, либо URL веб-обработчика."
   },
   "policy_description_Handlers_property_handlers_name": {
-    "message": "The display name of the handler (might not be used)"
+    "message": "Отображаемое имя обработчика (может не использоваться)"
   },
   "policy_description_Handlers_property_handlers_path": {
-    "message": "The path to an executable"
+    "message": "Путь к исполняемому файлу"
   },
   "policy_description_Handlers_property_handlers_uriTemplate": {
-    "message": "URL to a web-based handler. Must start with https:// and contain \"%s\" for the substitution"
+    "message": "URL веб-обработчика. Должен начинаться с https:// и содержать \"%s\" для подстановки"
   },
   "policy_description_Handlers_type_file_extension": {
-    "message": "File extension"
+    "message": "Расширение файла"
   },
   "policy_description_Handlers_type_file_extension_placeholder": {
-    "message": "e.g. “pdf”"
+    "message": "например, \"pdf\""
   },
   "policy_description_Handlers_type_mime_type": {
-    "message": "MIME type"
+    "message": "MIME-тип"
   },
   "policy_description_Handlers_type_mime_type_placeholder": {
-    "message": "e.g. “application/msword”"
+    "message": "например, \"application/msword\""
   },
   "policy_description_Handlers_type_schema": {
-    "message": "Scheme"
+    "message": "Схема"
   },
   "policy_description_Handlers_type_schema_placeholder": {
-    "message": "e.g. “mailto”"
+    "message": "например, \"mailto\""
   },
   "policy_description_HardwareAcceleration": {
     "message": "Отключить аппаратное ускорение"
@@ -732,37 +732,37 @@
     "message": "Запускать Firefox с…"
   },
   "policy_description_Homepage_StartPage_Homepage": {
-    "message": "… сайтом назначенным домашней страницей (but the user can also optionally start with the previous browser session)"
+    "message": "…сайтом, назначенным домашней страницей (пользователь может при желании использовать предыдущую сессию браузера)"
   },
   "policy_description_Homepage_StartPage_Homepage_locked": {
-    "message": "… сайтом назначенным домашней страницей (the user cannot start with the previous browser session)"
+    "message": "…сайтом, назначенным домашней страницей (пользователь не может использовать предыдущую сессию браузера)"
   },
   "policy_description_Homepage_StartPage_None": {
-    "message": "… пустой страницей"
+    "message": "…пустой страницей"
   },
   "policy_description_Homepage_StartPage_Previous_Session": {
-    "message": "… предыдущей сессией браузера"
+    "message": "…предыдущей сессией браузера"
   },
   "policy_description_LegacySameSiteCookieBehaviorEnabled": {
-    "message": "Enable default legacy SameSite cookie behavior setting"
+    "message": "Восстановить старое поведение куков SameSite"
   },
   "policy_description_LegacySameSiteCookieBehaviorEnabledForDomainList": {
-    "message": "Enable the legacy behavior for SameSite cookies on specified websites"
+    "message": "Включить старое поведение куков SameSite на определённых сайтах"
   },
   "policy_description_LocalFileLinks": {
-    "message": "Разрешить определенным сайтам ссылку на локальные файлы"
+    "message": "Разрешить определённым сайтам ссылку на локальные файлы"
   },
   "policy_description_ManagedBookmarks": {
-    "message": "Managed bookmarks (cannot be changed or removed by the user)"
+    "message": "Управляемые закладки (не могут быть изменены или удалены пользователем)"
   },
   "policy_description_ManagedBookmarks_name": {
-    "message": "Name"
+    "message": "Имя"
   },
   "policy_description_ManagedBookmarks_toplevel_name": {
-    "message": "Name of the bookmarks folder"
+    "message": "Имя папки закладок"
   },
   "policy_description_ManualAppUpdateOnly": {
-    "message": "Do not prompt for Firefox updates"
+    "message": "Не предлагать обновления Firefox"
   },
   "policy_description_NetworkPrediction": {
     "message": "Включить или отключить предвыборку DNS (прогнозирование)"
@@ -795,16 +795,16 @@
     "message": "Включить или отключить менеджер паролей полностью"
   },
   "policy_description_PasswordManagerExceptions": {
-    "message": "Prevent Firefox from saving passwords for specific sites"
+    "message": "Запретить Firefox запоминать пароли на определённых сайтах"
   },
   "policy_description_PDFjs": {
-    "message": "Disable or configure the built-in PDF viewer"
+    "message": "Отключить или настроить встроенный просмотр PDF"
   },
   "policy_description_PDFjs_Enabled": {
-    "message": "Enable or disable the built-in PDF viewer"
+    "message": "Включить или отключить встроенный просмотр PDF"
   },
   "policy_description_PDFjs_EnablePermissions": {
-    "message": "Honor document permissions like preventing the copying of text"
+    "message": "Соблюдать настройки документа, например, запрет копирования текста"
   },
   "policy_description_Permissions": {
     "message": "Настройка разрешений"
@@ -834,10 +834,10 @@
     "message": "Камера"
   },
   "policy_description_Permissions_Camera_Allow": {
-    "message": "Разрешить доступ к этим URL"
+    "message": "Разрешить доступ для этих URL"
   },
   "policy_description_Permissions_Camera_Block": {
-    "message": "Блокировать доступ к этим URL"
+    "message": "Блокировать доступ для этих URL"
   },
   "policy_description_Permissions_Camera_BlockNewRequests": {
     "message": "Блокировать новые запросы на доступ к камере"
@@ -846,10 +846,10 @@
     "message": "Местоположение"
   },
   "policy_description_Permissions_Location_Allow": {
-    "message": "Разрешить доступ к этим URL"
+    "message": "Разрешить доступ для этих URL"
   },
   "policy_description_Permissions_Location_Block": {
-    "message": "Блокировать доступ к этим URL"
+    "message": "Блокировать доступ для этих URL"
   },
   "policy_description_Permissions_Location_BlockNewRequests": {
     "message": "Блокировать новые запросы вашего местоположения"
@@ -858,10 +858,10 @@
     "message": "Микрофон"
   },
   "policy_description_Permissions_Microphone_Allow": {
-    "message": "Разрешить доступ к этим URL"
+    "message": "Разрешить доступ для этих URL"
   },
   "policy_description_Permissions_Microphone_Block": {
-    "message": "Блокировать доступ к этим URL"
+    "message": "Блокировать доступ для этих URL"
   },
   "policy_description_Permissions_Microphone_BlockNewRequests": {
     "message": "Блокировать новые запросы на доступ к микрофону"
@@ -882,16 +882,16 @@
     "message": "Устройства виртуальной реальности"
   },
   "policy_description_Permissions_VirtualReality_Allow": {
-    "message": "Разрешить доступ к этим URL"
+    "message": "Разрешить доступ для этих URL"
   },
   "policy_description_Permissions_VirtualReality_Block": {
-    "message": "Блокировать доступ к этим URL"
+    "message": "Блокировать доступ для этих URL"
   },
   "policy_description_Permissions_VirtualReality_BlockNewRequests": {
     "message": "Блокировать новые запросы доступа к устройствам виртуальной реальности"
   },
   "policy_description_PictureInPicture": {
-    "message": "Enable or disable the picture in picture feature for videos"
+    "message": "Включить или отключить функцию картинка-в-картинке для видео"
   },
   "policy_description_PopupBlocking": {
     "message": "Разрешить или запретить использование всплывающих окон"
@@ -906,7 +906,7 @@
     "message": "всплывающие окна блокируются по умолчанию"
   },
   "policy_description_Preference_browser_cache_disk_enable": {
-    "message": "Включить или отключить хранение кэша на жестком диске"
+    "message": "Включить или отключить хранение кэша на жёстком диске"
   },
   "policy_description_Preference_browser_cache_disk_parent_directory": {
     "message": "Изменить расположение кэша на диске"
@@ -942,22 +942,22 @@
     "message": "Разрешить сайтам переопределять контекстное меню"
   },
   "policy_description_Preference_dom_keyboardevent_keypress_hack_dispatch_non_printable_keys_addl": {
-    "message": "Веб-стандарты: восстановить старое поведение для нажатия клавиш и непечатаемых ключей на определенных доменах"
+    "message": "Веб-стандарты: восстановить старое поведение для нажатия клавиш и непечатаемых ключей на определённых доменах"
   },
   "policy_description_Preference_dom_keyboardevent_keypress_hack_use_legacy_keycode_and_charcode_addl": {
-    "message": "Веб-стандарты: восстановить старое поведение для KeyCode и CharCode на определенных доменах"
+    "message": "Веб-стандарты: восстановить старое поведение для KeyCode и CharCode на определённых доменах"
   },
   "policy_description_Preference_extensions_getAddons_showPane": {
     "message": "Показывать вкладку рекомендации в менеджере дополнений"
   },
   "policy_description_Preference_media_gmp_gmpopenh264_enabled": {
-    "message": "Скачать OpenH264 плагин для WebRTC общения"
+    "message": "Скачать плагин OpenH264 для WebRTC"
   },
   "policy_description_Preference_network_dns_disableIPv6": {
     "message": "Выполнять поиск IPv6 DNS"
   },
   "policy_description_Preference_network_IDN_show_punycode": {
-    "message": "Отображать версии punycode интернационализированных доменных имен"
+    "message": "Показывать версии punycode интернационализированных доменных имён"
   },
   "policy_description_Preference_places_history_enabled": {
     "message": "Помнить историю просмотра"
@@ -981,52 +981,52 @@
     "message": "Клавиша Alt может использоваться для отображения строки меню"
   },
   "policy_description_Preferences": {
-    "message": "Specify user-defined preferences (about:config)"
+    "message": "Пользовательские настройки (about:config)"
   },
   "policy_description_Preferences_Label_Key": {
-    "message": "Preference name"
+    "message": "Название параметра"
   },
   "policy_description_Preferences_Status": {
-    "message": "Status"
+    "message": "Статус"
   },
   "policy_description_Preferences_Status_clear": {
-    "message": "Preference will be reset to default at every start, value has no effect"
+    "message": "Параметр будет сбрасываться на значение по умолчанию при каждом запуске, настройка не имеет значения"
   },
   "policy_description_Preferences_Status_default": {
-    "message": "Preference can be changed and appears as default in case of non-default value"
+    "message": "Параметр может быть изменён и отображается со значением по умолчанию, если настройка не по умолчанию"
   },
   "policy_description_Preferences_Status_locked": {
-    "message": "Preference can not be changed and appears as default in case of non-default value"
+    "message": "Параметр не может быть изменён и отображается со значением по умолчанию, если настройка не по умолчанию"
   },
   "policy_description_Preferences_Status_user": {
-    "message": "Preference can be changed and appears as modified in case of non-default value"
+    "message": "Параметр может быть изменён и отображается с изменённым значением, если настройка не по умолчанию"
   },
   "policy_description_Preferences_Type": {
-    "message": "Type"
+    "message": "Тип"
   },
   "policy_description_Preferences_Type_boolean": {
-    "message": "Boolean"
+    "message": "Логический"
   },
   "policy_description_Preferences_Type_number": {
-    "message": "Number"
+    "message": "Число"
   },
   "policy_description_Preferences_Type_string": {
-    "message": "Text"
+    "message": "Текст"
   },
   "policy_description_Preferences_Value": {
-    "message": "Value"
+    "message": "Значение"
   },
   "policy_description_PrimaryPassword": {
-    "message": "Require or prevent using a primary password (formerly known as  master password)"
+    "message": "Требовать или запрещать использование основного пароля (ранее известного как мастер-пароль)"
   },
   "policy_description_PrimaryPassword_false": {
-    "message": "Remove the primary password functionality"
+    "message": "Удалить функционал основного пароля"
   },
   "policy_description_PrimaryPassword_true": {
-    "message": "A primary password is required"
+    "message": "Требовать использовать основной пароль"
   },
   "policy_description_PrintingEnabled": {
-    "message": "Enable or disable printing"
+    "message": "Включить или отключить печать"
   },
   "policy_description_PromptForDownloadLocation": {
     "message": "Запрашивать место сохранения файла перед загрузкой"
@@ -1047,16 +1047,16 @@
     "message": "Не запрашивать аутентификацию"
   },
   "policy_description_Proxy_FTPProxy": {
-    "message": "FTP прокси. Чтобы настроить номера портов, добавьте \":\", а затем номер порта"
+    "message": "FTP-прокси. Чтобы настроить номера портов, добавьте \":\", а затем номер порта"
   },
   "policy_description_Proxy_HTTPProxy": {
-    "message": "HTTP прокси. Чтобы настроить номера портов, добавьте \":\", а затем номер порта"
+    "message": "HTTP-прокси. Чтобы настроить номера портов, добавьте \":\", а затем номер порта"
   },
   "policy_description_Proxy_Mode_autoConfig": {
     "message": "URL автоматической настройки прокси"
   },
   "policy_description_Proxy_Mode_autoDetect": {
-    "message": "авто-определение настроек прокси для этой сети"
+    "message": "автоопределение настроек прокси для этой сети"
   },
   "policy_description_Proxy_Mode_manual": {
     "message": "ручная настройка прокси"
@@ -1071,7 +1071,7 @@
     "message": "Нет прокси для…"
   },
   "policy_description_Proxy_SOCKSProxy": {
-    "message": "SOCKS хост. Чтобы настроить номера портов, добавьте \":\", а затем номер порта"
+    "message": "Узел SOCKS. Чтобы настроить номера портов, добавьте \":\", а затем номер порта"
   },
   "policy_description_Proxy_SOCKSVersion_v4": {
     "message": "SOCKS v4"
@@ -1080,7 +1080,7 @@
     "message": "SOCKS v5"
   },
   "policy_description_Proxy_SSLProxy": {
-    "message": "SSL прокси. Чтобы настроить номера портов, добавьте \":\", а затем номер порта"
+    "message": "SSL-прокси. Чтобы настроить номера портов, добавьте \":\", а затем номер порта"
   },
   "policy_description_Proxy_UseHTTPProxyForAllProtocols_false": {
     "message": "не использовать этот прокси для всех протоколов"
@@ -1125,13 +1125,13 @@
     "message": "История просмотра"
   },
   "policy_description_SanitizeOnShutdown_Locked_false": {
-    "message": "Protect no options from changes"
+    "message": "Не защищать никакие настройки от изменений"
   },
   "policy_description_SanitizeOnShutdown_Locked_null": {
-    "message": "Protect all options from changes"
+    "message": "Защищать все настройки от изменений"
   },
   "policy_description_SanitizeOnShutdown_Locked_true": {
-    "message": "Protect only the set options from changes"
+    "message": "Защищать только указанные настройки от изменений"
   },
   "policy_description_SanitizeOnShutdown_OfflineApps": {
     "message": "Данные автономных сайтов"
@@ -1164,7 +1164,7 @@
     "message": "Описание"
   },
   "policy_description_SearchEngines_Add_Encoding": {
-    "message": "Encoding (Default: UTF-8)"
+    "message": "Кодировка (по умолчанию: UTF-8)"
   },
   "policy_description_SearchEngines_Add_IconURL": {
     "message": "URL значка или data:image…"
@@ -1182,13 +1182,13 @@
     "message": "Имя"
   },
   "policy_description_SearchEngines_Add_PostData": {
-    "message": "POST Data (если POST метод выбран; например, q={searchTerms}&anotherParam=yes)"
+    "message": "POST Data (если выбран метод POST; например, q={searchTerms}&anotherParam=yes)"
   },
   "policy_description_SearchEngines_Add_SuggestURLTemplate": {
-    "message": "URL предложений. Используйте {searchTerms} как замещение поискового запроса"
+    "message": "URL предложений. Используйте {searchTerms} для подстановки поискового запроса"
   },
   "policy_description_SearchEngines_Add_URL": {
-    "message": "URL поиска. Используйте {searchTerms} как замещение поискового запроса"
+    "message": "URL поиска. Используйте {searchTerms} для подстановки поискового запроса"
   },
   "policy_description_SearchEngines_Default": {
     "message": "Имя поисковой системы по умолчанию"
@@ -1212,13 +1212,13 @@
     "message": "Включить или отключить предложения поиска"
   },
   "policy_description_SecurityDevices": {
-    "message": "Install or delete PKCS #11 modules"
+    "message": "Установить или удалить модули PKCS #11"
   },
   "policy_description_SecurityDevices_Add": {
-    "message": "Install"
+    "message": "Установить"
   },
   "policy_description_SecurityDevices_Delete": {
-    "message": "Delete"
+    "message": "Удалить"
   },
   "policy_description_SecurityDevices_label_key": {
     "message": "Название устройства"
@@ -1227,10 +1227,10 @@
     "message": "Путь к библиотеке для устройства"
   },
   "policy_description_ShowHomeButton": {
-    "message": "Show the home button on the toolbar"
+    "message": "Показывать кнопку \"Домой\" на панели инструментов"
   },
   "policy_description_SkipTermsOfUse": {
-    "message": "Show terms of use and privacy notice when Firefox is started for the first time. If you disable it, it means that the terms of use are accepted on behalf of all persons who have access to the browser, and that you have the authority to accept them on their behalf."
+    "message": "Показывать условия использования и уведомление о конфиденциальности при первом запуске Firefox. Если отключить, это будет означать, что условия использования принимаются от имени всех лиц, имеющих доступ к браузеру, и что вы имеете право принимать эти условия от их имени."
   },
   "policy_description_SSLVersionMax": {
     "message": "Максимальная поддерживаемая версия TLS"
@@ -1239,10 +1239,10 @@
     "message": "Минимально необходимая версия TLS"
   },
   "policy_description_StartDownloadsInTempDirectory": {
-    "message": "Start downloads in a temporary location rather than in the default download directory"
+    "message": "Начинать загрузку во временном каталоге, а не в каталоге загрузки по умолчанию"
   },
   "policy_description_SupportMenu": {
-    "message": "Добавить пункт в меню Справка"
+    "message": "Добавить пункт в меню \"Справка\""
   },
   "policy_description_SupportMenu_AccessKey": {
     "message": "Ключ доступа (один символ!)"
@@ -1260,19 +1260,19 @@
     "message": "Рекомендовать функции браузера"
   },
   "policy_description_UserMessaging_MoreFromMozilla": {
-    "message": "Show “More from Mozilla” section in the settings"
+    "message": "Показывать раздел \"Больше от Mozilla\" в настройках"
   },
   "policy_description_UserMessaging_SkipOnboarding": {
     "message": "Отключить страницу приветствия для новых пользователей"
   },
   "policy_description_UserMessaging_UrlbarInterventions": {
-    "message": "Показать специфичные предложения Firefox в строке URL-адреса"
+    "message": "Показывать специфичные предложения Firefox в строке URL"
   },
   "policy_description_UserMessaging_WhatsNew": {
-    "message": "Показать значок и пункт меню \"Что нового\""
+    "message": "Показывать значок и пункт меню \"Что нового\""
   },
   "policy_description_UseSystemPrintDialog": {
-    "message": "Use the system print dialog instead of the print preview window"
+    "message": "Использовать системный диалог печати вместо окна предварительного просмотра печати"
   },
   "policy_description_WebsiteFilter": {
     "message": "Блокировать посещение сайтов. Используйте \"<all_urls>\" для блокировки всех URL. Поддерживаются только HTTPS и HTTP."
@@ -1284,7 +1284,7 @@
     "message": "Исключения"
   },
   "policy_description_WindowsSSO": {
-    "message": "Allow Windows single sign-on for Microsoft, work, and school accounts"
+    "message": "Разрешить единый вход Windows для учётных записей Microsoft, учётных записей на работе и в учебных заведениях"
   },
   "policy_label_default": {
     "message": "по умолчанию"
