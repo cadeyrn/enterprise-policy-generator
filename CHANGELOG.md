@@ -6,8 +6,12 @@
 
 #### Translations
 
-- updated wording for AutofillAddressEnabled and AutofillCreditCardEnabled policies
-- updated Russian translation, see [#301](https://github.com/cadeyrn/enterprise-policy-generator/issues/301)
+- Updated wording for AutofillAddressEnabled and AutofillCreditCardEnabled policies
+- Updated Russian translation, see [#301](https://github.com/cadeyrn/enterprise-policy-generator/issues/301)
+
+#### Dependencies
+
+- Updated eslint from version 9.25.1 to 9.26.0
 
 ---
 
