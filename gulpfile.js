@@ -3,7 +3,6 @@
 const gulp = require('gulp');
 const gulpEslint = require('gulp-eslint-new');
 const gulpHtmllint = require('gulp-htmllint');
-const gulpStylelint = require('gulp-stylelint');
 const jsdoc = require('gulp-jsdoc3');
 
 gulp.task('lint-html', () => gulp.src(['./src/html/*.html'])
@@ -13,18 +12,6 @@ gulp.task('lint-html', () => gulp.src(['./src/html/*.html'])
 gulp.task('lint-js', () => gulp.src(['gulpfile.js', './src/js/**/*.js', './src/_locales/**/*.json'])
   .pipe(gulpEslint())
   .pipe(gulpEslint.format())
-);
-
-gulp.task('lint-css', () => gulp.src(['./src/css/*.css'])
-  .pipe(gulpStylelint({
-    failAfterError : false,
-    reporters : [
-      {
-        formatter : 'string',
-        console : true
-      }
-    ]
-  }))
 );
 
 const jsdocsConfig = require('./jsdoc.json');
