@@ -11,7 +11,7 @@
 
 #### Dependencies
 
-- Updated eslint from version 9.25.1 to 9.26.0
+- Updated eslint from version 9.25.1 to 9.27.0
 
 ---
 
