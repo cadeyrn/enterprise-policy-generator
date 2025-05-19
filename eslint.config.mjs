@@ -125,7 +125,7 @@ export default [
       'grouped-accessor-pairs': 'error',
       'guard-for-in': 'error',
       'id-denylist': 'error',
-      'id-length': ['error', { 'max': 80, 'exceptions': ['e', 'i', 'p'] }],
+      'id-length': ['error', { 'max': 80, 'exceptions': ['a', 'b', 'e', 'i', 'p'] }],
       'id-match': 'error',
       'init-declarations': 'error',
       'jsdoc/check-access': 'warn',
