@@ -11,6 +11,11 @@
 - Added support for sorting enum fields by their localized labels, used in new Containers policy, see
   [#302](https://github.com/cadeyrn/enterprise-policy-generator/issues/302)
 
+#### Enterprise Policies
+
+- Added support for Containers policy to set the initial set of tab containers, see
+  [#252](https://github.com/cadeyrn/enterprise-policy-generator/issues/252)
+
 #### Translations
 
 - Updated wording for AutofillAddressEnabled and AutofillCreditCardEnabled policies

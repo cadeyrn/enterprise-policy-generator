@@ -278,6 +278,84 @@
   "policy_description_Certificates_Install_Value": {
     "message": "Путь к файлу .der или .pem"
   },
+  "policy_description_Containers": {
+    "message": "Initial set of tab containers"
+  },
+  "policy_description_Containers_color": {
+    "message": "Color"
+  },
+  "policy_description_Containers_color_blue": {
+    "message": "Blue"
+  },
+  "policy_description_Containers_color_green": {
+    "message": "Green"
+  },
+  "policy_description_Containers_color_orange": {
+    "message": "Orange"
+  },
+  "policy_description_Containers_color_pink": {
+    "message": "Pink"
+  },
+  "policy_description_Containers_color_purple": {
+    "message": "Purple"
+  },
+  "policy_description_Containers_color_red": {
+    "message": "Red"
+  },
+  "policy_description_Containers_color_toolbar": {
+    "message": "Toolbar"
+  },
+  "policy_description_Containers_color_turquoise": {
+    "message": "Turquoise"
+  },
+  "policy_description_Containers_color_yellow": {
+    "message": "Yellow"
+  },
+  "policy_description_Containers_icon": {
+    "message": "Icon"
+  },
+  "policy_description_Containers_icon_briefcase": {
+    "message": "Briefcase"
+  },
+  "policy_description_Containers_icon_cart": {
+    "message": "Cart"
+  },
+  "policy_description_Containers_icon_chill": {
+    "message": "Sunglasses"
+  },
+  "policy_description_Containers_icon_circle": {
+    "message": "Circle"
+  },
+  "policy_description_Containers_icon_dollar": {
+    "message": "Finances"
+  },
+  "policy_description_Containers_icon_fence": {
+    "message": "Fence"
+  },
+  "policy_description_Containers_icon_fingerprint": {
+    "message": "Fingerprint"
+  },
+  "policy_description_Containers_icon_food": {
+    "message": "Food"
+  },
+  "policy_description_Containers_icon_fruit": {
+    "message": "Fruit"
+  },
+  "policy_description_Containers_icon_gift": {
+    "message": "Preset"
+  },
+  "policy_description_Containers_icon_pet": {
+    "message": "Pet"
+  },
+  "policy_description_Containers_icon_tree": {
+    "message": "Tree"
+  },
+  "policy_description_Containers_icon_vacation": {
+    "message": "Vacation"
+  },
+  "policy_description_Containers_name": {
+    "message": "Name of the container"
+  },
   "policy_description_Cookies": {
     "message": "Разрешить или запретить сайтам установку куки"
   },

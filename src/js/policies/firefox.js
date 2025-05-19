@@ -599,6 +599,127 @@ const policies = {
     ]
   },
 
+  Containers : {
+    first_available : { mainstream : '113.0', esr : '115.0' },
+    ui_category : 'customization',
+    type : 'nested-object',
+    sub_key : 'Default',
+    children : {
+      properties : [
+        {
+          name : 'name',
+          label : browser.i18n.getMessage('policy_description_Containers_name'),
+          type : 'string',
+          mandatory : true
+        },
+        {
+          name : 'icon',
+          label : browser.i18n.getMessage('policy_description_Containers_icon'),
+          type : 'enum',
+          options : [
+            {
+              label : browser.i18n.getMessage('policy_description_Containers_icon_briefcase'),
+              value : 'briefcase'
+            },
+            {
+              label : browser.i18n.getMessage('policy_description_Containers_icon_cart'),
+              value : 'cart'
+            },
+            {
+              label : browser.i18n.getMessage('policy_description_Containers_icon_chill'),
+              value : 'chill'
+            },
+            {
+              label : browser.i18n.getMessage('policy_description_Containers_icon_circle'),
+              value : 'circle'
+            },
+            {
+              label : browser.i18n.getMessage('policy_description_Containers_icon_dollar'),
+              value : 'dollar'
+            },
+            {
+              label : browser.i18n.getMessage('policy_description_Containers_icon_fence'),
+              value : 'fence'
+            },
+            {
+              label : browser.i18n.getMessage('policy_description_Containers_icon_fingerprint'),
+              value : 'fingerprint'
+            },
+            {
+              label : browser.i18n.getMessage('policy_description_Containers_icon_food'),
+              value : 'food'
+            },
+            {
+              label : browser.i18n.getMessage('policy_description_Containers_icon_fruit'),
+              value : 'fruit'
+            },
+            {
+              label : browser.i18n.getMessage('policy_description_Containers_icon_gift'),
+              value : 'gift'
+            },
+            {
+              label : browser.i18n.getMessage('policy_description_Containers_icon_pet'),
+              value : 'pet'
+            },
+            {
+              label : browser.i18n.getMessage('policy_description_Containers_icon_tree'),
+              value : 'tree'
+            },
+            {
+              label : browser.i18n.getMessage('policy_description_Containers_icon_vacation'),
+              value : 'vacation'
+            }
+          ],
+          sorted : true
+        },
+        {
+          name : 'color',
+          label : browser.i18n.getMessage('policy_description_Containers_color'),
+          type : 'enum',
+          options : [
+            {
+              label : browser.i18n.getMessage('policy_description_Containers_color_blue'),
+              value : 'blue'
+            },
+            {
+              label : browser.i18n.getMessage('policy_description_Containers_color_green'),
+              value : 'green'
+            },
+            {
+              label : browser.i18n.getMessage('policy_description_Containers_color_orange'),
+              value : 'orange'
+            },
+            {
+              label : browser.i18n.getMessage('policy_description_Containers_color_pink'),
+              value : 'pink'
+            },
+            {
+              label : browser.i18n.getMessage('policy_description_Containers_color_purple'),
+              value : 'purple'
+            },
+            {
+              label : browser.i18n.getMessage('policy_description_Containers_color_red'),
+              value : 'red'
+            },
+            {
+              label : browser.i18n.getMessage('policy_description_Containers_color_toolbar'),
+              value : 'toolbar'
+            },
+            {
+              label : browser.i18n.getMessage('policy_description_Containers_color_turquoise'),
+              value : 'turquoise'
+            },
+            {
+              label : browser.i18n.getMessage('policy_description_Containers_color_yellow'),
+              value : 'yellow'
+            }
+          ],
+          sorted : true
+        }
+      ]
+    }
+  },
+
   SearchBar : {
     first_available : { mainstream : '62.0', esr : '60.0' },
     ui_category : 'customization',

@@ -278,6 +278,84 @@
   "policy_description_Certificates_Install_Value": {
     "message": "Pfad zur .der- oder .pem-Datei"
   },
+  "policy_description_Containers": {
+    "message": "Anfängliche Auswahl an Tab-Umgebungen"
+  },
+  "policy_description_Containers_color": {
+    "message": "Farbe"
+  },
+  "policy_description_Containers_color_blue": {
+    "message": "Blau"
+  },
+  "policy_description_Containers_color_green": {
+    "message": "Grün"
+  },
+  "policy_description_Containers_color_orange": {
+    "message": "Orange"
+  },
+  "policy_description_Containers_color_pink": {
+    "message": "Pink"
+  },
+  "policy_description_Containers_color_purple": {
+    "message": "Violett"
+  },
+  "policy_description_Containers_color_red": {
+    "message": "Rot"
+  },
+  "policy_description_Containers_color_toolbar": {
+    "message": "Symbolleiste"
+  },
+  "policy_description_Containers_color_turquoise": {
+    "message": "Türkis"
+  },
+  "policy_description_Containers_color_yellow": {
+    "message": "Gelb"
+  },
+  "policy_description_Containers_icon": {
+    "message": "Icon"
+  },
+  "policy_description_Containers_icon_briefcase": {
+    "message": "Aktenkoffer"
+  },
+  "policy_description_Containers_icon_cart": {
+    "message": "Einkaufswagen"
+  },
+  "policy_description_Containers_icon_chill": {
+    "message": "Sonnenbrille"
+  },
+  "policy_description_Containers_icon_circle": {
+    "message": "Kreis"
+  },
+  "policy_description_Containers_icon_dollar": {
+    "message": "Finanzen"
+  },
+  "policy_description_Containers_icon_fence": {
+    "message": "Zaun"
+  },
+  "policy_description_Containers_icon_fingerprint": {
+    "message": "Fingerabdruck"
+  },
+  "policy_description_Containers_icon_food": {
+    "message": "Essen"
+  },
+  "policy_description_Containers_icon_fruit": {
+    "message": "Frucht"
+  },
+  "policy_description_Containers_icon_gift": {
+    "message": "Geschenk"
+  },
+  "policy_description_Containers_icon_pet": {
+    "message": "Haustier"
+  },
+  "policy_description_Containers_icon_tree": {
+    "message": "Baum"
+  },
+  "policy_description_Containers_icon_vacation": {
+    "message": "Urlaub"
+  },
+  "policy_description_Containers_name": {
+    "message": "Name der Tab-Umgebung"
+  },
   "policy_description_Cookies": {
     "message": "Webseiten erlauben oder verbieten, Cookies zu setzen"
   },
