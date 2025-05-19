@@ -384,7 +384,7 @@ input[data-type='nested-object'] ~ .extra-options .input {
 }
 
 input[data-type='nested-object'] ~ .sub-options-wrapper .sub-options + .sub-options {
-  margin-top: 15px;
+  margin-top: 30px;
 }
 
 input[data-type='array'] ~ .sub-options .array-action,

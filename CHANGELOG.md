@@ -6,6 +6,8 @@
 
 #### Enhancements
 
+- Improved nested-object policy type, needed for Containers policy, see
+  [#252](https://github.com/cadeyrn/enterprise-policy-generator/issues/252)
 - Added support for sorting enum fields by their localized labels, used in new Containers policy, see
   [#302](https://github.com/cadeyrn/enterprise-policy-generator/issues/302)
 

@@ -393,6 +393,7 @@ const output = {
    */
   generateOutputForNestedObjects (el) {
     const extra = el.parentElement.querySelector('.extra-options input');
+    const subKey = el.getAttribute('data-sub-key');
     const items = [];
 
     if (extra && extra.value) {
@@ -404,9 +405,19 @@ const output = {
     [...el.parentElement.querySelectorAll(':scope .sub-options')].forEach((innerEl) => {
       const item = {};
 
+      // input fields
       [...innerEl.querySelectorAll(':scope .input input')].forEach((arrEl) => {
         if (arrEl.value && !arrEl.classList.contains('invalid-url-style')) {
           item[arrEl.dataset.name] = arrEl.value;
+        }
+      });
+
+      // enum fields
+      [...innerEl.querySelectorAll(':scope .enum select')].forEach((arrEl) => {
+        const enumContent = output.parseEnumContent(arrEl);
+
+        if (typeof enumContent !== 'undefined') {
+          item[arrEl.dataset.name] = enumContent;
         }
       });
 
@@ -417,7 +428,15 @@ const output = {
 
     // only add non-empty policies
     if (items.length > 0) {
-      policymanager.add(el.getAttribute('data-name'), items);
+      if (subKey) {
+        const obj = {};
+
+        obj[subKey] = items;
+        policymanager.add(el.getAttribute('data-name'), obj);
+      }
+      else {
+        policymanager.add(el.getAttribute('data-name'), items);
+      }
     }
   },
 
