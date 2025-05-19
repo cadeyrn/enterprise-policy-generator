@@ -1546,6 +1546,11 @@ const configurator = {
       configurator.addMandatoryLabel(elSelect, elSelectWrapper);
     }
 
+    // optionally sort by label
+    if (policy.sorted) {
+      policy.options.sort((a, b) => a.label.localeCompare(b.label));
+    }
+
     // add options to select element
     const optionsLength = policy.options.length;
     for (let i = 0; i < optionsLength; i++) {

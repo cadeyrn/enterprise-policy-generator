@@ -4,6 +4,11 @@
 
 ### Version 6.5.0 (Work in Progress)
 
+#### Enhancements
+
+- Added support for sorting enum fields by their localized labels, used in new Containers policy, see
+  [#302](https://github.com/cadeyrn/enterprise-policy-generator/issues/302)
+
 #### Translations
 
 - Updated wording for AutofillAddressEnabled and AutofillCreditCardEnabled policies
