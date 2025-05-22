@@ -29,6 +29,7 @@
 - Updated stylelint-order from version 6.0.4 to 7.0.0
 - Removed gulp-stylelint to unblock stylelint upgrade and to allow installing dependencies without --force again
 - Removed stylelint-csstree-validator
+- Updated web-ext from version 8.6.0 to 8.7.0
 
 ---
 
