@@ -210,7 +210,7 @@
     "message": "Список внешних протоколов, которые могут быть использованы из перечисленных источников без запроса пользователя"
   },
   "policy_description_AutoLaunchProtocolsFromOrigins_allowed_origins": {
-    "message": "Allowed origins"
+    "message": "Разрешённые источники"
   },
   "policy_description_AutoLaunchProtocolsFromOrigins_protocol": {
     "message": "Протокол"
@@ -279,82 +279,82 @@
     "message": "Путь к файлу .der или .pem"
   },
   "policy_description_Containers": {
-    "message": "Initial set of tab containers"
+    "message": "Начальная настройка контейнеров вкладок"
   },
   "policy_description_Containers_color": {
-    "message": "Color"
+    "message": "Цвет"
   },
   "policy_description_Containers_color_blue": {
-    "message": "Blue"
+    "message": "Синий"
   },
   "policy_description_Containers_color_green": {
-    "message": "Green"
+    "message": "Зелёный"
   },
   "policy_description_Containers_color_orange": {
-    "message": "Orange"
+    "message": "Оранжевый"
   },
   "policy_description_Containers_color_pink": {
-    "message": "Pink"
+    "message": "Розовый"
   },
   "policy_description_Containers_color_purple": {
-    "message": "Purple"
+    "message": "Фиолетовый"
   },
   "policy_description_Containers_color_red": {
-    "message": "Red"
+    "message": "Красный"
   },
   "policy_description_Containers_color_toolbar": {
-    "message": "Toolbar"
+    "message": "Панель инструментов"
   },
   "policy_description_Containers_color_turquoise": {
-    "message": "Turquoise"
+    "message": "Бирюзовый"
   },
   "policy_description_Containers_color_yellow": {
-    "message": "Yellow"
+    "message": "Жёлтый"
   },
   "policy_description_Containers_icon": {
-    "message": "Icon"
+    "message": "Значок"
   },
   "policy_description_Containers_icon_briefcase": {
-    "message": "Briefcase"
+    "message": "Портфель"
   },
   "policy_description_Containers_icon_cart": {
-    "message": "Cart"
+    "message": "Тележка"
   },
   "policy_description_Containers_icon_chill": {
-    "message": "Sunglasses"
+    "message": "Тёмные очки"
   },
   "policy_description_Containers_icon_circle": {
-    "message": "Circle"
+    "message": "Круг"
   },
   "policy_description_Containers_icon_dollar": {
-    "message": "Finances"
+    "message": "Финансы"
   },
   "policy_description_Containers_icon_fence": {
-    "message": "Fence"
+    "message": "Забор"
   },
   "policy_description_Containers_icon_fingerprint": {
-    "message": "Fingerprint"
+    "message": "Отпечаток пальца"
   },
   "policy_description_Containers_icon_food": {
-    "message": "Food"
+    "message": "Еда"
   },
   "policy_description_Containers_icon_fruit": {
-    "message": "Fruit"
+    "message": "Фрукт"
   },
   "policy_description_Containers_icon_gift": {
-    "message": "Preset"
+    "message": "Подарок"
   },
   "policy_description_Containers_icon_pet": {
-    "message": "Pet"
+    "message": "Животное"
   },
   "policy_description_Containers_icon_tree": {
-    "message": "Tree"
+    "message": "Дерево"
   },
   "policy_description_Containers_icon_vacation": {
-    "message": "Vacation"
+    "message": "Отдых"
   },
   "policy_description_Containers_name": {
-    "message": "Name of the container"
+    "message": "Имя контейнера"
   },
   "policy_description_Cookies": {
     "message": "Разрешить или запретить сайтам установку куки"
