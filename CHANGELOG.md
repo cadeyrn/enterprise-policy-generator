@@ -27,8 +27,8 @@
 - Updated eslint-plugin-jsdoc from version 50.6.11 to 50.6.17
 - Updated stylelint from version 15.11.0 to 16.20.0 and removed no longer existing rules
 - Updated stylelint-order from version 6.0.4 to 7.0.0
-- Updated stylistic/eslint-plugin-js from version 4.2.0 to 4.4.0
 - Updated web-ext from version 8.6.0 to 8.7.1
+- Migrated from stylistic/eslint-plugin-js to stylistic/eslint-plugin and updated from version 4.2.0 to 4.4.0
 - Removed gulp-stylelint to unblock stylelint upgrade and to allow installing dependencies without --force again
 - Removed stylelint-csstree-validator
 
