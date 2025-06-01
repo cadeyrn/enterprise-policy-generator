@@ -24,7 +24,7 @@
 #### Dependencies
 
 - Updated eslint from version 9.25.1 to 9.28.0
-- Updated eslint-plugin-jsdoc from version 50.6.11 to 50.6.17
+- Updated eslint-plugin-jsdoc from version 50.6.11 to 50.7.0
 - Updated stylelint from version 15.11.0 to 16.20.0 and removed no longer existing rules
 - Updated stylelint-order from version 6.0.4 to 7.0.0
 - Updated web-ext from version 8.6.0 to 8.7.1
