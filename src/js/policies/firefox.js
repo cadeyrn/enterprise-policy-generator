@@ -2441,6 +2441,24 @@ const policies = {
     default : 'true'
   },
 
+  MicrosoftEntraSSO : {
+    additional_note : browser.i18n.getMessage('requirement_macos'),
+    first_available : { mainstream : '132.0.1', esr : '128.5' },
+    ui_category : 'security',
+    type : 'enum',
+    options : [
+      {
+        label : browser.i18n.getMessage('enum_value_yes'),
+        value : 'true'
+      },
+      {
+        label : browser.i18n.getMessage('enum_value_no'),
+        value : 'false'
+      }
+    ],
+    default : 'true'
+  },
+
   Preference_privacy_file_unique_origin : {
     first_available : { mainstream : '68.0.1', esr : '68.1' },
     info_link : 'https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730',

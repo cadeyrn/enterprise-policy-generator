@@ -869,6 +869,9 @@
   "policy_description_ManualAppUpdateOnly": {
     "message": "Не предлагать обновления Firefox"
   },
+  "policy_description_MicrosoftEntraSSO": {
+    "message": "Allow single sign-on for Microsoft Entra accounts"
+  },
   "policy_description_NetworkPrediction": {
     "message": "Включить или отключить предвыборку DNS (прогнозирование)"
   },
@@ -1414,6 +1417,9 @@
   },
   "policy_label_default": {
     "message": "по умолчанию"
+  },
+  "requirement_macOS": {
+    "message": "works only on macOS"
   },
   "requirement_windows": {
     "message": "работает только в Windows"

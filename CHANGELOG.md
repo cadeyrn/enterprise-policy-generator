@@ -35,6 +35,8 @@
   [#281](https://github.com/cadeyrn/enterprise-policy-generator/issues/281)
 - Added FirefoxLabs option to UserMessaging policy to enable or disable the “Firefox Labs” section in the Firefox
   settings, see [#284](https://github.com/cadeyrn/enterprise-policy-generator/issues/284)
+- Added support for MicrosoftEntraSSO policy to allow single sign-on for Microsoft Entra accounts, see
+  [#285](https://github.com/cadeyrn/enterprise-policy-generator/issues/285)
 
 #### Translations
 

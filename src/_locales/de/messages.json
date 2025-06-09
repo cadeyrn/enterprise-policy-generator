@@ -869,6 +869,9 @@
   "policy_description_ManualAppUpdateOnly": {
     "message": "Keine Aufforderung zur Aktualisierung von Firefox"
   },
+  "policy_description_MicrosoftEntraSSO": {
+    "message": "Single Sign-On für Microsoft Entra-Konten zulassen"
+  },
   "policy_description_NetworkPrediction": {
     "message": "DNS Prefetching aktivieren oder deaktivieren"
   },
@@ -1414,6 +1417,9 @@
   },
   "policy_label_default": {
     "message": "Standard"
+  },
+  "requirement_macOS": {
+    "message": "funktioniert nur auf macOS"
   },
   "requirement_windows": {
     "message": "funktioniert nur auf Windows"

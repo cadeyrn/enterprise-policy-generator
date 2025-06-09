@@ -869,6 +869,9 @@
   "policy_description_ManualAppUpdateOnly": {
     "message": "Do not prompt for Firefox updates"
   },
+  "policy_description_MicrosoftEntraSSO": {
+    "message": "Allow single sign-on for Microsoft Entra accounts"
+  },
   "policy_description_NetworkPrediction": {
     "message": "启用或禁用网络预测 (DNS 预读取)"
   },
@@ -1414,6 +1417,9 @@
   },
   "policy_label_default": {
     "message": "默认"
+  },
+  "requirement_macOS": {
+    "message": "works only on macOS"
   },
   "requirement_windows": {
     "message": "仅适用于 Windows"
