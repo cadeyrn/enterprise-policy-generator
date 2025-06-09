@@ -545,6 +545,9 @@
   "policy_description_DNSOverHTTPS_ExcludedDomains": {
     "message": "Domeny z DNS over HTTPS wuzamknyć"
   },
+  "policy_description_DNSOverHTTPS_Fallback": {
+    "message": "Firefox will use the default DNS resolver if there is a problem with the secure DNS provider (Firefox 124+)"
+  },
   "policy_description_DNSOverHTTPS_ProviderURL": {
     "message": "URL poskićowarja"
   },

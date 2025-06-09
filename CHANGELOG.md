@@ -19,6 +19,9 @@
   [#258](https://github.com/cadeyrn/enterprise-policy-generator/issues/258)
 - Added support for DisableEncryptedClientHello policy to disable use of the TLS feature Encrypted Client Hello (ECH),
   see [#261](https://github.com/cadeyrn/enterprise-policy-generator/issues/261)
+- Added Fallback option to DNSOverHTTPS policy to determines whether Firefox will use your default DNS resolver if there
+  is a problem with the secure DNS provider, see
+  [#262](https://github.com/cadeyrn/enterprise-policy-generator/issues/262)
 
 #### Translations
 

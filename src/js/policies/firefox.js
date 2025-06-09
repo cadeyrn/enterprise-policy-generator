@@ -1284,6 +1284,25 @@ const policies = {
           label : browser.i18n.getMessage('common_url'),
           type : 'url'
         }
+      },
+      {
+        name : 'Fallback',
+        label : browser.i18n.getMessage('policy_description_DNSOverHTTPS_Fallback'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ]
       }
     ]
   },

@@ -545,6 +545,9 @@
   "policy_description_DNSOverHTTPS_ExcludedDomains": {
     "message": "Domains von DNS over HTTPS ausschließen"
   },
+  "policy_description_DNSOverHTTPS_Fallback": {
+    "message": "Firefox verwendet den Standard-DNS-Resolver, wenn es ein Problem mit dem sicheren DNS-Anbieter gibt (Firefox 124+)"
+  },
   "policy_description_DNSOverHTTPS_ProviderURL": {
     "message": "Provider-URL"
   },
