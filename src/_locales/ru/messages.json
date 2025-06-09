@@ -14,9 +14,6 @@
   "configuration_import": {
     "message": "импорт конфигурации"
   },
-  "enterprise_only_label": {
-    "message": "работает только в Firefox ESR"
-  },
   "enum_value_block_no": {
     "message": "не блокировать"
   },

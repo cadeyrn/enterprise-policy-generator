@@ -14,9 +14,6 @@
   "configuration_import": {
     "message": "导入配置"
   },
-  "enterprise_only_label": {
-    "message": "仅在 Firefox ESR 生效"
-  },
   "enum_value_block_no": {
     "message": "不屏蔽"
   },

@@ -14,9 +14,6 @@
   "configuration_import": {
     "message": "import configuration"
   },
-  "enterprise_only_label": {
-    "message": "works only in Firefox ESR"
-  },
   "enum_value_block_no": {
     "message": "don't block"
   },
