@@ -37,6 +37,8 @@
   settings, see [#284](https://github.com/cadeyrn/enterprise-policy-generator/issues/284)
 - Added support for MicrosoftEntraSSO policy to allow single sign-on for Microsoft Entra accounts, see
   [#285](https://github.com/cadeyrn/enterprise-policy-generator/issues/285)
+- Added support for identity.fxaccounts.toolbar. and security.block_fileuri_script_with_wrong_mime in Preferences
+  policy, see [#286](https://github.com/cadeyrn/enterprise-policy-generator/issues/286)
 - Starting with Firefox 139, the SearchEngines policy is no longer ESR only, see
   [#298](https://github.com/cadeyrn/enterprise-policy-generator/issues/298)
 
