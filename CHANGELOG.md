@@ -26,6 +26,8 @@
   [#264](https://github.com/cadeyrn/enterprise-policy-generator/issues/264)
 - Added support for HttpsOnlyMode policy to configure the HTTPS-Only mode, see
   [#265](https://github.com/cadeyrn/enterprise-policy-generator/issues/265)
+- Added support for PostQuantumKeyAgreementEnabled policy to enable or disable post-quantum key agreement for TLS, see
+  [#266](https://github.com/cadeyrn/enterprise-policy-generator/issues/266)
 
 #### Translations
 

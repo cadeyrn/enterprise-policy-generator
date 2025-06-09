@@ -2829,6 +2829,22 @@ const policies = {
     type : 'boolean'
   },
 
+  PostQuantumKeyAgreementEnabled : {
+    first_available : { mainstream : '127.0', esr : '128.0' },
+    ui_category : 'security',
+    type : 'enum',
+    options : [
+      {
+        label : browser.i18n.getMessage('enum_value_enable_yes'),
+        value : 'true'
+      },
+      {
+        label : browser.i18n.getMessage('enum_value_enable_no'),
+        value : 'false'
+      }
+    ]
+  },
+
   Preference_security_default_personal_cert : {
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'security',

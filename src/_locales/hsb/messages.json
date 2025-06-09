@@ -1010,6 +1010,9 @@
   "policy_description_PopupBlocking_Default_true": {
     "message": "Wuskakowace wokna so po standardźe blokuja"
   },
+  "policy_description_PostQuantumKeyAgreementEnabled": {
+    "message": "Enable post-quantum key agreement for TLS"
+  },
   "policy_description_Preference_browser_cache_disk_enable": {
     "message": "Pufrowak kruteje tačele zmóžnić / znjemóžnić"
   },

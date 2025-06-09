@@ -1010,6 +1010,9 @@
   "policy_description_PopupBlocking_Default_true": {
     "message": "pop-ups are blocked by default"
   },
+  "policy_description_PostQuantumKeyAgreementEnabled": {
+    "message": "Enable post-quantum key agreement for TLS"
+  },
   "policy_description_Preference_browser_cache_disk_enable": {
     "message": "Enable or disable storing cache on the hard drive"
   },
