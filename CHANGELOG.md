@@ -30,6 +30,8 @@
   [#266](https://github.com/cadeyrn/enterprise-policy-generator/issues/266)
 - Added support for TranslateEnabled policy to enable or disable the local translation feature, see
   [#267](https://github.com/cadeyrn/enterprise-policy-generator/issues/267)
+- Added FirefoxLabs option to UserMessaging policy to enable or disable the “Firefox Labs” section in the Firefox
+  settings, see [#284](https://github.com/cadeyrn/enterprise-policy-generator/issues/284)
 
 #### Translations
 

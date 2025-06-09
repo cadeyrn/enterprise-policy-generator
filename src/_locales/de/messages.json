@@ -1370,6 +1370,9 @@
   "policy_description_UserMessaging_FeatureRecommendations": {
     "message": "Browser-Funktionen empfehlen"
   },
+  "policy_description_UserMessaging_FirefoxLabs": {
+    "message": "„Firefox Labs“-Abschnitt in den Firefox-Einstellungen anzeigen"
+  },
   "policy_description_UserMessaging_MoreFromMozilla": {
     "message": "Abschnitt „Mehr von Mozilla“ in den Einstellungen anzeigen"
   },

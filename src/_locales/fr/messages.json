@@ -1370,6 +1370,9 @@
   "policy_description_UserMessaging_FeatureRecommendations": {
     "message": "Recommend browser features"
   },
+  "policy_description_UserMessaging_FirefoxLabs": {
+    "message": "Show “Firefox Labs” section in the Firefox settings"
+  },
   "policy_description_UserMessaging_MoreFromMozilla": {
     "message": "Show “More from Mozilla” section in the settings"
   },
