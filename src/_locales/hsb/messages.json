@@ -155,6 +155,9 @@
   "policy_description_AllowedDomainsForApps": {
     "message": "Domeny postajić, kotrež maja přistup ke Google Workspace"
   },
+  "policy_description_AllowFileSelectionDialogs": {
+    "message": "Disable file selection dialogs"
+  },
   "policy_description_AppAutoUpdate": {
     "message": "Aktualizacije Firefox awtomatisce instalować"
   },

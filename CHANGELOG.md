@@ -15,6 +15,8 @@
 
 - Added support for Containers policy to set the initial set of tab containers, see
   [#252](https://github.com/cadeyrn/enterprise-policy-generator/issues/252)
+- Added support for AllowFileSelectionDialogs policy to disable file selection dialogs, see
+  [#258](https://github.com/cadeyrn/enterprise-policy-generator/issues/258)
 
 #### Translations
 

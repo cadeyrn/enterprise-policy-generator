@@ -155,6 +155,9 @@
   "policy_description_AllowedDomainsForApps": {
     "message": "Domains festlegen, die auf Google Workspace zugreifen dürfen"
   },
+  "policy_description_AllowFileSelectionDialogs": {
+    "message": "Dateiauswahldialoge deaktivieren"
+  },
   "policy_description_AppAutoUpdate": {
     "message": "Firefox-Updates automatisch installieren"
   },

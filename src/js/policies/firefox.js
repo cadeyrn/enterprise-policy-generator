@@ -261,6 +261,12 @@ const policies = {
     type : 'boolean'
   },
 
+  AllowFileSelectionDialogs : {
+    first_available : { mainstream : '124.0', esr : '128.0' },
+    ui_category : 'disable-features',
+    type : 'boolean-inverse'
+  },
+
   // customization
 
   RequestedLocales : {
