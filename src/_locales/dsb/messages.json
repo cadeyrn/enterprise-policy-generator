@@ -1136,6 +1136,18 @@
   "policy_description_PrintingEnabled": {
     "message": "Śišćaŕsku funkciju zmóžniś abo znjemóžniś"
   },
+  "policy_description_PrivateBrowsingModeAvailability": {
+    "message": "Set availability of private windows"
+  },
+  "policy_description_PrivateBrowsingModeAvailability_0": {
+    "message": "Private windows are available"
+  },
+  "policy_description_PrivateBrowsingModeAvailability_1": {
+    "message": "Private windows are not available"
+  },
+  "policy_description_PrivateBrowsingModeAvailability_2": {
+    "message": "Private windows are forced"
+  },
   "policy_description_PromptForDownloadLocation": {
     "message": "Pśed ześěgowanim kuždeje dataje se pšašaś, źož maju se toś te składowaś"
   },

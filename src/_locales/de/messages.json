@@ -1136,6 +1136,18 @@
   "policy_description_PrintingEnabled": {
     "message": "Drucken-Funktion aktivieren oder deaktivieren"
   },
+  "policy_description_PrivateBrowsingModeAvailability": {
+    "message": "Verfügbarkeit privater Fenster festlegen"
+  },
+  "policy_description_PrivateBrowsingModeAvailability_0": {
+    "message": "Private Fenster sind verfügbar"
+  },
+  "policy_description_PrivateBrowsingModeAvailability_1": {
+    "message": "Private Fenster sind nicht verfügbar"
+  },
+  "policy_description_PrivateBrowsingModeAvailability_2": {
+    "message": "Private Fenster werden erzwungen"
+  },
   "policy_description_PromptForDownloadLocation": {
     "message": "Vor dem Herunterladen jeder Datei fragen, wo diese gespeichert werden sollen"
   },

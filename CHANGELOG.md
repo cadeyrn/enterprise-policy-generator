@@ -30,6 +30,9 @@
   [#266](https://github.com/cadeyrn/enterprise-policy-generator/issues/266)
 - Added support for TranslateEnabled policy to enable or disable the local translation feature, see
   [#267](https://github.com/cadeyrn/enterprise-policy-generator/issues/267)
+- Added support for PrivateBrowsingModeAvailability policy to set the availability of private windows. It cannot be
+  used together with the DisablePrivateBrowsing policy, see
+  [#281](https://github.com/cadeyrn/enterprise-policy-generator/issues/281)
 - Added FirefoxLabs option to UserMessaging policy to enable or disable the “Firefox Labs” section in the Firefox
   settings, see [#284](https://github.com/cadeyrn/enterprise-policy-generator/issues/284)
 

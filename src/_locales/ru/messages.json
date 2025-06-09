@@ -1136,6 +1136,18 @@
   "policy_description_PrintingEnabled": {
     "message": "Включить или отключить печать"
   },
+  "policy_description_PrivateBrowsingModeAvailability": {
+    "message": "Set availability of private windows"
+  },
+  "policy_description_PrivateBrowsingModeAvailability_0": {
+    "message": "Private windows are available"
+  },
+  "policy_description_PrivateBrowsingModeAvailability_1": {
+    "message": "Private windows are not available"
+  },
+  "policy_description_PrivateBrowsingModeAvailability_2": {
+    "message": "Private windows are forced"
+  },
   "policy_description_PromptForDownloadLocation": {
     "message": "Запрашивать место сохранения файла перед загрузкой"
   },

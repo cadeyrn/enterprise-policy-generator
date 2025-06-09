@@ -34,6 +34,7 @@ const policies = {
 
   DisablePrivateBrowsing : {
     first_available : { mainstream : '60.0', esr : '60.0' },
+    exclude : 'PrivateBrowsingModeAvailability',
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -1690,6 +1691,27 @@ const policies = {
       {
         label : browser.i18n.getMessage('enum_value_enable_no'),
         value : 'false'
+      }
+    ]
+  },
+
+  PrivateBrowsingModeAvailability : {
+    first_available : { mainstream : '130.0', esr : '128.3' },
+    exclude : 'DisablePrivateBrowsing',
+    ui_category : 'privacy',
+    type : 'enum',
+    options : [
+      {
+        label : browser.i18n.getMessage('policy_description_PrivateBrowsingModeAvailability_0'),
+        value : 0
+      },
+      {
+        label : browser.i18n.getMessage('policy_description_PrivateBrowsingModeAvailability_1'),
+        value : 1
+      },
+      {
+        label : browser.i18n.getMessage('policy_description_PrivateBrowsingModeAvailability_2'),
+        value : 2
       }
     ]
   },
