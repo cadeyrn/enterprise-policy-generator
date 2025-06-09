@@ -830,6 +830,9 @@
   "policy_description_Homepage_StartPage_Previous_Session": {
     "message": "…предыдущей сессией браузера"
   },
+  "policy_description_HttpAllowlist": {
+    "message": "Websites that will not automatically be upgraded to HTTPS"
+  },
   "policy_description_LegacySameSiteCookieBehaviorEnabled": {
     "message": "Восстановить старое поведение куков SameSite"
   },

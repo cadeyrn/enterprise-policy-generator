@@ -1251,6 +1251,17 @@ const policies = {
     ]
   },
 
+  HttpAllowlist : {
+    first_available : { mainstream : '127.0', esr : '128.0' },
+    ui_category : 'network',
+    type : 'flat-array',
+    value : {
+      label : browser.i18n.getMessage('common_url'),
+      mandatory : true,
+      url : true
+    }
+  },
+
   DNSOverHTTPS : {
     first_available : { mainstream : '63.0', esr : '68.0' },
     is_lockable : true,

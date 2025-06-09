@@ -830,6 +830,9 @@
   "policy_description_Homepage_StartPage_Previous_Session": {
     "message": "… poslednim posedźenjom wobhladowaka"
   },
+  "policy_description_HttpAllowlist": {
+    "message": "Websites that will not automatically be upgraded to HTTPS"
+  },
   "policy_description_LegacySameSiteCookieBehaviorEnabled": {
     "message": "Zestarjene standardne zadźerženje plackow SameSite zmóžnić"
   },

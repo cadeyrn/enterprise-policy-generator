@@ -830,6 +830,9 @@
   "policy_description_Homepage_StartPage_Previous_Session": {
     "message": "… der letzten Browser-Sitzung"
   },
+  "policy_description_HttpAllowlist": {
+    "message": "Websites, die nicht automatisch auf HTTPS umgestellt werden"
+  },
   "policy_description_LegacySameSiteCookieBehaviorEnabled": {
     "message": "Veraltetes Standard-Verhalten von SameSite-Cookies aktivieren"
   },
