@@ -2769,6 +2769,12 @@ const policies = {
     ]
   },
 
+  DisableEncryptedClientHello : {
+    first_available : { mainstream : '127.0', esr : '128.0' },
+    ui_category : 'security',
+    type : 'boolean'
+  },
+
   Preference_security_default_personal_cert : {
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'security',

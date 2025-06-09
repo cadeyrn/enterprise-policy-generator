@@ -437,6 +437,9 @@
   "policy_description_DisableDeveloperTools": {
     "message": "禁用内置的开发者工具"
   },
+  "policy_description_DisableEncryptedClientHello": {
+    "message": "Disable use of the TLS feature Encrypted Client Hello (ECH)"
+  },
   "policy_description_DisableFeedbackCommands": {
     "message": "禁用“帮助”菜单中的“提交反馈”和“举报诈骗网站”菜单"
   },

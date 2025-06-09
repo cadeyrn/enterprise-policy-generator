@@ -437,6 +437,9 @@
   "policy_description_DisableDeveloperTools": {
     "message": "Zatwarjene wuwiwarske nastroje znjemóžnić"
   },
+  "policy_description_DisableEncryptedClientHello": {
+    "message": "Disable use of the TLS feature Encrypted Client Hello (ECH)"
+  },
   "policy_description_DisableFeedbackCommands": {
     "message": "Menijowej zapiskaj „Posudk pósłać“ a „Wobšudne websydło zdźělić“ w meniju Pomoc znjemóžnić"
   },

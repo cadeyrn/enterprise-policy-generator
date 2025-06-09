@@ -437,6 +437,9 @@
   "policy_description_DisableDeveloperTools": {
     "message": "Disable the built-in developer tools"
   },
+  "policy_description_DisableEncryptedClientHello": {
+    "message": "Disable use of the TLS feature Encrypted Client Hello (ECH)"
+  },
   "policy_description_DisableFeedbackCommands": {
     "message": "Disable the menu items “Submit Feedback” and “Report Deceptive Site” in the help menu"
   },

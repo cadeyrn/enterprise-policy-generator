@@ -17,6 +17,8 @@
   [#252](https://github.com/cadeyrn/enterprise-policy-generator/issues/252)
 - Added support for AllowFileSelectionDialogs policy to disable file selection dialogs, see
   [#258](https://github.com/cadeyrn/enterprise-policy-generator/issues/258)
+- Added support for DisableEncryptedClientHello policy to disable use of the TLS feature Encrypted Client Hello (ECH),
+  see [#261](https://github.com/cadeyrn/enterprise-policy-generator/issues/261)
 
 #### Translations
 

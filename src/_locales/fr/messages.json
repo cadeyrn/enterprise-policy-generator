@@ -437,6 +437,9 @@
   "policy_description_DisableDeveloperTools": {
     "message": "Désactiver les outils de développement intégrés"
   },
+  "policy_description_DisableEncryptedClientHello": {
+    "message": "Disable use of the TLS feature Encrypted Client Hello (ECH)"
+  },
   "policy_description_DisableFeedbackCommands": {
     "message": "Désactiver les options de menu \"Soumettre un feedback\" et \"Signaler un site trompeur\" dans le menu d'aide"
   },

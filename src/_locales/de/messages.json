@@ -437,6 +437,9 @@
   "policy_description_DisableDeveloperTools": {
     "message": "Deaktiviere die eingebauten Entwickler-Werkzeuge"
   },
+  "policy_description_DisableEncryptedClientHello": {
+    "message": "Verwendung der TLS-Funktion Encrypted Client Hello (ECH) deaktivieren"
+  },
   "policy_description_DisableFeedbackCommands": {
     "message": "Deaktiviere die Menü-Einträge „Feedback senden“ und „Betrügerische Website melden“ im Hilfe-Menü"
   },

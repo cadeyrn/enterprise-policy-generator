@@ -437,6 +437,9 @@
   "policy_description_DisableDeveloperTools": {
     "message": "Отключить встроенные инструменты разработчика"
   },
+  "policy_description_DisableEncryptedClientHello": {
+    "message": "Disable use of the TLS feature Encrypted Client Hello (ECH)"
+  },
   "policy_description_DisableFeedbackCommands": {
     "message": "Отключить пункты \"Отправить отзыв\" и \"Сообщить о мошенническом сайте\" в меню \"Справка\""
   },
