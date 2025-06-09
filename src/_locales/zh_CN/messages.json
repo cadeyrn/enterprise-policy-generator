@@ -833,6 +833,21 @@
   "policy_description_HttpAllowlist": {
     "message": "Websites that will not automatically be upgraded to HTTPS"
   },
+  "policy_description_HttpsOnlyMode": {
+    "message": "HTTPS-Only Mode"
+  },
+  "policy_description_HttpsOnlyMode_allowed": {
+    "message": "Off by default, but the user can turn it on"
+  },
+  "policy_description_HttpsOnlyMode_disallowed": {
+    "message": "Off and the user can’t turn it on"
+  },
+  "policy_description_HttpsOnlyMode_enabled": {
+    "message": "On by default, but the user can turn it off"
+  },
+  "policy_description_HttpsOnlyMode_force_enabled": {
+    "message": "On and the user can’t turn it off"
+  },
   "policy_description_LegacySameSiteCookieBehaviorEnabled": {
     "message": "Enable default legacy SameSite cookie behavior setting"
   },

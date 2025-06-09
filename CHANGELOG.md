@@ -24,6 +24,8 @@
   [#262](https://github.com/cadeyrn/enterprise-policy-generator/issues/262)
 - Added support for HttpAllowlist policy to configure sites that will not automatically be upgraded to HTTPS, see
   [#264](https://github.com/cadeyrn/enterprise-policy-generator/issues/264)
+- Added support for HttpsOnlyMode policy to configure the HTTPS-Only mode, see
+  [#265](https://github.com/cadeyrn/enterprise-policy-generator/issues/265)
 
 #### Translations
 

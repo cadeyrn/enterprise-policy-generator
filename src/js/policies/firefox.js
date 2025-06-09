@@ -1262,6 +1262,30 @@ const policies = {
     }
   },
 
+  HttpsOnlyMode : {
+    first_available : { mainstream : '127.0', esr : '128.0' },
+    ui_category : 'network',
+    type : 'enum',
+    options : [
+      {
+        label : browser.i18n.getMessage('policy_description_HttpsOnlyMode_allowed'),
+        value : 'allowed'
+      },
+      {
+        label : browser.i18n.getMessage('policy_description_HttpsOnlyMode_disallowed'),
+        value : 'disallowed'
+      },
+      {
+        label : browser.i18n.getMessage('policy_description_HttpsOnlyMode_enabled'),
+        value : 'enabled'
+      },
+      {
+        label : browser.i18n.getMessage('policy_description_HttpsOnlyMode_force_enabled'),
+        value : 'force_enabled'
+      }
+    ]
+  },
+
   DNSOverHTTPS : {
     first_available : { mainstream : '63.0', esr : '68.0' },
     is_lockable : true,
