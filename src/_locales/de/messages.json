@@ -1358,6 +1358,9 @@
   "policy_description_SupportMenu_Title": {
     "message": "Titel"
   },
+  "policy_description_TranslateEnabled": {
+    "message": "Lokale Übersetzungsfunktion aktivieren oder deaktivieren"
+  },
   "policy_description_UserMessaging": {
     "message": "Erlauben oder verhindern, dass Firefox den Benutzer benachrichtigt"
   },

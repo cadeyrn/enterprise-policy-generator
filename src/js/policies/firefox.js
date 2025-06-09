@@ -131,6 +131,22 @@ const policies = {
     ]
   },
 
+  TranslateEnabled : {
+    first_available : { mainstream : '126.0', esr : '128.0' },
+    ui_category : 'disable-features',
+    type : 'enum',
+    options : [
+      {
+        label : browser.i18n.getMessage('enum_value_enable_yes'),
+        value : 'true'
+      },
+      {
+        label : browser.i18n.getMessage('enum_value_enable_no'),
+        value : 'false'
+      }
+    ]
+  },
+
   UserMessaging : {
     first_available : { mainstream : '75.0', esr : '68.7' },
     is_lockable : true,

@@ -28,6 +28,8 @@
   [#265](https://github.com/cadeyrn/enterprise-policy-generator/issues/265)
 - Added support for PostQuantumKeyAgreementEnabled policy to enable or disable post-quantum key agreement for TLS, see
   [#266](https://github.com/cadeyrn/enterprise-policy-generator/issues/266)
+- Added support for TranslateEnabled policy to enable or disable the local translation feature, see
+  [#267](https://github.com/cadeyrn/enterprise-policy-generator/issues/267)
 
 #### Translations
 

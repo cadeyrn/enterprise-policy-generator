@@ -1358,6 +1358,9 @@
   "policy_description_SupportMenu_Title": {
     "message": "Titul"
   },
+  "policy_description_TranslateEnabled": {
+    "message": "Enable or disable local translation feature"
+  },
   "policy_description_UserMessaging": {
     "message": "Dowolić abo njedowolić, zo Firefox wužiwarja informuje"
   },
