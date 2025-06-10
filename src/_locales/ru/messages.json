@@ -1394,9 +1394,6 @@
   "policy_description_UserMessaging_UrlbarInterventions": {
     "message": "Показывать специфичные предложения Firefox в строке URL"
   },
-  "policy_description_UserMessaging_WhatsNew": {
-    "message": "Показывать значок и пункт меню \"Что нового\""
-  },
   "policy_description_UseSystemPrintDialog": {
     "message": "Использовать системный диалог печати вместо окна предварительного просмотра печати"
   },
