@@ -695,6 +695,9 @@
   "policy_description_ExtensionSettings_Label_Key": {
     "message": "附加组件 ID"
   },
+  "policy_description_ExtensionSettings_private_browsing": {
+    "message": "Run in private windows (Firefox 136+, Firefox ESR 128.8+)"
+  },
   "policy_description_ExtensionSettings_restricted_domains": {
     "message": "Domains on which content scripts can't be run"
   },

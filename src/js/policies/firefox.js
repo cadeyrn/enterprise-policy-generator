@@ -1139,6 +1139,25 @@ const policies = {
         ]
       },
       {
+        name : 'private_browsing',
+        label : browser.i18n.getMessage('policy_description_ExtensionSettings_private_browsing'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ]
+      },
+      {
         name : 'default_area',
         label : browser.i18n.getMessage('policy_description_ExtensionSettings_default_area'),
         type : 'enum',

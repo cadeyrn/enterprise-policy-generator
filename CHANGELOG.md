@@ -39,6 +39,8 @@
   [#285](https://github.com/cadeyrn/enterprise-policy-generator/issues/285)
 - Added support for identity.fxaccounts.toolbar. and security.block_fileuri_script_with_wrong_mime in Preferences
   policy, see [#286](https://github.com/cadeyrn/enterprise-policy-generator/issues/286)
+- Added private_browsing option to ExtensionSettings policy to configure whether an extension should be enabled in
+  private browsing, see [#287](https://github.com/cadeyrn/enterprise-policy-generator/issues/287)
 - Starting with Firefox 139, the SearchEngines policy is no longer ESR only, see
   [#298](https://github.com/cadeyrn/enterprise-policy-generator/issues/298)
 - Removed WhatsNew option from UserMessaging policy (Thanks, berkaynayman!) and removed it from existing configurations,

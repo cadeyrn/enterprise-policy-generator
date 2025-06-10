@@ -695,6 +695,9 @@
   "policy_description_ExtensionSettings_Label_Key": {
     "message": "Erweiterungs-ID"
   },
+  "policy_description_ExtensionSettings_private_browsing": {
+    "message": "In privaten Fenstern ausführen (Firefox 136+, Firefox ESR 128.8+)"
+  },
   "policy_description_ExtensionSettings_restricted_domains": {
     "message": "Domains, auf denen Content-Scripts nicht ausgeführt werden können"
   },
