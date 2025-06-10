@@ -1394,9 +1394,6 @@
   "policy_description_UserMessaging_UrlbarInterventions": {
     "message": "Specifiske namjety Firefox w adresowym polu pokazać"
   },
-  "policy_description_UserMessaging_WhatsNew": {
-    "message": "Symbol a menijowy zapisk „Nowe funkcije a změny“ pokazać"
-  },
   "policy_description_UseSystemPrintDialog": {
     "message": "Systemowy ćišćerski dialog město wokna ćišćerskeho přehlada wužiwać"
   },

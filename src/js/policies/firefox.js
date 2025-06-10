@@ -155,25 +155,6 @@ const policies = {
     type : 'object',
     properties : [
       {
-        name : 'WhatsNew',
-        label : browser.i18n.getMessage('policy_description_UserMessaging_WhatsNew'),
-        type : 'enum',
-        options : [
-          {
-            label : browser.i18n.getMessage('enum_value_no_preference'),
-            value : null
-          },
-          {
-            label : browser.i18n.getMessage('enum_value_yes'),
-            value : 'true'
-          },
-          {
-            label : browser.i18n.getMessage('enum_value_no'),
-            value : 'false'
-          }
-        ]
-      },
-      {
         name : 'ExtensionRecommendations',
         label : browser.i18n.getMessage('policy_description_UserMessaging_ExtensionRecommendations'),
         type : 'enum',

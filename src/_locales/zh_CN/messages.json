@@ -1394,9 +1394,6 @@
   "policy_description_UserMessaging_UrlbarInterventions": {
     "message": "Show Firefox specific suggestions in the URL bar"
   },
-  "policy_description_UserMessaging_WhatsNew": {
-    "message": "Show the “What's New“ icon and menu item"
-  },
   "policy_description_UseSystemPrintDialog": {
     "message": "Use the system print dialog instead of the print preview window"
   },

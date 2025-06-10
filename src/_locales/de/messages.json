@@ -1394,9 +1394,6 @@
   "policy_description_UserMessaging_UrlbarInterventions": {
     "message": "Firefox-spezifische Vorschläge in der URL-Leiste anzeigen"
   },
-  "policy_description_UserMessaging_WhatsNew": {
-    "message": "Symbol und Menüpunkt „Neue Funktionen und Änderungen“ anzeigen"
-  },
   "policy_description_UseSystemPrintDialog": {
     "message": "Den Systemdruckdialog anstelle des Druckvorschaufensters verwenden"
   },
