@@ -44,7 +44,9 @@
 - Starting with Firefox 139, the SearchEngines policy is no longer ESR only, see
   [#298](https://github.com/cadeyrn/enterprise-policy-generator/issues/298)
 - Removed WhatsNew option from UserMessaging policy (Thanks, berkaynayman!) and removed it from existing configurations,
-  see [#310](https://github.com/cadeyrn/enterprise-policy-generator/issues/310) 
+  see [#310](https://github.com/cadeyrn/enterprise-policy-generator/issues/310)
+- Added support for additional cryptographic ciphers to DisabledCiphers policy, see
+  [#312](https://github.com/cadeyrn/enterprise-policy-generator/issues/312)
 
 #### Translations
 

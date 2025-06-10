@@ -2572,6 +2572,63 @@ const policies = {
     type : 'object',
     properties : [
       {
+        name : 'TLS_AES_128_GCM_SHA256',
+        type : 'enum',
+        label : 'TLS_AES_128_GCM_SHA256 (Firefox 138+, Firefox ESR 128.10+)',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'true'
+          }
+        ]
+      },
+      {
+        name : 'TLS_AES_256_GCM_SHA384',
+        type : 'enum',
+        label : 'TLS_AES_256_GCM_SHA384 (Firefox 138+, Firefox ESR 128.10+)',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'true'
+          }
+        ]
+      },
+      {
+        name : 'TLS_CHACHA20_POLY1305_SHA256',
+        type : 'enum',
+        label : 'TLS_CHACHA20_POLY1305_SHA256 (Firefox 138+, Firefox ESR 128.10+)',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'false'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'true'
+          }
+        ]
+      },
+      {
         name : 'TLS_DHE_RSA_WITH_AES_128_CBC_SHA',
         type : 'enum',
         label : 'TLS_DHE_RSA_WITH_AES_128_CBC_SHA',
