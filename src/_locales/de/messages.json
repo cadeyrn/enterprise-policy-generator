@@ -273,7 +273,7 @@
     "message": "Zertifikate aus dem System-Zertifikatsspeicher lesen"
   },
   "policy_description_Certificates_Install": {
-    "message": "Zertifikate importieren (Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates oder %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: /Library/Application Support/Mozilla/Certificates oder ~/Library/Application Support/Mozilla/Certificates, Linux: /usr/lib/mozilla/certificates, /usr/lib64/mozilla/certificates oder ~/.mozilla/certificates)"
+    "message": "Zertifikate importieren (Windows: %USERPROFILE%\\AppData\\Local\\Mozilla\\Certificates oder %USERPROFILE%\\AppData\\Roaming\\Mozilla\\Certificates, macOS: /Library/Application Support/Mozilla/Certificates oder ~/Library/Application Support/Mozilla/Certificates, Linux: /usr/lib/mozilla/certificates, /usr/lib64/mozilla/certificates oder ~/.mozilla/certificates)"
   },
   "policy_description_Certificates_Install_Value": {
     "message": "Pfad zur .der- oder .pem-Datei"

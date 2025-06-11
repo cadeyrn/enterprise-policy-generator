@@ -50,8 +50,10 @@
 
 #### Translations
 
+- Fixed wrong environment variable in description of Certificates|Install policy, see
+  [#317](https://github.com/cadeyrn/enterprise-policy-generator/issues/317)
 - Updated wording for AutofillAddressEnabled and AutofillCreditCardEnabled policies
-- Updated Russian translation, see [#301](https://github.com/cadeyrn/enterprise-policy-generator/issues/301)
+- Updated Russian translation (Thanks, solokot!)
 
 #### Dependencies
 

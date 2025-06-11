@@ -273,7 +273,7 @@
     "message": "читать сертификаты из хранилища сертификатов системы"
   },
   "policy_description_Certificates_Install": {
-    "message": "Импорт сертификатов (Windows: %USERNAME%\\AppData\\Local\\Mozilla\\Certificates или %USERNAME%\\AppData\\Roaming\\Mozilla\\Certificates, macOS: /Library/Application Support/Mozilla/Certificates или ~/Library/Application Support/Mozilla/Certificates, Linux: /usr/lib/mozilla/certificates, /usr/lib64/mozilla/certificates или ~/.mozilla/certificates)"
+    "message": "Импорт сертификатов (Windows: %USERPROFILE%\\AppData\\Local\\Mozilla\\Certificates или %USERPROFILE%\\AppData\\Roaming\\Mozilla\\Certificates, macOS: /Library/Application Support/Mozilla/Certificates или ~/Library/Application Support/Mozilla/Certificates, Linux: /usr/lib/mozilla/certificates, /usr/lib64/mozilla/certificates или ~/.mozilla/certificates)"
   },
   "policy_description_Certificates_Install_Value": {
     "message": "Путь к файлу .der или .pem"

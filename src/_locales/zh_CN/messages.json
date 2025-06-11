@@ -273,7 +273,7 @@
     "message": "读取系统证书库中的证书"
   },
   "policy_description_Certificates_Install": {
-    "message": "导入证书（Windows：%USERNAME\\AppData\\Local\\Mozilla\\Certificates 或 %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates，macOS：/Library/Application Support/Mozilla/Certificates 或 ~/Library/Application Support/Mozilla/Certificates，Linux：/usr/lib/mozilla/certificates, /usr/lib64/mozilla/certificates 或 ~/.mozilla/certificates）"
+    "message": "导入证书（Windows：%USERPROFILE%\\AppData\\Local\\Mozilla\\Certificates 或 %USERPROFILE%\\AppData\\Roaming\\Mozilla\\Certificates，macOS：/Library/Application Support/Mozilla/Certificates 或 ~/Library/Application Support/Mozilla/Certificates，Linux：/usr/lib/mozilla/certificates, /usr/lib64/mozilla/certificates 或 ~/.mozilla/certificates）"
   },
   "policy_description_Certificates_Install_Value": {
     "message": ".der 或 .pem 文件的路径"

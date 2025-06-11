@@ -273,7 +273,7 @@
     "message": "read certificates from the system certificate store"
   },
   "policy_description_Certificates_Install": {
-    "message": "Import certificates (Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates or %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: /Library/Application Support/Mozilla/Certificates or ~/Library/Application Support/Mozilla/Certificates, Linux: /usr/lib/mozilla/certificates, /usr/lib64/mozilla/certificates or ~/.mozilla/certificates)"
+    "message": "Import certificates (Windows: %USERPROFILE%\\AppData\\Local\\Mozilla\\Certificates or %USERPROFILE%\\AppData\\Roaming\\Mozilla\\Certificates, macOS: /Library/Application Support/Mozilla/Certificates or ~/Library/Application Support/Mozilla/Certificates, Linux: /usr/lib/mozilla/certificates, /usr/lib64/mozilla/certificates or ~/.mozilla/certificates)"
   },
   "policy_description_Certificates_Install_Value": {
     "message": "Path to the .der or .pem file"

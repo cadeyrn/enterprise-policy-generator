@@ -273,7 +273,7 @@
     "message": "Lire les certificats depuis la liste des certificats du système"
   },
   "policy_description_Certificates_Install": {
-    "message": "Importer certificats (Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates ou %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: /Library/Application Support/Mozilla/Certificates ou ~/Library/Application Support/Mozilla/Certificates, Linux: /usr/lib/mozilla/certificates, /usr/lib64/mozilla/certificates ou ~/.mozilla/certificates)"
+    "message": "Importer certificats (Windows: %USERPROFILE%\\AppData\\Local\\Mozilla\\Certificates ou %USERPROFILE%\\AppData\\Roaming\\Mozilla\\Certificates, macOS: /Library/Application Support/Mozilla/Certificates ou ~/Library/Application Support/Mozilla/Certificates, Linux: /usr/lib/mozilla/certificates, /usr/lib64/mozilla/certificates ou ~/.mozilla/certificates)"
   },
   "policy_description_Certificates_Install_Value": {
     "message": "Chemin d'accès au fichier .der ou .pem"
