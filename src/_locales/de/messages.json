@@ -837,16 +837,16 @@
     "message": "Nur-HTTPS-Modus"
   },
   "policy_description_HttpsOnlyMode_allowed": {
-    "message": "Standardmäßig ausgeschaltet, aber der Benutzer kann es einschalten"
+    "message": "Standardmäßig ausgeschaltet, aber der Benutzer kann diesen einschalten"
   },
   "policy_description_HttpsOnlyMode_disallowed": {
-    "message": "Ausgeschaltet und der Benutzer kann es nicht einschalten"
+    "message": "Ausgeschaltet und der Benutzer kann diesen nicht einschalten"
   },
   "policy_description_HttpsOnlyMode_enabled": {
-    "message": "Standardmäßig eingeschaltet, aber der Benutzer kann es ausschalten"
+    "message": "Standardmäßig eingeschaltet, aber der Benutzer kann diesen ausschalten"
   },
   "policy_description_HttpsOnlyMode_force_enabled": {
-    "message": "Eingeschaltet und der Benutzer kann es nicht ausschalten"
+    "message": "Eingeschaltet und der Benutzer kann diesen nicht ausschalten"
   },
   "policy_description_LegacySameSiteCookieBehaviorEnabled": {
     "message": "Veraltetes Standard-Verhalten von SameSite-Cookies aktivieren"
