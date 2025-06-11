@@ -153,7 +153,7 @@
     "message": "Домены, для которых разрешён доступ к Google Workspace"
   },
   "policy_description_AllowFileSelectionDialogs": {
-    "message": "Disable file selection dialogs"
+    "message": "Отключить диалоги выбора файлов"
   },
   "policy_description_AppAutoUpdate": {
     "message": "Автоматическая установка обновлений Firefox"
@@ -273,7 +273,7 @@
     "message": "читать сертификаты из хранилища сертификатов системы"
   },
   "policy_description_Certificates_Install": {
-    "message": "Импорт сертификатов (Windows: %USERNAME\\AppData\\Local\\Mozilla\\Certificates или %USERNAME\\AppData\\Roaming\\Mozilla\\Certificates, macOS: /Library/Application Support/Mozilla/Certificates или ~/Library/Application Support/Mozilla/Certificates, Linux: /usr/lib/mozilla/certificates, /usr/lib64/mozilla/certificates или ~/.mozilla/certificates)"
+    "message": "Импорт сертификатов (Windows: %USERNAME%\\AppData\\Local\\Mozilla\\Certificates или %USERNAME%\\AppData\\Roaming\\Mozilla\\Certificates, macOS: /Library/Application Support/Mozilla/Certificates или ~/Library/Application Support/Mozilla/Certificates, Linux: /usr/lib/mozilla/certificates, /usr/lib64/mozilla/certificates или ~/.mozilla/certificates)"
   },
   "policy_description_Certificates_Install_Value": {
     "message": "Путь к файлу .der или .pem"
@@ -435,7 +435,7 @@
     "message": "Отключить встроенные инструменты разработчика"
   },
   "policy_description_DisableEncryptedClientHello": {
-    "message": "Disable use of the TLS feature Encrypted Client Hello (ECH)"
+    "message": "Отключить функцию TLS Encrypted Client Hello (ECH)"
   },
   "policy_description_DisableFeedbackCommands": {
     "message": "Отключить пункты \"Отправить отзыв\" и \"Сообщить о мошенническом сайте\" в меню \"Справка\""
@@ -543,7 +543,7 @@
     "message": "Исключить домены из DNS через HTTPS"
   },
   "policy_description_DNSOverHTTPS_Fallback": {
-    "message": "Firefox will use the default DNS resolver if there is a problem with the secure DNS provider (Firefox 124+)"
+    "message": "Использовать обычного поставщика DNS, если возникнет проблема с поставщиком безопасного DNS (Firefox 124+)"
   },
   "policy_description_DNSOverHTTPS_ProviderURL": {
     "message": "URL провайдера"
@@ -696,7 +696,7 @@
     "message": "ID расширения"
   },
   "policy_description_ExtensionSettings_private_browsing": {
-    "message": "Run in private windows (Firefox 136+, Firefox ESR 128.8+)"
+    "message": "Запускать в приватных окнах (Firefox 136+, Firefox ESR 128.8+)"
   },
   "policy_description_ExtensionSettings_restricted_domains": {
     "message": "Домены, для которых запрещено выполнять скрипты"
@@ -708,7 +708,7 @@
     "message": "Разрешить автоматическое обновление"
   },
   "policy_description_ExtensionUpdate": {
-    "message": "Включение или отключение автоматического обновления расширений"
+    "message": "Включить или отключить автоматическое обновление расширений"
   },
   "policy_description_ExtensionUpdate_options_false": {
     "message": "Отключить автоматическое обновление расширений"
@@ -831,22 +831,22 @@
     "message": "…предыдущей сессией браузера"
   },
   "policy_description_HttpAllowlist": {
-    "message": "Websites that will not automatically be upgraded to HTTPS"
+    "message": "Сайты, которые не будут автоматически переключаться на HTTPS"
   },
   "policy_description_HttpsOnlyMode": {
-    "message": "HTTPS-Only Mode"
+    "message": "Режим \"Только HTTPS\""
   },
   "policy_description_HttpsOnlyMode_allowed": {
-    "message": "Off by default, but the user can turn it on"
+    "message": "Отключён по умолчанию , но пользователь может включить"
   },
   "policy_description_HttpsOnlyMode_disallowed": {
-    "message": "Off and the user can’t turn it on"
+    "message": "Отключён и пользователь не может включить"
   },
   "policy_description_HttpsOnlyMode_enabled": {
-    "message": "On by default, but the user can turn it off"
+    "message": "Включён по умолчанию , но пользователь может отключить"
   },
   "policy_description_HttpsOnlyMode_force_enabled": {
-    "message": "On and the user can’t turn it off"
+    "message": "Включён и пользователь не может отключить"
   },
   "policy_description_LegacySameSiteCookieBehaviorEnabled": {
     "message": "Восстановить старое поведение куков SameSite"
@@ -870,7 +870,7 @@
     "message": "Не предлагать обновления Firefox"
   },
   "policy_description_MicrosoftEntraSSO": {
-    "message": "Allow single sign-on for Microsoft Entra accounts"
+    "message": "Разрешить единый вход для аккаунтов Microsoft Entra"
   },
   "policy_description_NetworkPrediction": {
     "message": "Включить или отключить предвыборку DNS (прогнозирование)"
@@ -1014,7 +1014,7 @@
     "message": "всплывающие окна блокируются по умолчанию"
   },
   "policy_description_PostQuantumKeyAgreementEnabled": {
-    "message": "Enable post-quantum key agreement for TLS"
+    "message": "Использовать постквантовое согласование ключей для TLS"
   },
   "policy_description_Preference_browser_cache_disk_enable": {
     "message": "Включить или отключить хранение кэша на жёстком диске"
@@ -1140,16 +1140,16 @@
     "message": "Включить или отключить печать"
   },
   "policy_description_PrivateBrowsingModeAvailability": {
-    "message": "Set availability of private windows"
+    "message": "Настройка доступности приватных окон"
   },
   "policy_description_PrivateBrowsingModeAvailability_0": {
-    "message": "Private windows are available"
+    "message": "Приватные окна доступны"
   },
   "policy_description_PrivateBrowsingModeAvailability_1": {
-    "message": "Private windows are not available"
+    "message": "Приватные окна недоступны"
   },
   "policy_description_PrivateBrowsingModeAvailability_2": {
-    "message": "Private windows are forced"
+    "message": "Приватные окна используются принудительно"
   },
   "policy_description_PromptForDownloadLocation": {
     "message": "Запрашивать место сохранения файла перед загрузкой"
@@ -1374,7 +1374,7 @@
     "message": "Заголовок"
   },
   "policy_description_TranslateEnabled": {
-    "message": "Enable or disable local translation feature"
+    "message": "Включить или отключить встроенный переводчик"
   },
   "policy_description_UserMessaging": {
     "message": "Разрешить или запретить Firefox отправлять сообщения пользователю"
@@ -1386,7 +1386,7 @@
     "message": "Рекомендовать функции браузера"
   },
   "policy_description_UserMessaging_FirefoxLabs": {
-    "message": "Show “Firefox Labs” section in the Firefox settings (Firefox 130.0.1+)"
+    "message": "Показывать раздел \"Лаборатория Firefox\" в настройках (Firefox 130.0.1+)"
   },
   "policy_description_UserMessaging_MoreFromMozilla": {
     "message": "Показывать раздел \"Больше от Mozilla\" в настройках"
@@ -1416,7 +1416,7 @@
     "message": "по умолчанию"
   },
   "requirement_macOS": {
-    "message": "works only on macOS"
+    "message": "работает только в macOS"
   },
   "requirement_windows": {
     "message": "работает только в Windows"
