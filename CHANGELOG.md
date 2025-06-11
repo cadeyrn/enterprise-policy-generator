@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### Version 6.5.0 (Work in Progress)
+### [Version 6.5.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v6.5.0) (2025-06-11)
 
 #### Enhancements
 
@@ -66,6 +66,9 @@
 - Migrated from stylistic/eslint-plugin-js to stylistic/eslint-plugin and updated from version 4.2.0 to 4.4.1
 - Removed gulp-stylelint to unblock stylelint upgrade and to allow installing dependencies without --force again
 - Removed stylelint-csstree-validator
+
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v6.4.0...v6.5.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-6.5.0)
 
 ---
 
