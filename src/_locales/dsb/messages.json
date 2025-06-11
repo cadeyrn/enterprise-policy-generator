@@ -153,7 +153,7 @@
     "message": "Domeny póstajiś, kótarež maju pśistup ku Google Workspace"
   },
   "policy_description_AllowFileSelectionDialogs": {
-    "message": "Disable file selection dialogs"
+    "message": "Dialogi za wuběranje datajow znjemóžniś"
   },
   "policy_description_AppAutoUpdate": {
     "message": "Aktualizacije Firefox awtomatiski instalěrowaś"
@@ -279,82 +279,82 @@
     "message": "Sćažka k .der- abo .pem-dataji"
   },
   "policy_description_Containers": {
-    "message": "Initial set of tab containers"
+    "message": "Zachopny wuběrk rejtarikowych wokolinow"
   },
   "policy_description_Containers_color": {
-    "message": "Color"
+    "message": "Barwa"
   },
   "policy_description_Containers_color_blue": {
-    "message": "Blue"
+    "message": "Módry"
   },
   "policy_description_Containers_color_green": {
-    "message": "Green"
+    "message": "Zeleny"
   },
   "policy_description_Containers_color_orange": {
-    "message": "Orange"
+    "message": "Oranžowy"
   },
   "policy_description_Containers_color_pink": {
     "message": "Pink"
   },
   "policy_description_Containers_color_purple": {
-    "message": "Purple"
+    "message": "Wioletny"
   },
   "policy_description_Containers_color_red": {
-    "message": "Red"
+    "message": "Cerwjeny"
   },
   "policy_description_Containers_color_toolbar": {
-    "message": "Toolbar"
+    "message": "Symbolowa rědka"
   },
   "policy_description_Containers_color_turquoise": {
-    "message": "Turquoise"
+    "message": "Tirkis"
   },
   "policy_description_Containers_color_yellow": {
-    "message": "Yellow"
+    "message": "Žołty"
   },
   "policy_description_Containers_icon": {
-    "message": "Icon"
+    "message": "Symbol"
   },
   "policy_description_Containers_icon_briefcase": {
-    "message": "Briefcase"
+    "message": "Aktowy kofrik"
   },
   "policy_description_Containers_icon_cart": {
-    "message": "Cart"
+    "message": "Nakupowański wózyk"
   },
   "policy_description_Containers_icon_chill": {
-    "message": "Sunglasses"
+    "message": "Słyńcna bryla"
   },
   "policy_description_Containers_icon_circle": {
-    "message": "Circle"
+    "message": "Krejz"
   },
   "policy_description_Containers_icon_dollar": {
-    "message": "Finances"
+    "message": "Finance"
   },
   "policy_description_Containers_icon_fence": {
-    "message": "Fence"
+    "message": "Płot"
   },
   "policy_description_Containers_icon_fingerprint": {
-    "message": "Fingerprint"
+    "message": "Palcowy wótśišć"
   },
   "policy_description_Containers_icon_food": {
-    "message": "Food"
+    "message": "Jěź"
   },
   "policy_description_Containers_icon_fruit": {
-    "message": "Fruit"
+    "message": "Płod"
   },
   "policy_description_Containers_icon_gift": {
-    "message": "Preset"
+    "message": "Dar"
   },
   "policy_description_Containers_icon_pet": {
-    "message": "Pet"
+    "message": "Domacne zwěrje"
   },
   "policy_description_Containers_icon_tree": {
-    "message": "Tree"
+    "message": "Bom"
   },
   "policy_description_Containers_icon_vacation": {
-    "message": "Vacation"
+    "message": "Dowol"
   },
   "policy_description_Containers_name": {
-    "message": "Name of the container"
+    "message": "Mě rejtarikoweje wokoliny"
   },
   "policy_description_Cookies": {
     "message": "Webbokam dowóliś abo zakazaś, cookieje stajiś"
@@ -435,7 +435,7 @@
     "message": "Zatwarjone wuwijarske rědy znjemóžniś"
   },
   "policy_description_DisableEncryptedClientHello": {
-    "message": "Disable use of the TLS feature Encrypted Client Hello (ECH)"
+    "message": "Wužywanje TLS-funkcije Encrypted Client Hello (ECH) znjemóžniś"
   },
   "policy_description_DisableFeedbackCommands": {
     "message": "Menijowej zapiska „Pósudk pósłaś“ a „Wobšudnikojske websedło k wěsći daś“ w meniju Pomoc znjemóžniś"
@@ -543,7 +543,7 @@
     "message": "Domeny z DNS over HTTPS wuzamknuś"
   },
   "policy_description_DNSOverHTTPS_Fallback": {
-    "message": "Firefox will use the default DNS resolver if there is a problem with the secure DNS provider (Firefox 124+)"
+    "message": "Firefox standardny DNS-resolver wužywa, gaž dajo problem z wěstym DNS-póbitowarjom (Firefox 124+)"
   },
   "policy_description_DNSOverHTTPS_ProviderURL": {
     "message": "URL póbitowarja"
@@ -696,7 +696,7 @@
     "message": "Rozšyrjeński ID"
   },
   "policy_description_ExtensionSettings_private_browsing": {
-    "message": "Run in private windows (Firefox 136+, Firefox ESR 128.8+)"
+    "message": "W priwatnych woknach wuwjasć (Firefox 136+, Firefox ESR 128.8+)"
   },
   "policy_description_ExtensionSettings_restricted_domains": {
     "message": "Domeny, na kótarychž wopśimjeśowe skripty njedaju se wuwjasć"
@@ -831,22 +831,22 @@
     "message": "… slědnym pósejźenim wobglědowaka"
   },
   "policy_description_HttpAllowlist": {
-    "message": "Websites that will not automatically be upgraded to HTTPS"
+    "message": "Websedła, kótarež se na HTTPS awtomatiski njepśestajaju"
   },
   "policy_description_HttpsOnlyMode": {
-    "message": "HTTPS-Only Mode"
+    "message": "Modus Jano-HTTPS"
   },
   "policy_description_HttpsOnlyMode_allowed": {
-    "message": "Off by default, but the user can turn it on"
+    "message": "Pó standarźe znjemóžnjony, ale wužywaŕ móžo jen zmóžniś"
   },
   "policy_description_HttpsOnlyMode_disallowed": {
-    "message": "Off and the user can’t turn it on"
+    "message": "Znjemóžnjony a wužywaŕ njamóžo jen zmóžniś"
   },
   "policy_description_HttpsOnlyMode_enabled": {
-    "message": "On by default, but the user can turn it off"
+    "message": "Pó standarźe zmóžnjony, ale wužywaŕ móžo jen znjemóžniś"
   },
   "policy_description_HttpsOnlyMode_force_enabled": {
-    "message": "On and the user can’t turn it off"
+    "message": "Zmóžnjony a wužywaŕ njamóžo jen znjemóžniś"
   },
   "policy_description_LegacySameSiteCookieBehaviorEnabled": {
     "message": "Zestarjone standardne zaźaržanje cookiejow SameSite zmóžniś"
@@ -870,7 +870,7 @@
     "message": "Žedno naspominanje k aktualizěrowanjeju Firefox"
   },
   "policy_description_MicrosoftEntraSSO": {
-    "message": "Allow single sign-on for Microsoft Entra accounts"
+    "message": "Single Sign-On za konto Microsoft Entra dowóliś"
   },
   "policy_description_NetworkPrediction": {
     "message": "DNS-pśedzacytanje zmóžniś abo znjemóžniś"
@@ -1014,7 +1014,7 @@
     "message": "Wuskokujuce wokna se pó standarźe blokěruju"
   },
   "policy_description_PostQuantumKeyAgreementEnabled": {
-    "message": "Enable post-quantum key agreement for TLS"
+    "message": "Wuběrk postkwantowych klucow za TLS zmóžniś"
   },
   "policy_description_Preference_browser_cache_disk_enable": {
     "message": "Cache twardeje platy zmóžniś / znjemóžniś"
@@ -1140,16 +1140,16 @@
     "message": "Śišćaŕsku funkciju zmóžniś abo znjemóžniś"
   },
   "policy_description_PrivateBrowsingModeAvailability": {
-    "message": "Set availability of private windows"
+    "message": "K-dispoziciji-byśe priwatnych woknow póstajiś"
   },
   "policy_description_PrivateBrowsingModeAvailability_0": {
-    "message": "Private windows are available"
+    "message": "Priwatne wokna su k dispoziciji"
   },
   "policy_description_PrivateBrowsingModeAvailability_1": {
-    "message": "Private windows are not available"
+    "message": "Priwatne wokna njejsu k dispoziciji"
   },
   "policy_description_PrivateBrowsingModeAvailability_2": {
-    "message": "Private windows are forced"
+    "message": "Priwatne wokna so wunuźiju"
   },
   "policy_description_PromptForDownloadLocation": {
     "message": "Pśed ześěgowanim kuždeje dataje se pšašaś, źož maju se toś te składowaś"
@@ -1374,7 +1374,7 @@
     "message": "Titel"
   },
   "policy_description_TranslateEnabled": {
-    "message": "Enable or disable local translation feature"
+    "message": "Lokalnu pśełožowańsku funkciju zmóžniś abo znjemóžniś"
   },
   "policy_description_UserMessaging": {
     "message": "Dowóliś abo njedowóliś, až Firefox wužywarja informěrujo"
@@ -1386,7 +1386,7 @@
     "message": "Funkcije wobglědowaka dopórucyś"
   },
   "policy_description_UserMessaging_FirefoxLabs": {
-    "message": "Show “Firefox Labs” section in the Firefox settings (Firefox 130.0.1+)"
+    "message": "Wótrězk „Firefox Labs“ w nastajenjach Firefox pokazaś (Firefox 130.0.1+)"
   },
   "policy_description_UserMessaging_MoreFromMozilla": {
     "message": "Wótrězk „Wěcej wót Mozilla“ w nastajenjach pokazaś"
@@ -1416,7 +1416,7 @@
     "message": "default"
   },
   "requirement_macOS": {
-    "message": "works only on macOS"
+    "message": "funkcioněrujo jano na macOS"
   },
   "requirement_windows": {
     "message": "funkcioněrujo jano z Windows"
