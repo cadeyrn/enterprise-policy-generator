@@ -479,6 +479,12 @@ const configurator = {
    * @returns {void}
    */
   validatePreferenceFields (e) {
+    const blockedPreferences = [
+      'app.update.channel',
+      'app.update.lastUpdateTime',
+      'app.update.migrated',
+      'browser.vpn_promo.disallowed_regions'
+    ];
     const validPrefixes = [
       'accessibility.',
       'alerts.',
@@ -537,6 +543,10 @@ const configurator = {
     const validateName = (name) => {
       if (!name) {
         return true;
+      }
+
+      if (blockedPreferences.includes(name)) {
+        return false;
       }
 
       return validPrefixes.some((prefix) => {
