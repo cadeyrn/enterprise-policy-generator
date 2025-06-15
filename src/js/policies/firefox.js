@@ -3583,6 +3583,7 @@ const policies = {
 
   UseSystemPrintDialog : {
     first_available : { mainstream : '102.0', esr : '102.0' },
+    exclude : ['PrintingEnabled=false'],
     ui_category : 'others',
     type : 'enum',
     options : [

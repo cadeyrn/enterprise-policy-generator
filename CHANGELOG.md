@@ -17,6 +17,11 @@
   also a few options that start with a permitted prefix but are still not allowed. These options are now also recognized
   as incorrect by the validation, see [#309](https://github.com/cadeyrn/enterprise-policy-generator/issues/309)
 
+#### Enterprise Policies
+
+- The UseSystemPrintDialog and PrintingEnabled=false policies should exclude each other, see
+  [#319](https://github.com/cadeyrn/enterprise-policy-generator/issues/319)
+
 #### Dependencies
 
 - Updated eslint from version 9.28.0 to 9.29.0
