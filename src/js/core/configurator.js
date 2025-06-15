@@ -2236,6 +2236,8 @@ const configurator = {
       const elExcludedPolicyCopy = elExcludedPolicy;
 
       if (elExcludedPolicySelect) {
+        const elPolicyParent = elPolicy.parentElement;
+
         if (elExcludedPolicySelect.value !== excludePolicyArray[1]) {
           elExcludedPolicy = null;
         }
@@ -2243,26 +2245,26 @@ const configurator = {
         elExcludedPolicyCopy.addEventListener('change', () => {
           if (elExcludedPolicyCopy.checked && elExcludedPolicySelect.value === excludePolicyArray[1]) {
             elPolicy.setAttribute('disabled', 'disabled');
-            elPolicy.parentElement.classList.add('excluded');
-            elPolicy.parentElement.querySelector('select')?.setAttribute('disabled', 'disabled');
+            elPolicyParent.classList.add('excluded');
+            elPolicyParent.querySelector('select')?.setAttribute('disabled', 'disabled');
           }
           else {
             elPolicy.removeAttribute('disabled');
-            elPolicy.parentElement.classList.remove('excluded');
-            elPolicy.parentElement.querySelector('select')?.removeAttribute('disabled');
+            elPolicyParent.classList.remove('excluded');
+            elPolicyParent.querySelector('select')?.removeAttribute('disabled');
           }
         });
 
         elExcludedPolicySelect.addEventListener('change', () => {
           if (elExcludedPolicySelect.value === excludePolicyArray[1]) {
             elPolicy.setAttribute('disabled', 'disabled');
-            elPolicy.parentElement.classList.add('excluded');
-            elPolicy.parentElement.querySelector('select')?.setAttribute('disabled', 'disabled');
+            elPolicyParent.classList.add('excluded');
+            elPolicyParent.querySelector('select')?.setAttribute('disabled', 'disabled');
           }
           else {
             elPolicy.removeAttribute('disabled');
-            elPolicy.parentElement.classList.remove('excluded');
-            elPolicy.parentElement.querySelector('select')?.removeAttribute('disabled');
+            elPolicyParent.classList.remove('excluded');
+            elPolicyParent.querySelector('select')?.removeAttribute('disabled');
           }
         });
       }
