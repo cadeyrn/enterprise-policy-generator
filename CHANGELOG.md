@@ -21,6 +21,9 @@
 
 - The UseSystemPrintDialog and PrintingEnabled=false policies should exclude each other, see
   [#319](https://github.com/cadeyrn/enterprise-policy-generator/issues/319)
+- Removed support for the legacy preference policies privacy.file_unique_origin and security.ssl.errorReporting.enabled,
+  because these options no longer exist in Firefox, see
+  [#320](https://github.com/cadeyrn/enterprise-policy-generator/issues/320)
 
 #### Dependencies
 

@@ -526,7 +526,6 @@ const configurator = {
       'security.osclientcerts.assume_rsa_pss_support',
       'security.osclientcerts.autoload',
       'security.ssl.enable_ocsp_stapling',
-      'security.ssl.errorReporting.enabled',
       'security.ssl.require_safe_negotiation',
       'security.tls.enable_0rtt_data',
       'security.tls.hello_downgrade_check',

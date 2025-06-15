@@ -382,5 +382,46 @@ const migrator = {
       await browser.storage.local.set({ configurations : configurations, schemaVersion : 6 });
       migrator.migrate();
     }
+  },
+
+  /**
+   * Version: EPG 6.6.0
+   *
+   * @returns {void}
+   */
+  async migration_6 () {
+    const { configurations } = await browser.storage.local.get({ configurations : [] });
+    const configurationLength = configurations.length;
+
+    if (configurationLength > 0) {
+      for (let i = 0; i < configurationLength; i++) {
+        const { configuration } = configurations[i];
+
+        /*
+         * @removed
+         *
+         * "Preference_privacy_file_unique_origin"
+         */
+        if (configuration.checkboxes.Preference_privacy_file_unique_origin) {
+          delete configuration.checkboxes.Preference_privacy_file_unique_origin;
+          delete configuration.select.Preference_privacy_file_unique_origin_Select;
+        }
+
+        /*
+         * @removed
+         *
+         * "Preference_security_ssl_errorReporting_enabled"
+         */
+        if (configuration.checkboxes.Preference_security_ssl_errorReporting_enabled) {
+          delete configuration.checkboxes.Preference_security_ssl_errorReporting_enabled;
+          delete configuration.select.Preference_security_ssl_errorReporting_enabled_Select;
+        }
+
+        configurations[i].configuration = configuration;
+      }
+
+      await browser.storage.local.set({ configurations : configurations, schemaVersion : 7 });
+      migrator.migrate();
+    }
   }
 };

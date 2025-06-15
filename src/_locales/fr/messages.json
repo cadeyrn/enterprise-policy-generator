@@ -1073,9 +1073,6 @@
   "policy_description_Preference_places_history_enabled": {
     "message": "Mémoriser l'historique de navigation"
   },
-  "policy_description_Preference_privacy_file_unique_origin": {
-    "message": "Autoriser les fichiers locaux à accéder à d'autres fichiers locaux (problème de sécurité !)"
-  },
   "policy_description_Preference_security_default_personal_cert": {
     "message": "Demander à l'utilisateur de choisir le certificat personnel par défaut"
   },
@@ -1084,9 +1081,6 @@
   },
   "policy_description_Preference_security_default_personal_cert_select_automatically": {
     "message": "sélectionner automatiquement"
-  },
-  "policy_description_Preference_security_ssl_errorReporting_enabled": {
-    "message": "Autoriser l'envoi d'erreurs TLS à Mozilla"
   },
   "policy_description_Preference_ui_key_menuAccessKeyFocuses": {
     "message": "La touche Alt permet d'afficher la barre de menu"

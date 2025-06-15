@@ -2458,18 +2458,6 @@ const policies = {
     default : 'true'
   },
 
-  Preference_privacy_file_unique_origin : {
-    first_available : { mainstream : '68.0.1', esr : '68.1' },
-    info_link : 'https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730',
-    ui_category : 'security',
-    type : 'preference',
-    properties : {
-      option : 'privacy.file_unique_origin',
-      type : 'boolean-inverse',
-      default : 'true'
-    }
-  },
-
   DisableSecurityBypass : {
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'security',
@@ -3165,17 +3153,6 @@ const policies = {
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'updates-and-data',
     type : 'boolean'
-  },
-
-  Preference_security_ssl_errorReporting_enabled : {
-    first_available : { mainstream : '68.0', esr : '68.0' },
-    ui_category : 'updates-and-data',
-    type : 'preference',
-    properties : {
-      option : 'security.ssl.errorReporting.enabled',
-      type : 'boolean',
-      default : 'true'
-    }
   },
 
   Preference_media_gmp_gmpopenh264_enabled : {

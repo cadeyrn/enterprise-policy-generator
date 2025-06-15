@@ -1073,9 +1073,6 @@
   "policy_description_Preference_places_history_enabled": {
     "message": "Browser-Chronik merken"
   },
-  "policy_description_Preference_privacy_file_unique_origin": {
-    "message": "Lokalen Dateien den Zugriff auf andere lokale Dateien erlauben (Sicherheitsproblem!)"
-  },
   "policy_description_Preference_security_default_personal_cert": {
     "message": "Den Nutzer um Auswahl eines Zertifikats für Websites bitten, welche eines benötigen"
   },
@@ -1084,9 +1081,6 @@
   },
   "policy_description_Preference_security_default_personal_cert_select_automatically": {
     "message": "automatisch auswählen"
-  },
-  "policy_description_Preference_security_ssl_errorReporting_enabled": {
-    "message": "TLS-Fehler können an Mozilla gesendet werden"
   },
   "policy_description_Preference_ui_key_menuAccessKeyFocuses": {
     "message": "Die Alt-Taste kann benutzt werden, um die Menüleiste anzuzeigen"

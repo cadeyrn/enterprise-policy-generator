@@ -1073,9 +1073,6 @@
   "policy_description_Preference_places_history_enabled": {
     "message": "Помнить историю просмотра"
   },
-  "policy_description_Preference_privacy_file_unique_origin": {
-    "message": "Разрешить локальным файлам доступ к другим локальным файлам (проблема безопасности!)"
-  },
   "policy_description_Preference_security_default_personal_cert": {
     "message": "Просить пользователя выбрать персональный сертификат по умолчанию"
   },
@@ -1084,9 +1081,6 @@
   },
   "policy_description_Preference_security_default_personal_cert_select_automatically": {
     "message": "выбрать автоматически"
-  },
-  "policy_description_Preference_security_ssl_errorReporting_enabled": {
-    "message": "Разрешить отправку ошибок TLS в Mozilla"
   },
   "policy_description_Preference_ui_key_menuAccessKeyFocuses": {
     "message": "Клавиша Alt может использоваться для отображения строки меню"

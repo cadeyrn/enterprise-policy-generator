@@ -1073,9 +1073,6 @@
   "policy_description_Preference_places_history_enabled": {
     "message": "Se historiju wobglědowaka markowaś"
   },
-  "policy_description_Preference_privacy_file_unique_origin": {
-    "message": "Lokalnym datajam pśistup k drugim lokalnym datajam dowóliś (wěstotny problem!)"
-  },
   "policy_description_Preference_security_default_personal_cert": {
     "message": "Wužywarja wó wuběranje certifikata za websedła pšosyś, kótarež taki trjebaju"
   },
@@ -1084,9 +1081,6 @@
   },
   "policy_description_Preference_security_default_personal_cert_select_automatically": {
     "message": "awtomatiski wubraś"
-  },
-  "policy_description_Preference_security_ssl_errorReporting_enabled": {
-    "message": "TLS-zmólki daju se na Mozilla pósłaś"
   },
   "policy_description_Preference_ui_key_menuAccessKeyFocuses": {
     "message": "Tasta Alt dajo se wužywaś, aby menijowu rědku pokazała"

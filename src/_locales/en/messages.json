@@ -1073,9 +1073,6 @@
   "policy_description_Preference_places_history_enabled": {
     "message": "Remember browsing history"
   },
-  "policy_description_Preference_privacy_file_unique_origin": {
-    "message": "Allow local files to access other local files (security issue!)"
-  },
   "policy_description_Preference_security_default_personal_cert": {
     "message": "Prompt the user to choose the default personal certificate"
   },
@@ -1084,9 +1081,6 @@
   },
   "policy_description_Preference_security_default_personal_cert_select_automatically": {
     "message": "select automatically"
-  },
-  "policy_description_Preference_security_ssl_errorReporting_enabled": {
-    "message": "Allow TLS errors to be sent to Mozilla"
   },
   "policy_description_Preference_ui_key_menuAccessKeyFocuses": {
     "message": "The Alt key can be used to show the menu bar"

@@ -1073,9 +1073,6 @@
   "policy_description_Preference_places_history_enabled": {
     "message": "记住浏览历史"
   },
-  "policy_description_Preference_privacy_file_unique_origin": {
-    "message": "允许本地文件访问其他本地文件（有安全风险！）"
-  },
   "policy_description_Preference_security_default_personal_cert": {
     "message": "提示用户选择默认的个人证书"
   },
@@ -1084,9 +1081,6 @@
   },
   "policy_description_Preference_security_default_personal_cert_select_automatically": {
     "message": "手动选择"
-  },
-  "policy_description_Preference_security_ssl_errorReporting_enabled": {
-    "message": "允许发送 TLS 错误到 Mozilla"
   },
   "policy_description_Preference_ui_key_menuAccessKeyFocuses": {
     "message": "可按 Alt 键显示菜单栏"
