@@ -110,10 +110,11 @@ const configurator = {
 
     // show sub options for enabled policies and hide sub options for disabled policies
     [...document.querySelectorAll('.primary-checkbox')].forEach((el) => {
+      const excludePolicy = el.getAttribute('data-exclude');
+
       el.addEventListener('change', () => {
         const elSubOptions = el.parentNode.getElementsByClassName('sub-options');
         const elExtraOptions = el.parentNode.getElementsByClassName('extra-options');
-        const excludePolicy = el.getAttribute('data-exclude');
 
         if (elSubOptions.length > 0) {
           [...elSubOptions].forEach((el) => {
@@ -142,13 +143,13 @@ const configurator = {
             }
           }
         }
-
-        if (excludePolicy) {
-          excludePolicy.split(',').forEach((policy) => {
-            configurator.handlePolicyExclusion(el, policy);
-          });
-        }
       });
+
+      if (excludePolicy) {
+        excludePolicy.split(',').forEach((policy) => {
+          configurator.handlePolicyExclusion(el, policy);
+        });
+      }
     });
 
     // add event listener for array field actions (plus / minus icons)
