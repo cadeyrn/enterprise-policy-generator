@@ -21,7 +21,7 @@
 
 - The UseSystemPrintDialog and PrintingEnabled=false policies should exclude each other, see
   [#319](https://github.com/cadeyrn/enterprise-policy-generator/issues/319)
-- Removed support for the DisablePocket policy because Pocket will shut down next month, see
+- Removed support for the DisablePocket policy because Pocket will be shut down next month, see
   [#303](https://github.com/cadeyrn/enterprise-policy-generator/issues/303)
 - Removed support for the legacy preference policies privacy.file_unique_origin and security.ssl.errorReporting.enabled,
   because these options no longer exist in Firefox, see
