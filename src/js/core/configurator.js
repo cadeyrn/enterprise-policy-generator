@@ -2272,22 +2272,22 @@ const configurator = {
     }
     else {
       elExcludedPolicy = document.querySelector('[data-name="' + excludedPolicyName + '"]');
-    }
 
-    if (elExcludedPolicy) {
-      const elExcludedPolicyParent = elExcludedPolicy.parentNode;
-      const elExcludedPolicySelect = elExcludedPolicyParent.querySelector('select');
+      elPolicy.addEventListener('change', () => {
+        const elExcludedPolicyParent = elExcludedPolicy.parentNode;
+        const elExcludedPolicySelect = elExcludedPolicyParent.querySelector('select');
 
-      if (elPolicy.checked) {
-        elExcludedPolicy.setAttribute('disabled', 'disabled');
-        elExcludedPolicyParent.classList.add('excluded');
-        elExcludedPolicySelect?.setAttribute('disabled', 'disabled');
-      }
-      else {
-        elExcludedPolicy.removeAttribute('disabled');
-        elExcludedPolicyParent.classList.remove('excluded');
-        elExcludedPolicySelect?.removeAttribute('disabled');
-      }
+        if (elPolicy.checked) {
+          elExcludedPolicy.setAttribute('disabled', 'disabled');
+          elExcludedPolicyParent.classList.add('excluded');
+          elExcludedPolicySelect?.setAttribute('disabled', 'disabled');
+        }
+        else {
+          elExcludedPolicy.removeAttribute('disabled');
+          elExcludedPolicyParent.classList.remove('excluded');
+          elExcludedPolicySelect?.removeAttribute('disabled');
+        }
+      });
     }
   },
 
