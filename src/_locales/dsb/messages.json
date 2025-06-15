@@ -458,9 +458,6 @@
   "policy_description_DisablePasswordReveal": {
     "message": "Njedówoliś, až se gronidła w skłaźonych pśizjawjenjach wótekšywaju"
   },
-  "policy_description_DisablePocket": {
-    "message": "Integraciju słužby Mozilla Pocket znjemóžniś"
-  },
   "policy_description_DisablePrivateBrowsing": {
     "message": "Priwatny modus znjemóžniś"
   },

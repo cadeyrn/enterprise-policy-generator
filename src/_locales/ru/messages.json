@@ -458,9 +458,6 @@
   "policy_description_DisablePasswordReveal": {
     "message": "Отключить показ паролей для сохранённых логинов"
   },
-  "policy_description_DisablePocket": {
-    "message": "Отключить интеграцию Pocket, сервиса Mozilla"
-  },
   "policy_description_DisablePrivateBrowsing": {
     "message": "Отключить режим приватного просмотра"
   },

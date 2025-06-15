@@ -458,9 +458,6 @@
   "policy_description_DisablePasswordReveal": {
     "message": "Do not allow passwords to be revealed in saved logins"
   },
-  "policy_description_DisablePocket": {
-    "message": "禁用 Mozilla 提供的 Pocket 服务"
-  },
   "policy_description_DisablePrivateBrowsing": {
     "message": "禁用隐私浏览模式"
   },

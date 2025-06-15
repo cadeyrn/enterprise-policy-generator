@@ -458,9 +458,6 @@
   "policy_description_DisablePasswordReveal": {
     "message": "Das Anzeigen gespeicherter Passwörter verhindern"
   },
-  "policy_description_DisablePocket": {
-    "message": "Deaktiviere die Integration von Pocket, einem Dienst von Mozilla"
-  },
   "policy_description_DisablePrivateBrowsing": {
     "message": "Deaktiviere den Privaten Modus"
   },

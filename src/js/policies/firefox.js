@@ -57,12 +57,6 @@ const policies = {
     type : 'boolean'
   },
 
-  DisablePocket : {
-    first_available : { mainstream : '60.0', esr : '60.0' },
-    ui_category : 'disable-features',
-    type : 'boolean'
-  },
-
   DisableFirefoxAccounts : {
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'disable-features',

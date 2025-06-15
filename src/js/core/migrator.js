@@ -400,6 +400,15 @@ const migrator = {
         /*
          * @removed
          *
+         * "DisablePocket"
+         */
+        if (configuration.checkboxes.DisablePocket) {
+          delete configuration.checkboxes.DisablePocket;
+        }
+
+        /*
+         * @removed
+         *
          * "Preference_privacy_file_unique_origin"
          */
         if (configuration.checkboxes.Preference_privacy_file_unique_origin) {
