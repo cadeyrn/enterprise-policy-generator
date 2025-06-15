@@ -6,6 +6,9 @@
 
 #### Enhancements
 
+- If a filter was active and the user interface was reloaded, the search term was still in the filter field, but the
+  filter was not active and the input field was not visible. Now the filter remains active, see
+  [#318](https://github.com/cadeyrn/enterprise-policy-generator/issues/318)
 - The Preferences policy does not allow the use of all Firefox options. There has already been a validation to ensure
   that no option name is used that is not allowed to be used or does not start with a certain prefix. However, there are
   also a few options that start with a permitted prefix but are still not allowed. These options are now also recognized

@@ -220,7 +220,7 @@ const configurator = {
     };
 
     // filter field
-    configurator.filterfield();
+    configurator.filterField();
   },
 
   /**
@@ -2290,10 +2290,17 @@ const configurator = {
    *
    * @returns {void}
    */
-  filterfield () {
+  filterField () {
     const filterWrapper = document.getElementById('filter-wrapper');
     const filter = document.getElementById('filter');
     const styleHelper = document.getElementById('filter-style-helper');
+
+    // re-apply active filter on reload
+    configurator.applySearchFieldFilter(filter);
+
+    if (filter.value) {
+      filterWrapper.classList.add('open');
+    }
 
     const close = (e) => {
       e.preventDefault();
@@ -2311,7 +2318,7 @@ const configurator = {
         filterWrapper.classList.remove('close');
       }, FILTER_ANIMATION_DELAY_IN_MS);
 
-      configurator.applySearchFieldFilter(e);
+      configurator.applySearchFieldFilter(filter);
     };
 
     filter.onfocus = () => {
@@ -2338,20 +2345,20 @@ const configurator = {
       close(e);
     };
 
-    filter.oninput = (e) => {
-      configurator.applySearchFieldFilter(e);
+    filter.oninput = () => {
+      configurator.applySearchFieldFilter(filter);
     };
   },
 
   /**
    * This method sets or removes an attribute based on the content of the filter field.
    *
-   * @param {Event} e - event
+   * @param {HTMLInputElement} filter - event
    *
    * @returns {void}
    */
-  applySearchFieldFilter (e) {
-    const matcher = new RegExp(e.target.value, 'i');
+  applySearchFieldFilter (filter) {
+    const matcher = new RegExp(filter.value, 'i');
 
     [...document.getElementsByClassName('policy-container')].forEach((policy) => {
       [...policy.querySelectorAll(':scope > label, :scope > .label')].forEach((label) => {
