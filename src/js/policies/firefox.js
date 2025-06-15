@@ -34,7 +34,7 @@ const policies = {
 
   DisablePrivateBrowsing : {
     first_available : { mainstream : '60.0', esr : '60.0' },
-    exclude : 'PrivateBrowsingModeAvailability',
+    exclude : ['PrivateBrowsingModeAvailability'],
     ui_category : 'disable-features',
     type : 'boolean'
   },
@@ -1696,7 +1696,7 @@ const policies = {
 
   PrivateBrowsingModeAvailability : {
     first_available : { mainstream : '130.0', esr : '128.3' },
-    exclude : 'DisablePrivateBrowsing',
+    exclude : ['DisablePrivateBrowsing'],
     ui_category : 'privacy',
     type : 'enum',
     options : [
@@ -2357,7 +2357,7 @@ const policies = {
 
   OfferToSaveLogins : {
     first_available : { mainstream : '60.0', esr : '60.0' },
-    exclude : 'OfferToSaveLoginsDefault',
+    exclude : ['OfferToSaveLoginsDefault'],
     ui_category : 'security',
     type : 'enum',
     options : [
@@ -2374,7 +2374,7 @@ const policies = {
 
   OfferToSaveLoginsDefault : {
     first_available : { mainstream : '70.0', esr : '68.2' },
-    exclude : 'OfferToSaveLogins',
+    exclude : ['OfferToSaveLogins'],
     ui_category : 'security',
     type : 'enum',
     options : [
@@ -3064,7 +3064,7 @@ const policies = {
 
   AppAutoUpdate : {
     first_available : { mainstream : '75.0', esr : '68.7' },
-    exclude : 'DisableAppUpdate',
+    exclude : ['DisableAppUpdate'],
     ui_category : 'updates-and-data',
     type : 'enum',
     options : [
@@ -3098,14 +3098,14 @@ const policies = {
   },
 
   ManualAppUpdateOnly : {
-    exclude : 'DisableAppUpdate',
+    exclude : ['DisableAppUpdate'],
     first_available : { mainstream : '87.0', esr : '91.0' },
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
 
   AppUpdatePin : {
-    exclude : 'DisableAppUpdate',
+    exclude : ['DisableAppUpdate'],
     first_available : { mainstream : '102.0', esr : '102.0' },
     ui_category : 'updates-and-data',
     mandatory : true,
@@ -3114,7 +3114,7 @@ const policies = {
   },
 
   AppUpdateURL : {
-    exclude : 'DisableAppUpdate',
+    exclude : ['DisableAppUpdate'],
     first_available : { mainstream : '62.0', esr : '60.2' },
     ui_category : 'updates-and-data',
     mandatory : true,
@@ -3810,14 +3810,14 @@ const policies = {
 
   LegacySameSiteCookieBehaviorEnabled : {
     first_available : { mainstream : '76.0', esr : '78.0' },
-    exclude : 'LegacySameSiteCookieBehaviorEnabledForDomainList',
+    exclude : ['LegacySameSiteCookieBehaviorEnabledForDomainList'],
     ui_category : 'others',
     type : 'boolean'
   },
 
   LegacySameSiteCookieBehaviorEnabledForDomainList : {
     first_available : { mainstream : '76.0', esr : '78.0' },
-    exclude : 'LegacySameSiteCookieBehaviorEnabled',
+    exclude : ['LegacySameSiteCookieBehaviorEnabled'],
     ui_category : 'others',
     type : 'flat-array',
     value : {
