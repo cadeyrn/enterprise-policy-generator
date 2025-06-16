@@ -53,7 +53,7 @@ label + .sub-options:not(.disabled), input:checked + label + .sub-options-wrappe
   margin-top: 10px;
 }
 
-input[type='text'], input[type='url'], textarea {
+input[type='text'], input[type='url'], input[type='number'], textarea {
   box-sizing: border-box;
   width: calc(100% - 50px);
   border: 2px solid var(--color-dark-border);
@@ -62,9 +62,13 @@ input[type='text'], input[type='url'], textarea {
   transition: border ease 250ms;
 }
 
-input[type='text'], input[type='url'] {
+input[type='text'], input[type='url'], input[type='number'] {
   padding: 0 10px;
   height: 30px;
+}
+
+input[type='number'] {
+  padding-right: 3px;
 }
 
 textarea {
@@ -79,6 +83,7 @@ input[type='text'].invalid-preference-style,
 input[type='text'].invalid-version-pattern-style,
 input[type='url'].mandatory-style,
 input[type='url'].invalid-url-style,
+input[type='number']:invalid,
 textarea.invalid-json-style {
   border-color: var(--color-red);
 }
@@ -86,6 +91,7 @@ textarea.invalid-json-style {
 input[type='text']:not(.mandatory-style, .invalid-preference-style, .invalid-version-pattern-style):focus,
 input[type='text']:not(.invalid-json-style):focus,
 input[type='url']:not(.mandatory-style, .invalid-url-style):focus,
+input[type='number']:not(:invalid):focus,
 select:focus {
   border-color: var(--color-blue-dark);
 }

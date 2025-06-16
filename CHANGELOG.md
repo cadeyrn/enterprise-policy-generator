@@ -16,6 +16,8 @@
   that no option name is used that is not allowed to be used or does not start with a certain prefix. However, there are
   also a few options that start with a permitted prefix but are still not allowed. These options are now also recognized
   as incorrect by the validation, see [#309](https://github.com/cadeyrn/enterprise-policy-generator/issues/309)
+- Added support for number fields, used in new ContentAnalysis policy, see
+  [#321](https://github.com/cadeyrn/enterprise-policy-generator/issues/321)
 
 #### Enterprise Policies
 

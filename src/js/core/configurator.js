@@ -1371,6 +1371,9 @@ const configurator = {
       case 'multiselect':
         configurator.addMultiselectProperty(el, parentName, policy);
         break;
+      case 'number':
+        configurator.addStringProperty(el, parentName, policy, 'number', isArrayProperty, hideArrayActionLinks);
+        break;
       case 'object':
         configurator.addObjectProperty(el, parentName, policy);
         break;
@@ -1381,13 +1384,13 @@ const configurator = {
         configurator.addObjectListProperty(el, parentName, policy);
         break;
       case 'string':
-        configurator.addStringProperty(el, parentName, policy, false, isArrayProperty, hideArrayActionLinks);
+        configurator.addStringProperty(el, parentName, policy, 'string', isArrayProperty, hideArrayActionLinks);
         break;
       case 'url':
-        configurator.addStringProperty(el, parentName, policy, true, isArrayProperty, hideArrayActionLinks);
+        configurator.addStringProperty(el, parentName, policy, 'url', isArrayProperty, hideArrayActionLinks);
         break;
       case 'urlOrData':
-        configurator.addStringProperty(el, parentName, policy, true, isArrayProperty, hideArrayActionLinks);
+        configurator.addStringProperty(el, parentName, policy, 'url', isArrayProperty, hideArrayActionLinks);
         break;
       default:
         // do nothing
@@ -1840,13 +1843,13 @@ const configurator = {
    * @param {HTMLElement} el - the DOM element of the policy
    * @param {string} parentName - the name of the parent policy object
    * @param {object} policy - the policy object
-   * @param {boolean} isUrl - if true, the property is of the type "url", otherwise it's of the type "string"
+   * @param {string} type - can be "string", "url" or "number"
    * @param {boolean} isArrayProperty - whether this call is within an array field or not
    * @param {boolean} hideArrayActionLinks - whether this is an array item but no action links should be added
    *
    * @returns {void}
    */
-  addStringProperty (el, parentName, policy, isUrl, isArrayProperty, hideArrayActionLinks) {
+  addStringProperty (el, parentName, policy, type, isArrayProperty, hideArrayActionLinks) {
     const elObjectWrapper = document.createElement('div');
     elObjectWrapper.classList.add('input');
 
@@ -1875,7 +1878,7 @@ const configurator = {
       elObjectWrapper.appendChild(elInputWrapper);
     }
 
-    if (isUrl) {
+    if (type === 'url') {
       elInput.setAttribute('type', 'url');
 
       if (policy.secure) {
@@ -1884,6 +1887,15 @@ const configurator = {
       else if (policy.dataUriAllowed) {
         elInput.setAttribute('data-data-uri-allowed', 'true');
       }
+    }
+    else if (type === 'number') {
+      elInput.setAttribute('type', 'number');
+      elInput.setAttribute('min', '0');
+      elInput.addEventListener('input', () => {
+        if (!/^\d$/.test(elInput.value)) {
+          elInput.checkValidity();
+        }
+      });
     }
     else {
       elInput.setAttribute('type', 'text');
@@ -1908,7 +1920,7 @@ const configurator = {
     }
 
     // URL validation label
-    if (isUrl) {
+    if (type === 'url') {
       configurator.addInvalidUrlLabel(elObjectWrapper);
     }
 

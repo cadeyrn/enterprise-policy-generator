@@ -915,7 +915,7 @@ const output = {
    */
   addInputValue (el, policy) {
     if (el.value) {
-      policy[el.getAttribute('data-name')] = el.value;
+      policy[el.getAttribute('data-name')] = el.type === 'number' ? parseInt(el.value) : el.value;
     }
   },
 

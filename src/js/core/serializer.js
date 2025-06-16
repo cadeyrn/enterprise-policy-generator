@@ -55,8 +55,8 @@ const serializer = {
           data.select[node.id] = node.value;
         }
       }
-      // text and url fields
-      else if (node.type === 'text' || node.type === 'url') {
+      // text, url and number fields
+      else if (node.type === 'text' || node.type === 'url' || node.type === 'number') {
         if (
           serializer.isPolicyEnabled(node) && node.value &&
           !node.classList.contains('invalid-url-style') &&
