@@ -18,6 +18,8 @@
   as incorrect by the validation, see [#309](https://github.com/cadeyrn/enterprise-policy-generator/issues/309)
 - Added support for number fields, used in new ContentAnalysis policy, see
   [#321](https://github.com/cadeyrn/enterprise-policy-generator/issues/321)
+- The field descriptions should not take up more space in width than the fields themselves, see
+  [#322](https://github.com/cadeyrn/enterprise-policy-generator/issues/322)
 
 #### Enterprise Policies
 

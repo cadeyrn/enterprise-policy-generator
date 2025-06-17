@@ -439,6 +439,7 @@ input[data-type='nested-object'] ~ .sub-options-wrapper .array-action[data-actio
 .label {
   margin-top: 10px;
   margin-bottom: 5px;
+  max-width: calc(100% - 50px);
   font-size: 14px;
 }
 
