@@ -35,6 +35,7 @@
 
 - Updated eslint from version 9.28.0 to 9.29.0
 - Updated eslint-plugin-jsdoc from version 50.8.0 to 51.0.3
+- Updated stylelint from version 16.20.0 to 16.21.0
 
 ---
 
