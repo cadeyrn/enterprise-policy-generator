@@ -34,7 +34,7 @@
 #### Dependencies
 
 - Updated eslint from version 9.28.0 to 9.30.1
-- Updated eslint-plugin-jsdoc from version 50.8.0 to 51.2.3
+- Updated eslint-plugin-jsdoc from version 50.8.0 to 51.3.3
 - Updated stylelint from version 16.20.0 to 16.21.0
 - Updated stylistic/eslint-plugin from version 4.4.1 to 5.1.0
 - Updated web-ext from version 8.7.1 to 8.8.0
