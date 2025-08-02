@@ -36,7 +36,7 @@
 - Updated eslint from version 9.28.0 to 9.32.0
 - Updated eslint/json from version 0.12.0 to 0.13.1
 - Updated eslint-plugin-jsdoc from version 50.8.0 to 52.0.2
-- Updated stylelint from version 16.20.0 to 16.21.1
+- Updated stylelint from version 16.20.0 to 16.23.0 and updated configuration
 - Updated stylistic/eslint-plugin from version 4.4.1 to 5.2.2
 - Updated web-ext from version 8.7.1 to 8.8.0
 
