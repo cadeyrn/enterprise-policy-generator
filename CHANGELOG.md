@@ -33,7 +33,7 @@
 
 #### Dependencies
 
-- Updated eslint from version 9.28.0 to 9.30.1
+- Updated eslint from version 9.28.0 to 9.32.0
 - Updated eslint/json from version 0.12.0 to 0.13.1
 - Updated eslint-plugin-jsdoc from version 50.8.0 to 51.3.3
 - Updated stylelint from version 16.20.0 to 16.21.1
