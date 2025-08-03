@@ -20,6 +20,8 @@
   [#321](https://github.com/cadeyrn/enterprise-policy-generator/issues/321)
 - Added support for space-separated array fields, used in new ContentAnalysis policy, see
   [#323](https://github.com/cadeyrn/enterprise-policy-generator/issues/323)
+- Added support for escaping values in array fields, used in new ContentAnalysis policy, see
+  [#325](https://github.com/cadeyrn/enterprise-policy-generator/issues/325)
 - The field descriptions should not take up more space in width than the fields themselves, see
   [#322](https://github.com/cadeyrn/enterprise-policy-generator/issues/322)
 

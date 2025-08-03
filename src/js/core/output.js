@@ -625,6 +625,10 @@ const output = {
 
       if (el.dataset.separator) {
         items = items.join(el.dataset.separator);
+
+        if (el.dataset.regex) {
+          items = output.escapeString(items);
+        }
       }
 
       // only add non-empty arrays
@@ -951,5 +955,16 @@ const output = {
     if (lockable && lockable.checked) {
       policy['Locked'] = true;
     }
+  },
+
+  /**
+   * Escapes special characters in a string to safely use it in a regular expression.
+   *
+   * @param {string} string - The input string that may contain special regex characters.
+   *
+   * @return {string} The escaped string with special regex characters escaped with a backslash.
+   */
+  escapeString(string) {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 };
