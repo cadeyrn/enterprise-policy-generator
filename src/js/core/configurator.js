@@ -1411,6 +1411,10 @@ const configurator = {
     elObjectWrapper.classList.add('array');
     elObjectWrapper.setAttribute('data-name', policy.name);
 
+    if (policy.items?.separator) {
+      elObjectWrapper.setAttribute('data-separator', policy.items.separator);
+    }
+
     const elCaptionWrapper = document.createElement('div');
     elCaptionWrapper.classList.add('label');
     elObjectWrapper.appendChild(elCaptionWrapper);

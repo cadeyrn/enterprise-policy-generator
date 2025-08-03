@@ -614,7 +614,7 @@ const output = {
 
     // simple arrays
     [...el.parentNode.querySelectorAll(':scope > div > .array')].forEach((el) => {
-      const items = [];
+      let items = [];
 
       // input fields
       [...el.querySelectorAll(':scope > .input input')].forEach((arrEl) => {
@@ -622,6 +622,10 @@ const output = {
           items.push(arrEl.value);
         }
       });
+
+      if (el.dataset.separator) {
+        items = items.join(el.dataset.separator);
+      }
 
       // only add non-empty arrays
       if (items.length > 0) {
