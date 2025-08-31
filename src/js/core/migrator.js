@@ -432,5 +432,40 @@ const migrator = {
       await browser.storage.local.set({ configurations : configurations, schemaVersion : 7 });
       migrator.migrate();
     }
+  },
+
+  /**
+   * Version: EPG 7.0.0
+   *
+   * @returns {void}
+   */
+  async migration_7 () {
+    const { configurations } = await browser.storage.local.get({ configurations : [] });
+    const configurationLength = configurations.length;
+
+    if (configurationLength > 0) {
+      for (let i = 0; i < configurationLength; i++) {
+        const { configuration } = configurations[i];
+
+        /*
+         * @from
+         *
+         * "DisableFirefoxAccounts": true
+         *
+         * @to
+         *
+         * "DisableAccounts": true
+         */
+        if (configuration.checkboxes.DisableFirefoxAccounts) {
+          configuration.checkboxes.DisableAccounts = true;
+          delete configuration.checkboxes.DisableFirefoxAccounts;
+        }
+
+        configurations[i].configuration = configuration;
+      }
+
+      await browser.storage.local.set({ configurations : configurations, schemaVersion : 8 });
+      migrator.migrate();
+    }
   }
 };

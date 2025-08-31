@@ -18,6 +18,8 @@
   svg.context-properties.content.enabled, svg.disabled, webgl.disabled, webgl.force-enabled and xpinstall.enabled,
   removed support for security.osclientcerts.assume_rsa_pss_support in Preferences policy, see
   [#308](https://github.com/cadeyrn/enterprise-policy-generator/issues/308)
+- Replaced DisableFirefoxAccounts policy by DisableAccounts policy and migrated existing configurations, see
+  [#260](https://github.com/cadeyrn/enterprise-policy-generator/issues/260)
 
 #### Code Quality
 

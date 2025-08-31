@@ -422,6 +422,9 @@
   "policy_description_DefaultDownloadDirectory_Label": {
     "message": "Для домашнего каталога ОС используйте ${home}"
   },
+  "policy_description_DisableAccounts": {
+    "message": "Отключить сервисы на основе аккаунта Mozilla, такие как Firefox Sync"
+  },
   "policy_description_DisableAppUpdate": {
     "message": "Запретить обновление Firefox"
   },
@@ -439,9 +442,6 @@
   },
   "policy_description_DisableFeedbackCommands": {
     "message": "Отключить пункты \"Отправить отзыв\" и \"Сообщить о мошенническом сайте\" в меню \"Справка\""
-  },
-  "policy_description_DisableFirefoxAccounts": {
-    "message": "Отключить сервисы на основе аккаунта Mozilla, такие как Firefox Sync"
   },
   "policy_description_DisableFirefoxScreenshots": {
     "message": "Отключить встроенный инструмент снимка экрана (Firefox Screenshots)"

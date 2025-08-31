@@ -422,6 +422,9 @@
   "policy_description_DefaultDownloadDirectory_Label": {
     "message": "Zastupujucy symbol ${home} dajo se za natiwny wužywarski zapis wužywaś"
   },
+  "policy_description_DisableAccounts": {
+    "message": "Słužby ako Firefox Sync znjemóžniś, kótarež na konśe Mozilla bazěruju"
+  },
   "policy_description_DisableAppUpdate": {
     "message": "Firefox aktualizěrowanje zawoboraś"
   },
@@ -439,9 +442,6 @@
   },
   "policy_description_DisableFeedbackCommands": {
     "message": "Menijowej zapiska „Pósudk pósłaś“ a „Wobšudnikojske websedło k wěsći daś“ w meniju Pomoc znjemóžniś"
-  },
-  "policy_description_DisableFirefoxAccounts": {
-    "message": "Słužby ako Firefox Sync znjemóžniś, kótarež na konśe Mozilla bazěruju"
   },
   "policy_description_DisableFirefoxScreenshots": {
     "message": "Zatwarjonu funkciju za fota wobrazowki (Firefox Screenshots) znjemóžniś"

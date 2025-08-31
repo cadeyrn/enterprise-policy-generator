@@ -422,6 +422,9 @@
   "policy_description_DefaultDownloadDirectory_Label": {
     "message": "Vous pouvez utiliser ${home} pour le répertoire home natif"
   },
+  "policy_description_DisableAccounts": {
+    "message": "Disable Mozilla account based services like Firefox Sync"
+  },
   "policy_description_DisableAppUpdate": {
     "message": "Empêcher Firefox de se mettre à jour"
   },
@@ -439,9 +442,6 @@
   },
   "policy_description_DisableFeedbackCommands": {
     "message": "Désactiver les options de menu \"Soumettre un feedback\" et \"Signaler un site trompeur\" dans le menu d'aide"
-  },
-  "policy_description_DisableFirefoxAccounts": {
-    "message": "Disable Mozilla account based services like Firefox Sync"
   },
   "policy_description_DisableFirefoxScreenshots": {
     "message": "Désactiver l'outil de capture d'écran intégré (Firefox Screenshots)"

@@ -422,6 +422,9 @@
   "policy_description_DefaultDownloadDirectory_Label": {
     "message": "Der Platzhalter ${home} kann für das native Benutzerverzeichnis verwendet werden"
   },
+  "policy_description_DisableAccounts": {
+    "message": "Deaktiviere auf dem Mozilla-Konto basierende Dienste wie Firefox Sync"
+  },
   "policy_description_DisableAppUpdate": {
     "message": "Firefox am Aktualisieren hindern"
   },
@@ -439,9 +442,6 @@
   },
   "policy_description_DisableFeedbackCommands": {
     "message": "Deaktiviere die Menü-Einträge „Feedback senden“ und „Betrügerische Website melden“ im Hilfe-Menü"
-  },
-  "policy_description_DisableFirefoxAccounts": {
-    "message": "Deaktiviere auf dem Mozilla-Konto basierende Dienste wie Firefox Sync"
   },
   "policy_description_DisableFirefoxScreenshots": {
     "message": "Deaktiviere die eingebaute Funktion für Bildschirmfotos (Firefox Screenshots)"

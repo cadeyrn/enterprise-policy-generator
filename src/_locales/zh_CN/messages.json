@@ -422,6 +422,9 @@
   "policy_description_DefaultDownloadDirectory_Label": {
     "message": "对于原生的主目录可使用 ${home}"
   },
+  "policy_description_DisableAccounts": {
+    "message": "Disable Mozilla account based services like Firefox Sync"
+  },
   "policy_description_DisableAppUpdate": {
     "message": "阻止 Firefox 进行更新"
   },
@@ -439,9 +442,6 @@
   },
   "policy_description_DisableFeedbackCommands": {
     "message": "禁用“帮助”菜单中的“提交反馈”和“举报诈骗网站”菜单"
-  },
-  "policy_description_DisableFirefoxAccounts": {
-    "message": "Disable Mozilla account based services like Firefox Sync"
   },
   "policy_description_DisableFirefoxScreenshots": {
     "message": "禁用内置的截图工具（Firefox Screenshots）"

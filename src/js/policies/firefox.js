@@ -57,8 +57,8 @@ const policies = {
     type : 'boolean'
   },
 
-  DisableFirefoxAccounts : {
-    first_available : { mainstream : '60.0', esr : '60.0' },
+  DisableAccounts : {
+    first_available : { mainstream : '119.0', esr : '128.0' },
     ui_category : 'disable-features',
     type : 'boolean'
   },
