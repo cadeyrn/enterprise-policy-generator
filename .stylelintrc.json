@@ -71,7 +71,7 @@
     "layer-name-pattern": null,
     "length-zero-no-unit": true,
     "lightness-notation": "percentage",
-    "max-nesting-depth": 0,
+    "max-nesting-depth": 3,
     "media-feature-name-allowed-list": null,
     "media-feature-name-disallowed-list": null,
     "media-feature-name-no-unknown": true,

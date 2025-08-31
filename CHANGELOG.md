@@ -10,6 +10,11 @@
   longer displays the minimum required Firefox version for policies implemented before Firefox 128.0, see
   [#315](https://github.com/cadeyrn/enterprise-policy-generator/issues/315)
 
+#### Code Quality
+
+- Use CSS nesting for better CSS maintainability, see
+  [#223](https://github.com/cadeyrn/enterprise-policy-generator/issues/223)
+
 ---
 
 ### [Version 6.6.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v6.6.0) (2025-08-31)
