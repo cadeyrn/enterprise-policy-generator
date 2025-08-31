@@ -97,7 +97,7 @@ export default [
       '@stylistic/template-curly-spacing': 'error',
       '@stylistic/template-tag-spacing': ['error', 'always'],
       '@stylistic/wrap-iife': 'error',
-      '@stylistic/wrap-regex': 'error',
+      '@stylistic/wrap-regex': 'off',
       '@stylistic/yield-star-spacing': 'error',
       'accessor-pairs': 'error',
       'array-callback-return': 'error',
