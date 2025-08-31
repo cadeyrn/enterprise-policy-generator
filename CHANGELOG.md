@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### Version 6.6.0 (Work in Progress)
+### [Version 6.6.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v6.6.0) (2025-08-31)
 
 #### Enhancements
 
@@ -16,11 +16,11 @@
   that no option name is used that is not allowed to be used or does not start with a certain prefix. However, there are
   also a few options that start with a permitted prefix but are still not allowed. These options are now also recognized
   as incorrect by the validation, see [#309](https://github.com/cadeyrn/enterprise-policy-generator/issues/309)
-- Added support for number fields, used in new ContentAnalysis policy, see
+- Added support for number fields, used in new ContentAnalysis policy (not yet implemented), see
   [#321](https://github.com/cadeyrn/enterprise-policy-generator/issues/321)
-- Added support for space-separated array fields, used in new ContentAnalysis policy, see
+- Added support for space-separated array fields, used in new ContentAnalysis policy (not yet implemented), see
   [#323](https://github.com/cadeyrn/enterprise-policy-generator/issues/323)
-- Added support for escaping values in array fields, used in new ContentAnalysis policy, see
+- Added support for escaping values in array fields, used in new ContentAnalysis policy (not yet implemented), see
   [#325](https://github.com/cadeyrn/enterprise-policy-generator/issues/325)
 - The field descriptions should not take up more space in width than the fields themselves, see
   [#322](https://github.com/cadeyrn/enterprise-policy-generator/issues/322)
@@ -43,6 +43,11 @@
 - Updated stylelint from version 16.20.0 to 16.23.1 and updated configuration
 - Updated stylistic/eslint-plugin from version 4.4.1 to 5.2.3
 - Updated web-ext from version 8.7.1 to 8.9.0
+
+**This is the last release with support for Firefox 115.**
+
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v6.5.0...v6.6.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-6.6.0)
 
 ---
 
