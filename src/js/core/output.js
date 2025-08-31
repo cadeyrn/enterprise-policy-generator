@@ -962,9 +962,9 @@ const output = {
    *
    * @param {string} string - The input string that may contain special regex characters.
    *
-   * @return {string} The escaped string with special regex characters escaped with a backslash.
+   * @returns {string} The escaped string with special regex characters escaped with a backslash.
    */
-  escapeString(string) {
+  escapeString (string) {
     return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 };
