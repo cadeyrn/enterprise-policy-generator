@@ -458,9 +458,6 @@
   "policy_description_DisablePasswordReveal": {
     "message": "Das Anzeigen gespeicherter Passwörter verhindern"
   },
-  "policy_description_DisablePrivateBrowsing": {
-    "message": "Deaktiviere den Privaten Modus"
-  },
   "policy_description_DisableProfileImport": {
     "message": "Deaktiviere den Menü-Eintrag „Daten von einem anderen Browser importieren“ in der Bibliothek"
   },

@@ -458,9 +458,6 @@
   "policy_description_DisablePasswordReveal": {
     "message": "Do not allow passwords to be revealed in saved logins"
   },
-  "policy_description_DisablePrivateBrowsing": {
-    "message": "Disable the private browsing mode"
-  },
   "policy_description_DisableProfileImport": {
     "message": "Disable the “Import data from another browser” menu item in the library"
   },

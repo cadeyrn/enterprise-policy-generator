@@ -32,13 +32,6 @@ const policies = {
 
   // disable features
 
-  DisablePrivateBrowsing : {
-    first_available : { mainstream : '60.0', esr : '60.0' },
-    exclude : ['PrivateBrowsingModeAvailability'],
-    ui_category : 'disable-features',
-    type : 'boolean'
-  },
-
   DisableFormHistory : {
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'disable-features',
@@ -1690,7 +1683,6 @@ const policies = {
 
   PrivateBrowsingModeAvailability : {
     first_available : { mainstream : '130.0', esr : '128.3' },
-    exclude : ['DisablePrivateBrowsing'],
     ui_category : 'privacy',
     type : 'enum',
     options : [

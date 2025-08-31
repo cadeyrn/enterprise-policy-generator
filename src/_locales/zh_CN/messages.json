@@ -458,9 +458,6 @@
   "policy_description_DisablePasswordReveal": {
     "message": "Do not allow passwords to be revealed in saved logins"
   },
-  "policy_description_DisablePrivateBrowsing": {
-    "message": "禁用隐私浏览模式"
-  },
   "policy_description_DisableProfileImport": {
     "message": "禁用“我的足迹”里的“从其他浏览器导入数据”菜单"
   },

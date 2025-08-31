@@ -458,9 +458,6 @@
   "policy_description_DisablePasswordReveal": {
     "message": "Отключить показ паролей для сохранённых логинов"
   },
-  "policy_description_DisablePrivateBrowsing": {
-    "message": "Отключить режим приватного просмотра"
-  },
   "policy_description_DisableProfileImport": {
     "message": "Отключить пункт меню \"Импорт из другого браузера\" в \"Библиотеке\""
   },

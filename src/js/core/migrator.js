@@ -461,6 +461,21 @@ const migrator = {
           delete configuration.checkboxes.DisableFirefoxAccounts;
         }
 
+        /*
+         * @from
+         *
+         * "DisablePrivateBrowsing": true
+         *
+         * @to
+         *
+         * "PrivateBrowsingModeAvailability": 1
+         */
+        if (configuration.checkboxes.DisablePrivateBrowsing) {
+          configuration.checkboxes.PrivateBrowsingModeAvailability = true;
+          configuration.select.PrivateBrowsingModeAvailability_Select = '1';
+          delete configuration.checkboxes.DisablePrivateBrowsing;
+        }
+
         configurations[i].configuration = configuration;
       }
 

@@ -458,9 +458,6 @@
   "policy_description_DisablePasswordReveal": {
     "message": "Njedowolić, zo so hesła w składowanych přizjewjenjach wotkrywaja"
   },
-  "policy_description_DisablePrivateBrowsing": {
-    "message": "Priwatny modus znjemóžnić"
-  },
   "policy_description_DisableProfileImport": {
     "message": "Menijowy zapisk „daty z druheho wobhladowaka importować“ w bibliotece znjemóžnić"
   },
