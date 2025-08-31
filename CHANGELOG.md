@@ -10,6 +10,15 @@
   longer displays the minimum required Firefox version for policies implemented before Firefox 128.0, see
   [#315](https://github.com/cadeyrn/enterprise-policy-generator/issues/315)
 
+#### Enterprise Policies
+
+- Added support for mathml.disabled, privacy.baselineFingerprintingProtection, privacy.fingerprintingProtection,
+  security.csp.reporting.enabled, security.pki.certificate_transparency.disable_for_hosts,
+  security.pki.certificate_transparency.disable_for_spki_hashes, security.pki.certificate_transparency.mode,
+  svg.context-properties.content.enabled, svg.disabled, webgl.disabled, webgl.force-enabled and xpinstall.enabled,
+  removed support for ecurity.osclientcerts.assume_rsa_pss_support in Preferences policy, see
+  [#308](https://github.com/cadeyrn/enterprise-policy-generator/issues/308)
+
 #### Code Quality
 
 - Use CSS nesting for better CSS maintainability, see
