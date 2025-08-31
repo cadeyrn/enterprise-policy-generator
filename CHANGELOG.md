@@ -2,6 +2,16 @@
 
 ## Release Notes
 
+### Version 7.0.0 (Work in Progress)
+
+#### Enhancements
+
+- Firefox 128 or higher is required now. Also, Enterprise Policy Generator no
+  longer displays the minimum required Firefox version for policies implemented before Firefox 128.0, see
+  [#315](https://github.com/cadeyrn/enterprise-policy-generator/issues/315)
+
+---
+
 ### [Version 6.6.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v6.6.0) (2025-08-31)
 
 #### Enhancements

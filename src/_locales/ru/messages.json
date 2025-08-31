@@ -540,7 +540,7 @@
     "message": "Исключить домены из DNS через HTTPS"
   },
   "policy_description_DNSOverHTTPS_Fallback": {
-    "message": "Использовать обычного поставщика DNS, если возникнет проблема с поставщиком безопасного DNS (Firefox 124+)"
+    "message": "Использовать обычного поставщика DNS, если возникнет проблема с поставщиком безопасного DNS"
   },
   "policy_description_DNSOverHTTPS_ProviderURL": {
     "message": "URL провайдера"
@@ -699,7 +699,7 @@
     "message": "Домены, для которых запрещено выполнять скрипты"
   },
   "policy_description_ExtensionSettings_temporarily_allow_weak_signatures": {
-    "message": "Разрешить установку расширений со слабым алгоритмом подписи (Firefox 127+)"
+    "message": "Разрешить установку расширений со слабым алгоритмом подписи"
   },
   "policy_description_ExtensionSettings_updates_disabled": {
     "message": "Разрешить автоматическое обновление"

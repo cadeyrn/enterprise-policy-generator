@@ -540,7 +540,7 @@
     "message": "Exclude domains from DNS over HTTPS"
   },
   "policy_description_DNSOverHTTPS_Fallback": {
-    "message": "Firefox will use the default DNS resolver if there is a problem with the secure DNS provider (Firefox 124+)"
+    "message": "Firefox will use the default DNS resolver if there is a problem with the secure DNS provider"
   },
   "policy_description_DNSOverHTTPS_ProviderURL": {
     "message": "Provider URL"
@@ -699,7 +699,7 @@
     "message": "Domains on which content scripts can't be run"
   },
   "policy_description_ExtensionSettings_temporarily_allow_weak_signatures": {
-    "message": "Allow installation of extensions with a weak signature algorithm (Firefox 127+)"
+    "message": "Allow installation of extensions with a weak signature algorithm"
   },
   "policy_description_ExtensionSettings_updates_disabled": {
     "message": "Allow automatic updates"

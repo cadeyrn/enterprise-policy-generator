@@ -4,7 +4,7 @@
 
 const DOWNLOAD_PERMISSION = { permissions : ['downloads'] };
 const FILTER_ANIMATION_DELAY_IN_MS = 1500;
-const MINIMUM_SUPPORTED_VERSION = 115.0;
+const MINIMUM_SUPPORTED_VERSION = 128.0;
 
 const elActionLinks = document.getElementById('action-links');
 const elDownloadLink = document.getElementById('download');

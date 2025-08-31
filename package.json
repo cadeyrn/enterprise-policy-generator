@@ -18,7 +18,7 @@
   },
   "private": true,
   "browserslist": [
-    "Firefox >= 115"
+    "Firefox >= 128"
   ],
   "devDependencies": {
     "@eslint/json": "0.13.2",

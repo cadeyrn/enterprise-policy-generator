@@ -540,7 +540,7 @@
     "message": "Domeny z DNS over HTTPS wuzamknyć"
   },
   "policy_description_DNSOverHTTPS_Fallback": {
-    "message": "Firefox standardny DNS-resolver wužiwa, hdyž je problem z wěstym DNS-poskićowarjom (Firefox 124+)"
+    "message": "Firefox standardny DNS-resolver wužiwa, hdyž je problem z wěstym DNS-poskićowarjom"
   },
   "policy_description_DNSOverHTTPS_ProviderURL": {
     "message": "URL poskićowarja"
@@ -699,7 +699,7 @@
     "message": "Domeny, na kotrychž wobsahowe skripty njedadźa so wuwjesć"
   },
   "policy_description_ExtensionSettings_temporarily_allow_weak_signatures": {
-    "message": "Instalaciju rozšěrjenjow ze słabym signaturowym algoritmusom dopušćić (Firefox 127+)"
+    "message": "Instalaciju rozšěrjenjow ze słabym signaturowym algoritmusom dopušćić"
   },
   "policy_description_ExtensionSettings_updates_disabled": {
     "message": "Awtomatiske aktualizacije dowolić"
