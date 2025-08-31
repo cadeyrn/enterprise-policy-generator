@@ -22,7 +22,7 @@
   ],
   "devDependencies": {
     "@eslint/json": "0.13.2",
-    "@stylistic/eslint-plugin": "5.2.2",
+    "@stylistic/eslint-plugin": "5.2.3",
     "eslint": "9.32.0",
     "eslint-plugin-jsdoc": "52.0.2",
     "eslint-plugin-sort-requires": "2.1.0",
