@@ -33,7 +33,7 @@
 
 #### Dependencies
 
-- Updated stylistic/eslint-plugin from version 5.2.3 to 5.1.1
+- Updated stylistic/eslint-plugin from version 5.2.3 to 5.3.1
 
 ---
 
