@@ -732,7 +732,7 @@
     "message": "Verknüpfungen"
   },
   "policy_description_FirefoxSuggest": {
-    "message": "Firefox Suggest konfigurieren (nur USA)"
+    "message": "Firefox Suggest konfigurieren"
   },
   "policy_description_FirefoxSuggest_ImproveSuggest": {
     "message": "Datenerfassung für Vorschläge in der Adressleiste aktivieren"

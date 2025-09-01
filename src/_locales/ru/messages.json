@@ -732,7 +732,7 @@
     "message": "Ярлыки"
   },
   "policy_description_FirefoxSuggest": {
-    "message": "Настройка Firefox Suggest (только для США)"
+    "message": "Настройка Firefox Suggest"
   },
   "policy_description_FirefoxSuggest_ImproveSuggest": {
     "message": "Включить сбор данных для быстрого отображения предложений в адресной строке"

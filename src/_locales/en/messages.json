@@ -732,7 +732,7 @@
     "message": "Shortcuts"
   },
   "policy_description_FirefoxSuggest": {
-    "message": "Configure Firefox Suggest (US only)"
+    "message": "Configure Firefox Suggest"
   },
   "policy_description_FirefoxSuggest_ImproveSuggest": {
     "message": "Enable data collection for quick suggest results in the address bar"
