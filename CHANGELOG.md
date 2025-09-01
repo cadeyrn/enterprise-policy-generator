@@ -31,6 +31,10 @@
 - Use CSS nesting for better CSS maintainability, see
   [#223](https://github.com/cadeyrn/enterprise-policy-generator/issues/223)
 
+#### Dependencies
+
+- Updated stylistic/eslint-plugin from version 5.2.3 to 5.1.1
+
 ---
 
 ### [Version 6.6.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v6.6.0) (2025-08-31)
