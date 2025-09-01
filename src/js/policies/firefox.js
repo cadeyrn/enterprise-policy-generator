@@ -1833,8 +1833,8 @@ const policies = {
     type : 'object',
     properties : [
       {
-        name : 'Cache',
-        label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_Cache'),
+        name : 'History',
+        label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_History'),
         type : 'enum',
         options : [
           {
@@ -1871,8 +1871,27 @@ const policies = {
         ]
       },
       {
-        name : 'Downloads',
-        label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_Downloads'),
+        name : 'Sessions',
+        label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_Sessions'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ]
+      },
+      {
+        name : 'Cache',
+        label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_Cache'),
         type : 'enum',
         options : [
           {
@@ -1909,65 +1928,8 @@ const policies = {
         ]
       },
       {
-        name : 'History',
-        label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_History'),
-        type : 'enum',
-        options : [
-          {
-            label : browser.i18n.getMessage('enum_value_no_preference'),
-            value : null
-          },
-          {
-            label : browser.i18n.getMessage('enum_value_yes'),
-            value : 'true'
-          },
-          {
-            label : browser.i18n.getMessage('enum_value_no'),
-            value : 'false'
-          }
-        ]
-      },
-      {
-        name : 'Sessions',
-        label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_Sessions'),
-        type : 'enum',
-        options : [
-          {
-            label : browser.i18n.getMessage('enum_value_no_preference'),
-            value : null
-          },
-          {
-            label : browser.i18n.getMessage('enum_value_yes'),
-            value : 'true'
-          },
-          {
-            label : browser.i18n.getMessage('enum_value_no'),
-            value : 'false'
-          }
-        ]
-      },
-      {
         name : 'SiteSettings',
         label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_SiteSettings'),
-        type : 'enum',
-        options : [
-          {
-            label : browser.i18n.getMessage('enum_value_no_preference'),
-            value : null
-          },
-          {
-            label : browser.i18n.getMessage('enum_value_yes'),
-            value : 'true'
-          },
-          {
-            label : browser.i18n.getMessage('enum_value_no'),
-            value : 'false'
-          }
-        ]
-      },
-      {
-        name : 'OfflineApps',
-        label : browser.i18n.getMessage('policy_description_SanitizeOnShutdown_OfflineApps'),
         type : 'enum',
         options : [
           {

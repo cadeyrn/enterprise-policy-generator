@@ -1221,19 +1221,16 @@
     "message": "Effacer les données du navigateur lors de l'arrêt de l'ordinateur"
   },
   "policy_description_SanitizeOnShutdown_Cache": {
-    "message": "Cache"
+    "message": "Fichiers et pages en cache temporaire"
   },
   "policy_description_SanitizeOnShutdown_Cookies": {
-    "message": "Cookies"
-  },
-  "policy_description_SanitizeOnShutdown_Downloads": {
-    "message": "Télécharger l'historique"
+    "message": "Cookies et données de sites"
   },
   "policy_description_SanitizeOnShutdown_FormData": {
-    "message": "Historique des formulaires et des recherches"
+    "message": "Informations de formulaire enregistrées (Firefox 136+)"
   },
   "policy_description_SanitizeOnShutdown_History": {
-    "message": "Historique de navigation"
+    "message": "Historique de navigation et des téléchargements"
   },
   "policy_description_SanitizeOnShutdown_Locked_false": {
     "message": "Protect no options from changes"
@@ -1244,14 +1241,11 @@
   "policy_description_SanitizeOnShutdown_Locked_true": {
     "message": "Protect only the set options from changes"
   },
-  "policy_description_SanitizeOnShutdown_OfflineApps": {
-    "message": "Données hors ligne du site"
-  },
   "policy_description_SanitizeOnShutdown_Sessions": {
     "message": "Connexions actives"
   },
   "policy_description_SanitizeOnShutdown_SiteSettings": {
-    "message": "Préférences du site"
+    "message": "Paramètres de site"
   },
   "policy_description_SearchBar": {
     "message": "Faire en sorte que la barre de recherche soit unifiée ou séparée"

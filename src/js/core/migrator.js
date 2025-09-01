@@ -476,6 +476,24 @@ const migrator = {
           delete configuration.checkboxes.DisablePrivateBrowsing;
         }
 
+        /*
+         * @removed
+         *
+         * "SanitizeOnShutdown": { "Downloads" }
+         */
+        if (configuration.select.SanitizeOnShutdown_Downloads) {
+          delete configuration.select.SanitizeOnShutdown_Downloads;
+        }
+
+        /*
+         * @removed
+         *
+         * "SanitizeOnShutdown": { "OfflineApps" }
+         */
+        if (configuration.select.SanitizeOnShutdown_OfflineApps) {
+          delete configuration.select.SanitizeOnShutdown_OfflineApps;
+        }
+
         configurations[i].configuration = configuration;
       }
 

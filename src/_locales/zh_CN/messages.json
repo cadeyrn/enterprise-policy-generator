@@ -1221,19 +1221,16 @@
     "message": "关闭浏览器时清除浏览器数据"
   },
   "policy_description_SanitizeOnShutdown_Cache": {
-    "message": "缓存"
+    "message": "Temporary cached files and pages"
   },
   "policy_description_SanitizeOnShutdown_Cookies": {
-    "message": "Cookies"
-  },
-  "policy_description_SanitizeOnShutdown_Downloads": {
-    "message": "下载历史"
+    "message": "Cookies and site data"
   },
   "policy_description_SanitizeOnShutdown_FormData": {
-    "message": "表单和搜索历史"
+    "message": "Saved form info (Firefox 136+)"
   },
   "policy_description_SanitizeOnShutdown_History": {
-    "message": "浏览历史"
+    "message": "Browsing and download history"
   },
   "policy_description_SanitizeOnShutdown_Locked_false": {
     "message": "Protect no options from changes"
@@ -1243,9 +1240,6 @@
   },
   "policy_description_SanitizeOnShutdown_Locked_true": {
     "message": "Protect only the set options from changes"
-  },
-  "policy_description_SanitizeOnShutdown_OfflineApps": {
-    "message": "脱机网站数据"
   },
   "policy_description_SanitizeOnShutdown_Sessions": {
     "message": "活跃的登录"

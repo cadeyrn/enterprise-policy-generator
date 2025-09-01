@@ -18,6 +18,9 @@
   svg.context-properties.content.enabled, svg.disabled, webgl.disabled, webgl.force-enabled and xpinstall.enabled,
   removed support for security.osclientcerts.assume_rsa_pss_support in Preferences policy, see
   [#308](https://github.com/cadeyrn/enterprise-policy-generator/issues/308)
+- Updated SanitizeOnShutdown policy: removed obsolete Downloads and OfflineApps options, added compatibility note for
+  FormData option, improved order and descriptions of all options, see
+  [#296](https://github.com/cadeyrn/enterprise-policy-generator/issues/296)
 - Replaced DisableFirefoxAccounts policy by DisableAccounts policy and migrated existing configurations, see
   [#260](https://github.com/cadeyrn/enterprise-policy-generator/issues/260)
 - Removed DisablePrivateBrowsing policy and migrated to PrivateBrowsingModeAvailability policy in existing

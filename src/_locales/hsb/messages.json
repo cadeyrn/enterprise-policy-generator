@@ -1221,19 +1221,16 @@
     "message": "Přehladowanske daty zhašeć, hdyž so Firefox začini"
   },
   "policy_description_SanitizeOnShutdown_Cache": {
-    "message": "Pufrowak"
+    "message": "Temporary cached files and pages"
   },
   "policy_description_SanitizeOnShutdown_Cookies": {
-    "message": "Placki"
-  },
-  "policy_description_SanitizeOnShutdown_Downloads": {
-    "message": "Historija sćehnjenjow"
+    "message": "Cookies and site data"
   },
   "policy_description_SanitizeOnShutdown_FormData": {
-    "message": "Zapodate pytanske wurazy a formularne daty"
+    "message": "Saved form info (Firefox 136+)"
   },
   "policy_description_SanitizeOnShutdown_History": {
-    "message": "Wopytane strony"
+    "message": "Browsing and download history"
   },
   "policy_description_SanitizeOnShutdown_Locked_false": {
     "message": "Žane nastajenja před změnu nješkitać"
@@ -1243,9 +1240,6 @@
   },
   "policy_description_SanitizeOnShutdown_Locked_true": {
     "message": "Jenož wubrane nastajenja před změnu škitać"
-  },
-  "policy_description_SanitizeOnShutdown_OfflineApps": {
-    "message": "Daty websydła offline"
   },
   "policy_description_SanitizeOnShutdown_Sessions": {
     "message": "Aktiwne přizjewjenja"
