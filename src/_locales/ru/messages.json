@@ -981,7 +981,7 @@
     "message": "Блокировать новые запросы разрешения уведомлений"
   },
   "policy_description_Permissions_ScreenShare": {
-    "message": "Screen sharing"
+    "message": "Screen sharing (Firefox 142+, Firefox ESR 140.2+)"
   },
   "policy_description_Permissions_ScreenShare_Allow": {
     "message": "Allow screen sharing for these URLs"

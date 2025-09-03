@@ -981,7 +981,7 @@
     "message": "Neue Anfragen zum Anzeigen von Benachrichtigungen blockieren"
   },
   "policy_description_Permissions_ScreenShare": {
-    "message": "Bildschirmfreigabe"
+    "message": "Bildschirmfreigabe (Firefox 142+, Firefox ESR 140.2+)"
   },
   "policy_description_Permissions_ScreenShare_Allow": {
     "message": "Bildschirmfreigabe für diese URLs erlauben"
