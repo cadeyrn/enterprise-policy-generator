@@ -980,6 +980,18 @@
   "policy_description_Permissions_Notifications_BlockNewRequests": {
     "message": "Neue Anfragen zum Anzeigen von Benachrichtigungen blockieren"
   },
+  "policy_description_Permissions_ScreenShare": {
+    "message": "Bildschirmfreigabe"
+  },
+  "policy_description_Permissions_ScreenShare_Allow": {
+    "message": "Bildschirmfreigabe für diese URLs erlauben"
+  },
+  "policy_description_Permissions_ScreenShare_Block": {
+    "message": "Bildschirmfreigabe für diese URLs blockieren"
+  },
+  "policy_description_Permissions_ScreenShare_BlockNewRequests": {
+    "message": "Neue Anfragen für die Bildschirmfreigabe blockieren"
+  },
   "policy_description_Permissions_VirtualReality": {
     "message": "Virtuelle Realität"
   },

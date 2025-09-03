@@ -980,6 +980,18 @@
   "policy_description_Permissions_Notifications_BlockNewRequests": {
     "message": "Nowe naprašowanja blokować, kotrež žadaja, zdźělenki dowolić"
   },
+  "policy_description_Permissions_ScreenShare": {
+    "message": "Screen sharing"
+  },
+  "policy_description_Permissions_ScreenShare_Allow": {
+    "message": "Allow screen sharing for these URLs"
+  },
+  "policy_description_Permissions_ScreenShare_Block": {
+    "message": "Block screen sharing for these URLs"
+  },
+  "policy_description_Permissions_ScreenShare_BlockNewRequests": {
+    "message": "Block new requests asking to allow screen sharing"
+  },
   "policy_description_Permissions_VirtualReality": {
     "message": "Wirtualna realita"
   },

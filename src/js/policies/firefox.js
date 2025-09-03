@@ -2241,6 +2241,37 @@ const policies = {
         ]
       },
       {
+        name : 'ScreenShare',
+        label : browser.i18n.getMessage('policy_description_Permissions_ScreenShare'),
+        is_lockable : true,
+        type : 'object',
+        properties : [
+          {
+            name : 'Allow',
+            label : browser.i18n.getMessage('policy_description_Permissions_ScreenShare_Allow'),
+            type : 'array',
+            items : {
+              label : browser.i18n.getMessage('common_url'),
+              type : 'url'
+            }
+          },
+          {
+            name : 'Block',
+            label : browser.i18n.getMessage('policy_description_Permissions_ScreenShare_Block'),
+            type : 'array',
+            items : {
+              label : browser.i18n.getMessage('common_url'),
+              type : 'url'
+            }
+          },
+          {
+            name : 'BlockNewRequests',
+            label : browser.i18n.getMessage('policy_description_Permissions_ScreenShare_BlockNewRequests'),
+            type : 'boolean'
+          }
+        ]
+      },
+      {
         name : 'VirtualReality',
         label : browser.i18n.getMessage('policy_description_Permissions_VirtualReality'),
         is_lockable : true,
