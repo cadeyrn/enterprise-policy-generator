@@ -570,10 +570,10 @@
     "message": "Wuwzaća"
   },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
-    "message": "Porstowe wotćišće (fingerprinters) blokować"
+    "message": "Block known fingerprinters"
   },
   "policy_description_EnableTrackingProtection_Value": {
-    "message": "Slědowacy wobsah"
+    "message": "Enable tracking protection"
   },
   "policy_description_EncryptedMediaExtensions": {
     "message": "Encrypted Media Extensions zmóžnić abo znjemóžnićn (za widejostreamingowe portale trěbne)"

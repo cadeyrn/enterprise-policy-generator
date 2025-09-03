@@ -1984,11 +1984,11 @@ const policies = {
             value : null
           },
           {
-            label : browser.i18n.getMessage('enum_value_block_yes'),
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
             value : 'true'
           },
           {
-            label : browser.i18n.getMessage('enum_value_block_no'),
+            label : browser.i18n.getMessage('enum_value_enable_no'),
             value : 'false'
           }
         ]

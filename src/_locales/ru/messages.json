@@ -570,10 +570,10 @@
     "message": "Исключения"
   },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
-    "message": "Блокировать отпечатки"
+    "message": "Block known fingerprinters"
   },
   "policy_description_EnableTrackingProtection_Value": {
-    "message": "Защита от отслеживания"
+    "message": "Enable tracking protection"
   },
   "policy_description_EncryptedMediaExtensions": {
     "message": "Включить или отключить зашифрованные расширения мультимедиа (нужны для потоковых видеопорталов)"

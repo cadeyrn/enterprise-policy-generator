@@ -570,10 +570,10 @@
     "message": "Ausnahmen"
   },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
-    "message": "Identifizierer (Fingerprinter) blockieren"
+    "message": "Bekannte Identifizierer (Fingerprinter) blockieren"
   },
   "policy_description_EnableTrackingProtection_Value": {
-    "message": "Tracking-Content"
+    "message": "Tracking-Schutz aktivieren"
   },
   "policy_description_EncryptedMediaExtensions": {
     "message": "Encrypted Media Extensions aktivieren oder deaktivieren (für Video-Streaming-Portale erforderlich)"

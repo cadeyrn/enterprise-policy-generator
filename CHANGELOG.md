@@ -18,6 +18,8 @@
   svg.context-properties.content.enabled, svg.disabled, webgl.disabled, webgl.force-enabled and xpinstall.enabled,
   removed support for security.osclientcerts.assume_rsa_pss_support in Preferences policy, see
   [#308](https://github.com/cadeyrn/enterprise-policy-generator/issues/308)
+- Improved some descriptions for EnableTrackingProtection policy, see
+  [#331](https://github.com/cadeyrn/enterprise-policy-generator/issues/331)
 - Updated Permissions policy to support the configuration of screen sharing requests, see
   [#329](https://github.com/cadeyrn/enterprise-policy-generator/issues/329)
 - Updated SanitizeOnShutdown policy: removed obsolete Downloads and OfflineApps options, added compatibility note for
