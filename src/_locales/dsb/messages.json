@@ -572,6 +572,9 @@
   "policy_description_EnableTrackingProtection_Fingerprinting": {
     "message": "Block known fingerprinters"
   },
+  "policy_description_EnableTrackingProtection_SuspectedFingerprinting": {
+    "message": "Block suspected fingerprinters (Firefox 142+, Firefox ESR 140.2+)"
+  },
   "policy_description_EnableTrackingProtection_Value": {
     "message": "Enable tracking protection"
   },
