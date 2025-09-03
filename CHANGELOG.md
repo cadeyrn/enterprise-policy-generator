@@ -24,6 +24,8 @@
   [#327](https://github.com/cadeyrn/enterprise-policy-generator/issues/327)
 - Updated EnableTrackingProtection to support the BaselineExceptions and ConvenienceExceptions options, see
   [#328](https://github.com/cadeyrn/enterprise-policy-generator/issues/328)
+- Updated EnableTrackingProtection to support the Category option, see
+  [#330](https://github.com/cadeyrn/enterprise-policy-generator/issues/330)
 - Updated Permissions policy to support the configuration of screen sharing requests, see
   [#329](https://github.com/cadeyrn/enterprise-policy-generator/issues/329)
 - Updated SanitizeOnShutdown policy: removed obsolete Downloads and OfflineApps options, added compatibility note for

@@ -563,6 +563,15 @@
   "policy_description_EnableTrackingProtection_BaselineExceptions": {
     "message": "Automatisch Ausnahmen anwenden, um größere Probleme zu vermeiden (Firefox 143+)"
   },
+  "policy_description_EnableTrackingProtection_Category": {
+    "message": "Schutzstufe setzen und vor Veränderung schützen (überschreibt alle Optionen bis auf Ausnahmen; Firefox 141+, Firefox ESR 140.1+)"
+  },
+  "policy_description_EnableTrackingProtection_Category_Standard": {
+    "message": "Standard"
+  },
+  "policy_description_EnableTrackingProtection_Category_Strict": {
+    "message": "Streng"
+  },
   "policy_description_EnableTrackingProtection_ConvenienceExceptions": {
     "message": "Automatisch Ausnahmen anwenden, um kleinere Probleme zu vermeiden und Komfortfunktionen zur Verfügung zu stellen (Firefox 143+)"
   },

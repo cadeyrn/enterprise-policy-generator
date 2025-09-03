@@ -1975,6 +1975,25 @@ const policies = {
     type : 'object',
     properties : [
       {
+        name : 'Category',
+        label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Category'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Category_Standard'),
+            value : 'standard'
+          },
+          {
+            label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Category_Strict'),
+            value : 'strict'
+          }
+        ]
+      },
+      {
         name : 'Value',
         label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Value'),
         type : 'enum',

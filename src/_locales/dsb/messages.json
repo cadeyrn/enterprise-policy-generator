@@ -563,6 +563,15 @@
   "policy_description_EnableTrackingProtection_BaselineExceptions": {
     "message": "Automatically apply exceptions to avoid major website breakage (Firefox 143+)"
   },
+  "policy_description_EnableTrackingProtection_Category": {
+    "message": "Protection level (overrides individual options; Firefox 141+, Firefox ESR 140.1+)"
+  },
+  "policy_description_EnableTrackingProtection_Category_Standard": {
+    "message": "Standard"
+  },
+  "policy_description_EnableTrackingProtection_Category_Strict": {
+    "message": "Strict"
+  },
   "policy_description_EnableTrackingProtection_ConvenienceExceptions": {
     "message": "Automatically apply exceptions to fix minor issues and make convenience features available (Firefox 143+)"
   },
