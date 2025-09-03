@@ -2033,7 +2033,7 @@ const policies = {
       },
       {
         name : 'SuspectedFingerprinting',
-          label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_SuspectedFingerprinting'),
+        label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_SuspectedFingerprinting'),
         type : 'enum',
         options : [
           {
