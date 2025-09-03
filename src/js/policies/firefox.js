@@ -2070,6 +2070,44 @@ const policies = {
         ]
       },
       {
+        name : 'BaselineExceptions',
+        label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_BaselineExceptions'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'false'
+          }
+        ]
+      },
+      {
+        name : 'ConvenienceExceptions',
+        label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_ConvenienceExceptions'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'false'
+          }
+        ]
+      },
+      {
         name : 'Exceptions',
         label : browser.i18n.getMessage('policy_description_EnableTrackingProtection_Exceptions'),
         type : 'array',

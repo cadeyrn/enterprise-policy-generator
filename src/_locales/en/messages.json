@@ -560,6 +560,12 @@
   "policy_description_EnableTrackingProtection": {
     "message": "Enhanced Tracking Protection"
   },
+  "policy_description_EnableTrackingProtection_BaselineExceptions": {
+    "message": "Automatically apply exceptions to avoid major website breakage (Firefox 143+)"
+  },
+  "policy_description_EnableTrackingProtection_ConvenienceExceptions": {
+    "message": "Automatically apply exceptions to fix minor issues and make convenience features available (Firefox 143+)"
+  },
   "policy_description_EnableTrackingProtection_Cryptomining": {
     "message": "Block cryptominers"
   },

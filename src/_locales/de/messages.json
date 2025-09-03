@@ -560,6 +560,12 @@
   "policy_description_EnableTrackingProtection": {
     "message": "Verbesserter Schutz vor Aktivitätenverfolgung"
   },
+  "policy_description_EnableTrackingProtection_BaselineExceptions": {
+    "message": "Automatisch Ausnahmen anwenden, um größere Probleme zu vermeiden (Firefox 143+)"
+  },
+  "policy_description_EnableTrackingProtection_ConvenienceExceptions": {
+    "message": "Automatisch Ausnahmen anwenden, um kleinere Probleme zu vermeiden und Komfortfunktionen zur Verfügung zu stellen (Firefox 143+)"
+  },
   "policy_description_EnableTrackingProtection_Cryptomining": {
     "message": "Heimliche Digitalwährungsberechner (Krypto-Miner) blockieren"
   },
