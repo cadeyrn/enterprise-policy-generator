@@ -339,6 +339,7 @@ export default [
       'prefer-rest-params': 'error',
       'prefer-spread': 'error',
       'prefer-template': 'off',
+      'preserve-caught-error': 'off',
       'radix': ['error', 'as-needed'],
       'require-atomic-updates': 'error',
       'require-await': 'error',

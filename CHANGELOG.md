@@ -43,6 +43,7 @@
 
 #### Dependencies
 
+- Updated eslint from version 9.34.0 to 9.35.0
 - Updated eslint-plugin-jsdoc from version 54.1.1 to 54.3.1
 - Updated stylistic/eslint-plugin from version 5.2.3 to 5.3.1
 
