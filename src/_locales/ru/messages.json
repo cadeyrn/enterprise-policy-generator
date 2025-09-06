@@ -171,13 +171,13 @@
     "message": "Сайты, поддерживающие интегрированную аутентификацию"
   },
   "policy_description_Authentication_AllowNonFQDN": {
-    "message": "Всегда разрешать SPNEGO или NTLM на не FQDNs (полные доменные имена)"
+    "message": "Всегда разрешать SPNEGO или NTLM на не FQDN (полные доменные имена)"
   },
   "policy_description_Authentication_AllowNonFQDN_NTLM": {
-    "message": "Всегда разрешать NTLM на не FQDNs"
+    "message": "Всегда разрешать NTLM на не FQDN"
   },
   "policy_description_Authentication_AllowNonFQDN_SPNEGO": {
-    "message": "Всегда разрешать SPNEGO на не FQDNs"
+    "message": "Всегда разрешать SPNEGO на не FQDN"
   },
   "policy_description_Authentication_AllowProxies": {
     "message": "Всегда разрешать SPNEGO или NTLM через прокси"
@@ -429,7 +429,7 @@
     "message": "Запретить обновление Firefox"
   },
   "policy_description_DisableBuiltinPDFViewer": {
-    "message": "Open PDF files with the system's default PDF viewer"
+    "message": "Открывать файлы PDF с помощью стандартного средства просмотра"
   },
   "policy_description_DisabledCiphers": {
     "message": "Включить или отключить определённые криптографические шифры"
@@ -564,19 +564,19 @@
     "message": "Улучшенная защита от отслеживания"
   },
   "policy_description_EnableTrackingProtection_BaselineExceptions": {
-    "message": "Automatically apply exceptions to avoid major website breakage (Firefox 143+)"
+    "message": "Автоматически применять исключения, необходимые для избежания серьёзных проблем с сайтами (Firefox 143+)"
   },
   "policy_description_EnableTrackingProtection_Category": {
-    "message": "Set protection level and do not allow changes (overrides all other options except exceptions; Firefox 141+, Firefox ESR 140.1+)"
+    "message": "Установить уровень защиты и запретить изменения (переопределяет все остальные параметры, кроме исключений; Firefox 141+, Firefox ESR 140.1+)"
   },
   "policy_description_EnableTrackingProtection_Category_Standard": {
-    "message": "Standard"
+    "message": "Стандартная"
   },
   "policy_description_EnableTrackingProtection_Category_Strict": {
-    "message": "Strict"
+    "message": "Строгая"
   },
   "policy_description_EnableTrackingProtection_ConvenienceExceptions": {
-    "message": "Automatically apply exceptions to fix minor issues and make convenience features available (Firefox 143+)"
+    "message": "Автоматически применять исключения, необходимые для исправления незначительных проблем и обеспечения доступности удобных функций (Firefox 143+)"
   },
   "policy_description_EnableTrackingProtection_Cryptomining": {
     "message": "Блокировать криптомайнеры"
@@ -588,13 +588,13 @@
     "message": "Исключения"
   },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
-    "message": "Block known fingerprinters"
+    "message": "Блокировать известные цифровые отпечатки"
   },
   "policy_description_EnableTrackingProtection_SuspectedFingerprinting": {
-    "message": "Block suspected fingerprinters (Firefox 142+, Firefox ESR 140.2+)"
+    "message": "Блокировать подозреваемые цифровые отпечатки (Firefox 142+, Firefox ESR 140.2+)"
   },
   "policy_description_EnableTrackingProtection_Value": {
-    "message": "Enable tracking protection"
+    "message": "Включить защиту от отслеживания"
   },
   "policy_description_EncryptedMediaExtensions": {
     "message": "Включить или отключить зашифрованные расширения мультимедиа (нужны для потоковых видеопорталов)"
@@ -720,7 +720,7 @@
     "message": "Разрешить установку расширений со слабым алгоритмом подписи"
   },
   "policy_description_ExtensionSettings_temporarily_allow_weak_signatures_single": {
-    "message": "Allow installation of the extension with a weak signature algorithm"
+    "message": "Разрешить установку расширения со слабым алгоритмом подписи"
   },
   "policy_description_ExtensionSettings_updates_disabled": {
     "message": "Разрешить автоматическое обновление"
@@ -1005,16 +1005,16 @@
     "message": "Блокировать новые запросы разрешения уведомлений"
   },
   "policy_description_Permissions_ScreenShare": {
-    "message": "Screen sharing (Firefox 142+, Firefox ESR 140.2+)"
+    "message": "Общий доступ к экрану (Firefox 142+, Firefox ESR 140.2+)"
   },
   "policy_description_Permissions_ScreenShare_Allow": {
-    "message": "Allow screen sharing for these URLs"
+    "message": "Разрешить общий доступ к экрану для этих URL"
   },
   "policy_description_Permissions_ScreenShare_Block": {
-    "message": "Block screen sharing for these URLs"
+    "message": "Блокировать общий доступ к экрану для этих URL"
   },
   "policy_description_Permissions_ScreenShare_BlockNewRequests": {
-    "message": "Block new requests asking to allow screen sharing"
+    "message": "Блокировать новые запросы общего доступа к экрану"
   },
   "policy_description_Permissions_VirtualReality": {
     "message": "Устройства виртуальной реальности"
@@ -1257,16 +1257,16 @@
     "message": "Очищать данные браузера при завершении работы"
   },
   "policy_description_SanitizeOnShutdown_Cache": {
-    "message": "Temporary cached files and pages"
+    "message": "Временные кешированные файлы и страницы"
   },
   "policy_description_SanitizeOnShutdown_Cookies": {
-    "message": "Cookies and site data"
+    "message": "Куки и данные сайтов"
   },
   "policy_description_SanitizeOnShutdown_FormData": {
-    "message": "Saved form info (Firefox 136+)"
+    "message": "Сохранённые данные форм (Firefox 136+)"
   },
   "policy_description_SanitizeOnShutdown_History": {
-    "message": "Browsing and download history"
+    "message": "Журнал посещений и загрузок"
   },
   "policy_description_SanitizeOnShutdown_Locked_false": {
     "message": "Не защищать никакие настройки от изменений"
