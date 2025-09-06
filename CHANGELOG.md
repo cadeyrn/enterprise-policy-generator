@@ -46,6 +46,8 @@
 
 - Use CSS nesting for better CSS maintainability, see
   [#223](https://github.com/cadeyrn/enterprise-policy-generator/issues/223)
+- Replaced JavaScript method to hide empty categories with CSS solution, see
+  [#336](https://github.com/cadeyrn/enterprise-policy-generator/issues/336)
 
 #### Dependencies
 

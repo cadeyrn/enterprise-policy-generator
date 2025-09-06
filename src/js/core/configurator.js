@@ -2426,26 +2426,6 @@ const configurator = {
         policy.classList.add('hidden');
       }
     });
-
-    configurator.hideEmptyCategories();
-  },
-
-  /**
-   * This method is used to hide all categories without visible policies.
-   *
-   * @returns {void}
-   */
-  hideEmptyCategories () {
-    [...document.getElementsByClassName('options-block')].forEach((block) => {
-      const isVisible = block.querySelector('.policy-container:not(.hidden)');
-
-      if (isVisible) {
-        block.previousElementSibling.classList.remove('hidden');
-      }
-      else {
-        block.previousElementSibling.classList.add('hidden');
-      }
-    });
   }
 };
 

@@ -120,6 +120,12 @@ select {
   position: relative;
 }
 
+.options-block-container {
+  &:not(:has(.policy-container:not(.hidden))) {
+    display: none;
+  }
+}
+
 .mandatory-label, .invalid-url-label, .invalid-version-pattern-label, .invalid-preference-label, .invalid-json-label {
   position: absolute;
   top: 4px;
