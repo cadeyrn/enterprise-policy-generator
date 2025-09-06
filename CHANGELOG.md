@@ -31,6 +31,8 @@
 - Updated SanitizeOnShutdown policy: removed obsolete Downloads and OfflineApps options, added compatibility note for
   FormData option, improved order and descriptions of all options, see
   [#296](https://github.com/cadeyrn/enterprise-policy-generator/issues/296)
+- The temporarily_allow_weak_signatures option in the ExtensionSettings policy was only available as a global option,
+  but not for individual extensions, see [#333](https://github.com/cadeyrn/enterprise-policy-generator/issues/333)
 - Replaced DisableFirefoxAccounts policy by DisableAccounts policy and migrated existing configurations, see
   [#260](https://github.com/cadeyrn/enterprise-policy-generator/issues/260)
 - Removed DisablePrivateBrowsing policy and migrated to PrivateBrowsingModeAvailability policy in existing

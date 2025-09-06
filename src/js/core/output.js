@@ -292,7 +292,7 @@ const output = {
         });
 
         // checkboxes
-        [...el.querySelectorAll(':scope > .checkbox > input')].forEach((innerEl) => {
+        [...el.querySelectorAll(':scope > .checkbox > input, :scope .sub-sub-options > .checkbox > input')].forEach((innerEl) => {
           if (innerEl.checked) {
             properties[innerEl.getAttribute('data-name')] = true;
           }

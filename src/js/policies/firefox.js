@@ -1095,6 +1095,11 @@ const policies = {
         ]
       },
       {
+        name : 'temporarily_allow_weak_signatures',
+        label : browser.i18n.getMessage('policy_description_ExtensionSettings_temporarily_allow_weak_signatures_single'),
+        type : 'boolean'
+      },
+      {
         name : 'install_url',
         caption : browser.i18n.getMessage('policy_description_ExtensionSettings_install_url_caption'),
         label : browser.i18n.getMessage('common_url'),

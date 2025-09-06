@@ -716,6 +716,9 @@
   "policy_description_ExtensionSettings_temporarily_allow_weak_signatures": {
     "message": "Installation von Erweiterungen mit einem schwachen Signaturalgorithmus zulassen"
   },
+  "policy_description_ExtensionSettings_temporarily_allow_weak_signatures_single": {
+    "message": "Installation der Erweiterung mit einem schwachen Signaturalgorithmus zulassen"
+  },
   "policy_description_ExtensionSettings_updates_disabled": {
     "message": "Automatische Updates erlauben"
   },

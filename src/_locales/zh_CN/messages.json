@@ -716,6 +716,9 @@
   "policy_description_ExtensionSettings_temporarily_allow_weak_signatures": {
     "message": "Allow installation of extensions with a weak signature algorithm"
   },
+  "policy_description_ExtensionSettings_temporarily_allow_weak_signatures_single": {
+    "message": "Allow installation of the extension with a weak signature algorithm"
+  },
   "policy_description_ExtensionSettings_updates_disabled": {
     "message": "Allow automatic updates"
   },
