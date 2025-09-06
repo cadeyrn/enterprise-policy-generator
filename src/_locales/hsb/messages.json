@@ -428,6 +428,9 @@
   "policy_description_DisableAppUpdate": {
     "message": "Firefox při aktualizowanju haćić"
   },
+  "policy_description_DisableBuiltinPDFViewer": {
+    "message": "Open PDF files with the system's default PDF viewer"
+  },
   "policy_description_DisabledCiphers": {
     "message": "Wěste kryptografiske šifry zmóžnić abo znjemóžnić"
   },

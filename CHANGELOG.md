@@ -18,6 +18,10 @@
   svg.context-properties.content.enabled, svg.disabled, webgl.disabled, webgl.force-enabled and xpinstall.enabled,
   removed support for security.osclientcerts.assume_rsa_pss_support in Preferences policy, see
   [#308](https://github.com/cadeyrn/enterprise-policy-generator/issues/308)
+- Reintroduced the DisableBuiltinPDFViewer policy with a new description, as the behavior was changed in Firefox 140.
+  Support for this policy was originally removed in Enterprise Policy Generator 6.0 because the PDFjs policy was
+  introduced to get the same behavior. The DisableBuiltinPDFViewer and PDFjs policies exclude each other, see
+  [#334](https://github.com/cadeyrn/enterprise-policy-generator/issues/334)
 - Updated some descriptions for EnableTrackingProtection policy, see
   [#331](https://github.com/cadeyrn/enterprise-policy-generator/issues/331)
 - Updated EnableTrackingProtection to support the SuspectedFingerprinting option, see

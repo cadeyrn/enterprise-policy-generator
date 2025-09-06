@@ -428,6 +428,9 @@
   "policy_description_DisableAppUpdate": {
     "message": "Prevent Firefox from updating"
   },
+  "policy_description_DisableBuiltinPDFViewer": {
+    "message": "Open PDF files with the system's default PDF viewer"
+  },
   "policy_description_DisabledCiphers": {
     "message": "Enable or disable specific cryptographic ciphers"
   },

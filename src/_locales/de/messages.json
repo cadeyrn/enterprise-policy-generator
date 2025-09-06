@@ -428,6 +428,9 @@
   "policy_description_DisableAppUpdate": {
     "message": "Firefox am Aktualisieren hindern"
   },
+  "policy_description_DisableBuiltinPDFViewer": {
+    "message": "PDF-Dateien mit dem standardmäßigen PDF-Betrachter des Systems öffnen"
+  },
   "policy_description_DisabledCiphers": {
     "message": "Bestimmte kryptographische Chiffren aktivieren oder deaktivieren"
   },

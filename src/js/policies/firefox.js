@@ -3455,8 +3455,16 @@ const policies = {
     ]
   },
 
+  DisableBuiltinPDFViewer : {
+    first_available : { mainstream : '140.0', esr : '140.0' },
+    exclude : ['PDFjs'],
+    ui_category : 'others',
+    type : 'boolean'
+  },
+
   PDFjs : {
     first_available : { mainstream : '77.0', esr : '78.0' },
+    exclude : ['DisableBuiltinPDFViewer'],
     ui_category : 'others',
     type : 'object',
     properties : [
