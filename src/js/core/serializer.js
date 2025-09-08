@@ -9,7 +9,7 @@ const serializer = {
   /**
    * The serializer stores all the array fields and form values in an object.
    *
-   * @returns {object} - the serialized form as object
+   * @returns {object} - the serialized form as an object
    */
   serialize () {
     const { elements } = document.getElementById('generator-form');
@@ -79,7 +79,7 @@ const serializer = {
   /**
    * The unserializer applies the values of a stored configuration on the generator form.
    *
-   * @param {object} data - the serialized form as object
+   * @param {object} data - the serialized form as an object
    *
    * @returns {void}
    */
