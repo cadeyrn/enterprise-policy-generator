@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### Version 7.0.0 (Work in Progress)
+### [Version 7.0.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v7.0.0) (2025-09-08)
 
 #### Enhancements
 
@@ -51,7 +51,7 @@
 
 - Use CSS nesting for better CSS maintainability, see
   [#223](https://github.com/cadeyrn/enterprise-policy-generator/issues/223)
-- Replaced JavaScript method to hide empty categories with CSS solution, see
+- Replaced JavaScript method to hide empty categories after filtering with CSS solution, see
   [#336](https://github.com/cadeyrn/enterprise-policy-generator/issues/336)
 
 #### Dependencies
@@ -60,6 +60,9 @@
 - Updated eslint-plugin-jsdoc from version 54.1.1 to 55.0.0
 - Updated stylelint from version 16.23.1 to 16.24.0
 - Updated stylistic/eslint-plugin from version 5.2.3 to 5.3.1
+
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v6.6.0...v7.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-7.0.0)
 
 ---
 
@@ -190,7 +193,7 @@
   see [#250](https://github.com/cadeyrn/enterprise-policy-generator/issues/250)
 - Added support for AutofillCreditCardEnabled policy to enable or disable the saving and automatic filling for payment
   methods, see [#251](https://github.com/cadeyrn/enterprise-policy-generator/issues/251)
-- Added support for FirefoxSuggest policy to configure Firefox Suggest feature (US only), see
+- Added support for FirefoxSuggest policy to configure Firefox Suggest feature, see
   [#256](https://github.com/cadeyrn/enterprise-policy-generator/issues/256)
 - Added support for PrintingEnabled policy to enable or disable printing, see
   [#257](https://github.com/cadeyrn/enterprise-policy-generator/issues/257)
