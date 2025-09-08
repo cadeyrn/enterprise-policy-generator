@@ -429,7 +429,7 @@
     "message": "Firefox při aktualizowanju haćić"
   },
   "policy_description_DisableBuiltinPDFViewer": {
-    "message": "Open PDF files with the system's default PDF viewer"
+    "message": "PDF-dataje ze standardnym PDF-wobhladowakom systema wočinić"
   },
   "policy_description_DisabledCiphers": {
     "message": "Wěste kryptografiske šifry zmóžnić abo znjemóžnić"
@@ -564,19 +564,19 @@
     "message": "Polěpšeny slědowanski škit"
   },
   "policy_description_EnableTrackingProtection_BaselineExceptions": {
-    "message": "Automatically apply exceptions to avoid major website breakage (Firefox 143+)"
+    "message": "Wuwzaća awtomatisce nałožić, zo bychu so wulke problemy wobešli. (Firefox 143+)"
   },
   "policy_description_EnableTrackingProtection_Category": {
-    "message": "Set protection level and do not allow changes (overrides all other options except exceptions; Firefox 141+, Firefox ESR 140.1+)"
+    "message": "Škitny stopjeń nastajić a před změnu škitać (přepisuje wšě nastajenja nimo wuwzaćow; Firefox 141+, Firefox ESR 140.1+)"
   },
   "policy_description_EnableTrackingProtection_Category_Standard": {
     "message": "Standard"
   },
   "policy_description_EnableTrackingProtection_Category_Strict": {
-    "message": "Strict"
+    "message": "Striktny"
   },
   "policy_description_EnableTrackingProtection_ConvenienceExceptions": {
-    "message": "Automatically apply exceptions to fix minor issues and make convenience features available (Firefox 143+)"
+    "message": "Wuwzaća awtomatisce nałožić, zo bychu so mjeńše problemy wobešli a komfortowe funkcije k dispoziciji stajili (Firefox 143+)"
   },
   "policy_description_EnableTrackingProtection_Cryptomining": {
     "message": "Skryte kryptokopaki (jendź. cryptominers) blokować"
@@ -588,13 +588,13 @@
     "message": "Wuwzaća"
   },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
-    "message": "Block known fingerprinters"
+    "message": "Znate hromadźaki porstow (fingerprinters) blokować"
   },
   "policy_description_EnableTrackingProtection_SuspectedFingerprinting": {
-    "message": "Block suspected fingerprinters (Firefox 142+, Firefox ESR 140.2+)"
+    "message": "Podhladne hromadźaki porstow (fingerprinters) blokować (Firefox 142+, Firefox ESR 140.2+)"
   },
   "policy_description_EnableTrackingProtection_Value": {
-    "message": "Enable tracking protection"
+    "message": "Slědowanski škit zmóžnić"
   },
   "policy_description_EncryptedMediaExtensions": {
     "message": "Encrypted Media Extensions zmóžnić abo znjemóžnićn (za widejostreamingowe portale trěbne)"
@@ -720,7 +720,7 @@
     "message": "Instalaciju rozšěrjenjow ze słabym signaturowym algoritmusom dopušćić"
   },
   "policy_description_ExtensionSettings_temporarily_allow_weak_signatures_single": {
-    "message": "Allow installation of the extension with a weak signature algorithm"
+    "message": "Instalacija rozšěrjenja ze słabym signaturowym algoritmusom dopušćić"
   },
   "policy_description_ExtensionSettings_updates_disabled": {
     "message": "Awtomatiske aktualizacije dowolić"
@@ -1005,16 +1005,16 @@
     "message": "Nowe naprašowanja blokować, kotrež žadaja, zdźělenki dowolić"
   },
   "policy_description_Permissions_ScreenShare": {
-    "message": "Screen sharing (Firefox 142+, Firefox ESR 140.2+)"
+    "message": "Přewostajenje wobrazowki (Firefox 142+, Firefox ESR 140.2+)"
   },
   "policy_description_Permissions_ScreenShare_Allow": {
-    "message": "Allow screen sharing for these URLs"
+    "message": "Přewostajenje wobrazowki za tute URL dowolić"
   },
   "policy_description_Permissions_ScreenShare_Block": {
-    "message": "Block screen sharing for these URLs"
+    "message": "Přewostajenje wobrazowki za tute URL blokować"
   },
   "policy_description_Permissions_ScreenShare_BlockNewRequests": {
-    "message": "Block new requests asking to allow screen sharing"
+    "message": "Nowe naprašowanja za přewostajenje wobrazowki blokować"
   },
   "policy_description_Permissions_VirtualReality": {
     "message": "Wirtualna realita"
@@ -1257,16 +1257,16 @@
     "message": "Přehladowanske daty zhašeć, hdyž so Firefox začini"
   },
   "policy_description_SanitizeOnShutdown_Cache": {
-    "message": "Temporary cached files and pages"
+    "message": "Nachwilu pufrowane dataje a strony"
   },
   "policy_description_SanitizeOnShutdown_Cookies": {
-    "message": "Cookies and site data"
+    "message": "Placki a daty sydła"
   },
   "policy_description_SanitizeOnShutdown_FormData": {
-    "message": "Saved form info (Firefox 136+)"
+    "message": "Składowane formularowe informacije (Firefox 136+)"
   },
   "policy_description_SanitizeOnShutdown_History": {
-    "message": "Browsing and download history"
+    "message": "Přehladowanska a sćehnjenska historija"
   },
   "policy_description_SanitizeOnShutdown_Locked_false": {
     "message": "Žane nastajenja před změnu nješkitać"

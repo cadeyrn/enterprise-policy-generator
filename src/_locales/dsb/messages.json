@@ -429,7 +429,7 @@
     "message": "Firefox aktualizěrowanje zawoboraś"
   },
   "policy_description_DisableBuiltinPDFViewer": {
-    "message": "Open PDF files with the system's default PDF viewer"
+    "message": "PDF-dataje ze standardnym PDF-wobglědowakom systema wócyniś"
   },
   "policy_description_DisabledCiphers": {
     "message": "Wěste kryptografiske šyfry zmóžniś abo znjemóžniś"
@@ -564,19 +564,19 @@
     "message": "Pólěpšony slědowański šćit"
   },
   "policy_description_EnableTrackingProtection_BaselineExceptions": {
-    "message": "Automatically apply exceptions to avoid major website breakage (Firefox 143+)"
+    "message": "Wuwześa awtomatiski nałožyś, aby se wjelikich problemow wobinuli. (Firefox 143+)"
   },
   "policy_description_EnableTrackingProtection_Category": {
-    "message": "Protection level (overrides individual options; Firefox 141+, Firefox ESR 140.1+)"
+    "message": "Šćitny stopjeń nastajiś a pśed změnu šćitaś (pśepisujo wšykne nastajenja mimo wuwześow; Firefox 141+, Firefox ESR 140.1+)"
   },
   "policy_description_EnableTrackingProtection_Category_Standard": {
     "message": "Standard"
   },
   "policy_description_EnableTrackingProtection_Category_Strict": {
-    "message": "Strict"
+    "message": "Striktny"
   },
   "policy_description_EnableTrackingProtection_ConvenienceExceptions": {
-    "message": "Automatically apply exceptions to fix minor issues and make convenience features available (Firefox 143+)"
+    "message": "Wuwześa awtomatiski nałožyś, aby se mjeńšych problemow wobinuli a komfortowe funkcije k dispoziciji stajili (Firefox 143+)"
   },
   "policy_description_EnableTrackingProtection_Cryptomining": {
     "message": "Skšajźne kryptokopaki (eng. cryptominers) blokěrowaś"
@@ -588,13 +588,13 @@
     "message": "Wuwześa"
   },
   "policy_description_EnableTrackingProtection_Fingerprinting": {
-    "message": "Block known fingerprinters"
+    "message": "Znate zběrarje palcow (fingerprinters) blokěrowaś"
   },
   "policy_description_EnableTrackingProtection_SuspectedFingerprinting": {
-    "message": "Block suspected fingerprinters (Firefox 142+, Firefox ESR 140.2+)"
+    "message": "Suspektne zběrarje palcow (fingerprinters) blokěrowaś (Firefox 142+, Firefox ESR 140.2+)"
   },
   "policy_description_EnableTrackingProtection_Value": {
-    "message": "Enable tracking protection"
+    "message": "Slědowański šćit zmóžniś"
   },
   "policy_description_EncryptedMediaExtensions": {
     "message": "Encrypted Media Extensions zmóžniś abo znjemóžniś (za wideostreamingowe portale trjebne)"
@@ -720,7 +720,7 @@
     "message": "Instalaciju rozšyrjenjow ze słabym signaturowym algoritmusom dopušćiś"
   },
   "policy_description_ExtensionSettings_temporarily_allow_weak_signatures_single": {
-    "message": "Allow installation of the extension with a weak signature algorithm"
+    "message": "Instalacija rozšyrjenja ze słabym signaturowym algoritmusom dopušćiś"
   },
   "policy_description_ExtensionSettings_updates_disabled": {
     "message": "Awtomatiske aktualizacije dowóliś"
@@ -1005,16 +1005,16 @@
     "message": "Nowe napšašowanja blokěrowaś, kótarež pominaju, powěźeńki dowóliś"
   },
   "policy_description_Permissions_ScreenShare": {
-    "message": "Screen sharing (Firefox 142+, Firefox ESR 140.2+)"
+    "message": "Pśewóstajenje wobrazowki (Firefox 142+, Firefox ESR 140.2+)"
   },
   "policy_description_Permissions_ScreenShare_Allow": {
-    "message": "Allow screen sharing for these URLs"
+    "message": "Pśewóstajenje wobrazowki za toś te URL dowóliś"
   },
   "policy_description_Permissions_ScreenShare_Block": {
-    "message": "Block screen sharing for these URLs"
+    "message": "Pśewóstajenje wobrazowki za toś te URL blokěrowaś"
   },
   "policy_description_Permissions_ScreenShare_BlockNewRequests": {
-    "message": "Block new requests asking to allow screen sharing"
+    "message": "Nowe napšašowanja za pśewóstajenje wobrazowki blokěrowaś"
   },
   "policy_description_Permissions_VirtualReality": {
     "message": "Wirtuelna realita"
@@ -1257,16 +1257,16 @@
     "message": "Pśeglědowańske daty wulašowaś, gaž se Firefox zacynijo"
   },
   "policy_description_SanitizeOnShutdown_Cache": {
-    "message": "Temporary cached files and pages"
+    "message": "Nachylu pufrowane dataje a boki"
   },
   "policy_description_SanitizeOnShutdown_Cookies": {
-    "message": "Cookies and site data"
+    "message": "Cookieje a daty sedła"
   },
   "policy_description_SanitizeOnShutdown_FormData": {
-    "message": "Saved form info (Firefox 136+)"
+    "message": "Skłaźone formularowe informacije (Firefox 136+)"
   },
   "policy_description_SanitizeOnShutdown_History": {
-    "message": "Browsing and download history"
+    "message": "Pśeglědowańska a ześěgnjeńska historija"
   },
   "policy_description_SanitizeOnShutdown_Locked_false": {
     "message": "Žedne nastajenja pśed změnu nješćitaś"
