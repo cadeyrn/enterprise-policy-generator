@@ -13,7 +13,7 @@
 #### Bugfixes
 
 - Fixed a bug that caused the value for the OverrideFirstRunPage policy to be “undefined” when the configuration was
-  exported and then reimported., see [#338](https://github.com/cadeyrn/enterprise-policy-generator/issues/338)
+  exported and then reimported, see [#338](https://github.com/cadeyrn/enterprise-policy-generator/issues/338)
 
 #### Enterprise Policies
 
