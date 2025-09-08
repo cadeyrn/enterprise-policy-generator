@@ -123,7 +123,7 @@ const serializer = {
       const el = document.getElementById(id);
 
       if (el) {
-        el.value = data.input[id];
+        el.value = data.input[id] ?? null;
 
         // remove validation hint, because it's guaranteed by the serializer that the element has a value
         if (el.hasAttribute('data-mandatory')) {
@@ -138,7 +138,7 @@ const serializer = {
       const el = document.getElementById(id);
 
       if (el) {
-        el.value = data.textareas[id];
+        el.value = data.textareas[id] ?? null;
       }
     });
 

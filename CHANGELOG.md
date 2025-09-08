@@ -10,6 +10,11 @@
   longer displays the minimum required Firefox version for policies implemented before Firefox 128.0, see
   [#315](https://github.com/cadeyrn/enterprise-policy-generator/issues/315)
 
+#### Bugfixes
+
+- Fixed a bug that caused the value for the OverrideFirstRunPage policy to be “undefined” when the configuration was
+  exported and then reimported., see [#338](https://github.com/cadeyrn/enterprise-policy-generator/issues/338)
+
 #### Enterprise Policies
 
 - Added support for mathml.disabled, privacy.baselineFingerprintingProtection, privacy.fingerprintingProtection,
