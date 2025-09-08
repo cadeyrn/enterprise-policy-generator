@@ -136,6 +136,7 @@
     "property-no-unknown": true,
     "property-no-vendor-prefix": true,
     "rule-empty-line-before": ["always", { "except" : ["first-nested"] }],
+    "rule-nesting-at-rule-required-list": null,
     "rule-selector-property-disallowed-list": null,
     "selector-anb-no-unmatchable": true,
     "selector-attribute-name-disallowed-list": ["class", "id"],
