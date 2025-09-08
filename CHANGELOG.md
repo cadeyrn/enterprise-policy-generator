@@ -45,7 +45,7 @@
 - Replaced DisableFirefoxAccounts policy by DisableAccounts policy and migrated existing configurations, see
   [#260](https://github.com/cadeyrn/enterprise-policy-generator/issues/260)
 - Removed DisablePrivateBrowsing policy and migrated to PrivateBrowsingModeAvailability policy in existing
-  configurations, [#307](https://github.com/cadeyrn/enterprise-policy-generator/issues/307)
+  configurations, see [#307](https://github.com/cadeyrn/enterprise-policy-generator/issues/307)
 
 #### Code Quality
 
