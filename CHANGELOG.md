@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### Version 7.1.0 (Work in Progress)
+### [Version 7.1.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v7.1.0) (2025-09-21)
 
 #### Enterprise Policies
 
@@ -13,8 +13,8 @@
 
 #### Notable Changes
 
-- Improved instruction for Linux users and mentioned /etc/firefox/policies as a location for system-wide policies, see
-  [#343](https://github.com/cadeyrn/enterprise-policy-generator/issues/343)
+- Improved instruction for Linux users and mentioned /etc/firefox/policies as a possible location for system-wide
+  policies, see [#343](https://github.com/cadeyrn/enterprise-policy-generator/issues/343)
 
 #### Dependencies
 
@@ -23,6 +23,9 @@
 - Updated gulp-eslint-new from version 2.4.0 to 2.5.0
 - Updated stylistic/eslint-plugin from version 5.3.1 to 5.4.0
 - Updated web-ext from version 8.9.0 to 8.10.0
+
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v7.0.0...v7.1.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-7.1.0)
 
 ---
 
