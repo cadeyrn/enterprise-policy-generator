@@ -6,7 +6,7 @@
 
 #### Enterprise Policies
 
-- Added support for the GenerativeAI policy to configure several generative AI features, fixes
+- Added support for the GenerativeAI policy to disable several generative AI features, fixes
   [#332](https://github.com/cadeyrn/enterprise-policy-generator/issues/332)
 - Added support for the VisualSearchEnabled policy to disable the reverse image search via Google Lens, fixes
   [#339](https://github.com/cadeyrn/enterprise-policy-generator/issues/339)
