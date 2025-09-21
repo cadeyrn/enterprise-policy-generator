@@ -4,6 +4,11 @@
 
 ### Version 7.1.0 (Work in Progress)
 
+#### Enterprise Policies
+
+- Added support for the GenerativeAI policy to configure several generative AI features, fixes
+  [#332](https://github.com/cadeyrn/enterprise-policy-generator/issues/332)
+
 #### Dependencies
 
 - Updated eslint from version 9.35.0 to 9.36.0

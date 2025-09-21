@@ -32,6 +32,91 @@ const policies = {
 
   // disable features
 
+  GenerativeAI : {
+    first_available : { mainstream : '144.0', esr : null },
+    is_lockable : true,
+    ui_category : 'disable-features',
+    type : 'object',
+    properties : [
+      {
+        name : 'Enabled',
+        label : browser.i18n.getMessage('policy_description_GenerativeAI_Enabled'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'false'
+          }
+        ]
+      },
+      {
+        name : 'Chatbot',
+        label : browser.i18n.getMessage('policy_description_GenerativeAI_Chatbot'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'false'
+          }
+        ]
+      },
+      {
+        name : 'LinkPreviews',
+        label : browser.i18n.getMessage('policy_description_GenerativeAI_LinkPreviews'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'false'
+          }
+        ]
+      },
+      {
+        name : 'TabGroups',
+        label : browser.i18n.getMessage('policy_description_GenerativeAI_TabGroups'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_enable_no'),
+            value : 'false'
+          }
+        ]
+      }
+    ]
+  },
+
   DisableFormHistory : {
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'disable-features',

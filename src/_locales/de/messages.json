@@ -767,6 +767,21 @@
   "policy_description_FirefoxSuggest_WebSuggestions": {
     "message": "Nicht gesponserte Vorschläge in der Adressleiste anzeigen"
   },
+  "policy_description_GenerativeAI": {
+    "message": "Generative KI aktivieren oder deaktivieren"
+  },
+  "policy_description_GenerativeAI_Chatbot": {
+    "message": "LLM-Chatbot (zum Beispiel ChatGPT, Google Gemini, Microsoft Copilot)"
+  },
+  "policy_description_GenerativeAI_Enabled": {
+    "message": "Alle unten stehenden Features aktivieren oder deaktivieren"
+  },
+  "policy_description_GenerativeAI_LinkPreviews": {
+    "message": "KI-Zusammenfassung für Link-Vorschau"
+  },
+  "policy_description_GenerativeAI_TabGroups": {
+    "message": "Vorschläge für Tab-Gruppen (Name der Gruppe, Tabs)"
+  },
   "policy_description_GoToIntranetSiteForSingleWordEntryInAddressBar": {
     "message": "Direkte Navigation zu Intranet-Websites erzwingen, anstatt beim Eintippen von Einzelworteinträgen in die Adressleiste eine Suche zu starten"
   },

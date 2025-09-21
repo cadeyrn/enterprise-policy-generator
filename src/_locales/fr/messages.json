@@ -767,6 +767,21 @@
   "policy_description_FirefoxSuggest_WebSuggestions": {
     "message": "Show non-sponsored quick suggest results in the address bar"
   },
+  "policy_description_GenerativeAI": {
+    "message": "Enable or disable generative AI"
+  },
+  "policy_description_GenerativeAI_Chatbot": {
+    "message": "LLM chatbot (e.g., ChatGPT, Google Gemini, Microsoft Copilot)"
+  },
+  "policy_description_GenerativeAI_Enabled": {
+    "message": "Enable or disable all of the features below"
+  },
+  "policy_description_GenerativeAI_LinkPreviews": {
+    "message": "AI summary for link preview"
+  },
+  "policy_description_GenerativeAI_TabGroups": {
+    "message": "Suggestions for tab groups (group name, tabs)"
+  },
   "policy_description_GoToIntranetSiteForSingleWordEntryInAddressBar": {
     "message": "Force direct intranet site navigation instead of searching when typing single word entries in the address bar"
   },
