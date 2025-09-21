@@ -45,7 +45,7 @@
     "message": "Z kliknjenim na tłocašk se kod generěrujo. Toś ten kod musy se w dataji „policies.json“ do zarědnika „distribution“ składowaś."
   },
   "explanation_intro_linux": {
-    "message": "Napórajśo zarědnik z mjenim „distribution“ w zarědniku, w kótaremž jo Firefox a składujśo tam dataju „policies.json“. You can also specify system-wide policy by placing the file in /etc/firefox/policies."
+    "message":  "Napórajśo zarědnik z mjenim „distribution“ w zarědniku, w kótaremž jo Firefox a składujśo tam dataju „policies.json“. Móžośo teke systemadaloke směrnice póstajiś, gaž dataju w /etc/firefox/policies składujośo."
   },
   "explanation_intro_macos": {
     "message": "Napórajśo zapis z mjenim „distribution“ w zapisu /Contents/Resources/ w nałožeńskem pakeśe Firefox a placěrujśo tam dataju „policies.json“. Aby nałožeński paket wócynił, klikniśo z pšaweju tastu myški na nałoženje Firefox w Finder a wubjeŕśo „Paketinhalt zeigen“ z kontekstowego menija."
@@ -768,19 +768,19 @@
     "message": "Njesponserowane naraźenja w adresowem pólu pokazaś"
   },
   "policy_description_GenerativeAI": {
-    "message": "Enable or disable generative AI"
+    "message": "Generatiwnu KI zmóžniś abo znjemóžniś"
   },
   "policy_description_GenerativeAI_Chatbot": {
-    "message": "LLM chatbot (e.g., ChatGPT, Google Gemini, Microsoft Copilot)"
+    "message": "Chatbot LLM (na pśikład ChatGPT, Google Gemini, Microsoft Copilot)"
   },
   "policy_description_GenerativeAI_Enabled": {
-    "message": "Enable or disable all of the features below"
+    "message": "Wšykne funkcije dołojce zmóžniś abo znjemóžniś"
   },
   "policy_description_GenerativeAI_LinkPreviews": {
-    "message": "AI summary for link preview"
+    "message": "Zespominanje KI za wótkazowy pśeglěd "
   },
   "policy_description_GenerativeAI_TabGroups": {
-    "message": "Suggestions for tab groups (group name, tabs)"
+    "message": "Naraźenja za kupki rejtarikow (mě kupki, rejtariki)"
   },
   "policy_description_GoToIntranetSiteForSingleWordEntryInAddressBar": {
     "message": "Direktnu nawigaciju k intranetowym websedłam wunuzkaś, město togo aby se pytanje pśi zapodawanju zapiskow z jadnotliwych słowow do adresowego póla startowało"
@@ -1434,7 +1434,7 @@
     "message": "Systemowy śišćaŕski dialog město wokna śišćaŕskego pśeglěda wužywaś"
   },
   "policy_description_VisualSearchEnabled": {
-    "message": "Enable or disable reverse image search via Google Lens"
+    "message": "Inwersne wobrazowe pytanje z Google Lens zmóžniś abo znjemóžniś"
   },
   "policy_description_WebsiteFilter": {
     "message": "Zajźujo, až se websedła woglěduju. Móžośo „<all_urls>“ za blokěrowanje wšych URL wužywaś. Glejśo informaciski wótkaz za wšykne płaśiwe zapiski, ale jano HTTPS a HTTP se pódpěratej."
