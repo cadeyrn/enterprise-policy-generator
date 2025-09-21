@@ -45,7 +45,7 @@
     "message": "При нажатии на кнопку будет сгенерирован код. Этот код должен храниться в файле \"policies.json\" в папке \"distribution\", находящейся в каталоге установки."
   },
   "explanation_intro_linux": {
-    "message": "Создайте папку \"distribution\" в каталоге установки Firefox и поместите туда файл \"policies.json\". You can also specify system-wide policy by placing the file in /etc/firefox/policies."
+    "message": "Создайте папку \"distribution\" в каталоге установки Firefox и поместите туда файл \"policies.json\". Также можно задать общесистемную политику, поместив файл в /etc/firefox/policies."
   },
   "explanation_intro_macos": {
     "message": "Создайте папку \"distribution\" в каталоге /Contents/Resources/ пакета приложения Firefox поместите туда файл \"policies.json\". Чтобы открыть пакет приложения, нажмите правой кнопкой мыши на приложении Firefox в Finder и выберите \"Показать содержимое пакета\" из контекстного меню."
@@ -768,19 +768,19 @@
     "message": "Показывать неспонсируемые предложения в адресной панели"
   },
   "policy_description_GenerativeAI": {
-    "message": "Enable or disable generative AI"
+    "message": "Включить или отключить получение данных от ИИ"
   },
   "policy_description_GenerativeAI_Chatbot": {
-    "message": "LLM chatbot (e.g., ChatGPT, Google Gemini, Microsoft Copilot)"
+    "message": "Поставщик ИИ (например, ChatGPT, Google Gemini или Microsoft Copilot)"
   },
   "policy_description_GenerativeAI_Enabled": {
-    "message": "Enable or disable all of the features below"
+    "message": "Включить или отключить все функции ниже"
   },
   "policy_description_GenerativeAI_LinkPreviews": {
-    "message": "AI summary for link preview"
+    "message": "Предварительный обзор ссылок"
   },
   "policy_description_GenerativeAI_TabGroups": {
-    "message": "Suggestions for tab groups (group name, tabs)"
+    "message": "Предложения для групп вкладок (имя группы, вкладки)"
   },
   "policy_description_GoToIntranetSiteForSingleWordEntryInAddressBar": {
     "message": "Принудительная непосредственная навигация по сайту в интрасети вместо поиска при вводе отдельных слов в адресной строке"
@@ -1434,7 +1434,7 @@
     "message": "Использовать системный диалог печати вместо окна предварительного просмотра печати"
   },
   "policy_description_VisualSearchEnabled": {
-    "message": "Enable or disable reverse image search via Google Lens"
+    "message": "Включить или отключить обратный поиск изображений через Google Объектив"
   },
   "policy_description_WebsiteFilter": {
     "message": "Блокировать посещение сайтов. Используйте \"<all_urls>\" для блокировки всех URL. Поддерживаются только HTTPS и HTTP."
