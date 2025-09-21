@@ -45,7 +45,7 @@
     "message": "При нажатии на кнопку будет сгенерирован код. Этот код должен храниться в файле \"policies.json\" в папке \"distribution\", находящейся в каталоге установки."
   },
   "explanation_intro_linux": {
-    "message": "Создайте папку \"distribution\" в каталоге установки Firefox и поместите туда файл \"policies.json\"."
+    "message": "Создайте папку \"distribution\" в каталоге установки Firefox и поместите туда файл \"policies.json\". You can also specify system-wide policy by placing the file in /etc/firefox/policies."
   },
   "explanation_intro_macos": {
     "message": "Создайте папку \"distribution\" в каталоге /Contents/Resources/ пакета приложения Firefox поместите туда файл \"policies.json\". Чтобы открыть пакет приложения, нажмите правой кнопкой мыши на приложении Firefox в Finder и выберите \"Показать содержимое пакета\" из контекстного меню."

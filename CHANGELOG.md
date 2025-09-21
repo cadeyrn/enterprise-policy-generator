@@ -11,6 +11,11 @@
 - Added support for the VisualSearchEnabled policy to disable the reverse image search via Google Lens, fixes
   [#339](https://github.com/cadeyrn/enterprise-policy-generator/issues/339)
 
+#### Notable Changes
+
+- Improved instruction for Linux users and mentioned /etc/firefox/policies as a location for system-wide policies, see
+  [#343](https://github.com/cadeyrn/enterprise-policy-generator/issues/343)
+
 #### Dependencies
 
 - Updated eslint from version 9.35.0 to 9.36.0

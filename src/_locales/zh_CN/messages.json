@@ -45,7 +45,7 @@
     "message": "点击下方的按钮会生成一段代码。该代码需要保存在一个名为 “policies.json” 的文件里，放在 distribution 目录。"
   },
   "explanation_intro_linux": {
-    "message": "在 Firefox 安装目录中创建一个名为 “distribution” 的文件夹，并将 “policies.json” 文件放到该文件夹。"
+    "message": "在 Firefox 安装目录中创建一个名为 “distribution” 的文件夹，并将 “policies.json” 文件放到该文件夹。 You can also specify system-wide policy by placing the file in /etc/firefox/policies."
   },
   "explanation_intro_macos": {
     "message": "Create a “distribution” directory inside the /Contents/Resources/ directory of the Firefox application package and place the file “policies.json” there. To open the application package, right-click on the Firefox application in the Finder and choose “show package contents” from the context menu."

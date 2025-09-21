@@ -45,7 +45,7 @@
     "message": "Z kliknjenjom na tłóčatko so kod generuje. Tutón kod dyrbi so w dataji „policies.json“ do rjadowaka „distribution“ składować."
   },
   "explanation_intro_linux": {
-    "message": "Wutworće rjadowak z mjenom „distribution“ w rjadowaku, w kotrymž je Firefox a składujće tam dataju „policies.json“."
+    "message": "Wutworće rjadowak z mjenom „distribution“ w rjadowaku, w kotrymž je Firefox a składujće tam dataju „policies.json“. You can also specify system-wide policy by placing the file in /etc/firefox/policies."
   },
   "explanation_intro_macos": {
     "message": "Wutworće zapis z mjenom „distribution“ w zapisu /Contents/Resources/ w nałoženskim pakeće Firefox a placěrujće tam dataju „policies.json“. Zo byšće nałoženski paket wočinił, klikńće z prawej tastu myški na nałoženje Firefox w Finder a wubjerće „Paketinhalt zeigen“ z kontekstoweho menija."

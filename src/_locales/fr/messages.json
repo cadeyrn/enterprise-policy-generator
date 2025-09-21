@@ -45,7 +45,7 @@
     "message": "En cliquant sur le bouton, un code sera généré. Ce code doit être stocké dans un fichier \"policies.json\" qui doit être stocké dans le répertoire de distribution."
   },
   "explanation_intro_linux": {
-    "message": "Créer un répertoire appelé \"distribution\" dans le répertoire où se trouve Firefox et y placer le fichier \"policies.json\"."
+    "message": "Créer un répertoire appelé \"distribution\" dans le répertoire où se trouve Firefox et y placer le fichier \"policies.json\". You can also specify system-wide policy by placing the file in /etc/firefox/policies."
   },
   "explanation_intro_macos": {
     "message": "Create a \"distribution\" directory inside the /Contents/Resources/ directory of the Firefox application package and place the file \"policies.json\" there. To open the application package, right-click on the Firefox application in the Finder and choose \"show package contents\" from the context menu."

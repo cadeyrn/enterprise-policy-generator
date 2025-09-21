@@ -45,7 +45,7 @@
     "message": "Z kliknjenim na tłocašk se kod generěrujo. Toś ten kod musy se w dataji „policies.json“ do zarědnika „distribution“ składowaś."
   },
   "explanation_intro_linux": {
-    "message": "Napórajśo zarědnik z mjenim „distribution“ w zarědniku, w kótaremž jo Firefox a składujśo tam dataju „policies.json“."
+    "message": "Napórajśo zarědnik z mjenim „distribution“ w zarědniku, w kótaremž jo Firefox a składujśo tam dataju „policies.json“. You can also specify system-wide policy by placing the file in /etc/firefox/policies."
   },
   "explanation_intro_macos": {
     "message": "Napórajśo zapis z mjenim „distribution“ w zapisu /Contents/Resources/ w nałožeńskem pakeśe Firefox a placěrujśo tam dataju „policies.json“. Aby nałožeński paket wócynił, klikniśo z pšaweju tastu myški na nałoženje Firefox w Finder a wubjeŕśo „Paketinhalt zeigen“ z kontekstowego menija."
