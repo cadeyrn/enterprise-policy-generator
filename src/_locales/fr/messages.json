@@ -1433,6 +1433,9 @@
   "policy_description_UseSystemPrintDialog": {
     "message": "Use the system print dialog instead of the print preview window"
   },
+  "policy_description_VisualSearchEnabled": {
+    "message": "Enable or disable reverse image search via Google Lens"
+  },
   "policy_description_WebsiteFilter": {
     "message": "Empêche les sites Web d'être visités. Vous pouvez utiliser \"<all_urls>\" pour bloquer toutes les URL. Voir le lien info pour toutes les entrées valides, mais seuls HTTPS et HTTP sont supportés."
   },

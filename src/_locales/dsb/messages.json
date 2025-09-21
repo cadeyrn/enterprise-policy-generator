@@ -1433,6 +1433,9 @@
   "policy_description_UseSystemPrintDialog": {
     "message": "Systemowy śišćaŕski dialog město wokna śišćaŕskego pśeglěda wužywaś"
   },
+  "policy_description_VisualSearchEnabled": {
+    "message": "Enable or disable reverse image search via Google Lens"
+  },
   "policy_description_WebsiteFilter": {
     "message": "Zajźujo, až se websedła woglěduju. Móžośo „<all_urls>“ za blokěrowanje wšych URL wužywaś. Glejśo informaciski wótkaz za wšykne płaśiwe zapiski, ale jano HTTPS a HTTP se pódpěratej."
   },

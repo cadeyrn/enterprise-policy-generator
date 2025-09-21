@@ -1433,6 +1433,9 @@
   "policy_description_UseSystemPrintDialog": {
     "message": "Systemowy ćišćerski dialog město wokna ćišćerskeho přehlada wužiwać"
   },
+  "policy_description_VisualSearchEnabled": {
+    "message": "Enable or disable reverse image search via Google Lens"
+  },
   "policy_description_WebsiteFilter": {
     "message": "Zadźěwa, zo so websydła wopytuja. Móžeće „<all_urls>“ za blokowanje wšěch URL wužiwać. Hlejće informaciski wotkaz za wšě płaćiwe zapiski, ale jenož HTTPS a HTTP so podpěrujetej."
   },

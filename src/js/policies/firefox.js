@@ -117,6 +117,22 @@ const policies = {
     ]
   },
 
+  VisualSearchEnabled : {
+    first_available : { mainstream : '144.0', esr : null },
+    ui_category : 'disable-features',
+    type : 'enum',
+    options : [
+      {
+        label : browser.i18n.getMessage('enum_value_enable_yes'),
+        value : 'true'
+      },
+      {
+        label : browser.i18n.getMessage('enum_value_enable_no'),
+        value : 'false'
+      }
+    ]
+  },
+
   DisableFormHistory : {
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'disable-features',

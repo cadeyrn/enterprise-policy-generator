@@ -1433,6 +1433,9 @@
   "policy_description_UseSystemPrintDialog": {
     "message": "Использовать системный диалог печати вместо окна предварительного просмотра печати"
   },
+  "policy_description_VisualSearchEnabled": {
+    "message": "Enable or disable reverse image search via Google Lens"
+  },
   "policy_description_WebsiteFilter": {
     "message": "Блокировать посещение сайтов. Используйте \"<all_urls>\" для блокировки всех URL. Поддерживаются только HTTPS и HTTP."
   },
