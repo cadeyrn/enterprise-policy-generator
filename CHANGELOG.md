@@ -6,7 +6,7 @@
 
 #### Dependencies
 
-- Updated eslint-plugin-jsdoc from version 55.0.0 to 57.0.2
+- Updated eslint-plugin-jsdoc from version 55.0.0 to 60.0.0 and updated configuration
 
 ---
 

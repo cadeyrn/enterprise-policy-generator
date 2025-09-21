@@ -24,7 +24,7 @@ const policymanager = {
    * This method adds a policy to the output object.
    *
    * @param {string} key - key of the policy
-   * @param {*} value - value of the policy, can be of any type
+   * @param {any} value - value of the policy, can be of any type
    *
    * @returns {void}
    */
