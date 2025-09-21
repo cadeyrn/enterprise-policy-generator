@@ -825,19 +825,19 @@
     "message": "File extension"
   },
   "policy_description_Handlers_type_file_extension_placeholder": {
-    "message": "e.g. “pdf”"
+    "message": "e.g., “pdf”"
   },
   "policy_description_Handlers_type_mime_type": {
     "message": "MIME type"
   },
   "policy_description_Handlers_type_mime_type_placeholder": {
-    "message": "e.g. “application/msword”"
+    "message": "e.g., “application/msword”"
   },
   "policy_description_Handlers_type_schema": {
     "message": "Scheme"
   },
   "policy_description_Handlers_type_schema_placeholder": {
-    "message": "e.g. “mailto”"
+    "message": "e.g., “mailto”"
   },
   "policy_description_HardwareAcceleration": {
     "message": "Disable hardware acceleration"
@@ -1338,7 +1338,7 @@
     "message": "Name"
   },
   "policy_description_SearchEngines_Add_PostData": {
-    "message": "POST Data (if POST method was selected; e.g. q={searchTerms}&anotherParam=yes)"
+    "message": "POST Data (if POST method was selected; e.g., q={searchTerms}&anotherParam=yes)"
   },
   "policy_description_SearchEngines_Add_SuggestURLTemplate": {
     "message": "URL for suggestions. Please use {searchTerms} as placeholder for the search term"
