@@ -10,6 +10,7 @@
 - Updated eslint-plugin-jsdoc from version 55.0.0 to 60.0.0 and updated configuration
 - Updated gulp-eslint-new from version 2.4.0 to 2.5.0
 - Updated stylistic/eslint-plugin from version 5.3.1 to 5.4.0
+- Updated web-ext from version 8.9.0 to 8.10.0
 
 ---
 
