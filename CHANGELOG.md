@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### [Version 7.1.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v7.1.0) (2025-09-21)
+### [Version 7.1.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v7.1.0) (2025-09-23)
 
 #### Enterprise Policies
 
