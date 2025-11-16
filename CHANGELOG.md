@@ -12,6 +12,7 @@
 - Updated jsdoc from version 4.0.4 to 4.0.5
 - Updated stylelint from version 16.24.0 to 16.25.0
 - Updated stylistic/eslint-plugin from version 5.4.0 to 5.5.0
+- Updated web-ext from version 8.10.0 to 9.1.0
 
 ---
 
