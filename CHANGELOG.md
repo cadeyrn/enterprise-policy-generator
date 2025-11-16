@@ -6,6 +6,8 @@
 
 #### Enterprise Policies
 
+- Added support for the BrowserDataBackup policy to manage Firefox backups, see
+  [#346](https://github.com/cadeyrn/enterprise-policy-generator/issues/346)
 - Added support for security.webauthn.always_allow_direct_attestation in Preferences policy, see
   [#347](https://github.com/cadeyrn/enterprise-policy-generator/issues/347)
 

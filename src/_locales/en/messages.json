@@ -251,6 +251,15 @@
   "policy_description_Bookmarks_Title": {
     "message": "Title"
   },
+  "policy_description_BrowserDataBackup": {
+    "message": "Data backup and restore"
+  },
+  "policy_description_BrowserDataBackup_AllowBackup": {
+    "message": "Allow data backup"
+  },
+  "policy_description_BrowserDataBackup_AllowRestore": {
+    "message": "Allow data restore"
+  },
   "policy_description_CaptivePortal": {
     "message": "Enable or disable captive portal support"
   },

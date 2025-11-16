@@ -3329,6 +3329,52 @@ const policies = {
 
   // others
 
+  BrowserDataBackup : {
+    first_available : { mainstream : '145.0', esr : null },
+    ui_category : 'others',
+    type : 'object',
+    properties : [
+      {
+        name : 'AllowBackup',
+        label : browser.i18n.getMessage('policy_description_BrowserDataBackup_AllowBackup'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ]
+      },
+      {
+        name : 'AllowRestore',
+        label : browser.i18n.getMessage('policy_description_BrowserDataBackup_AllowRestore'),
+        type : 'enum',
+        options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_yes'),
+            value : 'true'
+          },
+          {
+            label : browser.i18n.getMessage('enum_value_no'),
+            value : 'false'
+          }
+        ]
+      }
+    ]
+  },
+
   Handlers : {
     first_available : { mainstream : '78.0', esr : '78.0' },
     ui_category : 'others',

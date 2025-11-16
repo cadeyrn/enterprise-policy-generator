@@ -251,6 +251,15 @@
   "policy_description_Bookmarks_Title": {
     "message": "Titel"
   },
+  "policy_description_BrowserDataBackup": {
+    "message": "Datensicherung und Wiederherstellung (Backup)"
+  },
+  "policy_description_BrowserDataBackup_AllowBackup": {
+    "message": "Datensicherung erlauben"
+  },
+  "policy_description_BrowserDataBackup_AllowRestore": {
+    "message": "Wiederherstellung erlauben"
+  },
   "policy_description_CaptivePortal": {
     "message": "Netzwerk-Anmeldeseite aktivieren oder deaktivieren"
   },
