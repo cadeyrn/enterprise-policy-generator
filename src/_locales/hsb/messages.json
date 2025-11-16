@@ -564,7 +564,7 @@
     "message": "Polěpšeny slědowanski škit"
   },
   "policy_description_EnableTrackingProtection_BaselineExceptions": {
-    "message": "Wuwzaća awtomatisce nałožić, zo bychu so wulke problemy wobešli. (Firefox 143+)"
+    "message": "Wuwzaća awtomatisce nałožić, zo bychu so wulke problemy wobešli. (Firefox 145+)"
   },
   "policy_description_EnableTrackingProtection_Category": {
     "message": "Škitny stopjeń nastajić a před změnu škitać (přepisuje wšě nastajenja nimo wuwzaćow; Firefox 141+, Firefox ESR 140.1+)"
@@ -576,7 +576,7 @@
     "message": "Striktny"
   },
   "policy_description_EnableTrackingProtection_ConvenienceExceptions": {
-    "message": "Wuwzaća awtomatisce nałožić, zo bychu so mjeńše problemy wobešli a komfortowe funkcije k dispoziciji stajili (Firefox 143+)"
+    "message": "Wuwzaća awtomatisce nałožić, zo bychu so mjeńše problemy wobešli a komfortowe funkcije k dispoziciji stajili (Firefox 145+)"
   },
   "policy_description_EnableTrackingProtection_Cryptomining": {
     "message": "Skryte kryptokopaki (jendź. cryptominers) blokować"

@@ -564,7 +564,7 @@
     "message": "Улучшенная защита от отслеживания"
   },
   "policy_description_EnableTrackingProtection_BaselineExceptions": {
-    "message": "Автоматически применять исключения, необходимые для избежания серьёзных проблем с сайтами (Firefox 143+)"
+    "message": "Автоматически применять исключения, необходимые для избежания серьёзных проблем с сайтами (Firefox 145+)"
   },
   "policy_description_EnableTrackingProtection_Category": {
     "message": "Установить уровень защиты и запретить изменения (переопределяет все остальные параметры, кроме исключений; Firefox 141+, Firefox ESR 140.1+)"
@@ -576,7 +576,7 @@
     "message": "Строгая"
   },
   "policy_description_EnableTrackingProtection_ConvenienceExceptions": {
-    "message": "Автоматически применять исключения, необходимые для исправления незначительных проблем и обеспечения доступности удобных функций (Firefox 143+)"
+    "message": "Автоматически применять исключения, необходимые для исправления незначительных проблем и обеспечения доступности удобных функций (Firefox 145+)"
   },
   "policy_description_EnableTrackingProtection_Cryptomining": {
     "message": "Блокировать криптомайнеры"

@@ -564,7 +564,7 @@
     "message": "Pólěpšony slědowański šćit"
   },
   "policy_description_EnableTrackingProtection_BaselineExceptions": {
-    "message": "Wuwześa awtomatiski nałožyś, aby se wjelikich problemow wobinuli. (Firefox 143+)"
+    "message": "Wuwześa awtomatiski nałožyś, aby se wjelikich problemow wobinuli. (Firefox 145+)"
   },
   "policy_description_EnableTrackingProtection_Category": {
     "message": "Šćitny stopjeń nastajiś a pśed změnu šćitaś (pśepisujo wšykne nastajenja mimo wuwześow; Firefox 141+, Firefox ESR 140.1+)"
@@ -576,7 +576,7 @@
     "message": "Striktny"
   },
   "policy_description_EnableTrackingProtection_ConvenienceExceptions": {
-    "message": "Wuwześa awtomatiski nałožyś, aby se mjeńšych problemow wobinuli a komfortowe funkcije k dispoziciji stajili (Firefox 143+)"
+    "message": "Wuwześa awtomatiski nałožyś, aby se mjeńšych problemow wobinuli a komfortowe funkcije k dispoziciji stajili (Firefox 145+)"
   },
   "policy_description_EnableTrackingProtection_Cryptomining": {
     "message": "Skšajźne kryptokopaki (eng. cryptominers) blokěrowaś"
