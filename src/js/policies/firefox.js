@@ -33,7 +33,7 @@ const policies = {
   // disable features
 
   GenerativeAI : {
-    first_available : { mainstream : '144.0', esr : null },
+    first_available : { mainstream : '144.0', esr : '140.4' },
     is_lockable : true,
     ui_category : 'disable-features',
     type : 'object',
