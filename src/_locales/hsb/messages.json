@@ -252,13 +252,13 @@
     "message": "Titul"
   },
   "policy_description_BrowserDataBackup": {
-    "message": "Data backup and restore"
+    "message": "Zawěsćenje datow a wobnowjenje (Backup)"
   },
   "policy_description_BrowserDataBackup_AllowBackup": {
-    "message": "Allow data backup"
+    "message": "Zawěsćenje datow dowolić"
   },
   "policy_description_BrowserDataBackup_AllowRestore": {
-    "message": "Allow data restore"
+    "message": "Wobnowjenje dowolić"
   },
   "policy_description_CaptivePortal": {
     "message": "Syćowu přizjewjensku stronu zmóžnić abo znjemóžnić"
