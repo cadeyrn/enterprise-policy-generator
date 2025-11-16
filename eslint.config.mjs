@@ -38,6 +38,7 @@ export default [
       '@stylistic/computed-property-spacing': 'error',
       '@stylistic/dot-location': ['error', 'property'],
       '@stylistic/eol-last': 'error',
+      '@stylistic/exp-list-style': 'off',
       '@stylistic/function-call-argument-newline': ['error', 'consistent'],
       '@stylistic/function-call-spacing': ['error', 'never'],
       '@stylistic/function-paren-newline': 'off',
