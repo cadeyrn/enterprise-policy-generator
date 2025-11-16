@@ -9,6 +9,7 @@
 - Updated eslint from version 9.36.0 to 9.39.1
 - Updated eslint/json from version 0.13.2 to 0.14.0
 - Updated eslint-plugin-jsdoc from version 60.2.0 to 61.2.1
+- Updated jsdoc from version 4.0.4 to 4.0.5
 - Updated stylistic/eslint-plugin from version 5.4.0 to 5.5.0
 
 ---
