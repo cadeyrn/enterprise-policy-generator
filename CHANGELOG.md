@@ -4,6 +4,11 @@
 
 ### Version 7.2.0 (Work in Progress)
 
+#### Enterprise Policies
+
+- Added support for security.webauthn.always_allow_direct_attestation in Preferences policy, see
+  [#347](https://github.com/cadeyrn/enterprise-policy-generator/issues/347)
+
 #### Dependencies
 
 - Updated eslint from version 9.36.0 to 9.39.1
