@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### Version 7.2.0 (Work in Progress)
+### [Version 7.2.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v7.2.0) (2025-11-17)
 
 #### Enterprise Policies
 
@@ -20,6 +20,9 @@
 - Updated stylelint from version 16.24.0 to 16.25.0
 - Updated stylistic/eslint-plugin from version 5.4.0 to 5.5.0
 - Updated web-ext from version 8.10.0 to 9.1.0
+
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v7.1.0...v7.2.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-7.2.0)
 
 ---
 
