@@ -6,6 +6,7 @@
 
 #### Dependencies
 
+- Updated eslint-plugin-jsdoc from version 61.2.1 to 61.4.1
 - Updated stylistic/eslint-plugin from version 5.5.0 to 5.6.1
 
 ---

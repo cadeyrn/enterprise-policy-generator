@@ -179,6 +179,7 @@ export default [
       'jsdoc/require-property-description': 'warn',
       'jsdoc/require-property-name': 'warn',
       'jsdoc/require-property-type': 'warn',
+      'jsdoc/require-rejects': 'warn',
       'jsdoc/require-returns': 'warn',
       'jsdoc/require-returns-check': 'warn',
       'jsdoc/require-returns-description': 'warn',
