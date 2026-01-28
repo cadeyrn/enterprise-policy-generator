@@ -26,8 +26,7 @@
   },
   "options_ui": {
     "page": "html/configurator.html",
-    "open_in_tab": true,
-    "browser_style": false
+    "open_in_tab": true
   },
   "permissions": [
     "menus",
