@@ -263,12 +263,6 @@
   "policy_description_CaptivePortal": {
     "message": "Syćowu přizjewjensku stronu zmóžnić abo znjemóžnić"
   },
-  "policy_description_CaptivePortal_options_false": {
-    "message": "Syćowu přizjewjensku stronu znjemóžnić"
-  },
-  "policy_description_CaptivePortal_options_true": {
-    "message": "Syćowu přizjewjensku stronu zmóžnić"
-  },
   "policy_description_Certificates": {
     "message": "Certifikaty konfigurować"
   },
@@ -747,22 +741,22 @@
     "message": "Startowu wobrazowku Firefox přiměrić"
   },
   "policy_description_FirefoxHome_Highlights": {
-    "message": "Najnowša aktiwita"
+    "message": "Show recent activity"
   },
   "policy_description_FirefoxHome_Pocket": {
-    "message": "Doporučene stawiznički"
+    "message": "Show recommended stories"
   },
   "policy_description_FirefoxHome_Search": {
-    "message": "Pytanske polo"
+    "message": "Show search field"
   },
   "policy_description_FirefoxHome_SponsoredPocket": {
-    "message": "Sponserowane doporučene stawiznički"
+    "message": "Show sponsored recommended stories"
   },
   "policy_description_FirefoxHome_SponsoredTopSites": {
-    "message": "Sponserowane zwjazanja"
+    "message": "Show sponsored shortcuts"
   },
   "policy_description_FirefoxHome_TopSites": {
-    "message": "Zwjazanja"
+    "message": "Show shortcuts"
   },
   "policy_description_FirefoxSuggest": {
     "message": "Firefox Suggest konfigurować"
@@ -774,7 +768,7 @@
     "message": "Sponserowane namjety w adresowym polu pokazać"
   },
   "policy_description_FirefoxSuggest_WebSuggestions": {
-    "message": "Njesponserowane namjety w adresowym polu pokazać"
+    "message": "Njesponserowane namjety w adresowym polu pokazać (Firefox 146+: all suggestions)"
   },
   "policy_description_GenerativeAI": {
     "message": "Generatiwnu KI zmóžnić abo znjemóžnić"
@@ -876,7 +870,7 @@
     "message": "Websydła, kotrež so na HTTPS awtomatisce njepřestajeja"
   },
   "policy_description_HttpsOnlyMode": {
-    "message": "Modus Jenož-HTTPS"
+    "message": "Configure HTTPS-Only Mode"
   },
   "policy_description_HttpsOnlyMode_allowed": {
     "message": "Po standardźe znjemóžnjeny, ale wužiwar móže jón zmóžnić"
@@ -916,12 +910,6 @@
   },
   "policy_description_NetworkPrediction": {
     "message": "DNS-předzačitanje zmóžnić abo znjemóžnić"
-  },
-  "policy_description_NetworkPrediction_options_false": {
-    "message": "DNS-předzačitanje znjemóžnić"
-  },
-  "policy_description_NetworkPrediction_options_true": {
-    "message": "DNS-předzačitanje zmóžnić)"
   },
   "policy_description_NewTabPage": {
     "message": "Strona, kotraž so při wočinjenju noweho rajtarka jewi, zmóžnić abo znjemóžnić"

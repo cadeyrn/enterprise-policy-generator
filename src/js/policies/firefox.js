@@ -1124,15 +1124,6 @@ const policies = {
           }
         },
         {
-          name : 'restricted_domains',
-          label : browser.i18n.getMessage('policy_description_ExtensionSettings_restricted_domains'),
-          type : 'array',
-          items : {
-            label : browser.i18n.getMessage('common_url'),
-            type : 'string'
-          }
-        },
-        {
           name : 'allowed_types',
           label : browser.i18n.getMessage('policy_description_ExtensionSettings_allowed_types'),
           type : 'multiselect',
@@ -1164,7 +1155,16 @@ const policies = {
           caption : browser.i18n.getMessage('policy_description_ExtensionSettings_blocked_install_message_caption_all'),
           label : browser.i18n.getMessage('policy_description_ExtensionSettings_blocked_install_message_label'),
           type : 'string'
-        }
+        },
+        {
+          name : 'restricted_domains',
+          label : browser.i18n.getMessage('policy_description_ExtensionSettings_restricted_domains'),
+          type : 'array',
+          items : {
+            label : browser.i18n.getMessage('common_url'),
+            type : 'string'
+          }
+        },
       ]
     },
     properties : [
@@ -1476,11 +1476,11 @@ const policies = {
     type : 'enum',
     options : [
       {
-        label : browser.i18n.getMessage('policy_description_NetworkPrediction_options_true'),
+        label : browser.i18n.getMessage('enum_value_enable_yes'),
         value : 'true'
       },
       {
-        label : browser.i18n.getMessage('policy_description_NetworkPrediction_options_false'),
+        label : browser.i18n.getMessage('enum_value_enable_no'),
         value : 'false'
       }
     ]
@@ -1727,11 +1727,11 @@ const policies = {
     type : 'enum',
     options : [
       {
-        label : browser.i18n.getMessage('policy_description_CaptivePortal_options_true'),
+        label : browser.i18n.getMessage('enum_value_enable_yes'),
         value : 'true'
       },
       {
-        label : browser.i18n.getMessage('policy_description_CaptivePortal_options_false'),
+        label : browser.i18n.getMessage('enum_value_enable_no'),
         value : 'false'
       }
     ]
@@ -2597,8 +2597,7 @@ const policies = {
         label : browser.i18n.getMessage('enum_value_no'),
         value : 'false'
       }
-    ],
-    default : 'true'
+    ]
   },
 
   MicrosoftEntraSSO : {
@@ -2615,8 +2614,7 @@ const policies = {
         label : browser.i18n.getMessage('enum_value_no'),
         value : 'false'
       }
-    ],
-    default : 'true'
+    ]
   },
 
   DisableSecurityBypass : {
@@ -2671,23 +2669,14 @@ const policies = {
     type : 'enum',
     options : [
       {
-        label : 'TLS 1.0 (' + browser.i18n.getMessage('policy_label_default') + ')',
-        value : 'tls1'
-      },
-      {
-        label : 'TLS 1.1',
-        value : 'tls1.1'
-      },
-      {
-        label : 'TLS 1.2',
+        label : 'TLS 1.2 (' + browser.i18n.getMessage('policy_label_default') + ')',
         value : 'tls1.2'
       },
       {
         label : 'TLS 1.3',
         value : 'tls1.3'
       }
-    ],
-    default : 'tls1'
+    ]
   },
 
   SSLVersionMax : {
@@ -2695,14 +2684,6 @@ const policies = {
     ui_category : 'security',
     type : 'enum',
     options : [
-      {
-        label : 'TLS 1.0',
-        value : 'tls1'
-      },
-      {
-        label : 'TLS 1.1',
-        value : 'tls1.1'
-      },
       {
         label : 'TLS 1.2',
         value : 'tls1.2'
@@ -3156,6 +3137,10 @@ const policies = {
         label : browser.i18n.getMessage('policy_description_Certificates_ImportEnterpriseRoots'),
         type : 'enum',
         options : [
+          {
+            label : browser.i18n.getMessage('enum_value_no_preference'),
+            value : null
+          },
           {
             label : browser.i18n.getMessage('policy_description_Certificates_ImportEnterpriseRoots_true'),
             value : 'true'
@@ -3703,7 +3688,6 @@ const policies = {
   PromptForDownloadLocation : {
     first_available : { mainstream : '68.0', esr : '68.0' },
     ui_category : 'others',
-    mandatory : true,
     type : 'enum',
     options : [
       {
@@ -4025,12 +4009,12 @@ const policies = {
     type : 'enum',
     options : [
       {
-        label : browser.i18n.getMessage('policy_description_DontCheckDefaultBrowser_options_true'),
-        value : 'true'
-      },
-      {
         label : browser.i18n.getMessage('policy_description_DontCheckDefaultBrowser_options_false'),
         value : 'false'
+      },
+      {
+        label : browser.i18n.getMessage('policy_description_DontCheckDefaultBrowser_options_true'),
+        value : 'true'
       }
     ]
   },

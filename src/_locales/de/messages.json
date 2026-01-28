@@ -60,7 +60,7 @@
     "message": "Enterprise Policy Generator"
   },
   "filter_field": {
-    "message": "Richtlinien filtern…"
+    "message": "Richtlinien filtern …"
   },
   "generate_button": {
     "message": "Richtlinien generieren"
@@ -263,12 +263,6 @@
   "policy_description_CaptivePortal": {
     "message": "Netzwerk-Anmeldeseite aktivieren oder deaktivieren"
   },
-  "policy_description_CaptivePortal_options_false": {
-    "message": "Netzwerk-Anmeldeseite deaktivieren"
-  },
-  "policy_description_CaptivePortal_options_true": {
-    "message": "Netzwerk-Anmeldeseite aktivieren"
-  },
   "policy_description_Certificates": {
     "message": "Zertifikate konfigurieren"
   },
@@ -417,7 +411,7 @@
     "message": "Domain"
   },
   "policy_description_Cookies_ExpireAtSessionEnd": {
-    "message": "Behalte Cookies…"
+    "message": "Behalte Cookies …"
   },
   "policy_description_Cookies_ExpireAtSessionEnd_false": {
     "message": "… bis sie nicht mehr gültig sind"
@@ -747,22 +741,22 @@
     "message": "Den Firefox-Startbildschirm anpassen"
   },
   "policy_description_FirefoxHome_Highlights": {
-    "message": "Neueste Aktivität"
+    "message": "Neueste Aktivität anzeigen"
   },
   "policy_description_FirefoxHome_Pocket": {
-    "message": "Empfohlene Geschichten"
+    "message": "Empfohlene Geschichten anzeigen"
   },
   "policy_description_FirefoxHome_Search": {
-    "message": "Suchfeld"
+    "message": "Suchfeld anzeigen"
   },
   "policy_description_FirefoxHome_SponsoredPocket": {
-    "message": "Gesponserte empfohlene Geschichten"
+    "message": "Gesponserte empfohlene Geschichten anzeigen"
   },
   "policy_description_FirefoxHome_SponsoredTopSites": {
-    "message": "Gesponserte Verknüpfungen"
+    "message": "Gesponserte Verknüpfungen anzeigen"
   },
   "policy_description_FirefoxHome_TopSites": {
-    "message": "Verknüpfungen"
+    "message": "Verknüpfungen anzeigen"
   },
   "policy_description_FirefoxSuggest": {
     "message": "Firefox Suggest konfigurieren"
@@ -774,7 +768,7 @@
     "message": "Gesponserte Vorschläge in der Adressleiste anzeigen"
   },
   "policy_description_FirefoxSuggest_WebSuggestions": {
-    "message": "Nicht gesponserte Vorschläge in der Adressleiste anzeigen"
+    "message": "Nicht gesponserte Vorschläge in der Adressleiste anzeigen (Firefox 146+: Alle Vorschläge)"
   },
   "policy_description_GenerativeAI": {
     "message": "Generative KI aktivieren oder deaktivieren"
@@ -858,7 +852,7 @@
     "message": "Zusätzliche URLs"
   },
   "policy_description_Homepage_StartPage": {
-    "message": "Starte Firefox mit…"
+    "message": "Starte Firefox mit …"
   },
   "policy_description_Homepage_StartPage_Homepage": {
     "message": "… der eingestellten Startseite (der Nutzer kann optional aber auch mit der letzten Browser-Sitzung starten)"
@@ -876,7 +870,7 @@
     "message": "Websites, die nicht automatisch auf HTTPS umgestellt werden"
   },
   "policy_description_HttpsOnlyMode": {
-    "message": "Nur-HTTPS-Modus"
+    "message": "Nur-HTTPS-Modus konfigurieren"
   },
   "policy_description_HttpsOnlyMode_allowed": {
     "message": "Standardmäßig ausgeschaltet, aber der Benutzer kann diesen einschalten"
@@ -916,12 +910,6 @@
   },
   "policy_description_NetworkPrediction": {
     "message": "DNS Prefetching aktivieren oder deaktivieren"
-  },
-  "policy_description_NetworkPrediction_options_false": {
-    "message": "DNS Prefetching deaktivieren"
-  },
-  "policy_description_NetworkPrediction_options_true": {
-    "message": "DNS Prefetching aktivieren"
   },
   "policy_description_NewTabPage": {
     "message": "Die Seite, welche beim Öffnen eines neuen Tabs erscheint, aktivieren oder deaktivieren"
@@ -1239,7 +1227,7 @@
     "message": "Proxy-Einstellungen des Systems verwenden"
   },
   "policy_description_Proxy_Passthrough": {
-    "message": "Kein Proxy für…"
+    "message": "Kein Proxy für …"
   },
   "policy_description_Proxy_SOCKSProxy": {
     "message": "SOCKS-Host. Um eine Port-Nummer festzulegen bitte „:“ gefolgt von der Portnummer ergänzen"
@@ -1332,7 +1320,7 @@
     "message": "Kodierung (Standard: UTF-8)"
   },
   "policy_description_SearchEngines_Add_IconURL": {
-    "message": "Icon-URL oder data:image…"
+    "message": "Icon-URL oder data:image …"
   },
   "policy_description_SearchEngines_Add_Method": {
     "message": "Anfrage-Methode"

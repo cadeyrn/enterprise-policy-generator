@@ -263,12 +263,6 @@
   "policy_description_CaptivePortal": {
     "message": "开启或关闭强制门户认证（captive portal）支持"
   },
-  "policy_description_CaptivePortal_options_false": {
-    "message": "关闭强制门户认证支持"
-  },
-  "policy_description_CaptivePortal_options_true": {
-    "message": "开启强制门户认证支持"
-  },
   "policy_description_Certificates": {
     "message": "配置证书"
   },
@@ -747,22 +741,22 @@
     "message": "自定义 Firefox 主页"
   },
   "policy_description_FirefoxHome_Highlights": {
-    "message": "近期动态"
+    "message": "Show recent activity"
   },
   "policy_description_FirefoxHome_Pocket": {
-    "message": "推荐文章"
+    "message": "Show recommended stories"
   },
   "policy_description_FirefoxHome_Search": {
-    "message": "Search field"
+    "message": "Show search field"
   },
   "policy_description_FirefoxHome_SponsoredPocket": {
-    "message": "Sponsored recommended stories"
+    "message": "Show sponsored recommended stories"
   },
   "policy_description_FirefoxHome_SponsoredTopSites": {
-    "message": "赞助商网站"
+    "message": "Show sponsored shortcuts"
   },
   "policy_description_FirefoxHome_TopSites": {
-    "message": "快捷方式"
+    "message": "Show shortcuts"
   },
   "policy_description_FirefoxSuggest": {
     "message": "Configure Firefox Suggest"
@@ -774,7 +768,7 @@
     "message": "Show sponsored quick suggest results in the address bar"
   },
   "policy_description_FirefoxSuggest_WebSuggestions": {
-    "message": "Show non-sponsored quick suggest results in the address bar"
+    "message": "Show non-sponsored quick suggest results in the address bar (Firefox 146+: all suggestions)"
   },
   "policy_description_GenerativeAI": {
     "message": "Enable or disable generative AI"
@@ -876,7 +870,7 @@
     "message": "Websites that will not automatically be upgraded to HTTPS"
   },
   "policy_description_HttpsOnlyMode": {
-    "message": "HTTPS-Only Mode"
+    "message": "Configure HTTPS-Only Mode"
   },
   "policy_description_HttpsOnlyMode_allowed": {
     "message": "Off by default, but the user can turn it on"
@@ -916,12 +910,6 @@
   },
   "policy_description_NetworkPrediction": {
     "message": "启用或禁用网络预测 (DNS 预读取)"
-  },
-  "policy_description_NetworkPrediction_options_false": {
-    "message": "禁用网络预测 (DNS 预读取)"
-  },
-  "policy_description_NetworkPrediction_options_true": {
-    "message": "启用网络预测 (DNS 预读取)"
   },
   "policy_description_NewTabPage": {
     "message": "启用或禁用打开新标签页时显示的页面"

@@ -263,12 +263,6 @@
   "policy_description_CaptivePortal": {
     "message": "Включить или отключить поддержку перехватывающего портала"
   },
-  "policy_description_CaptivePortal_options_false": {
-    "message": "Отключить поддержку перехватывающего портала"
-  },
-  "policy_description_CaptivePortal_options_true": {
-    "message": "Включить поддержку перехватывающего портала"
-  },
   "policy_description_Certificates": {
     "message": "Настройка сертификатов"
   },
@@ -747,22 +741,22 @@
     "message": "Настройка домашней страницы Firefox"
   },
   "policy_description_FirefoxHome_Highlights": {
-    "message": "Последние действия"
+    "message": "Show recent activity"
   },
   "policy_description_FirefoxHome_Pocket": {
-    "message": "Рекомендуемые истории"
+    "message": "Show recommended stories"
   },
   "policy_description_FirefoxHome_Search": {
-    "message": "Поле поиска"
+    "message": "Show search field"
   },
   "policy_description_FirefoxHome_SponsoredPocket": {
-    "message": "Спонсируемые истории Pocket"
+    "message": "Show sponsored recommended stories"
   },
   "policy_description_FirefoxHome_SponsoredTopSites": {
-    "message": "Спонсируемые популярные сайты"
+    "message": "Show sponsored shortcuts"
   },
   "policy_description_FirefoxHome_TopSites": {
-    "message": "Ярлыки"
+    "message": "Show shortcuts"
   },
   "policy_description_FirefoxSuggest": {
     "message": "Настройка Firefox Suggest"
@@ -774,7 +768,7 @@
     "message": "Показывать спонсированные предложения в адресной строке"
   },
   "policy_description_FirefoxSuggest_WebSuggestions": {
-    "message": "Показывать неспонсируемые предложения в адресной панели"
+    "message": "Показывать неспонсируемые предложения в адресной панели (Firefox 146+: all suggestions)"
   },
   "policy_description_GenerativeAI": {
     "message": "Включить или отключить получение данных от ИИ"
@@ -876,7 +870,7 @@
     "message": "Сайты, которые не будут автоматически переключаться на HTTPS"
   },
   "policy_description_HttpsOnlyMode": {
-    "message": "Режим \"Только HTTPS\""
+    "message": "Configure HTTPS-Only Mode"
   },
   "policy_description_HttpsOnlyMode_allowed": {
     "message": "Отключён по умолчанию , но пользователь может включить"
@@ -916,12 +910,6 @@
   },
   "policy_description_NetworkPrediction": {
     "message": "Включить или отключить предвыборку DNS (прогнозирование)"
-  },
-  "policy_description_NetworkPrediction_options_false": {
-    "message": "Отключить предвыборку DNS (прогнозирование)"
-  },
-  "policy_description_NetworkPrediction_options_true": {
-    "message": "Включить предвыборку DNS (прогнозирование)"
   },
   "policy_description_NewTabPage": {
     "message": "Включить или отключить страницу новой вкладки"

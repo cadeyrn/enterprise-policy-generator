@@ -4,6 +4,10 @@
 
 ### Version 7.3.0 (Work in Progress)
 
+#### Enterprise Policies
+
+- Some small policies cleanup, see [#351](https://github.com/cadeyrn/enterprise-policy-generator/issues/351)
+
 #### Dependencies
 
 - Updated eslint from version 9.39.1 to 9.39.2
