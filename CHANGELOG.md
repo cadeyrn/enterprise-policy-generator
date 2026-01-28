@@ -24,6 +24,8 @@
 - Updated stylistic/eslint-plugin from version 5.5.0 to 5.7.1
 - Updated web-ext from version 9.1.0 to 9.2.0
 
+**This is the last release with support for Firefox 128.**
+
 ---
 
 ### [Version 7.2.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v7.2.0) (2025-11-17)
