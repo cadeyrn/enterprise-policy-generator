@@ -1164,7 +1164,7 @@ const policies = {
             label : browser.i18n.getMessage('common_url'),
             type : 'string'
           }
-        },
+        }
       ]
     },
     properties : [
