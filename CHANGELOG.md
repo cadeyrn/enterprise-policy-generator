@@ -8,6 +8,11 @@
 
 - Some small policies cleanup, see [#351](https://github.com/cadeyrn/enterprise-policy-generator/issues/351)
 
+#### Notable Changes
+
+- Changed copyright year from 2025 to 2026, see
+  [#352](https://github.com/cadeyrn/enterprise-policy-generator/issues/352)
+
 #### Dependencies
 
 - Updated eslint from version 9.39.1 to 9.39.2
