@@ -471,7 +471,7 @@
     "message": "Tłóčatko „Firefox wobnowić“ w about:support znjemóžnić"
   },
   "policy_description_DisableRemoteImprovements": {
-    "message": "Prevent Firefox from applying performance, stability, and feature changes between updates"
+    "message": "Firefox při tym haćić, funkcije, wukon a stabilnosć mjez aktualizacijemi polěpšić"
   },
   "policy_description_DisableSafeMode": {
     "message": "Menijowy zapisk znjemóžnić, zo by so Firefox ze znjemóžnjenymi rozšěrjenjemi znowa startował (wěsty modus)"
@@ -597,7 +597,7 @@
     "message": "Znate hromadźaki porstow (fingerprinters) blokować"
   },
   "policy_description_EnableTrackingProtection_HarmfulAddon": {
-    "message": "Block harmful add-ons (Firefox 147+)"
+    "message": "Škódne rozšěrjenja blokować (Firefox 147+)"
   },
   "policy_description_EnableTrackingProtection_SuspectedFingerprinting": {
     "message": "Podhladne hromadźaki porstow (fingerprinters) blokować (Firefox 142+, Firefox ESR 140.2+)"
@@ -747,22 +747,22 @@
     "message": "Startowu wobrazowku Firefox přiměrić"
   },
   "policy_description_FirefoxHome_Highlights": {
-    "message": "Show recent activity"
+    "message": "Najnowšu aktiwitu pokazać"
   },
   "policy_description_FirefoxHome_Pocket": {
-    "message": "Show recommended stories"
+    "message": "Doporučene stawiznički pokazać"
   },
   "policy_description_FirefoxHome_Search": {
-    "message": "Show search field"
+    "message": "Pytanske polo pytać"
   },
   "policy_description_FirefoxHome_SponsoredPocket": {
-    "message": "Show sponsored recommended stories"
+    "message": "Sponserowane doporučene stawiznički pokazać"
   },
   "policy_description_FirefoxHome_SponsoredTopSites": {
-    "message": "Show sponsored shortcuts"
+    "message": "Sponserowane zwjazanja pokazać"
   },
   "policy_description_FirefoxHome_TopSites": {
-    "message": "Show shortcuts"
+    "message": "Zwjazanja pokazać"
   },
   "policy_description_FirefoxSuggest": {
     "message": "Firefox Suggest konfigurować"
@@ -774,7 +774,7 @@
     "message": "Sponserowane namjety w adresowym polu pokazać"
   },
   "policy_description_FirefoxSuggest_WebSuggestions": {
-    "message": "Njesponserowane namjety w adresowym polu pokazać (Firefox 146+: all suggestions)"
+    "message": "Njesponserowane namjety w adresowym polu pokazać (Firefox 146+: wšě namjety)"
   },
   "policy_description_GenerativeAI": {
     "message": "Generatiwnu KI zmóžnić abo znjemóžnić"
@@ -876,7 +876,7 @@
     "message": "Websydła, kotrež so na HTTPS awtomatisce njepřestajeja"
   },
   "policy_description_HttpsOnlyMode": {
-    "message": "Configure HTTPS-Only Mode"
+    "message": "Modus Jenož-HTTPS konfigurować"
   },
   "policy_description_HttpsOnlyMode_allowed": {
     "message": "Po standardźe znjemóžnjeny, ale wužiwar móže jón zmóžnić"

@@ -471,7 +471,7 @@
     "message": "Tłocašk „Firefox wótnowiś“ w about:support znjemóžniś"
   },
   "policy_description_DisableRemoteImprovements": {
-    "message": "Prevent Firefox from applying performance, stability, and feature changes between updates"
+    "message": "Firefox zawoboraś, funkcije, wugbaśe a stabilnosć mjazy aktualizacijami pólěpšyś"
   },
   "policy_description_DisableSafeMode": {
     "message": "Menijowy zapisk znjemóžniś, aby se Firefox ze znjemóžnjonymi rozšyrjenjami znowego startował (wěsty modus)"
@@ -597,7 +597,7 @@
     "message": "Znate zběrarje palcow (fingerprinters) blokěrowaś"
   },
   "policy_description_EnableTrackingProtection_HarmfulAddon": {
-    "message": "Block harmful add-ons (Firefox 147+)"
+    "message": "Škódne rozšyrjenja blokěrowaś (Firefox 147+)"
   },
   "policy_description_EnableTrackingProtection_SuspectedFingerprinting": {
     "message": "Suspektne zběrarje palcow (fingerprinters) blokěrowaś (Firefox 142+, Firefox ESR 140.2+)"
@@ -747,22 +747,22 @@
     "message": "Startowu wobrazowku Firefox pśiměriś"
   },
   "policy_description_FirefoxHome_Highlights": {
-    "message": "Show recent activity"
+    "message": "Nejnowšu aktiwitu pokazaś"
   },
   "policy_description_FirefoxHome_Pocket": {
-    "message": "Show recommended stories"
+    "message": "Dopórucone tšojeńka pokazaś"
   },
   "policy_description_FirefoxHome_Search": {
-    "message": "Show search field"
+    "message": "Pytańske pólo pytaś"
   },
   "policy_description_FirefoxHome_SponsoredPocket": {
-    "message": "Show sponsored recommended stories"
+    "message": "Sponserowane dopórucone tšojeńka pokazaś"
   },
   "policy_description_FirefoxHome_SponsoredTopSites": {
-    "message": "Show sponsored shortcuts"
+    "message": "Sponserowane zwězanja pokazaś"
   },
   "policy_description_FirefoxHome_TopSites": {
-    "message": "Show shortcuts"
+    "message": "Zwězanja pokazaś"
   },
   "policy_description_FirefoxSuggest": {
     "message": "Firefox Suggest konfigurěrowaś"
@@ -774,7 +774,7 @@
     "message": "Sponserowane naraźenja w adresowem pólu pokazaś"
   },
   "policy_description_FirefoxSuggest_WebSuggestions": {
-    "message": "Njesponserowane naraźenja w adresowem pólu pokazaś (Firefox 146+: all suggestions)"
+    "message": "Njesponserowane naraźenja w adresowem pólu pokazaś (Firefox 146+: wšykne naraźenja)"
   },
   "policy_description_GenerativeAI": {
     "message": "Generatiwnu KI zmóžniś abo znjemóžniś"
@@ -876,7 +876,7 @@
     "message": "Websedła, kótarež se na HTTPS awtomatiski njepśestajaju"
   },
   "policy_description_HttpsOnlyMode": {
-    "message": "Configure HTTPS-Only Mode"
+    "message": "Modus Jano-HTTPS konfigurěrowaś"
   },
   "policy_description_HttpsOnlyMode_allowed": {
     "message": "Pó standarźe znjemóžnjony, ale wužywaŕ móžo jen zmóžniś"
