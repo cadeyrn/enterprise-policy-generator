@@ -596,6 +596,9 @@
   "policy_description_EnableTrackingProtection_Fingerprinting": {
     "message": "Znate zběrarje palcow (fingerprinters) blokěrowaś"
   },
+  "policy_description_EnableTrackingProtection_HarmfulAddon": {
+    "message": "Block harmful add-ons (Firefox 147+)"
+  },
   "policy_description_EnableTrackingProtection_SuspectedFingerprinting": {
     "message": "Suspektne zběrarje palcow (fingerprinters) blokěrowaś (Firefox 142+, Firefox ESR 140.2+)"
   },

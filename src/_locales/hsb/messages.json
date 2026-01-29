@@ -596,6 +596,9 @@
   "policy_description_EnableTrackingProtection_Fingerprinting": {
     "message": "Znate hromadźaki porstow (fingerprinters) blokować"
   },
+  "policy_description_EnableTrackingProtection_HarmfulAddon": {
+    "message": "Block harmful add-ons (Firefox 147+)"
+  },
   "policy_description_EnableTrackingProtection_SuspectedFingerprinting": {
     "message": "Podhladne hromadźaki porstow (fingerprinters) blokować (Firefox 142+, Firefox ESR 140.2+)"
   },

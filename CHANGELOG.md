@@ -8,6 +8,8 @@
 
 - Added support for the DisableRemoteImprovements policy to prevent Firefox from applying performance, stability, and
   feature changes between updates, see [#354](https://github.com/cadeyrn/enterprise-policy-generator/issues/354)
+- Added support for the HarmfulAddon option in the EnableTrackingProtection policy to block harmful add-ons, see
+  [#355](https://github.com/cadeyrn/enterprise-policy-generator/issues/355)
 - Some small policies cleanup, see [#351](https://github.com/cadeyrn/enterprise-policy-generator/issues/351)
 
 #### Notable Changes
