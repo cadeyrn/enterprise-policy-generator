@@ -61,11 +61,11 @@ The add-on is currently available in the following languages:
 
 Enterprise Policy Generator needs several permissions to work properly.
 
-#### mandatory permissions
+#### Mandatory Permissions
 
-**No special permissions are needed to install and use Enterprise Policy Generator!**
+No special permissions are needed to install and use Enterprise Policy Generator!
 
-#### optional permissions
+#### Optional Permissions
 
 This permission is not needed to install and use Enterprise Policy Generator but Enterprise Policy Generator will
 ask you at runtime once the following permissions is needed:
@@ -75,7 +75,7 @@ ask you at runtime once the following permissions is needed:
 This permission is needed for providing the option to download the generated “policies.json” file or to export
 configurations.
 
-#### silent permissions
+#### Silent Permissions
 
 Enterprise Policy Generator needs some more permissions, but Firefox does not prompt for the following permissions:
 
