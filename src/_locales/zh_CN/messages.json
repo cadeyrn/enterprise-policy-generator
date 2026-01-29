@@ -470,6 +470,9 @@
   "policy_description_DisableProfileRefresh": {
     "message": "禁用 about:support 页面中的“翻新 Firefox” 按钮"
   },
+  "policy_description_DisableRemoteImprovements": {
+    "message": "Prevent Firefox from applying performance, stability, and feature changes between updates"
+  },
   "policy_description_DisableSafeMode": {
     "message": "禁用以安全模式重启浏览器菜单项"
   },

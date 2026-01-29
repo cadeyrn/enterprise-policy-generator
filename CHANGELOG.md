@@ -6,6 +6,8 @@
 
 #### Enterprise Policies
 
+- Added support for the DisableRemoteImprovements policy to prevent Firefox from applying performance, stability, and
+  feature changes between updates, see [#354](https://github.com/cadeyrn/enterprise-policy-generator/issues/354)
 - Some small policies cleanup, see [#351](https://github.com/cadeyrn/enterprise-policy-generator/issues/351)
 
 #### Notable Changes

@@ -470,6 +470,9 @@
   "policy_description_DisableProfileRefresh": {
     "message": "Désactivez le bouton \"Refresh Firefox\" dans about:support"
   },
+  "policy_description_DisableRemoteImprovements": {
+    "message": "Prevent Firefox from applying performance, stability, and feature changes between updates"
+  },
   "policy_description_DisableSafeMode": {
     "message": "Désactivez l'option du menu pour redémarrer Firefox avec les add-ons désactivés. (mode sans échec)"
   },

@@ -470,6 +470,9 @@
   "policy_description_DisableProfileRefresh": {
     "message": "Tłocašk „Firefox wótnowiś“ w about:support znjemóžniś"
   },
+  "policy_description_DisableRemoteImprovements": {
+    "message": "Prevent Firefox from applying performance, stability, and feature changes between updates"
+  },
   "policy_description_DisableSafeMode": {
     "message": "Menijowy zapisk znjemóžniś, aby se Firefox ze znjemóžnjonymi rozšyrjenjami znowego startował (wěsty modus)"
   },

@@ -470,6 +470,9 @@
   "policy_description_DisableProfileRefresh": {
     "message": "Отключить кнопку \"Обновить Firefox\" в about:support"
   },
+  "policy_description_DisableRemoteImprovements": {
+    "message": "Prevent Firefox from applying performance, stability, and feature changes between updates"
+  },
   "policy_description_DisableSafeMode": {
     "message": "Отключить пункт меню \"Перезапустить без дополнений\""
   },

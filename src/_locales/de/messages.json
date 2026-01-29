@@ -470,6 +470,9 @@
   "policy_description_DisableProfileRefresh": {
     "message": "Deaktiviere die „Firefox bereinigen“-Schaltfläche in about:support"
   },
+  "policy_description_DisableRemoteImprovements": {
+    "message": "Firefox daran hindern, Funktionen, Leistung und Stabilität zwischen den Updates zu verbessern"
+  },
   "policy_description_DisableSafeMode": {
     "message": "Deaktiviere den Menü-Eintrag, um Firefox mit deaktivierten Erweiterungen neu zu starten (Abgesicherter Modus)"
   },

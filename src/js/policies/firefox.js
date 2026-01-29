@@ -3306,6 +3306,12 @@ const policies = {
     }
   },
 
+  DisableRemoteImprovements : {
+    first_available : { mainstream : '148.0', esr : null },
+    ui_category : 'updates-and-data',
+    type : 'boolean'
+  },
+
   DisableFirefoxStudies : {
     first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'updates-and-data',
