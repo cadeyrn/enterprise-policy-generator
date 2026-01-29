@@ -471,7 +471,7 @@
     "message": "Отключить кнопку \"Обновить Firefox\" в about:support"
   },
   "policy_description_DisableRemoteImprovements": {
-    "message": "Prevent Firefox from applying performance, stability, and feature changes between updates"
+    "message": "Запретить Firefox применять изменения производительности, стабильности и функционала между обновлениями"
   },
   "policy_description_DisableSafeMode": {
     "message": "Отключить пункт меню \"Перезапустить без дополнений\""
@@ -597,7 +597,7 @@
     "message": "Блокировать известные цифровые отпечатки"
   },
   "policy_description_EnableTrackingProtection_HarmfulAddon": {
-    "message": "Block harmful add-ons (Firefox 147+)"
+    "message": "Блокировать вредоносные расширения (Firefox 147+)"
   },
   "policy_description_EnableTrackingProtection_SuspectedFingerprinting": {
     "message": "Блокировать подозреваемые цифровые отпечатки (Firefox 142+, Firefox ESR 140.2+)"
@@ -747,22 +747,22 @@
     "message": "Настройка домашней страницы Firefox"
   },
   "policy_description_FirefoxHome_Highlights": {
-    "message": "Show recent activity"
+    "message": "Показывать последние действия"
   },
   "policy_description_FirefoxHome_Pocket": {
-    "message": "Show recommended stories"
+    "message": "Показывать рекомендуемые истории"
   },
   "policy_description_FirefoxHome_Search": {
-    "message": "Show search field"
+    "message": "Показывать поле поиска"
   },
   "policy_description_FirefoxHome_SponsoredPocket": {
-    "message": "Show sponsored recommended stories"
+    "message": "Показывать спонсируемые истории Pocket"
   },
   "policy_description_FirefoxHome_SponsoredTopSites": {
-    "message": "Show sponsored shortcuts"
+    "message": "Показывать спонсируемые популярные сайты"
   },
   "policy_description_FirefoxHome_TopSites": {
-    "message": "Show shortcuts"
+    "message": "Показывать ярлыки"
   },
   "policy_description_FirefoxSuggest": {
     "message": "Настройка Firefox Suggest"
@@ -774,7 +774,7 @@
     "message": "Показывать спонсированные предложения в адресной строке"
   },
   "policy_description_FirefoxSuggest_WebSuggestions": {
-    "message": "Показывать неспонсируемые предложения в адресной панели (Firefox 146+: all suggestions)"
+    "message": "Показывать неспонсируемые предложения в адресной панели (Firefox 146+: все предложения)"
   },
   "policy_description_GenerativeAI": {
     "message": "Включить или отключить получение данных от ИИ"
@@ -876,7 +876,7 @@
     "message": "Сайты, которые не будут автоматически переключаться на HTTPS"
   },
   "policy_description_HttpsOnlyMode": {
-    "message": "Configure HTTPS-Only Mode"
+    "message": "Настройка режима \"Только HTTPS\""
   },
   "policy_description_HttpsOnlyMode_allowed": {
     "message": "Отключён по умолчанию , но пользователь может включить"
