@@ -3306,14 +3306,14 @@ const policies = {
     }
   },
 
-  DisableTelemetry : {
-    first_available : { mainstream : '62.0', esr : '60.0' },
+  DisableFirefoxStudies : {
+    first_available : { mainstream : '60.0', esr : '60.0' },
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
 
-  DisableFirefoxStudies : {
-    first_available : { mainstream : '60.0', esr : '60.0' },
+  DisableTelemetry : {
+    first_available : { mainstream : '62.0', esr : '60.0' },
     ui_category : 'updates-and-data',
     type : 'boolean'
   },
