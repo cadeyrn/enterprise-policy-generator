@@ -15,7 +15,7 @@
 #### Notable Changes
 
 - Removed the browser_style property from the manifest because it's no longer supported by Firefox and not needed
-  anyway, [#353](https://github.com/cadeyrn/enterprise-policy-generator/issues/353)
+  anyway, see [#353](https://github.com/cadeyrn/enterprise-policy-generator/issues/353)
 - Changed copyright year from 2025 to 2026, see
   [#352](https://github.com/cadeyrn/enterprise-policy-generator/issues/352)
 
