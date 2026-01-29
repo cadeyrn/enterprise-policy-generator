@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### Version 7.3.0 (Work in Progress)
+### [Version 7.3.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v7.3.0) (2026-01-29)
 
 #### Enterprise Policies
 
@@ -29,6 +29,9 @@
 - Updated web-ext from version 9.1.0 to 9.2.0
 
 **This is the last release with support for Firefox 128.**
+
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v7.2.0...v7.3.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-7.3.0)
 
 ---
 
