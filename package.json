@@ -21,7 +21,7 @@
     "Firefox >= 128"
   ],
   "devDependencies": {
-    "@eslint/json": "0.14.0",
+    "@eslint/json": "1.0.0",
     "@stylistic/eslint-plugin": "5.7.1",
     "eslint": "9.39.2",
     "eslint-plugin-jsdoc": "62.5.2",
