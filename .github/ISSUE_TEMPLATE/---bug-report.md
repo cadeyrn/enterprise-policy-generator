@@ -23,8 +23,8 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Version information:**
- - Firefox version: [e.g. Firefox 142, Firefox ESR 128.14]
- - Enterprise Policy Generator version [e.g. 6.6.0]
+ - Firefox version: [e.g., Firefox 148, Firefox ESR 140.8]
+ - Enterprise Policy Generator version [e.g. 8.0.0]
 
 **Additional context**
 Add any other context about the problem here.

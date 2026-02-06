@@ -4,6 +4,12 @@
 
 ### Version 8.0.0 (Work in Progress)
 
+#### Enhancements
+
+- Firefox 140 or higher is required now. Also, Enterprise Policy Generator no
+  longer displays the minimum required Firefox version for policies implemented before Firefox 140.0, see
+  [#316](https://github.com/cadeyrn/enterprise-policy-generator/issues/316)
+
 #### Dependencies
 
 - Updated eslint/json from version 0.14.0 to 1.0.0

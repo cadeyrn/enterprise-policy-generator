@@ -720,7 +720,7 @@
     "message": "Add-on ID"
   },
   "policy_description_ExtensionSettings_private_browsing": {
-    "message": "Run in private windows (Firefox 136+, Firefox ESR 128.8+)"
+    "message": "Run in private windows"
   },
   "policy_description_ExtensionSettings_restricted_domains": {
     "message": "Domains on which content scripts can't be run"
@@ -1281,7 +1281,7 @@
     "message": "Cookies and site data"
   },
   "policy_description_SanitizeOnShutdown_FormData": {
-    "message": "Saved form info (Firefox 136+)"
+    "message": "Saved form info"
   },
   "policy_description_SanitizeOnShutdown_History": {
     "message": "Browsing and download history"
@@ -1422,7 +1422,7 @@
     "message": "Recommend browser features"
   },
   "policy_description_UserMessaging_FirefoxLabs": {
-    "message": "Show “Firefox Labs” section in the Firefox settings (Firefox 130.0.1+)"
+    "message": "Show “Firefox Labs” section in the Firefox settings"
   },
   "policy_description_UserMessaging_MoreFromMozilla": {
     "message": "Show “More from Mozilla” section in the settings"

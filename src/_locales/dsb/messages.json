@@ -720,7 +720,7 @@
     "message": "Rozšyrjeński ID"
   },
   "policy_description_ExtensionSettings_private_browsing": {
-    "message": "W priwatnych woknach wuwjasć (Firefox 136+, Firefox ESR 128.8+)"
+    "message": "W priwatnych woknach wuwjasć"
   },
   "policy_description_ExtensionSettings_restricted_domains": {
     "message": "Domeny, na kótarychž wopśimjeśowe skripty njedaju se wuwjasć"
@@ -1281,7 +1281,7 @@
     "message": "Cookieje a daty sedła"
   },
   "policy_description_SanitizeOnShutdown_FormData": {
-    "message": "Skłaźone formularowe informacije (Firefox 136+)"
+    "message": "Skłaźone formularowe informacije"
   },
   "policy_description_SanitizeOnShutdown_History": {
     "message": "Pśeglědowańska a ześěgnjeńska historija"
@@ -1422,7 +1422,7 @@
     "message": "Funkcije wobglědowaka dopórucyś"
   },
   "policy_description_UserMessaging_FirefoxLabs": {
-    "message": "Wótrězk „Firefox Labs“ w nastajenjach Firefox pokazaś (Firefox 130.0.1+)"
+    "message": "Wótrězk „Firefox Labs“ w nastajenjach Firefox pokazaś"
   },
   "policy_description_UserMessaging_MoreFromMozilla": {
     "message": "Wótrězk „Wěcej wót Mozilla“ w nastajenjach pokazaś"

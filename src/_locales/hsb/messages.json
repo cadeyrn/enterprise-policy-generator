@@ -720,7 +720,7 @@
     "message": "Rozšěrjenski ID"
   },
   "policy_description_ExtensionSettings_private_browsing": {
-    "message": "W priwatnych woknach wuwjesć (Firefox 136+, Firefox ESR 128.8+)"
+    "message": "W priwatnych woknach wuwjesć"
   },
   "policy_description_ExtensionSettings_restricted_domains": {
     "message": "Domeny, na kotrychž wobsahowe skripty njedadźa so wuwjesć"
@@ -1281,7 +1281,7 @@
     "message": "Placki a daty sydła"
   },
   "policy_description_SanitizeOnShutdown_FormData": {
-    "message": "Składowane formularowe informacije (Firefox 136+)"
+    "message": "Składowane formularowe informacije"
   },
   "policy_description_SanitizeOnShutdown_History": {
     "message": "Přehladowanska a sćehnjenska historija"
@@ -1422,7 +1422,7 @@
     "message": "Funkcije wobhladowaka doporučić"
   },
   "policy_description_UserMessaging_FirefoxLabs": {
-    "message": "Wotrězk „Firefox Labs“ w nastajenjach Firefox pokazać (Firefox 130.0.1+)"
+    "message": "Wotrězk „Firefox Labs“ w nastajenjach Firefox pokazać"
   },
   "policy_description_UserMessaging_MoreFromMozilla": {
     "message": "Wotrězk „Wjace wot Mozilla“ w nastajenjach pokazać"

@@ -720,7 +720,7 @@
     "message": "Erweiterungs-ID"
   },
   "policy_description_ExtensionSettings_private_browsing": {
-    "message": "In privaten Fenstern ausführen (Firefox 136+, Firefox ESR 128.8+)"
+    "message": "In privaten Fenstern ausführen"
   },
   "policy_description_ExtensionSettings_restricted_domains": {
     "message": "Domains, auf denen Content-Scripts nicht ausgeführt werden können"
@@ -1281,7 +1281,7 @@
     "message": "Cookies und Website-Daten"
   },
   "policy_description_SanitizeOnShutdown_FormData": {
-    "message": "Gespeicherte Formularinformationen (Firefox 136+)"
+    "message": "Gespeicherte Formularinformationen"
   },
   "policy_description_SanitizeOnShutdown_History": {
     "message": "Besuchte Seiten und Download-Chronik"
@@ -1422,7 +1422,7 @@
     "message": "Browser-Funktionen empfehlen"
   },
   "policy_description_UserMessaging_FirefoxLabs": {
-    "message": "„Firefox Labs“-Abschnitt in den Firefox-Einstellungen anzeigen (Firefox 130.0.1+)"
+    "message": "„Firefox Labs“-Abschnitt in den Firefox-Einstellungen anzeigen"
   },
   "policy_description_UserMessaging_MoreFromMozilla": {
     "message": "Abschnitt „Mehr von Mozilla“ in den Einstellungen anzeigen"

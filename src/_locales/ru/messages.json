@@ -720,7 +720,7 @@
     "message": "ID расширения"
   },
   "policy_description_ExtensionSettings_private_browsing": {
-    "message": "Запускать в приватных окнах (Firefox 136+, Firefox ESR 128.8+)"
+    "message": "Запускать в приватных окнах"
   },
   "policy_description_ExtensionSettings_restricted_domains": {
     "message": "Домены, для которых запрещено выполнять скрипты"
@@ -1281,7 +1281,7 @@
     "message": "Куки и данные сайтов"
   },
   "policy_description_SanitizeOnShutdown_FormData": {
-    "message": "Сохранённые данные форм (Firefox 136+)"
+    "message": "Сохранённые данные форм"
   },
   "policy_description_SanitizeOnShutdown_History": {
     "message": "Журнал посещений и загрузок"
@@ -1422,7 +1422,7 @@
     "message": "Рекомендовать функции браузера"
   },
   "policy_description_UserMessaging_FirefoxLabs": {
-    "message": "Показывать раздел \"Лаборатория Firefox\" в настройках (Firefox 130.0.1+)"
+    "message": "Показывать раздел \"Лаборатория Firefox\" в настройках"
   },
   "policy_description_UserMessaging_MoreFromMozilla": {
     "message": "Показывать раздел \"Больше от Mozilla\" в настройках"
