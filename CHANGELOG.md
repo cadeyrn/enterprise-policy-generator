@@ -6,6 +6,9 @@
 
 #### Enhancements
 
+- Enterprise Policy Generator does not collect any data. A new property in the extension manifest makes this explicit.
+  Users now see a corresponding note during installation and in the add-ons manager, see
+  [#341](https://github.com/cadeyrn/enterprise-policy-generator/issues/341)
 - Firefox 140 or higher is required now. Also, Enterprise Policy Generator no
   longer displays the minimum required Firefox version for policies implemented before Firefox 140.0, see
   [#316](https://github.com/cadeyrn/enterprise-policy-generator/issues/316)
