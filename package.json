@@ -33,7 +33,7 @@
     "web-ext": "9.2.0"
   },
   "scripts": {
-    "build": "web-ext build --source-dir ./src -a ../dist",
+    "build": "web-ext build --source-dir ./src -a ./dist",
     "lint": "npm run lint:html && npm run lint:js && npm run lint:css && npm run lint:web-ext",
     "lint:css": "stylelint ./src/css/**/*.css || true",
     "lint:html": "eslint ./src/html/**/*.html || true",
