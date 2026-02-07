@@ -15,6 +15,7 @@
 
 #### Dependencies
 
+- Added sourcemeta/jsonschema for validation of the new JSON configuration
 - Updated eslint/json from version 0.14.0 to 1.0.0
 - Updated eslint-plugin-jsdoc from version 61.4.1 to 62.5.3
 - Updated stylelint from version 17.0.0 to 17.1.1

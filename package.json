@@ -23,6 +23,7 @@
   "devDependencies": {
     "@eslint/json": "1.0.0",
     "@html-eslint/eslint-plugin": "0.54.2",
+    "@sourcemeta/jsonschema": "14.7.1",
     "@stylistic/eslint-plugin": "5.7.1",
     "eslint": "9.39.2",
     "eslint-plugin-jsdoc": "62.5.3",
@@ -34,10 +35,12 @@
   },
   "scripts": {
     "build": "web-ext build --source-dir ./src -a ./dist",
-    "lint": "npm run lint:html && npm run lint:js && npm run lint:css && npm run lint:web-ext",
+    "lint": "npm run lint:html && npm run lint:js && npm run lint:css && npm run lint:policies-schema && npm run lint:policies && npm run lint:web-ext",
     "lint:css": "stylelint ./src/css/**/*.css || true",
     "lint:html": "eslint ./src/html/**/*.html || true",
     "lint:js": "eslint ./src/js/**/*.js ./src/_locales/**/*.json || true",
+    "lint:policies-schema": "jsonschema lint policies-schema.json --exclude top_level_title --exclude top_level_description --exclude top_level_examples --exclude unnecessary_allof_wrapper || true",
+    "lint:policies": "jsonschema validate policies-schema.json src/policies/*.json || true",
     "lint:web-ext": "web-ext lint --source-dir ./src || true",
     "run:nightly": "web-ext run --source-dir ./src --firefox=nightly",
     "run:beta": "web-ext run --source-dir ./src --firefox=beta",
