@@ -2,11 +2,11 @@
 
 const gulp = require('gulp');
 const gulpEslint = require('gulp-eslint-new');
-const gulpHtmllint = require('gulp-htmllint');
 const jsdoc = require('gulp-jsdoc3');
 
-gulp.task('lint-html', () => gulp.src(['./src/html/*.html'])
-  .pipe(gulpHtmllint({ config : '.htmllintrc.json' }))
+gulp.task('lint-html', () => gulp.src(['./src/html/**/*.html'])
+  .pipe(gulpEslint())
+  .pipe(gulpEslint.format())
 );
 
 gulp.task('lint-js', () => gulp.src(['gulpfile.js', './src/js/**/*.js', './src/_locales/**/*.json'])
