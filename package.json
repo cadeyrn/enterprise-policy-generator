@@ -30,9 +30,6 @@
     "eslint-plugin-xss": "0.1.12",
     "gulp": "5.0.1",
     "gulp-eslint-new": "2.5.0",
-    "gulp-jsdoc3": "3.0.0",
-    "jsdoc": "4.0.5",
-    "jsdoc-strip-async-await": "0.1.0",
     "npm-run-all": "4.1.5",
     "stylelint": "17.1.1",
     "stylelint-order": "7.0.1",
@@ -40,7 +37,6 @@
   },
   "scripts": {
     "build": "cd src && web-ext build -a ../dist",
-    "docs": "gulp docs",
     "lint": "npm-run-all lint:*",
     "lint:html": "gulp lint-html",
     "lint:js": "gulp lint-js",
