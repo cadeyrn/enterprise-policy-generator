@@ -1,4 +1,5 @@
 import globals from 'globals';
+import html from '@html-eslint/eslint-plugin';
 import jsdoc from 'eslint-plugin-jsdoc';
 import json from '@eslint/json';
 import sortRequires from 'eslint-plugin-sort-requires';
