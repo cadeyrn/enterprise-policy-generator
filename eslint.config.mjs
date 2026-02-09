@@ -46,7 +46,6 @@ export default [
       '@stylistic/generator-star-spacing': 'error',
       '@stylistic/implicit-arrow-linebreak': ['error', 'beside'],
       '@stylistic/indent': ['error', 2, { 'SwitchCase': 1 }],
-      '@stylistic/jsx-quotes': 'error',
       '@stylistic/key-spacing': ['error'],
       '@stylistic/keyword-spacing': 'error',
       '@stylistic/line-comment-position': 'error',

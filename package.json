@@ -24,7 +24,7 @@
     "@eslint/json": "1.0.0",
     "@html-eslint/eslint-plugin": "0.54.2",
     "@sourcemeta/jsonschema": "14.7.1",
-    "@stylistic/eslint-plugin": "5.7.1",
+    "@stylistic/eslint-plugin": "5.8.0",
     "eslint": "9.39.2",
     "eslint-plugin-jsdoc": "62.5.4",
     "eslint-plugin-sort-requires": "2.1.0",
