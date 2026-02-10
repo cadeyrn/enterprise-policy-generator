@@ -18,7 +18,7 @@
 - Added sourcemeta/jsonschema for validation of the new JSON configuration
 - Updated eslint/json from version 0.14.0 to 1.0.0
 - Updated eslint-plugin-jsdoc from version 61.4.1 to 62.5.4
-- Updated stylelint from version 17.0.0 to 17.1.1
+- Updated stylelint from version 17.0.0 to 17.2.0
 - Updated stylistic/eslint-plugin from version 5.7.1 to 5.8.0
 - Replaced htmllint and gulp-htmllint with html-eslint
 - Removed gulp, gulp-eslint-new, gulp-jsdoc3, jsdoc, jsdoc-strip-async-await, and npm-run-all
