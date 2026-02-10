@@ -20,6 +20,7 @@
 - Updated eslint-plugin-jsdoc from version 61.4.1 to 62.5.4
 - Updated stylelint from version 17.0.0 to 17.2.0
 - Updated stylistic/eslint-plugin from version 5.7.1 to 5.8.0
+- Updated web-ext from version 9.2.0 to 9.3.0
 - Replaced htmllint and gulp-htmllint with html-eslint
 - Removed gulp, gulp-eslint-new, gulp-jsdoc3, jsdoc, jsdoc-strip-async-await, and npm-run-all
 
