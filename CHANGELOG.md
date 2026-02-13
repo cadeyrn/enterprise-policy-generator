@@ -12,6 +12,25 @@
 - Firefox 140 or higher is required now. Also, Enterprise Policy Generator no
   longer displays the minimum required Firefox version for policies implemented before Firefox 140.0, see
   [#316](https://github.com/cadeyrn/enterprise-policy-generator/issues/316)
+- Large parts of the extension backend have been rewritten from scratch. The new code base is significantly leaner and
+  more comprehensible, resulting in improved maintainability and allowing for faster delivery of updates. Further
+  advantages include greater consistency in layout and fewer bugs in edge cases. The development workflow has also been
+  updated, and a schema for validating the completely new JSON-based configuration has been introduced to simplify
+  development. see [#306](https://github.com/cadeyrn/enterprise-policy-generator/issues/306)
+- Revised design, which is more modern and has also been optimized for smaller screen sizes. For content that can be
+  inserted multiple times, it is now much clearer which input field belongs to which item, see
+  [#306](https://github.com/cadeyrn/enterprise-policy-generator/issues/306)
+- Significantly improved accessibility, including greatly improved keyboard navigation. As part of this, two completely
+  new keyboard shortcuts have been introduced: You can use <kbd>Shift</kbd> + <kbd>F</kbd> to focus the filter field,
+  and <kbd>Shift</kbd> + <kbd>G</kbd> to focus the button to generate the policies, see
+  [#306](https://github.com/cadeyrn/enterprise-policy-generator/issues/306)
+- Added validation for fields that expect specific placeholder, see
+  [#306](https://github.com/cadeyrn/enterprise-policy-generator/issues/306)
+
+#### Enterprise Policies
+
+- Options that used the legacy version of the `Preferences` policy have been removed. These can all be replaced by the
+  newer `Preferences` policy, see [#306](https://github.com/cadeyrn/enterprise-policy-generator/issues/306)
 
 #### Dependencies
 

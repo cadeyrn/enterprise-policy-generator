@@ -1,0 +1,3036 @@
+{
+  "policies": {
+    "BlockAboutAddons": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["block-access"],
+      "schema": "boolean"
+    },
+    "BlockAboutConfig": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["block-access"],
+      "schema": "boolean"
+    },
+    "BlockAboutProfiles": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["block-access"],
+      "schema": "boolean"
+    },
+    "BlockAboutSupport": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["block-access"],
+      "schema": "boolean"
+    },
+    "GenerativeAI": {
+      "availability": { "mainstream": "144.0", "esr": "140.4" },
+      "tags": ["disable-features"],
+      "schema": "object",
+      "lockable": true,
+      "properties": [
+        {
+          "name": "Enabled",
+          "label": "policy_description_GenerativeAI_Enabled",
+          "schema": "enum",
+          "preset": "enable_optional"
+        },
+        {
+          "name": "Chatbot",
+          "label": "policy_description_GenerativeAI_Chatbot",
+          "schema": "enum",
+          "preset": "enable_optional"
+        },
+        {
+          "name": "LinkPreviews",
+          "label": "policy_description_GenerativeAI_LinkPreviews",
+          "schema": "enum",
+          "preset": "enable_optional"
+        },
+        {
+          "name": "TabGroups",
+          "label": "policy_description_GenerativeAI_TabGroups",
+          "schema": "enum",
+          "preset": "enable_optional"
+        }
+      ]
+    },
+    "VisualSearchEnabled": {
+      "availability": { "mainstream": "144.0", "esr": null },
+      "tags": ["disable-features"],
+      "schema": "enum",
+      "preset": "enable"
+    },
+    "DisableFormHistory": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["disable-features"],
+      "schema": "boolean"
+    },
+    "DisableFirefoxScreenshots": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["disable-features"],
+      "schema": "boolean"
+    },
+    "DisableDeveloperTools": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["disable-features"],
+      "schema": "boolean"
+    },
+    "DisableAccounts": {
+      "availability": { "mainstream": "119.0", "esr": "128.0" },
+      "tags": ["disable-features"],
+      "schema": "boolean"
+    },
+    "DisableSetDesktopBackground": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["disable-features"],
+      "schema": "boolean"
+    },
+    "DisableForgetButton": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["disable-features"],
+      "schema": "boolean"
+    },
+    "DisableProfileImport": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["disable-features"],
+      "schema": "boolean"
+    },
+    "DisableSafeMode": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["disable-features"],
+      "schema": "boolean"
+    },
+    "DisableProfileRefresh": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["disable-features"],
+      "schema": "boolean"
+    },
+    "DisableFeedbackCommands": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["disable-features"],
+      "schema": "boolean"
+    },
+    "PictureInPicture": {
+      "availability": { "mainstream": "78.0", "esr": "78.0" },
+      "tags": ["disable-features"],
+      "schema": "object",
+      "lockable": true,
+      "properties": [
+        {
+          "name": "Enabled",
+          "schema": "enum",
+          "preset": "enable_optional"
+        }
+      ]
+    },
+    "TranslateEnabled": {
+      "availability": { "mainstream": "126.0", "esr": "128.0" },
+      "tags": ["disable-features"],
+      "schema": "enum",
+      "preset": "enable"
+    },
+    "UserMessaging": {
+      "availability": { "mainstream": "75.0", "esr": "68.7" },
+      "tags": ["disable-features"],
+      "schema": "object",
+      "lockable": true,
+      "properties": [
+        {
+          "name": "ExtensionRecommendations",
+          "label": "policy_description_UserMessaging_ExtensionRecommendations",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "FeatureRecommendations",
+          "label": "policy_description_UserMessaging_FeatureRecommendations",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "UrlbarInterventions",
+          "label": "policy_description_UserMessaging_UrlbarInterventions",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "SkipOnboarding",
+          "label": "policy_description_UserMessaging_SkipOnboarding",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "FirefoxLabs",
+          "label": "policy_description_UserMessaging_FirefoxLabs",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "MoreFromMozilla",
+          "label": "policy_description_UserMessaging_MoreFromMozilla",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        }
+      ]
+    },
+    "DisableDefaultBrowserAgent": {
+      "availability": { "mainstream": "75.0", "esr": "78.0" },
+      "tags": ["disable-features"],
+      "note": "requirement_windows",
+      "schema": "boolean"
+    },
+    "AllowFileSelectionDialogs": {
+      "availability": { "mainstream": "124.0", "esr": "128.0" },
+      "tags": ["disable-features"],
+      "schema": "boolean",
+      "inverse": true
+    },
+    "RequestedLocales": {
+      "availability": { "mainstream": "64.0", "esr": "60.3.1" },
+      "tags": ["customization"],
+      "note": "policy_description_RequestedLocales_Requirement",
+      "link": "https://addons.mozilla.org/firefox/language-tools/",
+      "schema": "array",
+      "items": {
+        "schema": "string",
+        "placeholder": "policy_description_RequestedLocales_Value",
+        "allow_empty_value": true
+      }
+    },
+    "DisplayMenuBar": {
+      "availability": { "mainstream": "73.0", "esr": "68.5" },
+      "tags": ["customization"],
+      "note": "requirement_windows_or_linux",
+      "schema": "enum",
+      "options": [
+        {
+          "label": "policy_description_DisplayMenuBar_always",
+          "value": "always"
+        },
+        {
+          "label": "policy_description_DisplayMenuBar_never",
+          "value": "never"
+        },
+        {
+          "label": "policy_description_DisplayMenuBar_default_on",
+          "value": "default-on"
+        },
+        {
+          "label": "policy_description_DisplayMenuBar_default_off",
+          "value": "default-off"
+        }
+      ]
+    },
+    "DisplayBookmarksToolbar": {
+      "availability": { "mainstream": "109.0", "esr": "102.7" },
+      "tags": ["customization"],
+      "schema": "enum",
+      "options": [
+        {
+          "label": "policy_description_DisplayBookmarksToolbar_always",
+          "value": "always"
+        },
+        {
+          "label": "policy_description_DisplayBookmarksToolbar_never",
+          "value": "never"
+        },
+        {
+          "label": "policy_description_DisplayBookmarksToolbar_newtab",
+          "value": "newtab"
+        }
+      ]
+    },
+    "ShowHomeButton": {
+      "availability": { "mainstream": "88.0", "esr": "78.10" },
+      "tags": ["customization"],
+      "schema": "enum",
+      "preset": "boolean"
+    },
+    "Homepage": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["customization"],
+      "schema": "object",
+      "lockable": true,
+      "properties": [
+        {
+          "name": "StartPage",
+          "label": "policy_description_Homepage_StartPage",
+          "schema": "enum",
+          "options": [
+            {
+              "label": "policy_description_Homepage_StartPage_Homepage",
+              "value": "homepage"
+            },
+            {
+              "label": "policy_description_Homepage_StartPage_Homepage_locked",
+              "value": "homepage-locked"
+            },
+            {
+              "label": "policy_description_Homepage_StartPage_None",
+              "value": "none"
+            },
+            {
+              "label": "policy_description_Homepage_StartPage_Previous_Session",
+              "value": "previous-session"
+            }
+          ]
+        },
+        {
+          "name": "URL",
+          "schema": "string",
+          "placeholder": "common_url",
+          "validations": ["url"]
+        },
+        {
+          "name": "Additional",
+          "label": "policy_description_Homepage_Additional",
+          "schema": "array",
+          "items": {
+            "schema": "string",
+            "placeholder": "common_url",
+            "validations": ["url"]
+          }
+        }
+      ]
+    },
+    "FirefoxHome": {
+      "availability": { "mainstream": "68.0", "esr": "68.0" },
+      "tags": ["customization"],
+      "schema": "object",
+      "lockable": true,
+      "properties": [
+        {
+          "name": "Search",
+          "label": "policy_description_FirefoxHome_Search",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "TopSites",
+          "label": "policy_description_FirefoxHome_TopSites",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "SponsoredTopSites",
+          "label": "policy_description_FirefoxHome_SponsoredTopSites",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "Pocket",
+          "label": "policy_description_FirefoxHome_Pocket",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "SponsoredPocket",
+          "label": "policy_description_FirefoxHome_SponsoredPocket",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "Highlights",
+          "label": "policy_description_FirefoxHome_Highlights",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        }
+      ]
+    },
+    "FirefoxSuggest": {
+      "availability": { "mainstream": "118.0", "esr": "115.3" },
+      "tags": ["customization"],
+      "schema": "object",
+      "lockable": true,
+      "properties": [
+        {
+          "name": "WebSuggestions",
+          "label": "policy_description_FirefoxSuggest_WebSuggestions",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "SponsoredSuggestions",
+          "label": "policy_description_FirefoxSuggest_SponsoredSuggestions",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "ImproveSuggest",
+          "label": "policy_description_FirefoxSuggest_ImproveSuggest",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        }
+      ]
+    },
+    "NewTabPage": {
+      "availability": { "mainstream": "68.0", "esr": "68.0" },
+      "tags": ["customization"],
+      "schema": "enum",
+      "preset": "enable"
+    },
+    "Containers": {
+      "availability": { "mainstream": "113.0", "esr": "115.0" },
+      "tags": ["customization"],
+      "schema": "object",
+      "properties": [
+        {
+          "name": "Default",
+          "schema": "array",
+          "items": {
+            "schema": "object",
+            "properties": [
+              {
+                "name": "name",
+                "schema": "string",
+                "placeholder": "policy_description_Containers_name",
+                "validations": ["required"]
+              },
+              {
+                "name": "icon",
+                "label": "policy_description_Containers_icon",
+                "schema": "enum",
+                "options": [
+                  {
+                    "label": "policy_description_Containers_icon_briefcase",
+                    "value": "briefcase"
+                  },
+                  {
+                    "label": "policy_description_Containers_icon_cart",
+                    "value": "cart"
+                  },
+                  {
+                    "label": "policy_description_Containers_icon_chill",
+                    "value": "chill"
+                  },
+                  {
+                    "label": "policy_description_Containers_icon_circle",
+                    "value": "circle"
+                  },
+                  {
+                    "label": "policy_description_Containers_icon_dollar",
+                    "value": "dollar"
+                  },
+                  {
+                    "label": "policy_description_Containers_icon_fence",
+                    "value": "fence"
+                  },
+                  {
+                    "label": "policy_description_Containers_icon_fingerprint",
+                    "value": "fingerprint"
+                  },
+                  {
+                    "label": "policy_description_Containers_icon_food",
+                    "value": "food"
+                  },
+                  {
+                    "label": "policy_description_Containers_icon_fruit",
+                    "value": "fruit"
+                  },
+                  {
+                    "label": "policy_description_Containers_icon_gift",
+                    "value": "gift"
+                  },
+                  {
+                    "label": "policy_description_Containers_icon_pet",
+                    "value": "pet"
+                  },
+                  {
+                    "label": "policy_description_Containers_icon_tree",
+                    "value": "tree"
+                  },
+                  {
+                    "label": "policy_description_Containers_icon_vacation",
+                    "value": "vacation"
+                  }
+                ],
+                "sort_options": true
+              },
+              {
+                "name": "color",
+                "label": "policy_description_Containers_color",
+                "schema": "enum",
+                "options": [
+                  {
+                    "label": "policy_description_Containers_color_blue",
+                    "value": "blue"
+                  },
+                  {
+                    "label": "policy_description_Containers_color_green",
+                    "value": "green"
+                  },
+                  {
+                    "label": "policy_description_Containers_color_orange",
+                    "value": "orange"
+                  },
+                  {
+                    "label": "policy_description_Containers_color_pink",
+                    "value": "pink"
+                  },
+                  {
+                    "label": "policy_description_Containers_color_purple",
+                    "value": "purple"
+                  },
+                  {
+                    "label": "policy_description_Containers_color_red",
+                    "value": "red"
+                  },
+                  {
+                    "label": "policy_description_Containers_color_toolbar",
+                    "value": "toolbar"
+                  },
+                  {
+                    "label": "policy_description_Containers_color_turquoise",
+                    "value": "turquoise"
+                  },
+                  {
+                    "label": "policy_description_Containers_color_yellow",
+                    "value": "yellow"
+                  }
+                ],
+                "sort_options": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "SearchBar": {
+      "availability": { "mainstream": "62.0", "esr": "60.0" },
+      "tags": ["customization"],
+      "schema": "enum",
+      "options": [
+        {
+          "label": "policy_description_SearchBar_options_unified",
+          "value": "unified"
+        },
+        {
+          "label": "policy_description_SearchBar_options_separate",
+          "value": "separate"
+        }
+      ]
+    },
+    "SearchEngines": {
+      "availability": { "mainstream": "139.0", "esr": "60.0" },
+      "tags": ["customization"],
+      "schema": "object",
+      "properties": [
+        {
+          "name": "Default",
+          "schema": "string",
+          "placeholder": "policy_description_SearchEngines_Default"
+        },
+        {
+          "name": "PreventInstalls",
+          "label": "policy_description_SearchEngines_PreventInstalls",
+          "schema": "enum",
+          "options": [
+            {
+              "label": "enum_value_no_preference",
+              "value": null
+            },
+            {
+              "label": "policy_description_SearchEngines_PreventInstalls_false",
+              "value": false
+            },
+            {
+              "label": "policy_description_SearchEngines_PreventInstalls_true",
+              "value": true
+            }
+          ]
+        },
+        {
+          "name": "Add",
+          "label": "policy_description_SearchEngines_Add",
+          "schema": "array",
+          "items": {
+            "schema": "object",
+            "properties": [
+              {
+                "name": "Name",
+                "schema": "string",
+                "placeholder": "policy_description_SearchEngines_Add_Name",
+                "validations": ["required"]
+              },
+              {
+                "name": "URLTemplate",
+                "schema": "string",
+                "placeholder": "policy_description_SearchEngines_Add_URL",
+                "validations": ["required", "url"],
+                "regex": {
+                  "pattern": "{searchterms}",
+                  "error": "validation_missing_placeholder_searchterms"
+                }
+              },
+              {
+                "name": "IconURL",
+                "schema": "string",
+                "placeholder": "policy_description_SearchEngines_Add_IconURL",
+                "validations": ["url-or-data"]
+              },
+              {
+                "name": "Alias",
+                "schema": "string",
+                "placeholder": "policy_description_SearchEngines_Add_Alias"
+              },
+              {
+                "name": "Description",
+                "schema": "string",
+                "placeholder": "policy_description_SearchEngines_Add_Description"
+              },
+              {
+                "name": "SuggestURLTemplate",
+                "schema": "string",
+                "placeholder": "policy_description_SearchEngines_Add_SuggestURLTemplate",
+                "validations": ["url"],
+                "regex": {
+                  "pattern": "{searchterms}",
+                  "error": "validation_missing_placeholder_searchterms"
+                }
+              },
+              {
+                "name": "Method",
+                "label": "policy_description_SearchEngines_Add_Method",
+                "schema": "enum",
+                "options": [
+                  {
+                    "label": "policy_description_SearchEngines_Add_Method_GET",
+                    "value": "GET"
+                  },
+                  {
+                    "label": "policy_description_SearchEngines_Add_Method_POST",
+                    "value": "POST"
+                  }
+                ]
+              },
+              {
+                "name": "PostData",
+                "schema": "string",
+                "placeholder": "policy_description_SearchEngines_Add_PostData"
+              },
+              {
+                "name": "Encoding",
+                "schema": "string",
+                "placeholder": "policy_description_SearchEngines_Add_Encoding"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Remove",
+          "label": "policy_description_SearchEngines_Remove",
+          "schema": "array",
+          "items": {
+            "schema": "string",
+            "placeholder": "policy_description_SearchEngines_Remove_Name"
+          }
+        }
+      ]
+    },
+    "NoDefaultBookmarks": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["customization"],
+      "schema": "boolean"
+    },
+    "Bookmarks": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["customization"],
+      "schema": "array",
+      "items": {
+        "schema": "object",
+        "properties": [
+          {
+            "name": "Title",
+            "schema": "string",
+            "placeholder": "policy_description_Bookmarks_Title",
+            "validations": ["required"]
+          },
+          {
+            "name": "URL",
+            "schema": "string",
+            "placeholder": "common_url",
+            "validations": ["required", "url"]
+          },
+          {
+            "name": "Favicon",
+            "schema": "string",
+            "placeholder": "policy_description_Bookmarks_Favicon",
+            "validations": ["url"]
+          },
+          {
+            "name": "Folder",
+            "schema": "string",
+            "placeholder": "policy_description_Bookmarks_Folder"
+          },
+          {
+            "name": "Placement",
+            "label": "policy_description_Bookmarks_Placement",
+            "schema": "enum",
+            "options": [
+              {
+                "label": "policy_description_Bookmarks_Placement_Toolbar",
+                "value": "toolbar"
+              },
+              {
+                "label": "policy_description_Bookmarks_Placement_Menu",
+                "value": "menu"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "ManagedBookmarks": {
+      "availability": { "mainstream": "83.0", "esr": "78.5" },
+      "tags": ["customization"],
+      "schema": "array",
+      "items": {
+        "schema": "object",
+        "properties": [
+          {
+            "name": "name",
+            "schema": "string",
+            "placeholder": "policy_description_ManagedBookmarks_name",
+            "validations": ["required"]
+          },
+          {
+            "name": "url",
+            "schema": "string",
+            "placeholder": "common_url",
+            "validations": ["required", "url"]
+          }
+        ],
+        "addition": {
+          "schema": "object",
+          "properties": [
+            {
+              "name": "toplevel_name",
+              "schema": "string",
+              "placeholder": "policy_description_ManagedBookmarks_toplevel_name",
+              "validations": ["required"]
+            }
+          ]
+        }
+      }
+    },
+    "Extensions": {
+      "availability": { "mainstream": "62.0", "esr": "60.0" },
+      "tags": ["customization"],
+      "deprecation": "policy_description_Extensions_Deprecated",
+      "schema": "object",
+      "properties": [
+        {
+          "name": "Install",
+          "label": "policy_description_Extensions_Install",
+          "schema": "array",
+          "items": {
+            "schema": "string",
+            "placeholder": "policy_description_Extensions_Install_URL_or_Path"
+          }
+        },
+        {
+          "name": "Uninstall",
+          "label": "policy_description_Extensions_Uninstall",
+          "schema": "array",
+          "items": {
+            "schema": "string",
+            "placeholder": "policy_description_Extensions_Uninstall_ID"
+          }
+        },
+        {
+          "name": "Locked",
+          "label": "policy_description_Extensions_Locked",
+          "schema": "array",
+          "items": {
+            "schema": "string",
+            "placeholder": "policy_description_Extensions_Locked_ID"
+          }
+        }
+      ]
+    },
+    "ExtensionSettings": {
+      "availability": { "mainstream": "69.0", "esr": "68.1" },
+      "tags": ["customization"],
+      "schema": "array",
+      "items": {
+        "schema": "object",
+        "label": "policy_description_ExtensionSettings_label_items",
+        "key": {
+          "placeholder": "policy_description_ExtensionSettings_key"
+        },
+        "properties": [
+          {
+            "name": "installation_mode",
+            "label": "policy_description_ExtensionSettings_installation_mode",
+            "schema": "enum",
+            "options": [
+              {
+                "label": "enum_value_no_preference",
+                "value": null
+              },
+              {
+                "label": "policy_description_ExtensionSettings_installation_mode_allowed_single",
+                "value": "allowed"
+              },
+              {
+                "label": "policy_description_ExtensionSettings_installation_mode_blocked_single",
+                "value": "blocked"
+              },
+              {
+                "label": "policy_description_ExtensionSettings_installation_mode_force_installed",
+                "value": "force_installed"
+              },
+              {
+                "label": "policy_description_ExtensionSettings_installation_mode_normal_installed",
+                "value": "normal_installed"
+              }
+            ]
+          },
+          {
+            "name": "temporarily_allow_weak_signatures",
+            "label": "policy_description_ExtensionSettings_temporarily_allow_weak_signatures_single",
+            "schema": "boolean"
+          },
+          {
+            "name": "install_url",
+            "label": "policy_description_ExtensionSettings_install_url",
+            "schema": "string",
+            "placeholder": "common_url",
+            "validations": ["url"]
+          },
+          {
+            "name": "blocked_install_message",
+            "label": "policy_description_ExtensionSettings_blocked_install_message_single",
+            "schema": "string",
+            "placeholder": "policy_description_ExtensionSettings_blocked_install_message_placeholder"
+          },
+          {
+            "name": "updates_disabled",
+            "label": "policy_description_ExtensionSettings_updates_disabled",
+            "schema": "enum",
+            "preset": "boolean_optional"
+          },
+          {
+            "name": "private_browsing",
+            "label": "policy_description_ExtensionSettings_private_browsing",
+            "schema": "enum",
+            "preset": "boolean_optional"
+          },
+          {
+            "name": "default_area",
+            "label": "policy_description_ExtensionSettings_default_area",
+            "schema": "enum",
+            "options": [
+              {
+                "label": "enum_value_no_preference",
+                "value": null
+              },
+              {
+                "label": "policy_description_ExtensionSettings_default_area_menupanel",
+                "value": "menupanel"
+              },
+              {
+                "label": "policy_description_ExtensionSettings_default_area_navbar",
+                "value": "navbar"
+              }
+            ]
+          }
+        ],
+        "addition": {
+          "schema": "object",
+          "label": "policy_description_ExtensionSettings_label_additional_items",
+          "key": {
+            "value": "*"
+          },
+          "properties": [
+            {
+              "name": "installation_mode",
+              "label": "policy_description_ExtensionSettings_installation_mode",
+              "schema": "enum",
+              "options": [
+                {
+                  "label": "enum_value_no_preference",
+                  "value": null
+                },
+                {
+                  "label": "policy_description_ExtensionSettings_installation_mode_allowed_all",
+                  "value": "allowed"
+                },
+                {
+                  "label": "policy_description_ExtensionSettings_installation_mode_blocked_all",
+                  "value": "blocked"
+                }
+              ]
+            },
+            {
+              "name": "temporarily_allow_weak_signatures",
+              "label": "policy_description_ExtensionSettings_temporarily_allow_weak_signatures",
+              "schema": "boolean"
+            },
+            {
+              "name": "install_sources",
+              "label": "policy_description_ExtensionSettings_install_sources",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "link" : "https://developer.mozilla.org/Add-ons/WebExtensions/Match_patterns"
+              }
+            },
+            {
+              "name": "allowed_types",
+              "label": "policy_description_ExtensionSettings_allowed_types",
+              "schema": "array",
+              "items": {
+                "schema": "boolean",
+                "options": [
+                  {
+                    "name": "extension",
+                    "label": "policy_description_ExtensionSettings_allowed_types_extension"
+                  },
+                  {
+                    "name": "theme",
+                    "label": "policy_description_ExtensionSettings_allowed_types_theme"
+                  },
+                  {
+                    "name": "dictionary",
+                    "label": "policy_description_ExtensionSettings_allowed_types_dictionary"
+                  },
+                  {
+                    "name": "langpack",
+                    "label": "policy_description_ExtensionSettings_allowed_types_langpack"
+                  },
+                  {
+                    "name": "sitepermission",
+                    "label": "policy_description_ExtensionSettings_allowed_types_sitepermission"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "blocked_install_message",
+              "label": "policy_description_ExtensionSettings_blocked_install_message_all",
+              "schema": "string",
+              "placeholder": "policy_description_ExtensionSettings_blocked_install_message_placeholder"
+            },
+            {
+              "name": "restricted_domains",
+              "label": "policy_description_ExtensionSettings_restricted_domains",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "3rdparty": {
+      "availability": { "mainstream": "67.0", "esr": "68.0" },
+      "tags": ["customization"],
+      "schema": "object",
+      "properties": [
+        {
+          "name": "Extensions",
+          "schema": "array",
+          "items": {
+            "schema": "string",
+            "key": {
+              "placeholder": "policy_description_3rdparty_key"
+            },
+            "textarea": true,
+            "label": "policy_description_3rdparty_JSON",
+            "placeholder": "policy_description_3rdparty_JSON_placeholder",
+            "validations": ["json", "required"]
+          }
+        }
+      ]
+    },
+    "Preferences": {
+      "availability": { "mainstream": "81.0", "esr": "78.3" },
+      "tags": ["customization"],
+      "schema": "array",
+      "items": {
+        "schema": "object",
+        "key": {
+          "placeholder": "policy_description_Preferences_key",
+          "validations": ["preference"]
+        },
+        "properties": [
+          {
+            "name": "Value",
+            "schema": "string",
+            "label": "policy_description_Preferences_Value",
+            "placeholder": "policy_description_Preferences_Value",
+            "validations": ["required"],
+            "output_filter": "type_aware"
+          },
+          {
+            "name": "Type",
+            "schema": "enum",
+            "label": "policy_description_Preferences_Type",
+            "options": [
+              {
+                "label": "enum_value_no_preference",
+                "value": null
+              },
+              {
+                "label": "policy_description_Preferences_Type_boolean",
+                "value": "boolean"
+              },
+              {
+                "label": "policy_description_Preferences_Type_string",
+                "value": "string"
+              },
+              {
+                "label": "policy_description_Preferences_Type_number",
+                "value": "number"
+              }
+            ]
+          },
+          {
+            "name": "Status",
+            "schema": "enum",
+            "label": "policy_description_Preferences_Status",
+            "options": [
+              {
+                "label": "policy_description_Preferences_Status_user",
+                "value": "user"
+              },
+              {
+                "label": "policy_description_Preferences_Status_default",
+                "value": "default"
+              },
+              {
+                "label": "policy_description_Preferences_Status_locked",
+                "value": "locked"
+              },
+              {
+                "label": "policy_description_Preferences_Status_clear",
+                "value": "clear"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "WebsiteFilter": {
+      "availability": { "mainstream": "62.0", "esr": "60.0" },
+      "tags": ["network"],
+      "link": "https://developer.mozilla.org/Add-ons/WebExtensions/Match_patterns",
+      "schema": "object",
+      "properties": [
+        {
+          "name": "Block",
+          "schema": "array",
+          "label": "policy_description_WebsiteFilter_Block",
+          "items": {
+            "schema": "string",
+            "placeholder": "common_url"
+          }
+        },
+        {
+          "name": "Exceptions",
+          "schema": "array",
+          "label": "policy_description_WebsiteFilter_Exceptions",
+          "items": {
+            "schema": "string",
+            "placeholder": "common_url"
+          }
+        }
+      ]
+    },
+    "HttpAllowlist": {
+      "availability": { "mainstream": "127.0", "esr": "128.0" },
+      "tags": ["network"],
+      "schema": "array",
+      "items": {
+        "schema": "string",
+        "placeholder": "common_url",
+        "validations": ["required", "url"]
+      }
+    },
+    "HttpsOnlyMode": {
+      "availability": { "mainstream": "127.0", "esr": "128.0" },
+      "tags": ["network"],
+      "schema": "enum",
+      "options": [
+        {
+          "label": "policy_description_HttpsOnlyMode_allowed",
+          "value": "allowed"
+        },
+        {
+          "label": "policy_description_HttpsOnlyMode_disallowed",
+          "value": "disallowed"
+        },
+        {
+          "label": "policy_description_HttpsOnlyMode_enabled",
+          "value": "enabled"
+        },
+        {
+          "label": "policy_description_HttpsOnlyMode_force_enabled",
+          "value": "force_enabled"
+        }
+      ]
+    },
+    "DNSOverHTTPS": {
+      "availability": { "mainstream": "63.0", "esr": "68.0" },
+      "tags": ["network"],
+      "schema": "object",
+      "properties": [
+        {
+          "name": "Enabled",
+          "schema": "enum",
+          "options": [
+            {
+              "label": "policy_description_DNSOverHTTPS_Enabled_true",
+              "value": true
+            },
+            {
+              "label": "policy_description_DNSOverHTTPS_Enabled_false",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "ProviderURL",
+          "schema": "string",
+          "placeholder": "policy_description_DNSOverHTTPS_ProviderURL",
+          "validations": ["url"]
+        },
+        {
+          "name": "ExcludedDomains",
+          "label": "policy_description_DNSOverHTTPS_ExcludedDomains",
+          "schema": "array",
+          "items": {
+            "schema": "string",
+            "placeholder": "common_url",
+            "validations": ["url"]
+          }
+        },
+        {
+          "name": "Fallback",
+          "label": "policy_description_DNSOverHTTPS_Fallback",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        }
+      ]
+    },
+    "NetworkPrediction": {
+      "availability": { "mainstream": "67.0", "esr": "60.7" },
+      "tags": ["network"],
+      "schema": "enum",
+      "preset": "enable"
+    },
+    "Proxy": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["network"],
+      "schema": "object",
+      "lockable": true,
+      "properties": [
+        {
+          "name": "Mode",
+          "schema": "enum",
+          "options": [
+            {
+              "label": "policy_description_Proxy_Mode_none",
+              "value": "none"
+            },
+            {
+              "label": "policy_description_Proxy_Mode_system",
+              "value": "system"
+            },
+            {
+              "label": "policy_description_Proxy_Mode_autoDetect",
+              "value": "autoDetect"
+            },
+            {
+              "label": "policy_description_Proxy_Mode_manual",
+              "value": "manual"
+            },
+            {
+              "label": "policy_description_Proxy_Mode_autoConfig",
+              "value": "autoConfig"
+            }
+          ]
+        },
+        {
+          "name": "HTTPProxy",
+          "schema": "string",
+          "placeholder": "policy_description_Proxy_HTTPProxy"
+        },
+        {
+          "name": "UseHTTPProxyForAllProtocols",
+          "schema": "enum",
+          "options": [
+            {
+              "label": "policy_description_Proxy_UseHTTPProxyForAllProtocols_true",
+              "value": true
+            },
+            {
+              "label": "policy_description_Proxy_UseHTTPProxyForAllProtocols_false",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "SSLProxy",
+          "schema": "string",
+          "placeholder": "policy_description_Proxy_SSLProxy"
+        },
+        {
+          "name": "FTPProxy",
+          "schema": "string",
+          "placeholder": "policy_description_Proxy_FTPProxy"
+        },
+        {
+          "name": "SOCKSProxy",
+          "schema": "string",
+          "placeholder": "policy_description_Proxy_SOCKSProxy"
+        },
+        {
+          "name": "SOCKSVersion",
+          "schema": "enum",
+          "options": [
+            {
+              "label": "policy_description_Proxy_SOCKSVersion_v4",
+              "value": 4
+            },
+            {
+              "label": "policy_description_Proxy_SOCKSVersion_v5",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "name": "Passthrough",
+          "schema": "string",
+          "placeholder": "policy_description_Proxy_Passthrough"
+        },
+        {
+          "name": "AutoConfigURL",
+          "schema": "string",
+          "placeholder": "policy_description_Proxy_AutoConfigURL",
+          "validations": ["url"]
+        },
+        {
+          "name": "AutoLogin",
+          "label": "policy_description_Proxy_AutoLogin",
+          "schema": "enum",
+          "options": [
+            {
+              "label": "policy_description_Proxy_AutoLogin_true",
+              "value": true
+            },
+            {
+              "label": "policy_description_Proxy_AutoLogin_false",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "UseProxyForDNS",
+          "label": "policy_description_Proxy_UseProxyForDNS",
+          "schema": "enum",
+          "options": [
+            {
+              "label": "policy_description_Proxy_UseProxyForDNS_true",
+              "value": true
+            },
+            {
+              "label": "policy_description_Proxy_UseProxyForDNS_false",
+              "value": false
+            }
+          ],
+          "default": false
+        }
+      ]
+    },
+    "Authentication": {
+      "availability": { "mainstream": "62.0", "esr": "60.0" },
+      "tags": ["network"],
+      "link": "https://htmlpreview.github.io/?https://github.com/mdn/archived-content/blob/main/files/en-us/mozilla/integrated_authentication/raw.html",
+      "schema": "object",
+      "lockable": true,
+      "properties": [
+        {
+          "name": "PrivateBrowsing",
+          "label": "policy_description_Authentication_PrivateBrowsing",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "SPNEGO",
+          "label": "policy_description_Authentication_SPNEGO",
+          "schema": "array",
+          "items": {
+            "schema": "string",
+            "placeholder": "common_url"
+          }
+        },
+        {
+          "name": "Delegated",
+          "label": "policy_description_Authentication_Delegated",
+          "schema": "array",
+          "items": {
+            "schema": "string",
+            "placeholder": "common_url"
+          }
+        },
+        {
+          "name": "NTLM",
+          "label": "policy_description_Authentication_NTLM",
+          "schema": "array",
+          "items": {
+            "schema": "string",
+            "placeholder": "common_url"
+          }
+        },
+        {
+          "name": "AllowNonFQDN",
+          "schema": "object",
+          "label": "policy_description_Authentication_AllowNonFQDN",
+          "properties": [
+            {
+              "name": "SPNEGO",
+              "label": "policy_description_Authentication_AllowNonFQDN_SPNEGO",
+              "schema": "boolean"
+            },
+            {
+              "name": "NTLM",
+              "label": "policy_description_Authentication_AllowNonFQDN_NTLM",
+              "schema": "boolean"
+            }
+          ]
+        },
+        {
+          "name": "AllowProxies",
+          "schema": "object",
+          "label": "policy_description_Authentication_AllowNonFQDN",
+          "properties": [
+            {
+              "name": "SPNEGO",
+              "label": "policy_description_Authentication_AllowProxies_SPNEGO",
+              "schema": "boolean"
+            },
+            {
+              "name": "NTLM",
+              "label": "policy_description_Authentication_AllowProxies_NTLM",
+              "schema": "boolean"
+            }
+          ]
+        }
+      ]
+    },
+    "CaptivePortal": {
+      "availability": { "mainstream": "67.0", "esr": "60.7" },
+      "tags": ["network"],
+      "schema": "enum",
+      "preset": "enable"
+    },
+    "GoToIntranetSiteForSingleWordEntryInAddressBar": {
+      "availability": { "mainstream": "104.0", "esr": "102.2" },
+      "tags": ["network"],
+      "schema": "enum",
+      "preset": "boolean"
+    },
+    "AutofillAddressEnabled": {
+      "availability": { "mainstream": "125.0", "esr": "115.10" },
+      "tags": ["privacy"],
+      "schema": "enum",
+      "preset": "enable"
+    },
+    "AutofillCreditCardEnabled": {
+      "availability": { "mainstream": "125.0", "esr": "115.10" },
+      "tags": ["privacy"],
+      "schema": "enum",
+      "preset": "enable"
+    },
+    "PrivateBrowsingModeAvailability": {
+      "availability": { "mainstream": "130.0", "esr": "128.3" },
+      "tags": ["privacy"],
+      "schema": "enum",
+      "options": [
+        {
+          "label": "policy_description_PrivateBrowsingModeAvailability_0",
+          "value": 0
+        },
+        {
+          "label": "policy_description_PrivateBrowsingModeAvailability_1",
+          "value": 1
+        },
+        {
+          "label": "policy_description_PrivateBrowsingModeAvailability_2",
+          "value": 2
+        }
+      ]
+    },
+    "Cookies": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["privacy"],
+      "schema": "object",
+      "lockable": true,
+      "properties": [
+        {
+          "name": "Behavior",
+          "label": "policy_description_Cookies_Behavior",
+          "schema": "enum",
+          "options": [
+            {
+              "label": "enum_value_no_preference",
+              "value": null
+            },
+            {
+              "label": "policy_description_Cookies_Behavior_accept",
+              "value": "accept"
+            },
+            {
+              "label": "policy_description_Cookies_Behavior_reject",
+              "value": "reject"
+            },
+            {
+              "label": "policy_description_Cookies_Behavior_reject_foreign",
+              "value": "reject-foreign"
+            },
+            {
+              "label": "policy_description_Cookies_Behavior_limit_foreign",
+              "value": "limit-foreign"
+            },
+            {
+              "label": "policy_description_Cookies_Behavior_reject_tracker",
+              "value": "reject-tracker"
+            },
+            {
+              "label": "policy_description_Cookies_Behavior_reject_tracker_and_partition_foreign",
+              "value": "reject-tracker-and-partition-foreign"
+            }
+          ]
+        },
+        {
+          "name": "BehaviorPrivateBrowsing",
+          "label": "policy_description_Cookies_BehaviorPrivateBrowsing",
+          "schema": "enum",
+          "options": [
+            {
+              "label": "enum_value_no_preference",
+              "value": null
+            },
+            {
+              "label": "policy_description_Cookies_Behavior_accept",
+              "value": "accept"
+            },
+            {
+              "label": "policy_description_Cookies_Behavior_reject",
+              "value": "reject"
+            },
+            {
+              "label": "policy_description_Cookies_Behavior_reject_foreign",
+              "value": "reject-foreign"
+            },
+            {
+              "label": "policy_description_Cookies_Behavior_limit_foreign",
+              "value": "limit-foreign"
+            },
+            {
+              "label": "policy_description_Cookies_Behavior_reject_tracker",
+              "value": "reject-tracker"
+            },
+            {
+              "label": "policy_description_Cookies_Behavior_reject_tracker_and_partition_foreign",
+              "value": "reject-tracker-and-partition-foreign"
+            }
+          ]
+        },
+        {
+          "name": "ExpireAtSessionEnd",
+          "label": "policy_description_Cookies_ExpireAtSessionEnd",
+          "schema": "enum",
+          "options": [
+            {
+              "label": "enum_value_no_preference",
+              "value": null
+            },
+            {
+              "label": "policy_description_Cookies_ExpireAtSessionEnd_true",
+              "value": true
+            },
+            {
+              "label": "policy_description_Cookies_ExpireAtSessionEnd_false",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "Allow",
+          "label": "policy_description_Cookies_Allow",
+          "schema": "array",
+          "items": {
+            "schema": "string",
+            "placeholder": "policy_description_Cookies_Allow_Domain",
+            "validations": ["url"]
+          }
+        },
+        {
+          "name": "AllowSession",
+          "label": "policy_description_Cookies_AllowSession",
+          "schema": "array",
+          "items": {
+            "schema": "string",
+            "placeholder": "policy_description_Cookies_AllowSession_Domain",
+            "validations": ["url"]
+          }
+        },
+        {
+          "name": "Block",
+          "label": "policy_description_Cookies_Block",
+          "schema": "array",
+          "items": {
+            "schema": "string",
+            "placeholder": "policy_description_Cookies_Block_Domain",
+            "validations": ["url"]
+          }
+        }
+      ]
+    },
+    "SanitizeOnShutdown": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["privacy"],
+      "schema": "object",
+      "properties": [
+        {
+          "name": "History",
+          "label": "policy_description_SanitizeOnShutdown_History",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "Cookies",
+          "label": "policy_description_SanitizeOnShutdown_Cookies",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "Sessions",
+          "label": "policy_description_SanitizeOnShutdown_Sessions",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "Cache",
+          "label": "policy_description_SanitizeOnShutdown_Cache",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "FormData",
+          "label": "policy_description_SanitizeOnShutdown_FormData",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "SiteSettings",
+          "label": "policy_description_SanitizeOnShutdown_SiteSettings",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "Locked",
+          "label": "lock_preference",
+          "schema": "enum",
+          "options": [
+            {
+              "label": "policy_description_SanitizeOnShutdown_Locked_false",
+              "value": false
+            },
+            {
+              "label": "policy_description_SanitizeOnShutdown_Locked_true",
+              "value": true
+            },
+            {
+              "label": "policy_description_SanitizeOnShutdown_Locked_null",
+              "value": null
+            }
+          ]
+        }
+      ]
+    },
+    "EnableTrackingProtection": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["privacy"],
+      "schema": "object",
+      "lockable": true,
+      "properties": [
+        {
+          "name": "Category",
+          "label": "policy_description_EnableTrackingProtection_Category",
+          "schema": "enum",
+          "options": [
+            {
+              "label": "enum_value_no_preference",
+              "value": null
+            },
+            {
+              "label": "policy_description_EnableTrackingProtection_Category_Standard",
+              "value": "standard"
+            },
+            {
+              "label": "policy_description_EnableTrackingProtection_Category_Strict",
+              "value": "strict"
+            }
+          ]
+        },
+        {
+          "name": "Value",
+          "label": "policy_description_EnableTrackingProtection_Value",
+          "schema": "enum",
+          "preset": "enable_optional"
+        },
+        {
+          "name": "Cryptomining",
+          "label": "policy_description_EnableTrackingProtection_Cryptomining",
+          "schema": "enum",
+          "preset": "block_optional"
+        },
+        {
+          "name": "Fingerprinting",
+          "label": "policy_description_EnableTrackingProtection_Fingerprinting",
+          "schema": "enum",
+          "preset": "block_optional"
+        },
+        {
+          "name": "SuspectedFingerprinting",
+          "label": "policy_description_EnableTrackingProtection_SuspectedFingerprinting",
+          "schema": "enum",
+          "preset": "block_optional"
+        },
+        {
+          "name": "EmailTracking",
+          "label": "policy_description_EnableTrackingProtection_EmailTracking",
+          "schema": "enum",
+          "preset": "block_optional"
+        },
+        {
+          "name": "HarmfulAddon",
+          "label": "policy_description_EnableTrackingProtection_HarmfulAddon",
+          "schema": "enum",
+          "preset": "block_optional"
+        },
+        {
+          "name": "BaselineExceptions",
+          "label": "policy_description_EnableTrackingProtection_BaselineExceptions",
+          "schema": "enum",
+          "preset": "enable_optional"
+        },
+        {
+          "name": "ConvenienceExceptions",
+          "label": "policy_description_EnableTrackingProtection_ConvenienceExceptions",
+          "schema": "enum",
+          "preset": "enable_optional"
+        },
+        {
+          "name": "Exceptions",
+          "label": "policy_description_EnableTrackingProtection_Exceptions",
+          "schema": "array",
+          "items": {
+            "schema": "string",
+            "placeholder": "common_url",
+            "validations": ["url"]
+          }
+        }
+      ]
+    },
+    "Permissions": {
+      "availability": { "mainstream": "62.0", "esr": "60.2" },
+      "tags": ["privacy"],
+      "schema": "object",
+      "properties": [
+        {
+          "name": "Location",
+          "label": "policy_description_Permissions_Location",
+          "schema": "object",
+          "lockable": true,
+          "properties": [
+            {
+              "name": "Allow",
+              "label": "policy_description_Permissions_Location_Allow",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "Block",
+              "label": "policy_description_Permissions_Location_Block",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "BlockNewRequests",
+              "label": "policy_description_Permissions_Location_BlockNewRequests",
+              "schema": "boolean"
+            }
+          ]
+        },
+        {
+          "name": "Camera",
+          "label": "policy_description_Permissions_Camera",
+          "schema": "object",
+          "lockable": true,
+          "properties": [
+            {
+              "name": "Allow",
+              "label": "policy_description_Permissions_Camera_Allow",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "Block",
+              "label": "policy_description_Permissions_Camera_Block",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "BlockNewRequests",
+              "label": "policy_description_Permissions_Camera_BlockNewRequests",
+              "schema": "boolean"
+            }
+          ]
+        },
+        {
+          "name": "Microphone",
+          "label": "policy_description_Permissions_Microphone",
+          "schema": "object",
+          "lockable": true,
+          "properties": [
+            {
+              "name": "Allow",
+              "label": "policy_description_Permissions_Microphone_Allow",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "Block",
+              "label": "policy_description_Permissions_Microphone_Block",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "BlockNewRequests",
+              "label": "policy_description_Permissions_Microphone_BlockNewRequests",
+              "schema": "boolean"
+            }
+          ]
+        },
+        {
+          "name": "Notifications",
+          "label": "policy_description_Permissions_Notifications",
+          "schema": "object",
+          "lockable": true,
+          "properties": [
+            {
+              "name": "Allow",
+              "label": "policy_description_Permissions_Notifications_Allow",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "Block",
+              "label": "policy_description_Permissions_Notifications_Block",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "BlockNewRequests",
+              "label": "policy_description_Permissions_Notifications_BlockNewRequests",
+              "schema": "boolean"
+            }
+          ]
+        },
+        {
+          "name": "Autoplay",
+          "label": "policy_description_Permissions_Autoplay",
+          "schema": "object",
+          "lockable": true,
+          "properties": [
+            {
+              "name": "Default",
+              "label": "policy_description_Permissions_Autoplay_Default",
+              "schema": "enum",
+              "options": [
+                {
+                  "label": "enum_value_no_preference",
+                  "value": null
+                },
+                {
+                  "label": "policy_description_Permissions_Autoplay_Default_allow_audio_video",
+                  "value": "allow-audio-video"
+                },
+                {
+                  "label": "policy_description_Permissions_Autoplay_Default_block_audio",
+                  "value": "block-audio"
+                },
+                {
+                  "label": "policy_description_Permissions_Autoplay_Default_block_audio_video",
+                  "value": "block-audio-video"
+                }
+              ]
+            },
+            {
+              "name": "Allow",
+              "label": "policy_description_Permissions_Autoplay_Allow",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "Block",
+              "label": "policy_description_Permissions_Autoplay_Block",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "ScreenShare",
+          "label": "policy_description_Permissions_ScreenShare",
+          "schema": "object",
+          "lockable": true,
+          "properties": [
+            {
+              "name": "Allow",
+              "label": "policy_description_Permissions_ScreenShare_Allow",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "Block",
+              "label": "policy_description_Permissions_ScreenShare_Block",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "BlockNewRequests",
+              "label": "policy_description_Permissions_ScreenShare_BlockNewRequests",
+              "schema": "boolean"
+            }
+          ]
+        },
+        {
+          "name": "VirtualReality",
+          "label": "policy_description_Permissions_VirtualReality",
+          "schema": "object",
+          "lockable": true,
+          "properties": [
+            {
+              "name": "Allow",
+              "label": "policy_description_Permissions_VirtualReality_Allow",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "Block",
+              "label": "policy_description_Permissions_VirtualReality_Block",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "BlockNewRequests",
+              "label": "policy_description_Permissions_VirtualReality_BlockNewRequests",
+              "schema": "boolean"
+            }
+          ]
+        }
+      ]
+    },
+    "PrimaryPassword": {
+      "availability": { "mainstream": "79.0", "esr": "78.1" },
+      "tags": ["security"],
+      "schema": "enum",
+      "options": [
+        {
+          "label": "policy_description_PrimaryPassword_true",
+          "value": true
+        },
+        {
+          "label": "policy_description_PrimaryPassword_false",
+          "value": false
+        }
+      ]
+    },
+    "OfferToSaveLogins": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["security"],
+      "exclude": ["OfferToSaveLoginsDefault"],
+      "schema": "enum",
+      "preset": "boolean"
+    },
+    "OfferToSaveLoginsDefault": {
+      "availability": { "mainstream": "70.0", "esr": "68.2" },
+      "tags": ["security"],
+      "exclude": ["OfferToSaveLogins"],
+      "schema": "enum",
+      "preset": "boolean"
+    },
+    "PasswordManagerEnabled": {
+      "availability": { "mainstream": "70.0", "esr": "68.2" },
+      "tags": ["security"],
+      "schema": "enum",
+      "preset": "enable"
+    },
+    "PasswordManagerExceptions": {
+      "availability": { "mainstream": "101.0", "esr": "91.10" },
+      "tags": ["security"],
+      "schema": "array",
+      "items": {
+        "schema": "string",
+        "placeholder": "common_url",
+        "validations": ["required", "url"]
+      }
+    },
+    "DisablePasswordReveal": {
+      "availability": { "mainstream": "71.0", "esr": "68.3" },
+      "tags": ["security"],
+      "schema": "boolean"
+    },
+    "WindowsSSO": {
+      "availability": { "mainstream": "91.0", "esr": "91.0" },
+      "tags": ["security"],
+      "note": "requirement_windows",
+      "schema": "enum",
+      "preset": "boolean"
+    },
+    "MicrosoftEntraSSO": {
+      "availability": { "mainstream": "132.0.1", "esr": "128.5" },
+      "tags": ["security"],
+      "note": "requirement_macos",
+      "schema": "enum",
+      "preset": "boolean"
+    },
+    "DisableSecurityBypass": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["security"],
+      "schema": "object",
+      "properties": [
+        {
+          "name": "InvalidCertificate",
+          "label": "policy_description_DisableSecurityBypass_InvalidCertificate",
+          "schema": "enum",
+          "options": [
+            {
+              "label": "enum_value_no_preference",
+              "value": null
+            },
+            {
+              "label": "policy_description_DisableSecurityBypass_InvalidCertificate_true",
+              "value": true
+            },
+            {
+              "label": "policy_description_DisableSecurityBypass_InvalidCertificate_false",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "SafeBrowsing",
+          "label": "policy_description_DisableSecurityBypass_SafeBrowsing",
+          "schema": "enum",
+          "options": [
+            {
+              "label": "enum_value_no_preference",
+              "value": null
+            },
+            {
+              "label": "policy_description_DisableSecurityBypass_SafeBrowsing_true",
+              "value": true
+            },
+            {
+              "label": "policy_description_DisableSecurityBypass_SafeBrowsing_false",
+              "value": false
+            }
+          ]
+        }
+      ]
+    },
+    "SSLVersionMin": {
+      "availability": { "mainstream": "66.0", "esr": "60.6" },
+      "tags": ["security"],
+      "schema": "enum",
+      "options": [
+        {
+          "label": "TLS 1.0",
+          "value": "tls1"
+        },
+        {
+          "label": "TLS 1.1",
+          "value": "tls1.1"
+        },
+        {
+          "label": "policy_description_SSLVersionMin_Standard",
+          "value": "tls1.2"
+        },
+        {
+          "label": "TLS 1.3",
+          "value": "tls1.3"
+        }
+      ],
+      "default": "tls1.2"
+    },
+    "SSLVersionMax": {
+      "availability": { "mainstream": "66.0", "esr": "60.6" },
+      "tags": ["security"],
+      "schema": "enum",
+      "options": [
+        {
+          "label": "TLS 1.0",
+          "value": "tls1"
+        },
+        {
+          "label": "TLS 1.1",
+          "value": "tls1.1"
+        },
+        {
+          "label": "TLS 1.2",
+          "value": "tls1.2"
+        },
+        {
+          "label": "policy_description_SSLVersionMax_Standard",
+          "value": "tls1.3"
+        }
+      ],
+      "default": "tls1.3"
+    },
+    "DisabledCiphers": {
+      "availability": { "mainstream": "76.0", "esr": "68.8" },
+      "tags": ["security"],
+      "schema": "object",
+      "properties": [
+        {
+          "name": "TLS_AES_128_GCM_SHA256",
+          "label": "TLS_AES_128_GCM_SHA256 (Firefox 138+, Firefox ESR 128.10+)",
+          "schema": "enum",
+          "preset": "enable_inverted_optional"
+        },
+        {
+          "name": "TLS_AES_256_GCM_SHA384",
+          "label": "TLS_AES_256_GCM_SHA384 (Firefox 138+, Firefox ESR 128.10+)",
+          "schema": "enum",
+          "preset": "enable_inverted_optional"
+        },
+        {
+          "name": "TLS_CHACHA20_POLY1305_SHA256",
+          "label": "TLS_CHACHA20_POLY1305_SHA256 (Firefox 138+, Firefox ESR 128.10+)",
+          "schema": "enum",
+          "preset": "enable_inverted_optional"
+        },
+        {
+          "name": "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+          "label": "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+          "schema": "enum",
+          "preset": "enable_inverted_optional"
+        },
+        {
+          "name": "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+          "label": "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+          "schema": "enum",
+          "preset": "enable_inverted_optional"
+        },
+        {
+          "name": "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+          "label": "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+          "schema": "enum",
+          "preset": "enable_inverted_optional"
+        },
+        {
+          "name": "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "label": "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "schema": "enum",
+          "preset": "enable_inverted_optional"
+        },
+        {
+          "name": "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "label": "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "schema": "enum",
+          "preset": "enable_inverted_optional"
+        },
+        {
+          "name": "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "label": "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "schema": "enum",
+          "preset": "enable_inverted_optional"
+        },
+        {
+          "name": "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "label": "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "schema": "enum",
+          "preset": "enable_inverted_optional"
+        },
+        {
+          "name": "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+          "label": "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+          "schema": "enum",
+          "preset": "enable_inverted_optional"
+        },
+        {
+          "name": "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "label": "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "schema": "enum",
+          "preset": "enable_inverted_optional"
+        },
+        {
+          "name": "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "label": "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "schema": "enum",
+          "preset": "enable_inverted_optional"
+        },
+        {
+          "name": "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "label": "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "schema": "enum",
+          "preset": "enable_inverted_optional"
+        },
+        {
+          "name": "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "label": "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "schema": "enum",
+          "preset": "enable_inverted_optional"
+        },
+        {
+          "name": "TLS_RSA_WITH_3DES_EDE_CBC_SHA",
+          "label": "TLS_RSA_WITH_3DES_EDE_CBC_SHA",
+          "schema": "enum",
+          "preset": "enable_inverted_optional"
+        },
+        {
+          "name": "TLS_RSA_WITH_AES_128_CBC_SHA",
+          "label": "TLS_RSA_WITH_AES_128_CBC_SHA",
+          "schema": "enum",
+          "preset": "enable_inverted_optional"
+        },
+        {
+          "name": "TLS_RSA_WITH_AES_128_GCM_SHA256",
+          "label": "TLS_RSA_WITH_AES_128_GCM_SHA256",
+          "schema": "enum",
+          "preset": "enable_inverted_optional"
+        },
+        {
+          "name": "TLS_RSA_WITH_AES_256_CBC_SHA",
+          "label": "TLS_RSA_WITH_AES_256_CBC_SHA",
+          "schema": "enum",
+          "preset": "enable_inverted_optional"
+        },
+        {
+          "name": "TLS_RSA_WITH_AES_256_GCM_SHA384",
+          "label": "TLS_RSA_WITH_AES_256_GCM_SHA384",
+          "schema": "enum",
+          "preset": "enable_inverted_optional"
+        }
+      ]
+    },
+    "DisableEncryptedClientHello": {
+      "availability": { "mainstream": "127.0", "esr": "128.0" },
+      "tags": ["security"],
+      "schema": "boolean"
+    },
+    "PostQuantumKeyAgreementEnabled": {
+      "availability": { "mainstream": "127.0", "esr": "128.0" },
+      "tags": ["security"],
+      "schema": "enum",
+      "preset": "enable"
+    },
+    "Certificates": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["security"],
+      "schema": "object",
+      "properties": [
+        {
+          "name": "ImportEnterpriseRoots",
+          "label": "policy_description_Certificates_ImportEnterpriseRoots",
+          "schema": "enum",
+          "options": [
+            {
+              "label": "enum_value_no_preference",
+              "value": null
+            },
+            {
+              "label": "policy_description_Certificates_ImportEnterpriseRoots_true",
+              "value": true
+            },
+            {
+              "label": "policy_description_Certificates_ImportEnterpriseRoots_false",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "Install",
+          "label": "policy_description_Certificates_Install",
+          "schema": "array",
+          "items": {
+            "schema": "string",
+            "placeholder": "policy_description_Certificates_Install_Value"
+          }
+        }
+      ]
+    },
+    "SecurityDevices": {
+      "availability": { "mainstream": "114.0", "esr": "102.12" },
+      "tags": ["security"],
+      "schema": "object",
+      "properties": [
+        {
+          "name": "Add",
+          "label": "policy_description_SecurityDevices_Add",
+          "schema": "array",
+          "items": {
+            "schema": "string",
+            "key": {
+              "placeholder": "policy_description_SecurityDevices_label_key"
+            },
+            "placeholder": "policy_description_SecurityDevices_label_value",
+            "validations": ["required"]
+          }
+        },
+        {
+          "name": "Delete",
+          "label": "policy_description_SecurityDevices_Delete",
+          "schema": "array",
+          "items": {
+            "schema": "string",
+            "placeholder": "Name"
+          }
+        }
+      ]
+    },
+    "DisableAppUpdate": {
+      "availability": { "mainstream": "62.0", "esr": "60.0" },
+      "tags": ["updates-and-data"],
+      "exclude": ["AppAutoUpdate", "AppUpdatePin", "AppUpdateURL", "BackgroundAppUpdate", "ManualAppUpdateOnly"],
+      "schema": "boolean"
+    },
+    "AppAutoUpdate": {
+      "availability": { "mainstream": "75.0", "esr": "68.7" },
+      "tags": ["updates-and-data"],
+      "exclude": ["DisableAppUpdate"],
+      "schema": "enum",
+      "preset": "boolean"
+    },
+    "BackgroundAppUpdate": {
+      "availability": { "mainstream": "90.0", "esr": "91.1" },
+      "tags": ["updates-and-data"],
+      "exclude": ["DisableAppUpdate"],
+      "note": "requirement_windows",
+      "schema": "enum",
+      "preset": "boolean"
+    },
+    "ManualAppUpdateOnly": {
+      "availability": { "mainstream": "87.0", "esr": "91.0" },
+      "tags": ["updates-and-data"],
+      "exclude": ["DisableAppUpdate"],
+      "schema": "boolean"
+    },
+    "AppUpdatePin": {
+      "availability": { "mainstream": "102.0", "esr": "102.0" },
+      "tags": ["updates-and-data"],
+      "exclude": ["DisableAppUpdate"],
+      "schema": "string",
+      "label": "policy_description_AppUpdatePin_label",
+      "placeholder": "policy_description_AppUpdatePin_placeholder",
+      "validations": ["required"],
+      "regex": {
+        "pattern": "^\\d{3}(?:\\.\\d{1,2})?\\.?$",
+        "error": "validation_invalid_version"
+      },
+      "output_filter": "ends_with_dot"
+    },
+    "AppUpdateURL": {
+      "availability": { "mainstream": "62.0", "esr": "60.2" },
+      "tags": ["updates-and-data"],
+      "exclude": ["DisableAppUpdate"],
+      "schema": "string",
+      "placeholder": "common_url",
+      "validations": ["required", "url"]
+    },
+    "ExtensionUpdate": {
+      "availability": { "mainstream": "67.0", "esr": "60.7" },
+      "tags": ["updates-and-data"],
+      "schema": "enum",
+      "options": [
+        {
+          "label": "policy_description_ExtensionUpdate_options_true",
+          "value": true
+        },
+        {
+          "label": "policy_description_ExtensionUpdate_options_false",
+          "value": false
+        }
+      ]
+    },
+    "DisableSystemAddonUpdate": {
+      "availability": { "mainstream": "62.0", "esr": "60.0" },
+      "tags": ["updates-and-data"],
+      "schema": "boolean"
+    },
+    "DisableRemoteImprovements": {
+      "availability": { "mainstream": "148.0", "esr": null },
+      "tags": ["updates-and-data"],
+      "schema": "boolean"
+    },
+    "DisableFirefoxStudies": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["updates-and-data"],
+      "schema": "boolean"
+    },
+    "DisableTelemetry": {
+      "availability": { "mainstream": "62.0", "esr": "60.0" },
+      "tags": ["updates-and-data"],
+      "schema": "boolean"
+    },
+    "BrowserDataBackup": {
+      "availability": { "mainstream": "145.0", "esr": null },
+      "tags": ["others"],
+      "schema": "object",
+      "properties": [
+        {
+          "name": "AllowBackup",
+          "label": "policy_description_BrowserDataBackup_AllowBackup",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "AllowRestore",
+          "label": "policy_description_BrowserDataBackup_AllowRestore",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        }
+      ]
+    },
+    "Handlers": {
+      "availability": { "mainstream": "78.0", "esr": "78.0" },
+      "tags": ["others"],
+      "schema": "object",
+      "properties": [
+        {
+          "name": "mimeTypes",
+          "schema": "array",
+          "items": {
+            "schema": "object",
+            "label": "policy_description_Handlers_type_mime_type",
+            "key": {
+              "placeholder": "policy_description_Handlers_type_mime_type_placeholder"
+            },
+            "properties": [
+              {
+                "name": "action",
+                "label": "policy_description_Handlers_property_action",
+                "schema": "enum",
+                "options": [
+                  {
+                    "label": "policy_description_Handlers_property_action_saveToDisk",
+                    "value": "saveToDisk"
+                  },
+                  {
+                    "label": "policy_description_Handlers_property_action_useHelperApp",
+                    "value": "useHelperApp"
+                  },
+                  {
+                    "label": "policy_description_Handlers_property_action_useSystemDefault",
+                    "value": "useSystemDefault"
+                  }
+                ]
+              },
+              {
+                "name": "ask",
+                "label": "policy_description_Handlers_property_ask",
+                "schema": "enum",
+                "options": [
+                  {
+                    "label": "policy_description_Handlers_property_ask_true",
+                    "value": true
+                  },
+                  {
+                    "label": "policy_description_Handlers_property_ask_false",
+                    "value": false
+                  }
+                ]
+              },
+              {
+                "name": "handlers",
+                "label": "policy_description_Handlers_property_handlers",
+                "schema": "array",
+                "items": {
+                  "schema": "object",
+                  "properties": [
+                    {
+                      "name": "name",
+                      "schema": "string",
+                      "placeholder": "policy_description_Handlers_property_handlers_name"
+                    },
+                    {
+                      "name": "path",
+                      "schema": "string",
+                      "placeholder": "policy_description_Handlers_property_handlers_path"
+                    },
+                    {
+                      "name": "uriTemplate",
+                      "schema": "string",
+                      "placeholder": "policy_description_Handlers_property_handlers_uriTemplate",
+                      "validations": ["secure-url"],
+                      "regex": {
+                        "pattern": "%s",
+                        "error": "validation_missing_placeholder_s"
+                      }
+                    }
+                  ],
+                  "allow_empty_value": true
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "schemes",
+          "schema": "array",
+          "items": {
+            "schema": "object",
+            "label": "policy_description_Handlers_type_schema",
+            "key": {
+              "placeholder": "policy_description_Handlers_type_schema_placeholder"
+            },
+            "properties": [
+              {
+                "name": "action",
+                "label": "policy_description_Handlers_property_action",
+                "schema": "enum",
+                "options": [
+                  {
+                    "label": "policy_description_Handlers_property_action_saveToDisk",
+                    "value": "saveToDisk"
+                  },
+                  {
+                    "label": "policy_description_Handlers_property_action_useHelperApp",
+                    "value": "useHelperApp"
+                  },
+                  {
+                    "label": "policy_description_Handlers_property_action_useSystemDefault",
+                    "value": "useSystemDefault"
+                  }
+                ]
+              },
+              {
+                "name": "ask",
+                "label": "policy_description_Handlers_property_ask",
+                "schema": "enum",
+                "options": [
+                  {
+                    "label": "policy_description_Handlers_property_ask_true",
+                    "value": true
+                  },
+                  {
+                    "label": "policy_description_Handlers_property_ask_false",
+                    "value": false
+                  }
+                ]
+              },
+              {
+                "name": "handlers",
+                "label": "policy_description_Handlers_property_handlers",
+                "schema": "array",
+                "items": {
+                  "schema": "object",
+                  "properties": [
+                    {
+                      "name": "name",
+                      "schema": "string",
+                      "placeholder": "policy_description_Handlers_property_handlers_name"
+                    },
+                    {
+                      "name": "path",
+                      "schema": "string",
+                      "placeholder": "policy_description_Handlers_property_handlers_path"
+                    },
+                    {
+                      "name": "uriTemplate",
+                      "schema": "string",
+                      "placeholder": "policy_description_Handlers_property_handlers_uriTemplate",
+                      "validations": ["secure-url"]
+                    }
+                  ],
+                  "allow_empty_value": true
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "extensions",
+          "schema": "array",
+          "items": {
+            "schema": "object",
+            "label": "policy_description_Handlers_type_file_extension",
+            "key": {
+              "placeholder": "policy_description_Handlers_type_file_extension_placeholder"
+            },
+            "properties": [
+              {
+                "name": "action",
+                "label": "policy_description_Handlers_property_action",
+                "schema": "enum",
+                "options": [
+                  {
+                    "label": "policy_description_Handlers_property_action_saveToDisk",
+                    "value": "saveToDisk"
+                  },
+                  {
+                    "label": "policy_description_Handlers_property_action_useHelperApp",
+                    "value": "useHelperApp"
+                  },
+                  {
+                    "label": "policy_description_Handlers_property_action_useSystemDefault",
+                    "value": "useSystemDefault"
+                  }
+                ]
+              },
+              {
+                "name": "ask",
+                "label": "policy_description_Handlers_property_ask",
+                "schema": "enum",
+                "options": [
+                  {
+                    "label": "policy_description_Handlers_property_ask_true",
+                    "value": true
+                  },
+                  {
+                    "label": "policy_description_Handlers_property_ask_false",
+                    "value": false
+                  }
+                ]
+              },
+              {
+                "name": "handlers",
+                "label": "policy_description_Handlers_property_handlers",
+                "schema": "array",
+                "items": {
+                  "schema": "object",
+                  "properties": [
+                    {
+                      "name": "name",
+                      "schema": "string",
+                      "placeholder": "policy_description_Handlers_property_handlers_name"
+                    },
+                    {
+                      "name": "path",
+                      "schema": "string",
+                      "placeholder": "policy_description_Handlers_property_handlers_path"
+                    },
+                    {
+                      "name": "uriTemplate",
+                      "schema": "string",
+                      "placeholder": "policy_description_Handlers_property_handlers_uriTemplate",
+                      "validations": ["secure-url"]
+                    }
+                  ],
+                  "allow_empty_value": true
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "AutoLaunchProtocolsFromOrigins": {
+      "availability": { "mainstream": "90.0", "esr": "78.12" },
+      "tags": ["others"],
+      "schema": "array",
+      "items": {
+        "schema": "object",
+        "properties": [
+          {
+            "name": "protocol",
+            "schema": "string",
+            "placeholder": "policy_description_AutoLaunchProtocolsFromOrigins_protocol",
+            "validations": ["required"]
+          },
+          {
+            "name": "allowed_origins",
+            "label": "policy_description_AutoLaunchProtocolsFromOrigins_allowed_origins",
+            "schema": "array",
+            "items": {
+              "schema": "string",
+              "placeholder": "common_origin",
+              "validations": ["required", "url"]
+            }
+          }
+        ]
+      }
+    },
+    "DisableBuiltinPDFViewer": {
+      "availability": { "mainstream": "140.0", "esr": "140.0" },
+      "tags": ["others"],
+      "exclude": ["PDFjs"],
+      "schema": "boolean"
+    },
+    "PDFjs": {
+      "availability": { "mainstream": "77.0", "esr": "78.0" },
+      "tags": ["others"],
+      "exclude": ["DisableBuiltinPDFViewer"],
+      "schema": "object",
+      "properties": [
+        {
+          "name": "Enabled",
+          "label": "policy_description_PDFjs_Enabled",
+          "schema": "enum",
+          "preset": "enable_optional"
+        },
+        {
+          "name": "EnablePermissions",
+          "label": "policy_description_PDFjs_EnablePermissions",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        }
+      ]
+    },
+    "EncryptedMediaExtensions": {
+      "availability": { "mainstream": "77.0", "esr": "68.9" },
+      "tags": ["others"],
+      "schema": "object",
+      "lockable": true,
+      "properties": [
+        {
+          "name": "Enabled",
+          "label": "policy_description_EncryptedMediaExtensions_Enabled",
+          "schema": "enum",
+          "preset": "enable_optional"
+        }
+      ]
+    },
+    "DefaultDownloadDirectory": {
+      "availability": { "mainstream": "68.0", "esr": "68.0" },
+      "tags": ["others"],
+      "schema": "string",
+      "placeholder": "policy_description_DefaultDownloadDirectory_Label",
+      "validations": ["required"]
+    },
+    "DownloadDirectory": {
+      "availability": { "mainstream": "68.0", "esr": "68.0" },
+      "tags": ["others"],
+      "schema": "string",
+      "placeholder": "policy_description_DownloadDirectory_Label",
+      "validations": ["required"]
+    },
+    "PromptForDownloadLocation": {
+      "availability": { "mainstream": "68.0", "esr": "68.0" },
+      "tags": ["others"],
+      "schema": "enum",
+      "preset": "boolean"
+    },
+    "StartDownloadsInTempDirectory": {
+      "availability": { "mainstream": "102.0", "esr": "102.0" },
+      "tags": ["others"],
+      "schema": "enum",
+      "preset": "boolean"
+    },
+    "ExemptDomainFileTypePairsFromFileTypeDownloadWarnings": {
+      "availability": { "mainstream": "102.0", "esr": "102.0" },
+      "tags": ["others"],
+      "schema": "array",
+      "items": {
+        "schema": "object",
+        "properties": [
+          {
+            "name": "file_extension",
+            "schema": "string",
+            "placeholder": "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_file_extension",
+            "validations": ["required"]
+          },
+          {
+            "name": "domains",
+            "schema": "array",
+            "items": {
+              "schema": "string",
+              "placeholder": "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_domains",
+              "validations": ["required"]
+            }
+          }
+        ]
+      }
+    },
+    "PrintingEnabled": {
+      "availability": { "mainstream": "120.0", "esr": "115.5" },
+      "tags": ["others"],
+      "schema": "enum",
+      "preset": "enable"
+    },
+    "UseSystemPrintDialog": {
+      "availability": { "mainstream": "102.0", "esr": "102.0" },
+      "tags": ["others"],
+      "schema": "enum",
+      "preset": "boolean"
+    },
+    "HardwareAcceleration": {
+      "availability": { "mainstream": "62.0", "esr": "60.2" },
+      "tags": ["others"],
+      "schema": "boolean",
+      "inverse": true
+    },
+    "PopupBlocking": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["others"],
+      "schema": "object",
+      "lockable": true,
+      "properties": [
+        {
+          "name": "Default",
+          "schema": "enum",
+          "options": [
+            {
+              "label": "policy_description_PopupBlocking_Default_true",
+              "value": true
+            },
+            {
+              "label": "policy_description_PopupBlocking_Default_false",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "Allow",
+          "label": "policy_description_PopupBlocking_Allow",
+          "schema": "array",
+          "items": {
+            "schema": "string",
+            "placeholder": "common_url",
+            "validations": ["url"]
+          }
+        }
+      ]
+    },
+    "LocalFileLinks": {
+      "availability": { "mainstream": "68.0", "esr": "68.0" },
+      "tags": ["others"],
+      "schema": "array",
+      "items": {
+        "schema": "string",
+        "placeholder": "common_url",
+        "validations": ["required"]
+      }
+    },
+    "SearchSuggestEnabled": {
+      "availability": { "mainstream": "68.0", "esr": "68.0" },
+      "tags": ["others"],
+      "schema": "enum",
+      "preset": "enable"
+    },
+    "AllowedDomainsForApps": {
+      "availability": { "mainstream": "89.0", "esr": "78.11" },
+      "tags": ["others"],
+      "schema": "array",
+      "items": {
+        "schema": "string",
+        "placeholder": "common_domain",
+        "join": ","
+      }
+    },
+    "LegacySameSiteCookieBehaviorEnabled": {
+      "availability": { "mainstream": "76.0", "esr": "78.0" },
+      "tags": ["others"],
+      "exclude": ["LegacySameSiteCookieBehaviorEnabledForDomainList"],
+      "schema": "boolean"
+    },
+    "LegacySameSiteCookieBehaviorEnabledForDomainList": {
+      "availability": { "mainstream": "76.0", "esr": "78.0" },
+      "tags": ["others"],
+      "exclude": ["LegacySameSiteCookieBehaviorEnabled"],
+      "schema": "array",
+      "items": {
+        "schema": "string",
+        "placeholder": "common_domain",
+        "validations": ["required"]
+      }
+    },
+    "DontCheckDefaultBrowser": {
+      "availability": { "mainstream": "60.0", "esr": "60.0" },
+      "tags": ["others"],
+      "schema": "enum",
+      "options": [
+        {
+          "label": "policy_description_DontCheckDefaultBrowser_options_false",
+          "value": false
+        },
+        {
+          "label": "policy_description_DontCheckDefaultBrowser_options_true",
+          "value": true
+        }
+      ]
+    },
+    "SkipTermsOfUse": {
+      "availability": { "mainstream": "138.0", "esr": "140.0" },
+      "tags": ["others"],
+      "schema": "enum",
+      "options": [
+        {
+          "label": "enum_value_yes",
+          "value": false
+        },
+        {
+          "label": "enum_value_no",
+          "value": true
+        }
+      ]
+    },
+    "OverrideFirstRunPage": {
+      "availability": { "mainstream": "62.0", "esr": "60.0" },
+      "tags": ["others"],
+      "schema": "array",
+      "items": {
+        "schema": "string",
+        "placeholder": "common_domain",
+        "validations": ["url"],
+        "join": "|"
+      }
+    },
+    "OverridePostUpdatePage": {
+      "availability": { "mainstream": "62.0", "esr": "60.0" },
+      "tags": ["others"],
+      "schema": "string",
+      "placeholder": "common_url",
+      "validations": ["url"]
+    },
+    "SupportMenu": {
+      "availability": { "mainstream": "67.0", "esr": "60.7" },
+      "tags": ["others"],
+      "schema": "object",
+      "properties": [
+        {
+          "name": "Title",
+          "schema": "string",
+          "placeholder": "policy_description_SupportMenu_Title",
+          "validations": ["required"]
+        },
+        {
+          "name": "URL",
+          "schema": "string",
+          "placeholder": "common_url",
+          "validations": ["required", "url"]
+        },
+        {
+          "name": "AccessKey",
+          "schema": "string",
+          "placeholder": "policy_description_SupportMenu_AccessKey"
+        }
+      ]
+    }
+  },
+  "preferences": {
+    "allowed": [
+      "accessibility.",
+      "alerts.",
+      "app.update.",
+      "browser.",
+      "datareporting.policy.",
+      "dom.",
+      "extensions.",
+      "general.autoScroll",
+      "general.smoothScroll",
+      "geo.",
+      "gfx.",
+      "identity.fxaccounts.toolbar.",
+      "intl.",
+      "keyword.enabled",
+      "layers.",
+      "layout.",
+      "mathml.disabled",
+      "media.",
+      "network.",
+      "pdfjs.",
+      "places.",
+      "pref.",
+      "print.",
+      "privacy.baselineFingerprintingProtection",
+      "privacy.fingerprintingProtection",
+      "privacy.globalprivacycontrol.enabled",
+      "privacy.userContext.enabled",
+      "privacy.userContext.ui.enabled",
+      "security.block_fileuri_script_with_wrong_mime",
+      "security.csp.reporting.enabled",
+      "security.default_personal_cert",
+      "security.disable_button.openCertManager",
+      "security.disable_button.openDeviceManager",
+      "security.insecure_connection_text.enabled",
+      "security.insecure_connection_text.pbmode.enabled",
+      "security.mixed_content.block_active_content",
+      "security.mixed_content.block_display_content",
+      "security.mixed_content.upgrade_display_content",
+      "security.OCSP.enabled",
+      "security.OCSP.require",
+      "security.osclientcerts.autoload",
+      "security.pki.certificate_transparency.disable_for_hosts",
+      "security.pki.certificate_transparency.disable_for_spki_hashes",
+      "security.pki.certificate_transparency.mode",
+      "security.ssl.enable_ocsp_stapling",
+      "security.ssl.require_safe_negotiation",
+      "security.tls.enable_0rtt_data",
+      "security.tls.hello_downgrade_check",
+      "security.tls.version.enable-deprecated",
+      "security.warn_submit_secure_to_insecure",
+      "security.webauthn.always_allow_direct_attestation",
+      "signon.",
+      "spellchecker.",
+      "svg.context-properties.content.enabled",
+      "svg.disabled",
+      "toolkit.legacyUserProfileCustomizations.stylesheets",
+      "ui.",
+      "webgl.disabled",
+      "webgl.force-enabled",
+      "widget.",
+      "xpinstall.enabled",
+      "xpinstall.signatures.required",
+      "xpinstall.whitelist.required"
+    ],
+    "disallowed": [
+      "app.update.channel",
+      "app.update.lastUpdateTime",
+      "app.update.migrated",
+      "browser.vpn_promo.disallowed_regions"
+    ]
+  },
+  "presets": {
+    "block_optional": [
+      {
+        "label": "enum_value_no_preference",
+        "value": null
+      },
+      {
+        "label": "enum_value_block_yes",
+        "value": true
+      },
+      {
+        "label": "enum_value_block_no",
+        "value": false
+      }
+    ],
+    "boolean": [
+      {
+        "label": "enum_value_yes",
+        "value": true
+      },
+      {
+        "label": "enum_value_no",
+        "value": false
+      }
+    ],
+    "boolean_optional": [
+      {
+        "label": "enum_value_no_preference",
+        "value": null
+      },
+      {
+        "label": "enum_value_yes",
+        "value": true
+      },
+      {
+        "label": "enum_value_no",
+        "value": false
+      }
+    ],
+    "enable": [
+      {
+        "label": "enum_value_enable_yes",
+        "value": true
+      },
+      {
+        "label": "enum_value_enable_no",
+        "value": false
+      }
+    ],
+    "enable_inverted_optional": [
+      {
+        "label": "enum_value_no_preference",
+        "value": null
+      },
+      {
+        "label": "enum_value_enable_yes",
+        "value": false
+      },
+      {
+        "label": "enum_value_enable_no",
+        "value": true
+      }
+    ],
+    "enable_optional": [
+      {
+        "label": "enum_value_no_preference",
+        "value": null
+      },
+      {
+        "label": "enum_value_enable_yes",
+        "value": true
+      },
+      {
+        "label": "enum_value_enable_no",
+        "value": false
+      }
+    ]
+  },
+  "tags": [
+    "block-access",
+    "disable-features",
+    "customization",
+    "network",
+    "privacy",
+    "security",
+    "updates-and-data",
+    "others"
+  ]
+}

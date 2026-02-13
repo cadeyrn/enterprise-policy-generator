@@ -62,17 +62,14 @@
   "filter_field": {
     "message": "Filtrer les politiques…"
   },
+  "filter_field_close": {
+    "message": "Close filter"
+  },
   "generate_button": {
     "message": "Générer des politiques"
   },
-  "invalid_json_label": {
-    "message": "invalid JSON"
-  },
-  "invalid_url_label": {
-    "message": "Adresse invalide"
-  },
-  "invalid_version_pattern_label": {
-    "message": "invalid version pattern"
+  "generate_headline": {
+    "message": "Policies selection"
   },
   "link_download": {
     "message": "télécharger policies.json"
@@ -98,6 +95,9 @@
   "list_dialog_window_title": {
     "message": "Charger la configuration"
   },
+  "list_table_actions": {
+    "message": "Actions"
+  },
   "list_table_name": {
     "message": "Nom"
   },
@@ -106,9 +106,6 @@
   },
   "lock_preference": {
     "message": "Protéger les préférences de tout changements"
-  },
-  "mandatory_label": {
-    "message": "Obligatoire"
   },
   "non_allowed_preference_label": {
     "message": "Preference name not allowed"
@@ -134,19 +131,19 @@
   "policy_category_security": {
     "message": "Sécurité"
   },
-  "policy_category_update_and_data": {
+  "policy_category_updates_and_data": {
     "message": "Mises à jour et collecte de données"
   },
   "policy_description_3rdParty": {
     "message": "Preconfiguration of settings for extensions that use chrome.storage.managed"
   },
-  "policy_description_3rdparty_JSON_caption": {
+  "policy_description_3rdparty_JSON": {
     "message": "JSON configuration"
   },
-  "policy_description_3rdparty_JSON_label": {
+  "policy_description_3rdparty_JSON_placeholder": {
     "message": "JSON (configuration must be surrounded by curly brackets {})"
   },
-  "policy_description_3rdParty_Label_Key": {
+  "policy_description_3rdparty_key": {
     "message": "Add-on ID"
   },
   "policy_description_AllowedDomainsForApps": {
@@ -160,6 +157,9 @@
   },
   "policy_description_AppUpdatePin": {
     "message": "Prevent Firefox from being updated beyond the specified version"
+  },
+  "policy_description_AppUpdatePin_label": {
+    "message": "If only a major version (“xxx”) is specified, only minor and patch updates will be installed. If a major plus minor version (“xxx.xx”) is specified, only patch updates will be installed."
   },
   "policy_description_AppUpdatePin_placeholder": {
     "message": "Firefox version (expected: \"xxx\" oder \"xxx.xx\")"
@@ -665,14 +665,14 @@
   "policy_description_ExtensionSettings_allowed_types_theme": {
     "message": "Thèmes"
   },
-  "policy_description_ExtensionSettings_blocked_install_message_caption_all": {
+  "policy_description_ExtensionSettings_blocked_install_message_all": {
     "message": "Message d'erreur à afficher à l'utilisateur lors de l'installation d'un add-on bloqué"
   },
-  "policy_description_ExtensionSettings_blocked_install_message_caption_single": {
-    "message": "Message d'erreur à afficher à l'utilisateur lors de l'installation de l'add-on bloqué"
-  },
-  "policy_description_ExtensionSettings_blocked_install_message_label": {
+  "policy_description_ExtensionSettings_blocked_install_message_placeholder": {
     "message": "Message d'erreur"
+  },
+  "policy_description_ExtensionSettings_blocked_install_message_single": {
+    "message": "Message d'erreur à afficher à l'utilisateur lors de l'installation de l'add-on bloqué"
   },
   "policy_description_ExtensionSettings_default_area": {
     "message": "Initial placement of the extension button"
@@ -683,16 +683,10 @@
   "policy_description_ExtensionSettings_default_area_navbar": {
     "message": "Pinned to the navigation toolbar"
   },
-  "policy_description_ExtensionSettings_extra_caption_post": {
-    "message": "Configuration pour des extensions individuelles"
-  },
-  "policy_description_ExtensionSettings_extra_caption_pre": {
-    "message": "Configuration pour tous les add-ons"
-  },
   "policy_description_ExtensionSettings_install_sources": {
     "message": "Sources d'installation autorisées. L'emplacement du fichier *.xpi et la page à partir de laquelle le téléchargement est lancé doivent être autorisés. Match patterns allowed, see info link."
   },
-  "policy_description_ExtensionSettings_install_url_caption": {
+  "policy_description_ExtensionSettings_install_url": {
     "message": "installer l'URL. Si vous installez à partir du système de fichiers local, utilisez un fichier://// URI."
   },
   "policy_description_ExtensionSettings_installation_mode": {
@@ -716,8 +710,14 @@
   "policy_description_ExtensionSettings_installation_mode_normal_installed": {
     "message": "l'add-on est automatiquement installé mais peut être désactivé par l'utilisateur (nécessite une url d'installation)"
   },
-  "policy_description_ExtensionSettings_Label_Key": {
+  "policy_description_ExtensionSettings_key": {
     "message": "Add-on ID"
+  },
+  "policy_description_ExtensionSettings_label_additional_items": {
+    "message": "Configuration pour tous les add-ons"
+  },
+  "policy_description_ExtensionSettings_label_items": {
+    "message": "Configuration pour des extensions individuelles"
   },
   "policy_description_ExtensionSettings_private_browsing": {
     "message": "Run in private windows"
@@ -1064,79 +1064,10 @@
   "policy_description_PostQuantumKeyAgreementEnabled": {
     "message": "Enable post-quantum key agreement for TLS"
   },
-  "policy_description_Preference_browser_cache_disk_enable": {
-    "message": "Activer / désactiver le stockage du cache sur le disque dur"
-  },
-  "policy_description_Preference_browser_cache_disk_parent_directory": {
-    "message": "Modifier l'emplacement du cache disque"
-  },
-  "policy_description_Preference_browser_cache_disk_parent_directory_label": {
-    "message": "Chemin"
-  },
-  "policy_description_Preference_browser_fixup_dns_first_for_single_words": {
-    "message": "Envoyez d'abord les mots simples dans la barre d'adresse au DNS et pas directement au moteur de recherche."
-  },
-  "policy_description_Preference_browser_search_update": {
-    "message": "Mettre à jour les moteurs de recherche"
-  },
-  "policy_description_Preference_browser_tabs_warnOnClose": {
-    "message": "Afficher un avertissement lorsque le navigateur est fermé"
-  },
-  "policy_description_Preference_browser_urlbar_suggest_bookmark": {
-    "message": "Suggérer des favoris lors de l'utilisation de la barre d'adresse"
-  },
-  "policy_description_Preference_browser_urlbar_suggest_history": {
-    "message": "Suggérer l'historique de navigation lors de l'utilisation de la barre d'adresse"
-  },
-  "policy_description_Preference_browser_urlbar_suggest_openpage": {
-    "message": "Suggérer d'ouvrir les onglets lors de l'utilisation de la barre d'adresse"
-  },
-  "policy_description_Preference_dom_disable_window_flip": {
-    "message": "Permettre aux sites Web de singe avec le foyer de fenêtre"
-  },
-  "policy_description_Preference_dom_disable_window_move_resize": {
-    "message": "Permettre aux sites Web de déplacer et de redimensionner les fenêtres"
-  },
-  "policy_description_Preference_dom_event_contextmenu_enabled": {
-    "message": "Autoriser le site Web à écraser le menu contextuel"
-  },
-  "policy_description_Preference_dom_keyboardevent_keypress_hack_dispatch_non_printable_keys_addl": {
-    "message": "Normes Web : Restauration de l'ancien comportement concernant les touches événement et les touches non imprimables pour certains domaines"
-  },
-  "policy_description_Preference_dom_keyboardevent_keypress_hack_use_legacy_keycode_and_charcode_addl": {
-    "message": "Normes Web : Restaurer l'ancien comportement concernant keyCode et charCode pour certains domaines"
-  },
-  "policy_description_Preference_extensions_getAddons_showPane": {
-    "message": "Afficher l'onglet des recommandations dans le gestionnaire des add-ons"
-  },
-  "policy_description_Preference_media_gmp_gmpopenh264_enabled": {
-    "message": "Télécharger le plugin OpenH264 pour la communication WebRTC"
-  },
-  "policy_description_Preference_network_dns_disableIPv6": {
-    "message": "Effectuer des recherches DNS IPv6"
-  },
-  "policy_description_Preference_network_IDN_show_punycode": {
-    "message": "Afficher la version punycode des noms de domaine internationalisés"
-  },
-  "policy_description_Preference_places_history_enabled": {
-    "message": "Mémoriser l'historique de navigation"
-  },
-  "policy_description_Preference_security_default_personal_cert": {
-    "message": "Demander à l'utilisateur de choisir le certificat personnel par défaut"
-  },
-  "policy_description_Preference_security_default_personal_cert_ask_every_time": {
-    "message": "demander à chaque fois"
-  },
-  "policy_description_Preference_security_default_personal_cert_select_automatically": {
-    "message": "sélectionner automatiquement"
-  },
-  "policy_description_Preference_ui_key_menuAccessKeyFocuses": {
-    "message": "La touche Alt permet d'afficher la barre de menu"
-  },
   "policy_description_Preferences": {
     "message": "Specify user-defined preferences (about:config)"
   },
-  "policy_description_Preferences_Label_Key": {
+  "policy_description_Preferences_key": {
     "message": "Preference name"
   },
   "policy_description_Preferences_Status": {
@@ -1394,8 +1325,14 @@
   "policy_description_SSLVersionMax": {
     "message": "Version TLS maximum supporté"
   },
+  "policy_description_SSLVersionMax_Standard": {
+    "message": "TLS 1.3 (par défaut)"
+  },
   "policy_description_SSLVersionMin": {
     "message": "Version TLS minimale requise"
+  },
+  "policy_description_SSLVersionMin_Standard": {
+    "message": "TLS 1.2 (par défaut)"
   },
   "policy_description_StartDownloadsInTempDirectory": {
     "message": "Start downloads in a temporary location rather than in the default download directory"
@@ -1451,9 +1388,6 @@
   "policy_description_WindowsSSO": {
     "message": "Allow Windows single sign-on for Microsoft, work, and school accounts"
   },
-  "policy_label_default": {
-    "message": "par défaut"
-  },
   "requirement_macOS": {
     "message": "works only on macOS"
   },
@@ -1475,8 +1409,8 @@
   "save_dialog_window_title": {
     "message": "Sauvegarder la configuration"
   },
-  "title_add_row": {
-    "message": "Ajouter ligne"
+  "title_add_item": {
+    "message": "add item"
   },
   "title_apply_configuration": {
     "message": "Charger configuration"
@@ -1484,8 +1418,29 @@
   "title_remove_configuration": {
     "message": "Supprimer la configuration"
   },
-  "title_remove_row": {
-    "message": "Enlever la rangée"
+  "title_remove_item": {
+    "message": "remove item"
+  },
+  "validation_invalid_json": {
+    "message": "invalid JSON"
+  },
+  "validation_invalid_number": {
+    "message": "invalid number"
+  },
+  "validation_invalid_url": {
+    "message": "Adresse invalide"
+  },
+  "validation_invalid_version": {
+    "message": "invalid version pattern"
+  },
+  "validation_missing_placeholder_s": {
+    "message": "Placeholder “%s” missing"
+  },
+  "validation_missing_placeholder_searchterms": {
+    "message": "Placeholder “{searchterms}” missing"
+  },
+  "validation_required": {
+    "message": "Obligatoire"
   },
   "version_or_higher": {
     "message": "ou plus haut"

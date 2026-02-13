@@ -1,649 +1,1132 @@
 'use strict';
 
-/* global output, policies, policymanager */
+/* global Dom, I18n, Output */
 
-const DOWNLOAD_PERMISSION = { permissions : ['downloads'] };
+/** @type {browser.permissions.Permissions} */
+const DOWNLOAD_PERMISSION = { permissions: ['downloads'] };
+
+/** @type {int} */
 const FILTER_ANIMATION_DELAY_IN_MS = 1500;
+
+/** @type {number} */
 const MINIMUM_SUPPORTED_VERSION = 140.0;
 
-const elActionLinks = document.getElementById('action-links');
-const elDownloadLink = document.getElementById('download');
-const elGrantDownloadPermissionLink = document.getElementById('grant-download-permission');
-const elPolicyGeneratorButton = document.getElementById('generate');
-const elPolicyOutput = document.getElementById('policy-output');
-const elSelectAllLink = document.getElementById('select-all');
+const $actionLinks = document.getElementById('action-links');
+const $downloadLink = document.getElementById('download');
+const $generatorForm = document.getElementById('generator-form');
+const $grantDownloadPermissionLink = document.getElementById('grant-download-permission');
+const $policyGeneratorButton = document.getElementById('generate');
+const $policyOutput = document.getElementById('policy-output');
+const $selectAllLink = document.getElementById('select-all');
 
-/**
- * @exports configurator
- */
-const configurator = {
+class Configurator {
   /**
    * Contains the UI categories.
    *
    * @type {Array.<HTMLElement>}
    */
-  uiCategoryElements : [],
+  static #uiCategoryElements = [];
 
   /**
-   * The init() method. Defines UI categories, adds policies to UI, setup all the event listeners.
+   * Contains the allowed preferences.
    *
-   * @param {boolean} unserializeStep - (optional) whether the extra step for the unserializer should be executed or not
+   * @type {Array.<string>}
+   */
+  static #allowedPreferences = [];
+
+  /**
+   * Contains the disallowed preferences.
+   *
+   * @type {Array.<string>}
+   */
+  static #disallowedPreferences = [];
+
+  /**
+   * Contains the presets for enum fields.
+   *
+   * @type {Array.<string>}
+   */
+  static #presets = [];
+
+  /**
+   * Load the data, add the categories and policies to the UI, set up all the event listeners, and more.
    *
    * @returns {void}
    */
-  init (unserializeStep) {
-    // define ui categories
-    const categories = [
-      'block-access', 'disable-features', 'customization', 'network', 'privacy', 'security',
-      'updates-and-data', 'others'
-    ];
+  static async init () {
+    const resource = await fetch(browser.runtime.getURL('policies/firefox.json'));
+    const json = await resource.json();
+    const { policies, preferences, presets, tags } = json;
 
-    const categoriesLength = categories.length;
+    Configurator.#allowedPreferences = preferences.allowed;
+    Configurator.#disallowedPreferences = preferences.disallowed;
+    Configurator.#presets = presets;
 
-    for (let i = 0; i < categoriesLength; i++) {
-      // remove all policies from generator so that it can be re-added (used by unserializer)
-      if (unserializeStep) {
-        const node = document.getElementById('options-' + categories[i]);
+    // add categories to the user interface
+    for (const tag of tags) {
+      const $wrapper = document.createElement('div');
+      $wrapper.classList.add('options-block-container');
 
-        while (node.firstChild) {
-          node.removeChild(node.firstChild);
-        }
-      }
+      const $headline = document.createElement('h3');
+      $headline.textContent = I18n.getMessage('policy_category_' + tag.replaceAll('-', '_'));
+      $wrapper.appendChild($headline);
 
-      configurator.uiCategoryElements[categories[i]] = document.getElementById('options-' + categories[i]);
+      const $container = document.createElement('div');
+      $container.setAttribute('id', 'options-' + tag);
+      $container.classList.add('options-block');
+      $wrapper.appendChild($container);
+
+      $generatorForm.appendChild($wrapper);
+
+      Configurator.#uiCategoryElements[tag] = $container;
     }
 
-    // iterate over polices from policies.js and call the appropriate option type for each policy
-    for (const key in policies) {
-      if (policies[key].type === 'array') {
-        configurator.addArrayOption(key, policies[key]);
-      }
-      else if (policies[key].type === 'boolean') {
-        configurator.addBooleanOption(key, policies[key], false);
-      }
-      else if (policies[key].type === 'boolean-inverse') {
-        configurator.addBooleanOption(key, policies[key], true);
-      }
-      else if (policies[key].type === 'enum') {
-        configurator.addEnumOption(key, policies[key]);
-      }
-      else if (policies[key].type === 'flat-array') {
-        configurator.addFlatArrayOption(key, policies[key]);
-      }
-      else if (policies[key].type === 'json-array') {
-        configurator.addJsonArrayOption(key, policies[key]);
-      }
-      else if (policies[key].type === 'key-object-list') {
-        configurator.addKeyObjectListOption(key, policies[key]);
-      }
-      else if (policies[key].type === 'key-value-pairs') {
-        configurator.addKeyValuePairsOption(key, policies[key]);
-      }
-      else if (policies[key].type === 'nested-object') {
-        configurator.addNestedObjectOption(key, policies[key]);
-      }
-      else if (policies[key].type === 'object') {
-        configurator.addObjectOption(key, policies[key]);
-      }
-      else if (policies[key].type === 'preference') {
-        configurator.addPreferenceOption(key, policies[key]);
-      }
-      else if (policies[key].type === 'split-string') {
-        configurator.addSplitStringOption(key, policies[key]);
-      }
-      else if (policies[key].type === 'split-url') {
-        configurator.addSplitUrlOption(key, policies[key]);
-      }
-      else if (policies[key].type === 'string') {
-        configurator.addStringOption(key, policies[key], 'string');
-      }
-      else if (policies[key].type === 'url') {
-        configurator.addStringOption(key, policies[key], 'url');
-      }
-      else if (policies[key].type === 'version') {
-        configurator.addStringOption(key, policies[key], 'version');
+    // add policies to the user interface
+    for (const name in policies) {
+      if (Object.hasOwn(policies, name)) {
+        Configurator.#addPolicy(name, policies[name]);
       }
     }
 
-    // test if the download permission is granted or not
-    configurator.testDownloadPermission();
+    // test if the download permission is granted
+    Configurator.#testDownloadPermission();
 
-    // show sub options for enabled policies and hide sub options for disabled policies
-    [...document.querySelectorAll('.primary-checkbox')].forEach((el) => {
-      const excludePolicy = el.getAttribute('data-exclude');
+    // react to changes of the policy checkboxes
+    document.querySelectorAll('.policy-checkbox').forEach($el => {
+      $el.addEventListener('change', () => {
+        const $options = $el.parentElement.querySelector(':scope > .options');
 
-      el.addEventListener('change', () => {
-        const elSubOptions = el.parentNode.getElementsByClassName('sub-options');
-        const elExtraOptions = el.parentNode.getElementsByClassName('extra-options');
+        if ($options) {
+          // show options for enabled policies and hide options for disabled policies
+          $options.classList.toggle('disabled');
 
-        if (elSubOptions.length > 0) {
-          [...elSubOptions].forEach((el) => {
-            el.classList.toggle('disabled');
-          });
+          // set focus to the first input or select field after a policy checkbox has been checked
+          if (!$options.classList.contains('disabled')) {
+            const $firstInputField = $options.querySelector('input, select');
 
-          // set focus to first input or select field after a policy checkbox has been checked
-          if (!elSubOptions[0].classList.contains('disabled') && elExtraOptions.length === 0) {
-            const firstInputField = elSubOptions[0].querySelector('input[type=text], input[type=url], select');
-
-            if (firstInputField) {
-              firstInputField.focus();
-            }
-          }
-        }
-
-        if (elExtraOptions.length > 0) {
-          elExtraOptions[0].classList.toggle('disabled');
-
-          // set focus to first input or select field after a policy checkbox has been checked
-          if (!elExtraOptions[0].classList.contains('disabled')) {
-            const firstInputField = elExtraOptions[0].querySelector('input[type=text], input[type=url], select');
-
-            if (firstInputField) {
-              firstInputField.focus();
+            if ($firstInputField) {
+              $firstInputField.focus();
             }
           }
         }
       });
+    });
 
-      if (excludePolicy) {
-        excludePolicy.split(',').forEach((policy) => {
-          configurator.handlePolicyExclusion(el, policy);
-        });
+    // add event listeners for policy exclusions
+    document.querySelectorAll('[data-exclude]').forEach($el => {
+      $el.addEventListener('change', e => Configurator.handlePolicyExclusion(e.target));
+    });
+
+    // add event listeners for validations
+    document.querySelectorAll('[data-validations]').forEach($el => {
+      Dom.addEventListener($el, 'input', Configurator.#validateInputField);
+    });
+
+    // add event listeners for array actions (add / remove buttons)
+    document.querySelectorAll('.array-action').forEach($el => {
+      Dom.addEventListener($el, 'click', Configurator.#executeArrayActions);
+    });
+
+    // add the event listener for the "generate policies" button
+    $policyGeneratorButton.addEventListener('click', () => {
+      $policyOutput.textContent = Output.generatePoliciesOutput();
+      $actionLinks.classList.remove('hidden');
+    });
+
+    // focus the "generate policies" button via keyboard shortcut
+    window.addEventListener('keydown', e => {
+      if (e.shiftKey && e.key === 'G') {
+        $policyGeneratorButton.focus();
       }
     });
 
-    // add event listener for array field actions (plus / minus icons)
-    [...document.querySelectorAll('.array-action')].forEach((el) => {
-      el.addEventListener('click', configurator.executeArrayFieldActions);
-    });
-
-    // add event listener for mandatory field validation
-    [...document.querySelectorAll('input[data-mandatory]')].forEach((el) => {
-      el.addEventListener('input', configurator.validateMandatoryFields);
-    });
-
-    // add event listener for preference field validation
-    [...document.querySelectorAll('input[data-preference]')].forEach((el) => {
-      el.addEventListener('input', configurator.validatePreferenceFields);
-    });
-
-    // add event listener for JSON field validation
-    [...document.querySelectorAll('textarea[data-json]')].forEach((el) => {
-      el.addEventListener('input', configurator.validateJsonFields);
-    });
-
-    // add event listener for URL field validation
-    [...document.querySelectorAll('input[type=url]')].forEach((el) => {
-      el.addEventListener('input', configurator.validateUrlFields);
-    });
-
-    // add event listener for version pattern field validation
-    [...document.querySelectorAll('input[data-type=version-pattern]')].forEach((el) => {
-      el.addEventListener('input', configurator.validateVersionPatternFields);
-    });
-
-    // action for clicking the "generate policies" button
-    elPolicyGeneratorButton.onclick = (e) => {
-      e.preventDefault();
-
-      elPolicyOutput.innerText = output.generatePoliciesOutput();
-      elActionLinks.classList.remove('hidden');
-    };
-
-    // action for clicking the "select all" link
-    elSelectAllLink.onclick = (e) => {
-      e.preventDefault();
-
+    // add the event listener for the "select all" button
+    $selectAllLink.addEventListener('click', () => {
       const selection = window.getSelection();
       const range = document.createRange();
-      range.selectNodeContents(elPolicyOutput);
+      range.selectNodeContents($policyOutput);
       selection.removeAllRanges();
       selection.addRange(range);
-    };
+    });
 
-    // action for clicking the "download policies.json" link if downloads permission is not granted
-    elGrantDownloadPermissionLink.onclick = async (e) => {
-      e.preventDefault();
-
+    // add the event listener for the "download policies.json" button if downloads permission is not granted
+    $grantDownloadPermissionLink.addEventListener('click', async () => {
       const granted = await browser.permissions.request(DOWNLOAD_PERMISSION);
 
       // immediately prompt for download after the downloads permission has been granted
       if (granted) {
-        configurator.downloadPolicy();
+        Configurator.#downloadPolicy();
       }
-    };
-
-    // action for clicking the "download policies.json" link if downloads permission is granted
-    elDownloadLink.onclick = (e) => {
-      e.preventDefault();
-
-      configurator.downloadPolicy();
-    };
-
-    // filter field
-    configurator.filterField();
-  },
-
-  /**
-   * Tests if the downloads permission has been granted or not. If granted, the link for granting the permission
-   * will be hidden and the real download link will be shown.
-   *
-   * @returns {void}
-   */
-  async testDownloadPermission () {
-    const granted = await browser.permissions.contains(DOWNLOAD_PERMISSION);
-
-    // if the downloads permission is granted hide the link for granting permission and show the
-    // real download link instead
-    if (granted) {
-      elGrantDownloadPermissionLink.classList.add('hidden');
-      elDownloadLink.classList.remove('hidden');
-    }
-  },
-
-  /**
-   * Method for downloading the "policies.json" file.
-   *
-   * @returns {void}
-   */
-  downloadPolicy () {
-    browser.downloads.download({
-      saveAs : true,
-      url : URL.createObjectURL(new Blob([elPolicyOutput.innerText])),
-      filename : 'policies.json'
     });
-  },
+
+    // add the event listener for the "download policies.json" link if downloads permission is granted
+    $downloadLink.addEventListener('click', () => {
+      Configurator.#downloadPolicy();
+    });
+
+    // set up the filter field
+    Configurator.#filterField();
+  }
 
   /**
-   * Executes the add and remove actions for array fields.
+   * Handle the exclusion of policies.
    *
-   * @param {MouseEvent} e - event
+   * @param {HTMLInputElement} $el - the DOM element of the policy checkbox
    *
    * @returns {void}
    */
-  executeArrayFieldActions (e) {
-    e.preventDefault();
+  static handlePolicyExclusion ($el) {
+    const excludedPolicies = $el.getAttribute('data-exclude');
+    excludedPolicies.split(',').forEach(policy => {
+      const $excludedPolicy = document.querySelector(`[data-name="${policy}"]`);
 
+      if (!$excludedPolicy) {
+        return;
+      }
+
+      const $checkbox = $excludedPolicy.querySelector(':scope > input');
+
+      if ($el.checked) {
+        $excludedPolicy.classList.add('excluded');
+        $checkbox.setAttribute('disabled', 'disabled');
+      }
+      // also check other enabled policies before enabling the policy again
+      else if (!document.querySelector(`[data-exclude*="${policy}"]:checked`)) {
+        $excludedPolicy.classList.remove('excluded');
+        $checkbox.removeAttribute('disabled');
+      }
+    });
+  }
+
+  /**
+   * Add the policy to the UI.
+   *
+   * @param {string} name - name of the policy
+   * @param {object} policy - the policy object
+   *
+   * @returns {void}
+   */
+  static #addPolicy (name, policy) {
+    // skip disabled policies
+    if (policy.enabled === false) {
+      return;
+    }
+
+    // policy container
+    const $wrapper = document.createElement('div');
+    $wrapper.setAttribute('data-name', name);
+    $wrapper.setAttribute('data-type', policy.schema);
+    $wrapper.classList.add('policy-container');
+
+    // policy toggle checkbox
+    const $checkbox = document.createElement('input');
+    $checkbox.setAttribute('type', 'checkbox');
+    $checkbox.setAttribute('id', name);
+    $checkbox.classList.add('checkbox', 'policy-checkbox');
+
+    // policy exclusions
+    if (policy.exclude) {
+      $checkbox.setAttribute('data-exclude', policy.exclude);
+    }
+
+    // reverse attribute for boolean options with false instead of true as the value
+    if (policy.inverse) {
+      $checkbox.setAttribute('data-inverse', 'true');
+    }
+
+    $wrapper.appendChild($checkbox);
+
+    // label
+    const $label = document.createElement('label');
+    $label.setAttribute('for', name);
+    $label.textContent = I18n.getMessage('policy_description_' + name);
+    $wrapper.appendChild($label);
+
+    // deprecation note
+    if (policy.deprecation) {
+      Configurator.#addInfoText($wrapper, I18n.getMessage(policy.deprecation), 'deprecated');
+    }
+
+    // additional note
+    if (policy.note) {
+      Configurator.#addInfoText($wrapper, I18n.getMessage(policy.note), 'warning');
+    }
+
+    // versions info
+    if (
+      parseFloat(policy.availability.mainstream) > MINIMUM_SUPPORTED_VERSION ||
+      parseFloat(policy.availability.esr) > MINIMUM_SUPPORTED_VERSION
+    ) {
+      let message = I18n.getMessage('version_required') + ': ';
+
+      if (policy.availability.mainstream) {
+        message += 'Firefox ' + policy.availability.mainstream;
+        message += ' ' + I18n.getMessage('version_or_higher');
+      }
+
+      if (policy.availability.mainstream && policy.availability.esr) {
+        message += ', ';
+      }
+
+      if (policy.availability.esr) {
+        message += 'Firefox ESR ' + policy.availability.esr;
+        message += ' ' + I18n.getMessage('version_or_higher');
+      }
+
+      Configurator.#addInfoText($wrapper, message, 'firefox');
+    }
+
+    // info link
+    if (policy.link) {
+      Configurator.#addLink($wrapper, policy.link);
+    }
+
+    // options for non-boolean policies
+    if (policy.schema !== 'boolean') {
+      Configurator.#addOptions(name, policy, $wrapper);
+    }
+
+    // add the element to the user interface
+    if (policy.tags[0]) {
+      Configurator.#uiCategoryElements[policy.tags[0]]?.appendChild($wrapper);
+    }
+  }
+
+  /**
+   * Add options for the policy.
+   *
+   * @param {string} name - the name of the policy
+   * @param {object} policy - the policy object
+   * @param {HTMLElement} $wrapper - the container element for the policy
+   *
+   * @returns {void}
+   */
+  static #addOptions (name, policy, $wrapper) {
+    const $options = document.createElement('div');
+    $options.classList.add('options', 'disabled');
+    $wrapper.appendChild($options);
+
+    if (['array', 'enum', 'object', 'string'].includes(policy.schema)) {
+      Configurator.#addProperty($options, name, policy);
+    }
+  }
+
+  /**
+   * Add a property to a policy.
+   *
+   * @param {HTMLElement} $el - the DOM element where the option should be inserted
+   * @param {string} parentName - the name of the parent object
+   * @param {object} object - the object to add
+   *
+   * @returns {void}
+   */
+  static #addProperty ($el, parentName, object) {
+    switch (object.schema) {
+      case 'array':
+        Configurator.#addArrayProperty($el, parentName, object);
+        break;
+      case 'boolean':
+        Configurator.#addBooleanProperty($el, parentName, object);
+        break;
+      case 'enum':
+        Configurator.#addEnumProperty($el, parentName, object);
+        break;
+      case 'object':
+        Configurator.#addObjectProperty($el, parentName, object);
+        break;
+      case 'string':
+        Configurator.#addStringProperty($el, parentName, object);
+        break;
+      default:
+        // do nothing
+    }
+  }
+
+  /**
+   * Add a property of the type "array".
+   *
+   * @param {HTMLElement} $el - the DOM element where the option should be inserted
+   * @param {string} parentName - the name of the parent object
+   * @param {object} object - the object to add
+   *
+   * @returns {void}
+   */
+  static #addArrayProperty ($el, parentName, object) {
+    const $wrapper = document.createElement('div');
+    $wrapper.classList.add('array-wrapper');
+
+    // optional name
+    if (object.name) {
+      $wrapper.setAttribute('data-name', object.name);
+    }
+
+    const $container = document.createElement('div');
+    $container.classList.add('array-container');
+
+    // optional label
+    if (object.label) {
+      Configurator.#addLabel($el, object.label);
+    }
+
+    // add array items
+    if (object.items?.schema === 'boolean') {
+      for (const [idx, option] of object.items.options.entries()) {
+        option.schema = 'boolean';
+        Configurator.#addProperty($container, parentName + '_' + (idx + 1), option);
+      }
+    }
+    else if (object.items) {
+      // put additional item into the array
+      if (object.items.addition) {
+        const $additionalWrapper = document.createElement('div');
+        $additionalWrapper.classList.add('additional-item');
+        $wrapper.appendChild($additionalWrapper);
+
+        Configurator.#addProperty($additionalWrapper, parentName, object.items.addition);
+      }
+
+      // info link
+      if (object.items.link) {
+        Configurator.#addLink($wrapper, object.items.link);
+      }
+
+      // concatenate all items in the array by the given character
+      if (object.items.join) {
+        $wrapper.setAttribute('data-join', object.items.join);
+      }
+
+      // an empty value instead of an array is allowed
+      if (object.items.allow_empty_value) {
+        $wrapper.setAttribute('data-empty-value-allowed', 'true');
+      }
+
+      Configurator.#addProperty($container, parentName + '_array_1', object.items);
+    }
+
+    // add array action links
+    if (object.items?.schema !== 'boolean') {
+      Configurator.#addArrayActionLinks($container, parentName);
+    }
+
+    $wrapper.appendChild($container);
+    $el.appendChild($wrapper);
+  }
+
+  /**
+   * Add a property of the type "boolean".
+   *
+   * @param {HTMLElement} $el - the DOM element where the option should be inserted
+   * @param {string} parentName - the name of the parent object
+   * @param {object} object - the object to add
+   *
+   * @returns {void}
+   */
+  static #addBooleanProperty ($el, parentName, object) {
+    const domName = parentName + '_checkbox';
+    const $wrapper = document.createElement('div');
+    $wrapper.classList.add('boolean-wrapper');
+
+    // input field
+    const $input = document.createElement('input');
+    $input.setAttribute('type', 'checkbox');
+    $input.setAttribute('id', domName);
+    $input.setAttribute('data-name', object.name);
+    $input.classList.add('checkbox');
+    $wrapper.appendChild($input);
+
+    // label
+    const $label = document.createElement('label');
+    $label.setAttribute('for', domName);
+    $label.classList.add('label');
+    $label.textContent = I18n.getMessage(object.label);
+    $wrapper.appendChild($label);
+
+    $el.appendChild($wrapper);
+  }
+
+  /**
+   * Add a property of the type "enum".
+   *
+   * @param {HTMLElement} $el - the DOM element where the option should be inserted
+   * @param {string} parentName - the name of the parent object
+   * @param {object} object - the object to add
+   *
+   * @returns {void}
+   */
+  static #addEnumProperty ($el, parentName, object) {
+    const domName = parentName + '_select';
+    const $wrapper = document.createElement('div');
+    $wrapper.classList.add('enum-wrapper');
+
+    // label
+    if (object.label) {
+      Configurator.#addLabel($el, object.label, domName);
+    }
+
+    // select element
+    const $select = document.createElement('select');
+    $select.setAttribute('id', domName);
+
+    // optional name
+    if (object.name) {
+      $select.setAttribute('data-name', object.name);
+    }
+
+    // use presets for options if available
+    if (object.preset && Configurator.#presets[object.preset]) {
+      object.options = Configurator.#presets[object.preset];
+    }
+
+    // assign options to select field
+    if (object.options) {
+      // sort the options
+      if (object.sort_options) {
+        object.options.sort((a, b) => I18n.getMessage(a.label).localeCompare(I18n.getMessage(b.label)));
+      }
+
+      // add options to the select element
+      for (const option of object.options) {
+        const $option = document.createElement('option');
+        $option.textContent = I18n.getMessage(option.label);
+        $option.setAttribute('value', option.value);
+
+        // default value
+        if (option.value === object.default) {
+          $option.setAttribute('selected', 'selected');
+        }
+
+        $select.appendChild($option);
+      }
+    }
+
+    $wrapper.appendChild($select);
+    $el.appendChild($wrapper);
+  }
+
+  /**
+   * Add a property of the type "object".
+   *
+   * @param {HTMLElement} $el - the DOM element where the option should be inserted
+   * @param {string} parentName - the name of the parent object
+   * @param {object} object - the object to add
+   *
+   * @returns {void}
+   */
+  static #addObjectProperty ($el, parentName, object) {
+    const $wrapper = document.createElement('div');
+    $wrapper.classList.add('object-wrapper');
+
+    // optional name
+    if (object.name) {
+      $wrapper.setAttribute('data-name', object.name);
+    }
+
+    // lockable option
+    if (object.lockable) {
+      Configurator.#addLockOption($wrapper, parentName);
+    }
+
+    $el.appendChild($wrapper);
+
+    // label
+    if (object.label) {
+      const $label = document.createElement('div');
+      $label.classList.add('object-label');
+      $label.textContent = I18n.getMessage(object.label);
+
+      // workaround to access the parent elements
+      requestAnimationFrame(() => {
+        const arrayWrapper = $el.classList.contains('array-container');
+        const $container = arrayWrapper ? $el : $wrapper;
+        $container.insertAdjacentElement('beforebegin', $label);
+      });
+    }
+
+    // optional key
+    if (object.key) {
+      Configurator.#addObjectKey($wrapper, parentName, object.key);
+    }
+
+    // add properties
+    if (object.properties) {
+      for (const property of object.properties) {
+        const name = parentName + '_' + property.name;
+        Configurator.#addProperty($wrapper, name, property);
+      }
+    }
+  }
+
+  /**
+   * Add a property of the type "string".
+   *
+   * @param {HTMLElement} $el - the DOM element where the option should be inserted
+   * @param {string} parentName - the name of the parent object
+   * @param {object} object - the object to add
+   *
+   * @returns {void}
+   */
+  static #addStringProperty ($el, parentName, object) {
+    const $wrapper = document.createElement('div');
+    $wrapper.classList.add('input-wrapper');
+
+    const isUrlType = object.validations?.some(type => ['secure-url', 'url', 'url-or-data'].includes(type));
+    const isNumberType = object.validations?.includes('number');
+    const type = isUrlType ? 'url' : isNumberType ? 'number' : 'text';
+    const validations = [];
+    const domName = parentName + '_input';
+
+    // optional key
+    if (object.key) {
+      Configurator.#addObjectKey($el, parentName, object.key);
+    }
+
+    // label
+    if (object.label) {
+      Configurator.#addLabel($el, object.label, domName);
+    }
+
+    // input field
+    const $input = document.createElement(object.textarea ? 'textarea' : 'input');
+
+    if (type === 'url') {
+      $input.setAttribute('type', 'url');
+
+      // url validations
+      Configurator.#addInvalidLabel($wrapper, 'url', 'validation_invalid_url');
+      validations.push('url');
+
+      if (object.validations) {
+        if (object.validations.includes('secure-url')) {
+          $input.setAttribute('data-secure', 'true');
+        }
+        else if (object.validations.includes('url-or-data')) {
+          $input.setAttribute('data-data-uri-allowed', 'true');
+        }
+      }
+    }
+    else if (type === 'number') {
+      $input.setAttribute('type', 'text');
+      $input.setAttribute('inputmode', 'numeric');
+      $input.setAttribute('pattern', '[0-9]*');
+      $input.setAttribute('min', '0');
+
+      // number validation
+      Configurator.#addInvalidLabel($wrapper, 'number', 'validation_invalid_number');
+      validations.push('number');
+    }
+    else if (!object.textarea) {
+      $input.setAttribute('type', 'text');
+    }
+
+    // optional name
+    if (object.name) {
+      $input.setAttribute('data-name', object.name);
+    }
+
+    $input.setAttribute('id', domName);
+    $input.setAttribute('placeholder', I18n.getMessage(object.placeholder));
+
+    // common validations
+    if (object.validations) {
+      if (object.validations.includes('required')) {
+        Configurator.#addInvalidLabel($wrapper, 'required', 'validation_required', true);
+        $input.classList.add('invalid-input-style');
+        validations.push('required');
+      }
+
+      if (object.validations.includes('json')) {
+        Configurator.#addInvalidLabel($wrapper, 'json', 'validation_invalid_json');
+        validations.push('json');
+      }
+    }
+
+    // regex for custom validations
+    if (object.regex?.pattern) {
+      Configurator.#addInvalidLabel($wrapper, 'regex', object.regex.error);
+      $input.setAttribute('data-regex-pattern', object.regex.pattern);
+      validations.push('regex');
+    }
+
+    // add all the collected validations
+    if (validations.length > 0) {
+      $input.setAttribute('data-validations', validations.join(','));
+    }
+
+    // filter to customize the output
+    if (object.output_filter) {
+      $input.setAttribute('data-output-filter', object.output_filter);
+    }
+
+    $wrapper.appendChild($input);
+    $el.appendChild($wrapper);
+  }
+
+  /**
+   * Add remove and add buttons for arrays.
+   *
+   * @param {HTMLElement} $container - the DOM node of the container element
+   * @param {string} parentName - the name of the parent object
+   *
+   * @returns {void}
+   */
+  static #addArrayActionLinks ($container, parentName) {
+    // remove button
+    const $removeButton = document.createElement('button');
+    $removeButton.setAttribute('type', 'button');
+    $removeButton.setAttribute('data-action', 'remove');
+    $removeButton.setAttribute('aria-disabled', 'true');
+    $removeButton.setAttribute('tabindex', '-1');
+    $removeButton.classList.add('array-action', 'disabled-link');
+    $container.appendChild($removeButton);
+
+    const $removeIcon = document.createElement('img');
+    $removeIcon.src = '/images/minus.svg';
+    $removeIcon.width = 10;
+    $removeIcon.height = 2;
+    $removeIcon.alt = I18n.getMessage('title_remove_item');
+    $removeIcon.classList.add('action-img');
+    $removeButton.appendChild($removeIcon);
+
+    // add button
+    const $addButton = document.createElement('button');
+    $addButton.setAttribute('type', 'button');
+    $addButton.setAttribute('data-action', 'add');
+    $addButton.setAttribute('data-name', parentName);
+    $addButton.setAttribute('title', I18n.getMessage('title_add_item'));
+    $addButton.classList.add('array-action');
+    $container.appendChild($addButton);
+
+    const $addIcon = document.createElement('img');
+    $addIcon.src = '/images/plus.svg';
+    $addIcon.classList.add('action-img');
+    $addIcon.width = 10;
+    $addIcon.height = 10;
+    $addIcon.alt = I18n.getMessage('title_add_item');
+    $addButton.appendChild($addIcon);
+  }
+
+  /**
+   * Execute the add and remove actions for arrays.
+   *
+   * @param {MouseEvent} e - the click event
+   *
+   * @returns {void}
+   */
+  static #executeArrayActions (e) {
     switch (e.target.getAttribute('data-action')) {
       case 'add':
-        configurator.addArrayField(e.target, null, null);
+        Configurator.#addArrayItem(e.target);
         break;
       case 'remove':
-        configurator.removeArrayField(e.target);
+        Configurator.#removeArrayItem(e.target);
         break;
       default:
       // do nothing
     }
-  },
+  }
 
   /**
-   * Executes the add action for array fields, called by executeArrayFieldActions().
+   * Execute the add action for arrays.
    *
-   * @param {HTMLElement} el - the DOM element of the array field which should be duplicated
-   * @param {string|null} key - (optional) the array field index which should be used for DOM IDs and names
-   * @param {number|null} overrideCountValue - (optional) use this value for the data-count attribute
+   * @param {HTMLElement} $el - the DOM element of the "add" button
    *
    * @returns {void}
    */
-  addArrayField (el, key, overrideCountValue) {
-    const trigger = el;
-    const removeBtn = el.previousElementSibling;
+  static #addArrayItem ($el) {
+    const $wrapper = $el.closest('.array-wrapper');
+    const $container = $el.closest('.array-container');
+    const $removeBtn = $container.querySelector(':scope > [data-action="remove"]');
 
-    // if the key parameter is used, this method is called by the unserializer. Let's make sure that we append new
-    // items always to the end to preserve the original order
-    if (key) {
-      const closest = el.closest('.array-action-links');
-
-      if (closest) {
-        const arrayActionElements = closest.getElementsByClassName('array-action');
-        // eslint-disable-next-line no-param-reassign
-        el = arrayActionElements[arrayActionElements.length - 1];
-      }
+    // after adding a new array item, the remove button of the first one should no longer be disabled
+    if ($removeBtn.classList.contains('disabled-link')) {
+      $removeBtn.removeAttribute('aria-disabled');
+      $removeBtn.removeAttribute('tabindex');
+      $removeBtn.setAttribute('title', I18n.getMessage('title_remove_item'));
+      $removeBtn.classList.remove('disabled-link');
     }
 
-    // after adding a new array item the remove link of the first one shouldn't be disabled
-    if (removeBtn.classList.contains('disabled-link')) {
-      removeBtn.classList.remove('disabled-link');
-    }
+    // clone the original array item
+    const $addedNode = Dom.cloneNode($container);
 
-    // increment array field counter
-    const count = overrideCountValue ? overrideCountValue : parseInt(el.getAttribute('data-count')) + 1;
+    // for the cloned element, we do not want to have more than one item in subarrays by default
+    $addedNode.querySelectorAll('.array-container:not(:first-child)').forEach($el => {
+      // untrack event listeners before removing the element
+      $el.querySelectorAll('[data-validations]').forEach($el => {
+        Dom.removeEventListener($el, 'input', Configurator.#validateInputField);
+      });
 
-    el.parentNode.parentNode.querySelectorAll(':scope > div > [data-count]').forEach((el) => {
-      el.setAttribute('data-count', count.toString());
+      $el.querySelectorAll(':scope > .array-action').forEach($el => {
+        Dom.removeEventListener($el, 'click', Configurator.#executeArrayActions);
+      });
+
+      // remove the subarray item
+      $el.remove();
     });
 
-    // copy the array item
-    const addedNode = el.parentNode.cloneNode(true);
-
-    // remove the disabled link class for cloned items
-    addedNode.querySelector(':scope > .disabled-link')?.classList.remove('disabled-link');
-
-    // we want an empty input / textarea field for the copied array item, we also need a new DOM ID
-    addedNode.querySelectorAll('input, textarea, select, a').forEach((el) => {
-      let id = null;
-
-      if (trigger.parentNode?.parentNode?.parentNode?.classList.contains('object-list')) {
-        if (el.classList.contains('key') || el.parentNode?.querySelector('input')?.classList.contains('key')) {
-          id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (key ? key : count));
-        }
-        else if (el.nodeName === 'SELECT') {
-          id = el.id.replace(/^(\w+)_(\d+)_(\d+)$/i, (fullMatch, name, parentCount, count) => name + '_' + parseInt(trigger.dataset.count) + '_' + count);
-        }
-        else {
-          id = el.id.replace(/^(\w+)_(\d+)_(\w+)_(\d+)$/i, (fullMatch, name, parentCount, key, count) => name + '_' + parseInt(trigger.dataset.count) + '_' + key + '_' + count);
-        }
-      }
-      else if (
-        trigger.closest('.checkbox').querySelector('.primary-checkbox[data-type="array"]') &&
-        el.parentNode?.parentNode?.classList.contains('array')
-      ) {
-        id = el.id.replace(/^(\w+)_(\d+)_(\w+)_(\d+)$/i, (fullMatch, name, parentCount, key, count) => name + '_' + parseInt(trigger.dataset.count) + '_' + key + '_' + count);
+    // we want empty fields for the copied array item
+    $addedNode.querySelectorAll('input, textarea').forEach($el => {
+      if ($el.getAttribute('type') === 'checkbox') {
+        $el.checked = false;
       }
       else {
-        id = el.id.replace(/^(\w+)_(\d+)$/i, (fullMatch, name) => name + '_' + (key ? key : count));
+        $el.value = '';
       }
 
-      if (el.nodeName === 'INPUT' || el.nodeName === 'TEXTAREA') {
-        el.value = '';
-        el.setAttribute('id', id);
-        el.setAttribute('name', id);
-      }
-      else if (el.nodeName === 'SELECT') {
-        el.setAttribute('id', id);
-        el.setAttribute('name', id);
-      }
-      else if (el.nodeName === 'A') {
-        el.setAttribute('id', id);
-        el.addEventListener('click', configurator.executeArrayFieldActions);
-      }
+      // dispatch input event to trigger validation
+      $el.dispatchEvent(new Event('input'));
     });
 
-    // we also have to re-add the event listener for the validation of mandatory fields
-    addedNode.querySelectorAll('input[data-mandatory]').forEach((el) => {
-      el.addEventListener('input', configurator.validateMandatoryFields);
-      el.classList.add('mandatory-style');
-      el.parentNode.querySelector('.mandatory-label').classList.remove('hidden');
-    });
+    // add the cloned array item to the DOM
+    $el.parentElement.after($addedNode);
 
-    // we also have to re-add the event listener for the validation of preference fields
-    addedNode.querySelectorAll('input[data-preference]').forEach((el) => {
-      el.addEventListener('input', configurator.validatePreferenceFields);
-      el.classList.add('invalid-preference');
-      el.parentNode.querySelector('.invalid-preference').classList.remove('hidden');
-    });
+    // update the indices of all array items
+    Configurator.#updateArrayIndices($wrapper);
 
-    // we also have to re-add the event listener for the validation of JSON fields
-    addedNode.querySelectorAll('textarea[data-json]').forEach((el) => {
-      el.addEventListener('input', configurator.validateJsonFields);
-      el.classList.add('invalid-json');
-      el.parentNode.querySelector('.invalid-json').classList.remove('hidden');
-    });
+    // set focus to the first input or select field of the newly added array item
+    const $firstInputField = $addedNode.querySelector('input, select');
 
-    // we also have to re-add the event listener for the validation of URL fields
-    addedNode.querySelectorAll('input[type=url]').forEach((el) => {
-      el.addEventListener('input', configurator.validateUrlFields);
-      el.parentNode.querySelector('.invalid-url-label').classList.add('hidden');
-    });
-
-    // we also have to re-add the event listener for the validation of version pattern fields
-    addedNode.querySelectorAll('input[data-type=version-pattern]').forEach((el) => {
-      el.addEventListener('input', configurator.validateVersionPatternFields);
-      el.parentNode.querySelector('.invalid-version-pattern-label').classList.add('hidden');
-    });
-
-    // add the copied array item to the DOM
-    el.parentNode.after(addedNode);
-
-    // set focus to first input or select field of the newly added array field
-    const firstInputField = addedNode.querySelector('input[type=text], input[type=url], select');
-
-    if (firstInputField) {
-      firstInputField.focus();
+    if ($firstInputField) {
+      $firstInputField.focus();
     }
-  },
+  }
 
   /**
-   * Executes the remove action for array fields, called by executeArrayFieldActions().
+   * Execute the remove action for arrays.
    *
-   * @param {HTMLElement} el - the DOM element of the array field which should be removed
+   * @param {HTMLElement} $el - the DOM element of the "remove" button
    *
    * @returns {void}
    */
-  removeArrayField (el) {
-    // different object types have different DOM structures, we need to know the number of total array items
-    const elGrandParent = el.parentNode.parentNode;
-    const isObjectArray = elGrandParent.classList.contains('object-array');
-    const hasSubOptions = elGrandParent.querySelectorAll('.sub-options').length > 0;
-    let newLength = 0;
+  static #removeArrayItem ($el) {
+    // skip for disabled buttons
+    if ($el.classList.contains('disabled-link')) {
+      return;
+    }
 
-    // object-array property of object type
-    if (isObjectArray) {
-      newLength = elGrandParent.querySelectorAll(':scope > div').length - 2;
+    const $wrapper = $el.closest('.array-wrapper');
+    const $container = $el.closest('.array-container');
+    const $previousSibling = $container.previousElementSibling;
+
+    // untrack event listeners before removing the container element
+    $container.querySelectorAll('[data-validations]').forEach($el => {
+      Dom.removeEventListener($el, 'input', Configurator.#validateInputField);
+    });
+
+    $container.querySelectorAll('.array-action').forEach($el => {
+      Dom.removeEventListener($el, 'click', Configurator.#executeArrayActions);
+    });
+
+    // remove the container element
+    $container.remove();
+
+    const $containers = $wrapper.querySelectorAll(':scope > .array-container');
+
+    // disable the remove button for the last array item
+    if ($containers.length === 1) {
+      const $removeBtn = $containers[0].querySelector(':scope > [data-action="remove"]');
+      $removeBtn.setAttribute('aria-disabled', 'true');
+      $removeBtn.setAttribute('tabindex', '-1');
+      $removeBtn.removeAttribute('title');
+      $removeBtn.classList.add('disabled-link');
     }
-    // array type
-    else if (hasSubOptions) {
-      newLength = elGrandParent.querySelectorAll('.sub-options').length - 1;
+
+    // set focus to the previous element, or the first one, if there is no previous element
+    if ($previousSibling && $previousSibling.classList.contains('array-container')) {
+      $previousSibling.querySelector('input, select').focus();
     }
-    // array property of object type
     else {
-      newLength = elGrandParent.querySelectorAll('.input').length - 1;
+      $containers[0].querySelector('input, select').focus();
     }
 
-    // remove the array item from the DOM
-    if (!el.classList.contains('disabled-link')) {
-      // set focus to previous input or select field
-      const { previousSibling } = el.parentNode;
-
-      if (previousSibling) {
-        const previousField = previousSibling.querySelector('input[type=text], input[type=url], select');
-
-        if (previousField) {
-          previousField.focus();
-        }
-      }
-
-      el.parentNode.remove();
-    }
-
-    // if there is only one array item after removing another array item the remove link should be disabled
-    if (newLength === 1) {
-      elGrandParent.querySelector(':scope > div > [data-action="remove"]').classList.add('disabled-link');
-    }
-  },
+    // update the indices of all array items
+    Configurator.#updateArrayIndices($wrapper);
+  }
 
   /**
-   * Validation for mandatory fields.
+   * Update the DOM IDs of the array items to make sure that there is a consistent order.
    *
-   * @param {InputEvent} e - event
+   * @param {HTMLElement} $wrapper - the wrapper element of the array container elements
    *
    * @returns {void}
    */
-  validateMandatoryFields (e) {
-    // the mandatory field has a value, hide visual indication
-    if (e.target.value) {
-      e.target.classList.remove('mandatory-style');
-      e.target.parentNode.querySelector('.mandatory-label').classList.add('hidden');
-    }
-    // the mandatory field is empty, add visual indication
-    else {
-      e.target.classList.add('mandatory-style');
-      e.target.parentNode.querySelector('.mandatory-label').classList.remove('hidden');
-    }
-  },
+  static #updateArrayIndices ($wrapper) {
+    const $containers = $wrapper.querySelectorAll(':scope > .array-container');
 
-  /**
-   * Validation for preference fields.
-   *
-   * @param {InputEvent} e - event
-   *
-   * @returns {void}
-   */
-  validatePreferenceFields (e) {
-    const blockedPreferences = [
-      'app.update.channel',
-      'app.update.lastUpdateTime',
-      'app.update.migrated',
-      'browser.vpn_promo.disallowed_regions'
-    ];
-    const validPrefixes = [
-      'accessibility.',
-      'alerts.',
-      'app.update.',
-      'browser.',
-      'datareporting.policy.',
-      'dom.',
-      'extensions.',
-      'general.autoScroll',
-      'general.smoothScroll',
-      'geo.',
-      'gfx.',
-      'identity.fxaccounts.toolbar.',
-      'intl.',
-      'keyword.enabled',
-      'layers.',
-      'layout.',
-      'mathml.disabled',
-      'media.',
-      'network.',
-      'pdfjs.',
-      'places.',
-      'pref.',
-      'print.',
-      'privacy.baselineFingerprintingProtection',
-      'privacy.fingerprintingProtection',
-      'privacy.globalprivacycontrol.enabled',
-      'privacy.userContext.enabled',
-      'privacy.userContext.ui.enabled',
-      'security.block_fileuri_script_with_wrong_mime',
-      'security.csp.reporting.enabled',
-      'security.default_personal_cert',
-      'security.disable_button.openCertManager',
-      'security.disable_button.openDeviceManager',
-      'security.insecure_connection_text.enabled',
-      'security.insecure_connection_text.pbmode.enabled',
-      'security.mixed_content.block_active_content',
-      'security.mixed_content.block_display_content',
-      'security.mixed_content.upgrade_display_content',
-      'security.OCSP.enabled',
-      'security.OCSP.require',
-      'security.osclientcerts.autoload',
-      'security.pki.certificate_transparency.disable_for_hosts',
-      'security.pki.certificate_transparency.disable_for_spki_hashes',
-      'security.pki.certificate_transparency.mode',
-      'security.ssl.enable_ocsp_stapling',
-      'security.ssl.require_safe_negotiation',
-      'security.tls.enable_0rtt_data',
-      'security.tls.hello_downgrade_check',
-      'security.tls.version.enable-deprecated',
-      'security.warn_submit_secure_to_insecure',
-      'security.webauthn.always_allow_direct_attestation',
-      'signon.',
-      'spellchecker.',
-      'svg.context-properties.content.enabled',
-      'svg.disabled',
-      'toolkit.legacyUserProfileCustomizations.stylesheets',
-      'ui.',
-      'webgl.disabled',
-      'webgl.force-enabled',
-      'widget.',
-      'xpinstall.enabled',
-      'xpinstall.signatures.required',
-      'xpinstall.whitelist.required'
-    ];
-
-    const validateName = (name) => {
-      if (!name) {
-        return true;
-      }
-
-      if (blockedPreferences.includes(name)) {
-        return false;
-      }
-
-      return validPrefixes.some((prefix) => {
-        if (prefix.endsWith('.')) {
-          return name.startsWith(prefix) && name !== prefix;
-        }
-
-        return name === prefix;
+    $containers.forEach(($container, idx) => {
+      $container.querySelectorAll(':scope > div > [id], :scope > div > div > [id]').forEach($el => {
+        // update the index of the last occurrence
+        $el.id = $el.id.replace(/(_array_)\d+(_)(?!.*\1)/, `$1${idx + 1}$2`);
       });
-    };
 
-    // the preference field contains a valid value, hide visual indication
-    if (validateName(e.target.value)) {
-      e.target.classList.remove('invalid-preference-style');
-      e.target.parentNode.querySelector('.invalid-preference-label').classList.add('hidden');
-    }
-    // the preference is not allowed, add visual indication
-    else {
-      e.target.classList.add('invalid-preference-style');
-      e.target.parentNode.querySelector('.invalid-preference-label').classList.remove('hidden');
-    }
-  },
+      // for nested arrays, update the first array index
+      $container.querySelectorAll('.array-container')?.forEach($el => {
+        $el.querySelectorAll(':scope > div > [id], :scope > div > div > [id]').forEach($el => {
+          $el.id = $el.id.replace(/(_array_)\d+(_)/, `$1${idx + 1}$2`);
+        });
+      });
+    });
+  }
 
   /**
-   * Validation for JSON fields.
+   * Add a key input field.
    *
-   * @param {InputEvent} e - event
+   * @param {HTMLElement} $container - the DOM element of the container
+   * @param {string} parentName - the name of the parent object
+   * @param {object} key - the key object
    *
    * @returns {void}
    */
-  validateJsonFields (e) {
+  static #addObjectKey ($container, parentName, key) {
+    const $keyWrapper = document.createElement('div');
+    $keyWrapper.classList.add('key-wrapper');
+
+    // fixed value
+    if (key.value) {
+      $keyWrapper.setAttribute('data-value', key.value);
+    }
+    // input field
+    else {
+      const validations = [];
+      const $input = document.createElement('input');
+      $input.setAttribute('type', 'text');
+      $input.setAttribute('id', parentName + '_key');
+      $input.classList.add('invalid-input-style');
+
+      Configurator.#addInvalidLabel($keyWrapper, 'required', 'validation_required', true);
+      validations.push('required');
+
+      if (key.validations?.includes('preference')) {
+        Configurator.#addInvalidLabel($keyWrapper, 'preference', 'non_allowed_preference_label');
+        validations.push('preference');
+      }
+
+      $input.setAttribute('data-validations', validations.join(','));
+
+      if (key.placeholder) {
+        $input.setAttribute('placeholder', I18n.getMessage(key.placeholder));
+      }
+
+      $keyWrapper.appendChild($input);
+    }
+
+    $container.appendChild($keyWrapper);
+  }
+
+  /**
+   * Add the lock option.
+   *
+   * @param {HTMLElement} $options - the DOM element for the options
+   * @param {string} parentName - the name of the parent object
+   *
+   * @returns {void}
+   */
+  static #addLockOption ($options, parentName) {
+    const $checkbox = document.createElement('input');
+    $checkbox.setAttribute('type', 'checkbox');
+    $checkbox.setAttribute('id', parentName + '_Locked');
+    $checkbox.setAttribute('name', parentName + '_Locked');
+    $checkbox.classList.add('lock-checkbox');
+    $options.appendChild($checkbox);
+
+    const $label = document.createElement('label');
+    $label.setAttribute('for', parentName + '_Locked');
+    $label.textContent = I18n.getMessage('lock_preference');
+    $options.appendChild($label);
+  }
+
+  /**
+   * Add a label.
+   *
+   * @param {HTMLElement} $container - the DOM element of the container
+   * @param {string} label - text content
+   * @param {string|null} id - DOM id of the input element, used for the label's "for" attribute
+   *
+   * @returns {void}
+   */
+  static #addLabel ($container, label, id = null) {
+    const $label = document.createElement(id ? 'label' : 'div');
+
+    if (id) {
+      $label.setAttribute('for', id);
+    }
+
+    $label.classList.add('label');
+    $label.textContent = I18n.getMessage(label);
+    $container.appendChild($label);
+  }
+
+  /**
+   * Add an info text.
+   *
+   * @param {HTMLElement} $container - the DOM element of the container
+   * @param {string} message - text content
+   * @param {string} icon - icon file name
+   *
+   * @returns {void}
+   */
+  static #addInfoText ($container, message, icon) {
+    const $wrapper = document.createElement('div');
+    $wrapper.classList.add('info-text');
+    $container.appendChild($wrapper);
+
+    const $image = document.createElement('img');
+    $image.src = '/images/' + icon + '.svg';
+    $image.width = 18;
+    $image.height = 18;
+    $image.alt = '';
+    $wrapper.appendChild($image);
+
+    const $text = document.createTextNode(message);
+    $wrapper.appendChild($text);
+  }
+
+  /**
+   * Add a link.
+   *
+   * @param {HTMLElement} $container - the DOM element of the container
+   * @param {string} link - URL of the info link
+   *
+   * @returns {void}
+   */
+  static #addLink ($container, link) {
+    const $wrapper = document.createElement('div');
+    $wrapper.classList.add('info-text');
+    $container.appendChild($wrapper);
+
+    const $link = document.createElement('a');
+    $link.setAttribute('href', link);
+    $link.setAttribute('target', '_blank');
+    $wrapper.appendChild($link);
+
+    const $image = document.createElement('img');
+    $image.src = '/images/link.svg';
+    $image.width = 18;
+    $image.height = 18;
+    $image.alt = '';
+    $link.appendChild($image);
+
+    const $label = document.createTextNode(I18n.getMessage('link_learn_more'));
+    $link.appendChild($label);
+  }
+
+  /**
+   * Add a label for invalid field inputs.
+   *
+   * @param {HTMLElement} $wrapper - the DOM element of the container element
+   * @param {string} type - the type of the validation
+   * @param {string} message - the translation key of the error message
+   * @param {boolean} showByDefault - whether the label should be shown by default. Defaults to false
+   *
+   * @returns {void}
+   */
+  static #addInvalidLabel ($wrapper, type, message, showByDefault = false) {
+    const $label = document.createElement('div');
+    $label.classList.add('invalid-input-label');
+
+    if (!showByDefault) {
+      $label.classList.add('hidden');
+    }
+
+    $label.setAttribute('data-type', type);
+    $label.textContent = I18n.getMessage(message);
+    $wrapper.appendChild($label);
+  }
+
+  /**
+   * Validate an input field.
+   *
+   * @param {KeyboardEvent} e - the keyboard event
+   *
+   * @returns {void}
+   */
+  static #validateInputField (e) {
+    const $el = e.target;
+    const $parentEl = $el.parentElement;
+    const validations = $el.getAttribute('data-validations').split(',');
+    const { value } = $el;
     let valid = true;
-    try {
-      JSON.parse(e.target.value.replace(/\n/g, ''));
-    }
-    /* eslint-disable no-unused-vars */
-    catch (e) {
-      valid = false;
+
+    if (validations.includes('required')) {
+      if (!value) {
+        $parentEl.querySelector('.invalid-input-label[data-type=required]').classList.remove('hidden');
+        valid = false;
+      }
+      else {
+        $parentEl.querySelector('.invalid-input-label[data-type=required]').classList.add('hidden');
+      }
     }
 
-    // the textarea field contains valid JSON, hide visual indication
-    if (valid || e.target.value === '') {
-      e.target.classList.remove('invalid-json-style');
-      e.target.parentNode.querySelector('.invalid-json-label').classList.add('hidden');
+    if (validations.includes('url')) {
+      const dataUriAllowed = $el.getAttribute('data-data-uri-allowed') === 'true';
+      const secure = $el.getAttribute('data-secure') === 'true';
+
+      if (value && !Configurator.#isValidURL(value, secure, dataUriAllowed)) {
+        $parentEl.querySelector('.invalid-input-label[data-type=url]').classList.remove('hidden');
+        valid = false;
+      }
+      else {
+        $parentEl.querySelector('.invalid-input-label[data-type=url]').classList.add('hidden');
+      }
     }
-    // the textarea field does not contain valid JSON, add visual indication
+
+    if (validations.includes('number')) {
+      if (value && !Configurator.#isValidNumber(value)) {
+        $parentEl.querySelector('.invalid-input-label[data-type=number]').classList.remove('hidden');
+        valid = false;
+      }
+      else {
+        $parentEl.querySelector('.invalid-input-label[data-type=number]').classList.add('hidden');
+      }
+    }
+
+    if (validations.includes('preference')) {
+      if (value && !Configurator.#isValidPreference(value)) {
+        $parentEl.querySelector('.invalid-input-label[data-type=preference]').classList.remove('hidden');
+        valid = false;
+      }
+      else {
+        $parentEl.querySelector('.invalid-input-label[data-type=preference]').classList.add('hidden');
+      }
+    }
+
+    if (validations.includes('json')) {
+      if (value && !Configurator.#isValidJson(value)) {
+        $parentEl.querySelector('.invalid-input-label[data-type=json]').classList.remove('hidden');
+        valid = false;
+      }
+      else {
+        $parentEl.querySelector('.invalid-input-label[data-type=json]').classList.add('hidden');
+      }
+    }
+
+    if (validations.includes('regex')) {
+      if (value && !Configurator.#isValidStringByPattern(value, $el.getAttribute('data-regex-pattern'))) {
+        $parentEl.querySelector('.invalid-input-label[data-type=regex]').classList.remove('hidden');
+        valid = false;
+      }
+      else {
+        $parentEl.querySelector('.invalid-input-label[data-type=regex]').classList.add('hidden');
+      }
+    }
+
+    if (valid) {
+      $el.classList.remove('invalid-input-style');
+    }
     else {
-      e.target.classList.add('invalid-json-style');
-      e.target.parentNode.querySelector('.invalid-json-label').classList.remove('hidden');
+      $el.classList.add('invalid-input-style');
     }
-  },
+  }
 
   /**
-   * Validation for URL fields.
-   *
-   * @param {InputEvent} e - event
-   *
-   * @returns {void}
-   */
-  validateUrlFields (e) {
-    const secure = e.target.getAttribute('data-secure') === 'true';
-    const dataUriAllowed = e.target.getAttribute('data-data-uri-allowed') === 'true';
-
-    // the URL field has a valid URL, hide visual indication
-    if (!e.target.value || configurator.isValidURL(e.target.value, secure, dataUriAllowed)) {
-      e.target.classList.remove('invalid-url-style');
-      e.target.parentNode.querySelector('.invalid-url-label').classList.add('hidden');
-    }
-    // the URL field has not a valid URL, add visual indication
-    else {
-      e.target.classList.add('invalid-url-style');
-      e.target.parentNode.querySelector('.invalid-url-label').classList.remove('hidden');
-    }
-  },
-
-  /**
-   * Tests if a given string is a valid URL.
+   * Validation for URL field.
    *
    * @param {string} string - the string to check
-   * @param {boolean} secure - whether url must start with https:// or not
-   * @param {boolean} dataUriAllowed - whether data URIs are allowed or not
+   * @param {boolean} secure - whether url must start with https://
+   * @param {boolean} dataUriAllowed - whether data URIs are allowed
    *
-   * @returns {boolean} - whether the given string is a valid URL or not
+   * @returns {boolean} - whether the given string is a valid URL
    */
-  isValidURL (string, secure, dataUriAllowed) {
+  static #isValidURL (string, secure, dataUriAllowed) {
     let pattern = null;
 
     if (secure) {
@@ -658,1776 +1141,216 @@ const configurator = {
     }
 
     return pattern.test(encodeURI(string));
-  },
+  }
 
   /**
-   * Validation for version pattern fields.
+   * Validation for number field.
    *
-   * @param {InputEvent} e - event
+   * @param {string} value - the value to check
    *
-   * @returns {void}
+   * @returns {boolean} - whether the given name is a valid number
    */
-  validateVersionPatternFields (e) {
-    // the field has a valid version pattern, hide visual indication
-    if (!e.target.value || configurator.isValidVersionPattern(e.target.value)) {
-      e.target.classList.remove('invalid-version-pattern-style');
-      e.target.parentNode.querySelector('.invalid-version-pattern-label').classList.add('hidden');
-    }
-    // the field has not a valid version pattern, add visual indication
-    else {
-      e.target.classList.add('invalid-version-pattern-style');
-      e.target.parentNode.querySelector('.invalid-version-pattern-label').classList.remove('hidden');
-    }
-  },
+  static #isValidNumber (value) {
+    const regexp = new RegExp(/^\d+$/, 'gi');
+
+    return regexp.test(value);
+  }
 
   /**
-   * Tests if a given string is a valid version pattern.
+   * Validation for preference field.
    *
-   * @param {string} string - the string to check
+   * @param {string} name - the preference name to check
    *
-   * @returns {boolean} - whether the given string is a valid version pattern or not
+   * @returns {boolean} - whether the given name is a valid preference
    */
-  isValidVersionPattern (string) {
-    const pattern = new RegExp(/^\d{3}\.?(?:\d{1,3}\.?)?$/);
-
-    return pattern.test(encodeURI(string));
-  },
-
-  /**
-   * Appends policy element to the appropriate UI category in the DOM.
-   *
-   * @param {HTMLElement} el - the DOM element
-   * @param {object} policy - the policy object
-   *
-   * @returns {void}
-   */
-  addOptionToUi (el, policy) {
-    if (policy.exclude) {
-      el.getElementsByClassName('primary-checkbox')[0].setAttribute('data-exclude', policy.exclude);
+  static #isValidPreference (name) {
+    if (!name) {
+      return true;
     }
 
-    configurator.uiCategoryElements[policy.ui_category].appendChild(el);
-  },
-
-  /**
-   * Adds policy of the type "array" to the DOM.
-   *
-   * @param {string} key - the name of the policy
-   * @param {object} policy - the policy object
-   *
-   * @returns {void}
-   */
-  addArrayOption (key, policy) {
-    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'array', false);
-    const elSubOptions = configurator.addSubOptions(elObjectWrapper);
-
-    // add array properties
-    const optionsLength = policy.items.length;
-    for (let i = 0; i < optionsLength; i++) {
-      if (policy.items[i].type === 'array') {
-        configurator.addProperty(elSubOptions, key, policy.items[i], true, true);
-      }
-      else {
-        configurator.addProperty(elSubOptions, key + '_' + policy.items[i].name, policy.items[i], true, true);
-      }
+    if (Configurator.#disallowedPreferences.includes(name)) {
+      return false;
     }
 
-    // add array field action links
-    elSubOptions.parentNode.classList.add('array-action-links');
-    configurator.addArrayFieldActionLinks(elSubOptions, key + '_1');
-
-    // add option to UI
-    configurator.addOptionToUi(elObjectWrapper, policy);
-  },
-
-  /**
-   * Adds policy of the type "boolean" to the DOM.
-   *
-   * @param {string} key - the name of the policy
-   * @param {object} policy - the policy object
-   * @param {boolean} inverse - if true, the value for the policy will be false instead of true
-   *
-   * @returns {void}
-   */
-  addBooleanOption (key, policy, inverse) {
-    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'boolean', inverse);
-
-    // add option to UI
-    configurator.addOptionToUi(elObjectWrapper, policy);
-  },
-
-  /**
-   * Adds policy of the type "enum" to the DOM.
-   *
-   * @param {string} key - the name of the policy
-   * @param {object} policy - the policy object
-   *
-   * @returns {void}
-   */
-  addEnumOption (key, policy) {
-    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'enum', false);
-
-    const elSelectWrapper = document.createElement('div');
-    elSelectWrapper.classList.add('enum', 'sub-options', 'select-wrapper', 'disabled');
-
-    // add options to select element
-    const elSelect = document.createElement('select');
-    elSelect.setAttribute('id', key + '_Select');
-    elSelect.setAttribute('name', key + '_Select');
-    elSelect.setAttribute('data-name', key);
-
-    elSelectWrapper.appendChild(elSelect);
-    elObjectWrapper.appendChild(elSelectWrapper);
-
-    const optionsLength = policy.options.length;
-    for (let i = 0; i < optionsLength; i++) {
-      const elOptionLabel = document.createTextNode(policy.options[i].label);
-      const elOption = document.createElement('option');
-      elOption.setAttribute('value', policy.options[i].value);
-      elOption.appendChild(elOptionLabel);
-
-      if (policy.options[i].value === policy.default) {
-        elOption.setAttribute('selected', 'selected');
+    return Configurator.#allowedPreferences.some(prefix => {
+      if (prefix.endsWith('.')) {
+        return name.startsWith(prefix) && name !== prefix;
       }
 
-      elSelect.appendChild(elOption);
-    }
-
-    // add option to UI
-    configurator.addOptionToUi(elObjectWrapper, policy);
-  },
+      return name === prefix;
+    });
+  }
 
   /**
-   * Adds policy of the type "flat-array" to the DOM.
+   * Validation for string field by RegExp pattern.
    *
-   * @param {string} key - the name of the policy
-   * @param {object} policy - the policy object
+   * @param {string} text - the string to check
+   * @param {string} pattern - the string to check
+   *
+   * @returns {boolean} - whether the given string is a valid string
+   */
+  static #isValidStringByPattern (text, pattern) {
+    const regexp = new RegExp(pattern, 'gi');
+
+    return regexp.test(text);
+  }
+
+  /**
+   * Validation for JSON field.
+   *
+   * @param {string} content - the text content to check
+   *
+   * @returns {boolean} - whether the given content is valid JSON
+   */
+  static #isValidJson (content) {
+    let valid = true;
+    try {
+      JSON.parse(content.replace(/\n/g, ''));
+    }
+    catch (e) {
+      valid = false;
+    }
+
+    return valid;
+  }
+
+  /**
+   * Test if the downloads permission has been granted. If granted, the link for granting the permission will be
+   * hidden and the real download link will be shown.
    *
    * @returns {void}
    */
-  addFlatArrayOption (key, policy) {
-    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'flat-array', false);
-    const elSubOptions = configurator.addSubOptions(elObjectWrapper);
+  static async #testDownloadPermission () {
+    const granted = await browser.permissions.contains(DOWNLOAD_PERMISSION);
 
-    const elInput = document.createElement('input');
-    elInput.setAttribute('type', 'text');
-
-    if (policy.value.url) {
-      elInput.setAttribute('type', 'url');
+    // if the downloads permission is granted, hide the link for granting permission and show the
+    // real download link instead
+    if (granted) {
+      $grantDownloadPermissionLink.classList.add('hidden');
+      $downloadLink.classList.remove('hidden');
     }
-    else {
-      elInput.setAttribute('type', 'text');
-    }
-
-    elInput.setAttribute('id', key + '_Value_1');
-    elInput.setAttribute('name', key + '_Value_1');
-    elInput.setAttribute('data-name', key);
-    elInput.setAttribute('placeholder', policy.value.label);
-
-    // mandatory field
-    if (policy.value.mandatory) {
-      configurator.addMandatoryLabel(elInput, elSubOptions);
-    }
-
-    // URL validation label
-    if (policy.value.url) {
-      configurator.addInvalidUrlLabel(elSubOptions);
-    }
-
-    // empty value is allowed
-    if (policy.value.allow_empty_value) {
-      elInput.setAttribute('data-empty-value-allowed', 'true');
-    }
-
-    elSubOptions.appendChild(elInput);
-
-    // add array field action links
-    elSubOptions.parentNode.classList.add('array-action-links');
-    configurator.addArrayFieldActionLinks(elSubOptions, key + '_1');
-
-    // add option to UI
-    configurator.addOptionToUi(elObjectWrapper, policy);
-  },
+  }
 
   /**
-   * Adds policy of the type "json-array" to the DOM.
-   *
-   * @param {string} key - the name of the policy
-   * @param {object} policy - the policy object
+   * Action for downloading the "policies.json" file.
    *
    * @returns {void}
    */
-  addJsonArrayOption (key, policy) {
-    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'json-array', false);
-
-    const elSubOptionsWrapper = document.createElement('div');
-    elSubOptionsWrapper.classList.add('sub-options-wrapper');
-    elObjectWrapper.appendChild(elSubOptionsWrapper);
-
-    const elSubOptions = configurator.addSubOptions(elSubOptionsWrapper);
-
-    const elInputWrapperKey = document.createElement('div');
-    elInputWrapperKey.classList.add('input');
-
-    const elInputKey = document.createElement('input');
-    elInputKey.setAttribute('type', 'text');
-    elInputKey.setAttribute('id', key + '_Key_1');
-    elInputKey.setAttribute('name', key + '_Key_1');
-    elInputKey.setAttribute('data-name', key);
-    elInputKey.setAttribute('placeholder', policy.label_key);
-    elInputKey.classList.add('key');
-
-    configurator.addMandatoryLabel(elInputKey, elInputWrapperKey);
-
-    elInputWrapperKey.appendChild(elInputKey);
-    elSubOptions.appendChild(elInputWrapperKey);
-
-    const elSubSubOptions = document.createElement('div');
-    elSubSubOptions.classList.add('sub-sub-options');
-
-    // add properties
-    if (policy.properties) {
-      const optionsLength = policy.properties.length;
-      for (let i = 0; i < optionsLength; i++) {
-        configurator.addProperty(elSubSubOptions, key + '_1', policy.properties[i], true, true);
-      }
-    }
-
-    elSubOptions.appendChild(elSubSubOptions);
-
-    // add array field action links
-    elSubOptions.parentNode.classList.add('array-action-links');
-    configurator.addArrayFieldActionLinks(elSubOptions, key + '_1');
-
-    // add option to UI
-    configurator.addOptionToUi(elObjectWrapper, policy);
-  },
+  static async #downloadPolicy () {
+    await browser.downloads.download({
+      saveAs: true,
+      url: URL.createObjectURL(new Blob([$policyOutput.textContent])),
+      filename: 'policies.json'
+    });
+  }
 
   /**
-   * Adds policy of the type "key-object-list" to the DOM.
-   *
-   * @param {string} key - the name of the policy
-   * @param {object} policy - the policy object
+   * Setup for the filter field.
    *
    * @returns {void}
    */
-  addKeyObjectListOption (key, policy) {
-    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'key-object-list', false);
-
-    // add extra properties
-    if (policy.extra && policy.extra.properties) {
-      const elExtraOptions = document.createElement('div');
-      elExtraOptions.classList.add('extra-options', 'disabled');
-      elExtraOptions.setAttribute('data-key', policy.extra.key);
-      elObjectWrapper.appendChild(elExtraOptions);
-
-      const elPreCaptionWrapper = document.createElement('div');
-      elPreCaptionWrapper.classList.add('label', 'pre-extra');
-      elExtraOptions.appendChild(elPreCaptionWrapper);
-
-      const elPreCaption = document.createTextNode(policy.extra.caption_pre);
-      elPreCaptionWrapper.appendChild(elPreCaption);
-
-      const optionsLength = policy.extra.properties.length;
-      for (let i = 0; i < optionsLength; i++) {
-        configurator.addProperty(elExtraOptions, key, policy.extra.properties[i], false, false);
-      }
-
-      const elPostCaptionWrapper = document.createElement('div');
-      elPostCaptionWrapper.classList.add('label', 'post-extra');
-      elExtraOptions.appendChild(elPostCaptionWrapper);
-
-      const elPostCaption = document.createTextNode(policy.extra.caption_post);
-      elPostCaptionWrapper.appendChild(elPostCaption);
-    }
-
-    const elSubOptionsWrapper = document.createElement('div');
-    elSubOptionsWrapper.classList.add('sub-options-wrapper');
-    elObjectWrapper.appendChild(elSubOptionsWrapper);
-
-    const elSubOptions = configurator.addSubOptions(elSubOptionsWrapper);
-
-    const elInputWrapperKey = document.createElement('div');
-    elInputWrapperKey.classList.add('input');
-
-    const elInputKey = document.createElement('input');
-    elInputKey.setAttribute('type', 'text');
-    elInputKey.setAttribute('id', key + '_Key_1');
-    elInputKey.setAttribute('name', key + '_Key_1');
-    elInputKey.setAttribute('data-name', key);
-    elInputKey.setAttribute('placeholder', policy.label_key);
-    elInputKey.classList.add('key');
-
-    // preference validation
-    if (policy.validator && policy.validator === 'preference') {
-      elInputKey.setAttribute('data-preference', 'true');
-
-      const elPreferenceLabel = document.createElement('div');
-      elPreferenceLabel.classList.add('invalid-preference-label', 'hidden');
-      elPreferenceLabel.innerText = browser.i18n.getMessage('non_allowed_preference_label');
-      elInputWrapperKey.appendChild(elPreferenceLabel);
-    }
-
-    configurator.addMandatoryLabel(elInputKey, elInputWrapperKey);
-    elInputWrapperKey.appendChild(elInputKey);
-    elSubOptions.appendChild(elInputWrapperKey);
-
-    const elSubSubOptions = document.createElement('div');
-    elSubSubOptions.classList.add('sub-sub-options');
-
-    // add properties
-    if (policy.properties) {
-      const optionsLength = policy.properties.length;
-      for (let i = 0; i < optionsLength; i++) {
-        configurator.addProperty(elSubSubOptions, key + '_' + policy.properties[i].name, policy.properties[i], true, true);
-      }
-    }
-
-    elSubOptions.appendChild(elSubSubOptions);
-
-    // add array field action links
-    elSubOptions.parentNode.classList.add('array-action-links');
-    configurator.addArrayFieldActionLinks(elSubOptions, key + '_1');
-
-    // add option to UI
-    configurator.addOptionToUi(elObjectWrapper, policy);
-  },
-
-  /**
-   * Adds policy of the type "key-value-pairs" to the DOM.
-   *
-   * @param {string} key - the name of the policy
-   * @param {object} policy - the policy object
-   *
-   * @returns {void}
-   */
-  addKeyValuePairsOption (key, policy) {
-    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'key-value-pairs', false);
-    const elSubOptions = configurator.addSubOptions(elObjectWrapper);
-
-    const elInputWrapperKey = document.createElement('div');
-    elInputWrapperKey.classList.add('input');
-
-    const elInputKey = document.createElement('input');
-    elInputKey.setAttribute('type', 'text');
-    elInputKey.setAttribute('id', key + '_Key_Value_1');
-    elInputKey.setAttribute('name', key + '_Key_Value_1');
-    elInputKey.setAttribute('data-name', key);
-    elInputKey.setAttribute('placeholder', policy.label_key);
-    elInputKey.classList.add('key');
-    configurator.addMandatoryLabel(elInputKey, elInputWrapperKey);
-    elInputWrapperKey.appendChild(elInputKey);
-    elSubOptions.appendChild(elInputWrapperKey);
-
-    const elInputWrapperValue = document.createElement('div');
-    elInputWrapperValue.classList.add('input');
-
-    const elInputValue = document.createElement('input');
-    elInputValue.setAttribute('type', 'text');
-    elInputValue.setAttribute('id', key + '_Value_Value_1');
-    elInputValue.setAttribute('name', key + '_Value_Value_1');
-    elInputValue.setAttribute('data-name', key);
-    elInputValue.setAttribute('placeholder', policy.label_value);
-    elInputValue.classList.add('value');
-    configurator.addMandatoryLabel(elInputValue, elInputWrapperValue);
-    elInputWrapperValue.appendChild(elInputValue);
-    elSubOptions.appendChild(elInputWrapperValue);
-
-    // add array field action links
-    elSubOptions.parentNode.classList.add('array-action-links');
-    configurator.addArrayFieldActionLinks(elSubOptions, key + '_1');
-
-    // add option to UI
-    configurator.addOptionToUi(elObjectWrapper, policy);
-  },
-
-  /**
-   * Adds policy of the type "nested-object" to the DOM.
-   *
-   * @param {string} key - the name of the policy
-   * @param {object} policy - the policy object
-   *
-   * @returns {void}
-   */
-  addNestedObjectOption (key, policy) {
-    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'nested-object', false);
-
-    // add extra property
-    if (policy.extra) {
-      const elExtraOptions = document.createElement('div');
-      elExtraOptions.classList.add('extra-options', 'disabled');
-      elExtraOptions.setAttribute('data-key', policy.extra.name);
-      elObjectWrapper.appendChild(elExtraOptions);
-
-      configurator.addProperty(elExtraOptions, key, policy.extra, false, false);
-    }
-
-    if (policy.children.properties) {
-      const elSubOptionsWrapper = document.createElement('div');
-      elSubOptionsWrapper.classList.add('sub-options-wrapper');
-      elObjectWrapper.appendChild(elSubOptionsWrapper);
-
-      const elSubOptions = configurator.addSubOptions(elSubOptionsWrapper);
-
-      const optionsLength = policy.children.properties.length;
-      for (let i = 0; i < optionsLength; i++) {
-        configurator.addProperty(elSubOptions, key + '_' + policy.children.properties[i].name, policy.children.properties[i], true, true);
-      }
-
-      // add array field action links
-      elSubOptions.parentElement.classList.add('array-action-links');
-      configurator.addArrayFieldActionLinks(elSubOptions, key + '_children_1');
-    }
-
-    // add option to UI
-    configurator.addOptionToUi(elObjectWrapper, policy);
-  },
-
-  /**
-   * Adds policy of the type "object" to the DOM.
-   *
-   * @param {string} key - the name of the policy
-   * @param {object} policy - the policy object
-   *
-   * @returns {void}
-   */
-  addObjectOption (key, policy) {
-    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'object', false);
-    const elSubOptions = configurator.addSubOptions(elObjectWrapper);
-
-    // policy can be locked
-    if (policy.is_lockable) {
-      configurator.addLockableLink(elSubOptions, key);
-    }
-
-    // add properties
-    if (policy.properties) {
-      const optionsLength = policy.properties.length;
-      for (let i = 0; i < optionsLength; i++) {
-        configurator.addProperty(elSubOptions, key, policy.properties[i], false, false);
-      }
-    }
-
-    // add option to UI
-    configurator.addOptionToUi(elObjectWrapper, policy);
-  },
-
-  /**
-   * Adds policy of the type "preference" to the DOM.
-   *
-   * @param {string} key - the name of the policy
-   * @param {object} policy - the policy object
-   *
-   * @returns {void}
-   */
-  addPreferenceOption (key, policy) {
-    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'preference', false);
-
-    if (policy.properties.type === 'array') {
-      const elArrayWrapper = document.createElement('div');
-      elArrayWrapper.setAttribute('data-name', policy.properties.option);
-      elArrayWrapper.classList.add('array', 'sub-options', 'disabled');
-      elObjectWrapper.appendChild(elArrayWrapper);
-
-      // add array items
-      if (policy.properties.items) {
-        const parentName = policy.properties.option.replace(/\./g, '_');
-        configurator.addProperty(elArrayWrapper, parentName, policy.properties.items, true, false);
-      }
-    }
-    else if (policy.properties.type === 'boolean' || policy.properties.type === 'boolean-inverse') {
-      const elSelectWrapper = document.createElement('div');
-      elSelectWrapper.setAttribute('data-name', policy.properties.option);
-      elSelectWrapper.classList.add('boolean', 'sub-options', 'select-wrapper', 'disabled');
-      elObjectWrapper.appendChild(elSelectWrapper);
-
-      const elSelect = document.createElement('select');
-      elSelect.setAttribute('id', key + '_Select');
-      elSelect.setAttribute('name', key + '_Select');
-      elSelectWrapper.appendChild(elSelect);
-
-      let elOptionTrueLabel = document.createTextNode(browser.i18n.getMessage('enum_value_enable_yes'));
-
-      if (policy.properties.type === 'boolean-inverse') {
-        elOptionTrueLabel = document.createTextNode(browser.i18n.getMessage('enum_value_enable_no'));
-      }
-
-      const elOptionTrue = document.createElement('option');
-      elOptionTrue.setAttribute('value', 'true');
-      elOptionTrue.appendChild(elOptionTrueLabel);
-
-      if (policy.properties.default === 'true') {
-        elOptionTrue.setAttribute('selected', 'selected');
-      }
-
-      let elOptionFalseLabel = document.createTextNode(browser.i18n.getMessage('enum_value_enable_no'));
-
-      if (policy.properties.type === 'boolean-inverse') {
-        elOptionFalseLabel = document.createTextNode(browser.i18n.getMessage('enum_value_enable_yes'));
-      }
-
-      const elOptionFalse = document.createElement('option');
-      elOptionFalse.setAttribute('value', 'false');
-      elOptionFalse.appendChild(elOptionFalseLabel);
-
-      if (policy.properties.default === 'false') {
-        elOptionFalse.setAttribute('selected', 'selected');
-      }
-
-      if (policy.properties.type === 'boolean-inverse') {
-        elSelect.appendChild(elOptionFalse);
-        elSelect.appendChild(elOptionTrue);
-      }
-      else {
-        elSelect.appendChild(elOptionTrue);
-        elSelect.appendChild(elOptionFalse);
-      }
-    }
-    else if (policy.properties.type === 'enum') {
-      const elSelectWrapper = document.createElement('div');
-      elSelectWrapper.setAttribute('data-name', policy.properties.option);
-      elSelectWrapper.classList.add('enum', 'sub-options', 'select-wrapper', 'disabled');
-      elObjectWrapper.appendChild(elSelectWrapper);
-
-      const elSelect = document.createElement('select');
-      elSelect.setAttribute('id', key + '_Select');
-      elSelect.setAttribute('name', key + '_Select');
-      elSelectWrapper.appendChild(elSelect);
-
-      // mandatory field
-      if (policy.mandatory) {
-        configurator.addMandatoryLabel(elSelect, elSelectWrapper);
-      }
-
-      // add options to select element
-      const optionsLength = policy.properties.options.length;
-      for (let i = 0; i < optionsLength; i++) {
-        const elOptionLabel = document.createTextNode(policy.properties.options[i].label);
-        const elOption = document.createElement('option');
-        elOption.setAttribute('value', policy.properties.options[i].value);
-        elOption.appendChild(elOptionLabel);
-
-        if (policy.properties.options[i].value === policy.properties.default) {
-          elOption.setAttribute('selected', 'selected');
-        }
-
-        elSelect.appendChild(elOption);
-      }
-
-      elSelectWrapper.appendChild(elSelect);
-    }
-    else if (policy.properties.type === 'string') {
-      const elInputWrapper = document.createElement('div');
-      elInputWrapper.setAttribute('data-name', policy.properties.option);
-      elInputWrapper.classList.add('input', 'sub-options', 'disabled');
-      elObjectWrapper.appendChild(elInputWrapper);
-
-      const elInput = document.createElement('input');
-      elInput.setAttribute('type', 'text');
-      elInput.setAttribute('id', key + '_Text');
-      elInput.setAttribute('name', key + '_Text');
-      elInput.setAttribute('placeholder', policy.properties.label);
-      elInputWrapper.appendChild(elInput);
-
-      // preferences of type "string" should always be a mandatory field
-      configurator.addMandatoryLabel(elInput, elInputWrapper);
-    }
-
-    // add option to UI
-    configurator.addOptionToUi(elObjectWrapper, policy);
-  },
-
-  /**
-   * Adds policy of the type "split-string" to the DOM.
-   *
-   * @param {string} key - the name of the policy
-   * @param {object} policy - the policy object
-   *
-   * @returns {void}
-   */
-  addSplitStringOption (key, policy) {
-    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'split-string', false);
-    const elSubOptions = configurator.addSubOptions(elObjectWrapper);
-
-    const elInput = document.createElement('input');
-    elInput.setAttribute('type', 'text');
-    elInput.setAttribute('id', key + '_Value_1');
-    elInput.setAttribute('name', key + '_Value_1');
-    elInput.setAttribute('data-name', key);
-    elInput.setAttribute('placeholder', policy.label);
-
-    elSubOptions.appendChild(elInput);
-
-    // add array field action links
-    elSubOptions.parentNode.classList.add('array-action-links');
-    configurator.addArrayFieldActionLinks(elSubOptions, key + '_1');
-
-    // add option to UI
-    configurator.addOptionToUi(elObjectWrapper, policy);
-  },
-
-  /**
-   * Adds policy of the type "split-url" to the DOM.
-   *
-   * @param {string} key - the name of the policy
-   * @param {object} policy - the policy object
-   *
-   * @returns {void}
-   */
-  addSplitUrlOption (key, policy) {
-    const elObjectWrapper = configurator.addPolicyNode(key, policy, 'split-url', false);
-    const elSubOptions = configurator.addSubOptions(elObjectWrapper);
-
-    const elInput = document.createElement('input');
-    elInput.setAttribute('type', 'url');
-    elInput.setAttribute('id', key + '_Value_1');
-    elInput.setAttribute('name', key + '_Value_1');
-    elInput.setAttribute('data-name', key);
-    elInput.setAttribute('placeholder', policy.label);
-
-    // URL validation label
-    configurator.addInvalidUrlLabel(elSubOptions);
-
-    elSubOptions.appendChild(elInput);
-
-    // add array field action links
-    elSubOptions.parentNode.classList.add('array-action-links');
-    configurator.addArrayFieldActionLinks(elSubOptions, key + '_1');
-
-    // add option to UI
-    configurator.addOptionToUi(elObjectWrapper, policy);
-  },
-
-  /**
-   * Adds policy of the type "string" to the DOM.
-   *
-   * @param {string} key - the name of the policy
-   * @param {object} policy - the policy object
-   * @param {string} type - "string", "url", or "version"
-   *
-   * @returns {void}
-   */
-  addStringOption (key, policy, type) {
-    const elObjectWrapper = configurator.addPolicyNode(key, policy, type, false);
-    const elSubOptions = configurator.addSubOptions(elObjectWrapper);
-
-    // input field
-    const elInputWrapper = document.createElement('div');
-    elInputWrapper.classList.add('input');
-
-    const elInput = document.createElement('input');
-
-    if (type === 'url') {
-      elInput.setAttribute('type', 'url');
-    }
-    else {
-      elInput.setAttribute('type', 'text');
-    }
-
-    if (type === 'version') {
-      elInput.setAttribute('data-type', 'version-pattern');
-    }
-
-    elInput.setAttribute('id', key + '_Text');
-    elInput.setAttribute('name', key + '_Text');
-    elInput.setAttribute('data-name', key);
-    elInput.setAttribute('placeholder', policy.label);
-
-    // mandatory field
-    if (policy.mandatory) {
-      configurator.addMandatoryLabel(elInput, elSubOptions);
-    }
-
-    // validation labels
-    if (type === 'url') {
-      configurator.addInvalidUrlLabel(elSubOptions);
-    }
-    else if (type === 'version') {
-      configurator.addInvalidVersionPatternLabel(elSubOptions);
-    }
-
-    elSubOptions.appendChild(elInput);
-
-    // add option to UI
-    configurator.addOptionToUi(elObjectWrapper, policy);
-  },
-
-  /**
-   * Adds a property to a policy field, calls the appropriate method.
-   *
-   * @param {HTMLElement} el - the DOM element of the policy
-   * @param {string} parentName - the name of the parent policy object
-   * @param {object} policy - the policy object
-   * @param {boolean} isArrayProperty - whether this call is within an array field or not
-   * @param {boolean} hideArrayActionLinks - whether this is an array item but no action links should be added
-   *
-   * @returns {void}
-   */
-  addProperty (el, parentName, policy, isArrayProperty, hideArrayActionLinks) {
-    switch (policy.type) {
-      case 'array':
-        configurator.addArrayProperty(el, parentName, policy);
-        break;
-      case 'boolean':
-        configurator.addBooleanProperty(el, parentName, policy);
-        break;
-      case 'enum':
-        configurator.addEnumProperty(el, parentName, policy, isArrayProperty);
-        break;
-      case 'json':
-        configurator.addJsonProperty(el, parentName, policy);
-        break;
-      case 'key-value-pairs':
-        configurator.addKeyValuePairsProperty(el, parentName, policy);
-        break;
-      case 'multiselect':
-        configurator.addMultiselectProperty(el, parentName, policy);
-        break;
-      case 'number':
-        configurator.addStringProperty(el, parentName, policy, 'number', isArrayProperty, hideArrayActionLinks);
-        break;
-      case 'object':
-        configurator.addObjectProperty(el, parentName, policy);
-        break;
-      case 'object-array':
-        configurator.addObjectArrayProperty(el, parentName, policy);
-        break;
-      case 'object-list':
-        configurator.addObjectListProperty(el, parentName, policy);
-        break;
-      case 'string':
-        configurator.addStringProperty(el, parentName, policy, 'string', isArrayProperty, hideArrayActionLinks);
-        break;
-      case 'url':
-        configurator.addStringProperty(el, parentName, policy, 'url', isArrayProperty, hideArrayActionLinks);
-        break;
-      case 'urlOrData':
-        configurator.addStringProperty(el, parentName, policy, 'url', isArrayProperty, hideArrayActionLinks);
-        break;
-      default:
-        // do nothing
-    }
-  },
-
-  /**
-   * Adds property of the type "array" to a policy.
-   *
-   * @param {HTMLElement} el - the DOM element of the policy
-   * @param {string} parentName - the name of the parent policy object
-   * @param {object} policy - the policy object
-   *
-   * @returns {void}
-   */
-  addArrayProperty (el, parentName, policy) {
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('array');
-    elObjectWrapper.setAttribute('data-name', policy.name);
-
-    if (policy.items?.separator) {
-      elObjectWrapper.setAttribute('data-separator', policy.items.separator);
-    }
-
-    if (policy.items?.regex) {
-      elObjectWrapper.setAttribute('data-regex', 'true');
-    }
-
-    const elCaptionWrapper = document.createElement('div');
-    elCaptionWrapper.classList.add('label');
-    elObjectWrapper.appendChild(elCaptionWrapper);
-
-    const elCaption = document.createTextNode(policy.label);
-    elCaptionWrapper.appendChild(elCaption);
-
-    // info link
-    if (policy.info_link) {
-      configurator.addInfoLink(elCaptionWrapper, policy.info_link);
-    }
-
-    // add array items
-    if (policy.items) {
-      if (policy.type === 'array') {
-        configurator.addProperty(elObjectWrapper, parentName + '_1_' + policy.name, policy.items, true, false);
-      }
-      else {
-        configurator.addProperty(elObjectWrapper, parentName + policy.name, policy.items, true, false);
-      }
-    }
-
-    el.appendChild(elObjectWrapper);
-  },
-
-  /**
-   * Adds property of the type "boolean" to a policy.
-   *
-   * @param {HTMLElement} el - the DOM element of the policy
-   * @param {string} parentName - the name of the parent policy object
-   * @param {object} policy - the policy object
-   *
-   * @returns {void}
-   */
-  addBooleanProperty (el, parentName, policy) {
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('checkbox');
-
-    // property name
-    const name = parentName ? parentName + '_' + policy.name : policy.name;
-
-    // checkbox
-    const elInput = document.createElement('input');
-    elInput.setAttribute('type', 'checkbox');
-    elInput.setAttribute('id', name);
-    elInput.setAttribute('name', name);
-    elInput.setAttribute('data-name', policy.name);
-    elInput.classList.add('property-checkbox');
-
-    // mandatory field
-    if (policy.mandatory) {
-      configurator.addMandatoryLabel(elInput, elObjectWrapper);
-    }
-
-    elObjectWrapper.appendChild(elInput);
-
-    // label
-    const elLabel = document.createElement('label');
-    elLabel.setAttribute('for', name);
-    elLabel.textContent = policy.label;
-    elObjectWrapper.appendChild(elLabel);
-
-    el.appendChild(elObjectWrapper);
-  },
-
-  /**
-   * Adds property of the type "multiselect" to a policy.
-   *
-   * @param {HTMLElement} el - the DOM element of the policy
-   * @param {string} parentName - the name of the parent policy object
-   * @param {object} policy - the policy object
-   *
-   * @returns {void}
-   */
-  addMultiselectProperty (el, parentName, policy) {
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('multiselect');
-    elObjectWrapper.setAttribute('data-name', policy.name);
-
-    // label
-    if (policy.label) {
-      configurator.addSelectLabel(elObjectWrapper, policy.name, policy);
-    }
-
-    // add checkboxes
-    const elCheckboxesWrapper = document.createElement('div');
-    elCheckboxesWrapper.classList.add('checkboxes-wrapper');
-    elObjectWrapper.appendChild(elCheckboxesWrapper);
-
-    // add options to select element
-    const optionsLength = policy.options.length;
-    for (let i = 0; i < optionsLength; i++) {
-      const elCheckboxWrapper = document.createElement('div');
-      elCheckboxWrapper.classList.add('checkbox');
-      elCheckboxesWrapper.appendChild(elCheckboxWrapper);
-
-      const elCheckbox = document.createElement('input');
-      elCheckbox.setAttribute('type', 'checkbox');
-      elCheckbox.setAttribute('id', policy.name + '_' + policy.options[i].value);
-      elCheckbox.setAttribute('name', policy.name + '_' + policy.options[i].value);
-      elCheckbox.setAttribute('value', policy.options[i].value);
-      elCheckbox.classList.add('property-checkbox');
-      elCheckboxWrapper.appendChild(elCheckbox);
-
-      const elCheckboxLabel = document.createElement('label');
-      elCheckboxLabel.setAttribute('for', policy.name + '_' + policy.options[i].value);
-      elCheckboxLabel.textContent = policy.options[i].label;
-      elCheckboxWrapper.appendChild(elCheckboxLabel);
-    }
-
-    el.appendChild(elObjectWrapper);
-  },
-
-  /**
-   * Adds property of the type "enum" to a policy.
-   *
-   * @param {HTMLElement} el - the DOM element of the policy
-   * @param {string} parentName - the name of the parent policy object
-   * @param {object} policy - the policy object
-   * @param {boolean} isArrayProperty - whether this call is within an array field or not
-   *
-   * @returns {void}
-   */
-  addEnumProperty (el, parentName, policy, isArrayProperty) {
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('enum');
-
-    // label
-    if (policy.label) {
-      configurator.addSelectLabel(elObjectWrapper, policy.name, policy);
-    }
-
-    // we need a unique and deterministic name as DOM id and name
-    const domName = isArrayProperty ? parentName + '_1' : parentName + '_' + policy.name;
-
-    // add select element
-    const elSelectWrapper = document.createElement('div');
-    elSelectWrapper.classList.add('select-wrapper');
-    elObjectWrapper.appendChild(elSelectWrapper);
-
-    const elSelect = document.createElement('select');
-    elSelect.setAttribute('id', domName);
-    elSelect.setAttribute('name', domName);
-    elSelect.setAttribute('data-name', policy.name);
-
-    // mandatory field
-    if (policy.mandatory) {
-      configurator.addMandatoryLabel(elSelect, elSelectWrapper);
-    }
-
-    // optionally sort by label
-    if (policy.sorted) {
-      policy.options.sort((a, b) => a.label.localeCompare(b.label));
-    }
-
-    // add options to select element
-    const optionsLength = policy.options.length;
-    for (let i = 0; i < optionsLength; i++) {
-      const elOptionLabel = document.createTextNode(policy.options[i].label);
-      const elOption = document.createElement('option');
-      elOption.setAttribute('value', policy.options[i].value);
-      elOption.appendChild(elOptionLabel);
-
-      if (policy.options[i].value === policy.default) {
-        elOption.setAttribute('selected', 'selected');
-      }
-
-      elSelect.appendChild(elOption);
-    }
-
-    elSelectWrapper.appendChild(elSelect);
-
-    el.appendChild(elObjectWrapper);
-  },
-
-  /**
-   * Adds property of the type "json" to a policy.
-   *
-   * @param {HTMLElement} el - the DOM element of the policy
-   * @param {string} parentName - the name of the parent policy object
-   * @param {object} policy - the policy object
-   *
-   * @returns {void}
-   */
-  addJsonProperty (el, parentName, policy) {
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('input');
-
-    // caption
-    if (policy.caption) {
-      const elCaptionWrapper = document.createElement('div');
-      elCaptionWrapper.classList.add('label');
-      elObjectWrapper.appendChild(elCaptionWrapper);
-
-      const elCaption = document.createTextNode(policy.caption);
-      elCaptionWrapper.appendChild(elCaption);
-    }
-
-    // input field
-    const elTextarea = document.createElement('textarea');
-
-    elTextarea.setAttribute('id', parentName);
-    elTextarea.setAttribute('name', parentName);
-    elTextarea.setAttribute('placeholder', policy.label);
-    elTextarea.setAttribute('data-name', policy.name);
-    elTextarea.setAttribute('data-json', 'true');
-
-    elObjectWrapper.appendChild(elTextarea);
-
-    configurator.addInvalidJsonLabel(elObjectWrapper);
-
-    el.appendChild(elObjectWrapper);
-  },
-
-  /**
-   * Adds property of the type "key-value-pairs" to a policy.
-   *
-   * @param {HTMLElement} el - the DOM element of the policy
-   * @param {string} parentName - the name of the parent policy object
-   * @param {object} policy - the policy object
-   *
-   * @returns {void}
-   */
-  addKeyValuePairsProperty (el, parentName, policy) {
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('key-value-pairs');
-    elObjectWrapper.setAttribute('data-name', policy.name);
-
-    // label
-    const elCaptionWrapper = document.createElement('div');
-    elCaptionWrapper.classList.add('label');
-    elObjectWrapper.appendChild(elCaptionWrapper);
-
-    const elCaption = document.createTextNode(policy.label);
-    elCaptionWrapper.appendChild(elCaption);
-
-    // key-value-pairs
-    const elSubOptions = configurator.addSubOptions(elObjectWrapper);
-    const elInputWrapperKey = document.createElement('div');
-    elInputWrapperKey.classList.add('input');
-
-    const key = parentName + '_' + policy.name;
-
-    const elInputKey = document.createElement('input');
-    elInputKey.setAttribute('type', 'text');
-    elInputKey.setAttribute('id', key + '_Key_1');
-    elInputKey.setAttribute('name', key + '_Key_1');
-    elInputKey.setAttribute('data-name', key);
-    elInputKey.setAttribute('placeholder', policy.label_key);
-    elInputKey.classList.add('key');
-    configurator.addMandatoryLabel(elInputKey, elInputWrapperKey);
-    elInputWrapperKey.appendChild(elInputKey);
-    elSubOptions.appendChild(elInputWrapperKey);
-
-    const elInputWrapperValue = document.createElement('div');
-    elInputWrapperValue.classList.add('input');
-
-    const elInputValue = document.createElement('input');
-    elInputValue.setAttribute('type', 'text');
-    elInputValue.setAttribute('id', key + '_Value_1');
-    elInputValue.setAttribute('name', key + '_Value_1');
-    elInputValue.setAttribute('data-name', key);
-    elInputValue.setAttribute('placeholder', policy.label_value);
-    elInputValue.classList.add('value');
-    configurator.addMandatoryLabel(elInputValue, elInputWrapperValue);
-    elInputWrapperValue.appendChild(elInputValue);
-    elSubOptions.appendChild(elInputWrapperValue);
-
-    // add array field action links
-    elSubOptions.parentNode.classList.add('array-action-links');
-    configurator.addArrayFieldActionLinks(elSubOptions, key + '_1');
-
-    el.appendChild(elObjectWrapper);
-  },
-
-  /**
-   * Adds property of the type "object" to a policy.
-   *
-   * @param {HTMLElement} el - the DOM element of the policy
-   * @param {string} parentName - the name of the parent policy object
-   * @param {object} policy - the policy object
-   *
-   * @returns {void}
-   */
-  addObjectProperty (el, parentName, policy) {
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('object');
-    elObjectWrapper.setAttribute('data-name', policy.name);
-
-    // label
-    const elCaptionWrapper = document.createElement('div');
-    elCaptionWrapper.classList.add('label');
-    elObjectWrapper.appendChild(elCaptionWrapper);
-
-    const elCaption = document.createTextNode(policy.label);
-    elCaptionWrapper.appendChild(elCaption);
-
-    el.appendChild(elObjectWrapper);
-
-    // add properties
-    const elSubOptions = document.createElement('div');
-    elObjectWrapper.appendChild(elSubOptions);
-
-    // property can be locked
-    if (policy.is_lockable) {
-      configurator.addLockableLink(elSubOptions, parentName + '_' + policy.name);
-    }
-
-    const optionsLength = policy.properties.length;
-    for (let i = 0; i < optionsLength; i++) {
-      let name = '';
-
-      if (policy.properties[i].type === 'boolean') {
-        name = parentName + '_' + policy.name;
-      }
-      else {
-        name = parentName + '_' + policy.name + '_' + policy.properties[i].name;
-      }
-
-      configurator.addProperty(elSubOptions, name, policy.properties[i], false, false);
-    }
-  },
-
-  /**
-   * Adds property of the type "object-array" to a policy.
-   *
-   * @param {HTMLElement} el - the DOM element of the policy
-   * @param {string} parentName - the name of the parent policy object
-   * @param {object} policy - the policy object
-   *
-   * @returns {void}
-   */
-  addObjectArrayProperty (el, parentName, policy) {
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('object-array');
-    elObjectWrapper.setAttribute('data-name', policy.name);
-
-    // label
-    const elCaptionWrapper = document.createElement('div');
-    elCaptionWrapper.classList.add('label');
-    elObjectWrapper.appendChild(elCaptionWrapper);
-
-    const elCaption = document.createTextNode(policy.label);
-    elCaptionWrapper.appendChild(elCaption);
-
-    el.appendChild(elObjectWrapper);
-
-    // add array items
-    const elSubOptions = document.createElement('div');
-    elObjectWrapper.appendChild(elSubOptions);
-
-    const optionsLength = policy.items.length;
-    for (let i = 0; i < optionsLength; i++) {
-      const name = parentName + '_' + policy.name + '_' + policy.items[i].name;
-      configurator.addProperty(elSubOptions, name, policy.items[i], true, true);
-    }
-
-    // add array field action links
-    const arrayAddName = parentName + '_' + policy.name + '_1';
-    elSubOptions.parentNode.classList.add('array-action-links');
-    configurator.addArrayFieldActionLinks(elSubOptions, arrayAddName);
-  },
-
-  /**
-   * Adds property of the type "object-list" to a policy.
-   *
-   * @param {HTMLElement} el - the DOM element of the policy
-   * @param {string} parentName - the name of the parent policy object
-   * @param {object} policy - the policy object
-   *
-   * @returns {void}
-   */
-  addObjectListProperty (el, parentName, policy) {
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('object-list');
-    elObjectWrapper.setAttribute('data-name', policy.name);
-
-    // label
-    const elCaptionWrapper = document.createElement('div');
-    elCaptionWrapper.classList.add('label');
-    elObjectWrapper.appendChild(elCaptionWrapper);
-
-    const elCaption = document.createTextNode(policy.label);
-    elCaptionWrapper.appendChild(elCaption);
-
-    el.appendChild(elObjectWrapper);
-
-    const elSubOptionsWrapper = document.createElement('div');
-    elSubOptionsWrapper.classList.add('sub-options-wrapper');
-    elObjectWrapper.appendChild(elSubOptionsWrapper);
-
-    const elSubOptions = configurator.addSubOptions(elSubOptionsWrapper);
-
-    const elInputWrapperKey = document.createElement('div');
-    elInputWrapperKey.classList.add('input');
-
-    // we need to make sure that we have a unique name per object-list item
-    const id = parentName + '_' + policy.name;
-
-    const elInputKey = document.createElement('input');
-    elInputKey.setAttribute('type', 'text');
-    elInputKey.setAttribute('id', id + '_Key_1');
-    elInputKey.setAttribute('name', id + '_Key_1');
-    elInputKey.setAttribute('data-name', id);
-    elInputKey.setAttribute('placeholder', policy.placeholder_key);
-    elInputKey.classList.add('key');
-    elInputWrapperKey.appendChild(elInputKey);
-    elSubOptions.appendChild(elInputWrapperKey);
-
-    const elSubSubOptions = document.createElement('div');
-    elSubSubOptions.classList.add('sub-sub-options');
-
-    // add properties
-    if (policy.items) {
-      const optionsLength = policy.items.length;
-      for (let i = 0; i < optionsLength; i++) {
-        configurator.addProperty(elSubSubOptions, id + '_' + policy.items[i].name + '_1', policy.items[i], true, true);
-      }
-    }
-
-    elSubOptions.appendChild(elSubSubOptions);
-
-    // add array field action links
-    configurator.addArrayFieldActionLinks(elSubOptions, parentName + '_1');
-  },
-
-  /**
-   * Adds property of the type "string" or "url" to a policy.
-   *
-   * @param {HTMLElement} el - the DOM element of the policy
-   * @param {string} parentName - the name of the parent policy object
-   * @param {object} policy - the policy object
-   * @param {string} type - can be "string", "url" or "number"
-   * @param {boolean} isArrayProperty - whether this call is within an array field or not
-   * @param {boolean} hideArrayActionLinks - whether this is an array item but no action links should be added
-   *
-   * @returns {void}
-   */
-  addStringProperty (el, parentName, policy, type, isArrayProperty, hideArrayActionLinks) {
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('input');
-
-    // we need a unique and deterministic name as DOM id and name
-    const domName = isArrayProperty ? parentName + '_1' : parentName + '_' + policy.name;
-
-    // optional caption
-    if (policy.caption) {
-      const elCaptionWrapper = document.createElement('div');
-      elCaptionWrapper.classList.add('label');
-      elObjectWrapper.appendChild(elCaptionWrapper);
-
-      const elCaption = document.createTextNode(policy.caption);
-      elCaptionWrapper.appendChild(elCaption);
-    }
-
-    // input field
-    const elInput = document.createElement('input');
-    let elInputWrapper = null;
-
-    if (parentName === 'Preferences_Value') {
-      elInput.setAttribute('data-preference-policy', 'true');
-      elInputWrapper = document.createElement('div');
-      elInputWrapper.classList.add('position-relative');
-      elInputWrapper.appendChild(elInput);
-      elObjectWrapper.appendChild(elInputWrapper);
-    }
-
-    if (type === 'url') {
-      elInput.setAttribute('type', 'url');
-
-      if (policy.secure) {
-        elInput.setAttribute('data-secure', 'true');
-      }
-      else if (policy.dataUriAllowed) {
-        elInput.setAttribute('data-data-uri-allowed', 'true');
-      }
-    }
-    else if (type === 'number') {
-      elInput.setAttribute('type', 'number');
-      elInput.setAttribute('min', '0');
-      elInput.addEventListener('input', () => {
-        if (!/^\d$/.test(elInput.value)) {
-          elInput.checkValidity();
-        }
-      });
-    }
-    else {
-      elInput.setAttribute('type', 'text');
-    }
-
-    elInput.setAttribute('id', domName);
-    elInput.setAttribute('name', domName);
-    elInput.setAttribute('placeholder', policy.label);
-
-    if (!isArrayProperty || hideArrayActionLinks) {
-      elInput.setAttribute('data-name', policy.name);
-    }
-
-    // mandatory field
-    if (policy.mandatory) {
-      if (parentName === 'Preferences_Value') {
-        configurator.addMandatoryLabel(elInput, elInputWrapper);
-      }
-      else {
-        configurator.addMandatoryLabel(elInput, elObjectWrapper);
-      }
-    }
-
-    // URL validation label
-    if (type === 'url') {
-      configurator.addInvalidUrlLabel(elObjectWrapper);
-    }
-
-    elObjectWrapper.appendChild(elInput);
-
-    // add array field action links if property of an array
-    if (isArrayProperty && !hideArrayActionLinks) {
-      el.classList.add('array-action-links');
-      configurator.addArrayFieldActionLinks(elObjectWrapper, domName);
-    }
-
-    el.appendChild(elObjectWrapper);
-  },
-
-  /**
-   * Adds a policy node the DOM. This method generates the common code which is the same for all object types.
-   *
-   * @param {string} key - the name of the policy
-   * @param {object} policy - the policy object
-   * @param {string} type - the type of the policy
-   * @param {boolean} inverse - if true, the value for the policy will be false instead of true
-   *
-   * @returns {HTMLElement} - the DOM node containing the policy option
-   */
-  addPolicyNode (key, policy, type, inverse) {
-    // start node for each policy
-    const elObjectWrapper = document.createElement('div');
-    elObjectWrapper.classList.add('checkbox', 'policy-container');
-
-    // checkbox
-    const elCheckbox = document.createElement('input');
-    elCheckbox.setAttribute('type', 'checkbox');
-    elCheckbox.setAttribute('id', key);
-    elCheckbox.setAttribute('name', key);
-    elCheckbox.setAttribute('data-name', key);
-    elCheckbox.setAttribute('data-type', type);
-    elCheckbox.classList.add('primary-checkbox');
-
-    // set reverse attribute, can be used for boolean options with false instead of true as value
-    if (inverse) {
-      elCheckbox.setAttribute('data-inverse', 'true');
-    }
-
-    // sub key
-    if (policy.sub_key) {
-      elCheckbox.setAttribute('data-sub-key', policy.sub_key);
-    }
-
-    elObjectWrapper.appendChild(elCheckbox);
-
-    // label
-    const elLabel = document.createElement('label');
-    elLabel.setAttribute('for', key);
-    elLabel.textContent = browser.i18n.getMessage('policy_description_' + key);
-    elObjectWrapper.appendChild(elLabel);
-
-    // additional note
-    if (policy.additional_note) {
-      const elAdditionalNote = document.createElement('div');
-      elAdditionalNote.classList.add('additional-note');
-      elLabel.appendChild(elAdditionalNote);
-
-      const elAdditionalNoteImage = document.createElement('img');
-      elAdditionalNoteImage.src = '/images/warning.svg';
-      elAdditionalNote.appendChild(elAdditionalNoteImage);
-
-      const elAdditionalNoteText = document.createTextNode(policy.additional_note);
-      elAdditionalNote.appendChild(elAdditionalNoteText);
-    }
-
-    // deprecation note
-    if (policy.deprecation_note) {
-      const elDeprecationNote = document.createElement('div');
-      elDeprecationNote.classList.add('deprecation-note');
-      elLabel.appendChild(elDeprecationNote);
-      elLabel.classList.add('deprecated');
-
-      const elDeprecationNoteImage = document.createElement('img');
-      elDeprecationNoteImage.src = '/images/minus.svg';
-      elDeprecationNote.appendChild(elDeprecationNoteImage);
-
-      const elDeprecationNoteText = document.createTextNode(policy.deprecation_note);
-      elDeprecationNote.appendChild(elDeprecationNoteText);
-    }
-
-    // versions info
-    if (
-      parseFloat(policy.first_available.mainstream) > MINIMUM_SUPPORTED_VERSION ||
-      parseFloat(policy.first_available.esr) > MINIMUM_SUPPORTED_VERSION
-    ) {
-      const elVersionsInfo = document.createElement('div');
-      elVersionsInfo.classList.add('versions-info');
-      elLabel.appendChild(elVersionsInfo);
-
-      const elVersionsInfoImage = document.createElement('img');
-      elVersionsInfoImage.src = '/images/firefox.svg';
-      elVersionsInfo.appendChild(elVersionsInfoImage);
-
-      let versionTextContent = browser.i18n.getMessage('version_required') + ': ';
-
-      if (policy.first_available.mainstream) {
-        versionTextContent += 'Firefox ' + policy.first_available.mainstream;
-        versionTextContent += ' ' + browser.i18n.getMessage('version_or_higher');
-      }
-
-      if (policy.first_available.mainstream && policy.first_available.esr) {
-        versionTextContent += ', ';
-      }
-
-      if (policy.first_available.esr) {
-        versionTextContent += 'Firefox ESR ' + policy.first_available.esr;
-        versionTextContent += ' ' + browser.i18n.getMessage('version_or_higher');
-      }
-
-      const elVersionsInfoText = document.createTextNode(versionTextContent);
-      elVersionsInfo.appendChild(elVersionsInfoText);
-    }
-
-    // info link
-    if (policy.info_link) {
-      configurator.addInfoLink(elLabel, policy.info_link);
-    }
-
-    return elObjectWrapper;
-  },
-
-  /**
-   * Adds a label for select elements.
-   *
-   * @param {HTMLElement} elSelectWrapper - the DOM node of the wrapping element
-   * @param {string} name - the name of the policy
-   * @param {object} policy - the policy object
-   *
-   * @returns {void}
-   */
-  addSelectLabel (elSelectWrapper, name, policy) {
-    const elSelectLabel = document.createElement('label');
-    elSelectLabel.setAttribute('for', name);
-    elSelectLabel.classList.add('select-label');
-    elSelectLabel.textContent = policy.label;
-    elSelectWrapper.appendChild(elSelectLabel);
-  },
-
-  /**
-   * Adds an info link.
-   *
-   * @param {HTMLElement} label - the DOM node of the label element
-   * @param {string} link - the URL of the info link
-   *
-   * @returns {void}
-   */
-  addInfoLink (label, link) {
-    const elInfoLinkWrapper = document.createElement('div');
-    elInfoLinkWrapper.classList.add('info-link');
-    label.appendChild(elInfoLinkWrapper);
-
-    const elInfoLink = document.createElement('a');
-    elInfoLink.setAttribute('href', link);
-    elInfoLink.setAttribute('target', '_blank');
-    elInfoLinkWrapper.appendChild(elInfoLink);
-
-    const elInfoLinkImage = document.createElement('img');
-    elInfoLinkImage.src = '/images/link.svg';
-    elInfoLink.appendChild(elInfoLinkImage);
-
-    const elInfoLinkText = document.createTextNode(browser.i18n.getMessage('link_learn_more'));
-    elInfoLink.appendChild(elInfoLinkText);
-  },
-
-  /**
-   * Adds a remove and an add link for array fields to a policy node.
-   *
-   * @param {HTMLElement} elSubOptions - the DOM node of the wrapping element
-   * @param {string} id - the policy key used as part of the DOM id for the add link
-   *
-   * @returns {void}
-   */
-  addArrayFieldActionLinks (elSubOptions, id) {
-    // remove link
-    const elRemoveLink = document.createElement('a');
-    elRemoveLink.setAttribute('href', '#');
-    elRemoveLink.setAttribute('data-action', 'remove');
-    elRemoveLink.setAttribute('title', browser.i18n.getMessage('title_remove_row'));
-    elRemoveLink.classList.add('array-action', 'disabled-link');
-    elSubOptions.appendChild(elRemoveLink);
-
-    const elRemoveIcon = document.createElement('img');
-    elRemoveIcon.src = '/images/minus.svg';
-    elRemoveIcon.classList.add('action-img');
-    elRemoveIcon.setAttribute('alt', browser.i18n.getMessage('title_remove_row'));
-    elRemoveLink.appendChild(elRemoveIcon);
-
-    // add link
-    const elAddLink = document.createElement('a');
-    elAddLink.setAttribute('id', 'Array_Add_' + id);
-    elAddLink.setAttribute('href', '#');
-    elAddLink.setAttribute('data-action', 'add');
-    elAddLink.setAttribute('data-count', '1');
-    elAddLink.setAttribute('title', browser.i18n.getMessage('title_add_row'));
-    elAddLink.classList.add('array-action');
-    elSubOptions.appendChild(elAddLink);
-
-    const elAddIcon = document.createElement('img');
-    elAddIcon.src = '/images/plus.svg';
-    elAddIcon.classList.add('action-img');
-    elAddIcon.setAttribute('alt', browser.i18n.getMessage('title_add_row'));
-    elAddLink.appendChild(elAddIcon);
-  },
-
-  /**
-   * Adds a wrapper node for suboptions.
-   *
-   * @param {HTMLElement} elObjectWrapper - the DOM node of the wrapping element
-   *
-   * @returns {HTMLElement} - the DOM node of the wrapper for suboptions
-   */
-  addSubOptions (elObjectWrapper) {
-    const elSubOptions = document.createElement('div');
-    elSubOptions.classList.add('sub-options', 'disabled');
-    elObjectWrapper.appendChild(elSubOptions);
-
-    return elSubOptions;
-  },
-
-  /**
-   * Adds a link for the "Locked" property.
-   *
-   * @param {HTMLElement} elSubOptions - the DOM node of the wrapping element
-   * @param {string} key - the name of the policy
-   *
-   * @returns {void}
-   */
-  addLockableLink (elSubOptions, key) {
-    const elLockCheckbox = document.createElement('input');
-    elLockCheckbox.setAttribute('type', 'checkbox');
-    elLockCheckbox.setAttribute('id', key + '_Locked');
-    elLockCheckbox.setAttribute('name', key + '_Locked');
-    elLockCheckbox.classList.add('lock-checkbox');
-    elSubOptions.appendChild(elLockCheckbox);
-
-    const elLockLabel = document.createElement('label');
-    elLockLabel.setAttribute('for', key + '_Locked');
-    elLockLabel.textContent = browser.i18n.getMessage('lock_preference');
-    elSubOptions.appendChild(elLockLabel);
-  },
-
-  /**
-   * Adds a label for mandatory fields.
-   *
-   * @param {HTMLElement} elMandatory - the DOM node of the mandatory field
-   * @param {HTMLElement} elMandatoryWrapper - the DOM node of the wrapping element
-   *
-   * @returns {void}
-   */
-  addMandatoryLabel (elMandatory, elMandatoryWrapper) {
-    elMandatory.setAttribute('data-mandatory', 'true');
-    elMandatory.classList.add('mandatory-style');
-
-    const elMandatoryLabel = document.createElement('div');
-    elMandatoryLabel.classList.add('mandatory-label');
-    elMandatoryLabel.innerText = browser.i18n.getMessage('mandatory_label');
-    elMandatoryWrapper.appendChild(elMandatoryLabel);
-  },
-
-  /**
-   * Adds a label for invalid JSON.
-   *
-   * @param {HTMLElement} elObjectWrapper - the DOM node of the wrapping element
-   *
-   * @returns {void}
-   */
-  addInvalidJsonLabel (elObjectWrapper) {
-    const elLabel = document.createElement('div');
-    elLabel.classList.add('invalid-json-label', 'hidden');
-    elLabel.innerText = browser.i18n.getMessage('invalid_json_label');
-    elObjectWrapper.appendChild(elLabel);
-  },
-
-  /**
-   * Adds a label for invalid URLs.
-   *
-   * @param {HTMLElement} elObjectWrapper - the DOM node of the wrapping element
-   *
-   * @returns {void}
-   */
-  addInvalidUrlLabel (elObjectWrapper) {
-    const elLabel = document.createElement('div');
-    elLabel.classList.add('invalid-url-label', 'hidden');
-    elLabel.innerText = browser.i18n.getMessage('invalid_url_label');
-    elObjectWrapper.appendChild(elLabel);
-  },
-
-  /**
-   * Adds a label for invalid version patterns.
-   *
-   * @param {HTMLElement} elObjectWrapper - the DOM node of the wrapping element
-   *
-   * @returns {void}
-   */
-  addInvalidVersionPatternLabel (elObjectWrapper) {
-    const elLabel = document.createElement('div');
-    elLabel.classList.add('invalid-version-pattern-label', 'hidden');
-    elLabel.innerText = browser.i18n.getMessage('invalid_version_pattern_label');
-    elObjectWrapper.appendChild(elLabel);
-  },
-
-  /**
-   * Handles the exclusion of policies.
-   *
-   * @param {HTMLInputElement} elPolicy - the DOM node of the current element
-   * @param {string} excludedPolicyName - the name of the excluded element
-   *
-   * @returns {void}
-   */
-  handlePolicyExclusion (elPolicy, excludedPolicyName) {
-    let elExcludedPolicy = null;
-
-    if (excludedPolicyName.includes('=')) {
-      const excludePolicyArray = excludedPolicyName.split('=');
-      elExcludedPolicy = document.querySelector('[data-name="' + excludePolicyArray[0] + '"]');
-      const elExcludedPolicyParent = elExcludedPolicy.parentElement;
-      const elExcludedPolicySelect = elExcludedPolicyParent.querySelector('select');
-
-      // let's create a copy of the DOM element as elExcludedPolicy may be null later in the code below
-      const elExcludedPolicyCopy = elExcludedPolicy;
-
-      if (elExcludedPolicySelect) {
-        const elPolicyParent = elPolicy.parentElement;
-
-        if (elExcludedPolicySelect.value !== excludePolicyArray[1]) {
-          elExcludedPolicy = null;
-        }
-
-        elExcludedPolicyCopy.addEventListener('change', () => {
-          if (elExcludedPolicyCopy.checked && elExcludedPolicySelect.value === excludePolicyArray[1]) {
-            elPolicy.setAttribute('disabled', 'disabled');
-            elPolicyParent.classList.add('excluded');
-            elPolicyParent.querySelector('select')?.setAttribute('disabled', 'disabled');
-          }
-          else {
-            elPolicy.removeAttribute('disabled');
-            elPolicyParent.classList.remove('excluded');
-            elPolicyParent.querySelector('select')?.removeAttribute('disabled');
-          }
-        });
-
-        elExcludedPolicySelect.addEventListener('change', () => {
-          if (elExcludedPolicySelect.value === excludePolicyArray[1]) {
-            elPolicy.setAttribute('disabled', 'disabled');
-            elPolicyParent.classList.add('excluded');
-            elPolicyParent.querySelector('select')?.setAttribute('disabled', 'disabled');
-          }
-          else {
-            elPolicy.removeAttribute('disabled');
-            elPolicyParent.classList.remove('excluded');
-            elPolicyParent.querySelector('select')?.removeAttribute('disabled');
-          }
-        });
-      }
-    }
-    else {
-      elExcludedPolicy = document.querySelector('[data-name="' + excludedPolicyName + '"]');
-
-      elPolicy.addEventListener('change', () => {
-        const elExcludedPolicyParent = elExcludedPolicy.parentNode;
-        const elExcludedPolicySelect = elExcludedPolicyParent.querySelector('select');
-
-        if (elPolicy.checked) {
-          elExcludedPolicy.setAttribute('disabled', 'disabled');
-          elExcludedPolicyParent.classList.add('excluded');
-          elExcludedPolicySelect?.setAttribute('disabled', 'disabled');
-        }
-        else {
-          elExcludedPolicy.removeAttribute('disabled');
-          elExcludedPolicyParent.classList.remove('excluded');
-          elExcludedPolicySelect?.removeAttribute('disabled');
-        }
-      });
-    }
-  },
-
-  /**
-   * Implements code related to the filter field.
-   *
-   * @returns {void}
-   */
-  filterField () {
-    const filterWrapper = document.getElementById('filter-wrapper');
-    const filter = document.getElementById('filter');
-    const styleHelper = document.getElementById('filter-style-helper');
+  static #filterField () {
+    const $filterWrapper = document.getElementById('filter-wrapper');
+    const $filter = $filterWrapper.querySelector('input');
+    const $styleHelper = $filterWrapper.querySelector('button');
 
     // re-apply active filter on reload
-    configurator.applySearchFieldFilter(filter);
+    Configurator.#applySearchFieldFilter($filter);
 
-    if (filter.value) {
-      filterWrapper.classList.add('open');
+    if ($filter.value) {
+      $filterWrapper.classList.add('open');
     }
 
-    const close = (e) => {
-      e.preventDefault();
-
-      if (!filterWrapper.classList.contains('open')) {
+    const close = () => {
+      if (!$filterWrapper.classList.contains('open')) {
         return;
       }
 
-      filter.value = '';
+      $filter.value = '';
 
-      filterWrapper.classList.add('close');
-      filterWrapper.classList.remove('open');
+      $filterWrapper.classList.add('close');
+      $filterWrapper.classList.remove('open');
 
       setTimeout(() => {
-        filterWrapper.classList.remove('close');
+        $filterWrapper.classList.remove('close');
       }, FILTER_ANIMATION_DELAY_IN_MS);
 
-      configurator.applySearchFieldFilter(filter);
+      Configurator.#applySearchFieldFilter($filter);
     };
 
-    filter.onfocus = () => {
-      if (filterWrapper.classList.contains('open')) {
+    $filter.addEventListener('focus', () => {
+      if ($filterWrapper.classList.contains('open')) {
         return;
       }
 
-      filterWrapper.classList.add('in');
+      $filterWrapper.classList.add('in');
 
       setTimeout(() => {
-        filterWrapper.classList.add('open');
-        filterWrapper.classList.remove('in');
+        $filterWrapper.classList.add('open');
+        $filterWrapper.classList.remove('in');
       }, FILTER_ANIMATION_DELAY_IN_MS);
+    });
 
-      window.onkeydown = (e) => {
-        if (e.key === 'Escape' && document.activeElement === filter) {
-          close(e);
-          filter.blur();
-        }
-      };
-    };
+    window.addEventListener('keydown', e => {
+      if (e.shiftKey && e.key === 'F') {
+        $filter.focus();
+      }
+      else if (e.key === 'Escape' && document.activeElement === $filter) {
+        close();
+        $filter.blur();
+      }
+    });
 
-    styleHelper.onclick = (e) => {
-      close(e);
-    };
+    $styleHelper.addEventListener('click', () => {
+      close();
+    });
 
-    filter.oninput = () => {
-      configurator.applySearchFieldFilter(filter);
-    };
-  },
+    $filter.addEventListener('input', () => {
+      Configurator.#applySearchFieldFilter($filter);
+    });
+  }
 
   /**
-   * This method sets or removes an attribute based on the content of the filter field.
+   * Set or remove an attribute based on the content of the filter field.
    *
-   * @param {HTMLInputElement} filter - event
+   * @param {HTMLInputElement} filter - the input event
    *
    * @returns {void}
    */
-  applySearchFieldFilter (filter) {
+  static #applySearchFieldFilter (filter) {
     const matcher = new RegExp(filter.value, 'i');
 
-    [...document.getElementsByClassName('policy-container')].forEach((policy) => {
-      [...policy.querySelectorAll(':scope > label, :scope > .label')].forEach((label) => {
-        const policyName = policy.querySelector('.primary-checkbox').getAttribute('data-name');
+    document.querySelectorAll('.policy-container').forEach($policy => {
+      $policy.querySelectorAll(':scope > label, :scope > .label').forEach($label => {
+        const name = $policy.getAttribute('data-name');
 
-        if (matcher.test(label.textContent) || matcher.test(policyName)) {
-          policy.setAttribute('data-filtered', 'true');
+        if (matcher.test($label.textContent) || matcher.test(name)) {
+          $policy.setAttribute('data-filtered', 'true');
         }
         else {
-          policy.removeAttribute('data-filtered');
+          $policy.removeAttribute('data-filtered');
         }
       });
     });
 
-    configurator.showFilteredResult();
-  },
+    Configurator.#showFilteredResult();
+  }
 
   /**
-   * This method is used to show the filtered result.
+   * Show the filtered result.
    *
    * @returns {void}
    */
-  showFilteredResult () {
-    [...document.getElementsByClassName('policy-container')].forEach((policy) => {
-      if (policy.hasAttribute('data-filtered')) {
-        policy.classList.remove('hidden');
+  static #showFilteredResult () {
+    document.querySelectorAll('.policy-container').forEach($policy => {
+      if ($policy.hasAttribute('data-filtered')) {
+        $policy.classList.remove('hidden');
       }
       else {
-        policy.classList.add('hidden');
+        $policy.classList.add('hidden');
       }
     });
   }
-};
+}
 
-configurator.init(false);
+Configurator.init();

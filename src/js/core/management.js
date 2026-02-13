@@ -1,350 +1,310 @@
 'use strict';
 
-/* global DOWNLOAD_PERMISSION, migrator, output, serializer */
+/* global DOWNLOAD_PERMISSION, I18n, Migrator, Output, Serializer */
 
-const elConfigurationTable = document.getElementById('list-configurations-table');
-const elImportConfigurationLink = document.getElementById('import-configuration');
-const elListConfigurationsLink = document.getElementById('list-configurations');
-const elNoSavedConfigurations = document.getElementById('no-saved-configurations');
-const elSaveConfigurationLink = document.getElementById('save-configuration');
+const $configurationTable = document.getElementById('list-configurations-table');
+const $importConfigurationButton = document.getElementById('import-configuration');
+const $importConfigurationDialog = document.getElementById('import-configuration-dialog');
+const $listConfigurationsButton = document.getElementById('list-configurations');
+const $listConfigurationDialog = document.getElementById('configuration-list-dialog');
+const $noSavedConfigurations = document.getElementById('no-saved-configurations');
+const $saveConfigurationButton = document.getElementById('save-configuration');
+const $saveConfigurationDialog = document.getElementById('save-configuration-dialog');
 
-/**
- * @exports management
- */
-const management = {
+class Management {
   /**
-   * The init() method. Defines the event listeners for the configuration management links.
+   * Set up the event listeners for the configuration management buttons.
    *
    * @returns {void}
    */
-  init () {
-    elListConfigurationsLink.onclick = (e) => {
-      e.preventDefault();
-      management.showListConfigurationsDialog();
-    };
+  static init () {
+    Management.#setupSaveConfigurationDialog();
+    Management.#setupListConfigurationsDialog();
+    Management.#setupImportConfigurationDialog();
 
-    elSaveConfigurationLink.onclick = (e) => {
-      e.preventDefault();
-      management.showSaveConfigurationDialog();
-    };
+    $saveConfigurationButton.addEventListener('click', () => {
+      $saveConfigurationDialog.showModal();
+    });
 
-    elImportConfigurationLink.onclick = (e) => {
-      e.preventDefault();
-      management.showImportConfigurationDialog();
-    };
-  },
+    $listConfigurationsButton.addEventListener('click', () => {
+      $listConfigurationDialog.showModal();
+      Management.#listConfigurations();
+    });
+
+    $importConfigurationButton.addEventListener('click', () => {
+      $importConfigurationDialog.showModal();
+    });
+  }
 
   /**
-   * Show the "save configuration" dialog. This method also defines the behaviour of the dialog.
+   * Set up the event listeners for the "save configuration" dialog.
    *
    * @returns {void}
    */
-  showSaveConfigurationDialog () {
-    // show dialog
-    const elModal = document.getElementById('modal-save-dialog');
-    elModal.classList.add('visible');
+  static #setupSaveConfigurationDialog () {
+    const $name = $saveConfigurationDialog.querySelector('#save-dialog-name');
+    const $submitButton = $saveConfigurationDialog.querySelector('#button-save-dialog-ok');
+    const $closeButton = $saveConfigurationDialog.querySelector('#button-save-dialog-cancel');
 
-    const elName = elModal.querySelector('#save-dialog-name');
-    const elSubmitButton = elModal.querySelector('#button-save-dialog-ok');
-    const elCloseButton = elModal.querySelector('#button-save-dialog-cancel');
-
-    // focus the name input field
-    elName.focus();
+    // do things on the dialog close
+    $saveConfigurationDialog.addEventListener('close', () => {
+      $saveConfigurationDialog.querySelector('#save-dialog-name').value = '';
+      $submitButton.setAttribute('disabled', 'disabled');
+    });
 
     // the name field must not be empty
-    elName.oninput = () => {
-      if (elName.value) {
-        elSubmitButton.removeAttribute('disabled');
+    $name.addEventListener('input', () => {
+      if ($name.value) {
+        $submitButton.removeAttribute('disabled');
       }
       else {
-        elSubmitButton.setAttribute('disabled', 'disabled');
+        $submitButton.setAttribute('disabled', 'disabled');
       }
-    };
+    });
 
-    // close dialog by clicking the cancel button
-    elCloseButton.onclick = () => {
-      management.closeSaveConfigurationDialog(elModal, elSubmitButton);
-    };
+    // close the dialog by clicking the cancel button
+    $closeButton.addEventListener('click', () => {
+      $saveConfigurationDialog.close();
+    });
 
-    // save configuration by pressing Enter, close dialog by pressing ESC
-    window.onkeydown = (e) => {
+    // submit button
+    $submitButton.addEventListener('click', () => {
+      Management.#saveConfiguration($name.value);
+      $saveConfigurationDialog.close();
+    });
+
+    // save configuration by pressing Enter
+    window.addEventListener('keydown', e => {
       if (e.key === 'Enter') {
         e.preventDefault();
 
-        if (elName.value) {
-          management.saveConfiguration(elName.value);
-          management.closeSaveConfigurationDialog(elModal, elSubmitButton);
+        if ($name.value) {
+          Management.#saveConfiguration($name.value);
+          $saveConfigurationDialog.close();
         }
       }
-
-      if (e.key === 'Escape') {
-        management.closeSaveConfigurationDialog(elModal, elSubmitButton);
-      }
-    };
-
-    // submit button
-    elSubmitButton.onclick = (e) => {
-      e.preventDefault();
-
-      management.saveConfiguration(elName.value);
-      management.closeSaveConfigurationDialog(elModal, elSubmitButton);
-    };
-  },
+    });
+  }
 
   /**
-   * Close the "save configuration" dialog.
-   *
-   * @param {HTMLElement} elModal - the DOM element of the modal dialog
-   * @param {HTMLElement} elSubmitButton - the DOM element of the submit button
-   *
-   * @returns {void}
-   */
-  closeSaveConfigurationDialog (elModal, elSubmitButton) {
-    elModal.classList.remove('visible');
-    elModal.querySelector('#save-dialog-name').value = '';
-    elSubmitButton.setAttribute('disabled', 'disabled');
-  },
-
-  /**
-   * Saves the current configuration with a name and the current date and time.
+   * Save the current configuration with a name and the current date and time.
    *
    * @param {string} name - the name of the configuration
    *
    * @returns {void}
    */
-  async saveConfiguration (name) {
-    const { configurations } = await browser.storage.local.get({ configurations : [] });
+  static async #saveConfiguration (name) {
+    const { configurations } = await browser.storage.local.get({ configurations: [] });
 
     const configuration = {
-      name : name,
-      time : new Date(),
-      configuration : serializer.serialize()
+      schema: 2,
+      name: name,
+      time: new Date(),
+      configuration: Serializer.serialize()
     };
 
     configurations.push(configuration);
 
-    browser.storage.local.set({ configurations : configurations });
-  },
+    await browser.storage.local.set({ configurations: configurations });
+  }
 
   /**
-   * Show the "list configurations" dialog. This method also defines the behaviour of the dialog.
+   * Set up the event listeners for the "load configuration" dialog.
    *
    * @returns {void}
    */
-  showListConfigurationsDialog () {
-    // show dialog
-    const elModal = document.getElementById('modal-list-dialog');
-    elModal.classList.add('visible');
-
-    // close dialog by clicking the cancel button
-    const elCloseButton = elModal.querySelector('#button-list-dialog-cancel');
-    elCloseButton.onclick = () => {
-      management.closeListConfigurationsDialog(elModal);
-    };
-
-    // close dialog by pressing ESC
-    window.onkeydown = (e) => {
-      if (e.key === 'Escape') {
-        management.closeListConfigurationsDialog(elModal);
-      }
-    };
-
-    management.listConfigurations();
-  },
-
-  /**
-   * Close the "list configurations" dialog.
-   *
-   * @param {HTMLElement} elModal - the DOM element of the modal dialog
-   *
-   * @returns {void}
-   */
-  closeListConfigurationsDialog (elModal) {
-    elModal.classList.remove('visible');
-  },
+  static #setupListConfigurationsDialog () {
+    // close the dialog by clicking the cancel button
+    const $closeButton = $listConfigurationDialog.querySelector('#button-list-dialog-cancel');
+    $closeButton.addEventListener('click', () => {
+      $listConfigurationDialog.close();
+    });
+  }
 
   /**
    * List the saved configurations.
    *
    * @returns {void}
    */
-  async listConfigurations () {
-    const { configurations } = await browser.storage.local.get({ configurations : [] });
-    const configurationLength = configurations.length;
+  static async #listConfigurations () {
+    const { configurations } = await browser.storage.local.get({ configurations: [] });
 
     // show notice if no configurations are saved, otherwise show the configurations table
-    if (configurationLength === 0) {
-      elNoSavedConfigurations.classList.remove('hidden');
-      elConfigurationTable.classList.add('hidden');
+    if (configurations.length === 0) {
+      $noSavedConfigurations.classList.remove('hidden');
+      $configurationTable.classList.add('hidden');
     }
     else {
-      elNoSavedConfigurations.classList.add('hidden');
-      elConfigurationTable.classList.remove('hidden');
+      $noSavedConfigurations.classList.add('hidden');
+      $configurationTable.classList.remove('hidden');
     }
 
     // tbody element, configuration rows will be added here
-    const elTableBody = elConfigurationTable.querySelector('tbody');
+    const $tableBody = $configurationTable.querySelector('tbody');
 
     // remove old content
-    while (elTableBody.firstChild) {
-      elTableBody.removeChild(elTableBody.firstChild);
+    while ($tableBody.firstChild) {
+      $tableBody.removeChild($tableBody.firstChild);
     }
 
-    // add configurations to table
-    for (let i = 0; i < configurationLength; i++) {
+    // add configurations to the table
+    for (const [idx, configuration] of configurations.entries()) {
       // row
-      const elRow = document.createElement('tr');
-      elTableBody.appendChild(elRow);
+      const $row = document.createElement('tr');
+      $tableBody.appendChild($row);
 
       // name column
-      const elNameColumn = document.createElement('td');
-      elNameColumn.textContent = configurations[i].name;
-      elRow.appendChild(elNameColumn);
+      const $nameColumn = document.createElement('td');
+      $nameColumn.textContent = configuration.name;
+      $row.appendChild($nameColumn);
 
       // time column
-      const elTimeColumn = document.createElement('td');
-      elTimeColumn.textContent = configurations[i].time.toLocaleString();
-      elRow.appendChild(elTimeColumn);
+      const $timeColumn = document.createElement('td');
+      $timeColumn.textContent = configuration.time.toLocaleString();
+      $row.appendChild($timeColumn);
 
       // icon column
-      const elIconColumn = document.createElement('td');
-      elRow.appendChild(elIconColumn);
+      const $iconColumn = document.createElement('td');
+      $iconColumn.classList.add('actions');
+      $row.appendChild($iconColumn);
 
       // remove icon
-      const elRemoveLink = document.createElement('a');
-      elRemoveLink.setAttribute('href', '#');
-      elRemoveLink.setAttribute('title', browser.i18n.getMessage('title_remove_configuration'));
-      elRemoveLink.setAttribute('data-idx', i.toString());
-      elRemoveLink.classList.add('icon', 'trash-icon');
-      elRemoveLink.addEventListener('click', management.removeConfiguration);
-      elIconColumn.appendChild(elRemoveLink);
+      const $removeButton = document.createElement('button');
+      $removeButton.setAttribute('type', 'button');
+      $removeButton.setAttribute('title', I18n.getMessage('title_remove_configuration'));
+      $removeButton.setAttribute('data-idx', idx.toString());
+      $removeButton.classList.add('icon', 'trash-icon');
+      $removeButton.addEventListener('click', Management.#removeConfiguration);
+      $iconColumn.appendChild($removeButton);
 
-      const elRemoveIcon = document.createElement('img');
-      elRemoveIcon.src = '/images/trash.svg';
-      elRemoveIcon.setAttribute('alt', browser.i18n.getMessage('title_remove_configuration'));
-      elRemoveLink.appendChild(elRemoveIcon);
+      const $removeIcon = document.createElement('img');
+      $removeIcon.src = '/images/trash.svg';
+      $removeIcon.width = 18;
+      $removeIcon.height = 18;
+      $removeIcon.alt = I18n.getMessage('title_remove_configuration');
+      $removeButton.appendChild($removeIcon);
 
       // fake export icon (permission not yet granted)
-      const elFakeExportLink = document.createElement('a');
-      elFakeExportLink.setAttribute('href', '#');
-      elFakeExportLink.setAttribute('title', browser.i18n.getMessage('configuration_export'));
-      elFakeExportLink.setAttribute('data-idx', i.toString());
-      elFakeExportLink.classList.add('icon', 'fake-export-link');
-      elFakeExportLink.addEventListener('click', management.grantDownloadPermission);
-      elIconColumn.appendChild(elFakeExportLink);
+      const $fakeExportButton = document.createElement('button');
+      $fakeExportButton.setAttribute('type', 'button');
+      $fakeExportButton.setAttribute('title', I18n.getMessage('configuration_export'));
+      $fakeExportButton.setAttribute('data-idx', idx.toString());
+      $fakeExportButton.classList.add('icon', 'fake-export-link');
+      $fakeExportButton.addEventListener('click', Management.#grantDownloadPermission);
+      $iconColumn.appendChild($fakeExportButton);
 
-      const elFakeExportIcon = document.createElement('img');
-      elFakeExportIcon.src = '/images/export.svg';
-      elFakeExportIcon.setAttribute('alt', browser.i18n.getMessage('configuration_export'));
-      elFakeExportLink.appendChild(elFakeExportIcon);
+      const $fakeExportIcon = document.createElement('img');
+      $fakeExportIcon.src = '/images/export.svg';
+      $fakeExportIcon.width = 18;
+      $fakeExportIcon.height = 18;
+      $fakeExportIcon.alt = I18n.getMessage('configuration_export');
+      $fakeExportButton.appendChild($fakeExportIcon);
 
       // export icon
-      const elExportLink = document.createElement('a');
-      elExportLink.setAttribute('href', '#');
-      elExportLink.setAttribute('title', browser.i18n.getMessage('configuration_export'));
-      elExportLink.setAttribute('data-idx', i.toString());
-      elExportLink.classList.add('icon', 'export-link', 'hidden');
-      elExportLink.addEventListener('click', management.exportConfiguration);
-      elIconColumn.appendChild(elExportLink);
+      const $exportButton = document.createElement('button');
+      $exportButton.setAttribute('type', 'button');
+      $exportButton.setAttribute('title', I18n.getMessage('configuration_export'));
+      $exportButton.setAttribute('data-idx', idx.toString());
+      $exportButton.classList.add('icon', 'export-link', 'hidden');
+      $exportButton.addEventListener('click', Management.#exportConfiguration);
+      $iconColumn.appendChild($exportButton);
 
-      const elExportIcon = document.createElement('img');
-      elExportIcon.src = '/images/export.svg';
-      elExportIcon.setAttribute('alt', browser.i18n.getMessage('configuration_export'));
-      elExportLink.appendChild(elExportIcon);
+      const $exportIcon = document.createElement('img');
+      $exportIcon.src = '/images/export.svg';
+      $exportIcon.width = 18;
+      $exportIcon.height = 18;
+      $exportIcon.alt = I18n.getMessage('configuration_export');
+      $exportButton.appendChild($exportIcon);
 
       // load icon
-      const elLoadLink = document.createElement('a');
-      elLoadLink.setAttribute('href', '#');
-      elLoadLink.setAttribute('title', browser.i18n.getMessage('title_apply_configuration'));
-      elLoadLink.setAttribute('data-idx', i.toString());
-      elLoadLink.classList.add('icon');
-      elLoadLink.addEventListener('click', management.applyConfiguration);
-      elIconColumn.appendChild(elLoadLink);
+      const $loadButton = document.createElement('button');
+      $loadButton.setAttribute('type', 'button');
+      $loadButton.setAttribute('title', I18n.getMessage('title_apply_configuration'));
+      $loadButton.setAttribute('data-idx', idx.toString());
+      $loadButton.classList.add('icon');
+      $loadButton.addEventListener('click', Management.#applyConfiguration);
+      $iconColumn.appendChild($loadButton);
 
-      const elLoadIcon = document.createElement('img');
-      elLoadIcon.src = '/images/check-square.svg';
-      elLoadIcon.setAttribute('alt', browser.i18n.getMessage('title_apply_configuration'));
-      elLoadLink.appendChild(elLoadIcon);
+      const $loadIcon = document.createElement('img');
+      $loadIcon.src = '/images/check-square.svg';
+      $loadIcon.width = 18;
+      $loadIcon.height = 18;
+      $loadIcon.alt = I18n.getMessage('title_apply_configuration');
+      $loadButton.appendChild($loadIcon);
     }
 
-    management.testDownloadPermission();
-  },
+    Management.#testDownloadPermission();
+  }
 
   /**
-   * Applies the selected configuration.
+   * Apply the selected configuration.
    *
-   * @param {MouseEvent} e - event
+   * @param {MouseEvent} e - the mouse event
    *
    * @returns {void}
    */
-  async applyConfiguration (e) {
-    e.preventDefault();
-
-    const { configurations } = await browser.storage.local.get({ configurations : [] });
-    serializer.unserialize(configurations[e.target.parentNode.getAttribute('data-idx')].configuration);
-    management.closeListConfigurationsDialog(document.getElementById('modal-list-dialog'));
-    document.getElementById('policy-output').innerText = output.generatePoliciesOutput();
+  static async #applyConfiguration (e) {
+    const { configurations } = await browser.storage.local.get({ configurations: [] });
+    Serializer.unserialize(configurations[e.target.parentElement.getAttribute('data-idx')].configuration);
+    $listConfigurationDialog.close();
+    document.getElementById('policy-output').textContent = Output.generatePoliciesOutput();
     document.getElementById('action-links').classList.remove('hidden');
-  },
+  }
 
   /**
-   * Removes the selected configuration.
+   * Remove the selected configuration.
    *
-   * @param {MouseEvent} e - event
+   * @param {MouseEvent} e - the mouse event
    *
    * @returns {void}
    */
-  async removeConfiguration (e) {
-    e.preventDefault();
-
-    const { configurations } = await browser.storage.local.get({ configurations : [] });
-    configurations.splice(e.target.parentNode.getAttribute('data-idx'), 1);
-    browser.storage.local.set({ configurations : configurations });
-    management.listConfigurations();
-  },
+  static async #removeConfiguration (e) {
+    const { configurations } = await browser.storage.local.get({ configurations: [] });
+    configurations.splice(e.target.parentElement.getAttribute('data-idx'), 1);
+    await browser.storage.local.set({ configurations: configurations });
+    Management.#listConfigurations();
+  }
 
   /**
-   * Tests if the downloads permission has been granted or not. If granted, the link for granting the permission
+   * Test if the downloads permission has been granted or not. If granted, the link for granting the permission
    * will be hidden and the real export link will be shown.
    *
    * @returns {void}
    */
-  async testDownloadPermission () {
+  static async #testDownloadPermission () {
     const granted = await browser.permissions.contains(DOWNLOAD_PERMISSION);
 
-    // if the downloads permission is granted hide the link for granting permission and show the
+    // if the downloads permission is granted, hide the link for granting permission and show the
     // real export link instead
     if (granted) {
-      const elFakeExportLink = document.querySelector('.fake-export-link');
-      const elExportLink = document.querySelector('.export-link');
+      const $fakeExportLink = document.querySelector('.fake-export-link');
+      const $exportLink = document.querySelector('.export-link');
 
-      if (elFakeExportLink) {
-        elFakeExportLink.classList.add('hidden');
+      if ($fakeExportLink) {
+        $fakeExportLink.classList.add('hidden');
       }
 
-      if (elExportLink) {
-        elExportLink.classList.remove('hidden');
+      if ($exportLink) {
+        $exportLink.classList.remove('hidden');
       }
     }
-  },
+  }
 
   /**
-   * Grants the download permission and exports the configuration once granted.
+   * Grant the download permission and exports the configuration once granted.
    *
-   * @param {MouseEvent} e - event
+   * @param {MouseEvent} e - the mouse event
    *
    * @returns {void}
    */
-  async grantDownloadPermission (e) {
-    e.preventDefault();
-
+  static async #grantDownloadPermission (e) {
     const granted = await browser.permissions.request(DOWNLOAD_PERMISSION);
 
     // immediately prompt for download after the downloads permission has been granted
     if (granted) {
-      management.exportConfiguration(e);
+      Management.#exportConfiguration(e);
     }
-  },
+  }
 
   /**
    * Exports a configuration.
@@ -353,134 +313,103 @@ const management = {
    *
    * @returns {void}
    */
-  async exportConfiguration (e) {
-    e.preventDefault();
+  static async #exportConfiguration (e) {
+    const { configurations } = await browser.storage.local.get({ configurations: [] });
+    const configuration = configurations[e.target.parentElement.getAttribute('data-idx')];
+    const serializedConfig = window.btoa(JSON.stringify(configurations[e.target.parentElement.getAttribute('data-idx')]));
 
-    const { configurations } = await browser.storage.local.get({ configurations : [] });
-    const configuration = configurations[e.target.parentNode.getAttribute('data-idx')];
-    const serializedConfig = window.btoa(JSON.stringify(configurations[e.target.parentNode.getAttribute('data-idx')]));
-
-    browser.downloads.download({
-      saveAs : true,
-      url : URL.createObjectURL(new Blob([serializedConfig])),
-      filename : 'policy-export-' + configuration.time.getTime() + '.policy'
+    await browser.downloads.download({
+      saveAs: true,
+      url: URL.createObjectURL(new Blob([serializedConfig])),
+      filename: 'policy-export-' + configuration.time.getTime() + '.policy'
     });
-  },
+  }
 
   /**
-   * Show the "import configuration" dialog. This method also defines the behaviour of the dialog.
+   * Set up the event listeners for the "import configuration" dialog.
    *
    * @returns {void}
    */
-  showImportConfigurationDialog () {
-    // show dialog
-    const elModal = document.getElementById('import-configuration-dialog');
-    elModal.classList.add('visible');
+  static #setupImportConfigurationDialog () {
+    const $name = $importConfigurationDialog.querySelector('#import-dialog-name');
+    const $fileInput = $importConfigurationDialog.querySelector('#import-file-input');
+    const $submitButton = $importConfigurationDialog.querySelector('#button-import-config-ok');
+    const $closeButton = $importConfigurationDialog.querySelector('#button-import-config-cancel');
 
-    const elName = elModal.querySelector('#import-dialog-name');
-    const elFileInput = elModal.querySelector('#import-file-input');
-    const elSubmitButton = elModal.querySelector('#button-import-config-ok');
-    const elCloseButton = elModal.querySelector('#button-import-config-cancel');
+    $importConfigurationDialog.addEventListener('close', () => {
+      $importConfigurationDialog.querySelector('#import-dialog-name').value = '';
+      $importConfigurationDialog.querySelector('#import-file-input').value = '';
+      $submitButton.setAttribute('disabled', 'disabled');
+    });
 
-    // focus the name input field
-    elName.focus();
-
-    // the name field must not be empty
-    elName.oninput = () => {
-      if (elName.value && elFileInput.value) {
-        elSubmitButton.removeAttribute('disabled');
+    const disableSubmitButton = () => {
+      if ($name.value && $fileInput.value) {
+        $submitButton.removeAttribute('disabled');
       }
       else {
-        elSubmitButton.setAttribute('disabled', 'disabled');
+        $submitButton.setAttribute('disabled', 'disabled');
       }
     };
 
-    // the file input field must not be empty
-    elFileInput.oninput = () => {
-      if (elName.value && elFileInput.value) {
-        elSubmitButton.removeAttribute('disabled');
-      }
-      else {
-        elSubmitButton.setAttribute('disabled', 'disabled');
-      }
-    };
+    // the name and the file input field must not be empty
+    $name.addEventListener('input', disableSubmitButton);
+    $fileInput.addEventListener('input', disableSubmitButton);
 
-    // close dialog by clicking the cancel button
-    elCloseButton.onclick = () => {
-      management.closeImportConfigurationDialog(elModal, elSubmitButton);
-    };
+    // close the dialog by clicking the cancel button
+    $closeButton.addEventListener('click', () => {
+      $importConfigurationDialog.close();
+    });
 
-    // import configuration by pressing Enter, close dialog by pressing ESC
-    window.onkeydown = (e) => {
+    // import configuration by pressing Enter, close the dialog by pressing ESC
+    window.addEventListener('keydown', e => {
       if (e.key === 'Enter') {
         e.preventDefault();
 
-        if (elName.value && elFileInput.value) {
-          management.importConfiguration(elName.value, elFileInput);
-          management.closeImportConfigurationDialog(elModal, elSubmitButton);
+        if ($name.value && $fileInput.value) {
+          Management.#importConfiguration($name.value, $fileInput);
+          $importConfigurationDialog.close();
         }
       }
-
-      if (e.key === 'Escape') {
-        management.closeImportConfigurationDialog(elModal, elSubmitButton);
-      }
-    };
+    });
 
     // submit button
-    elSubmitButton.onclick = (e) => {
-      e.preventDefault();
-
-      management.importConfiguration(elName.value, elFileInput);
-      management.closeImportConfigurationDialog(elModal, elSubmitButton);
-    };
-  },
+    $submitButton.addEventListener('click', () => {
+      Management.#importConfiguration($name.value, $fileInput);
+      $importConfigurationDialog.close();
+    });
+  }
 
   /**
-   * Close the "list configurations" dialog.
-   *
-   * @param {HTMLElement} elModal - the DOM element of the modal dialog
-   * @param {HTMLElement} elSubmitButton - the DOM element of the submit button
-   *
-   * @returns {void}
-   */
-  closeImportConfigurationDialog (elModal, elSubmitButton) {
-    elModal.classList.remove('visible');
-    elModal.querySelector('#import-dialog-name').value = '';
-    elModal.querySelector('#import-file-input').value = '';
-    elSubmitButton.setAttribute('disabled', 'disabled');
-  },
-
-  /**
-   * Imports a configuration file.
+   * Import a configuration file.
    *
    * @param {string} name - the name of the configuration
-   * @param {HTMLElement} elLocalFile - the DOM element of the configuration file input
+   * @param {HTMLInputElement} $localFile - the DOM element of the configuration file input
    *
    * @returns {void}
    */
-  importConfiguration (name, elLocalFile) {
+  static #importConfiguration (name, $localFile) {
     const reader = new FileReader();
 
-    reader.readAsText(elLocalFile.files[0]);
+    reader.readAsText($localFile.files[0]);
     reader.addEventListener('loadend', async () => {
-      const { configurations } = await browser.storage.local.get({ configurations : [] });
+      const { configurations } = await browser.storage.local.get({ configurations: [] });
       const file = reader.result.toString();
 
       const configuration = {
-        name : name,
-        time : new Date(),
-        configuration : JSON.parse(window.atob(file)).configuration
+        name: name,
+        time: new Date(),
+        configuration: JSON.parse(window.atob(file)).configuration
       };
 
       configurations.push(configuration);
 
       // migrate old configuration files and set the schemaVersion to 1 to run all migrations
-      await browser.storage.local.set({ configurations : configurations, schemaVersion : 1 });
-      migrator.migrate();
+      await browser.storage.local.set({ configurations: configurations, schemaVersion: 1 });
+      Migrator.migrate();
 
-      management.showListConfigurationsDialog();
+      Management.#listConfigurations();
     });
   }
-};
+}
 
-management.init();
+Management.init();

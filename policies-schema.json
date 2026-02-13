@@ -1,0 +1,526 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "allowed_schemas": {
+      "type": "object",
+      "properties": {
+        "array": {
+          "enum": ["boolean", "object", "string"]
+        },
+        "object": {
+          "enum": ["array", "boolean", "enum", "object", "string"]
+        }
+      }
+    },
+    "browser_version": {
+      "type": ["null", "string"],
+      "pattern": "^[\\d]{2,3}\\.[\\d]{1,2}(\\.[\\d]{1,2})?$"
+    },
+    "key": {
+      "type": "object",
+      "properties": {
+        "placeholder": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "oneOf": [
+        {
+          "properties": {
+            "validations": {
+              "type": "array",
+              "items": {
+                "const": "preference"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          },
+          "required": ["placeholder"]
+        },
+        {
+          "required": ["value"]
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "schemas": {
+      "type": "object",
+      "properties": {
+        "array": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "properties": {
+                "schema": {
+                  "$ref": "#/$defs/allowed_schemas/properties/array"
+                },
+                "link": {
+                  "type": "string"
+                },
+                "allow_empty_value": {
+                  "type": "boolean"
+                },
+                "addition": {
+                  "properties": {
+                    "schema": {
+                      "$ref": "#/$defs/allowed_schemas/properties/array"
+                    }
+                  },
+                  "allOf": [
+                    {
+                      "if": {
+                        "properties": {
+                          "schema": {
+                            "const": "object"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "#/$defs/schemas/properties/object"
+                      }
+                    },
+                    {
+                      "if": {
+                        "properties": {
+                          "schema": {
+                            "const": "string"
+                          }
+                        }
+                      },
+                      "then": {
+                        "$ref": "#/$defs/schemas/properties/string"
+                      }
+                    }
+                  ],
+                  "required": ["schema"],
+                  "unevaluatedProperties": false
+                }
+              },
+              "allOf": [
+                {
+                  "if": {
+                    "properties": {
+                      "schema": {
+                        "const": "boolean"
+                      }
+                    }
+                  },
+                  "then": {
+                    "properties": {
+                      "options": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "label": {
+                              "type": "string"
+                            }
+                          },
+                          "required": ["name", "label"],
+                          "unevaluatedProperties": false
+                        },
+                        "minItems": 1,
+                        "uniqueItems": true
+                      }
+                    }
+                  }
+                },
+                {
+                  "if": {
+                    "properties": {
+                      "schema": {
+                        "const": "object"
+                      }
+                    }
+                  },
+                  "then": {
+                    "$ref": "#/$defs/schemas/properties/object"
+                  }
+                },
+                {
+                  "if": {
+                    "properties": {
+                      "schema": {
+                        "const": "string"
+                      }
+                    }
+                  },
+                  "then": {
+                    "$ref": "#/$defs/schemas/properties/string",
+                    "properties": {
+                      "join": {
+                        "enum": [",", "|", " "]
+                      }
+                    }
+                  }
+                }
+              ],
+              "required": ["schema"],
+              "unevaluatedProperties": false
+            }
+          },
+          "required": ["items"]
+        },
+        "boolean": {
+          "type": "object",
+          "properties": {
+            "inverse": {
+              "type": "boolean"
+            }
+          }
+        },
+        "enum": {
+          "type": "object",
+          "properties": {
+            "sort_options": {
+              "type": "boolean"
+            },
+            "default": {
+              "type": ["boolean", "integer", "null", "string"]
+            }
+          },
+          "oneOf": [
+            {
+              "properties": {
+                "options": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "label": {
+                        "type": "string"
+                      },
+                      "value": {
+                        "type": ["boolean", "integer", "null", "string"]
+                      }
+                    },
+                    "required": ["label", "value"],
+                    "additionalProperties": false
+                  },
+                  "minItems": 1,
+                  "uniqueItems": true
+                }
+              },
+              "required": ["options"]
+            },
+            {
+              "properties": {
+                "preset": {
+                  "type": "string"
+                }
+              },
+              "required": ["preset"]
+            }
+          ]
+        },
+        "object": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string"
+            },
+            "key": {
+              "$ref": "#/$defs/key"
+            },
+            "lockable": {
+              "type": "boolean"
+            },
+            "properties": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "schema": {
+                    "$ref": "#/$defs/allowed_schemas/properties/object"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "allOf": [
+                  {
+                    "if": {
+                      "properties": {
+                        "schema": {
+                          "const": "array"
+                        }
+                      }
+                    },
+                    "then": {
+                      "$ref": "#/$defs/schemas/properties/array"
+                    }
+                  },
+                  {
+                    "if": {
+                      "properties": {
+                        "schema": {
+                          "const": "enum"
+                        }
+                      }
+                    },
+                    "then": {
+                      "$ref": "#/$defs/schemas/properties/enum"
+                    }
+                  },
+                  {
+                    "if": {
+                      "properties": {
+                        "schema": {
+                          "const": "object"
+                        }
+                      }
+                    },
+                    "then": {
+                      "$ref": "#/$defs/schemas/properties/object"
+                    }
+                  },
+                  {
+                    "if": {
+                      "properties": {
+                        "schema": {
+                          "const": "string"
+                        }
+                      }
+                    },
+                    "then": {
+                      "$ref": "#/$defs/schemas/properties/string"
+                    }
+                  }
+                ],
+                "required": ["name", "schema"],
+                "unevaluatedProperties": false
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          },
+          "required": ["properties"]
+        },
+        "string": {
+          "type": "object",
+          "properties": {
+            "key": {
+              "$ref": "#/$defs/key"
+            },
+            "textarea": {
+              "type": "boolean"
+            },
+            "label": {
+              "type": "string"
+            },
+            "placeholder": {
+              "type": "string"
+            },
+            "validations": {
+              "type": "array",
+              "items": {
+                "enum": ["json", "number", "required", "secure-url", "url", "url-or-data"]
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "regex": {
+              "type": "object",
+              "properties": {
+                "pattern": {
+                  "type": "string"
+                },
+                "error": {
+                  "type": "string"
+                }
+              },
+              "required": ["pattern", "error"]
+            },
+            "output_filter": {
+              "type": "string"
+            }
+          },
+          "required": ["placeholder"]
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "policies": {
+      "type": "object",
+      "patternProperties": {
+        "\\w+": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "availability": {
+              "type": "object",
+              "properties": {
+                "mainstream": {
+                  "$ref": "#/$defs/browser_version"
+                },
+                "esr": {
+                  "$ref": "#/$defs/browser_version"
+                }
+              },
+              "required": ["mainstream", "esr"],
+              "additionalProperties": false
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "block-access", "customization", "disable-features", "network", "privacy", "security",
+                  "updates-and-data", "others"
+                ]
+              },
+              "minItems": 1,
+              "maxItems": 1,
+              "uniqueItems": true
+            },
+            "exclude": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecation": {
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            },
+            "schema": {
+              "$ref": "#/$defs/allowed_schemas/properties/object"
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "schema": {
+                    "const": "array"
+                  }
+                }
+              },
+              "then": {
+                "$ref": "#/$defs/schemas/properties/array"
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "schema": {
+                    "const": "boolean"
+                  }
+                }
+              },
+              "then": {
+                "$ref": "#/$defs/schemas/properties/boolean"
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "schema": {
+                    "const": "enum"
+                  }
+                }
+              },
+              "then": {
+                "$ref": "#/$defs/schemas/properties/enum"
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "schema": {
+                    "const": "object"
+                  }
+                }
+              },
+              "then": {
+                "$ref": "#/$defs/schemas/properties/object"
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "schema": {
+                    "const": "string"
+                  }
+                }
+              },
+              "then": {
+                "$ref": "#/$defs/schemas/properties/string"
+              }
+            }
+          ],
+          "required": ["availability", "schema", "tags"],
+          "unevaluatedProperties": false
+        }
+      }
+    },
+    "preferences": {
+      "type": "object",
+      "properties": {
+        "allowed": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "disallowed": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": ["allowed", "disallowed"],
+      "unevaluatedProperties": false
+    },
+    "presets": {
+      "type": "object",
+      "patternProperties": {
+        "\\w+": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "value": {
+                "type": ["boolean", "null", "string"]
+              }
+            },
+            "required": ["label", "value"],
+            "unevaluatedProperties": false
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  },
+  "required": ["policies", "preferences", "presets", "tags"],
+  "additionalProperties": false
+}

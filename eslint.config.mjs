@@ -180,7 +180,7 @@ export default [
       'jsdoc/require-property-name': 'warn',
       'jsdoc/require-property-type': 'warn',
       'jsdoc/require-rejects': 'warn',
-      'jsdoc/require-returns': 'warn',
+      'jsdoc/require-returns': ['warn', { 'forceRequireReturn': true }],
       'jsdoc/require-returns-check': 'warn',
       'jsdoc/require-returns-description': 'warn',
       'jsdoc/require-returns-type': 'warn',

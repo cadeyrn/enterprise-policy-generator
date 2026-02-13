@@ -62,17 +62,14 @@
   "filter_field": {
     "message": "Фильтр политик…"
   },
+  "filter_field_close": {
+    "message": "Закрыть фильтр"
+  },
   "generate_button": {
     "message": "Создать политики"
   },
-  "invalid_json_label": {
-    "message": "неправильный JSON"
-  },
-  "invalid_url_label": {
-    "message": "неправильный URL"
-  },
-  "invalid_version_pattern_label": {
-    "message": "неправильная версия шаблона"
+  "generate_headline": {
+    "message": "Выбор политик"
   },
   "link_download": {
     "message": "загрузить policies.json"
@@ -98,6 +95,9 @@
   "list_dialog_window_title": {
     "message": "Загрузить конфигурацию"
   },
+  "list_table_actions": {
+    "message": "Actions"
+  },
   "list_table_name": {
     "message": "Название"
   },
@@ -106,9 +106,6 @@
   },
   "lock_preference": {
     "message": "Защита параметров от изменений"
-  },
-  "mandatory_label": {
-    "message": "обязательный"
   },
   "non_allowed_preference_label": {
     "message": "Название параметра не разрешено"
@@ -134,19 +131,19 @@
   "policy_category_security": {
     "message": "Безопасность"
   },
-  "policy_category_update_and_data": {
+  "policy_category_updates_and_data": {
     "message": "Обновления и сбор данных"
   },
   "policy_description_3rdParty": {
     "message": "Предварительная настройка параметров для расширений, использующих chrome.storage.managed"
   },
-  "policy_description_3rdparty_JSON_caption": {
+  "policy_description_3rdparty_JSON": {
     "message": "Конфигурация JSON"
   },
-  "policy_description_3rdparty_JSON_label": {
+  "policy_description_3rdparty_JSON_placeholder": {
     "message": "JSON (конфигурация должна заключаться в фигурные скобки {})"
   },
-  "policy_description_3rdParty_Label_Key": {
+  "policy_description_3rdparty_key": {
     "message": "ID расширения"
   },
   "policy_description_AllowedDomainsForApps": {
@@ -160,6 +157,9 @@
   },
   "policy_description_AppUpdatePin": {
     "message": "Запретить обновления Firefox после указанной версии"
+  },
+  "policy_description_AppUpdatePin_label": {
+    "message": "If only a major version (“xxx”) is specified, only minor and patch updates will be installed. If a major plus minor version (“xxx.xx”) is specified, only patch updates will be installed."
   },
   "policy_description_AppUpdatePin_placeholder": {
     "message": "Версия Firefox (параметр: \"xxx\" или \"xxx.xx\")"
@@ -665,14 +665,14 @@
   "policy_description_ExtensionSettings_allowed_types_theme": {
     "message": "Темы"
   },
-  "policy_description_ExtensionSettings_blocked_install_message_caption_all": {
+  "policy_description_ExtensionSettings_blocked_install_message_all": {
     "message": "Отображаемое сообщение об ошибке при попытке установить заблокированное расширение"
   },
-  "policy_description_ExtensionSettings_blocked_install_message_caption_single": {
-    "message": "Отображаемое сообщение об ошибке при попытке установить заблокированное расширение"
-  },
-  "policy_description_ExtensionSettings_blocked_install_message_label": {
+  "policy_description_ExtensionSettings_blocked_install_message_placeholder": {
     "message": "сообщение об ошибке"
+  },
+  "policy_description_ExtensionSettings_blocked_install_message_single": {
+    "message": "Отображаемое сообщение об ошибке при попытке установить заблокированное расширение"
   },
   "policy_description_ExtensionSettings_default_area": {
     "message": "Начальное размещение расширения"
@@ -683,16 +683,10 @@
   "policy_description_ExtensionSettings_default_area_navbar": {
     "message": "На навигационной панели инструментов"
   },
-  "policy_description_ExtensionSettings_extra_caption_post": {
-    "message": "Конфигурация для отдельных расширений"
-  },
-  "policy_description_ExtensionSettings_extra_caption_pre": {
-    "message": "Конфигурация для всех расширений"
-  },
   "policy_description_ExtensionSettings_install_sources": {
     "message": "Разрешённые источники установки. Должны быть разрешены как расположение *.xpi, так и страница загрузки. Допускается использовать шаблоны, см. информационную ссылку."
   },
-  "policy_description_ExtensionSettings_install_url_caption": {
+  "policy_description_ExtensionSettings_install_url": {
     "message": "URL установки. При установке с диска: file:/// URI."
   },
   "policy_description_ExtensionSettings_installation_mode": {
@@ -716,8 +710,14 @@
   "policy_description_ExtensionSettings_installation_mode_normal_installed": {
     "message": "расширение устанавливается автоматически, но может быть отключено пользователем (требуется URL установки)"
   },
-  "policy_description_ExtensionSettings_Label_Key": {
+  "policy_description_ExtensionSettings_key": {
     "message": "ID расширения"
+  },
+  "policy_description_ExtensionSettings_label_additional_items": {
+    "message": "Конфигурация для всех расширений"
+  },
+  "policy_description_ExtensionSettings_label_items": {
+    "message": "Конфигурация для отдельных расширений"
   },
   "policy_description_ExtensionSettings_private_browsing": {
     "message": "Запускать в приватных окнах"
@@ -876,7 +876,7 @@
     "message": "Сайты, которые не будут автоматически переключаться на HTTPS"
   },
   "policy_description_HttpsOnlyMode": {
-    "message": "Настройка режима \"Только HTTPS\""
+    "message": "Настройка режима Только HTTPS"
   },
   "policy_description_HttpsOnlyMode_allowed": {
     "message": "Отключён по умолчанию , но пользователь может включить"
@@ -1064,79 +1064,10 @@
   "policy_description_PostQuantumKeyAgreementEnabled": {
     "message": "Использовать постквантовое согласование ключей для TLS"
   },
-  "policy_description_Preference_browser_cache_disk_enable": {
-    "message": "Включить или отключить хранение кэша на жёстком диске"
-  },
-  "policy_description_Preference_browser_cache_disk_parent_directory": {
-    "message": "Изменить расположение кэша на диске"
-  },
-  "policy_description_Preference_browser_cache_disk_parent_directory_label": {
-    "message": "Путь"
-  },
-  "policy_description_Preference_browser_fixup_dns_first_for_single_words": {
-    "message": "Отправлять отдельные слова из строки адреса сначала в DNS, а не сразу в поисковую систему"
-  },
-  "policy_description_Preference_browser_search_update": {
-    "message": "Обновлять поисковые системы"
-  },
-  "policy_description_Preference_browser_tabs_warnOnClose": {
-    "message": "Показывать предупреждение при закрытии браузера"
-  },
-  "policy_description_Preference_browser_urlbar_suggest_bookmark": {
-    "message": "Предлагать из закладок при использовании строки адреса"
-  },
-  "policy_description_Preference_browser_urlbar_suggest_history": {
-    "message": "Предлагать из истории при использовании строки адреса"
-  },
-  "policy_description_Preference_browser_urlbar_suggest_openpage": {
-    "message": "Предлагать из открытых вкладок при использовании строки адреса"
-  },
-  "policy_description_Preference_dom_disable_window_flip": {
-    "message": "Разрешить сайтам изменять фокус окон"
-  },
-  "policy_description_Preference_dom_disable_window_move_resize": {
-    "message": "Разрешить сайтам перемещать и изменять размер окон"
-  },
-  "policy_description_Preference_dom_event_contextmenu_enabled": {
-    "message": "Разрешить сайтам переопределять контекстное меню"
-  },
-  "policy_description_Preference_dom_keyboardevent_keypress_hack_dispatch_non_printable_keys_addl": {
-    "message": "Веб-стандарты: восстановить старое поведение для нажатия клавиш и непечатаемых ключей на определённых доменах"
-  },
-  "policy_description_Preference_dom_keyboardevent_keypress_hack_use_legacy_keycode_and_charcode_addl": {
-    "message": "Веб-стандарты: восстановить старое поведение для KeyCode и CharCode на определённых доменах"
-  },
-  "policy_description_Preference_extensions_getAddons_showPane": {
-    "message": "Показывать вкладку рекомендации в менеджере дополнений"
-  },
-  "policy_description_Preference_media_gmp_gmpopenh264_enabled": {
-    "message": "Скачать плагин OpenH264 для WebRTC"
-  },
-  "policy_description_Preference_network_dns_disableIPv6": {
-    "message": "Выполнять поиск IPv6 DNS"
-  },
-  "policy_description_Preference_network_IDN_show_punycode": {
-    "message": "Показывать версии punycode интернационализированных доменных имён"
-  },
-  "policy_description_Preference_places_history_enabled": {
-    "message": "Помнить историю просмотра"
-  },
-  "policy_description_Preference_security_default_personal_cert": {
-    "message": "Просить пользователя выбрать персональный сертификат по умолчанию"
-  },
-  "policy_description_Preference_security_default_personal_cert_ask_every_time": {
-    "message": "спрашивать каждый раз"
-  },
-  "policy_description_Preference_security_default_personal_cert_select_automatically": {
-    "message": "выбрать автоматически"
-  },
-  "policy_description_Preference_ui_key_menuAccessKeyFocuses": {
-    "message": "Клавиша Alt может использоваться для отображения строки меню"
-  },
   "policy_description_Preferences": {
     "message": "Пользовательские настройки (about:config)"
   },
-  "policy_description_Preferences_Label_Key": {
+  "policy_description_Preferences_key": {
     "message": "Название параметра"
   },
   "policy_description_Preferences_Status": {
@@ -1394,8 +1325,14 @@
   "policy_description_SSLVersionMax": {
     "message": "Максимальная поддерживаемая версия TLS"
   },
+  "policy_description_SSLVersionMax_Standard": {
+    "message": "TLS 1.3 (по умолчанию)"
+  },
   "policy_description_SSLVersionMin": {
     "message": "Минимально необходимая версия TLS"
+  },
+  "policy_description_SSLVersionMin_Standard": {
+    "message": "TLS 1.2 (по умолчанию)"
   },
   "policy_description_StartDownloadsInTempDirectory": {
     "message": "Начинать загрузку во временном каталоге, а не в каталоге загрузки по умолчанию"
@@ -1451,9 +1388,6 @@
   "policy_description_WindowsSSO": {
     "message": "Разрешить единый вход Windows для учётных записей Microsoft, учётных записей на работе и в учебных заведениях"
   },
-  "policy_label_default": {
-    "message": "по умолчанию"
-  },
   "requirement_macOS": {
     "message": "работает только в macOS"
   },
@@ -1475,8 +1409,8 @@
   "save_dialog_window_title": {
     "message": "Сохранить конфигурацию"
   },
-  "title_add_row": {
-    "message": "добавить строку"
+  "title_add_item": {
+    "message": "add item"
   },
   "title_apply_configuration": {
     "message": "загрузить конфигурацию"
@@ -1484,8 +1418,29 @@
   "title_remove_configuration": {
     "message": "удалить конфигурацию"
   },
-  "title_remove_row": {
-    "message": "удалить строку"
+  "title_remove_item": {
+    "message": "remove item"
+  },
+  "validation_invalid_json": {
+    "message": "неправильный JSON"
+  },
+  "validation_invalid_number": {
+    "message": "invalid number"
+  },
+  "validation_invalid_url": {
+    "message": "неправильный URL"
+  },
+  "validation_invalid_version": {
+    "message": "неправильная версия шаблона"
+  },
+  "validation_missing_placeholder_s": {
+    "message": "Placeholder “%s” missing"
+  },
+  "validation_missing_placeholder_searchterms": {
+    "message": "Placeholder “{searchterms}” missing"
+  },
+  "validation_required": {
+    "message": "обязательный"
   },
   "version_or_higher": {
     "message": "или выше"

@@ -1,187 +1,156 @@
 'use strict';
 
-/* global configurator */
+/* global Configurator */
 
-/**
- * @exports serializer
- */
-const serializer = {
+class Serializer {
   /**
-   * The serializer stores all the array fields and form values in an object.
+   * The serializer stores all the array items and form values in an object.
    *
-   * @returns {object} - the serialized form as an object
+   * @returns {object} - the serialized data as an object
    */
-  serialize () {
+  static serialize () {
     const { elements } = document.getElementById('generator-form');
-    const { length } = elements;
     const data = { };
 
-    data.arrayfields = { };
+    data.arrays = { };
     data.checkboxes = { };
-    data.input = { };
-    data.textareas = { };
-    data.select = { };
+    data.inputs = { };
+    data.selects = { };
 
-    // array fields
-    document.querySelectorAll('.primary-checkbox:checked').forEach((el) => {
-      el.closest('.checkbox').querySelectorAll('[data-count]').forEach((el) => {
-        const result = el.id.match(/^Array_Add_(\w+)_(\d+)$/i);
+    // arrays
+    document.querySelectorAll('.policy-checkbox:checked').forEach($el => {
+      const $items = $el.parentElement.querySelectorAll('.array-action[data-name]');
+      const groupedItems = {};
 
-        if (result) {
-          // we don't need to store the first array field because there is always at least one array field visible
-          if (result[2] > 1) {
-            if (!data.arrayfields[result[1]]) {
-              data.arrayfields[result[1]] = [];
-            }
+      // group items by their date-name attribute
+      for (const $item of $items) {
+        const groupKey = $item.getAttribute('data-name');
+        (groupedItems[groupKey] = groupedItems[groupKey] || []).push($item);
+      }
 
-            data.arrayfields[result[1]].push(result[2]);
-          }
+      for (const group of Object.entries(groupedItems)) {
+        const { length } = group[1];
+
+        // only store groups with more than one item because one item is always there by default
+        if (length > 1) {
+          // reduce the length by 1 to only store the number of added items
+          data.arrays[group[0]] = length - 1;
         }
-      });
+      }
     });
 
-    for (let i = 0; i < length; i++) {
-      const node = elements[i];
-
+    for (const $el of elements) {
       // checkboxes
-      if (node.type === 'checkbox') {
-        if (serializer.isPolicyEnabled(node) && node.checked) {
-          data.checkboxes[node.id] = true;
+      if ($el.type === 'checkbox') {
+        if (Serializer.#isPolicyEnabled($el) && $el.checked) {
+          data.checkboxes[$el.id] = true;
         }
       }
-      // select fields
-      else if (node.type === 'select-one') {
-        if (serializer.isPolicyEnabled(node)) {
-          data.select[node.id] = node.value;
+      // enum fields
+      else if ($el.type === 'select-one') {
+        if (Serializer.#isPolicyEnabled($el) && $el.value) {
+          data.selects[$el.id] = $el.value;
         }
       }
-      // text, url and number fields
-      else if (node.type === 'text' || node.type === 'url' || node.type === 'number') {
-        if (
-          serializer.isPolicyEnabled(node) && node.value &&
-          !node.classList.contains('invalid-url-style') &&
-          !node.classList.contains('invalid-preference-style')
-        ) {
-          data.input[node.id] = node.value;
-        }
-      }
-      // textarea fields
-      else if (node.type === 'textarea') {
-        if (serializer.isPolicyEnabled(node) && node.value && !node.classList.contains('invalid-json-style')) {
-          data.textareas[node.id] = node.value;
+      // text fields
+      else if (['text', 'textarea', 'url'].includes($el.type)) {
+        if (Serializer.#isPolicyEnabled($el) && $el.value && !$el.classList.contains('invalid-input-style')) {
+          data.inputs[$el.id] = $el.value;
         }
       }
     }
 
     return data;
-  },
+  }
 
   /**
    * The unserializer applies the values of a stored configuration on the generator form.
    *
-   * @param {object} data - the serialized form as an object
+   * @param {object} data - the serialized data as an object
    *
    * @returns {void}
    */
-  unserialize (data) {
+  static unserialize (data) {
     // reset the configuration form
-    configurator.init(true);
+    document.getElementById('generator-form').reset();
 
-    // array fields
-    Object.keys(data.arrayfields).forEach((id) => {
-      const newCountValue = Math.max(...data.arrayfields[id]);
-
-      data.arrayfields[id].forEach((key) => {
-        const el = document.getElementById('Array_Add_' + id + '_1');
-
-        if (el) {
-          configurator.addArrayField(el, key, newCountValue);
-        }
-      });
+    // remove all additional array items
+    document.querySelectorAll('[data-action="remove"]:not(.disabled-link)').forEach($el => {
+      $el.click();
     });
+
+    // arrays
+    for (const group of Object.entries(data.arrays)) {
+      const $el = document.querySelector(`.array-action[data-name="${group[0]}"]`);
+
+      if ($el) {
+        for (let i = 1; i <= group[1]; i++) {
+          $el.click();
+        }
+      }
+    }
 
     // checkboxes
-    Object.keys(data.checkboxes).forEach((id) => {
-      const el = document.getElementById(id);
+    for (const id of Object.keys(data.checkboxes)) {
+      const $el = document.getElementById(id);
 
-      if (el) {
-        el.checked = true;
+      if ($el) {
+        $el.checked = true;
       }
-    });
+    }
 
-    // select fields
-    Object.keys(data.select).forEach((id) => {
-      const el = document.querySelector('#' + id + ' [value="' + data.select[id] + '"]');
+    // enum fields
+    for (const id of Object.keys(data.selects)) {
+      const $el = document.querySelector(`#${id} [value="${data.selects[id]}"]`);
 
-      if (el) {
-        el.selected = true;
+      if ($el) {
+        $el.selected = true;
       }
-    });
+    }
 
-    // text and url fields
-    Object.keys(data.input).forEach((id) => {
-      const el = document.getElementById(id);
+    // text fields
+    for (const id of Object.keys(data.inputs)) {
+      const $el = document.getElementById(id);
 
-      if (el) {
-        el.value = data.input[id] ?? null;
+      if ($el) {
+        $el.value = data.inputs[id] ?? null;
 
-        // remove validation hint, because it's guaranteed by the serializer that the element has a value
-        if (el.hasAttribute('data-mandatory')) {
-          el.classList.remove('mandatory-style');
-          el.parentNode.querySelector('.mandatory-label').classList.add('hidden');
+        // hide validation hint because it's guaranteed by the serializer that the element has a value
+        const validationHint = $el.parentElement.querySelector('[data-type=required]');
+        if (validationHint) {
+          validationHint.classList.add('hidden');
+          $el.classList.remove('invalid-input-style');
         }
       }
-    });
+    }
 
-    // textarea fields
-    Object.keys(data.textareas).forEach((id) => {
-      const el = document.getElementById(id);
-
-      if (el) {
-        el.value = data.textareas[id] ?? null;
-      }
-    });
-
-    // remove "hidden" state from enabled policies
-    [...document.querySelectorAll('.primary-checkbox')].forEach((el) => {
-      if (el.checked) {
-        const elSubOptions = el.parentNode.querySelectorAll('.sub-options, .extra-options');
-        if (elSubOptions.length > 0) {
-          [...elSubOptions].forEach((el) => {
-            el.classList.remove('disabled');
-          });
+    document.querySelectorAll('.policy-checkbox').forEach($el => {
+      // update the disabled state for policy options
+      const $options = $el.parentElement.querySelector(':scope > .options');
+      if ($options) {
+        if ($el.checked) {
+          $options.classList.remove('disabled');
         }
-
-        // set "excluded" state
-        const excludePolicy = el.getAttribute('data-exclude');
-        if (excludePolicy) {
-          excludePolicy.split(',').forEach((excludedPolicyName) => {
-            if (excludedPolicyName.includes('=')) {
-              const excludePolicyArray = excludedPolicyName.split('=');
-
-              // eslint-disable-next-line no-param-reassign
-              excludedPolicyName = excludePolicyArray[0];
-            }
-
-            const elExcludedPolicy = document.querySelector('[data-name="' + excludedPolicyName + '"]');
-            const elExcludedPolicyParent = elExcludedPolicy.parentNode;
-
-            elExcludedPolicy.setAttribute('disabled', 'disabled');
-            elExcludedPolicyParent.classList.add('excluded');
-          });
+        else {
+          $options.classList.add('disabled');
         }
       }
+
+      // update the excluded state for policies
+      if ($el.hasAttribute('data-exclude')) {
+        Configurator.handlePolicyExclusion($el);
+      }
     });
-  },
+  }
 
   /**
-   * Checks whether a policy is enabled or not.
+   * Checks whether a policy is enabled.
    *
-   * @param {HTMLElement} el - the DOM element of the policy to be checked
+   * @param {HTMLElement} $el - the DOM element of the policy to be checked
    *
-   * @returns {boolean} - whether the policy is enabled or not
+   * @returns {boolean} - whether the policy is enabled
    */
-  isPolicyEnabled (el) {
-    return el.closest('.policy-container').querySelector(':scope > .primary-checkbox').checked;
+  static #isPolicyEnabled ($el) {
+    return $el.closest('.policy-container').querySelector(':scope > .policy-checkbox').checked;
   }
-};
+}

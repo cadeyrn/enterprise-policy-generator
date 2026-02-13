@@ -1,6 +1,6 @@
 # Firefox Add-on: Enterprise Policy Generator
 
-<img src="src/images/logo-large.png" alt="Logo" width="790" border="0" />
+<img src="src/images/logo-large.webp" alt="Logo" width="450" border="0" />
 
 ## Support the development
 
@@ -37,8 +37,10 @@ higher is required for the latest version of Enterprise Policy Generator).**
 
 ### Shortcuts
 
-The interface can be accessed via the toolbar button or the keyboard. For this purpose the combination **Shift + F10** is
-reserved. Or you can open the interface via a menu entry in the tools menu.
+The interface can be accessed via the toolbar button or the keyboard. For this purpose the combination
+<kbd>Shift</kbd> + <kbd>F10</kbd> is reserved. Or you can open the interface via a menu entry in the "Tools" menu. You
+can use <kbd>Shift</kbd> + <kbd>F</kbd> to focus the filter field, and <kbd>Shift</kbd> + <kbd>G</kbd> to focus the
+button to generate the policies.
 
 ### Planned features
 
