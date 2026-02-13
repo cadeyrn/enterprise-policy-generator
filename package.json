@@ -29,7 +29,7 @@
     "eslint-plugin-jsdoc": "62.5.4",
     "eslint-plugin-sort-requires": "2.1.0",
     "eslint-plugin-xss": "0.1.12",
-    "stylelint": "17.2.0",
+    "stylelint": "17.3.0",
     "stylelint-order": "7.0.1",
     "web-ext": "9.3.0"
   },
