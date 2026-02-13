@@ -713,7 +713,7 @@
   "policy_description_ExtensionSettings_key": {
     "message": "ID расширения"
   },
-  "policy_description_ExtensionSettings_label_additional_items": {
+  "policy_description_ExtensionSettings_label_additional_item": {
     "message": "Конфигурация для всех расширений"
   },
   "policy_description_ExtensionSettings_label_items": {

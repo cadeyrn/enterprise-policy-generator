@@ -713,7 +713,7 @@
   "policy_description_ExtensionSettings_key": {
     "message": "Erweiterungs-ID"
   },
-  "policy_description_ExtensionSettings_label_additional_items": {
+  "policy_description_ExtensionSettings_label_additional_item": {
     "message": "Konfiguration für alle Erweiterungen"
   },
   "policy_description_ExtensionSettings_label_items": {

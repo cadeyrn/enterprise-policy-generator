@@ -713,7 +713,7 @@
   "policy_description_ExtensionSettings_key": {
     "message": "附加组件 ID"
   },
-  "policy_description_ExtensionSettings_label_additional_items": {
+  "policy_description_ExtensionSettings_label_additional_item": {
     "message": "针对所有附加组件的配置"
   },
   "policy_description_ExtensionSettings_label_items": {

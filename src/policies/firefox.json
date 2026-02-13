@@ -836,7 +836,7 @@
         ],
         "addition": {
           "schema": "object",
-          "label": "policy_description_ExtensionSettings_label_additional_items",
+          "label": "policy_description_ExtensionSettings_label_additional_item",
           "key": {
             "value": "*"
           },

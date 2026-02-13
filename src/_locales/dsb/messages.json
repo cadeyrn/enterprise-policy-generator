@@ -713,7 +713,7 @@
   "policy_description_ExtensionSettings_key": {
     "message": "Rozšyrjeński ID"
   },
-  "policy_description_ExtensionSettings_label_additional_items": {
+  "policy_description_ExtensionSettings_label_additional_item": {
     "message": "Konfiguracija za wšykne rozšyrjenja"
   },
   "policy_description_ExtensionSettings_label_items": {
