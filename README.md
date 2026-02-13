@@ -25,15 +25,15 @@ higher is required for the latest version of Enterprise Policy Generator).**
 
 ### Features
 
-- simply click together the desired Enterprise Policies
-- supports all policies which are supported by Firefox 60 and newer
+- click together the desired Enterprise Policies
+- supports all policies that are supported by Firefox 60 and newer
 - validation for mandatory fields and URLs
 - special marking of policies that only work with Firefox ESR
 - info links for some policies to get additional information
 - you can save any number of different configurations, load them at a later time (and of course delete them)
 - you can also export configurations and import them on other devices
-- if a policy requires a newer version than Firefox 60.0 or Firefox ESR 60.0 a notice is displayed
-- a filter field allows to search in the descriptions of the policies and in the internal policy names
+- if a policy requires a newer version than Firefox 60.0 or Firefox ESR 60.0, a notice is displayed
+- a filter field allows searching in the descriptions of the policies and in the internal policy names
 
 ### Shortcuts
 
@@ -67,8 +67,8 @@ No special permissions are needed to install and use Enterprise Policy Generator
 
 #### Optional Permissions
 
-This permission is not needed to install and use Enterprise Policy Generator but Enterprise Policy Generator will
-ask you at runtime once the following permissions is needed:
+This permission is not needed to install and use Enterprise Policy Generator, but Enterprise Policy Generator will
+ask you at runtime once the following permission is needed:
 
 ##### download files and read and modify the browser's download history
 
