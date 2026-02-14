@@ -622,7 +622,8 @@ class Configurator {
     // replace with CSS field-sizing once supported by Firefox
     if (object.textarea) {
       const borderSize = 4;
-      $input.addEventListener('input', () => {
+      Dom.addEventListener($input, 'input', e => {
+        const $input = e.target;
         $input.style.height = 'auto';
         $input.style.height = `${$input.scrollHeight + borderSize}px`;
       });
