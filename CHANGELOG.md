@@ -24,7 +24,7 @@
   new keyboard shortcuts have been introduced: You can use <kbd>Shift</kbd> + <kbd>F</kbd> to focus the filter field,
   and <kbd>Shift</kbd> + <kbd>G</kbd> to focus the button to generate the policies, see
   [#306](https://github.com/cadeyrn/enterprise-policy-generator/issues/306)
-- Added validation for fields that expect specific placeholder, see
+- Added validation for fields that expect a specific placeholder, see
   [#306](https://github.com/cadeyrn/enterprise-policy-generator/issues/306)
 
 #### Enterprise Policies
