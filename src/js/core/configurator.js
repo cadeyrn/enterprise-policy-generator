@@ -618,6 +618,16 @@ class Configurator {
       $input.setAttribute('type', 'text');
     }
 
+    // dynamically adjust the textarea height based on the length of the content,
+    // replace with CSS field-sizing once supported by Firefox
+    if (object.textarea) {
+      const borderSize = 4;
+      $input.addEventListener('input', () => {
+        $input.style.height = 'auto';
+        $input.style.height = `${$input.scrollHeight + borderSize}px`;
+      });
+    }
+
     // optional name
     if (object.name) {
       $input.setAttribute('data-name', object.name);

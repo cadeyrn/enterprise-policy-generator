@@ -29,6 +29,8 @@
 - The filter field can be used to find policies based on the top-level key and its description. From now on, the keys
   and descriptions of the respective options will also be searched, see
   [#358](https://github.com/cadeyrn/enterprise-policy-generator/issues/358)
+- The height of text areas (currently only used for `3rdparty` policy) now automatically increases and decreases
+  depending on the length of the content, see [#359](https://github.com/cadeyrn/enterprise-policy-generator/issues/359)
 
 #### Enterprise Policies
 
