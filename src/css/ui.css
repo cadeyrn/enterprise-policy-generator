@@ -1,5 +1,5 @@
 :root {
-  --border-radius-array: 6px;
+  --border-radius-box: 6px;
   --border-radius-control: 4px;
   --color-black: rgb(33, 37, 42);
   --color-blue: rgb(5, 116, 228);
@@ -473,7 +473,7 @@ input, textarea {
   padding: 15px;
   width: calc(100% - 60px);
   border: 1px solid rgb(215, 215, 215);
-  border-radius: var(--border-radius-array) 0 var(--border-radius-array) var(--border-radius-array);
+  border-radius: var(--border-radius-box) 0 var(--border-radius-box) var(--border-radius-box);
 
   &:has(> .boolean-wrapper) {
     margin: 0;
@@ -501,13 +501,13 @@ input, textarea {
 
     &[data-action='remove'] {
       top: -1px;
-      border-radius: 0 var(--border-radius-array) 0 0;
+      border-radius: 0 var(--border-radius-box) 0 0;
     }
 
     &[data-action='add'] {
       top: 29px;
       border-top: 0;
-      border-radius: 0 0 var(--border-radius-array) 0;
+      border-radius: 0 0 var(--border-radius-box) 0;
     }
 
     &.disabled-link {
@@ -889,7 +889,7 @@ dialog {
   gap: 30px;
   margin-top: 15px;
   padding: 15px;
-  border-radius: var(--border-radius-array);
+  border-radius: var(--border-radius-box);
   border: 1px solid var(--color-green);
   font-size: .9rem;
 
