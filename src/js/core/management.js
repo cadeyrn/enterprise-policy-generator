@@ -75,7 +75,7 @@ class Management {
 
     // save configuration by pressing Enter
     window.addEventListener('keydown', e => {
-      if (e.key === 'Enter') {
+      if ($saveConfigurationDialog.open && e.key === 'Enter') {
         e.preventDefault();
 
         if ($name.value) {
@@ -362,7 +362,7 @@ class Management {
 
     // import configuration by pressing Enter, close the dialog by pressing ESC
     window.addEventListener('keydown', e => {
-      if (e.key === 'Enter') {
+      if ($importConfigurationDialog.open && e.key === 'Enter') {
         e.preventDefault();
 
         if ($name.value && $fileInput.value) {
