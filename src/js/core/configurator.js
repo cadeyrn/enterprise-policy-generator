@@ -1312,14 +1312,14 @@ class Configurator {
   }
 
   /**
-   * Set or remove an attribute based on the content of the filter field.
+   * Show or hide polices based on the filter value.
    *
-   * @param {HTMLInputElement} filter - the input event
+   * @param {HTMLInputElement} $filter - the input element of the filter field
    *
    * @returns {void}
    */
-  static #applySearchFieldFilter (filter) {
-    const matcher = new RegExp(filter.value, 'i');
+  static #applySearchFieldFilter ($filter) {
+    const matcher = new RegExp($filter.value, 'i');
 
     document.querySelectorAll('.policy-container').forEach($policy => {
       $policy.querySelectorAll(':scope > label').forEach($label => {
@@ -1334,39 +1334,21 @@ class Configurator {
         else {
           $policy.querySelectorAll('.options [data-name]').forEach($el => {
             const name = $el.getAttribute('data-name');
-            const label = $policy.querySelector(`[for="${$el.id}"]`);
+            const $label = $policy.querySelector(`[for="${$el.id}"]`);
 
-            if (matcher.test(name) || matcher.test(label?.textContent)) {
+            if (matcher.test(name) || matcher.test($label?.textContent)) {
               hasMatch = true;
             }
           });
         }
 
         if (hasMatch) {
-          $policy.setAttribute('data-filtered', 'true');
+          $policy.classList.remove('hidden');
         }
         else {
-          $policy.removeAttribute('data-filtered');
+          $policy.classList.add('hidden');
         }
       });
-    });
-
-    Configurator.#showFilteredResult();
-  }
-
-  /**
-   * Show the filtered result.
-   *
-   * @returns {void}
-   */
-  static #showFilteredResult () {
-    document.querySelectorAll('.policy-container').forEach($policy => {
-      if ($policy.hasAttribute('data-filtered')) {
-        $policy.classList.remove('hidden');
-      }
-      else {
-        $policy.classList.add('hidden');
-      }
     });
   }
 }
