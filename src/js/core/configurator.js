@@ -135,7 +135,7 @@ class Configurator {
 
     // focus the "generate policies" button via keyboard shortcut
     window.addEventListener('keydown', e => {
-      if (e.shiftKey && e.key === 'G') {
+      if (e.shiftKey && e.key === 'G' && !['text', 'textarea', 'url'].includes(document.activeElement.type)) {
         $policyGeneratorButton.focus();
       }
     });
@@ -1292,7 +1292,8 @@ class Configurator {
     });
 
     window.addEventListener('keydown', e => {
-      if (e.shiftKey && e.key === 'F') {
+      if (e.shiftKey && e.key === 'F' && !['text', 'textarea', 'url'].includes(document.activeElement.type)) {
+        e.preventDefault();
         $filter.focus();
       }
       else if (e.key === 'Escape' && document.activeElement === $filter) {
