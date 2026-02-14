@@ -1322,10 +1322,27 @@ class Configurator {
     const matcher = new RegExp(filter.value, 'i');
 
     document.querySelectorAll('.policy-container').forEach($policy => {
-      $policy.querySelectorAll(':scope > label, :scope > .label').forEach($label => {
+      $policy.querySelectorAll(':scope > label').forEach($label => {
         const name = $policy.getAttribute('data-name');
+        let hasMatch = false;
 
-        if (matcher.test($label.textContent) || matcher.test(name)) {
+        // top level matches
+        if (matcher.test(name) || matcher.test($label.textContent)) {
+          hasMatch = true;
+        }
+        // search through the options
+        else {
+          $policy.querySelectorAll('.options [data-name]').forEach($el => {
+            const name = $el.getAttribute('data-name');
+            const label = $policy.querySelector(`[for="${$el.id}"]`);
+
+            if (matcher.test(name) || matcher.test(label?.textContent)) {
+              hasMatch = true;
+            }
+          });
+        }
+
+        if (hasMatch) {
           $policy.setAttribute('data-filtered', 'true');
         }
         else {

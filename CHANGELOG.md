@@ -26,6 +26,9 @@
   [#306](https://github.com/cadeyrn/enterprise-policy-generator/issues/306)
 - Added validation for fields that expect a specific placeholder, see
   [#306](https://github.com/cadeyrn/enterprise-policy-generator/issues/306)
+- The filter field can be used to find policies based on the top-level key and its description. From now on, the keys
+  and descriptions of the respective options will also be searched, see
+  [#358](https://github.com/cadeyrn/enterprise-policy-generator/issues/358)
 
 #### Enterprise Policies
 
