@@ -55,6 +55,7 @@ a, button {
 }
 
 .button {
+  display: inline-block;
   position: relative;
   padding: 8px 15px;
   transform: perspective(1px) translateZ(0);
@@ -79,9 +80,13 @@ a, button {
     transition-timing-function: ease-out;
   }
 
-  &:hover::before {
-    transform: scaleX(1);
-    transition-timing-function: cubic-bezier(.52, 1.64, .37, .66);
+  &:hover {
+    color: var(--color-white);
+
+    &::before {
+      transform: scaleX(1);
+      transition-timing-function: cubic-bezier(.52, 1.64, .37, .66);
+    }
   }
 }
 
@@ -878,6 +883,31 @@ dialog {
   animation-direction: reverse;
 }
 
+.promo-box {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: var(--border-radius-array);
+  border: 1px solid var(--color-green);
+  font-size: .9rem;
+
+  p {
+    margin: 0;
+  }
+
+  .button {
+    flex-shrink: 0;
+    border-color: var(--color-green);
+    background-color: var(--color-green);
+
+    &::before {
+      background: var(--color-green-dark);
+    }
+  }
+}
+
 @keyframes expand {
   20% {
     width: 36px;
@@ -1016,5 +1046,11 @@ dialog {
       padding-left: 0;
       background: none;
     }
+  }
+
+  .promo-box {
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
   }
 }

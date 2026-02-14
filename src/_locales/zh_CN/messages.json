@@ -1388,6 +1388,12 @@
   "policy_description_WindowsSSO": {
     "message": "Allow Windows single sign-on for Microsoft, work, and school accounts"
   },
+  "promo_box_button": {
+    "message": "Donate now"
+  },
+  "promo_box_text": {
+    "message": "The extension is free of charge. Your voluntary donation enables me to continue integrating new features and enterprise policies."
+  },
   "requirement_macOS": {
     "message": "works only on macOS"
   },

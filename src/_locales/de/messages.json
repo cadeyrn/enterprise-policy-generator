@@ -1388,6 +1388,12 @@
   "policy_description_WindowsSSO": {
     "message": "Windows Single Sign-On für Microsoft-, Arbeits- und Schulkonten zulassen"
   },
+  "promo_box_button": {
+    "message": "Jetzt spenden"
+  },
+  "promo_box_text": {
+    "message": "Die Erweiterung ist kostenlos. Ihre freiwillige Spende ermöglicht es, die Integration neuer Funktionen und Unternehmensrichtlinien fortzuführen."
+  },
   "requirement_macOS": {
     "message": "funktioniert nur auf macOS"
   },

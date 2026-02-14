@@ -1388,6 +1388,12 @@
   "policy_description_WindowsSSO": {
     "message": "Разрешить единый вход Windows для учётных записей Microsoft, учётных записей на работе и в учебных заведениях"
   },
+  "promo_box_button": {
+    "message": "Donate now"
+  },
+  "promo_box_text": {
+    "message": "The extension is free of charge. Your voluntary donation enables me to continue integrating new features and enterprise policies."
+  },
   "requirement_macOS": {
     "message": "работает только в macOS"
   },

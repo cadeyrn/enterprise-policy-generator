@@ -1388,6 +1388,12 @@
   "policy_description_WindowsSSO": {
     "message": "Windows Single Sign-On za konta Microsoft, dźěłowe konta a šulske konta dopušćić"
   },
+  "promo_box_button": {
+    "message": "Donate now"
+  },
+  "promo_box_text": {
+    "message": "The extension is free of charge. Your voluntary donation enables me to continue integrating new features and enterprise policies."
+  },
   "requirement_macOS": {
     "message": "funguje jenož na macOS"
   },
