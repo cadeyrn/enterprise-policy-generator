@@ -405,7 +405,7 @@ class Configurator {
 
     // add array action links
     if (object.items?.schema !== 'boolean') {
-      Configurator.#addArrayActionLinks($container, parentName);
+      Configurator.#addArrayActionButtons($container, parentName);
     }
 
     $wrapper.appendChild($container);
@@ -680,7 +680,7 @@ class Configurator {
    *
    * @returns {void}
    */
-  static #addArrayActionLinks ($container, parentName) {
+  static #addArrayActionButtons ($container, parentName) {
     // remove button
     const $removeButton = document.createElement('button');
     $removeButton.setAttribute('type', 'button');
