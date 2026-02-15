@@ -75,7 +75,11 @@
           </div>
           <div class="promo-box">
             <p data-i18n="promo_box_text"></p>
-            <a href="https://www.paypal.com/donate?token=0FMv1HFVhdNzPIPHwxFLdCxM9WcuQ_-Xb4v1Jmhr1Y5olXwg8CUBQ7ZPW3o175XNSNsCCu3IIXVRNmhm" class="button" target="_blank" rel="noopener" data-i18n="promo_box_button"></a>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="MKMVX68BGCHRW">
+              <button type="submit" class="button" data-i18n="promo_box_button"></button>
+            </form>
           </div>
         </section>
       </main>

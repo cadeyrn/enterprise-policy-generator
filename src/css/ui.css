@@ -897,8 +897,11 @@ dialog {
     margin: 0;
   }
 
-  .button {
+  form {
     flex-shrink: 0;
+  }
+
+  .button {
     border-color: var(--color-green);
     background-color: var(--color-green);
 
