@@ -746,14 +746,14 @@ class Configurator {
   static #addArrayItem ($el) {
     const $wrapper = $el.closest('.array-wrapper');
     const $container = $el.closest('.array-container');
-    const $removeBtn = $container.querySelector(':scope > [data-action="remove"]');
+    const $removeButton = $container.querySelector(':scope > [data-action="remove"]');
 
     // after adding a new array item, the remove button of the first one should no longer be disabled
-    if ($removeBtn.classList.contains('disabled-button')) {
-      $removeBtn.removeAttribute('aria-disabled');
-      $removeBtn.removeAttribute('tabindex');
-      $removeBtn.setAttribute('title', I18n.getMessage('title_remove_item'));
-      $removeBtn.classList.remove('disabled-button');
+    if ($removeButton.classList.contains('disabled-button')) {
+      $removeButton.removeAttribute('aria-disabled');
+      $removeButton.removeAttribute('tabindex');
+      $removeButton.setAttribute('title', I18n.getMessage('title_remove_item'));
+      $removeButton.classList.remove('disabled-button');
     }
 
     // clone the original array item
@@ -834,11 +834,11 @@ class Configurator {
 
     // disable the remove button for the last array item
     if ($containers.length === 1) {
-      const $removeBtn = $containers[0].querySelector(':scope > [data-action="remove"]');
-      $removeBtn.setAttribute('aria-disabled', 'true');
-      $removeBtn.setAttribute('tabindex', '-1');
-      $removeBtn.removeAttribute('title');
-      $removeBtn.classList.add('disabled-button');
+      const $removeButton = $containers[0].querySelector(':scope > [data-action="remove"]');
+      $removeButton.setAttribute('aria-disabled', 'true');
+      $removeButton.setAttribute('tabindex', '-1');
+      $removeButton.removeAttribute('title');
+      $removeButton.classList.add('disabled-button');
     }
 
     // set focus to the previous element, or the first one, if there is no previous element
