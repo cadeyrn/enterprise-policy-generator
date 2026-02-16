@@ -687,7 +687,7 @@ class Configurator {
     $removeButton.setAttribute('data-action', 'remove');
     $removeButton.setAttribute('aria-disabled', 'true');
     $removeButton.setAttribute('tabindex', '-1');
-    $removeButton.classList.add('array-action', 'disabled-link');
+    $removeButton.classList.add('array-action', 'disabled-button');
     $container.appendChild($removeButton);
 
     const $removeIcon = document.createElement('img');
@@ -749,11 +749,11 @@ class Configurator {
     const $removeBtn = $container.querySelector(':scope > [data-action="remove"]');
 
     // after adding a new array item, the remove button of the first one should no longer be disabled
-    if ($removeBtn.classList.contains('disabled-link')) {
+    if ($removeBtn.classList.contains('disabled-button')) {
       $removeBtn.removeAttribute('aria-disabled');
       $removeBtn.removeAttribute('tabindex');
       $removeBtn.setAttribute('title', I18n.getMessage('title_remove_item'));
-      $removeBtn.classList.remove('disabled-link');
+      $removeBtn.classList.remove('disabled-button');
     }
 
     // clone the original array item
@@ -810,7 +810,7 @@ class Configurator {
    */
   static #removeArrayItem ($el) {
     // skip for disabled buttons
-    if ($el.classList.contains('disabled-link')) {
+    if ($el.classList.contains('disabled-button')) {
       return;
     }
 
@@ -838,7 +838,7 @@ class Configurator {
       $removeBtn.setAttribute('aria-disabled', 'true');
       $removeBtn.setAttribute('tabindex', '-1');
       $removeBtn.removeAttribute('title');
-      $removeBtn.classList.add('disabled-link');
+      $removeBtn.classList.add('disabled-button');
     }
 
     // set focus to the previous element, or the first one, if there is no previous element

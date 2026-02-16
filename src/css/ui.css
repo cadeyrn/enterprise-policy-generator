@@ -510,7 +510,7 @@ input, textarea {
       border-radius: 0 0 var(--border-radius-box) 0;
     }
 
-    &.disabled-link {
+    &.disabled-button {
       cursor: not-allowed;
 
       img {
@@ -518,7 +518,7 @@ input, textarea {
       }
     }
 
-    &:not(.disabled-link) {
+    &:not(.disabled-button) {
       &:hover, &:focus-visible {
         background-color: rgb(235, 235, 235);
       }

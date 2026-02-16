@@ -75,7 +75,7 @@ class Serializer {
     document.getElementById('generator-form').reset();
 
     // remove all additional array items
-    document.querySelectorAll('[data-action="remove"]:not(.disabled-link)').forEach($el => {
+    document.querySelectorAll('[data-action="remove"]:not(.disabled-button)').forEach($el => {
       $el.click();
     });
 
