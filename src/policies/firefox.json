@@ -2504,7 +2504,11 @@
                       "name": "uriTemplate",
                       "schema": "string",
                       "placeholder": "policy_description_Handlers_property_handlers_uriTemplate",
-                      "validations": ["secure-url"]
+                      "validations": ["secure-url"],
+                      "regex": {
+                        "pattern": "%s",
+                        "error": "validation_missing_placeholder_s"
+                      }
                     }
                   ],
                   "allow_empty_value": true
@@ -2578,7 +2582,11 @@
                       "name": "uriTemplate",
                       "schema": "string",
                       "placeholder": "policy_description_Handlers_property_handlers_uriTemplate",
-                      "validations": ["secure-url"]
+                      "validations": ["secure-url"],
+                      "regex": {
+                        "pattern": "%s",
+                        "error": "validation_missing_placeholder_s"
+                      }
                     }
                   ],
                   "allow_empty_value": true
