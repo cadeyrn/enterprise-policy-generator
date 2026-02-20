@@ -610,7 +610,6 @@ class Configurator {
       $input.setAttribute('type', 'text');
       $input.setAttribute('inputmode', 'numeric');
       $input.setAttribute('pattern', '[0-9]*');
-      $input.setAttribute('min', '0');
 
       // number validation
       Configurator.#addInvalidLabel($wrapper, 'number', 'validation_invalid_number');
