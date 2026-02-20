@@ -2,7 +2,6 @@ import globals from 'globals';
 import html from '@html-eslint/eslint-plugin';
 import jsdoc from 'eslint-plugin-jsdoc';
 import json from '@eslint/json';
-import sortRequires from 'eslint-plugin-sort-requires';
 import stylistic from '@stylistic/eslint-plugin'
 import xss from 'eslint-plugin-xss';
 
@@ -11,7 +10,6 @@ export default [
     plugins: {
       '@stylistic': stylistic,
       jsdoc,
-      'sort-requires': sortRequires,
       xss
     },
     languageOptions: {
@@ -352,14 +350,13 @@ export default [
       'prefer-spread': 'error',
       'prefer-template': 'off',
       'preserve-caught-error': 'off',
-      'radix': ['error', 'as-needed'],
+      'radix': 'off',
       'require-atomic-updates': 'error',
       'require-await': 'error',
       'require-unicode-regexp': 'off',
       'require-yield': 'error',
       'sort-imports': 'error',
       'sort-keys': 'off',
-      'sort-requires/sort-requires': 'error',
       'sort-vars': 'error',
       'strict': ['error', 'global'],
       'symbol-description': 'error',
