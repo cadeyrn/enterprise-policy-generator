@@ -353,6 +353,7 @@ class Configurator {
    */
   static #addArrayProperty ($el, parentName, object) {
     const $wrapper = document.createElement('div');
+    $wrapper.setAttribute('role', 'list');
     $wrapper.classList.add('array-wrapper');
 
     // optional name
@@ -361,6 +362,7 @@ class Configurator {
     }
 
     const $container = document.createElement('div');
+    $container.setAttribute('role', 'listitem');
     $container.classList.add('array-container');
 
     // optional label
