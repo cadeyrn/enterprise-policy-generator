@@ -950,7 +950,7 @@ class Configurator {
    *
    * @param {HTMLElement} $container - the DOM element of the container
    * @param {string} label - text content
-   * @param {string|null} id - DOM id of the input element, used for the label's "for" attribute
+   * @param {?string} id - DOM id of the input element, used for the label's "for" attribute
    *
    * @returns {void}
    */

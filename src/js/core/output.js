@@ -207,7 +207,7 @@ class Output {
    *
    * @param {HTMLElement} $el - the DOM element of the object container
    *
-   * @returns {object|null} - the value for the field
+   * @returns {?object} - the value for the field
    */
   static #addObjectValue ($el) {
     const obj = {};
@@ -265,7 +265,7 @@ class Output {
    *
    * @param {HTMLInputElement} $el - the DOM element of the input field
    *
-   * @returns {string|null} - the value for the field
+   * @returns {?string} - the value for the field
    */
   static #addStringValue ($el) {
     const outputFilter = $el.getAttribute('data-output-filter');
