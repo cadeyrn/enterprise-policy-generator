@@ -15,11 +15,12 @@ class I18n {
    * Translate a message and return the translation key if no translation is available.
    *
    * @param {string} key - translation key
+   * @param {string|array<string>|null} substitutions - substitutions for placeholders in the translation
    *
    * @returns {string} - the translated message or the key if no translation is available
    */
-  static getMessage (key) {
-    const message = browser.i18n.getMessage(key);
+  static getMessage (key, substitutions = null) {
+    const message = browser.i18n.getMessage(key, substitutions);
 
     return message ? message : key;
   }
