@@ -15,7 +15,7 @@ class I18n {
    * Translate a message and return the translation key if no translation is available.
    *
    * @param {string} key - translation key
-   * @param {string|array<string>|null} substitutions - substitutions for placeholders in the translation
+   * @param {string|string[]|null} substitutions - substitutions for placeholders in the translation
    *
    * @returns {string} - the translated message or the key if no translation is available
    */
