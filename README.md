@@ -25,15 +25,16 @@ higher is required for the latest version of Enterprise Policy Generator).**
 
 ### Features
 
-- click together the desired Enterprise Policies
-- supports all policies that are supported by Firefox 60 and newer
-- validation for mandatory fields and URLs
-- special marking of policies that only work with Firefox ESR
-- info links for some policies to get additional information
-- you can save any number of different configurations, load them at a later time (and of course delete them)
-- you can also export configurations and import them on other devices
-- if a policy requires a newer version than Firefox 60.0 or Firefox ESR 60.0, a notice is displayed
-- a filter field allows searching in the descriptions of the policies and in the internal policy names
+- Configure all enterprise policies via an intuitive user interface
+- Validations for fields that expect specific values
+- Accessibility has been taken into account
+- Use via keyboard is possible
+- Marking of policies that require a newer Firefox version than the current ESR version
+- Shows additional information or links where appropriate
+- Drag and drop of values where multiple values are possible
+- Save configurations and load them at a later time
+- Export configurations and import them on other devices
+- A filter field allows searching in the policy names, options and descriptions
 
 ### Shortcuts
 
