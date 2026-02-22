@@ -7,7 +7,7 @@
 > [!IMPORTANT]
 > Important note for existing users: For technical reasons, it is not possible to load or import configurations that
 > were saved in earlier versions of the extensions into Enterprise Policy Generator 8.0 or higher. The following options
-> are available:
+> are available for you:
 > 
 > - Saved configurations must be recreated and saved in Enterprise Policy Generator 8.0 or higher. Compatibility with
 > future updates will be guaranteed again, as it has been in the past. This is a one-time incompatibility resulting
@@ -15,7 +15,7 @@
 > - It is understandable that you want to be sure that saved configurations will continue to work without an update
 > causing any extra work. I offer to create a new configuration file for Enterprise Policy Generator 8.0 based on your
 > previous configuration. All you need to do is [send me a message](https://www.soeren-hentzschel.at/kontakt/). I will
-> then contact you with a way to send me either your previous configuration file or policies.json, and I will send the
+> then contact you with a way to send me either your previous configuration or policies.json file, and I will send the
 > new configuration file back within a few days. If multiple configurations are affected, that's no problem. You can
 > send me all affected files.
 > - Use an older version: Enterprise Policy Generator up to and including version 7.3 supports loading and importing
