@@ -20,6 +20,7 @@ body {
   font-size: 1rem;
   background: var(--color-white);
   color: var(--color-black);
+  overflow: hidden;
 }
 
 h2, h3 {
