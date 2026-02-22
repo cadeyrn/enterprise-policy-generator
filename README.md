@@ -38,9 +38,14 @@ higher is required for the latest version of Enterprise Policy Generator).**
 ### Shortcuts
 
 The interface can be accessed via the toolbar button or the keyboard. For this purpose the combination
-<kbd>Shift</kbd> + <kbd>F10</kbd> is reserved. Or you can open the interface via a menu entry in the "Tools" menu. You
-can use <kbd>Shift</kbd> + <kbd>F</kbd> to focus the filter field, and <kbd>Shift</kbd> + <kbd>G</kbd> to focus the
+<kbd>Shift</kbd> + <kbd>F10</kbd> is reserved. Or you can open the interface via a menu entry in the "Tools" menu.
+
+You can use <kbd>Shift</kbd> + <kbd>F</kbd> to focus the filter field, and <kbd>Shift</kbd> + <kbd>G</kbd> to focus the
 button to generate the policies.
+
+Fields that allow multiple values can be moved using the keyboard: Press <kbd>Space</kbd> to pick up an item. Use
+<kbd>Arrow Up</kbd> and <kbd>Arrow Down</kbd> to move it. Press <kbd>Space</kbd> or <kbd>Enter</kbd> to drop. Press
+<kbd>Escape</kbd> to cancel.
 
 ### Planned features
 
