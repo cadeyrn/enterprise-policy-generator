@@ -16,8 +16,8 @@
 > causing any extra work. I offer to create a new configuration file for Enterprise Policy Generator 8.0 based on your
 > previous configuration. All you need to do is [send me a message](https://www.soeren-hentzschel.at/kontakt/). I will
 > then contact you with a way to send me either your previous configuration file or policies.json, and I will send the
-> new configuration back within a few days. If multiple configurations are affected, that's no problem. You can send me
-> all affected files.
+> new configuration file back within a few days. If multiple configurations are affected, that's no problem. You can
+> send me all affected files.
 > - Use an older version: Enterprise Policy Generator up to and including version 7.3 supports loading and importing
 > previous configurations and can still be used.
 
