@@ -703,10 +703,10 @@ class Configurator {
   static #addArrayActionButtons ($container, parentName) {
     // handle element
     const $handleButton = document.createElement('button');
-    const label = I18n.getMessage('array_sort_a11y_drag_handle_label');
+    const label = I18n.getMessage('array_sort_a11y_drag_handle_label', ['1']);
 
     $handleButton.setAttribute('type', 'button');
-    $handleButton.setAttribute('aria-label', label.replace('%idx', '1'));
+    $handleButton.setAttribute('aria-label', label);
     $handleButton.setAttribute('aria-disabled', 'true');
     $handleButton.setAttribute('tabindex', '-1');
     $handleButton.classList.add('sortable-handle', 'disabled');
