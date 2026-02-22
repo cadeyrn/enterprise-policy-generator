@@ -1,4 +1,22 @@
 {
+  "array_sort_a11y_drag_action_cancel": {
+    "message": "Reorder canceled for item $1"
+  },
+  "array_sort_a11y_drag_action_end": {
+    "message": "Dropped item at position $1 of $2"
+  },
+  "array_sort_a11y_drag_action_move": {
+    "message": "Moved item to position $1 of $2"
+  },
+  "array_sort_a11y_drag_action_start": {
+    "message": "Picked up item from position $1 of $2"
+  },
+  "array_sort_a11y_drag_handle_label": {
+    "message": "Drag to reorder item $1"
+  },
+  "array_sort_a11y_instructions": {
+    "message": "Press Space to pick up an item. Use Arrow Up and Arrow Down to move it. Press Space or Enter to drop. Press Escape to cancel."
+  },
   "common_domain": {
     "message": "Domain"
   },
@@ -1420,6 +1438,9 @@
   },
   "title_apply_configuration": {
     "message": "Charger configuration"
+  },
+  "title_move_item": {
+    "message": "move item"
   },
   "title_remove_configuration": {
     "message": "Supprimer la configuration"

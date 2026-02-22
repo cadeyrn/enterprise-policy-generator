@@ -1,4 +1,22 @@
 {
+  "array_sort_a11y_drag_action_cancel": {
+    "message": "Verschieben von Element $1 abgebrochen"
+  },
+  "array_sort_a11y_drag_action_end": {
+    "message": "Element auf Position $1 von $2 abgelegt"
+  },
+  "array_sort_a11y_drag_action_move": {
+    "message": "Element auf Position $1 von $2 bewegt"
+  },
+  "array_sort_a11y_drag_action_start": {
+    "message": "Element auf Position $1 von $2 aufgenommen"
+  },
+  "array_sort_a11y_drag_handle_label": {
+    "message": "Ziehen, um Element $1 zu verschieben"
+  },
+  "array_sort_a11y_instructions": {
+    "message": "Verwenden Sie die Pfeiltasten nach oben und unten, um ein Element aufzunehmen. Drücken Sie die Leertaste oder die Eingabetaste, um es abzulegen. Drücken Sie die Escape-Taste, um den Vorgang abzubrechen."
+  },
   "common_domain": {
     "message": "Domain"
   },
@@ -1420,6 +1438,9 @@
   },
   "title_apply_configuration": {
     "message": "Konfiguration laden"
+  },
+  "title_move_item": {
+    "message": "Eintrag verschieben"
   },
   "title_remove_configuration": {
     "message": "Konfiguration entfernen"

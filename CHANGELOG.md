@@ -17,13 +17,17 @@
   advantages include greater consistency in layout and fewer bugs in edge cases. The development workflow has also been
   updated, and a schema for validating the completely new JSON-based configuration has been introduced to simplify
   development. see [#306](https://github.com/cadeyrn/enterprise-policy-generator/issues/306)
-- Revised design, which is more modern and has also been optimized for smaller screen sizes. For content that can be
-  inserted multiple times, it is now much clearer which input field belongs to which item, see
+- Revised design, which is more modern and has also been optimized for smaller screen sizes. For fields that allow
+  multiple values, it is now much clearer which input field belongs to which item, see
   [#306](https://github.com/cadeyrn/enterprise-policy-generator/issues/306)
 - Significantly improved accessibility, including greatly improved keyboard navigation. As part of this, two completely
   new keyboard shortcuts have been introduced: You can use <kbd>Shift</kbd> + <kbd>F</kbd> to focus the filter field,
   and <kbd>Shift</kbd> + <kbd>G</kbd> to focus the button to generate the policies, see
   [#306](https://github.com/cadeyrn/enterprise-policy-generator/issues/306)
+- For fields that allow multiple values, these can now be moved using drag and drop. Control via keyboard is also
+  possible: Press <kbd>Space</kbd> to pick up an item. Use <kbd>Arrow Up</kbd> and <kbd>Arrow Down</kbd> to move it.
+  Press <kbd>Space</kbd> or <kbd>Enter</kbd> to drop. Press <kbd>Escape</kbd> to cancel, see
+  [#361](https://github.com/cadeyrn/enterprise-policy-generator/issues/361)
 - Added validation for fields that expect a specific placeholder, see
   [#306](https://github.com/cadeyrn/enterprise-policy-generator/issues/306)
 - The filter field can be used to find policies based on the top-level key and its description. From now on, the keys

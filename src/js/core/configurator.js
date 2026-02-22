@@ -1,6 +1,6 @@
 'use strict';
 
-/* global Dom, I18n, Output */
+/* global Dom, I18n, Output, Sortable */
 
 /** @type {browser.permissions.Permissions} */
 const DOWNLOAD_PERMISSION = { permissions: ['downloads'] };
@@ -356,6 +356,9 @@ class Configurator {
     $wrapper.setAttribute('role', 'list');
     $wrapper.classList.add('array-wrapper');
 
+    // sortable arrays
+    Configurator.#initSortable($wrapper);
+
     // optional name
     if (object.name) {
       $wrapper.setAttribute('data-name', object.name);
@@ -674,6 +677,22 @@ class Configurator {
   }
 
   /**
+   * Initializes a sortable interaction for the given array wrapper element.
+   *
+   * @param {HTMLElement} $wrapper - the wrapper element containing sortable items.
+   *
+   * @returns {void}
+   */
+  static #initSortable ($wrapper) {
+    new Sortable($wrapper, {
+      itemSelector: '.array-container',
+      onUpdate: () => {
+        Configurator.#updateArrayIndices($wrapper);
+      }
+    });
+  }
+
+  /**
    * Add remove and add buttons for arrays.
    *
    * @param {HTMLElement} $container - the DOM node of the container element
@@ -682,6 +701,17 @@ class Configurator {
    * @returns {void}
    */
   static #addArrayActionButtons ($container, parentName) {
+    // handle element
+    const $handleButton = document.createElement('button');
+    const label = I18n.getMessage('array_sort_a11y_drag_handle_label');
+
+    $handleButton.setAttribute('type', 'button');
+    $handleButton.setAttribute('aria-label', label.replace('%idx', '1'));
+    $handleButton.setAttribute('aria-disabled', 'true');
+    $handleButton.setAttribute('tabindex', '-1');
+    $handleButton.classList.add('sortable-handle', 'disabled');
+    $container.insertBefore($handleButton, $container.firstElementChild);
+
     // remove button
     const $removeButton = document.createElement('button');
     $removeButton.setAttribute('type', 'button');
@@ -747,7 +777,16 @@ class Configurator {
   static #addArrayItem ($el) {
     const $wrapper = $el.closest('.array-wrapper');
     const $container = $el.closest('.array-container');
+    const $handleButton = $container.querySelector(':scope > .sortable-handle');
     const $removeButton = $container.querySelector(':scope > [data-action="remove"]');
+
+    // after adding a new array item, the handle button of the first one should no longer be disabled
+    if ($handleButton.classList.contains('disabled')) {
+      $handleButton.removeAttribute('aria-disabled');
+      $handleButton.removeAttribute('tabindex');
+      $handleButton.setAttribute('title', I18n.getMessage('title_move_item'));
+      $handleButton.classList.remove('disabled');
+    }
 
     // after adding a new array item, the remove button of the first one should no longer be disabled
     if ($removeButton.classList.contains('disabled-button')) {
@@ -759,6 +798,7 @@ class Configurator {
 
     // clone the original array item
     const $addedNode = Dom.cloneNode($container);
+    const $nestedArrayWrappers = $addedNode.querySelectorAll('.array-wrapper');
 
     // for the cloned element, we do not want to have more than one item in subarrays by default
     $addedNode.querySelectorAll('.array-container:not(:first-child)').forEach($el => {
@@ -786,6 +826,11 @@ class Configurator {
 
       // dispatch input event to trigger validation
       $el.dispatchEvent(new Event('input'));
+    });
+
+    // sortable arrays
+    $nestedArrayWrappers.forEach($wrapper => {
+      Configurator.#initSortable($wrapper);
     });
 
     // add the cloned array item to the DOM
@@ -833,8 +878,15 @@ class Configurator {
 
     const $containers = $wrapper.querySelectorAll(':scope > .array-container');
 
-    // disable the remove button for the last array item
     if ($containers.length === 1) {
+      // disable the handle button for the last array item
+      const $handleButton = $containers[0].querySelector(':scope > .sortable-handle');
+      $handleButton.setAttribute('aria-disabled', 'true');
+      $handleButton.setAttribute('tabindex', '-1');
+      $handleButton.removeAttribute('title');
+      $handleButton.classList.add('disabled');
+
+      // disable the remove button for the last array item
       const $removeButton = $containers[0].querySelector(':scope > [data-action="remove"]');
       $removeButton.setAttribute('aria-disabled', 'true');
       $removeButton.setAttribute('tabindex', '-1');
@@ -865,6 +917,10 @@ class Configurator {
     const $containers = $wrapper.querySelectorAll(':scope > .array-container');
 
     $containers.forEach(($container, idx) => {
+      const $handleButton = $container.querySelector(':scope > .sortable-handle');
+      const label = I18n.getMessage('array_sort_a11y_drag_handle_label', (idx + 1).toString());
+      $handleButton.setAttribute('aria-label', label);
+
       $container.querySelectorAll(':scope > div > [id], :scope > div > div > [id]').forEach($el => {
         // update the index of the last occurrence
         $el.id = $el.id.replace(/(_array_)\d+(_)(?!.*\1)/, `$1${idx + 1}$2`);

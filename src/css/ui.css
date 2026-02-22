@@ -4,6 +4,7 @@
   --color-black: rgb(33, 37, 42);
   --color-blue: rgb(5, 116, 228);
   --color-blue-dark: rgb(0, 87, 191);
+  --color-blue-translucent: rgba(5, 116, 228, .1);
   --color-dark-border: rgb(54, 57, 89);
   --color-green: rgb(16, 138, 3);
   --color-green-dark: rgb(14, 117, 3);
@@ -467,6 +468,16 @@ input, textarea {
   }
 }
 
+.array-wrapper {
+  &:not(:has(> .array-container + .array-container)) {
+    > .array-container {
+      > .handle, > .object-wrapper > .handle {
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
 .array-container {
   position: relative;
   margin: 10px 0 5px;
@@ -532,10 +543,45 @@ input, textarea {
       pointer-events: none;
     }
   }
+
+  .array-wrapper {
+    padding-left: 15px;
+  }
 }
 
 .additional-item {
   margin-bottom: 30px;
+}
+
+.sortable-handle {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 30px;
+  height: 30px;
+  background-image: url('../images/drag-handler.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &.disabled {
+    cursor: not-allowed;
+  }
+
+  &[aria-pressed='true'] {
+    background-color: var(--color-blue-translucent);
+  }
+
+  &:focus-visible {
+    outline-offset: -6px;
+  }
+}
+
+.sortable-placeholder {
+  box-sizing: border-box;
+  margin: 10px 0 5px;
+  border: 2px dashed var(--color-blue);
+  border-radius: var(--border-radius-box);
+  background: var(--color-blue-translucent);
 }
 
 dialog {
