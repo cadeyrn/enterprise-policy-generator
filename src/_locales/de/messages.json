@@ -377,6 +377,114 @@
   "policy_description_Containers_name": {
     "message": "Name der Tab-Umgebung"
   },
+  "policy_description_ContentAnalysis": {
+    "message": "Verwenden Sie einen Agenten für Data Loss Prevention (DLP)"
+  },
+  "policy_description_ContentAnalysis_AgentName_label": {
+    "message": "Name des DLP-Agenten, in Dialogen und Benachrichtigungen verwendet"
+  },
+  "policy_description_ContentAnalysis_AgentName_placeholder": {
+    "message": "Standard: A DLP Agent"
+  },
+  "policy_description_ContentAnalysis_AgentTimeout_label": {
+    "message": "Zeitlimit in Sekunden nach dem Senden einer DLP-Anfrage an den Agenten"
+  },
+  "policy_description_ContentAnalysis_AgentTimeout_placeholder": {
+    "message": "Standard: 300"
+  },
+  "policy_description_ContentAnalysis_AllowUrlRegexList": {
+    "message": "Reguläre Ausdrücke, welche URLs angeben, für die DLP-Operationen immer ohne Rücksprache mit dem Agenten zulässig sind (Standard: ^about:(?!blank|srcdoc).*)"
+  },
+  "policy_description_ContentAnalysis_BypassForSameTabOperations": {
+    "message": "DLP-Anfragen, deren Daten aus demselben Tab und Frame stammen, automatisch zulassen"
+  },
+  "policy_description_ContentAnalysis_ClientSignature": {
+    "message": "Erforderliche Signatur des mit der Leitung verbundenen DLP-Agenten"
+  },
+  "policy_description_ContentAnalysis_DefaultResult": {
+    "message": "Verhalten bei DLP-Anfragen, wenn ein Problem bei der Verbindung zum DLP-Agenten auftritt"
+  },
+  "policy_description_ContentAnalysis_DefaultResult_0": {
+    "message": "Die Anfrage ablehnen (Standard)"
+  },
+  "policy_description_ContentAnalysis_DefaultResult_1": {
+    "message": "Den Benutzer warnen und ihm die Wahl lassen, ob er zustimmen oder ablehnen möchte"
+  },
+  "policy_description_ContentAnalysis_DefaultResult_2": {
+    "message": "Die Anfrage zulassen"
+  },
+  "policy_description_ContentAnalysis_DenyUrlRegexList": {
+    "message": "Reguläre Ausdrücke, welche URLs angeben, für die DLP-Operationen immer abgelehnt werden, ohne den Agenten zu konsultieren"
+  },
+  "policy_description_ContentAnalysis_Enabled": {
+    "message": "Data Loss Prevention aktivieren"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints": {
+    "message": "Einstellungen für bestimmte Abfangpunkte"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_Clipboard": {
+    "message": "Zwischenablage-Vorgänge für Dateien und Text"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_Clipboard_Enabled": {
+    "message": "Ob Zwischenablage-Vorgänge die DLP verwenden sollen"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_Clipboard_PlainTextOnly": {
+    "message": "Ob nur das text/plain-Format in der Zwischenablage analysiert werden soll"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_Download": {
+    "message": "Download-Vorgänge (Firefox 142+, Firefox ESR 140.2+)"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_Download_Enabled": {
+    "message": "Ob Download-Vorgänge die DLP verwenden sollen"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_DragAndDrop": {
+    "message": "Drag-and-Drop-Vorgänge für Dateien und Text"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_DragAndDrop_Enabled": {
+    "message": "Ob Drag-and-Drop-Vorgänge die DLP verwenden sollen"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_DragAndDrop_PlainTextOnly": {
+    "message": "Ob nur das text/plain-Format in dem, was abgelegt wird, analysiert werden soll"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_FileUpload": {
+    "message": "Datei-Upload-Vorgänge für Dateien, die aus dem Dateiauswahlfeld ausgewählt wurden"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_FileUpload_Enabled": {
+    "message": "Ob Datei-Upload-Vorgänge die DLP verwenden sollen"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_Print": {
+    "message": "Druck-Vorgänge"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_Print_Enabled": {
+    "message": "Ob Druckvorgänge die DLP verwenden sollten"
+  },
+  "policy_description_ContentAnalysis_IsPerUser": {
+    "message": "Ob die vom DLP-Agenten erstellte Leitung pro Benutzer oder pro System gilt"
+  },
+  "policy_description_ContentAnalysis_IsPerUser_per_system": {
+    "message": "pro System"
+  },
+  "policy_description_ContentAnalysis_IsPerUser_per_user": {
+    "message": "pro Benutzer (Standard)"
+  },
+  "policy_description_ContentAnalysis_MaxConnectionsCount_label": {
+    "message": "Maximale Anzahl an Verbindungen"
+  },
+  "policy_description_ContentAnalysis_MaxConnectionsCount_placeholder": {
+    "message": "Standard: 32"
+  },
+  "policy_description_ContentAnalysis_PipePathName_label": {
+    "message": "Name der vom DLP-Agenten erstellten Leitung, mit der Firefox eine Verbindung herstellt"
+  },
+  "policy_description_ContentAnalysis_PipePathName_placeholder": {
+    "message": "Standard: path_user"
+  },
+  "policy_description_ContentAnalysis_ShowBlockedResult": {
+    "message": "Benachrichtigung anzeigen, wenn eine DLP-Anfrage abgelehnt wird"
+  },
+  "policy_description_ContentAnalysis_TimeoutResult": {
+    "message": "Verhalten bei DLP-Anfragen, wenn der DLP-Agent nicht innerhalb der angegebenen Anzahl von Sekunden auf eine Anfrage reagiert"
+  },
   "policy_description_Cookies": {
     "message": "Webseiten erlauben oder verbieten, Cookies zu setzen"
   },

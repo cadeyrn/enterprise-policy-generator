@@ -40,6 +40,8 @@
 
 #### Enterprise Policies
 
+- Added support for the `ContentAnalysis` policy to configure the use of a Data Loss Prevention (DLP) solution, see
+  [#259](https://github.com/cadeyrn/enterprise-policy-generator/issues/259)
 - Options that used the legacy version of the `Preferences` policy have been removed. These can all be replaced by the
   newer `Preferences` policy, see [#306](https://github.com/cadeyrn/enterprise-policy-generator/issues/306)
 

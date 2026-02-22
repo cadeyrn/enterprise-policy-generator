@@ -2253,6 +2253,232 @@
         }
       ]
     },
+    "ContentAnalysis": {
+      "availability": { "mainstream": "137.0", "esr": "140.0" },
+      "tags": ["security"],
+      "schema": "object",
+      "properties": [
+        {
+          "name": "Enabled",
+          "label": "policy_description_ContentAnalysis_Enabled",
+          "schema": "enum",
+          "preset": "enable"
+        },
+        {
+          "name": "DefaultResult",
+          "label": "policy_description_ContentAnalysis_DefaultResult",
+          "schema": "enum",
+          "options": [
+            {
+              "label": "enum_value_no_preference",
+              "value": null
+            },
+            {
+              "label": "policy_description_ContentAnalysis_DefaultResult_0",
+              "value": 0
+            },
+            {
+              "label": "policy_description_ContentAnalysis_DefaultResult_1",
+              "value": 1
+            },
+            {
+              "label": "policy_description_ContentAnalysis_DefaultResult_2",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "name": "AgentTimeout",
+          "schema": "string",
+          "label": "policy_description_ContentAnalysis_AgentTimeout_label",
+          "placeholder": "policy_description_ContentAnalysis_AgentTimeout_placeholder",
+          "validations": ["number"]
+        },
+        {
+          "name": "TimeoutResult",
+          "label": "policy_description_ContentAnalysis_TimeoutResult",
+          "schema": "enum",
+          "options": [
+            {
+              "label": "enum_value_no_preference",
+              "value": null
+            },
+            {
+              "label": "policy_description_ContentAnalysis_DefaultResult_0",
+              "value": 0
+            },
+            {
+              "label": "policy_description_ContentAnalysis_DefaultResult_1",
+              "value": 1
+            },
+            {
+              "label": "policy_description_ContentAnalysis_DefaultResult_2",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "name": "BypassForSameTabOperations",
+          "label": "policy_description_ContentAnalysis_BypassForSameTabOperations",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "AllowUrlRegexList",
+          "label": "policy_description_ContentAnalysis_AllowUrlRegexList",
+          "schema": "array",
+          "items": {
+            "schema": "string",
+            "placeholder": "common_url",
+            "join": " "
+          }
+        },
+        {
+          "name": "DenyUrlRegexList",
+          "label": "policy_description_ContentAnalysis_DenyUrlRegexList",
+          "schema": "array",
+          "items": {
+            "schema": "string",
+            "placeholder": "common_url",
+            "join": " "
+          }
+        },
+        {
+          "name": "MaxConnectionsCount",
+          "schema": "string",
+          "label": "policy_description_ContentAnalysis_MaxConnectionsCount_label",
+          "placeholder": "policy_description_ContentAnalysis_MaxConnectionsCount_placeholder",
+          "validations": ["number"]
+        },
+        {
+          "name": "ShowBlockedResult",
+          "label": "policy_description_ContentAnalysis_ShowBlockedResult",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "AgentName",
+          "schema": "string",
+          "label": "policy_description_ContentAnalysis_AgentName_label",
+          "placeholder": "policy_description_ContentAnalysis_AgentName_placeholder"
+        },
+        {
+          "name": "ClientSignature",
+          "schema": "string",
+          "label": "policy_description_ContentAnalysis_ClientSignature",
+          "placeholder": "policy_description_ContentAnalysis_ClientSignature"
+        },
+        {
+          "name": "IsPerUser",
+          "label": "policy_description_ContentAnalysis_IsPerUser",
+          "schema": "enum",
+          "options": [
+            {
+              "label": "enum_value_no_preference",
+              "value": null
+            },
+            {
+              "label": "policy_description_ContentAnalysis_IsPerUser_per_user",
+              "value": true
+            },
+            {
+              "label": "policy_description_ContentAnalysis_IsPerUser_per_system",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "PipePathName",
+          "schema": "string",
+          "label": "policy_description_ContentAnalysis_PipePathName_label",
+          "placeholder": "policy_description_ContentAnalysis_PipePathName_placeholder"
+        },
+        {
+          "name": "InterceptionPoints",
+          "label": "policy_description_ContentAnalysis_InterceptionPoints",
+          "schema": "object",
+          "properties": [
+            {
+              "name": "Clipboard",
+              "label": "policy_description_ContentAnalysis_InterceptionPoints_Clipboard",
+              "schema": "object",
+              "properties": [
+                {
+                  "name": "Enabled",
+                  "label": "policy_description_ContentAnalysis_InterceptionPoints_Clipboard_Enabled",
+                  "schema": "enum",
+                  "preset": "boolean_optional"
+                },
+                {
+                  "name": "PlainTextOnly",
+                  "label": "policy_description_ContentAnalysis_InterceptionPoints_Clipboard_PlainTextOnly",
+                  "schema": "enum",
+                  "preset": "boolean_optional"
+                }
+              ]
+            },
+            {
+              "name": "Download",
+              "label": "policy_description_ContentAnalysis_InterceptionPoints_Download",
+              "schema": "object",
+              "properties": [
+                {
+                  "name": "Enabled",
+                  "label": "policy_description_ContentAnalysis_InterceptionPoints_Download_Enabled",
+                  "schema": "enum",
+                  "preset": "boolean_optional"
+                }
+              ]
+            },
+            {
+              "name": "DragAndDrop",
+              "label": "policy_description_ContentAnalysis_InterceptionPoints_DragAndDrop",
+              "schema": "object",
+              "properties": [
+                {
+                  "name": "Enabled",
+                  "label": "policy_description_ContentAnalysis_InterceptionPoints_DragAndDrop_Enabled",
+                  "schema": "enum",
+                  "preset": "boolean_optional"
+                },
+                {
+                  "name": "PlainTextOnly",
+                  "label": "policy_description_ContentAnalysis_InterceptionPoints_DragAndDrop_PlainTextOnly",
+                  "schema": "enum",
+                  "preset": "boolean_optional"
+                }
+              ]
+            },
+            {
+              "name": "FileUpload",
+              "label": "policy_description_ContentAnalysis_InterceptionPoints_FileUpload",
+              "schema": "object",
+              "properties": [
+                {
+                  "name": "Enabled",
+                  "label": "policy_description_ContentAnalysis_InterceptionPoints_FileUpload_Enabled",
+                  "schema": "enum",
+                  "preset": "boolean_optional"
+                }
+              ]
+            },
+            {
+              "name": "Print",
+              "label": "policy_description_ContentAnalysis_InterceptionPoints_Print",
+              "schema": "object",
+              "properties": [
+                {
+                  "name": "Enabled",
+                  "label": "policy_description_ContentAnalysis_InterceptionPoints_Print_Enabled",
+                  "schema": "enum",
+                  "preset": "boolean_optional"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     "DisableAppUpdate": {
       "availability": { "mainstream": "62.0", "esr": "60.0" },
       "tags": ["updates-and-data"],

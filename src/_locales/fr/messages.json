@@ -377,6 +377,108 @@
   "policy_description_Containers_name": {
     "message": "Name of the container"
   },
+  "policy_description_ContentAnalysis": {
+    "message": "Use an agent for Data Loss Prevention (DLP)"
+  },
+  "policy_description_ContentAnalysis_AgentName_label": {
+    "message": "Name of the DLP agent, used in dialogs and notifications"
+  },
+  "policy_description_ContentAnalysis_AgentName_placeholder": {
+    "message": "Default: A DLP Agent"
+  },
+  "policy_description_ContentAnalysis_AgentTimeout_label": {
+    "message": "Timeout in seconds after a DLP request is sent to the agent"
+  },
+  "policy_description_ContentAnalysis_AgentTimeout_placeholder": {
+    "message": "Default: 300"
+  },
+  "policy_description_ContentAnalysis_AllowUrlRegexList": {
+    "message": "Regular expressions that indicates URLs for which DLP operations will always be allowed without consulting the agent (Default: ^about:(?!blank|srcdoc).*)"
+  },
+  "policy_description_ContentAnalysis_BypassForSameTabOperations": {
+    "message": "Automatically allow DLP requests whose data comes from the same tab and frame"
+  },
+  "policy_description_ContentAnalysis_ClientSignature": {
+    "message": "Required signature of the DLP agent connected to the pipe"
+  },
+  "policy_description_ContentAnalysis_DefaultResult": {
+    "message": "Behavior for DLP requests if there is a problem connecting to the DLP agent"
+  },
+  "policy_description_ContentAnalysis_DefaultResult_0": {
+    "message": "Deny the request (Default)"
+  },
+  "policy_description_ContentAnalysis_DefaultResult_1": {
+    "message": "Warn the user and allow them to choose whether to allow or deny"
+  },
+  "policy_description_ContentAnalysis_DefaultResult_2": {
+    "message": "Allow the request"
+  },
+  "policy_description_ContentAnalysis_DenyUrlRegexList": {
+    "message": "Regular expressions that indicates URLs for which DLP operations will always be denied without consulting the agent"
+  },
+  "policy_description_ContentAnalysis_Enabled": {
+    "message": "Enable Data Loss Prevention"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints": {
+    "message": "Settings for specific interception points"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_Clipboard": {
+    "message": "Clipboard operations for files and text"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_Clipboard_Enabled": {
+    "message": "Whether clipboard operations should use the DLP"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_Clipboard_PlainTextOnly": {
+    "message": "Whether to only analyze the text/plain format on the clipboard"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_Download": {
+    "message": "Download operations (Firefox 142+, Firefox ESR 140.2+)"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_Download_Enabled": {
+    "message": "Whether download operations should use the DLP"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_DragAndDrop": {
+    "message": "Drag and drop operations for files and text"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_DragAndDrop_Enabled": {
+    "message": "Whether drag and drop operations should use the DLP"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_DragAndDrop_PlainTextOnly": {
+    "message": "Whether to only analyze the text/plain format in what is being dropped"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_FileUpload": {
+    "message": "File upload operations for files chosen from the file picker"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_FileUpload_Enabled": {
+    "message": "Whether file upload operations should use the DLP"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_Print": {
+    "message": "Print operations"
+  },
+  "policy_description_ContentAnalysis_InterceptionPoints_Print_Enabled": {
+    "message": "Whether print operations should use the DLP"
+  },
+  "policy_description_ContentAnalysis_IsPerUser": {
+    "message": "Whether the pipe the DLP agent has created is per-user or per-system"
+  },
+  "policy_description_ContentAnalysis_IsPerUser_per_system": {
+    "message": "per system"
+  },
+  "policy_description_ContentAnalysis_IsPerUser_per_user": {
+    "message": "per user (Default)"
+  },
+  "policy_description_ContentAnalysis_PipePathName_label": {
+    "message": "Name of the pipe the DLP agent has created and Firefox will connect to"
+  },
+  "policy_description_ContentAnalysis_PipePathName_placeholder": {
+    "message": "Default: path_user"
+  },
+  "policy_description_ContentAnalysis_ShowBlockedResult": {
+    "message": "Show a notification when a DLP request is denied"
+  },
+  "policy_description_ContentAnalysis_TimeoutResult": {
+    "message": "Behavior for DLP requests if the DLP agent does not respond to a request in less than the specified number of seconds"
+  },
   "policy_description_Cookies": {
     "message": "Autoriser ou refuser des sites Web à placer des cookies"
   },
