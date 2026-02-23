@@ -252,6 +252,34 @@ class Configurator {
       Configurator.#addInfoText($wrapper, I18n.getMessage(policy.note), 'warning');
     }
 
+    // info link
+    if (policy.link) {
+      Configurator.#addLink($wrapper, policy.link);
+    }
+
+    // options
+    Configurator.#addOptions(name, policy, $wrapper);
+
+    // add the element to the user interface
+    if (policy.tags[0]) {
+      Configurator.#uiCategoryElements[policy.tags[0]]?.appendChild($wrapper);
+    }
+  }
+
+  /**
+   * Add options for the policy.
+   *
+   * @param {string} name - the name of the policy
+   * @param {object} policy - the policy object
+   * @param {HTMLElement} $wrapper - the container element for the policy
+   *
+   * @returns {void}
+   */
+  static #addOptions (name, policy, $wrapper) {
+    const $options = document.createElement('div');
+    $options.classList.add('options', 'disabled');
+    $wrapper.appendChild($options);
+
     // versions info
     if (
       parseFloat(policy.availability.mainstream) > MINIMUM_SUPPORTED_VERSION ||
@@ -273,38 +301,8 @@ class Configurator {
         message += ' ' + I18n.getMessage('version_or_higher');
       }
 
-      Configurator.#addInfoText($wrapper, message, 'firefox');
+      Configurator.#addInfoText($options, message, 'firefox');
     }
-
-    // info link
-    if (policy.link) {
-      Configurator.#addLink($wrapper, policy.link);
-    }
-
-    // options for non-boolean policies
-    if (policy.schema !== 'boolean') {
-      Configurator.#addOptions(name, policy, $wrapper);
-    }
-
-    // add the element to the user interface
-    if (policy.tags[0]) {
-      Configurator.#uiCategoryElements[policy.tags[0]]?.appendChild($wrapper);
-    }
-  }
-
-  /**
-   * Add options for the policy.
-   *
-   * @param {string} name - the name of the policy
-   * @param {object} policy - the policy object
-   * @param {HTMLElement} $wrapper - the container element for the policy
-   *
-   * @returns {void}
-   */
-  static #addOptions (name, policy, $wrapper) {
-    const $options = document.createElement('div');
-    $options.classList.add('options', 'disabled');
-    $wrapper.appendChild($options);
 
     if (['array', 'enum', 'object', 'string'].includes(policy.schema)) {
       Configurator.#addProperty($options, name, policy);

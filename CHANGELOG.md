@@ -50,6 +50,8 @@
 - The filter field can be used to find policies based on the top-level key and its description. From now on, the keys
   and descriptions of the respective options will also be searched, see
   [#358](https://github.com/cadeyrn/enterprise-policy-generator/issues/358)
+- To avoid clutter in the user interface, information about required Firefox versions is now only displayed for enabled
+  policies, see [#363](https://github.com/cadeyrn/enterprise-policy-generator/issues/363)
 - The height of text areas (currently only used for `3rdparty` policy) now automatically increases and decreases
   depending on the length of the content, see [#359](https://github.com/cadeyrn/enterprise-policy-generator/issues/359)
 - Added a promo box to give users of the extension an easy way to support the development of this extension, see

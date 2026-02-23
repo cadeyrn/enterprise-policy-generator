@@ -229,7 +229,7 @@ input, textarea {
     padding-right: 30px;
   }
 
-  > .options {
+  > .options:not(:empty) {
     margin-top: 10px;
     margin-bottom: 15px;
 
