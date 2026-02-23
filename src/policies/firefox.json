@@ -2348,7 +2348,11 @@
           "schema": "string",
           "label": "policy_description_ContentAnalysis_MaxConnectionsCount_label",
           "placeholder": "policy_description_ContentAnalysis_MaxConnectionsCount_placeholder",
-          "validations": ["number"]
+          "validations": ["number"],
+          "regex": {
+            "pattern": "^(?:256|25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)$",
+            "error": "validation_invalid_number"
+          }
         },
         {
           "name": "ShowBlockedResult",
