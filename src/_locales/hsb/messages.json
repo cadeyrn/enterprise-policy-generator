@@ -471,7 +471,7 @@
     "message": "Maximum number of concurrent connections to the DLP agent"
   },
   "policy_description_ContentAnalysis_MaxConnectionsCount_placeholder": {
-    "message": "Default: 32"
+    "message": "Default: 32, Maximum: 256"
   },
   "policy_description_ContentAnalysis_PipePathName_label": {
     "message": "Name of the pipe the DLP agent has created and Firefox will connect to"

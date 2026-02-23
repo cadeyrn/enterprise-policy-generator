@@ -471,7 +471,7 @@
     "message": "Maximale Anzahl gleichzeitiger Verbindungen zum DLP-Agenten"
   },
   "policy_description_ContentAnalysis_MaxConnectionsCount_placeholder": {
-    "message": "Standard: 32"
+    "message": "Standard: 32, Maximum: 256"
   },
   "policy_description_ContentAnalysis_PipePathName_label": {
     "message": "Name der vom DLP-Agenten erstellten Leitung, mit der Firefox eine Verbindung herstellt"
