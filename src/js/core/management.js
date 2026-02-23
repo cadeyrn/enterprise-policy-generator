@@ -403,8 +403,8 @@ class Management {
 
       configurations.push(configuration);
 
-      // migrate old configuration files and set the schemaVersion to 1 to run all migrations
-      await browser.storage.local.set({ configurations: configurations, schemaVersion: 1 });
+      // migrate old configuration files
+      await browser.storage.local.set({ configurations: configurations, schema: 2, version: 1 });
       Migrator.migrate();
 
       $listConfigurationDialog.showModal();
