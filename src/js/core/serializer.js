@@ -48,7 +48,7 @@ class Serializer {
       }
       // enum fields
       else if ($el.type === 'select-one') {
-        if (Serializer.#isPolicyEnabled($el) && $el.value) {
+        if (Serializer.#isPolicyEnabled($el) && $el.value !== 'null') {
           data.selects[$el.id] = $el.value;
         }
       }
