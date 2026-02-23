@@ -407,6 +407,7 @@ class Management {
       await browser.storage.local.set({ configurations: configurations, schemaVersion: 1 });
       Migrator.migrate();
 
+      $listConfigurationDialog.showModal();
       Management.#listConfigurations();
     });
   }
