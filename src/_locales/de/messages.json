@@ -468,7 +468,7 @@
     "message": "pro Benutzer (Standard)"
   },
   "policy_description_ContentAnalysis_MaxConnectionsCount_label": {
-    "message": "Maximale Anzahl an Verbindungen"
+    "message": "Maximale Anzahl gleichzeitiger Verbindungen zum DLP-Agenten"
   },
   "policy_description_ContentAnalysis_MaxConnectionsCount_placeholder": {
     "message": "Standard: 32"
