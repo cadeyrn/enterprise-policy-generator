@@ -202,15 +202,6 @@ class Sortable {
     }
   }
 
-  /*
-  this.onPointerDownHandler = e => this.#onPointerDown(e);
-  this.onPointerMoveHandler = e => this.#onPointerMove(e);
-  this.onPointerUpHandler = e => this.#onPointerUp(e);
-  this.onKeyDownHandler = e => this.#onKeyDown(e);
-  this.onFocusInHandler = e => this.#onFocusIn(e);
-  this.renderDragHandler = () => this.#renderDrag();
-  */
-
   /**
    * Handle drag start for pointer interactions.
    *
