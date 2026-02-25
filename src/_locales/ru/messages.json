@@ -17,6 +17,9 @@
   "array_sort_a11y_instructions": {
     "message": "Press Space to pick up an item. Use Arrow Up and Arrow Down to move it. Press Space or Enter to drop. Press Escape to cancel."
   },
+  "common_dialog_btn_cancel": {
+    "message": "Отмена"
+  },
   "common_domain": {
     "message": "Домен"
   },
@@ -103,9 +106,6 @@
   },
   "link_select_all": {
     "message": "выбрать все"
-  },
-  "list_dialog_btn_cancel": {
-    "message": "Отмена"
   },
   "list_dialog_no_saved_configurations": {
     "message": "Конфигурация ещё не сохранена."
@@ -1528,9 +1528,6 @@
   },
   "requirement_windows_or_linux": {
     "message": "работает только в Windows и Linux"
-  },
-  "save_dialog_btn_cancel": {
-    "message": "Отмена"
   },
   "save_dialog_btn_ok": {
     "message": "Сохранить конфигурацию"

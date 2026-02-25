@@ -17,6 +17,9 @@
   "array_sort_a11y_instructions": {
     "message": "Verwenden Sie die Pfeiltasten nach oben und unten, um ein Element aufzunehmen. Drücken Sie die Leertaste oder die Eingabetaste, um es abzulegen. Drücken Sie die Escape-Taste, um den Vorgang abzubrechen."
   },
+  "common_dialog_btn_cancel": {
+    "message": "Abbrechen"
+  },
   "common_domain": {
     "message": "Domain"
   },
@@ -103,9 +106,6 @@
   },
   "link_select_all": {
     "message": "alles markieren"
-  },
-  "list_dialog_btn_cancel": {
-    "message": "Abbrechen"
   },
   "list_dialog_no_saved_configurations": {
     "message": "Es wurden noch keine Konfigurationen gespeichert."
@@ -1528,9 +1528,6 @@
   },
   "requirement_windows_or_linux": {
     "message": "funktioniert nur auf Windows und Linux"
-  },
-  "save_dialog_btn_cancel": {
-    "message": "Abbrechen"
   },
   "save_dialog_btn_ok": {
     "message": "Konfiguration speichern"

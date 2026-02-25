@@ -17,6 +17,9 @@
   "array_sort_a11y_instructions": {
     "message": "Press Space to pick up an item. Use Arrow Up and Arrow Down to move it. Press Space or Enter to drop. Press Escape to cancel."
   },
+  "common_dialog_btn_cancel": {
+    "message": "Přetorhnyć"
+  },
   "common_domain": {
     "message": "Domena"
   },
@@ -103,9 +106,6 @@
   },
   "link_select_all": {
     "message": "wšě markěrować"
-  },
-  "list_dialog_btn_cancel": {
-    "message": "Přetorhnyć"
   },
   "list_dialog_no_saved_configurations": {
     "message": "Konfiguracije hišće njejsu so składowali."
@@ -1528,9 +1528,6 @@
   },
   "requirement_windows_or_linux": {
     "message": "funguje jenož z Windows a Linux"
-  },
-  "save_dialog_btn_cancel": {
-    "message": "Přetorhnyć"
   },
   "save_dialog_btn_ok": {
     "message": "Konfiguraciju składować"
