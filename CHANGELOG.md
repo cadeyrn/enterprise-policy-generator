@@ -70,7 +70,7 @@
 - Updated eslint from version 9.39.2 to 10.0.2
 - Updated eslint/json from version 0.14.0 to 1.0.1
 - Updated eslint-plugin-jsdoc from version 61.4.1 to 62.7.1
-- Updated stylelint from version 17.0.0 to 17.3.0
+- Updated stylelint from version 17.0.0 to 17.4.0
 - Updated stylistic/eslint-plugin from version 5.7.1 to 5.9.0
 - Updated web-ext from version 9.2.0 to 9.3.0
 - Replaced htmllint and gulp-htmllint with html-eslint
