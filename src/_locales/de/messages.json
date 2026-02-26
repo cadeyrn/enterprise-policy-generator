@@ -722,9 +722,6 @@
   "policy_description_EnableTrackingProtection_Fingerprinting": {
     "message": "Bekannte Identifizierer (Fingerprinter) blockieren"
   },
-  "policy_description_EnableTrackingProtection_HarmfulAddon": {
-    "message": "Schädliche Erweiterungen blockieren (Firefox 147+)"
-  },
   "policy_description_EnableTrackingProtection_SuspectedFingerprinting": {
     "message": "Vermutete Identifizierer (Fingerprinter) blockieren (Firefox 142+, Firefox ESR 140.2+)"
   },

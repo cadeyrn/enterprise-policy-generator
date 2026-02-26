@@ -1609,12 +1609,6 @@
           "preset": "block_optional"
         },
         {
-          "name": "HarmfulAddon",
-          "label": "policy_description_EnableTrackingProtection_HarmfulAddon",
-          "schema": "enum",
-          "preset": "block_optional"
-        },
-        {
           "name": "BaselineExceptions",
           "label": "policy_description_EnableTrackingProtection_BaselineExceptions",
           "schema": "enum",
