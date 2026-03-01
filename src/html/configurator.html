@@ -84,7 +84,7 @@
         </section>
       </main>
       <footer id="footer">
-        <a href="https://www.soeren-hentzschel.at/firefox-webextensions/enterprise-policy-generator/?utm_campaign=webext&utm_term=enterprise" target="_blank" rel="noopener">
+        <a href="https://www.soeren-hentzschel.at/?utm_campaign=webext&utm_term=enterprise" target="_blank" rel="noopener">
           <span data-i18n="extension_name"></span> © 2026, soeren-hentzschel.at
         </a>
       </footer>
@@ -145,6 +145,23 @@
       <aside>
         <button type="button" id="button-import-config-cancel" class="button secondary-action" data-i18n="common_dialog_btn_cancel"></button>
         <button type="button" id="button-import-config-ok" class="button primary-action" data-i18n="configuration_import" disabled></button>
+      </aside>
+    </dialog>
+    <dialog id="incompatible-configuration-dialog" aria-labelledby="incompatible-configuration-dialog-header">
+      <header>
+        <div id="incompatible-configuration-dialog-header" data-i18n="configuration_incompatible"></div>
+      </header>
+      <div class="content text-only">
+        <p>This configuration uses an older data schema and therefore cannot be loaded. The following options are available for you:</p>
+        <ul>
+          <li>The configuration must be recreated and saved in a current version of Enterprise Policy Generator.</li>
+          <li>Get in touch and receive a migrated version of your configuration free of charge.</li>
+          <li>You can still load your configuration in older versions of Enterprise Policy Generator.</li>
+        </ul>
+      </div>
+      <aside>
+        <button type="button" id="button-incompatible-config-cancel" class="button secondary-action" data-i18n="common_dialog_btn_cancel"></button>
+        <button type="button" id="button-incompatible-config-ok" class="button primary-action" data-i18n="incompatible_dialog_btn_get_in_touch"></button>
       </aside>
     </dialog>
     <script src="../js/lib/i18n.js"></script>
