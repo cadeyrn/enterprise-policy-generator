@@ -30,7 +30,7 @@
     "eslint-plugin-xss": "0.1.12",
     "stylelint": "17.4.0",
     "stylelint-order": "7.0.1",
-    "web-ext": "9.3.0"
+    "web-ext": "9.4.0"
   },
   "scripts": {
     "build": "web-ext build --source-dir ./src --artifacts-dir ./dist --filename {name}-{version}.xpi --overwrite-dest",
