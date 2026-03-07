@@ -92,6 +92,9 @@
   "generate_headline": {
     "message": "Auswahl der Richtlinien"
   },
+  "link_copy_to_clipboard": {
+    "message": "in die Zwischenablage kopieren"
+  },
   "link_download": {
     "message": "policies.json herunterladen"
   },
@@ -103,9 +106,6 @@
   },
   "link_save_configuration": {
     "message": "Konfiguration speichern"
-  },
-  "link_select_all": {
-    "message": "alles markieren"
   },
   "list_dialog_no_saved_configurations": {
     "message": "Es wurden noch keine Konfigurationen gespeichert."

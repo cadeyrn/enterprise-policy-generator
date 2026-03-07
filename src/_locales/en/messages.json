@@ -92,6 +92,9 @@
   "generate_headline": {
     "message": "Policies selection"
   },
+  "link_copy_to_clipboard": {
+    "message": "copy to clipboard"
+  },
   "link_download": {
     "message": "download policies.json"
   },
@@ -103,9 +106,6 @@
   },
   "link_save_configuration": {
     "message": "save configuration"
-  },
-  "link_select_all": {
-    "message": "select all"
   },
   "list_dialog_no_saved_configurations": {
     "message": "No configurations have been saved yet."

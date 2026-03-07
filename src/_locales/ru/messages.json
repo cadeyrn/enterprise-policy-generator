@@ -92,6 +92,9 @@
   "generate_headline": {
     "message": "Выбор политик"
   },
+  "link_copy_to_clipboard": {
+    "message": "copy to clipboard"
+  },
   "link_download": {
     "message": "загрузить policies.json"
   },
@@ -103,9 +106,6 @@
   },
   "link_save_configuration": {
     "message": "сохранить конфигурацию"
-  },
-  "link_select_all": {
-    "message": "выбрать все"
   },
   "list_dialog_no_saved_configurations": {
     "message": "Конфигурация ещё не сохранена."

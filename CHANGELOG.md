@@ -54,6 +54,8 @@
   policies, see [#363](https://github.com/cadeyrn/enterprise-policy-generator/issues/363)
 - The height of text areas (currently only used for `3rdparty` policy) now automatically increases and decreases
   depending on the length of the content, see [#359](https://github.com/cadeyrn/enterprise-policy-generator/issues/359)
+- The button for selecting the generated code now copies it directly to the clipboard, see
+  [#364](https://github.com/cadeyrn/enterprise-policy-generator/issues/364)
 - Added a promo box to give users of the extension an easy way to support the development of this extension, see
   [#360](https://github.com/cadeyrn/enterprise-policy-generator/issues/360)
 

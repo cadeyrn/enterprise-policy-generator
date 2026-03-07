@@ -17,7 +17,7 @@ const $generatorForm = document.getElementById('generator-form');
 const $grantDownloadPermissionLink = document.getElementById('grant-download-permission');
 const $policyGeneratorButton = document.getElementById('generate');
 const $policyOutput = document.getElementById('policy-output');
-const $selectAllLink = document.getElementById('select-all');
+const $copyToClipboardButton = document.getElementById('copy-to-clipboard');
 
 class Configurator {
   /**
@@ -140,13 +140,17 @@ class Configurator {
       }
     });
 
-    // add the event listener for the "select all" button
-    $selectAllLink.addEventListener('click', () => {
+    // add the event listener for the "copy to clipboard" button
+    $copyToClipboardButton.addEventListener('click', () => {
+      // select code
       const selection = window.getSelection();
       const range = document.createRange();
       range.selectNodeContents($policyOutput);
       selection.removeAllRanges();
       selection.addRange(range);
+
+      // copy code to clipboard
+      navigator.clipboard.writeText($policyOutput.innerText);
     });
 
     // add the event listener for the "download policies.json" button if downloads permission is not granted

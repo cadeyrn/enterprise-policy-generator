@@ -92,6 +92,9 @@
   "generate_headline": {
     "message": "Wuběrk směrnicow"
   },
+  "link_copy_to_clipboard": {
+    "message": "copy to clipboard"
+  },
   "link_download": {
     "message": "policies.json ześěgnuś"
   },
@@ -103,9 +106,6 @@
   },
   "link_save_configuration": {
     "message": "Konfiguraciju składowaś"
-  },
-  "link_select_all": {
-    "message": "wšykne markěrowaś"
   },
   "list_dialog_no_saved_configurations": {
     "message": "Hyšći žedne konfiguracije skłaźone."

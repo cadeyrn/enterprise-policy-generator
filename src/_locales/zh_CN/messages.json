@@ -92,6 +92,9 @@
   "generate_headline": {
     "message": "Policies selection"
   },
+  "link_copy_to_clipboard": {
+    "message": "copy to clipboard"
+  },
   "link_download": {
     "message": "下载 policies.json"
   },
@@ -103,9 +106,6 @@
   },
   "link_save_configuration": {
     "message": "保存配置"
-  },
-  "link_select_all": {
-    "message": "全选"
   },
   "list_dialog_no_saved_configurations": {
     "message": "尚未保存任何配置。"
