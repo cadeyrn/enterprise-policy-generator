@@ -50,8 +50,8 @@
 - The filter field can be used to find policies based on the top-level key and its description. From now on, the keys
   and descriptions of the respective options will also be searched, see
   [#358](https://github.com/cadeyrn/enterprise-policy-generator/issues/358)
-- To avoid clutter in the user interface, information about required Firefox versions is now only displayed for enabled
-  policies, see [#363](https://github.com/cadeyrn/enterprise-policy-generator/issues/363)
+- To avoid clutter in the user interface, information like the required Firefox version, additional notes, or links are
+  now only displayed for enabled policies, see [#363](https://github.com/cadeyrn/enterprise-policy-generator/issues/363)
 - The height of text areas (currently only used for `3rdparty` policy) now automatically increases and decreases
   depending on the length of the content, see [#359](https://github.com/cadeyrn/enterprise-policy-generator/issues/359)
 - The button for selecting the generated code now copies it directly to the clipboard, see
@@ -456,8 +456,8 @@
 - Added SponsoredTopSites and SponsoredPocket options to FirefoxHome policy, removed Snippets option (also from existing
   configurations), updated order and translations of all options to reflect the current order and naming in Firefox, see
   [#236](https://github.com/cadeyrn/enterprise-policy-generator/issues/236)
-- Added Behavior and BehaviorPrivateBrowsing options to Cookies policy, removed Default, AcceptThirdParty and
-  RejectTracker options, migrated them to Behavior option in existing configurations and made ExpireAtSessionEnd option
+- Added Behavior and BehaviorPrivateBrowsing options to Cookies policy, removed Default, AcceptThirdParty, and
+  RejectTracker options, migrated them to Behavior option in existing configurations, and made ExpireAtSessionEnd option
   optional, see [#234](https://github.com/cadeyrn/enterprise-policy-generator/issues/234)
 - Added support for PasswordManagerExceptions policy to prevent Firefox from saving passwords for specific sites, see
   [#238](https://github.com/cadeyrn/enterprise-policy-generator/issues/238)
@@ -1043,7 +1043,7 @@
   [#36](https://github.com/cadeyrn/enterprise-policy-generator/issues/36)
 - policy to set the default location of the search bar is also available from Firefox 62, see
   [#36](https://github.com/cadeyrn/enterprise-policy-generator/issues/36)
-- policy to install, uninstall or lock extensions is also available from Firefox 62, see
+- policy to install, uninstall, or lock extensions is also available from Firefox 62, see
   [#36](https://github.com/cadeyrn/enterprise-policy-generator/issues/36)
 - policy to block websites from being visited is also available from Firefox 62, see
   [#36](https://github.com/cadeyrn/enterprise-policy-generator/issues/36)
@@ -1129,7 +1129,7 @@
 
 #### Enterprise Policies
 
-- new policy to configure permissions for location, camera, microphone and notifications (Firefox 62+, Firefox ESR 60.2+), fixes
+- new policy to configure permissions for location, camera, microphone, and notifications (Firefox 62+, Firefox ESR 60.2+), fixes
   [#18](https://github.com/cadeyrn/enterprise-policy-generator/issues/18)
 - new policy to set a different server URL for Firefox updates (Firefox 63+), fixes
   [#29](https://github.com/cadeyrn/enterprise-policy-generator/issues/29)
@@ -1145,7 +1145,7 @@
   [#25](https://github.com/cadeyrn/enterprise-policy-generator/issues/25)
 - policy to set the default location of the search bar is no longer ESR only and is also available from Firefox 63, see
   [#25](https://github.com/cadeyrn/enterprise-policy-generator/issues/25)
-- policy to install, uninstall or lock extensions is no longer ESR only and is also available from Firefox 63, see
+- policy to install, uninstall, or lock extensions is no longer ESR only and is also available from Firefox 63, see
   [#25](https://github.com/cadeyrn/enterprise-policy-generator/issues/25)
 - policy to block websites from being visited is no longer ESR only and is also available from Firefox 63, see
   [#25](https://github.com/cadeyrn/enterprise-policy-generator/issues/25)

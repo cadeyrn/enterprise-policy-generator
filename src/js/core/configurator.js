@@ -246,21 +246,6 @@ class Configurator {
     $label.textContent = I18n.getMessage('policy_description_' + name);
     $wrapper.appendChild($label);
 
-    // deprecation note
-    if (policy.deprecation) {
-      Configurator.#addInfoText($wrapper, I18n.getMessage(policy.deprecation), 'warning');
-    }
-
-    // additional note
-    if (policy.note) {
-      Configurator.#addInfoText($wrapper, I18n.getMessage(policy.note), 'warning');
-    }
-
-    // info link
-    if (policy.link) {
-      Configurator.#addLink($wrapper, policy.link);
-    }
-
     // options
     Configurator.#addOptions(name, policy, $wrapper);
 
@@ -306,6 +291,21 @@ class Configurator {
       }
 
       Configurator.#addInfoText($options, message, 'firefox');
+    }
+
+    // deprecation note
+    if (policy.deprecation) {
+      Configurator.#addInfoText($options, I18n.getMessage(policy.deprecation), 'warning');
+    }
+
+    // additional note
+    if (policy.note) {
+      Configurator.#addInfoText($options, I18n.getMessage(policy.note), 'warning');
+    }
+
+    // info link
+    if (policy.link) {
+      Configurator.#addLink($options, policy.link);
     }
 
     if (['array', 'enum', 'object', 'string'].includes(policy.schema)) {
