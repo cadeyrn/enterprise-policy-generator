@@ -34,7 +34,7 @@
           <p data-i18n="explanation_about_policies"></p>
           <button type="button" id="generate" class="button" data-i18n="generate_button" aria-keyshortcuts="Shift+G"></button>
           <pre id="policy-output-wrapper"><code id="policy-output"></code></pre>
-          <div id="action-links" class="hidden">
+          <div id="action-links" class="action-links hidden">
             <div>
               <button type="button" id="select-all" class="icon">
                 <img src="../images/mouse-pointer.svg" width="20" height="20" alt="">
@@ -61,17 +61,19 @@
             </div>
           </div>
           <hr>
-          <div>
-            <button type="button" id="list-configurations" class="icon">
-              <img src="../images/cog.svg" width="20" height="20" alt="">
-              <span data-i18n="link_load_configuration"></span>
-            </button>
-          </div>
-          <div>
-            <button type="button" id="import-configuration" class="icon">
-              <img src="../images/export.svg" width="20" height="20" alt="">
-              <span data-i18n="configuration_import"></span>
-            </button>
+          <div class="action-links">
+            <div>
+              <button type="button" id="list-configurations" class="icon">
+                <img src="../images/cog.svg" width="20" height="20" alt="">
+                <span data-i18n="link_load_configuration"></span>
+              </button>
+            </div>
+            <div>
+              <button type="button" id="import-configuration" class="icon">
+                <img src="../images/export.svg" width="20" height="20" alt="">
+                <span data-i18n="configuration_import"></span>
+              </button>
+            </div>
           </div>
           <div class="promo-box">
             <p data-i18n="promo_box_text"></p>

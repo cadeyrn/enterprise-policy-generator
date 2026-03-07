@@ -31,10 +31,9 @@ h2, h3 {
 a {
   color: var(--color-blue);
   text-decoration: none;
-  transition: color ease 250ms;
 
   &:hover {
-    color: var(--color-blue-dark);
+    text-decoration: underline;
   }
 }
 
@@ -466,6 +465,10 @@ input, textarea {
       background: url('../images/unlocked.svg') center center / 18px 18px no-repeat transparent;
       cursor: pointer;
     }
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -709,8 +712,16 @@ dialog {
   }
 }
 
-#action-links .icon {
-  margin-bottom: 5px;
+.action-links {
+  .icon {
+    margin-bottom: 5px;
+
+    &:hover {
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 .file-input-wrapper {
