@@ -25,7 +25,7 @@
     "@html-eslint/eslint-plugin": "0.58.1",
     "@sourcemeta/jsonschema": "14.14.2",
     "@stylistic/eslint-plugin": "5.10.0",
-    "eslint": "10.0.2",
+    "eslint": "10.0.3",
     "eslint-plugin-jsdoc": "62.7.1",
     "eslint-plugin-xss": "0.1.12",
     "stylelint": "17.4.0",
