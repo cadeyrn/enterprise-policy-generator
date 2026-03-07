@@ -226,7 +226,7 @@ class Management {
       $iconColumn.appendChild($loadButton);
 
       const $loadIcon = document.createElement('img');
-      $loadIcon.src = '/images/check-square.svg';
+      $loadIcon.src = `/images/checkmark.svg`;
       $loadIcon.width = 18;
       $loadIcon.height = 18;
       $loadIcon.alt = I18n.getMessage('title_apply_configuration');

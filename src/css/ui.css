@@ -416,7 +416,7 @@ input, textarea {
   padding-left: 25px;
   max-width: calc(100% - 30px);
   font-size: .8rem;
-  color: rgba(19, 69, 99, .8);
+  color: rgb(78, 105, 128);
 
   img {
     position: absolute;

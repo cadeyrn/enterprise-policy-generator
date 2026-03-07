@@ -248,7 +248,7 @@ class Configurator {
 
     // deprecation note
     if (policy.deprecation) {
-      Configurator.#addInfoText($wrapper, I18n.getMessage(policy.deprecation), 'deprecated');
+      Configurator.#addInfoText($wrapper, I18n.getMessage(policy.deprecation), 'warning');
     }
 
     // additional note
