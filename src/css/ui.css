@@ -604,7 +604,7 @@ dialog {
   max-width: 90%;
   max-height: 90vh;
   border-width: 0;
-  border-radius: 5px;
+  border-radius: var(--border-radius-box);
   transform: scale(.7);
   background-color: var(--color-white);
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .3);
