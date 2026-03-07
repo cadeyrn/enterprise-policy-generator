@@ -588,6 +588,12 @@ input, textarea {
   background: var(--color-blue-translucent);
 }
 
+#policy-output-wrapper:has(code:not(:empty)) {
+  padding: 15px;
+  border-radius: var(--border-radius-box);
+  border: 1px solid var(--color-separator);
+}
+
 dialog {
   padding: 0;
   width: 550px;
