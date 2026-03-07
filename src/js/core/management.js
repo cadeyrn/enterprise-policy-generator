@@ -14,11 +14,11 @@ const $saveConfigurationDialog = document.getElementById('save-configuration-dia
 
 class Management {
   /**
-   * Store the previous dialog that was open before the current dialog was closed
+   * Store the previous dialog that was open before the current dialog was closed.
    *
-   * @type {?HTMLDialogElement}
+   * @type {HTMLDialogElement}
    */
-  static previousDialog = null;
+  static previousDialog;
 
   /**
    * Set up the event listeners for the configuration management buttons.
