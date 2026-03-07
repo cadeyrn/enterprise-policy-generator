@@ -35,6 +35,24 @@
   "configuration_import": {
     "message": "Konfiguration importieren"
   },
+  "configuration_incompatible_btn_get_in_touch": {
+    "message": "Migrierte Konfiguration erhalten"
+  },
+  "configuration_incompatible_bullet_1": {
+    "message": "Die Konfiguration muss neu erstellt und gespeichert werden."
+  },
+  "configuration_incompatible_bullet_2": {
+    "message": "Nehmen Sie Kontakt auf und erhalten Sie eine migrierte Version Ihrer Konfiguration, sodass Sie die Konfiguration nicht selbst neu erstellen müssen – natürlich völlig kostenlos."
+  },
+  "configuration_incompatible_bullet_3": {
+    "message": "Sie können Ihre aktuelle Konfiguration weiterhin in älteren Versionen von Enterprise Policy Generator laden."
+  },
+  "configuration_incompatible_intro": {
+    "message": "Diese Konfiguration verwendet ein älteres Datenschema und kann daher nicht geladen werden. Ihnen stehen folgende Optionen zur Verfügung:"
+  },
+  "configuration_incompatible_title": {
+    "message": "Konfiguration nicht kompatibel"
+  },
   "enum_value_block_no": {
     "message": "nicht blockieren"
   },

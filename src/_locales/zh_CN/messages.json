@@ -35,6 +35,24 @@
   "configuration_import": {
     "message": "导入配置"
   },
+  "configuration_incompatible_btn_get_in_touch": {
+    "message": "Get migrated configuration"
+  },
+  "configuration_incompatible_bullet_1": {
+    "message": "The configuration must be recreated and saved."
+  },
+  "configuration_incompatible_bullet_2": {
+    "message": "Get in touch and receive a migrated version of your configuration so that you don't have to recreate it yourself – completely free of charge, of course."
+  },
+  "configuration_incompatible_bullet_3": {
+    "message": "You can still load your current configuration in older versions of Enterprise Policy Generator."
+  },
+  "configuration_incompatible_intro": {
+    "message": "This configuration uses an older data schema and therefore cannot be loaded. The following options are available for you:"
+  },
+  "configuration_incompatible_title": {
+    "message": "Configuration not compatible"
+  },
   "enum_value_block_no": {
     "message": "不屏蔽"
   },

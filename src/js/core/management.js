@@ -5,6 +5,7 @@
 const $configurationTable = document.getElementById('list-configurations-table');
 const $importConfigurationButton = document.getElementById('import-configuration');
 const $importConfigurationDialog = document.getElementById('import-configuration-dialog');
+const $incompatibleConfigurationDialog = document.getElementById('incompatible-configuration-dialog');
 const $listConfigurationsButton = document.getElementById('list-configurations');
 const $listConfigurationDialog = document.getElementById('configuration-list-dialog');
 const $noSavedConfigurations = document.getElementById('no-saved-configurations');
@@ -12,6 +13,13 @@ const $saveConfigurationButton = document.getElementById('save-configuration');
 const $saveConfigurationDialog = document.getElementById('save-configuration-dialog');
 
 class Management {
+  /**
+   * Store the previous dialog that was open before the current dialog was closed
+   *
+   * @type {?HTMLDialogElement}
+   */
+  static previousDialog = null;
+
   /**
    * Set up the event listeners for the configuration management buttons.
    *
@@ -21,6 +29,7 @@ class Management {
     Management.#setupSaveConfigurationDialog();
     Management.#setupListConfigurationsDialog();
     Management.#setupImportConfigurationDialog();
+    Management.#setupIncompatibleConfigurationDialog();
 
     $saveConfigurationButton.addEventListener('click', () => {
       $saveConfigurationDialog.showModal();
@@ -222,11 +231,21 @@ class Management {
       $loadButton.setAttribute('title', I18n.getMessage('title_apply_configuration'));
       $loadButton.setAttribute('data-idx', idx.toString());
       $loadButton.classList.add('icon');
-      $loadButton.addEventListener('click', Management.#applyConfiguration);
       $iconColumn.appendChild($loadButton);
 
+      if (configuration.schema) {
+        $loadButton.addEventListener('click', Management.#applyConfiguration);
+      }
+      else {
+        $loadButton.addEventListener('click', () => {
+          Management.previousDialog = $listConfigurationDialog;
+          $listConfigurationDialog.close();
+          $incompatibleConfigurationDialog.showModal();
+        });
+      }
+
       const $loadIcon = document.createElement('img');
-      $loadIcon.src = `/images/checkmark.svg`;
+      $loadIcon.src = `/images/${configuration.schema ? 'checkmark' : 'warning'}.svg`;
       $loadIcon.width = 18;
       $loadIcon.height = 18;
       $loadIcon.alt = I18n.getMessage('title_apply_configuration');
@@ -394,11 +413,20 @@ class Management {
     reader.addEventListener('loadend', async () => {
       const { configurations } = await browser.storage.local.get({ configurations: [] });
       const file = reader.result.toString();
+      const data = JSON.parse(window.atob(file));
+
+      // configurations saved before EPG 8.0 did not have the schema key, and we don't want to import them
+      if (!data.schema) {
+        Management.previousDialog = $importConfigurationDialog;
+        $incompatibleConfigurationDialog.showModal();
+
+        return;
+      }
 
       const configuration = {
         name: name,
         time: new Date(),
-        configuration: JSON.parse(window.atob(file)).configuration
+        configuration: data.configuration
       };
 
       configurations.push(configuration);
@@ -409,6 +437,29 @@ class Management {
 
       $listConfigurationDialog.showModal();
       Management.#listConfigurations();
+    });
+  }
+
+  /**
+   * Set up the event listeners for the "incompatible configuration" dialog.
+   *
+   * @returns {void}
+   */
+  static #setupIncompatibleConfigurationDialog () {
+    const $submitButton = $incompatibleConfigurationDialog.querySelector('#button-incompatible-config-ok');
+    const $closeButton = $incompatibleConfigurationDialog.querySelector('#button-incompatible-config-cancel');
+
+    $submitButton.addEventListener('click', () => {
+      window.open('https://www.soeren-hentzschel.at/kontakt/?utm_campaign=webext&utm_term=enterprise-migration', '_blank');
+    });
+
+    $incompatibleConfigurationDialog.addEventListener('close', () => {
+      Management.previousDialog.showModal();
+    });
+
+    // close the dialog by clicking the cancel button
+    $closeButton.addEventListener('click', () => {
+      $incompatibleConfigurationDialog.close();
     });
   }
 }

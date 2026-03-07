@@ -629,6 +629,26 @@ dialog {
   .content {
     padding: 30px 15px;
 
+    &.text-only {
+      :first-child {
+        margin-top: 0;
+      }
+
+      :last-child {
+        margin-bottom: 0;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      li {
+        + li {
+          margin-top: 5px;
+        }
+      }
+    }
+
     label {
       display: block;
       margin-bottom: 5px;
