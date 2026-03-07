@@ -233,6 +233,7 @@ class Management {
       $loadButton.classList.add('icon');
       $iconColumn.appendChild($loadButton);
 
+      // configurations saved before EPG 8.0 did not have the schema key and are not compatible
       if (configuration.schema) {
         $loadButton.addEventListener('click', Management.#applyConfiguration);
       }
