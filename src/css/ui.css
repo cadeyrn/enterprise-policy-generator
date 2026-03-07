@@ -14,6 +14,10 @@
   --color-white: rgb(255, 255, 255);
 }
 
+::selection {
+  background: var(--color-blue-translucent);
+}
+
 body {
   margin: 0;
   font-family: Verdana, sans-serif;
