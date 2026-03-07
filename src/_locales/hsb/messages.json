@@ -1,21 +1,21 @@
 {
   "array_sort_a11y_drag_action_cancel": {
-    "message": "Reorder canceled for item $1"
+    "message": "Přesunjenje elementa $1 přetorhnjene"
   },
   "array_sort_a11y_drag_action_end": {
-    "message": "Dropped item at position $1 of $2"
+    "message": "Element na poziciji $1 z $2 wotkładźeny"
   },
   "array_sort_a11y_drag_action_move": {
-    "message": "Moved item to position $1 of $2"
+    "message": "Element na poziciju $1 z $2 přesunjony"
   },
   "array_sort_a11y_drag_action_start": {
-    "message": "Picked up item from position $1 of $2"
+    "message": "Element na pozicji $1 z $2 přiwzaty"
   },
   "array_sort_a11y_drag_handle_label": {
-    "message": "Drag to reorder item $1"
+    "message": "Ćahnyć, zo by so element $1 přesunył"
   },
   "array_sort_a11y_instructions": {
-    "message": "Press Space to pick up an item. Use Arrow Up and Arrow Down to move it. Press Space or Enter to drop. Press Escape to cancel."
+    "message": "Wužiwajće šipkowej tasće horje a dele, zo byšće element přiwzał. Tłóčće prózdnu tastu abo zapodawansku tastu, zo byšće jón wotkładł. Tłóčće tastu Esc, zo byšće proces přetorhnył."
   },
   "common_dialog_btn_cancel": {
     "message": "Přetorhnyć"
@@ -36,22 +36,22 @@
     "message": "konfiguraciju importować"
   },
   "configuration_incompatible_btn_get_in_touch": {
-    "message": "Get migrated configuration"
+    "message": "Migrowanu konfiguraciju dóstać"
   },
   "configuration_incompatible_bullet_1": {
-    "message": "The configuration must be recreated and saved."
+    "message": "Konfiguracija dyrbi so znowa wutworić a składować."
   },
   "configuration_incompatible_bullet_2": {
-    "message": "Get in touch and receive a migrated version of your configuration so that you don't have to recreate it yourself – completely free of charge, of course."
+    "message": "Skontaktujće so a dóstańće migrowanu wersiju swojeje konfiguracije, zo njebyšće dyrbjał konfiguraciju sam wutworić – wězo zadarmo."
   },
   "configuration_incompatible_bullet_3": {
-    "message": "You can still load your current configuration in older versions of Enterprise Policy Generator."
+    "message": "Móžeće swoju aktualnu konfiguraciju dale w staršich wersijach Enterprise Policy Generator začitać."
   },
   "configuration_incompatible_intro": {
-    "message": "This configuration uses an older data schema and therefore cannot be loaded. The following options are available for you:"
+    "message": "Tuta konfiguracija staršu datowu šemu wužiwa a njeda so začitać. Su wam slědowace móžnosće k dispozicji:"
   },
   "configuration_incompatible_title": {
-    "message": "Configuration not compatible"
+    "message": "Konfiguracija kompatibelna njeje"
   },
   "enum_value_block_no": {
     "message": "njeblokować"
@@ -111,7 +111,7 @@
     "message": "Wuběr směrnicow"
   },
   "link_copy_to_clipboard": {
-    "message": "copy to clipboard"
+    "message": "Do mjezyskłada kopěrować"
   },
   "link_download": {
     "message": "policies.json sćahnyć"
@@ -132,7 +132,7 @@
     "message": "Konfiguaraciju začitać"
   },
   "list_table_actions": {
-    "message": "Actions"
+    "message": "Akcije"
   },
   "list_table_name": {
     "message": "Mjeno"
@@ -195,7 +195,7 @@
     "message": "Tomu zadźěwać, zo so Firefox wyše podateje wersije aktualizuje"
   },
   "policy_description_AppUpdatePin_label": {
-    "message": "If only a major version (“xxx”) is specified, only minor and patch updates will be installed. If a major plus minor version (“xxx.xx”) is specified, only patch updates will be installed."
+    "message": "Při podawanju jenož wersije Major („xxx“) so jenož aktualizacije Minor a Patch instaluja. Při podawanju wersije Major z wersiju Minor („xxx.xx“) so jenož aktualizacije Patch instaluja."
   },
   "policy_description_AppUpdatePin_placeholder": {
     "message": "Wersija Firefox (wočakowana: „xxx“ abo „xxx.xx“)"
@@ -396,112 +396,112 @@
     "message": "Mjeno rajtarkoweje wokoliny"
   },
   "policy_description_ContentAnalysis": {
-    "message": "Use an agent for Data Loss Prevention (DLP)"
+    "message": "Wužiwajće agenta za Data Loss Prevention (DLP)"
   },
   "policy_description_ContentAnalysis_AgentName_label": {
-    "message": "Name of the DLP agent, used in dialogs and notifications"
+    "message": "Mjeno agenta DLP, wužiwa so w dialogach a zdźělenkach"
   },
   "policy_description_ContentAnalysis_AgentName_placeholder": {
-    "message": "Default: A DLP Agent"
+    "message": "Standard: Agent DLP"
   },
   "policy_description_ContentAnalysis_AgentTimeout_label": {
-    "message": "Timeout in seconds after a DLP request is sent to the agent"
+    "message": "Časowy limit w sekundach po słanju naprašowanja DLP na agenta"
   },
   "policy_description_ContentAnalysis_AgentTimeout_placeholder": {
-    "message": "Default: 300"
+    "message": "Standard: 300"
   },
   "policy_description_ContentAnalysis_AllowUrlRegexList": {
-    "message": "Regular expressions that indicates URLs for which DLP operations will always be allowed without consulting the agent (Default: ^about:(?!blank|srcdoc).*)"
+    "message": "Regularne wurazy, kotrež URL podawaja, za kotrež operacije DLP su přeco dowolene bjez dorěčenja z agentom (standard: ^about:(?!blank|srcdoc).*)"
   },
   "policy_description_ContentAnalysis_BypassForSameTabOperations": {
-    "message": "Automatically allow DLP requests whose data comes from the same tab and frame"
+    "message": "Naprašowanja DLP awtomatisce dowolić, kotrychž daty ze samsneho rajtarka a wobłuka pochadźeja"
   },
   "policy_description_ContentAnalysis_ClientSignature": {
-    "message": "Required signature of the DLP agent connected to the pipe"
+    "message": "Trěbna signatura agenta DLP, kotryž je z wodom zwjazany"
   },
   "policy_description_ContentAnalysis_DefaultResult": {
-    "message": "Behavior for DLP requests if there is a problem connecting to the DLP agent"
+    "message": "Zadźerženje při naprašowanjach DLP, hdyž problem při zwjazowanju z agentom DLP wustupuje"
   },
   "policy_description_ContentAnalysis_DefaultResult_0": {
-    "message": "Deny the request (Default)"
+    "message": "Naprašowanje wotpokazać (standard)"
   },
   "policy_description_ContentAnalysis_DefaultResult_1": {
-    "message": "Warn the user and allow them to choose whether to allow or deny"
+    "message": "Wužiwarja warnować a jemu wólbu dać, hač chce přihłosować abo wotpokazać"
   },
   "policy_description_ContentAnalysis_DefaultResult_2": {
-    "message": "Allow the request"
+    "message": "Naprašowanje dowolić"
   },
   "policy_description_ContentAnalysis_DenyUrlRegexList": {
-    "message": "Regular expressions that indicates URLs for which DLP operations will always be denied without consulting the agent"
+    "message": "Regularne wurazy, kotrež URL podawaja, za kotrež so operacije DLP přeco wotpokazuja, bjeztoho zo by agenta konsultowało"
   },
   "policy_description_ContentAnalysis_Enabled": {
-    "message": "Enable Data Loss Prevention"
+    "message": "Data Loss Prevention aktiwizować"
   },
   "policy_description_ContentAnalysis_InterceptionPoints": {
-    "message": "Settings for specific interception points"
+    "message": "Nastajenja za wěste wotpopadnjenske dypki"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_Clipboard": {
-    "message": "Clipboard operations for files and text"
+    "message": "Procesy mjezyskłada za dataje a tekst"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_Clipboard_Enabled": {
-    "message": "Whether clipboard operations should use the DLP"
+    "message": "Hač maja procesy mjezyskłada DLP wužiwać"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_Clipboard_PlainTextOnly": {
-    "message": "Whether to only analyze the text/plain format on the clipboard"
+    "message": "Hač ma so jenož format text/plain w mjezyskładźe analyzować"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_Download": {
-    "message": "Download operations (Firefox 142+, Firefox ESR 140.2+)"
+    "message": "Sćehnjenske procesy (Firefox 142+, Firefox ESR 140.2+)"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_Download_Enabled": {
-    "message": "Whether download operations should use the DLP"
+    "message": "Hač maja sćehnjenske procesy DLP wužiwać"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_DragAndDrop": {
-    "message": "Drag and drop operations for files and text"
+    "message": "Procesy ćehnjenja a pušćenja za dataje a tekst"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_DragAndDrop_Enabled": {
-    "message": "Whether drag and drop operations should use the DLP"
+    "message": "Hač maja procesy ćehnjenja a pušćenja DLP wužiwać"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_DragAndDrop_PlainTextOnly": {
-    "message": "Whether to only analyze the text/plain format in what is being dropped"
+    "message": "Hač so ma jenož format w tym analyzować, štož so wotkładuje"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_FileUpload": {
-    "message": "File upload operations for files chosen from the file picker"
+    "message": "Nahrawanske procesy datajow za dataje, kotrež su so z pola za wuběranje datajow wubrali"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_FileUpload_Enabled": {
-    "message": "Whether file upload operations should use the DLP"
+    "message": "Hač maja nahrawanske procesy datajow DLP wužiwać"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_Print": {
-    "message": "Print operations"
+    "message": "Ćišćerske procesy"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_Print_Enabled": {
-    "message": "Whether print operations should use the DLP"
+    "message": "Hač maja ćišćerske procesy DLP wužiwać"
   },
   "policy_description_ContentAnalysis_IsPerUser": {
-    "message": "Whether the pipe the DLP agent has created is per-user or per-system"
+    "message": "Hač wód, kotryž je so wot agenta DLP wutworił, za wužiwarja abo za system płaći"
   },
   "policy_description_ContentAnalysis_IsPerUser_per_system": {
-    "message": "per system"
+    "message": "za System"
   },
   "policy_description_ContentAnalysis_IsPerUser_per_user": {
-    "message": "per user (Default)"
+    "message": "za wužiwarja (standard)"
   },
   "policy_description_ContentAnalysis_MaxConnectionsCount_label": {
-    "message": "Maximum number of concurrent connections to the DLP agent"
+    "message": "Maksimalna ličba runočasnych zwiskow z agentom DLP"
   },
   "policy_description_ContentAnalysis_MaxConnectionsCount_placeholder": {
-    "message": "Default: 32, Maximum: 256"
+    "message": "Standard: 32, maksimum: 256"
   },
   "policy_description_ContentAnalysis_PipePathName_label": {
-    "message": "Name of the pipe the DLP agent has created and Firefox will connect to"
+    "message": "Mjeno wodu, z kotrymž Firefox nawjazuje, kotryž jo wot agenta DLP wutworjeny, "
   },
   "policy_description_ContentAnalysis_PipePathName_placeholder": {
-    "message": "Default: path_user"
+    "message": "Standard: path_user"
   },
   "policy_description_ContentAnalysis_ShowBlockedResult": {
-    "message": "Show a notification when a DLP request is denied"
+    "message": "Zdźělenku pokazać, hdyž so naprašowanje DLP wotpokazuje"
   },
   "policy_description_ContentAnalysis_TimeoutResult": {
-    "message": "Behavior for DLP requests if the DLP agent does not respond to a request in less than the specified number of seconds"
+    "message": "Zadźerženje při naprašowanjach DLP, hdyž agent DLP w běhu podateje ličby sekundow na naprašowanje njereaguje"
   },
   "policy_description_Cookies": {
     "message": "Webstronam dowolić abo zakazać, placki stajić"
@@ -1530,10 +1530,10 @@
     "message": "Windows Single Sign-On za konta Microsoft, dźěłowe konta a šulske konta dopušćić"
   },
   "promo_box_button": {
-    "message": "Donate now"
+    "message": "Nětko darić"
   },
   "promo_box_text": {
-    "message": "The extension is free of charge. Your voluntary donation enables me to continue integrating new features and enterprise policies."
+    "message": "Rozšěrjenje je dermotne. Waš dobrowólny dar zmóžnja, integraciju nowych funkcijow a předewzaćelskich směrnicow dale wjesć."
   },
   "requirement_macOS": {
     "message": "funguje jenož na macOS"
@@ -1554,25 +1554,25 @@
     "message": "Konfiguraciju składować"
   },
   "title_add_item": {
-    "message": "add item"
+    "message": "Zapisk přidać"
   },
   "title_apply_configuration": {
     "message": "Konfiguaraciju začitać"
   },
   "title_move_item": {
-    "message": "move item"
+    "message": "Zapisk přesunyć"
   },
   "title_remove_configuration": {
     "message": "Konfiguraciju wotstronić"
   },
   "title_remove_item": {
-    "message": "remove item"
+    "message": "Zapisk wotstronić"
   },
   "validation_invalid_json": {
     "message": "njepłaćiwy JSON"
   },
   "validation_invalid_number": {
-    "message": "invalid number"
+    "message": "njepłaćiwa ličba"
   },
   "validation_invalid_url": {
     "message": "njepłaćiwy URL"
@@ -1581,10 +1581,10 @@
     "message": "njepłaćiwe wersijowe podaće"
   },
   "validation_missing_placeholder_s": {
-    "message": "Placeholder “%s” missing"
+    "message": "Zastupowacy sybmol „%s” faluje"
   },
   "validation_missing_placeholder_searchterms": {
-    "message": "Placeholder “{searchterms}” missing"
+    "message": "Zastupowacy symbol „{searchterms}” faluje"
   },
   "validation_required": {
     "message": "obligatoriski"
