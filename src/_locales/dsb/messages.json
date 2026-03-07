@@ -761,30 +761,6 @@
   "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_file_extension": {
     "message": "Datajowa kóńcowka"
   },
-  "policy_description_Extensions": {
-    "message": "Rozšyrjenja instalěrowaś, wótinstalěrowaś abo zastajiś"
-  },
-  "policy_description_Extensions_Deprecated": {
-    "message": "Zestarjony. Pšawidło pód tym ma se wužywaś."
-  },
-  "policy_description_Extensions_Install": {
-    "message": "Dodanki instalěrowaś. Móžośo URL abo sćažki pódaś."
-  },
-  "policy_description_Extensions_Install_URL_or_Path": {
-    "message": "URL abo sćažka"
-  },
-  "policy_description_Extensions_Locked": {
-    "message": "Zastajone rozšyrjenja njedaju se daniž znjemóžniś daniž wótinstalěrowaś. Pódajśo pšosym ID."
-  },
-  "policy_description_Extensions_Locked_ID": {
-    "message": "ID dodanka"
-  },
-  "policy_description_Extensions_Uninstall": {
-    "message": "Dodanki wótinstalěrowaś. Pódajśo pšosym ID dodanka."
-  },
-  "policy_description_Extensions_Uninstall_ID": {
-    "message": "ID dodanka"
-  },
   "policy_description_ExtensionSettings": {
     "message": "Instalěrowanje a wótinstalěrowanje rozšyrjenjow zastojaś"
   },

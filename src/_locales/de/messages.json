@@ -761,30 +761,6 @@
   "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_file_extension": {
     "message": "Dateiendung"
   },
-  "policy_description_Extensions": {
-    "message": "Erweiterungen installieren, deinstallieren oder sperren"
-  },
-  "policy_description_Extensions_Deprecated": {
-    "message": "Veraltet. Die darunter liegende Richtlinie sollte verwendet werden."
-  },
-  "policy_description_Extensions_Install": {
-    "message": "Erweiterungen installieren. Es können URLs oder Pfade angegeben werden."
-  },
-  "policy_description_Extensions_Install_URL_or_Path": {
-    "message": "URL oder Pfad"
-  },
-  "policy_description_Extensions_Locked": {
-    "message": "Gesperrte Erweiterungen können weder deaktiviert noch deinstalliert werden. Bitte Erweiterungs-IDs angeben."
-  },
-  "policy_description_Extensions_Locked_ID": {
-    "message": "Erweiterungs-ID"
-  },
-  "policy_description_Extensions_Uninstall": {
-    "message": "Erweiterungen deinstallieren. Bitte Erweiterungs-IDs angeben."
-  },
-  "policy_description_Extensions_Uninstall_ID": {
-    "message": "Erweiterungs-ID"
-  },
   "policy_description_ExtensionSettings": {
     "message": "Die Installation und Deinstallation von Erweiterungen verwalten"
   },

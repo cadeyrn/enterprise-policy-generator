@@ -761,30 +761,6 @@
   "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_file_extension": {
     "message": "File extension"
   },
-  "policy_description_Extensions": {
-    "message": "Installer, désinstaller ou verrouiller les extensions"
-  },
-  "policy_description_Extensions_Deprecated": {
-    "message": "Déprécié. La politique suivante devrait être utilisée."
-  },
-  "policy_description_Extensions_Install": {
-    "message": "Installer les add-ons. Vous pouvez spécifier des adresses ou des chemins d'accès."
-  },
-  "policy_description_Extensions_Install_URL_or_Path": {
-    "message": "Adresse ou chemin d'accès"
-  },
-  "policy_description_Extensions_Locked": {
-    "message": "Les extensions verrouillées ne peuvent pas être désactivées ou désinstallées. Veuillez spécifier les ID d'extension."
-  },
-  "policy_description_Extensions_Locked_ID": {
-    "message": "Add-on ID"
-  },
-  "policy_description_Extensions_Uninstall": {
-    "message": "Désinstaller les add-ons. Veuillez spécifier les ID d'extension."
-  },
-  "policy_description_Extensions_Uninstall_ID": {
-    "message": "Add-on ID"
-  },
   "policy_description_ExtensionSettings": {
     "message": "Gérer l'installation et la désinstallation des add-ons"
   },

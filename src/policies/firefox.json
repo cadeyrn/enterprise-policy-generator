@@ -711,41 +711,6 @@
         }
       }
     },
-    "Extensions": {
-      "availability": { "mainstream": "62.0", "esr": "60.0" },
-      "tags": ["customization"],
-      "deprecation": "policy_description_Extensions_Deprecated",
-      "schema": "object",
-      "properties": [
-        {
-          "name": "Install",
-          "label": "policy_description_Extensions_Install",
-          "schema": "array",
-          "items": {
-            "schema": "string",
-            "placeholder": "policy_description_Extensions_Install_URL_or_Path"
-          }
-        },
-        {
-          "name": "Uninstall",
-          "label": "policy_description_Extensions_Uninstall",
-          "schema": "array",
-          "items": {
-            "schema": "string",
-            "placeholder": "policy_description_Extensions_Uninstall_ID"
-          }
-        },
-        {
-          "name": "Locked",
-          "label": "policy_description_Extensions_Locked",
-          "schema": "array",
-          "items": {
-            "schema": "string",
-            "placeholder": "policy_description_Extensions_Locked_ID"
-          }
-        }
-      ]
-    },
     "ExtensionSettings": {
       "availability": { "mainstream": "69.0", "esr": "68.1" },
       "tags": ["customization"],

@@ -761,30 +761,6 @@
   "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_file_extension": {
     "message": "Расширения файлов"
   },
-  "policy_description_Extensions": {
-    "message": "Установка, удаление или блокировка дополнений"
-  },
-  "policy_description_Extensions_Deprecated": {
-    "message": "Устаревшее. Следует использовать следующую политику."
-  },
-  "policy_description_Extensions_Install": {
-    "message": "Расширения для установки. Можно указать URL или путь."
-  },
-  "policy_description_Extensions_Install_URL_or_Path": {
-    "message": "URL или путь"
-  },
-  "policy_description_Extensions_Locked": {
-    "message": "Заблокированные расширения нельзя отключить или удалить. Укажите ID расширений."
-  },
-  "policy_description_Extensions_Locked_ID": {
-    "message": "ID расширения"
-  },
-  "policy_description_Extensions_Uninstall": {
-    "message": "Расширения для удаления. Укажите ID расширений."
-  },
-  "policy_description_Extensions_Uninstall_ID": {
-    "message": "ID расширения"
-  },
   "policy_description_ExtensionSettings": {
     "message": "Управление установкой и удалением расширений"
   },

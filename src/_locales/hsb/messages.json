@@ -761,30 +761,6 @@
   "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_file_extension": {
     "message": "Datajowa kóncowka"
   },
-  "policy_description_Extensions": {
-    "message": "Rozšěrjenja instalować, wotinstalować abo zawrěć"
-  },
-  "policy_description_Extensions_Deprecated": {
-    "message": "Zestarjeny. Prawidło pod tym ma so wužiwać."
-  },
-  "policy_description_Extensions_Install": {
-    "message": "Přidatki instalować. Móžeće URL abo šćežki podać."
-  },
-  "policy_description_Extensions_Install_URL_or_Path": {
-    "message": "URL abo šćežka"
-  },
-  "policy_description_Extensions_Locked": {
-    "message": "Zawrjene rozšěrjenja njedadźa so ani znjemóžnić ani wotinstalować. Podajće prošu ID."
-  },
-  "policy_description_Extensions_Locked_ID": {
-    "message": "ID přidatka"
-  },
-  "policy_description_Extensions_Uninstall": {
-    "message": "Přidatki wotinstalować. Podajće prošu ID přidatka."
-  },
-  "policy_description_Extensions_Uninstall_ID": {
-    "message": "ID přidatka"
-  },
   "policy_description_ExtensionSettings": {
     "message": "Instalowanje a wotinstalowanje rozšěrjenjow rjadować"
   },

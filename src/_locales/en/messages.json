@@ -761,30 +761,6 @@
   "policy_description_ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_file_extension": {
     "message": "File extension"
   },
-  "policy_description_Extensions": {
-    "message": "Install, uninstall or lock extensions"
-  },
-  "policy_description_Extensions_Deprecated": {
-    "message": "Deprecated. The following policy should be used."
-  },
-  "policy_description_Extensions_Install": {
-    "message": "Install add-ons. You can specify URLs or paths."
-  },
-  "policy_description_Extensions_Install_URL_or_Path": {
-    "message": "URL or Path"
-  },
-  "policy_description_Extensions_Locked": {
-    "message": "Locked extensions cannot be disabled or uninstalled. Please specify extension IDs."
-  },
-  "policy_description_Extensions_Locked_ID": {
-    "message": "Add-on ID"
-  },
-  "policy_description_Extensions_Uninstall": {
-    "message": "Uninstall add-ons. Please specify extension IDs."
-  },
-  "policy_description_Extensions_Uninstall_ID": {
-    "message": "Add-on ID"
-  },
   "policy_description_ExtensionSettings": {
     "message": "Manage the installation and uninstallation of add-ons"
   },
