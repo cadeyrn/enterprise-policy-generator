@@ -773,17 +773,23 @@ dialog {
 
     button {
       + button {
-        margin-left: 10px;
+        margin-left: 2px;
       }
+    }
+
+    img {
+      width: 18px;
+      height: 18px;
     }
   }
 
-  .icon img {
-    opacity: .5;
-    transition: opacity ease 250ms;
+  .icon {
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color ease-in-out 250ms;
 
     &:hover {
-      opacity: 1;
+      background-color: rgb(235, 235, 235);
     }
   }
 }
