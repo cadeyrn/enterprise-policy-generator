@@ -207,13 +207,13 @@
     "message": "Sites that support integrated authentication"
   },
   "policy_description_Authentication_AllowNonFQDN": {
-    "message": "Always allow SPNEGO or NTLM on non FQDNs (fully qualified domain names)"
+    "message": "Always allow SPNEGO or NTLM on non-FQDNs (fully qualified domain names)"
   },
   "policy_description_Authentication_AllowNonFQDN_NTLM": {
-    "message": "Always allow NTLM on non FQDNs"
+    "message": "Always allow NTLM on non-FQDNs"
   },
   "policy_description_Authentication_AllowNonFQDN_SPNEGO": {
-    "message": "Always allow SPNEGO on non FQDNs"
+    "message": "Always allow SPNEGO on non-FQDNs"
   },
   "policy_description_Authentication_AllowProxies": {
     "message": "Always allow SPNEGO or NTLM with proxy servers"
