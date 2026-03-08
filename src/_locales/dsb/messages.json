@@ -1019,11 +1019,20 @@
   "policy_description_ManagedBookmarks": {
     "message": "Zastojane cytańske znamjenja (wót wužywarja njezměnjobne abo njelašujobne)"
   },
+  "policy_description_ManagedBookmarks_folder": {
+    "message": "Zarědnik"
+  },
+  "policy_description_ManagedBookmarks_folder_name": {
+    "message": "Mě zarědnika"
+  },
   "policy_description_ManagedBookmarks_name": {
-    "message": "Mě"
+    "message": "Mě cytańskego znamjenja"
+  },
+  "policy_description_ManagedBookmarks_toplevel_bookmarks": {
+    "message": "Cytańske znamjenja na nejwušej rowninje"
   },
   "policy_description_ManagedBookmarks_toplevel_name": {
-    "message": "Mě zarědnika cytańskich znamjenjow"
+    "message": "Mě zarědnika cytańskich znamjenjow (standard: „Zastojane cytańske znamjenja”)"
   },
   "policy_description_ManualAppUpdateOnly": {
     "message": "Žedno naspominanje k aktualizěrowanjeju Firefox"

@@ -1019,11 +1019,20 @@
   "policy_description_ManagedBookmarks": {
     "message": "Zrjadowane zapołožki (wot wužiwarja njezměnjomne abo njezhašomne)"
   },
+  "policy_description_ManagedBookmarks_folder": {
+    "message": "Rjadowak"
+  },
+  "policy_description_ManagedBookmarks_folder_name": {
+    "message": "Mjeno rjadowaka"
+  },
   "policy_description_ManagedBookmarks_name": {
-    "message": "Mjeno"
+    "message": "Mjeno zapołožki"
+  },
+  "policy_description_ManagedBookmarks_toplevel_bookmarks": {
+    "message": "Zapołožki na najwyšej runinje"
   },
   "policy_description_ManagedBookmarks_toplevel_name": {
-    "message": "Mjeno rjadowaka zapołožkow"
+    "message": "Mjeno rjadowaka zapołožkow (standard: „Zrjadowane zapołožki”)"
   },
   "policy_description_ManualAppUpdateOnly": {
     "message": "Žana namołwa k aktualizowanju Firefox"

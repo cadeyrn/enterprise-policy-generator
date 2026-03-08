@@ -1019,11 +1019,20 @@
   "policy_description_ManagedBookmarks": {
     "message": "Managed bookmarks (cannot be changed or removed by the user)"
   },
+  "policy_description_ManagedBookmarks_folder": {
+    "message": "Folder"
+  },
+  "policy_description_ManagedBookmarks_folder_name": {
+    "message": "Name of th folder"
+  },
   "policy_description_ManagedBookmarks_name": {
-    "message": "Name"
+    "message": "Bookmark name"
+  },
+  "policy_description_ManagedBookmarks_toplevel_bookmarks": {
+    "message": "Bookmarks on the top level"
   },
   "policy_description_ManagedBookmarks_toplevel_name": {
-    "message": "Name of the bookmarks folder"
+    "message": "Name of the bookmarks folder (Default: “Managed bookmarks”)"
   },
   "policy_description_ManualAppUpdateOnly": {
     "message": "Do not prompt for Firefox updates"
