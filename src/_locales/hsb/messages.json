@@ -6,7 +6,7 @@
     "message": "Element na poziciji $1 z $2 wotkładźeny"
   },
   "array_sort_a11y_drag_action_move": {
-    "message": "Element na poziciju $1 z $2 přesunjony"
+    "message": "Element na poziciju $1 z $2 přesunjeny"
   },
   "array_sort_a11y_drag_action_start": {
     "message": "Element na pozicji $1 z $2 přiwzaty"
@@ -492,7 +492,7 @@
     "message": "Standard: 32, maksimum: 256"
   },
   "policy_description_ContentAnalysis_PipePathName_label": {
-    "message": "Mjeno wodu, z kotrymž Firefox nawjazuje, kotryž jo wot agenta DLP wutworjeny, "
+    "message": "Mjeno wodu, z kotrymž Firefox nawjazuje, kotryž je wot agenta DLP wutworjeny, "
   },
   "policy_description_ContentAnalysis_PipePathName_placeholder": {
     "message": "Standard: path_user"
@@ -1509,7 +1509,7 @@
     "message": "Nětko darić"
   },
   "promo_box_text": {
-    "message": "Rozšěrjenje je dermotne. Waš dobrowólny dar zmóžnja, integraciju nowych funkcijow a předewzaćelskich směrnicow dale wjesć."
+    "message": "Rozšěrjenje je darmotne. Waš dobrowólny dar zmóžnja, integraciju nowych funkcijow a předewzaćelskich směrnicow dale wjesć."
   },
   "requirement_macOS": {
     "message": "funguje jenož na macOS"
