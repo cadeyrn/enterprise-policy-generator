@@ -1,21 +1,21 @@
 {
   "array_sort_a11y_drag_action_cancel": {
-    "message": "Reorder canceled for item $1"
+    "message": "Перемещение элемента $1 отменено"
   },
   "array_sort_a11y_drag_action_end": {
-    "message": "Dropped item at position $1 of $2"
+    "message": "Элемент помещён в позицию $1 из $2"
   },
   "array_sort_a11y_drag_action_move": {
-    "message": "Moved item to position $1 of $2"
+    "message": "Элемент перемещён в позицию $1 из $2"
   },
   "array_sort_a11y_drag_action_start": {
-    "message": "Picked up item from position $1 of $2"
+    "message": "Выбран элемент в позиции $1 из $2"
   },
   "array_sort_a11y_drag_handle_label": {
-    "message": "Drag to reorder item $1"
+    "message": "Используйте перетаскивание для перемещения элемента $1"
   },
   "array_sort_a11y_instructions": {
-    "message": "Press Space to pick up an item. Use Arrow Up and Arrow Down to move it. Press Space or Enter to drop. Press Escape to cancel."
+    "message": "Нажмите пробел, чтобы выбрать нужный элемент. Используйте стрелки вверх и вниз, чтобы переместить его. Нажмите пробел или Enter, чтобы подтвердить перемещение. Нажмите Escape, чтобы отменить перемещение."
   },
   "common_dialog_btn_cancel": {
     "message": "Отмена"
@@ -36,22 +36,22 @@
     "message": "импорт конфигурации"
   },
   "configuration_incompatible_btn_get_in_touch": {
-    "message": "Get migrated configuration"
+    "message": "Получить перенесённую конфигурацию"
   },
   "configuration_incompatible_bullet_1": {
-    "message": "The configuration must be recreated and saved."
+    "message": "Самостоятельно пересоздать и сохранить конфигурацию."
   },
   "configuration_incompatible_bullet_2": {
-    "message": "Get in touch and receive a migrated version of your configuration so that you don't have to recreate it yourself – completely free of charge, of course."
+    "message": "Связаться с нами и получить перенесённую версию конфигурации – конечно же, совершенно бесплатно."
   },
   "configuration_incompatible_bullet_3": {
-    "message": "You can still load your current configuration in older versions of Enterprise Policy Generator."
+    "message": "Пользоваться текущей конфигурацией в более старых версиях \"Генератора политик\"."
   },
   "configuration_incompatible_intro": {
-    "message": "This configuration uses an older data schema and therefore cannot be loaded. The following options are available for you:"
+    "message": "Конфигурация использует старую схему данных и не может быть загружена. Возможные варианты:"
   },
   "configuration_incompatible_title": {
-    "message": "Configuration not compatible"
+    "message": "Несовместимая конфигурация"
   },
   "enum_value_block_no": {
     "message": "не блокировать"
@@ -111,7 +111,7 @@
     "message": "Выбор политик"
   },
   "link_copy_to_clipboard": {
-    "message": "copy to clipboard"
+    "message": "копировать в буфер обмена"
   },
   "link_download": {
     "message": "загрузить policies.json"
@@ -132,7 +132,7 @@
     "message": "Загрузить конфигурацию"
   },
   "list_table_actions": {
-    "message": "Actions"
+    "message": "Действия"
   },
   "list_table_name": {
     "message": "Название"
@@ -195,7 +195,7 @@
     "message": "Запретить обновления Firefox после указанной версии"
   },
   "policy_description_AppUpdatePin_label": {
-    "message": "If only a major version (“xxx”) is specified, only minor and patch updates will be installed. If a major plus minor version (“xxx.xx”) is specified, only patch updates will be installed."
+    "message": "Если указана только основная версия (\"xxx\"), будут установлены только второстепенные обновления и исправления. Если указана основная и второстепенная версии (\"xxx.xx\"), будут установлены только исправления."
   },
   "policy_description_AppUpdatePin_placeholder": {
     "message": "Версия Firefox (параметр: \"xxx\" или \"xxx.xx\")"
@@ -396,112 +396,112 @@
     "message": "Имя контейнера"
   },
   "policy_description_ContentAnalysis": {
-    "message": "Use an agent for Data Loss Prevention (DLP)"
+    "message": "Использовать агента для предотвращения потери данных (DLP)"
   },
   "policy_description_ContentAnalysis_AgentName_label": {
-    "message": "Name of the DLP agent, used in dialogs and notifications"
+    "message": "Имя агента DLP, используемое в диалоговых окнах и уведомлениях"
   },
   "policy_description_ContentAnalysis_AgentName_placeholder": {
-    "message": "Default: A DLP Agent"
+    "message": "По умолчанию: A DLP Agent"
   },
   "policy_description_ContentAnalysis_AgentTimeout_label": {
-    "message": "Timeout in seconds after a DLP request is sent to the agent"
+    "message": "Время ожидания в секундах после отправки запроса агенту DLP"
   },
   "policy_description_ContentAnalysis_AgentTimeout_placeholder": {
-    "message": "Default: 300"
+    "message": "По умолчанию: 300"
   },
   "policy_description_ContentAnalysis_AllowUrlRegexList": {
-    "message": "Regular expressions that indicates URLs for which DLP operations will always be allowed without consulting the agent (Default: ^about:(?!blank|srcdoc).*)"
+    "message": "Регулярные выражения URL-адресов, для которых операции DLP всегда будут разрешены без согласования с агентом (по умолчанию: ^about:(?!blank|srcdoc).*)"
   },
   "policy_description_ContentAnalysis_BypassForSameTabOperations": {
-    "message": "Automatically allow DLP requests whose data comes from the same tab and frame"
+    "message": "Автоматически разрешать запросы DLP, данные которых поступают из той же вкладки и фрейма"
   },
   "policy_description_ContentAnalysis_ClientSignature": {
-    "message": "Required signature of the DLP agent connected to the pipe"
+    "message": "Обязательная подпись подключённого к каналу агента DLP"
   },
   "policy_description_ContentAnalysis_DefaultResult": {
-    "message": "Behavior for DLP requests if there is a problem connecting to the DLP agent"
+    "message": "Действие для DLP-запросов при возникновении проблем с подключением к агенту DLP"
   },
   "policy_description_ContentAnalysis_DefaultResult_0": {
-    "message": "Deny the request (Default)"
+    "message": "Отклонить запрос (по умолчанию)"
   },
   "policy_description_ContentAnalysis_DefaultResult_1": {
-    "message": "Warn the user and allow them to choose whether to allow or deny"
+    "message": "Запросить выбор у пользователя"
   },
   "policy_description_ContentAnalysis_DefaultResult_2": {
-    "message": "Allow the request"
+    "message": "Разрешить запрос"
   },
   "policy_description_ContentAnalysis_DenyUrlRegexList": {
-    "message": "Regular expressions that indicates URLs for which DLP operations will always be denied without consulting the agent"
+    "message": "Регулярные выражения URL-адресов, для которых операции DLP всегда будут отклонены без согласования с агентом"
   },
   "policy_description_ContentAnalysis_Enabled": {
-    "message": "Enable Data Loss Prevention"
+    "message": "Включить функцию предотвращения потери данных"
   },
   "policy_description_ContentAnalysis_InterceptionPoints": {
-    "message": "Settings for specific interception points"
+    "message": "Настройки для конкретных точек перехвата"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_Clipboard": {
-    "message": "Clipboard operations for files and text"
+    "message": "Операции с файлами и текстом в буфере обмена"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_Clipboard_Enabled": {
-    "message": "Whether clipboard operations should use the DLP"
+    "message": "Использовать DLP при операциях с буфером обмена"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_Clipboard_PlainTextOnly": {
-    "message": "Whether to only analyze the text/plain format on the clipboard"
+    "message": "Анализировать только текстовый формат в буфере обмена"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_Download": {
-    "message": "Download operations (Firefox 142+, Firefox ESR 140.2+)"
+    "message": "Операции загрузки (Firefox 142+, Firefox ESR 140.2+)"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_Download_Enabled": {
-    "message": "Whether download operations should use the DLP"
+    "message": "Использовать DLP при операциях загрузки"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_DragAndDrop": {
-    "message": "Drag and drop operations for files and text"
+    "message": "Операции перетаскивания файлов и текста"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_DragAndDrop_Enabled": {
-    "message": "Whether drag and drop operations should use the DLP"
+    "message": "Использовать DLP при операциях перетаскивания"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_DragAndDrop_PlainTextOnly": {
-    "message": "Whether to only analyze the text/plain format in what is being dropped"
+    "message": "Анализировать только текстовый формат при перетаскивании"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_FileUpload": {
-    "message": "File upload operations for files chosen from the file picker"
+    "message": "Операции отправки файлов, выбранных средством выбора файлов"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_FileUpload_Enabled": {
-    "message": "Whether file upload operations should use the DLP"
+    "message": "Использовать DLP при операциях отправки файлов"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_Print": {
-    "message": "Print operations"
+    "message": "Операции печати"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_Print_Enabled": {
-    "message": "Whether print operations should use the DLP"
+    "message": "Использовать DLP при операциях печати"
   },
   "policy_description_ContentAnalysis_IsPerUser": {
-    "message": "Whether the pipe the DLP agent has created is per-user or per-system"
+    "message": "Канал, созданный агентом DLP, является"
   },
   "policy_description_ContentAnalysis_IsPerUser_per_system": {
-    "message": "per system"
+    "message": "системным"
   },
   "policy_description_ContentAnalysis_IsPerUser_per_user": {
-    "message": "per user (Default)"
+    "message": "пользовательским (по умолчанию)"
   },
   "policy_description_ContentAnalysis_MaxConnectionsCount_label": {
-    "message": "Maximum number of concurrent connections to the DLP agent"
+    "message": "Максимальное количество одновременных подключений к агенту DLP"
   },
   "policy_description_ContentAnalysis_MaxConnectionsCount_placeholder": {
-    "message": "Default: 32, Maximum: 256"
+    "message": "По умолчанию: 32, максимум: 256"
   },
   "policy_description_ContentAnalysis_PipePathName_label": {
-    "message": "Name of the pipe the DLP agent has created and Firefox will connect to"
+    "message": "Имя канала, созданного агентом DLP, к которому будет подключаться Firefox"
   },
   "policy_description_ContentAnalysis_PipePathName_placeholder": {
-    "message": "Default: path_user"
+    "message": "По умолчанию: path_user"
   },
   "policy_description_ContentAnalysis_ShowBlockedResult": {
-    "message": "Show a notification when a DLP request is denied"
+    "message": "Показывать уведомление при отклонении запроса DLP"
   },
   "policy_description_ContentAnalysis_TimeoutResult": {
-    "message": "Behavior for DLP requests if the DLP agent does not respond to a request in less than the specified number of seconds"
+    "message": "Действие для DLP-запросов, если агент DLP не отвечает на запрос менее чем за указанное количество секунд"
   },
   "policy_description_Cookies": {
     "message": "Разрешить или запретить сайтам установку куки"
@@ -1506,10 +1506,10 @@
     "message": "Разрешить единый вход Windows для учётных записей Microsoft, учётных записей на работе и в учебных заведениях"
   },
   "promo_box_button": {
-    "message": "Donate now"
+    "message": "Пожертвовать"
   },
   "promo_box_text": {
-    "message": "The extension is free of charge. Your voluntary donation enables me to continue integrating new features and enterprise policies."
+    "message": "Расширение бесплатное. Ваше добровольное пожертвование позволит мне продолжить интеграцию новых функций и корпоративных политик."
   },
   "requirement_macOS": {
     "message": "работает только в macOS"
@@ -1530,25 +1530,25 @@
     "message": "Сохранить конфигурацию"
   },
   "title_add_item": {
-    "message": "add item"
+    "message": "добавить элемент"
   },
   "title_apply_configuration": {
     "message": "загрузить конфигурацию"
   },
   "title_move_item": {
-    "message": "move item"
+    "message": "переместить элемент"
   },
   "title_remove_configuration": {
     "message": "удалить конфигурацию"
   },
   "title_remove_item": {
-    "message": "remove item"
+    "message": "удалить элемент"
   },
   "validation_invalid_json": {
     "message": "неправильный JSON"
   },
   "validation_invalid_number": {
-    "message": "invalid number"
+    "message": "неправильный номер"
   },
   "validation_invalid_url": {
     "message": "неправильный URL"
@@ -1557,10 +1557,10 @@
     "message": "неправильная версия шаблона"
   },
   "validation_missing_placeholder_s": {
-    "message": "Placeholder “%s” missing"
+    "message": "Отсутствует заполнитель \"%s\""
   },
   "validation_missing_placeholder_searchterms": {
-    "message": "Placeholder “{searchterms}” missing"
+    "message": "Отсутствует заполнитель \"{searchterms}\""
   },
   "validation_required": {
     "message": "обязательный"
