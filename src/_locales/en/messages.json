@@ -861,7 +861,7 @@
     "message": "Enable automatic extension updates"
   },
   "policy_description_FirefoxHome": {
-    "message": "Customize the Firefox home page"
+    "message": "Customize the Firefox homepage"
   },
   "policy_description_FirefoxHome_Highlights": {
     "message": "Show recent activity"
