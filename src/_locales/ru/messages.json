@@ -1029,7 +1029,7 @@
     "message": "Имя закладки"
   },
   "policy_description_ManagedBookmarks_toplevel_bookmarks": {
-    "message": "Закадки в корне раздела"
+    "message": "Закладки в корне раздела"
   },
   "policy_description_ManagedBookmarks_toplevel_name": {
     "message": "Имя папки закладок (по умолчанию: \"Управляемые закладки\")"
