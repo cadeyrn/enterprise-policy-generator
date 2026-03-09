@@ -411,7 +411,7 @@
     "message": "По умолчанию: 300"
   },
   "policy_description_ContentAnalysis_AllowUrlRegexList": {
-    "message": "Регулярные выражения URL-адресов, для которых операции DLP всегда будут разрешены без согласования с агентом (по умолчанию: ^about:(?!blank|srcdoc).*)"
+    "message": "Регулярные выражения URL-адресов, для которых операции DLP всегда будут разрешены без обращения к агенту (по умолчанию: ^about:(?!blank|srcdoc).*)"
   },
   "policy_description_ContentAnalysis_BypassForSameTabOperations": {
     "message": "Автоматически разрешать запросы DLP, данные которых поступают из той же вкладки и фрейма"
@@ -432,7 +432,7 @@
     "message": "Разрешить запрос"
   },
   "policy_description_ContentAnalysis_DenyUrlRegexList": {
-    "message": "Регулярные выражения URL-адресов, для которых операции DLP всегда будут отклонены без согласования с агентом"
+    "message": "Регулярные выражения URL-адресов, для которых операции DLP всегда будут отклонены без обращения к агенту"
   },
   "policy_description_ContentAnalysis_Enabled": {
     "message": "Включить функцию предотвращения потери данных"
@@ -1020,19 +1020,19 @@
     "message": "Управляемые закладки (не могут быть изменены или удалены пользователем)"
   },
   "policy_description_ManagedBookmarks_folder": {
-    "message": "Folder"
+    "message": "Папка"
   },
   "policy_description_ManagedBookmarks_folder_name": {
-    "message": "Name of the folder"
+    "message": "Имя папки"
   },
   "policy_description_ManagedBookmarks_name": {
-    "message": "Bookmark name"
+    "message": "Имя закладки"
   },
   "policy_description_ManagedBookmarks_toplevel_bookmarks": {
-    "message": "Bookmarks on the top level"
+    "message": "Закадки в корне раздела"
   },
   "policy_description_ManagedBookmarks_toplevel_name": {
-    "message": "Name of the bookmarks folder (Default: “Managed bookmarks”)"
+    "message": "Имя папки закладок (по умолчанию: \"Управляемые закладки\")"
   },
   "policy_description_ManualAppUpdateOnly": {
     "message": "Не предлагать обновления Firefox"
