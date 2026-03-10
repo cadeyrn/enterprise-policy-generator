@@ -933,6 +933,11 @@ class Configurator {
         $el.querySelectorAll(':scope > div > [id], :scope > div > div > [id]').forEach($el => {
           $el.id = $el.id.replace(/(_array_)\d+(_)/, `$1${idx + 1}$2`);
         });
+
+        $el.querySelectorAll(':scope > .array-action[data-name]').forEach($el => {
+          const name = $el.getAttribute('data-name');
+          $el.setAttribute('data-name', name.replace(/(_array_)\d+(_)/, `$1${idx + 1}$2`));
+        });
       });
     });
   }
