@@ -557,10 +557,6 @@ input, textarea {
   }
 }
 
-.additional-item {
-  margin-bottom: 30px;
-}
-
 .sortable-handle {
   position: absolute;
   top: 0;
