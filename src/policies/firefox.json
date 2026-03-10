@@ -684,6 +684,7 @@
       "schema": "array",
       "items": {
         "schema": "object",
+        "label": "policy_description_ManagedBookmarks_bookmarks",
         "properties": [
           {
             "name": "name",
@@ -698,16 +699,53 @@
             "validations": ["required", "url"]
           }
         ],
-        "addition": {
-          "schema": "object",
-          "properties": [
-            {
-              "name": "toplevel_name",
-              "schema": "string",
-              "placeholder": "policy_description_ManagedBookmarks_toplevel_name",
-              "validations": ["required"]
+        "additions": {
+          "prepend": {
+            "schema": "object",
+            "properties": [
+              {
+                "name": "toplevel_name",
+                "schema": "string",
+                "placeholder": "policy_description_ManagedBookmarks_toplevel_name"
+              }
+            ]
+          },
+          "append": {
+            "schema": "array",
+            "items": {
+              "schema": "object",
+              "label": "policy_description_ManagedBookmarks_folders",
+              "properties": [
+                {
+                  "name": "name",
+                  "schema": "string",
+                  "placeholder": "policy_description_ManagedBookmarks_folder_name",
+                  "validations": ["required"]
+                },
+                {
+                  "name": "children",
+                  "schema": "array",
+                  "items": {
+                    "schema": "object",
+                    "properties": [
+                      {
+                        "name": "name",
+                        "schema": "string",
+                        "placeholder": "policy_description_ManagedBookmarks_name",
+                        "validations": ["required"]
+                      },
+                      {
+                        "name": "url",
+                        "schema": "string",
+                        "placeholder": "common_url",
+                        "validations": ["required", "url"]
+                      }
+                    ]
+                  }
+                }
+              ]
             }
-          ]
+          }
         }
       }
     },
@@ -799,93 +837,95 @@
             ]
           }
         ],
-        "addition": {
-          "schema": "object",
-          "label": "policy_description_ExtensionSettings_label_additional_item",
-          "key": {
-            "value": "*"
-          },
-          "properties": [
-            {
-              "name": "installation_mode",
-              "label": "policy_description_ExtensionSettings_installation_mode",
-              "schema": "enum",
-              "options": [
-                {
-                  "label": "enum_value_no_preference",
-                  "value": null
-                },
-                {
-                  "label": "policy_description_ExtensionSettings_installation_mode_allowed_all",
-                  "value": "allowed"
-                },
-                {
-                  "label": "policy_description_ExtensionSettings_installation_mode_blocked_all",
-                  "value": "blocked"
-                }
-              ]
+        "additions": {
+          "prepend": {
+            "schema": "object",
+            "label": "policy_description_ExtensionSettings_label_additional_item",
+            "key": {
+              "value": "*"
             },
-            {
-              "name": "temporarily_allow_weak_signatures",
-              "label": "policy_description_ExtensionSettings_temporarily_allow_weak_signatures",
-              "schema": "boolean"
-            },
-            {
-              "name": "install_sources",
-              "label": "policy_description_ExtensionSettings_install_sources",
-              "schema": "array",
-              "items": {
-                "schema": "string",
-                "placeholder": "common_url",
-                "link" : "https://developer.mozilla.org/Add-ons/WebExtensions/Match_patterns"
-              }
-            },
-            {
-              "name": "allowed_types",
-              "label": "policy_description_ExtensionSettings_allowed_types",
-              "schema": "array",
-              "items": {
-                "schema": "boolean",
+            "properties": [
+              {
+                "name": "installation_mode",
+                "label": "policy_description_ExtensionSettings_installation_mode",
+                "schema": "enum",
                 "options": [
                   {
-                    "name": "extension",
-                    "label": "policy_description_ExtensionSettings_allowed_types_extension"
+                    "label": "enum_value_no_preference",
+                    "value": null
                   },
                   {
-                    "name": "theme",
-                    "label": "policy_description_ExtensionSettings_allowed_types_theme"
+                    "label": "policy_description_ExtensionSettings_installation_mode_allowed_all",
+                    "value": "allowed"
                   },
                   {
-                    "name": "dictionary",
-                    "label": "policy_description_ExtensionSettings_allowed_types_dictionary"
-                  },
-                  {
-                    "name": "langpack",
-                    "label": "policy_description_ExtensionSettings_allowed_types_langpack"
-                  },
-                  {
-                    "name": "sitepermission",
-                    "label": "policy_description_ExtensionSettings_allowed_types_sitepermission"
+                    "label": "policy_description_ExtensionSettings_installation_mode_blocked_all",
+                    "value": "blocked"
                   }
                 ]
-              }
-            },
-            {
-              "name": "blocked_install_message",
-              "label": "policy_description_ExtensionSettings_blocked_install_message_all",
-              "schema": "string",
-              "placeholder": "policy_description_ExtensionSettings_blocked_install_message_placeholder"
-            },
-            {
-              "name": "restricted_domains",
-              "label": "policy_description_ExtensionSettings_restricted_domains",
-              "schema": "array",
-              "items": {
+              },
+              {
+                "name": "temporarily_allow_weak_signatures",
+                "label": "policy_description_ExtensionSettings_temporarily_allow_weak_signatures",
+                "schema": "boolean"
+              },
+              {
+                "name": "install_sources",
+                "label": "policy_description_ExtensionSettings_install_sources",
+                "schema": "array",
+                "items": {
+                  "schema": "string",
+                  "placeholder": "common_url",
+                  "link" : "https://developer.mozilla.org/Add-ons/WebExtensions/Match_patterns"
+                }
+              },
+              {
+                "name": "allowed_types",
+                "label": "policy_description_ExtensionSettings_allowed_types",
+                "schema": "array",
+                "items": {
+                  "schema": "boolean",
+                  "options": [
+                    {
+                      "name": "extension",
+                      "label": "policy_description_ExtensionSettings_allowed_types_extension"
+                    },
+                    {
+                      "name": "theme",
+                      "label": "policy_description_ExtensionSettings_allowed_types_theme"
+                    },
+                    {
+                      "name": "dictionary",
+                      "label": "policy_description_ExtensionSettings_allowed_types_dictionary"
+                    },
+                    {
+                      "name": "langpack",
+                      "label": "policy_description_ExtensionSettings_allowed_types_langpack"
+                    },
+                    {
+                      "name": "sitepermission",
+                      "label": "policy_description_ExtensionSettings_allowed_types_sitepermission"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "blocked_install_message",
+                "label": "policy_description_ExtensionSettings_blocked_install_message_all",
                 "schema": "string",
-                "placeholder": "common_url"
+                "placeholder": "policy_description_ExtensionSettings_blocked_install_message_placeholder"
+              },
+              {
+                "name": "restricted_domains",
+                "label": "policy_description_ExtensionSettings_restricted_domains",
+                "schema": "array",
+                "items": {
+                  "schema": "string",
+                  "placeholder": "common_url"
+                }
               }
-            }
-          ]
+            ]
+          }
         }
       }
     },

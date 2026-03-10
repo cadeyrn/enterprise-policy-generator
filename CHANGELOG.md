@@ -65,6 +65,8 @@
 
 - Added support for the `ContentAnalysis` policy to configure the use of a Data Loss Prevention (DLP) solution, see
   [#259](https://github.com/cadeyrn/enterprise-policy-generator/issues/259)
+- The `ManagedBookmarks` policy now also supports the creation of bookmark folders, see
+  [#283](https://github.com/cadeyrn/enterprise-policy-generator/issues/283)
 - Removed support for the `Extensions` policy as there is the `ExtensionSettings` policy which provides more features,
   [#170](https://github.com/cadeyrn/enterprise-policy-generator/issues/170)
 - Options that used the legacy version of the `Preferences` policy have been removed. These can all be replaced by the

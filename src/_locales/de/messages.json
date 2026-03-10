@@ -1019,17 +1019,17 @@
   "policy_description_ManagedBookmarks": {
     "message": "Verwaltete Lesezeichen (nicht durch den Benutzer veränderbar oder löschbar)"
   },
-  "policy_description_ManagedBookmarks_folder": {
-    "message": "Ordner"
+  "policy_description_ManagedBookmarks_bookmarks": {
+    "message": "Lesezeichen"
   },
   "policy_description_ManagedBookmarks_folder_name": {
     "message": "Name des Ordners"
   },
-  "policy_description_ManagedBookmarks_name": {
-    "message": "Lesezeichen-Name"
+  "policy_description_ManagedBookmarks_folders": {
+    "message": "Ordner"
   },
-  "policy_description_ManagedBookmarks_toplevel_bookmarks": {
-    "message": "Lesezeichen auf der obersten Ebene"
+  "policy_description_ManagedBookmarks_name": {
+    "message": "Name des Lesezeichens"
   },
   "policy_description_ManagedBookmarks_toplevel_name": {
     "message": "Name des Lesezeichen-Ordners (Standard: „Verwaltete Lesezeichen”)"

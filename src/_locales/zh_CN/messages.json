@@ -1019,17 +1019,17 @@
   "policy_description_ManagedBookmarks": {
     "message": "Managed bookmarks (cannot be changed or removed by the user)"
   },
-  "policy_description_ManagedBookmarks_folder": {
-    "message": "Folder"
+  "policy_description_ManagedBookmarks_bookmarks": {
+    "message": "Bookmarks"
   },
   "policy_description_ManagedBookmarks_folder_name": {
     "message": "Name of the folder"
   },
-  "policy_description_ManagedBookmarks_name": {
-    "message": "Bookmark name"
+  "policy_description_ManagedBookmarks_folders": {
+    "message": "Folders"
   },
-  "policy_description_ManagedBookmarks_toplevel_bookmarks": {
-    "message": "Bookmarks on the top level"
+  "policy_description_ManagedBookmarks_name": {
+    "message": "Name of the bookmark"
   },
   "policy_description_ManagedBookmarks_toplevel_name": {
     "message": "Name of the bookmarks folder (Default: “Managed bookmarks”)"

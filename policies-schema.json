@@ -1,11 +1,58 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$defs": {
+    "additional_array_item": {
+      "properties": {
+        "schema": {
+          "$ref": "#/$defs/allowed_schemas/properties/array"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "schema": {
+                "const": "array"
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/$defs/schemas/properties/array"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "schema": {
+                "const": "object"
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/$defs/schemas/properties/object"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "schema": {
+                "const": "string"
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/$defs/schemas/properties/string"
+          }
+        }
+      ],
+      "required": ["schema"],
+      "unevaluatedProperties": false
+    },
     "allowed_schemas": {
       "type": "object",
       "properties": {
         "array": {
-          "enum": ["boolean", "object", "string"]
+          "enum": ["array", "boolean", "object", "string"]
         },
         "object": {
           "enum": ["array", "boolean", "enum", "object", "string"]
@@ -63,39 +110,17 @@
                 "allow_empty_value": {
                   "type": "boolean"
                 },
-                "addition": {
+                "additions": {
+                  "type": "object",
                   "properties": {
-                    "schema": {
-                      "$ref": "#/$defs/allowed_schemas/properties/array"
+                    "prepend": {
+                      "$ref": "#/$defs/additional_array_item"
+                    },
+                    "append": {
+                      "$ref": "#/$defs/additional_array_item"
                     }
                   },
-                  "allOf": [
-                    {
-                      "if": {
-                        "properties": {
-                          "schema": {
-                            "const": "object"
-                          }
-                        }
-                      },
-                      "then": {
-                        "$ref": "#/$defs/schemas/properties/object"
-                      }
-                    },
-                    {
-                      "if": {
-                        "properties": {
-                          "schema": {
-                            "const": "string"
-                          }
-                        }
-                      },
-                      "then": {
-                        "$ref": "#/$defs/schemas/properties/string"
-                      }
-                    }
-                  ],
-                  "required": ["schema"],
+                  "minProperties": 1,
                   "unevaluatedProperties": false
                 }
               },

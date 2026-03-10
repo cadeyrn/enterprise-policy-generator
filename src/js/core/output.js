@@ -77,6 +77,14 @@ class Output {
 
     $el.querySelectorAll(':scope > :is(.additional-item, .array-container)').forEach($el => {
       if (!Output.#hasInvalidFields($el)) {
+        // array fields
+        $el.querySelectorAll(':scope > .array-wrapper').forEach($el => {
+          const value = Output.#addArrayValue($el);
+          if (value !== null) {
+            items.push(value);
+          }
+        });
+
         // boolean fields
         $el.querySelectorAll(':scope > .boolean-wrapper input').forEach($el => {
           const value = Output.#addBooleanValue($el);

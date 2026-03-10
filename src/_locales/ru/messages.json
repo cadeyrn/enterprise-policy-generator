@@ -1019,17 +1019,17 @@
   "policy_description_ManagedBookmarks": {
     "message": "Управляемые закладки (не могут быть изменены или удалены пользователем)"
   },
-  "policy_description_ManagedBookmarks_folder": {
-    "message": "Папка"
+  "policy_description_ManagedBookmarks_bookmarks": {
+    "message": "Закладки"
   },
   "policy_description_ManagedBookmarks_folder_name": {
     "message": "Имя папки"
   },
+  "policy_description_ManagedBookmarks_folders": {
+    "message": "Папка"
+  },
   "policy_description_ManagedBookmarks_name": {
     "message": "Имя закладки"
-  },
-  "policy_description_ManagedBookmarks_toplevel_bookmarks": {
-    "message": "Закладки в корне раздела"
   },
   "policy_description_ManagedBookmarks_toplevel_name": {
     "message": "Имя папки закладок (по умолчанию: \"Управляемые закладки\")"

@@ -383,13 +383,13 @@ class Configurator {
       }
     }
     else if (object.items) {
-      // put additional item into the array
-      if (object.items.addition) {
+      // put additional item to the start of the array
+      if (object.items.additions?.prepend) {
         const $additionalWrapper = document.createElement('div');
         $additionalWrapper.classList.add('additional-item');
         $wrapper.appendChild($additionalWrapper);
 
-        Configurator.#addProperty($additionalWrapper, parentName, object.items.addition);
+        Configurator.#addProperty($additionalWrapper, parentName + '_prepend', object.items.additions.prepend);
       }
 
       // info link
@@ -416,6 +416,16 @@ class Configurator {
     }
 
     $wrapper.appendChild($container);
+
+    // put additional item to the end of the array
+    if (object.items?.additions?.append) {
+      const $additionalWrapper = document.createElement('div');
+      $additionalWrapper.classList.add('additional-item');
+      $wrapper.appendChild($additionalWrapper);
+
+      Configurator.#addProperty($additionalWrapper, parentName + '_append', object.items.additions.append);
+    }
+
     $el.appendChild($wrapper);
   }
 
