@@ -30,19 +30,19 @@
     "message": "Adresse"
   },
   "configuration_export": {
-    "message": "exporter configuration"
+    "message": "Exporter configuration"
   },
   "configuration_import": {
-    "message": "importer configuration"
+    "message": "Importer configuration"
   },
   "configuration_incompatible_btn_get_in_touch": {
-    "message": "Get migrated configuration"
+    "message": "Request migrated configuration"
   },
   "configuration_incompatible_bullet_1": {
     "message": "The configuration must be recreated and saved."
   },
   "configuration_incompatible_bullet_2": {
-    "message": "Get in touch and receive a migrated version of your configuration so that you don't have to recreate it yourself – completely free of charge, of course."
+    "message": "Get in touch to receive a migrated version of your configuration, so you do not need to recreate it yourself, completely free of charge."
   },
   "configuration_incompatible_bullet_3": {
     "message": "You can still load your current configuration in older versions of Enterprise Policy Generator."
@@ -54,25 +54,25 @@
     "message": "Configuration not compatible"
   },
   "enum_value_block_no": {
-    "message": "ne pas bloquer"
+    "message": "Ne pas bloquer"
   },
   "enum_value_block_yes": {
-    "message": "bloquer"
+    "message": "Bloquer"
   },
   "enum_value_enable_no": {
-    "message": "désactiver"
+    "message": "Désactiver"
   },
   "enum_value_enable_yes": {
-    "message": "activer"
+    "message": "Activer"
   },
   "enum_value_no": {
-    "message": "non"
+    "message": "Non"
   },
   "enum_value_no_preference": {
-    "message": "aucune préférence"
+    "message": "Aucune préférence"
   },
   "enum_value_yes": {
-    "message": "oui"
+    "message": "Oui"
   },
   "explanation_about_policies": {
     "message": "Il y a un aperçu de toutes les politiques actives et des erreurs dans le fichier \"policies.json\" à la page about:policies."
@@ -111,16 +111,16 @@
     "message": "Policies selection"
   },
   "link_copy_to_clipboard": {
-    "message": "copy to clipboard"
+    "message": "Copy to clipboard"
   },
   "link_download": {
-    "message": "télécharger policies.json"
+    "message": "Télécharger policies.json"
   },
   "link_learn_more": {
-    "message": "plus d'informations"
+    "message": "Plus d'informations"
   },
   "link_load_configuration": {
-    "message": "charger configuration"
+    "message": "Charger configuration"
   },
   "link_save_configuration": {
     "message": "Sauvegarder la configuration"
@@ -198,7 +198,7 @@
     "message": "If only a major version (“xxx”) is specified, only minor and patch updates will be installed. If a major plus minor version (“xxx.xx”) is specified, only patch updates will be installed."
   },
   "policy_description_AppUpdatePin_placeholder": {
-    "message": "Firefox version (expected: \"xxx\" oder \"xxx.xx\")"
+    "message": "Firefox version (expected: \"xxx\" or \"xxx.xx\")"
   },
   "policy_description_AppUpdateURL": {
     "message": "Adresse différente pour les mises à jours de Firefox"
@@ -222,7 +222,7 @@
     "message": "Always allow NTLM with proxy servers"
   },
   "policy_description_Authentication_AllowProxies_SPNEGO": {
-    "message": "Always allow NTLM with proxy servers"
+    "message": "Always allow SPNEGO with proxy servers"
   },
   "policy_description_Authentication_Delegated": {
     "message": "Délégué"
@@ -279,7 +279,7 @@
     "message": "Placement"
   },
   "policy_description_Bookmarks_Placement_Menu": {
-    "message": "Menu Marques-pages"
+    "message": "Menu marques-pages"
   },
   "policy_description_Bookmarks_Placement_Toolbar": {
     "message": "Barre de marques-pages"
@@ -306,7 +306,7 @@
     "message": "Lire les certificats depuis la liste des certificats du système (Windows et macOS seulement)"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_false": {
-    "message": "ne pas lire les certificats depuis la liste des certificats du système"
+    "message": "Ne pas lire les certificats depuis la liste des certificats du système"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_true": {
     "message": "Lire les certificats depuis la liste des certificats du système"
@@ -411,7 +411,7 @@
     "message": "Default: 300"
   },
   "policy_description_ContentAnalysis_AllowUrlRegexList": {
-    "message": "Regular expressions that indicates URLs for which DLP operations will always be allowed without consulting the agent (Default: ^about:(?!blank|srcdoc).*)"
+    "message": "Regular expressions that indicate URLs for which DLP operations will always be allowed without consulting the agent (Default: ^about:(?!blank|srcdoc).*)"
   },
   "policy_description_ContentAnalysis_BypassForSameTabOperations": {
     "message": "Automatically allow DLP requests whose data comes from the same tab and frame"
@@ -432,7 +432,7 @@
     "message": "Allow the request"
   },
   "policy_description_ContentAnalysis_DenyUrlRegexList": {
-    "message": "Regular expressions that indicates URLs for which DLP operations will always be denied without consulting the agent"
+    "message": "Regular expressions that indicate URLs for which DLP operations will always be denied without consulting the agent"
   },
   "policy_description_ContentAnalysis_Enabled": {
     "message": "Enable Data Loss Prevention"
@@ -480,10 +480,10 @@
     "message": "Whether the pipe the DLP agent has created is per-user or per-system"
   },
   "policy_description_ContentAnalysis_IsPerUser_per_system": {
-    "message": "per system"
+    "message": "Per system"
   },
   "policy_description_ContentAnalysis_IsPerUser_per_user": {
-    "message": "per user (Default)"
+    "message": "Per user (Default)"
   },
   "policy_description_ContentAnalysis_MaxConnectionsCount_label": {
     "message": "Maximum number of concurrent connections to the DLP agent"
@@ -501,7 +501,7 @@
     "message": "Show a notification when a DLP request is denied"
   },
   "policy_description_ContentAnalysis_TimeoutResult": {
-    "message": "Behavior for DLP requests if the DLP agent does not respond to a request in less than the specified number of seconds"
+    "message": "Behavior for DLP requests if the DLP agent does not respond within the specified number of seconds"
   },
   "policy_description_Cookies": {
     "message": "Autoriser ou refuser des sites Web à placer des cookies"
@@ -570,7 +570,7 @@
     "message": "Vous pouvez utiliser ${home} pour le répertoire home natif"
   },
   "policy_description_DisableAccounts": {
-    "message": "Disable Mozilla account based services like Firefox Sync"
+    "message": "Disable Mozilla account-based services like Firefox Sync"
   },
   "policy_description_DisableAppUpdate": {
     "message": "Empêcher Firefox de se mettre à jour"
@@ -660,7 +660,7 @@
     "message": "Never show"
   },
   "policy_description_DisplayBookmarksToolbar_newtab": {
-    "message": "Only show on new tab"
+    "message": "Only show on new tabs"
   },
   "policy_description_DisplayMenuBar": {
     "message": "Show the menu bar"
@@ -804,28 +804,28 @@
     "message": "Sources d'installation autorisées. L'emplacement du fichier *.xpi et la page à partir de laquelle le téléchargement est lancé doivent être autorisés. Match patterns allowed, see info link."
   },
   "policy_description_ExtensionSettings_install_url": {
-    "message": "installer l'URL. Si vous installez à partir du système de fichiers local, utilisez un fichier://// URI."
+    "message": "Installer l'URL. Si vous installez à partir du système de fichiers local, utilisez un fichier://// URI."
   },
   "policy_description_ExtensionSettings_installation_mode": {
-    "message": "installation"
+    "message": "Installation"
   },
   "policy_description_ExtensionSettings_installation_mode_allowed_all": {
-    "message": "l'installation d'add-ons par l'utilisateur est autorisée"
+    "message": "L'installation d'add-ons par l'utilisateur est autorisée"
   },
   "policy_description_ExtensionSettings_installation_mode_allowed_single": {
-    "message": "l'installation de cet add-on par l'utilisateur est autorisée"
+    "message": "L'installation de cet add-on par l'utilisateur est autorisée"
   },
   "policy_description_ExtensionSettings_installation_mode_blocked_all": {
-    "message": "l'installation de l'add-on par l'utilisateur n'est pas autorisée et l'add-on déjà installé sera supprimé de l'appareil"
+    "message": "L'installation de l'add-on par l'utilisateur n'est pas autorisée et l'add-on déjà installé sera supprimé de l'appareil"
   },
   "policy_description_ExtensionSettings_installation_mode_blocked_single": {
-    "message": "l'installation de cet add-on par l'utilisateur n'est pas autorisée et l'add-on sera supprimé de l'appareil s'il est déjà installé"
+    "message": "L'installation de cet add-on par l'utilisateur n'est pas autorisée et l'add-on sera supprimé de l'appareil s'il est déjà installé"
   },
   "policy_description_ExtensionSettings_installation_mode_force_installed": {
-    "message": "l'add-on est automatiquement installé et ne peut pas être supprimé par l'utilisateur (nécessite une url d'installation)"
+    "message": "L'add-on est automatiquement installé et ne peut pas être supprimé par l'utilisateur (nécessite une url d'installation)"
   },
   "policy_description_ExtensionSettings_installation_mode_normal_installed": {
-    "message": "l'add-on est automatiquement installé mais peut être désactivé par l'utilisateur (nécessite une url d'installation)"
+    "message": "L'add-on est automatiquement installé mais peut être désactivé par l'utilisateur (nécessite une url d'installation)"
   },
   "policy_description_ExtensionSettings_key": {
     "message": "Add-on ID"
@@ -903,13 +903,13 @@
     "message": "Enable or disable all of the features below"
   },
   "policy_description_GenerativeAI_LinkPreviews": {
-    "message": "AI summary for link preview"
+    "message": "AI summaries for link previews"
   },
   "policy_description_GenerativeAI_TabGroups": {
     "message": "Suggestions for tab groups (group name, tabs)"
   },
   "policy_description_GoToIntranetSiteForSingleWordEntryInAddressBar": {
-    "message": "Force direct intranet site navigation instead of searching when typing single word entries in the address bar"
+    "message": "Force direct intranet site navigation instead of searching when typing single-word entries in the address bar"
   },
   "policy_description_Handlers": {
     "message": "Configure default application handlers"
@@ -921,10 +921,10 @@
     "message": "Save to disk"
   },
   "policy_description_Handlers_property_action_useHelperApp": {
-    "message": "open with application"
+    "message": "Open with application"
   },
   "policy_description_Handlers_property_action_useSystemDefault": {
-    "message": "use system default"
+    "message": "Use system default"
   },
   "policy_description_Handlers_property_ask": {
     "message": "Ask the user what they want to do with the file"
@@ -993,7 +993,7 @@
     "message": "Websites that will not automatically be upgraded to HTTPS"
   },
   "policy_description_HttpsOnlyMode": {
-    "message": "Configure HTTPS-Only Mode"
+    "message": "Configure HTTPS-Only mode"
   },
   "policy_description_HttpsOnlyMode_allowed": {
     "message": "Off by default, but the user can turn it on"
@@ -1050,10 +1050,10 @@
     "message": "Ne pas créer les favoris par défaut fournis avec Firefox, y compris les signets intelligents (les plus visités, les balises récentes). Note : cette politique n'est efficace que si elle est utilisée avant la première exécution du profil"
   },
   "policy_description_OfferToSaveLogins": {
-    "message": "Allow Firefox to offer to remember logins and passwords (cannot be overwritten)"
+    "message": "Allow Firefox to offer to remember logins and passwords (cannot be changed)"
   },
   "policy_description_OfferToSaveLoginsDefault": {
-    "message": "Allow Firefox to offer to remember logins and passwords (can be overwritten by the user)"
+    "message": "Allow Firefox to offer to remember logins and passwords (can be changed by the user)"
   },
   "policy_description_OverrideFirstRunPage": {
     "message": "Remplacer la première page d'exécution. Définissez cette politique à vide si vous voulez désactiver la première page d'exécution."
@@ -1173,7 +1173,7 @@
     "message": "Block new requests asking to access your virtual reality devices"
   },
   "policy_description_PictureInPicture": {
-    "message": "Enable or disable the picture in picture feature for videos"
+    "message": "Enable or disable the Picture-in-Picture feature for videos"
   },
   "policy_description_PopupBlocking": {
     "message": "Autoriser ou refuser l'utilisation des fenêtres pop-up"
@@ -1182,10 +1182,10 @@
     "message": "Domaines pour lesquels les fenêtres pop-up sont autorisées"
   },
   "policy_description_PopupBlocking_Default_false": {
-    "message": "les pop-ups ne sont pas bloqués par défaut"
+    "message": "Les pop-ups ne sont pas bloqués par défaut"
   },
   "policy_description_PopupBlocking_Default_true": {
-    "message": "les pop-ups sont bloqués par défaut"
+    "message": "Les pop-ups sont bloqués par défaut"
   },
   "policy_description_PostQuantumKeyAgreementEnabled": {
     "message": "Enable post-quantum key agreement for TLS"
@@ -1206,7 +1206,7 @@
     "message": "Preference can be changed and appears as default in case of non-default value"
   },
   "policy_description_Preferences_Status_locked": {
-    "message": "Preference can not be changed and appears as default in case of non-default value"
+    "message": "Preference cannot be changed and appears as default in case of non-default value"
   },
   "policy_description_Preferences_Status_user": {
     "message": "Preference can be changed and appears as modified in case of non-default value"
@@ -1227,7 +1227,7 @@
     "message": "Value"
   },
   "policy_description_PrimaryPassword": {
-    "message": "Require or prevent using a primary password (formerly known as  master password)"
+    "message": "Require or prevent using a primary password (formerly known as master password)"
   },
   "policy_description_PrimaryPassword_false": {
     "message": "Remove the primary password functionality"
@@ -1275,7 +1275,7 @@
     "message": "Proxy HTTP. Pour configurer les numéros de port, veuillez ajouter un “:“ suivi du numéro de port"
   },
   "policy_description_Proxy_Mode_autoConfig": {
-    "message": "url de configuration automatique du proxy"
+    "message": "URL de configuration automatique du proxy"
   },
   "policy_description_Proxy_Mode_autoDetect": {
     "message": "Détection automatique des paramètres de proxy pour ce réseau"
@@ -1308,7 +1308,7 @@
     "message": "Ne pas utiliser ce serveur proxy pour tous les protocoles."
   },
   "policy_description_Proxy_UseHTTPProxyForAllProtocols_true": {
-    "message": "utiliser ce serveur proxy pour tous les protocoles"
+    "message": "Utiliser ce serveur proxy pour tous les protocoles"
   },
   "policy_description_Proxy_UseProxyForDNS": {
     "message": "Proxy DNS lors de l'utilisation de SOCKS v5"
@@ -1326,7 +1326,7 @@
     "message": "Le paquet de langue correspondant doit être installé. Laissez vide pour utiliser la langue du système d'exploitation."
   },
   "policy_description_RequestedLocales_Value": {
-    "message": "Langage du Code"
+    "message": "Langage du code"
   },
   "policy_description_SanitizeOnShutdown": {
     "message": "Effacer les données du navigateur lors de l'arrêt de l'ordinateur"
@@ -1362,10 +1362,10 @@
     "message": "Faire en sorte que la barre de recherche soit unifiée ou séparée"
   },
   "policy_description_SearchBar_options_separate": {
-    "message": "il y a une barre de recherche séparée"
+    "message": "Il y a une barre de recherche séparée"
   },
   "policy_description_SearchBar_options_unified": {
-    "message": "la recherche et la barre d'adresse sont unifiées"
+    "message": "La recherche et la barre d'adresse sont unifiées"
   },
   "policy_description_SearchEngines": {
     "message": "Modifier la liste des moteurs de recherche intégrés à Firefox"
@@ -1494,7 +1494,7 @@
     "message": "Disable onboarding screen for new users"
   },
   "policy_description_UserMessaging_UrlbarInterventions": {
-    "message": "Show Firefox specific suggestions in the URL bar"
+    "message": "Show Firefox-specific suggestions in the URL bar"
   },
   "policy_description_UseSystemPrintDialog": {
     "message": "Use the system print dialog instead of the print preview window"
@@ -1521,13 +1521,13 @@
     "message": "The extension is free of charge. Your voluntary donation enables me to continue integrating new features and enterprise policies."
   },
   "requirement_macOS": {
-    "message": "works only on macOS"
+    "message": "Works only on macOS"
   },
   "requirement_windows": {
-    "message": "fonctionne sur Windows"
+    "message": "Fonctionne sur Windows"
   },
   "requirement_windows_or_linux": {
-    "message": "fonctionne sur Windows et Linux"
+    "message": "Fonctionne sur Windows et Linux"
   },
   "save_dialog_btn_ok": {
     "message": "Sauvegarder la configuration"
@@ -1539,19 +1539,19 @@
     "message": "Sauvegarder la configuration"
   },
   "title_add_item": {
-    "message": "add item"
+    "message": "Add item"
   },
   "title_apply_configuration": {
     "message": "Charger configuration"
   },
   "title_move_item": {
-    "message": "move item"
+    "message": "Move item"
   },
   "title_remove_configuration": {
     "message": "Supprimer la configuration"
   },
   "title_remove_item": {
-    "message": "remove item"
+    "message": "Remove item"
   },
   "validation_invalid_json": {
     "message": "invalid JSON"
@@ -1560,24 +1560,24 @@
     "message": "invalid number"
   },
   "validation_invalid_url": {
-    "message": "Adresse invalide"
+    "message": "adresse invalide"
   },
   "validation_invalid_version": {
     "message": "invalid version pattern"
   },
   "validation_missing_placeholder_s": {
-    "message": "Placeholder “%s” missing"
+    "message": "placeholder “%s” missing"
   },
   "validation_missing_placeholder_searchterms": {
-    "message": "Placeholder “{searchterms}” missing"
+    "message": "placeholder “{searchterms}” missing"
   },
   "validation_required": {
-    "message": "Obligatoire"
+    "message": "obligatoire"
   },
   "version_or_higher": {
     "message": "ou plus haut"
   },
   "version_required": {
-    "message": "nécessite au moins"
+    "message": "Nécessite au moins"
   }
 }
