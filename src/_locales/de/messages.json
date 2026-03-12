@@ -54,25 +54,25 @@
     "message": "Konfiguration nicht kompatibel"
   },
   "enum_value_block_no": {
-    "message": "nicht blockieren"
+    "message": "Nicht blockieren"
   },
   "enum_value_block_yes": {
-    "message": "blockieren"
+    "message": "Blockieren"
   },
   "enum_value_enable_no": {
-    "message": "deaktivieren"
+    "message": "Deaktivieren"
   },
   "enum_value_enable_yes": {
-    "message": "aktivieren"
+    "message": "Aktivieren"
   },
   "enum_value_no": {
-    "message": "nein"
+    "message": "Nein"
   },
   "enum_value_no_preference": {
-    "message": "keine Voreinstellung"
+    "message": "Keine Voreinstellung"
   },
   "enum_value_yes": {
-    "message": "ja"
+    "message": "Ja"
   },
   "explanation_about_policies": {
     "message": "Unter about:policies gibt es eine Übersicht über alle aktiven Richtlinien sowie Fehler in der Datei „policies.json“."
@@ -111,13 +111,13 @@
     "message": "Auswahl der Richtlinien"
   },
   "link_copy_to_clipboard": {
-    "message": "in die Zwischenablage kopieren"
+    "message": "In die Zwischenablage kopieren"
   },
   "link_download": {
     "message": "policies.json herunterladen"
   },
   "link_learn_more": {
-    "message": "weitere Informationen"
+    "message": "Weitere Informationen"
   },
   "link_load_configuration": {
     "message": "Konfiguration laden"
@@ -147,7 +147,7 @@
     "message": "Einstellungsname nicht erlaubt"
   },
   "policy_category_block_access": {
-    "message": "Zugang blockieren"
+    "message": "Zugriff blockieren"
   },
   "policy_category_customization": {
     "message": "Anpassung"
@@ -255,19 +255,19 @@
     "message": "Firefox-Updates im Hintergrund installieren, wenn die Anwendung nicht läuft"
   },
   "policy_description_BlockAboutAddons": {
-    "message": "Blockiere Zugang zur Erweiterungs-Verwaltung (about:addons)"
+    "message": "Zugriff auf Erweiterungs-Verwaltung (about:addons) blockieren"
   },
   "policy_description_BlockAboutConfig": {
-    "message": "Blockiere Zugang zur Browser-Konfiguration (about:config)"
+    "message": "Zugriff auf Browser-Konfiguration (about:config) blockieren"
   },
   "policy_description_BlockAboutProfiles": {
-    "message": "Blockiere Zugang zur Profil-Verwaltung (about:profiles)"
+    "message": "Zugriff auf Profil-Verwaltung (about:profiles) blockieren"
   },
   "policy_description_BlockAboutSupport": {
-    "message": "Blockiere Zugang zu den Informationen zur Fehlerbehebung (about:support)"
+    "message": "Zugriff zu den Informationen zur Fehlerbehebung (about:support) blockieren"
   },
   "policy_description_Bookmarks": {
-    "message": "Erstelle Standard-Lesezeichen"
+    "message": "Standard-Lesezeichen erstellen"
   },
   "policy_description_Bookmarks_Favicon": {
     "message": "Favicon"
@@ -474,16 +474,16 @@
     "message": "Druck-Vorgänge"
   },
   "policy_description_ContentAnalysis_InterceptionPoints_Print_Enabled": {
-    "message": "Ob Druckvorgänge die DLP verwenden sollten"
+    "message": "Ob Druckvorgänge die DLP verwenden sollen"
   },
   "policy_description_ContentAnalysis_IsPerUser": {
     "message": "Ob die vom DLP-Agenten erstellte Leitung pro Benutzer oder pro System gilt"
   },
   "policy_description_ContentAnalysis_IsPerUser_per_system": {
-    "message": "pro System"
+    "message": "Pro System"
   },
   "policy_description_ContentAnalysis_IsPerUser_per_user": {
-    "message": "pro Benutzer (Standard)"
+    "message": "Pro Benutzer (Standard)"
   },
   "policy_description_ContentAnalysis_MaxConnectionsCount_label": {
     "message": "Maximale Anzahl gleichzeitiger Verbindungen zum DLP-Agenten"
@@ -627,19 +627,19 @@
     "message": "Das Hinzufügen einer Ausnahme verhindern, wenn ein ungültiges Zertifikat angezeigt wird"
   },
   "policy_description_DisableSecurityBypass_InvalidCertificate_false": {
-    "message": "nicht verhindern"
+    "message": "Nicht verhindern"
   },
   "policy_description_DisableSecurityBypass_InvalidCertificate_true": {
-    "message": "verhindern"
+    "message": "Verhindern"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing": {
     "message": "Das Umgehen der Warnung und Besuchen einer schädlichen Webseite verhindern"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_false": {
-    "message": "nicht verhindern"
+    "message": "Nicht verhindern"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_true": {
-    "message": "verhindern"
+    "message": "Verhindern"
   },
   "policy_description_DisableSetDesktopBackground": {
     "message": "Deaktiviere die Funktion, eine Grafik als Hintergrundbild zu verwenden"
@@ -660,7 +660,7 @@
     "message": "Nie anzeigen"
   },
   "policy_description_DisplayBookmarksToolbar_newtab": {
-    "message": "Nur bei neuem Tab anzeigen"
+    "message": "Nur bei neuen Tabs anzeigen"
   },
   "policy_description_DisplayMenuBar": {
     "message": "Zeige die Menüleiste"
@@ -921,7 +921,7 @@
     "message": "Datei speichern"
   },
   "policy_description_Handlers_property_action_useHelperApp": {
-    "message": "mit Anwendung öffnen"
+    "message": "Mit Anwendung öffnen"
   },
   "policy_description_Handlers_property_action_useSystemDefault": {
     "message": "System-Standard verwenden"
@@ -951,19 +951,19 @@
     "message": "Dateiendung"
   },
   "policy_description_Handlers_type_file_extension_placeholder": {
-    "message": "zum Beispiel „pdf“"
+    "message": "Zum Beispiel „pdf“"
   },
   "policy_description_Handlers_type_mime_type": {
     "message": "MIME-Type"
   },
   "policy_description_Handlers_type_mime_type_placeholder": {
-    "message": "zum Beispiel „application/msword“"
+    "message": "Zum Beispiel „application/msword“"
   },
   "policy_description_Handlers_type_schema": {
     "message": "Schema"
   },
   "policy_description_Handlers_type_schema_placeholder": {
-    "message": "zum Beispiel „mailto“"
+    "message": "Zum Beispiel „mailto“"
   },
   "policy_description_HardwareAcceleration": {
     "message": "Hardwarebeschleunigung deaktivieren"
@@ -1068,10 +1068,10 @@
     "message": "Verhindern, dass Firefox Passwörter für bestimmte Websites speichert"
   },
   "policy_description_PDFjs": {
-    "message": "Deaktivieren oder Konfigurieren des integrierten PDF-Betrachters"
+    "message": "Konfiguration des integrierten PDF-Betrachters"
   },
   "policy_description_PDFjs_Enabled": {
-    "message": "Den integrierten PDF-Betrachter deaktivieren"
+    "message": "Den integrierten PDF-Betrachter aktivieren oder deaktivieren"
   },
   "policy_description_PDFjs_EnablePermissions": {
     "message": "Dokumenten-Berechtigungen wie das Verhindern des Kopierens von Text berücksichtigen"
@@ -1236,7 +1236,7 @@
     "message": "Die Verwendung eines Hauptpassworts erzwingen"
   },
   "policy_description_PrintingEnabled": {
-    "message": "Drucken-Funktion aktivieren oder deaktivieren"
+    "message": "Druckfunktion aktivieren oder deaktivieren"
   },
   "policy_description_PrivateBrowsingModeAvailability": {
     "message": "Verfügbarkeit privater Fenster festlegen"
@@ -1305,10 +1305,10 @@
     "message": "SSL-Proxy. Um eine Port-Nummer festzulegen bitte „:“ gefolgt von der Portnummer ergänzen"
   },
   "policy_description_Proxy_UseHTTPProxyForAllProtocols_false": {
-    "message": "diesen Proxy-Server nicht für alle Protokolle verwenden"
+    "message": "Diesen Proxy-Server nicht für alle Protokolle verwenden"
   },
   "policy_description_Proxy_UseHTTPProxyForAllProtocols_true": {
-    "message": "diesen Proxy-Server für alle Protokolle verwenden"
+    "message": "Diesen Proxy-Server für alle Protokolle verwenden"
   },
   "policy_description_Proxy_UseProxyForDNS": {
     "message": "Bei Verwendung von SOCKS v5 den Proxy für DNS-Anfragen verwenden"
@@ -1362,13 +1362,13 @@
     "message": "Legt fest, ob die Suchleiste mit der Adressleiste kombiniert oder separat ist"
   },
   "policy_description_SearchBar_options_separate": {
-    "message": "es gibt eine separate Suchleiste"
+    "message": "Es gibt eine separate Suchleiste"
   },
   "policy_description_SearchBar_options_unified": {
-    "message": "die Suchleiste ist mit der Adressleiste kombiniert"
+    "message": "Die Suchleiste ist mit der Adressleiste kombiniert"
   },
   "policy_description_SearchEngines": {
-    "message": "Ändere die Liste der in Firefox eingebauten Suchmaschinen"
+    "message": "Liste der in Firefox eingebauten Suchmaschinen ändern"
   },
   "policy_description_SearchEngines_Add": {
     "message": "Suchmaschine(n) hinzufügen"
@@ -1398,7 +1398,7 @@
     "message": "Name"
   },
   "policy_description_SearchEngines_Add_PostData": {
-    "message": "POST Data (wenn POST-Methode gewählt wurde; z.B. q={searchTerms}&anotherParam=yes)"
+    "message": "POST-Daten (wenn POST-Methode gewählt wurde; z.B. q={searchTerms}&anotherParam=yes)"
   },
   "policy_description_SearchEngines_Add_SuggestURLTemplate": {
     "message": "URL für Vorschläge. Bitte {searchTerms} als Platzhalter für den Suchbegriff verwenden"
@@ -1521,13 +1521,13 @@
     "message": "Die Erweiterung ist kostenlos. Ihre freiwillige Spende ermöglicht es, die Integration neuer Funktionen und Unternehmensrichtlinien fortzuführen."
   },
   "requirement_macOS": {
-    "message": "funktioniert nur auf macOS"
+    "message": "Funktioniert nur auf macOS"
   },
   "requirement_windows": {
-    "message": "funktioniert nur auf Windows"
+    "message": "Funktioniert nur auf Windows"
   },
   "requirement_windows_or_linux": {
-    "message": "funktioniert nur auf Windows und Linux"
+    "message": "Funktioniert nur auf Windows und Linux"
   },
   "save_dialog_btn_ok": {
     "message": "Konfiguration speichern"
@@ -1566,7 +1566,7 @@
     "message": "ungültige Versionsangabe"
   },
   "validation_missing_placeholder_s": {
-    "message": "Platzhalter „%s” fehlt"
+    "message": "Platzhalter „%s“ fehlt"
   },
   "validation_missing_placeholder_searchterms": {
     "message": "Platzhalter „{searchterms}” fehlt"
