@@ -77,7 +77,7 @@
 - Added sourcemeta/jsonschema for validation of the new JSON configuration
 - Updated eslint from version 9.39.2 to 10.0.3
 - Updated eslint/json from version 0.14.0 to 1.1.0
-- Updated eslint-plugin-jsdoc from version 61.4.1 to 62.7.1
+- Updated eslint-plugin-jsdoc from version 61.4.1 to 62.8.0
 - Updated stylelint from version 17.0.0 to 17.4.0
 - Updated stylelint-order from version 7.0.1 to 8.0.0
 - Updated stylistic/eslint-plugin from version 5.7.1 to 5.10.0
