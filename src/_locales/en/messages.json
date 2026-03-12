@@ -1566,10 +1566,10 @@
     "message": "invalid version pattern"
   },
   "validation_missing_placeholder_s": {
-    "message": "Placeholder “%s” missing"
+    "message": "placeholder “%s” missing"
   },
   "validation_missing_placeholder_searchterms": {
-    "message": "Placeholder “{searchterms}” missing"
+    "message": "placeholder “{searchterms}” missing"
   },
   "validation_required": {
     "message": "required"
