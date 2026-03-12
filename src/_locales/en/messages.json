@@ -30,19 +30,19 @@
     "message": "URL"
   },
   "configuration_export": {
-    "message": "export configuration"
+    "message": "Export configuration"
   },
   "configuration_import": {
-    "message": "import configuration"
+    "message": "Import configuration"
   },
   "configuration_incompatible_btn_get_in_touch": {
-    "message": "Get migrated configuration"
+    "message": "Request migrated configuration"
   },
   "configuration_incompatible_bullet_1": {
     "message": "The configuration must be recreated and saved."
   },
   "configuration_incompatible_bullet_2": {
-    "message": "Get in touch and receive a migrated version of your configuration so that you don't have to recreate it yourself – completely free of charge, of course."
+    "message": "Get in touch to receive a migrated version of your configuration, so you don’t need to recreate it yourself, completely free of charge."
   },
   "configuration_incompatible_bullet_3": {
     "message": "You can still load your current configuration in older versions of Enterprise Policy Generator."
@@ -54,37 +54,37 @@
     "message": "Configuration not compatible"
   },
   "enum_value_block_no": {
-    "message": "don't block"
+    "message": "Do not block"
   },
   "enum_value_block_yes": {
-    "message": "block"
+    "message": "Block"
   },
   "enum_value_enable_no": {
-    "message": "disable"
+    "message": "Disable"
   },
   "enum_value_enable_yes": {
-    "message": "enable"
+    "message": "Enable"
   },
   "enum_value_no": {
-    "message": "no"
+    "message": "No"
   },
   "enum_value_no_preference": {
-    "message": "no preference"
+    "message": "No preference"
   },
   "enum_value_yes": {
-    "message": "yes"
+    "message": "Yes"
   },
   "explanation_about_policies": {
-    "message": "There is an overview of all active policies and errors in the file “policies.json” at about:policies."
+    "message": "You can view an overview of all active policies and errors at about:policies."
   },
   "explanation_headline_usage": {
     "message": "Usage"
   },
   "explanation_intro": {
-    "message": "By clicking on the button a code will be generated. This code must be stored in a file “policies.json” which must be stored in the distribution directory."
+    "message": "Click the button to generate the code. Save it in a file named “policies.json” in the distribution directory."
   },
   "explanation_intro_linux": {
-    "message": "Create a directory called “distribution” in the directory where Firefox is located and place the file “policies.json” there. You can also specify system-wide policy by placing the file in /etc/firefox/policies."
+    "message": "Create a directory called “distribution” in the directory where Firefox is located and place the file “policies.json” there. You can also specify system-wide policies by placing the file in /etc/firefox/policies."
   },
   "explanation_intro_macos": {
     "message": "Create a “distribution” directory inside the /Contents/Resources/ directory of the Firefox application package and place the file “policies.json” there. To open the application package, right-click on the Firefox application in the Finder and choose “show package contents” from the context menu."
@@ -105,31 +105,31 @@
     "message": "Close filter"
   },
   "generate_button": {
-    "message": "Generate Policies"
+    "message": "Generate policies"
   },
   "generate_headline": {
     "message": "Policies selection"
   },
   "link_copy_to_clipboard": {
-    "message": "copy to clipboard"
+    "message": "Copy to clipboard"
   },
   "link_download": {
-    "message": "download policies.json"
+    "message": "Download policies.json"
   },
   "link_learn_more": {
-    "message": "more information"
+    "message": "More information"
   },
   "link_load_configuration": {
-    "message": "load configuration"
+    "message": "Load configuration"
   },
   "link_save_configuration": {
-    "message": "save configuration"
+    "message": "Save configuration"
   },
   "list_dialog_no_saved_configurations": {
     "message": "No configurations have been saved yet."
   },
   "list_dialog_window_title": {
-    "message": "Load Configuration"
+    "message": "Load configuration"
   },
   "list_table_actions": {
     "message": "Actions"
@@ -147,19 +147,19 @@
     "message": "Preference name not allowed"
   },
   "policy_category_block_access": {
-    "message": "Block Access"
+    "message": "Block access"
   },
   "policy_category_customization": {
     "message": "Customization"
   },
   "policy_category_disable_features": {
-    "message": "Disable Features"
+    "message": "Disable features"
   },
   "policy_category_network": {
     "message": "Network"
   },
   "policy_category_others": {
-    "message": "Other Policies"
+    "message": "Other policies"
   },
   "policy_category_privacy": {
     "message": "Privacy"
@@ -168,7 +168,7 @@
     "message": "Security"
   },
   "policy_category_updates_and_data": {
-    "message": "Updates & Data Collection"
+    "message": "Updates & data collection"
   },
   "policy_description_3rdParty": {
     "message": "Preconfiguration of settings for extensions that use chrome.storage.managed"
@@ -198,7 +198,7 @@
     "message": "If only a major version (“xxx”) is specified, only minor and patch updates will be installed. If a major plus minor version (“xxx.xx”) is specified, only patch updates will be installed."
   },
   "policy_description_AppUpdatePin_placeholder": {
-    "message": "Firefox version (expected: “xxx” oder “xxx.xx”)"
+    "message": "Firefox version (expected: “xxx” or “xxx.xx”)"
   },
   "policy_description_AppUpdateURL": {
     "message": "Different server URL for Firefox updates"
@@ -222,7 +222,7 @@
     "message": "Always allow NTLM with proxy servers"
   },
   "policy_description_Authentication_AllowProxies_SPNEGO": {
-    "message": "Always allow NTLM with proxy servers"
+    "message": "Always allow SPNEGO with proxy servers"
   },
   "policy_description_Authentication_Delegated": {
     "message": "Delegated"
@@ -279,10 +279,10 @@
     "message": "Placement"
   },
   "policy_description_Bookmarks_Placement_Menu": {
-    "message": "Bookmarks Menu"
+    "message": "Bookmarks menu"
   },
   "policy_description_Bookmarks_Placement_Toolbar": {
-    "message": "Bookmarks Toolbar"
+    "message": "Bookmarks toolbar"
   },
   "policy_description_Bookmarks_Title": {
     "message": "Title"
@@ -303,13 +303,13 @@
     "message": "Configure certificates"
   },
   "policy_description_Certificates_ImportEnterpriseRoots": {
-    "message": "read certificates from the system certificate store (Windows and macOS only)"
+    "message": "Read certificates from the system certificate store (Windows and macOS only)"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_false": {
-    "message": "don't read certificates from the system certificate store"
+    "message": "Do not read certificates from the system certificate store"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_true": {
-    "message": "read certificates from the system certificate store"
+    "message": "Read certificates from the system certificate store"
   },
   "policy_description_Certificates_Install": {
     "message": "Import certificates (Windows: %USERPROFILE%\\AppData\\Local\\Mozilla\\Certificates or %USERPROFILE%\\AppData\\Roaming\\Mozilla\\Certificates, macOS: /Library/Application Support/Mozilla/Certificates or ~/Library/Application Support/Mozilla/Certificates, Linux: /usr/lib/mozilla/certificates, /usr/lib64/mozilla/certificates or ~/.mozilla/certificates)"
@@ -411,7 +411,7 @@
     "message": "Default: 300"
   },
   "policy_description_ContentAnalysis_AllowUrlRegexList": {
-    "message": "Regular expressions that indicates URLs for which DLP operations will always be allowed without consulting the agent (Default: ^about:(?!blank|srcdoc).*)"
+    "message": "Regular expressions that indicate URLs for which DLP operations will always be allowed without consulting the agent (Default: ^about:(?!blank|srcdoc).*)"
   },
   "policy_description_ContentAnalysis_BypassForSameTabOperations": {
     "message": "Automatically allow DLP requests whose data comes from the same tab and frame"
@@ -432,7 +432,7 @@
     "message": "Allow the request"
   },
   "policy_description_ContentAnalysis_DenyUrlRegexList": {
-    "message": "Regular expressions that indicates URLs for which DLP operations will always be denied without consulting the agent"
+    "message": "Regular expressions that indicate URLs for which DLP operations will always be denied without consulting the agent"
   },
   "policy_description_ContentAnalysis_Enabled": {
     "message": "Enable Data Loss Prevention"
@@ -480,10 +480,10 @@
     "message": "Whether the pipe the DLP agent has created is per-user or per-system"
   },
   "policy_description_ContentAnalysis_IsPerUser_per_system": {
-    "message": "per system"
+    "message": "Per system"
   },
   "policy_description_ContentAnalysis_IsPerUser_per_user": {
-    "message": "per user (Default)"
+    "message": "Per user (Default)"
   },
   "policy_description_ContentAnalysis_MaxConnectionsCount_label": {
     "message": "Maximum number of concurrent connections to the DLP agent"
@@ -501,7 +501,7 @@
     "message": "Show a notification when a DLP request is denied"
   },
   "policy_description_ContentAnalysis_TimeoutResult": {
-    "message": "Behavior for DLP requests if the DLP agent does not respond to a request in less than the specified number of seconds"
+    "message": "Behavior for DLP requests if the DLP agent does not respond within the specified number of seconds"
   },
   "policy_description_Cookies": {
     "message": "Allow or deny websites to set cookies"
@@ -570,7 +570,7 @@
     "message": "You can use ${home} for the native home directory"
   },
   "policy_description_DisableAccounts": {
-    "message": "Disable Mozilla account based services like Firefox Sync"
+    "message": "Disable Mozilla account-based services like Firefox Sync"
   },
   "policy_description_DisableAppUpdate": {
     "message": "Prevent Firefox from updating"
@@ -615,7 +615,7 @@
     "message": "Disable the “Refresh Firefox” button in about:support"
   },
   "policy_description_DisableRemoteImprovements": {
-    "message": "Firefox daran hindern, Funktionen, Leistung und Stabilität zwischen den Updates zu verbessern"
+    "message": "Prevent Firefox from applying performance, stability, and feature changes between updates"
   },
   "policy_description_DisableSafeMode": {
     "message": "Disable the menu item to restart Firefox with add-ons disabled (safe mode)"
@@ -627,19 +627,19 @@
     "message": "Prevent adding an exception when an invalid certificate is shown"
   },
   "policy_description_DisableSecurityBypass_InvalidCertificate_false": {
-    "message": "don't prevent"
+    "message": "Do not prevent"
   },
   "policy_description_DisableSecurityBypass_InvalidCertificate_true": {
-    "message": "prevent"
+    "message": "Prevent"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing": {
     "message": "Prevent the warning from being bypassed and a malicious website from being visited"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_false": {
-    "message": "don't prevent"
+    "message": "Do not prevent"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_true": {
-    "message": "prevent"
+    "message": "Prevent"
   },
   "policy_description_DisableSetDesktopBackground": {
     "message": "Disable the feature to set an image as desktop background"
@@ -660,7 +660,7 @@
     "message": "Never show"
   },
   "policy_description_DisplayBookmarksToolbar_newtab": {
-    "message": "Only show on new tab"
+    "message": "Only show on new tabs"
   },
   "policy_description_DisplayMenuBar": {
     "message": "Show the menu bar"
@@ -702,7 +702,7 @@
     "message": "Check on startup if Firefox is the default browser"
   },
   "policy_description_DontCheckDefaultBrowser_options_true": {
-    "message": "Don't check on startup if Firefox is the default browser"
+    "message": "Do not check on startup if Firefox is the default browser"
   },
   "policy_description_DownloadDirectory": {
     "message": "Set and lock the download directory"
@@ -783,10 +783,10 @@
     "message": "Themes"
   },
   "policy_description_ExtensionSettings_blocked_install_message_all": {
-    "message": "Error message to display to the user when trying to install an blocked add-on"
+    "message": "Error message to display to the user when trying to install a blocked add-on"
   },
   "policy_description_ExtensionSettings_blocked_install_message_placeholder": {
-    "message": "error message"
+    "message": "Error message"
   },
   "policy_description_ExtensionSettings_blocked_install_message_single": {
     "message": "Error message to display to the user when trying to install the blocked add-on"
@@ -801,31 +801,31 @@
     "message": "Pinned to the navigation toolbar"
   },
   "policy_description_ExtensionSettings_install_sources": {
-    "message": "Allowed installation sources. Both the location of the *.xpi file and the page where the download is started from must be allowed. Match patterns allowed, see info link."
+    "message": "Allowed installation sources. Both the location of the *.xpi file and the page where the download is started from must be allowed. Match patterns are allowed; see the info link."
   },
   "policy_description_ExtensionSettings_install_url": {
-    "message": "install URL. If installing from the local file system, use a file:/// URI."
+    "message": "Install URL. If installing from the local file system, use a file:/// URI."
   },
   "policy_description_ExtensionSettings_installation_mode": {
-    "message": "installation"
+    "message": "Installation"
   },
   "policy_description_ExtensionSettings_installation_mode_allowed_all": {
-    "message": "the installation of add-ons by the user is allowed"
+    "message": "The installation of add-ons by the user is allowed"
   },
   "policy_description_ExtensionSettings_installation_mode_allowed_single": {
-    "message": "the installation of this add-on by the user is allowed"
+    "message": "The installation of this add-on by the user is allowed"
   },
   "policy_description_ExtensionSettings_installation_mode_blocked_all": {
-    "message": "the installation of add-ons by the user is not allowed and already installed add-ons will be removed from the device"
+    "message": "The installation of add-ons by the user is not allowed and already installed add-ons will be removed from the device"
   },
   "policy_description_ExtensionSettings_installation_mode_blocked_single": {
-    "message": "the installation of this add-on by the user is not allowed and the add-on will be removed from the device if already installed"
+    "message": "The installation of this add-on by the user is not allowed and the add-on will be removed from the device if already installed"
   },
   "policy_description_ExtensionSettings_installation_mode_force_installed": {
-    "message": "the add-on is automatically installed and can't be removed by the user (requires an install url)"
+    "message": "The add-on is automatically installed and can't be removed by the user (requires an install URL)"
   },
   "policy_description_ExtensionSettings_installation_mode_normal_installed": {
-    "message": "the add-on is automatically installed but can be disabled by the user (requires an install url)"
+    "message": "The add-on is automatically installed but can be disabled by the user (requires an install url)"
   },
   "policy_description_ExtensionSettings_key": {
     "message": "Add-on ID"
@@ -903,13 +903,13 @@
     "message": "Enable or disable all of the features below"
   },
   "policy_description_GenerativeAI_LinkPreviews": {
-    "message": "AI summary for link preview"
+    "message": "AI summaries for link previews"
   },
   "policy_description_GenerativeAI_TabGroups": {
     "message": "Suggestions for tab groups (group name, tabs)"
   },
   "policy_description_GoToIntranetSiteForSingleWordEntryInAddressBar": {
-    "message": "Force direct intranet site navigation instead of searching when typing single word entries in the address bar"
+    "message": "Force direct intranet site navigation instead of searching when typing single-word entries in the address bar"
   },
   "policy_description_Handlers": {
     "message": "Configure default application handlers"
@@ -921,10 +921,10 @@
     "message": "Save to disk"
   },
   "policy_description_Handlers_property_action_useHelperApp": {
-    "message": "open with application"
+    "message": "Open with application"
   },
   "policy_description_Handlers_property_action_useSystemDefault": {
-    "message": "use system default"
+    "message": "Use system default"
   },
   "policy_description_Handlers_property_ask": {
     "message": "Ask the user what they want to do with the file"
@@ -993,7 +993,7 @@
     "message": "Websites that will not automatically be upgraded to HTTPS"
   },
   "policy_description_HttpsOnlyMode": {
-    "message": "Configure HTTPS-Only Mode"
+    "message": "Configure HTTPS-Only mode"
   },
   "policy_description_HttpsOnlyMode_allowed": {
     "message": "Off by default, but the user can turn it on"
@@ -1008,7 +1008,7 @@
     "message": "On and the user can’t turn it off"
   },
   "policy_description_LegacySameSiteCookieBehaviorEnabled": {
-    "message": "Enable the legacy default behaviour for SameSite cookies"
+    "message": "Enable the legacy default behavior for SameSite cookies"
   },
   "policy_description_LegacySameSiteCookieBehaviorEnabledForDomainList": {
     "message": "Enable the legacy behavior for SameSite cookies on specified websites"
@@ -1047,13 +1047,13 @@
     "message": "Enable or disable the page that appears when opening a new tab"
   },
   "policy_description_NoDefaultBookmarks": {
-    "message": "Don't create the default bookmarks bundled with Firefox, including the smart bookmarks (most visited, recent tags). Note: this policy is only effective if used before the first run of the profile"
+    "message": "Do not create the default bookmarks bundled with Firefox, including the smart bookmarks (most visited, recent tags). Note: this policy is only effective if used before the first run of the profile"
   },
   "policy_description_OfferToSaveLogins": {
-    "message": "Allow Firefox to offer to remember logins and passwords (cannot be overwritten)"
+    "message": "Allow Firefox to offer to remember logins and passwords (cannot be changed)"
   },
   "policy_description_OfferToSaveLoginsDefault": {
-    "message": "Allow Firefox to offer to remember logins and passwords (can be overwritten by the user)"
+    "message": "Allow Firefox to offer to remember logins and passwords (can be changed by the user)"
   },
   "policy_description_OverrideFirstRunPage": {
     "message": "Override the first run page. Set this policy to blank if you want to disable the first run page."
@@ -1173,7 +1173,7 @@
     "message": "Block new requests asking to access your virtual reality devices"
   },
   "policy_description_PictureInPicture": {
-    "message": "Enable or disable the picture in picture feature for videos"
+    "message": "Enable or disable the Picture-in-Picture feature for videos"
   },
   "policy_description_PopupBlocking": {
     "message": "Allow or deny pop-up usage"
@@ -1182,10 +1182,10 @@
     "message": "Domains for which pop-up windows are allowed"
   },
   "policy_description_PopupBlocking_Default_false": {
-    "message": "pop-ups are not blocked by default"
+    "message": "Pop-ups are not blocked by default"
   },
   "policy_description_PopupBlocking_Default_true": {
-    "message": "pop-ups are blocked by default"
+    "message": "Pop-ups are blocked by default"
   },
   "policy_description_PostQuantumKeyAgreementEnabled": {
     "message": "Enable post-quantum key agreement for TLS"
@@ -1206,7 +1206,7 @@
     "message": "Preference can be changed and appears as default in case of non-default value"
   },
   "policy_description_Preferences_Status_locked": {
-    "message": "Preference can not be changed and appears as default in case of non-default value"
+    "message": "Preference cannot be changed and appears as default in case of non-default value"
   },
   "policy_description_Preferences_Status_user": {
     "message": "Preference can be changed and appears as modified in case of non-default value"
@@ -1227,7 +1227,7 @@
     "message": "Value"
   },
   "policy_description_PrimaryPassword": {
-    "message": "Require or prevent using a primary password (formerly known as  master password)"
+    "message": "Require or prevent using a primary password (formerly known as master password)"
   },
   "policy_description_PrimaryPassword_false": {
     "message": "Remove the primary password functionality"
@@ -1263,10 +1263,10 @@
     "message": "Prompt for authentication"
   },
   "policy_description_Proxy_AutoLogin_false": {
-    "message": "prompt for authentication"
+    "message": "Prompt for authentication"
   },
   "policy_description_Proxy_AutoLogin_true": {
-    "message": "Don't prompt for authentication"
+    "message": "Do not prompt for authentication"
   },
   "policy_description_Proxy_FTPProxy": {
     "message": "FTP Proxy. To configure port numbers please add a “:” followed by the port number"
@@ -1275,19 +1275,19 @@
     "message": "HTTP Proxy. To configure port numbers please add a “:” followed by the port number"
   },
   "policy_description_Proxy_Mode_autoConfig": {
-    "message": "automatic proxy configuration url"
+    "message": "Automatic proxy configuration URL"
   },
   "policy_description_Proxy_Mode_autoDetect": {
-    "message": "auto-detect proxy settings for this network"
+    "message": "Auto-detect proxy settings for this network"
   },
   "policy_description_Proxy_Mode_manual": {
-    "message": "manual proxy configuration"
+    "message": "Manual proxy configuration"
   },
   "policy_description_Proxy_Mode_none": {
-    "message": "no proxy"
+    "message": "No proxy"
   },
   "policy_description_Proxy_Mode_system": {
-    "message": "use system proxy settings"
+    "message": "Use system proxy settings"
   },
   "policy_description_Proxy_Passthrough": {
     "message": "No proxy for …"
@@ -1305,19 +1305,19 @@
     "message": "SSL Proxy. To configure port numbers please add a “:” followed by the port number"
   },
   "policy_description_Proxy_UseHTTPProxyForAllProtocols_false": {
-    "message": "don't use this proxy server  for all protocols"
+    "message": "Do not use this proxy server for all protocols"
   },
   "policy_description_Proxy_UseHTTPProxyForAllProtocols_true": {
-    "message": "use this proxy server  for all protocols"
+    "message": "Use this proxy server for all protocols"
   },
   "policy_description_Proxy_UseProxyForDNS": {
     "message": "Proxy DNS when using SOCKS v5"
   },
   "policy_description_Proxy_UseProxyForDNS_false": {
-    "message": "don't use Proxy DNS"
+    "message": "Do not use Proxy DNS"
   },
   "policy_description_Proxy_UseProxyForDNS_true": {
-    "message": "use Proxy DNS"
+    "message": "Use Proxy DNS"
   },
   "policy_description_RequestedLocales": {
     "message": "Change interface language of Firefox"
@@ -1326,7 +1326,7 @@
     "message": "The corresponding language package must be installed. Leave empty to use the language of the operating system."
   },
   "policy_description_RequestedLocales_Value": {
-    "message": "Language Code"
+    "message": "Language code"
   },
   "policy_description_SanitizeOnShutdown": {
     "message": "Clear browsing data when Firefox closes"
@@ -1362,13 +1362,13 @@
     "message": "Whether the search bar is unified or separate"
   },
   "policy_description_SearchBar_options_separate": {
-    "message": "there is a separate search bar"
+    "message": "There is a separate search bar"
   },
   "policy_description_SearchBar_options_unified": {
-    "message": "the search and the address bar are unified"
+    "message": "The search and the address bar are unified"
   },
   "policy_description_SearchEngines": {
-    "message": "Modifies the list of search engines built into Firefox"
+    "message": "Modify the list of search engines built into Firefox"
   },
   "policy_description_SearchEngines_Add": {
     "message": "Add search engine(s)"
@@ -1386,7 +1386,7 @@
     "message": "Icon URL or data:image …"
   },
   "policy_description_SearchEngines_Add_Method": {
-    "message": "Request Method"
+    "message": "Request method"
   },
   "policy_description_SearchEngines_Add_Method_GET": {
     "message": "GET"
@@ -1413,10 +1413,10 @@
     "message": "Prevent the installation of new search engines"
   },
   "policy_description_SearchEngines_PreventInstalls_false": {
-    "message": "don't prevent installs"
+    "message": "Do not prevent installs"
   },
   "policy_description_SearchEngines_PreventInstalls_true": {
-    "message": "prevent installs"
+    "message": "Prevent installs"
   },
   "policy_description_SearchEngines_Remove": {
     "message": "Remove search engine(s)"
@@ -1494,7 +1494,7 @@
     "message": "Disable onboarding screen for new users"
   },
   "policy_description_UserMessaging_UrlbarInterventions": {
-    "message": "Show Firefox specific suggestions in the URL bar"
+    "message": "Show Firefox-specific suggestions in the URL bar"
   },
   "policy_description_UseSystemPrintDialog": {
     "message": "Use the system print dialog instead of the print preview window"
@@ -1503,7 +1503,7 @@
     "message": "Enable or disable reverse image search via Google Lens"
   },
   "policy_description_WebsiteFilter": {
-    "message": "Blocks websites from being visited. You can use “<all_urls>” for blocking all URLs. See info link for all valid entries, but only HTTPS and HTTP are supported."
+    "message": "Block access to websites. You can use “<all_urls>” to block all URLs. See the info link for all valid entries, but only HTTPS and HTTP are supported."
   },
   "policy_description_WebsiteFilter_Block": {
     "message": "Block the following URLs"
@@ -1521,37 +1521,37 @@
     "message": "The extension is free of charge. Your voluntary donation enables me to continue integrating new features and enterprise policies."
   },
   "requirement_macOS": {
-    "message": "works only on macOS"
+    "message": "Works only on macOS"
   },
   "requirement_windows": {
-    "message": "works only on Windows"
+    "message": "Works only on Windows"
   },
   "requirement_windows_or_linux": {
-    "message": "works only on Windows and Linux"
+    "message": "Works only on Windows and Linux"
   },
   "save_dialog_btn_ok": {
-    "message": "Save Configuration"
+    "message": "Save configuration"
   },
   "save_dialog_form_name": {
     "message": "Name"
   },
   "save_dialog_window_title": {
-    "message": "Save Configuration"
+    "message": "Save configuration"
   },
   "title_add_item": {
-    "message": "add item"
+    "message": "Add item"
   },
   "title_apply_configuration": {
-    "message": "load configuration"
+    "message": "Load configuration"
   },
   "title_move_item": {
-    "message": "move item"
+    "message": "Move item"
   },
   "title_remove_configuration": {
-    "message": "remove configuration"
+    "message": "Remove configuration"
   },
   "title_remove_item": {
-    "message": "remove item"
+    "message": "Remove item"
   },
   "validation_invalid_json": {
     "message": "invalid JSON"
@@ -1572,12 +1572,12 @@
     "message": "Placeholder “{searchterms}” missing"
   },
   "validation_required": {
-    "message": "mandatory"
+    "message": "required"
   },
   "version_or_higher": {
     "message": "or higher"
   },
   "version_required": {
-    "message": "requires at least"
+    "message": "Requires at least"
   }
 }
