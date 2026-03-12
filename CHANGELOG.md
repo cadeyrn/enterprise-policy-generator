@@ -6,10 +6,10 @@
 
 > [!IMPORTANT]
 > Important note for existing users: For technical reasons, it is not possible to load or import configurations that
-> were saved in earlier versions of the extensions into Enterprise Policy Generator 8.0 or higher. The following options
-> are available for you:
-> 
-> - Saved configurations must be recreated and saved in Enterprise Policy Generator 8.0 or higher. Compatibility with
+> were saved in earlier versions of the extension into Enterprise Policy Generator 8.0 or later. You have the following
+> options:
+>
+> - Saved configurations must be recreated and saved in Enterprise Policy Generator 8.0 or later. Compatibility with
 > future updates will be guaranteed again, as it has been in the past. This is a one-time incompatibility resulting
 > from a fundamental re-development of the extension.
 > - It is understandable that you want to be sure that saved configurations will continue to work without an update
@@ -26,14 +26,14 @@
 - Enterprise Policy Generator does not collect any data. A new property in the extension manifest makes this explicit.
   Users now see a corresponding note during installation and in the add-ons manager, see
   [#341](https://github.com/cadeyrn/enterprise-policy-generator/issues/341)
-- Firefox 140 or higher is required now. Also, Enterprise Policy Generator no
+- Firefox 140 or later is now required. Also, Enterprise Policy Generator no
   longer displays the minimum required Firefox version for policies implemented before Firefox 140.0, see
   [#316](https://github.com/cadeyrn/enterprise-policy-generator/issues/316)
-- Large parts of the extension backend have been rewritten from scratch. The new code base is significantly leaner and
-  more comprehensible, resulting in improved maintainability and allowing for faster delivery of updates. Further
+- Large parts of the extension backend have been rewritten from scratch. The new codebase is significantly leaner and
+  easier to understand, resulting in improved maintainability and allowing for faster delivery of updates. Further
   advantages include greater consistency in layout and fewer bugs in edge cases. The development workflow has also been
   updated, and a schema for validating the completely new JSON-based configuration has been introduced to simplify
-  development. see [#306](https://github.com/cadeyrn/enterprise-policy-generator/issues/306)
+  development, see [#306](https://github.com/cadeyrn/enterprise-policy-generator/issues/306)
 - Revised design, which is more modern and has also been optimized for smaller screen sizes. For fields that allow
   multiple values, it is now much clearer which input field belongs to which item, see
   [#306](https://github.com/cadeyrn/enterprise-policy-generator/issues/306)
@@ -56,7 +56,7 @@
   depending on the length of the content, see [#359](https://github.com/cadeyrn/enterprise-policy-generator/issues/359)
 - The button for selecting the generated code now copies it directly to the clipboard, see
   [#364](https://github.com/cadeyrn/enterprise-policy-generator/issues/364)
-- When attempting to load or import an incompatible configuration, a corresponding warning is displayed, see
+- When attempting to load or import an incompatible configuration, a warning is displayed, see
   [#362](https://github.com/cadeyrn/enterprise-policy-generator/issues/362)
 - Added a promo box to give users of the extension an easy way to support the development of this extension, see
   [#360](https://github.com/cadeyrn/enterprise-policy-generator/issues/360)
@@ -94,7 +94,7 @@
 
 - Added support for the `DisableRemoteImprovements` policy to prevent Firefox from applying performance, stability, and
   feature changes between updates, see [#354](https://github.com/cadeyrn/enterprise-policy-generator/issues/354)
-- Some small policies cleanup, see [#351](https://github.com/cadeyrn/enterprise-policy-generator/issues/351)
+- Minor policy cleanup, see [#351](https://github.com/cadeyrn/enterprise-policy-generator/issues/351)
 
 #### Notable Changes
 
@@ -154,7 +154,7 @@
 
 #### Notable Changes
 
-- Improved instruction for Linux users and mentioned /etc/firefox/policies as a possible location for system-wide
+- Improved instructions for Linux users and mentioned /etc/firefox/policies as a possible location for system-wide
   policies, see [#343](https://github.com/cadeyrn/enterprise-policy-generator/issues/343)
 
 #### Dependencies
@@ -174,7 +174,7 @@
 
 #### Enhancements
 
-- Firefox 128 or higher is required now. Also, Enterprise Policy Generator no
+- Firefox 128 or later is now required. Also, Enterprise Policy Generator no
   longer displays the minimum required Firefox version for policies implemented before Firefox 128.0, see
   [#315](https://github.com/cadeyrn/enterprise-policy-generator/issues/315)
 
@@ -558,7 +558,7 @@
 
 - Enterprise Policy Generator now uses Manifest v3, see
   [#188](https://github.com/cadeyrn/enterprise-policy-generator/issues/188)
-- Firefox 115 or higher is required now. Also, Enterprise Policy Generator no
+- Firefox 115 or later is now required. Also, Enterprise Policy Generator no
   longer displays the minimum required Firefox version for policies implemented before Firefox 115.0, see
   [#138](https://github.com/cadeyrn/enterprise-policy-generator/issues/138)
 - Implemented a schema migrator so that policies in saved configurations can be migrated during extension updates or 
@@ -755,7 +755,7 @@
 
 #### Enhancements
 
-- Deprecation of Firefox 60. Firefox 68 or higher is required now. Also, Enterprise Policy Generator no longer
+- Deprecation of Firefox 60. Firefox 68 or later is now required. Also, Enterprise Policy Generator no longer
   shows the minimum required Firefox version for policies older than Firefox 68.0, see
   [#80](https://github.com/cadeyrn/enterprise-policy-generator/issues/80)
 - Added support for a new “preference” policy type, see
@@ -1016,7 +1016,7 @@
 - Added a note that the policy to read certificates from the system certificate store also works on macOS starting
   with Firefox 63, see [#39](https://github.com/cadeyrn/enterprise-policy-generator/issues/39)
 - Added a note that the option not to read certificates from the system certificate store only works on Firefox 64
-  and higher, see [#46](https://github.com/cadeyrn/enterprise-policy-generator/issues/46)
+  and later, see [#46](https://github.com/cadeyrn/enterprise-policy-generator/issues/46)
 - Removed the policy to disable the safe mode because it's not supported via policies.json, only via GPO, see
   [#58](https://github.com/cadeyrn/enterprise-policy-generator/issues/58)
 
@@ -1237,7 +1237,7 @@
 #### Code Quality
 
 - A lot of code refactoring to improve code maintainability and to make it easier for others to contribute to the
-  code base, see [#8](https://github.com/cadeyrn/enterprise-policy-generator/issues/8)
+  codebase, see [#8](https://github.com/cadeyrn/enterprise-policy-generator/issues/8)
 
 #### Dependencies
 
