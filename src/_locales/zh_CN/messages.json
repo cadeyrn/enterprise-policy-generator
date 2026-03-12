@@ -36,13 +36,13 @@
     "message": "导入配置"
   },
   "configuration_incompatible_btn_get_in_touch": {
-    "message": "Get migrated configuration"
+    "message": "Request migrated configuration"
   },
   "configuration_incompatible_bullet_1": {
     "message": "The configuration must be recreated and saved."
   },
   "configuration_incompatible_bullet_2": {
-    "message": "Get in touch and receive a migrated version of your configuration so that you don't have to recreate it yourself – completely free of charge, of course."
+    "message": "Get in touch to receive a migrated version of your configuration, so you do not need to recreate it yourself, completely free of charge."
   },
   "configuration_incompatible_bullet_3": {
     "message": "You can still load your current configuration in older versions of Enterprise Policy Generator."
@@ -111,7 +111,7 @@
     "message": "Policies selection"
   },
   "link_copy_to_clipboard": {
-    "message": "copy to clipboard"
+    "message": "Copy to clipboard"
   },
   "link_download": {
     "message": "下载 policies.json"
@@ -198,7 +198,7 @@
     "message": "If only a major version (“xxx”) is specified, only minor and patch updates will be installed. If a major plus minor version (“xxx.xx”) is specified, only patch updates will be installed."
   },
   "policy_description_AppUpdatePin_placeholder": {
-    "message": "Firefox version (expected: “xxx” oder “xxx.xx”)"
+    "message": "Firefox version (expected: “xxx” or “xxx.xx”)"
   },
   "policy_description_AppUpdateURL": {
     "message": "用于 Firefox 更新的不同服务器 URL"
@@ -222,7 +222,7 @@
     "message": "Always allow NTLM with proxy servers"
   },
   "policy_description_Authentication_AllowProxies_SPNEGO": {
-    "message": "Always allow NTLM with proxy servers"
+    "message": "Always allow SPNEGO with proxy servers"
   },
   "policy_description_Authentication_Delegated": {
     "message": "委托（Delegated）"
@@ -411,7 +411,7 @@
     "message": "Default: 300"
   },
   "policy_description_ContentAnalysis_AllowUrlRegexList": {
-    "message": "Regular expressions that indicates URLs for which DLP operations will always be allowed without consulting the agent (Default: ^about:(?!blank|srcdoc).*)"
+    "message": "Regular expressions that indicate URLs for which DLP operations will always be allowed without consulting the agent (Default: ^about:(?!blank|srcdoc).*)"
   },
   "policy_description_ContentAnalysis_BypassForSameTabOperations": {
     "message": "Automatically allow DLP requests whose data comes from the same tab and frame"
@@ -432,7 +432,7 @@
     "message": "Allow the request"
   },
   "policy_description_ContentAnalysis_DenyUrlRegexList": {
-    "message": "Regular expressions that indicates URLs for which DLP operations will always be denied without consulting the agent"
+    "message": "Regular expressions that indicate URLs for which DLP operations will always be denied without consulting the agent"
   },
   "policy_description_ContentAnalysis_Enabled": {
     "message": "Enable Data Loss Prevention"
@@ -480,10 +480,10 @@
     "message": "Whether the pipe the DLP agent has created is per-user or per-system"
   },
   "policy_description_ContentAnalysis_IsPerUser_per_system": {
-    "message": "per system"
+    "message": "Per system"
   },
   "policy_description_ContentAnalysis_IsPerUser_per_user": {
-    "message": "per user (Default)"
+    "message": "Per user (Default)"
   },
   "policy_description_ContentAnalysis_MaxConnectionsCount_label": {
     "message": "Maximum number of concurrent connections to the DLP agent"
@@ -501,7 +501,7 @@
     "message": "Show a notification when a DLP request is denied"
   },
   "policy_description_ContentAnalysis_TimeoutResult": {
-    "message": "Behavior for DLP requests if the DLP agent does not respond to a request in less than the specified number of seconds"
+    "message": "Behavior for DLP requests if the DLP agent does not respond within the specified number of seconds"
   },
   "policy_description_Cookies": {
     "message": "允许或阻止网站设置 Cookie"
@@ -570,7 +570,7 @@
     "message": "对于原生的主目录可使用 ${home}"
   },
   "policy_description_DisableAccounts": {
-    "message": "Disable Mozilla account based services like Firefox Sync"
+    "message": "Disable Mozilla account-based services like Firefox Sync"
   },
   "policy_description_DisableAppUpdate": {
     "message": "阻止 Firefox 进行更新"
@@ -660,7 +660,7 @@
     "message": "Never show"
   },
   "policy_description_DisplayBookmarksToolbar_newtab": {
-    "message": "Only show on new tab"
+    "message": "Only show on new tabs"
   },
   "policy_description_DisplayMenuBar": {
     "message": "Show the menu bar"
@@ -903,13 +903,13 @@
     "message": "Enable or disable all of the features below"
   },
   "policy_description_GenerativeAI_LinkPreviews": {
-    "message": "AI summary for link preview"
+    "message": "AI summaries for link previews"
   },
   "policy_description_GenerativeAI_TabGroups": {
     "message": "Suggestions for tab groups (group name, tabs)"
   },
   "policy_description_GoToIntranetSiteForSingleWordEntryInAddressBar": {
-    "message": "Force direct intranet site navigation instead of searching when typing single word entries in the address bar"
+    "message": "Force direct intranet site navigation instead of searching when typing single-word entries in the address bar"
   },
   "policy_description_Handlers": {
     "message": "Configure default application handlers"
@@ -921,10 +921,10 @@
     "message": "Save to disk"
   },
   "policy_description_Handlers_property_action_useHelperApp": {
-    "message": "open with application"
+    "message": "Open with application"
   },
   "policy_description_Handlers_property_action_useSystemDefault": {
-    "message": "use system default"
+    "message": "Use system default"
   },
   "policy_description_Handlers_property_ask": {
     "message": "Ask the user what they want to do with the file"
@@ -993,7 +993,7 @@
     "message": "Websites that will not automatically be upgraded to HTTPS"
   },
   "policy_description_HttpsOnlyMode": {
-    "message": "Configure HTTPS-Only Mode"
+    "message": "Configure HTTPS-Only mode"
   },
   "policy_description_HttpsOnlyMode_allowed": {
     "message": "Off by default, but the user can turn it on"
@@ -1050,10 +1050,10 @@
     "message": "不创建默认的书签集，包括智能书签（最常访问、最近的标签）。注意：该策略仅在配置文件首次启用时生效"
   },
   "policy_description_OfferToSaveLogins": {
-    "message": "Allow Firefox to offer to remember logins and passwords (cannot be overwritten)"
+    "message": "Allow Firefox to offer to remember logins and passwords (cannot be changed)"
   },
   "policy_description_OfferToSaveLoginsDefault": {
-    "message": "Allow Firefox to offer to remember logins and passwords (can be overwritten by the user)"
+    "message": "Allow Firefox to offer to remember logins and passwords (can be changed by the user)"
   },
   "policy_description_OverrideFirstRunPage": {
     "message": "允许覆盖首次运行时显示的页面。如果您想禁止显示，请将 URL 栏留空。"
@@ -1173,7 +1173,7 @@
     "message": "Block new requests asking to access your virtual reality devices"
   },
   "policy_description_PictureInPicture": {
-    "message": "Enable or disable the picture in picture feature for videos"
+    "message": "Enable or disable the Picture-in-Picture feature for videos"
   },
   "policy_description_PopupBlocking": {
     "message": "允许或阻止显示弹出窗口"
@@ -1206,7 +1206,7 @@
     "message": "Preference can be changed and appears as default in case of non-default value"
   },
   "policy_description_Preferences_Status_locked": {
-    "message": "Preference can not be changed and appears as default in case of non-default value"
+    "message": "Preference cannot be changed and appears as default in case of non-default value"
   },
   "policy_description_Preferences_Status_user": {
     "message": "Preference can be changed and appears as modified in case of non-default value"
@@ -1227,7 +1227,7 @@
     "message": "Value"
   },
   "policy_description_PrimaryPassword": {
-    "message": "Require or prevent using a primary password (formerly known as  master password)"
+    "message": "Require or prevent using a primary password (formerly known as master password)"
   },
   "policy_description_PrimaryPassword_false": {
     "message": "Remove the primary password functionality"
@@ -1494,7 +1494,7 @@
     "message": "Disable onboarding screen for new users"
   },
   "policy_description_UserMessaging_UrlbarInterventions": {
-    "message": "Show Firefox specific suggestions in the URL bar"
+    "message": "Show Firefox-specific suggestions in the URL bar"
   },
   "policy_description_UseSystemPrintDialog": {
     "message": "Use the system print dialog instead of the print preview window"
@@ -1521,7 +1521,7 @@
     "message": "The extension is free of charge. Your voluntary donation enables me to continue integrating new features and enterprise policies."
   },
   "requirement_macOS": {
-    "message": "works only on macOS"
+    "message": "Works only on macOS"
   },
   "requirement_windows": {
     "message": "仅适用于 Windows"
@@ -1539,19 +1539,19 @@
     "message": "保存配置"
   },
   "title_add_item": {
-    "message": "add item"
+    "message": "Add item"
   },
   "title_apply_configuration": {
     "message": "载入配置"
   },
   "title_move_item": {
-    "message": "move item"
+    "message": "Move item"
   },
   "title_remove_configuration": {
     "message": "移除配置"
   },
   "title_remove_item": {
-    "message": "remove item"
+    "message": "Remove item"
   },
   "validation_invalid_json": {
     "message": "invalid JSON"
@@ -1566,10 +1566,10 @@
     "message": "invalid version pattern"
   },
   "validation_missing_placeholder_s": {
-    "message": "Placeholder “%s” missing"
+    "message": "placeholder “%s” missing"
   },
   "validation_missing_placeholder_searchterms": {
-    "message": "Placeholder “{searchterms}” missing"
+    "message": "placeholder “{searchterms}” missing"
   },
   "validation_required": {
     "message": "必填"
