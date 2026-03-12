@@ -9,37 +9,36 @@ Enterprise Policy Generator. Thank you very much!**
 
 ## Description
 
-Generates Enterprise Policies for Firefox.
+Generates enterprise policies for Firefox.
 
-With Firefox 60 and Firefox ESR 60, Mozilla has introduced the so-called Enterprise Policy Engine. The Enterprise Policy
-Engine allows administrators to configure Firefox via a configuration file. The advantage of this configuration file over
-Group Policy Objects (GPO) is that this method does not only work on Windows, but cross-platform on Windows, Apple macOS
-and Linux.
+With Firefox 60 and Firefox ESR 60, Mozilla introduced the Enterprise Policy Engine. The Enterprise Policy
+Engine allows administrators to configure Firefox using a configuration file. The advantage of this configuration file
+over Group Policy Objects (GPO) is that this method works across Windows, macOS, and Linux.
 
-Although this extension is not directly related to the CCK2 Wizard, it shares the same idea as CCK2 Wizard, but it is for Firefox 60 or
-higher and Enterprise Policies. The Enterprise Policy Generator helps to create the configuration file, so that no in-depth study
-of the documentation and all possible options is necessary. Administrators can simply click together the desired Enterprise Policies.
+While this extension is not directly related to CCK2 Wizard, it shares the same idea for enterprise policies in
+Firefox 60 and later. The Enterprise Policy Generator helps you create the configuration file, without studying all
+documentation and options in depth.
 
-**Enterprise Policy Generator is a WebExtension and compatible with Firefox 60 and higher (Firefox 140 or
-higher is required for the latest version of Enterprise Policy Generator).**
+**Enterprise Policy Generator is a WebExtension and compatible with Firefox 60 and later. The latest release of
+Enterprise Policy Generator requires Firefox 140 or later.**
 
 ### Features
 
 - Configure all enterprise policies via an intuitive user interface
-- Validations for fields that expect specific values
+- Validates fields that require specific values
 - Accessibility has been taken into account
-- Use via keyboard is possible
-- Marking of policies that require a newer Firefox version than the current ESR version
+- Keyboard support
+- Highlights policies that require a newer Firefox version than the current ESR version
 - Shows additional information or links where appropriate
-- Drag and drop of values where multiple values are possible
+- Drag and drop for fields that accept multiple values
 - Save configurations and load them at a later time
 - Export configurations and import them on other devices
-- A filter field allows searching in the policy names, options and descriptions
+- A filter field lets you search in the policy names, options, and descriptions
 
-### Shortcuts
+### Keyboard shortcuts
 
-The interface can be accessed via the toolbar button or the keyboard. For this purpose the combination
-<kbd>Shift</kbd> + <kbd>F10</kbd> is reserved. Or you can open the interface via a menu entry in the "Tools" menu.
+The interface can be accessed via the toolbar button or the keyboard. Use <kbd>Shift</kbd> + <kbd>F10</kbd> to open the
+interface. You can also open the interface via a menu entry in the "Tools" menu.
 
 You can use <kbd>Shift</kbd> + <kbd>F</kbd> to focus the filter field, and <kbd>Shift</kbd> + <kbd>G</kbd> to focus the
 button to generate the policies.
@@ -48,9 +47,9 @@ Fields that allow multiple values can be moved using the keyboard: Press <kbd>Sp
 <kbd>Arrow Up</kbd> and <kbd>Arrow Down</kbd> to move it. Press <kbd>Space</kbd> or <kbd>Enter</kbd> to drop. Press
 <kbd>Escape</kbd> to cancel.
 
-### Planned features
+### Roadmap
 
-You can find the roadmap and request new features in the
+You can view the roadmap and request new features in the
 [issues tracker](https://github.com/cadeyrn/enterprise-policy-generator/issues).
 
 ### Languages
@@ -67,35 +66,35 @@ The add-on is currently available in the following languages:
 
 ### Permissions
 
-Enterprise Policy Generator needs several permissions to work properly.
+Enterprise Policy Generator requires several permissions to work properly.
 
 #### Mandatory Permissions
 
-No special permissions are needed to install and use Enterprise Policy Generator!
+No special permissions are required to install and use Enterprise Policy Generator!
 
 #### Optional Permissions
 
-This permission is not needed to install and use Enterprise Policy Generator, but Enterprise Policy Generator will
-ask you at runtime once the following permission is needed:
+This permission is not required to install and use Enterprise Policy Generator, but Enterprise Policy Generator will
+ask you at runtime when the following permission is required:
 
 ##### download files and read and modify the browser's download history
 
-This permission is needed for providing the option to download the generated “policies.json” file or to export
+This permission is required to provide the option to download the generated “policies.json” file or to export
 configurations.
 
 #### Silent Permissions
 
-Enterprise Policy Generator needs some more permissions, but Firefox does not prompt for the following permissions:
+Enterprise Policy Generator requires additional permissions, but Firefox does not prompt for the following permissions:
 
 ##### menus
 
-The menus permission is needed for providing a menu entry in the tools menu to access Enterprise Policy Generator's user
+The menus permission is required to provide a menu entry in the "Tools" menu to access Enterprise Policy Generator's user
 interface.
 
 ##### storage
 _(since 2.0.0)_
 
-The storage permission is needed so that you can save and load configurations.
+The storage permission is required so that you can save and load configurations.
 
 ## Download
 
