@@ -42,7 +42,7 @@
     "message": "The configuration must be recreated and saved."
   },
   "configuration_incompatible_bullet_2": {
-    "message": "Get in touch to receive a migrated version of your configuration, so you don’t need to recreate it yourself, completely free of charge."
+    "message": "Get in touch to receive a migrated version of your configuration, so you do not need to recreate it yourself, completely free of charge."
   },
   "configuration_incompatible_bullet_3": {
     "message": "You can still load your current configuration in older versions of Enterprise Policy Generator."
