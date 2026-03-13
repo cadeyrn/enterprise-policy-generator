@@ -377,23 +377,27 @@ input, textarea {
   border-radius: var(--border-radius-control);
 
   &::after {
-    content: '\25BC';
+    content: '';
     position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    padding: 2px 12px;
-    border: 2px solid var(--color-dark-border);
+    top: 2px;
+    bottom: 2px;
+    right: 2px;
+    width: 32px;
     border-top-right-radius: var(--border-radius-control);
     border-bottom-right-radius: var(--border-radius-control);
-    background: var(--color-blue);
+    background-color: var(--color-white);
+    background-image: url('../images/chevron.svg');
+    background-size: 12px;
+    background-position: center;
+    background-repeat: no-repeat;
     color: var(--color-white);
     pointer-events: none;
     transition: .25s all ease;
   }
 
   select {
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 34px;
     width: 100%;
     height: 100%;
     border: 2px solid var(--color-dark-border);
