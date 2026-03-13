@@ -81,7 +81,7 @@
 - Updated stylelint from version 17.0.0 to 17.4.0
 - Updated stylelint-order from version 7.0.1 to 8.0.0
 - Updated stylistic/eslint-plugin from version 5.7.1 to 5.10.0
-- Updated web-ext from version 9.2.0 to 9.4.0
+- Updated web-ext from version 9.2.0 to 10.0.0
 - Replaced htmllint and gulp-htmllint with html-eslint
 - Removed eslint-plugin-sort-requires, gulp, gulp-eslint-new, gulp-jsdoc3, jsdoc, jsdoc-strip-async-await, and
   npm-run-all
