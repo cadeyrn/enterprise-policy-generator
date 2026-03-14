@@ -97,6 +97,9 @@
     "no-unknown-custom-media": true,
     "no-unknown-custom-properties": null,
     "number-max-precision": 3,
+    "order/custom-properties-alphabetical-order": true,
+    "order/order": ["custom-properties", "declarations", "rules", "at-rules"],
+    "order/properties-alphabetical-order": null,
     "order/properties-order": [
       "appearance",
       "display",
