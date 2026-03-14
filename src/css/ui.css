@@ -380,7 +380,17 @@ input, textarea {
   margin: 5px 0;
   width: calc(100% - 30px);
   height: 30px;
+  border: 2px solid var(--color-dark-border);
   border-radius: var(--border-radius-control);
+
+  &:has(select:focus) {
+    border-color: var(--color-blue-dark);
+  }
+
+  &:has(select:focus-visible) {
+    outline: 2px solid var(--color-blue);
+    outline-offset: 2px;
+  }
 
   &::after {
     content: '';
@@ -402,24 +412,17 @@ input, textarea {
   }
 
   select {
+    appearance: none;
     padding-left: 10px;
-    padding-right: 34px;
-    width: 100%;
+    width: calc(100% - 30px);
     height: 100%;
-    border: 2px solid var(--color-dark-border);
-    border-radius: var(--border-radius-control);
+    border: 0;
+    outline: 0;
     background-color: var(--color-white);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     cursor: pointer;
-
-    &:focus {
-      border-color: var(--color-blue-dark);
-    }
-
-    &:focus-visible {
-      border-radius: var(--border-radius-control);
-      outline: 2px solid var(--color-blue);
-      outline-offset: 2px;
-    }
   }
 }
 
