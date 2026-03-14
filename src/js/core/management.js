@@ -265,9 +265,20 @@ class Management {
    */
   static async #applyConfiguration (e) {
     const { configurations } = await browser.storage.local.get({ configurations: [] });
+    const $policyOutput = document.getElementById('policy-output');
+
     Serializer.unserialize(configurations[e.target.parentElement.getAttribute('data-idx')].configuration);
     $listConfigurationDialog.close();
-    document.getElementById('policy-output').textContent = Output.generatePoliciesOutput();
+
+    // only supported in Firefox 148+
+    if ('Sanitizer' in window) {
+      const sanitizer = new Sanitizer({ elements: ['span'], attributes: ['class'] });
+      $policyOutput.setHTML(Output.generatePoliciesOutput(true), { sanitizer });
+    }
+    else {
+      $policyOutput.textContent = Output.generatePoliciesOutput();
+    }
+
     document.getElementById('action-links').classList.remove('hidden');
   }
 

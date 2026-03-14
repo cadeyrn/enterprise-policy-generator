@@ -127,9 +127,23 @@ class Configurator {
       Dom.addEventListener($el, 'click', Configurator.#executeArrayActions);
     });
 
+    // only supported in Firefox 148+
+    if (!('Sanitizer' in window)) {
+      // remove the gap for the line numbers if syntax highlighting is disabled
+      $policyOutput.parentElement.classList.add('no-syntax-highlighting');
+    }
+
     // add the event listener for the "generate policies" button
     $policyGeneratorButton.addEventListener('click', () => {
-      $policyOutput.textContent = Output.generatePoliciesOutput();
+      // only supported in Firefox 148+
+      if ('Sanitizer' in window) {
+        const sanitizer = new Sanitizer({ elements: ['span'], attributes: ['class'] });
+        $policyOutput.setHTML(Output.generatePoliciesOutput(true), { sanitizer });
+      }
+      else {
+        $policyOutput.textContent = Output.generatePoliciesOutput();
+      }
+
       $actionLinks.classList.remove('hidden');
     });
 

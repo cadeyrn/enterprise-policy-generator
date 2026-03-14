@@ -31,6 +31,7 @@ Firefox 140 or later.**
 - Highlights policies that require a newer Firefox version than the current ESR version
 - Shows additional information or links where appropriate
 - Drag and drop for fields that accept multiple values
+- View generated code with syntax highlighting, download it as policies.json file, or copy it to the clipboard
 - Save configurations and load them at a later time
 - Export configurations and import them on other devices
 - A filter field lets you search in the policy names, options, and descriptions

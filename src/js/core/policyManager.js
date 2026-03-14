@@ -30,6 +30,68 @@ class PolicyManager {
   }
 
   /**
+   * Returns the JSON configuration with syntax highlighting and line numbers. All policies are sorted alphabetically.
+   *
+   * @param {HTMLElement} $codeContainer - the <pre> element for the generated JSON code
+   *
+   * @returns {string} - the policies.json configuration as HTML string
+   */
+  static getHighlightedConfiguration ($codeContainer) {
+    // get the configuration as JSON string
+    const configuration = PolicyManager.getConfiguration();
+
+    // tokenize the JSON string for syntax highlighting
+    const regex = new RegExp(
+      [
+        '(?<delimiter>[\\[\\]{}:,])',
+        '(?<string>"(\\\\.|[^"\\\\])*")',
+        '(?<number>-?\\d+)',
+        '(?<boolean>true|false)'
+      ].join('|'), 'g'
+    );
+    let output = '';
+    let last = 0;
+
+    for (const match of configuration.matchAll(regex)) {
+      const { index, groups } = match;
+      const content = match[0];
+      let type = null;
+
+      output += configuration.slice(last, index);
+
+      if (groups.delimiter) {
+        type = 'delimiter';
+      }
+      else if (groups.string) {
+        const followingText = configuration.slice(index + content.length);
+        const isKey = /^\s*:/.test(followingText);
+        type = isKey ? 'key' : 'string';
+      }
+      else if (groups.number) {
+        type = 'number';
+      }
+      else if (groups.boolean) {
+        type = 'boolean';
+      }
+
+      if (type) {
+        output += `<span class="token-${type}">${content}</span>`;
+      }
+
+      last = index + content.length;
+    }
+
+    output += configuration.slice(last);
+
+    // adjust the line number width based on the number of digits
+    const lines = configuration.split('\n').length;
+    const digits = String(lines).length;
+    $codeContainer.style.setProperty('--line-number-width', `${digits + 1}ch`);
+
+    return output.split('\n').map(line => `<span class="line">${line}</span>`).join('');
+  }
+
+  /**
    * Returns the JSON configuration as string. All policies are sorted alphabetically.
    *
    * @returns {string} - the policies.json configuration as string

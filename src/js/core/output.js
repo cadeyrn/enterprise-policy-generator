@@ -6,9 +6,11 @@ class Output {
   /**
    * Generate the policies.json output.
    *
+   * @param {boolean} withSyntaxHighlighting - whether to enable the syntax highlighting
+   *
    * @returns {string} - the policies.json output
    */
-  static generatePoliciesOutput () {
+  static generatePoliciesOutput (withSyntaxHighlighting = false) {
     PolicyManager.init();
 
     // iterate over all checked policy fields and generate output
@@ -43,6 +45,10 @@ class Output {
         }
       }
     });
+
+    if (withSyntaxHighlighting) {
+      return PolicyManager.getHighlightedConfiguration(document.getElementById('policy-output').parentElement);
+    }
 
     return PolicyManager.getConfiguration();
   }

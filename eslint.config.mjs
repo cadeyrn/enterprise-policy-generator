@@ -16,8 +16,7 @@ export default [
       globals: {
         ...globals.browser,
         ...globals.webextensions,
-        Promise: true,
-        require: true
+        Sanitizer: true
       },
       ecmaVersion: 'latest',
       sourceType: 'script'

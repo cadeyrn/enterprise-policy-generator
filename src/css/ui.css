@@ -5,12 +5,18 @@
   --color-blue: rgb(5, 116, 228);
   --color-blue-dark: rgb(0, 87, 191);
   --color-blue-translucent: rgba(5, 116, 228, .1);
+  --color-code-background: rgb(253, 253, 253);
   --color-dark-border: rgb(54, 57, 89);
   --color-green: rgb(16, 138, 3);
   --color-green-dark: rgb(14, 117, 3);
   --color-red: rgb(215, 0, 34);
   --color-red-dark: rgb(183, 0, 29);
   --color-separator: rgb(210, 210, 210);
+  --color-token-boolean: rgb(169, 93, 26);
+  --color-token-delimiter: rgb(107, 114, 128);
+  --color-token-key: rgb(74, 117, 190);
+  --color-token-number: rgb(188, 56, 66);
+  --color-token-string: rgb(27, 127, 107);
   --color-white: rgb(255, 255, 255);
 }
 
@@ -592,10 +598,60 @@ input, textarea {
   background: var(--color-blue-translucent);
 }
 
-#policy-output-wrapper:has(code:not(:empty)) {
-  padding: 15px;
-  border-radius: var(--border-radius-box);
-  border: 1px solid var(--color-separator);
+#policy-output-wrapper {
+  --line-number-width: 3ch;
+  position: relative;
+  background-color: var(--color-code-background);
+  white-space: pre;
+  counter-reset: line;
+
+  &:has(code:not(:empty)) {
+    padding: 15px 15px 15px var(--line-number-width);
+    border-radius: var(--border-radius-box);
+    border: 1px solid var(--color-separator);
+  }
+
+  &.no-syntax-highlighting {
+    --line-number-width: 15px;
+  }
+
+  .line {
+    display: block;
+    position: relative;
+    padding-left: 1ch;
+
+    &::before {
+      content: counter(line);
+      counter-increment: line;
+      position: absolute;
+      left: calc(var(--line-number-width) * -1);
+      width: var(--line-number-width);
+      color: var(--color-token-delimiter);
+      text-align: right;
+      user-select: none;
+      pointer-events: none;
+    }
+  }
+
+  .token-boolean {
+    color: var(--color-token-boolean);
+  }
+
+  .token-delimiter {
+    color: var(--color-token-delimiter);
+  }
+
+  .token-key {
+    color: var(--color-token-key);
+  }
+
+  .token-number {
+    color: var(--color-token-number);
+  }
+
+  .token-string {
+    color: var(--color-token-string);
+  }
 }
 
 dialog {
