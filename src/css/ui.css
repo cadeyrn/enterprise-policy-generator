@@ -417,6 +417,7 @@ input, textarea {
     width: calc(100% - 30px);
     height: 100%;
     border: 0;
+    border-radius: var(--border-radius-control);
     outline: 0;
     background-color: var(--color-white);
     white-space: nowrap;
