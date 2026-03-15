@@ -633,7 +633,7 @@
     "message": "Prevent Firefox from applying performance, stability, and feature changes between updates"
   },
   "policy_description_DisableSafeMode": {
-    "message": "Disable the menu item to restart Firefox with add-ons disabled (safe mode)"
+    "message": "Disable the menu item to restart Firefox with add-ons disabled (troubleshoot mode)"
   },
   "policy_description_DisableSecurityBypass": {
     "message": "Prevent certain security warnings from being bypassed"
