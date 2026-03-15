@@ -204,7 +204,7 @@
     "message": "Abweichende Server-URL für Firefox-Aktualisierungen"
   },
   "policy_description_Authentication": {
-    "message": "Webseiten, welche eine integrierte Authentifizierung unterstützen"
+    "message": "Websites, welche eine integrierte Authentifizierung unterstützen"
   },
   "policy_description_Authentication_AllowNonFQDN": {
     "message": "Immer SPNEGO oder NTLM auf Nicht-FQDNs (vollqualifizierte Domainnamen) erlauben"
@@ -504,7 +504,7 @@
     "message": "Verhalten bei DLP-Anfragen, wenn der DLP-Agent nicht innerhalb der angegebenen Anzahl von Sekunden auf eine Anfrage reagiert"
   },
   "policy_description_Cookies": {
-    "message": "Webseiten erlauben oder verbieten, Cookies zu setzen"
+    "message": "Websites erlauben oder verbieten, Cookies zu setzen"
   },
   "policy_description_Cookies_Allow": {
     "message": "Domains, welche Cookies immer verwenden dürfen"
@@ -633,7 +633,7 @@
     "message": "Verhindern"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing": {
-    "message": "Das Umgehen der Warnung und Besuchen einer schädlichen Webseite verhindern"
+    "message": "Das Umgehen der Warnung und Besuchen einer schädlichen Website verhindern"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_false": {
     "message": "Nicht verhindern"
@@ -1503,7 +1503,7 @@
     "message": "Inverse Bildersuche via Google Lens aktivieren oder deaktivieren"
   },
   "policy_description_WebsiteFilter": {
-    "message": "Blockiere Besuche von Webseiten. Es kann „<all_urls>“ verwendet werden, um alle URLs zu blockieren. Siehe Info-Link für alle gültigen Eingaben, es werden jedoch nur HTTPS und HTTP unterstützt."
+    "message": "Blockiere Besuche von Websites. Es kann „<all_urls>“ verwendet werden, um alle URLs zu blockieren. Siehe Info-Link für alle gültigen Eingaben, es werden jedoch nur HTTPS und HTTP unterstützt."
   },
   "policy_description_WebsiteFilter_Block": {
     "message": "Blockiere die folgenden URLs"
