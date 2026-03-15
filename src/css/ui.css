@@ -123,7 +123,7 @@ input[type='text'], input[type='url'], textarea {
 
 input[type='text'], input[type='url'] {
   padding: 0 10px;
-  height: 30px;
+  height: 32px;
 }
 
 textarea {
@@ -378,8 +378,8 @@ input, textarea {
   display: block;
   position: relative;
   margin: 5px 0;
-  width: calc(100% - 30px);
-  height: 30px;
+  width: calc(100% - 34px);
+  height: 28px;
   border: 2px solid var(--color-dark-border);
   border-radius: var(--border-radius-control);
 
