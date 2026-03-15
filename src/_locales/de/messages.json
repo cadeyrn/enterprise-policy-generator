@@ -1065,10 +1065,10 @@
     "message": "Keine Standard-Lesezeichen, einschließlich der intelligenten Lesezeichen (Meistbesuchte Seiten, Kürzlich verwendete Schlagwörter), erstellen. Hinweis: diese Richtlinie ist nur wirksam, wenn sie vor der ersten Benutzung des Firefox-Profils angewendet wird"
   },
   "policy_description_OfferToSaveLogins": {
-    "message": "Firefox erlauben, das Merken von Zugangsdaten und Passwörtern anzubieten (kann nicht überschrieben werden)"
+    "message": "Firefox erlauben, das Merken von Zugangsdaten und Passwörtern anzubieten (kann nicht vom Benutzer geändert werden)"
   },
   "policy_description_OfferToSaveLoginsDefault": {
-    "message": "Firefox erlauben, das Merken von Zugangsdaten und Passwörtern anzubieten (kann vom Benutzer überschrieben werden)"
+    "message": "Firefox erlauben, das Merken von Zugangsdaten und Passwörtern anzubieten (kann vom Benutzer geändert werden)"
   },
   "policy_description_OverrideFirstRunPage": {
     "message": "Die Seite überschreiben, die beim ersten Start erscheint. Ein leeres Eingabefeld deaktiviert die Seite vollständig."
