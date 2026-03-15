@@ -94,12 +94,12 @@
       "tags": ["disable-features"],
       "schema": "boolean"
     },
-    "DisableProfileRefresh": {
+    "DisableFeedbackCommands": {
       "availability": { "mainstream": "60.0", "esr": "60.0" },
       "tags": ["disable-features"],
       "schema": "boolean"
     },
-    "DisableFeedbackCommands": {
+    "DisableProfileRefresh": {
       "availability": { "mainstream": "60.0", "esr": "60.0" },
       "tags": ["disable-features"],
       "schema": "boolean"
