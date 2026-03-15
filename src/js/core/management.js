@@ -107,6 +107,7 @@ class Management {
 
     const configuration = {
       schema: 2,
+      product: 'firefox',
       name: name,
       time: new Date(),
       configuration: Serializer.serialize()
