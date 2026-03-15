@@ -353,7 +353,7 @@ input, textarea {
   top: 4px;
   right: 4px;
   padding: 2px 5px;
-  height: 18px;
+  height: 20px;
   border-radius: calc(var(--border-radius-control) - 2px);
   font-size: .875rem;
   background: var(--color-red);
@@ -515,8 +515,12 @@ input, textarea {
     border: 0;
   }
 
-  .input-wrapper, .key-wrapper, .enum-wrapper {
+  .input-wrapper, .key-wrapper {
     width: 100%;
+  }
+
+  .enum-wrapper {
+    width: calc(100% - 4px);
   }
 
   .array-action {
