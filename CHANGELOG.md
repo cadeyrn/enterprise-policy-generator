@@ -49,6 +49,8 @@
   [#370](https://github.com/cadeyrn/enterprise-policy-generator/issues/370)
 - Added validation for fields that expect a specific placeholder, see
   [#306](https://github.com/cadeyrn/enterprise-policy-generator/issues/306)
+- The height of text areas (currently only used for `3rdparty` policy) now automatically increases and decreases
+  depending on the length of the content, see [#359](https://github.com/cadeyrn/enterprise-policy-generator/issues/359)
 - The generated code is now displayed with syntax highlighting and line numbers (Firefox 148 and later), see
   [#368](https://github.com/cadeyrn/enterprise-policy-generator/issues/368)
 - The filter field can be used to find policies based on the top-level key and its description. From now on, the keys
@@ -56,13 +58,11 @@
   [#358](https://github.com/cadeyrn/enterprise-policy-generator/issues/358)
 - To avoid clutter in the user interface, information like the required Firefox version, additional notes, or links are
   now only displayed for enabled policies, see [#363](https://github.com/cadeyrn/enterprise-policy-generator/issues/363)
-- The height of text areas (currently only used for `3rdparty` policy) now automatically increases and decreases
-  depending on the length of the content, see [#359](https://github.com/cadeyrn/enterprise-policy-generator/issues/359)
 - The button for selecting the generated code now copies it directly to the clipboard, see
   [#364](https://github.com/cadeyrn/enterprise-policy-generator/issues/364)
 - When attempting to load or import an incompatible configuration, a warning is displayed, see
   [#362](https://github.com/cadeyrn/enterprise-policy-generator/issues/362)
-- Added a promo box to give users of the extension an easy way to support the development of this extension, see
+- Added a promotion box to give users of the extension an easy way to support the development of this extension, see
   [#360](https://github.com/cadeyrn/enterprise-policy-generator/issues/360)
 
 #### Enterprise Policies
