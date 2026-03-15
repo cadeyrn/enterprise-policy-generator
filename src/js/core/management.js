@@ -268,7 +268,7 @@ class Management {
     const { configurations } = await browser.storage.local.get({ configurations: [] });
     const $policyOutput = document.getElementById('policy-output');
 
-    Serializer.unserialize(configurations[e.target.parentElement.getAttribute('data-idx')].configuration);
+    Serializer.unserialize(configurations[e.target.getAttribute('data-idx')].configuration);
     $listConfigurationDialog.close();
 
     // only supported in Firefox 148+
@@ -292,7 +292,7 @@ class Management {
    */
   static async #removeConfiguration (e) {
     const { configurations } = await browser.storage.local.get({ configurations: [] });
-    configurations.splice(e.target.parentElement.getAttribute('data-idx'), 1);
+    configurations.splice(e.target.getAttribute('data-idx'), 1);
     await browser.storage.local.set({ configurations: configurations });
     Management.#listConfigurations();
   }
@@ -347,8 +347,8 @@ class Management {
    */
   static async #exportConfiguration (e) {
     const { configurations } = await browser.storage.local.get({ configurations: [] });
-    const configuration = configurations[e.target.parentElement.getAttribute('data-idx')];
-    const serializedConfig = window.btoa(JSON.stringify(configurations[e.target.parentElement.getAttribute('data-idx')]));
+    const configuration = configurations[e.target.getAttribute('data-idx')];
+    const serializedConfig = window.btoa(JSON.stringify(configurations[e.target.getAttribute('data-idx')]));
 
     await browser.downloads.download({
       saveAs: true,
