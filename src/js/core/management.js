@@ -348,7 +348,7 @@ class Management {
   static async #exportConfiguration (e) {
     const { configurations } = await browser.storage.local.get({ configurations: [] });
     const configuration = configurations[e.target.getAttribute('data-idx')];
-    const serializedConfig = window.btoa(JSON.stringify(configurations[e.target.getAttribute('data-idx')]));
+    const serializedConfig = window.btoa(JSON.stringify(configuration));
 
     await browser.downloads.download({
       saveAs: true,
