@@ -1176,16 +1176,16 @@
     "message": "Modus wobraz-we-wobrazu za wideja zmóžnić abo znjemóžnić"
   },
   "policy_description_PopupBlocking": {
-    "message": "Wužiwanje wuskakowacych woknow dowolić abo zakazać"
+    "message": "Block pop-ups and third-party redirects (Firefox 144+)"
   },
   "policy_description_PopupBlocking_Allow": {
-    "message": "Domeny, za kotrež wuskakowace wokna su dowolene"
+    "message": "Domains for which pop-ups and third-party redirects are allowed"
   },
   "policy_description_PopupBlocking_Default_false": {
-    "message": "Wuskakowace wokna so po standardźe njeblokuja"
+    "message": "Pop-ups and third-party redirects are allowed by default"
   },
   "policy_description_PopupBlocking_Default_true": {
-    "message": "Wuskakowace wokna so po standardźe blokuja"
+    "message": "Pop-ups and third-party redirects are blocked by default"
   },
   "policy_description_PostQuantumKeyAgreementEnabled": {
     "message": "Wuběr postkwantowych klučow za TLS zmóžnić"
