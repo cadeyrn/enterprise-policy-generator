@@ -147,13 +147,13 @@
     "message": "Mě nastajenja njejo dowólone"
   },
   "policy_category_authentication": {
-    "message": "Authentication"
+    "message": "Awtentifikacija"
   },
   "policy_category_block_access": {
     "message": "Pśistup blokěrowaś"
   },
   "policy_category_bookmarks": {
-    "message": "Bookmarks"
+    "message": "Cytańske znamjenja"
   },
   "policy_category_customization": {
     "message": "Pśiměrjenje"
@@ -162,16 +162,16 @@
     "message": "Funkcije znjemóžniś"
   },
   "policy_category_downloads": {
-    "message": "Downloads"
+    "message": "Ześěgnjenja"
   },
   "policy_category_network": {
-    "message": "Network security"
+    "message": "Seśowa wěstota"
   },
   "policy_category_others": {
     "message": "Druge směrnice"
   },
   "policy_category_printing": {
-    "message": "PDF and printing"
+    "message": "PDF a śišćaś"
   },
   "policy_category_privacy": {
     "message": "Priwatnosć"
@@ -183,7 +183,7 @@
     "message": "Aktualizacije a zběranje datow"
   },
   "policy_category_website": {
-    "message": "Website settings"
+    "message": "Nastajenja websedła"
   },
   "policy_description_3rdParty": {
     "message": "Pśedkonfiguracija nastajenjow za rozšyrjenja, kótarež chrome.storage.managed wužywaju"
