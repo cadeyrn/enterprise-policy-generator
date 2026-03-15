@@ -83,12 +83,15 @@ class PolicyManager {
 
     output += configuration.slice(last);
 
+    // add the line numbers
+    output = output.split('\n').map(line => `<span class="line">${line}</span>`).join('');
+
     // adjust the line number width based on the number of digits
     const lines = configuration.split('\n').length;
     const digits = String(lines).length;
     $codeContainer.style.setProperty('--line-number-width', `${digits + 1}ch`);
 
-    return output.split('\n').map(line => `<span class="line">${line}</span>`).join('');
+    return output;
   }
 
   /**
