@@ -411,7 +411,7 @@
     "message": "Name der Tab-Umgebung"
   },
   "policy_description_ContentAnalysis": {
-    "message": "Verwenden Sie einen Agenten für Data Loss Prevention (DLP)"
+    "message": "Einen Agenten für Data Loss Prevention (DLP) verwenden"
   },
   "policy_description_ContentAnalysis_AgentName_label": {
     "message": "Name des DLP-Agenten, in Dialogen und Benachrichtigungen verwendet"
@@ -585,7 +585,7 @@
     "message": "Der Platzhalter ${home} kann für das native Benutzerverzeichnis verwendet werden"
   },
   "policy_description_DisableAccounts": {
-    "message": "Deaktiviere auf dem Mozilla-Konto basierende Dienste wie Firefox Sync"
+    "message": "Auf dem Mozilla-Konto basierende Dienste wie Firefox Sync deaktivieren"
   },
   "policy_description_DisableAppUpdate": {
     "message": "Firefox am Aktualisieren hindern"
@@ -597,43 +597,43 @@
     "message": "Bestimmte kryptographische Chiffren aktivieren oder deaktivieren"
   },
   "policy_description_DisableDefaultBrowserAgent": {
-    "message": "Deaktiviere den Standard-Browser-Agent"
+    "message": "Den Standard-Browser-Agent deaktivieren"
   },
   "policy_description_DisableDeveloperTools": {
-    "message": "Deaktiviere die eingebauten Entwickler-Werkzeuge"
+    "message": "Entwickler-Werkzeuge deaktivieren"
   },
   "policy_description_DisableEncryptedClientHello": {
     "message": "Verwendung der TLS-Funktion Encrypted Client Hello (ECH) deaktivieren"
   },
   "policy_description_DisableFeedbackCommands": {
-    "message": "Deaktiviere die Menü-Einträge „Feedback senden“ und „Betrügerische Website melden“ im Hilfe-Menü"
+    "message": "Menü-Einträge „Feedback senden“ und „Betrügerische Website melden“ im Hilfe-Menü deaktivieren"
   },
   "policy_description_DisableFirefoxScreenshots": {
-    "message": "Deaktiviere die eingebaute Funktion für Bildschirmfotos (Firefox Screenshots)"
+    "message": "Funktion für Bildschirmfotos (Screenshots) deaktivieren"
   },
   "policy_description_DisableFirefoxStudies": {
     "message": "Firefox an der Installation und Ausführung von Studien sowie kontextbezogenen Feature-Empfehlungen hindern"
   },
   "policy_description_DisableForgetButton": {
-    "message": "Deaktiviere die „Vergessen“ Schaltfläche, welche benutzt werden kann, um Browser-Daten zu löschen"
+    "message": "„Vergessen“-Schaltfläche deaktivieren, welche benutzt werden kann, um Browser-Daten zu löschen"
   },
   "policy_description_DisableFormHistory": {
-    "message": "Deaktiviere die Formular- und Such-Chronik"
+    "message": "Formular- und Such-Chronik deaktivieren"
   },
   "policy_description_DisablePasswordReveal": {
     "message": "Das Anzeigen gespeicherter Passwörter verhindern"
   },
   "policy_description_DisableProfileImport": {
-    "message": "Deaktiviere den Menü-Eintrag „Daten von einem anderen Browser importieren“ in der Bibliothek"
+    "message": "Menü-Eintrag „Daten von einem anderen Browser importieren“ in der Bibliothek deaktivieren"
   },
   "policy_description_DisableProfileRefresh": {
-    "message": "Deaktiviere die „Firefox bereinigen“-Schaltfläche in about:support"
+    "message": "„Firefox bereinigen“-Schaltfläche in about:support deaktivieren"
   },
   "policy_description_DisableRemoteImprovements": {
     "message": "Firefox daran hindern, Funktionen, Leistung und Stabilität zwischen den Updates zu verbessern"
   },
   "policy_description_DisableSafeMode": {
-    "message": "Deaktiviere den Menü-Eintrag, um Firefox mit deaktivierten Erweiterungen neu zu starten (Abgesicherter Modus)"
+    "message": "Menü-Eintrag deaktivieren, um Firefox mit deaktivierten Erweiterungen neu zu starten (Fehlerbehebungsmodus)"
   },
   "policy_description_DisableSecurityBypass": {
     "message": "Das Umgehen bestimmter Sicherheitswarnungen verhindern"
@@ -657,7 +657,7 @@
     "message": "Verhindern"
   },
   "policy_description_DisableSetDesktopBackground": {
-    "message": "Deaktiviere die Funktion, eine Grafik als Hintergrundbild zu verwenden"
+    "message": "Funktion, um eine Grafik als Hintergrundbild zu verwenden, deaktivieren"
   },
   "policy_description_DisableSystemAddonUpdate": {
     "message": "Firefox an der Installation und am Aktualisieren von System-Erweiterungen hindern"
@@ -666,7 +666,7 @@
     "message": "Firefox hindern, Daten zu technischen Details und Interaktionen an Mozilla zu senden (Telemetrie)"
   },
   "policy_description_DisplayBookmarksToolbar": {
-    "message": "Zeige die Lesezeichen-Symbolleiste standardmäßig an"
+    "message": "Lesezeichen-Symbolleiste standardmäßig anzeigen"
   },
   "policy_description_DisplayBookmarksToolbar_always": {
     "message": "Immer anzeigen"
@@ -678,7 +678,7 @@
     "message": "Nur bei neuen Tabs anzeigen"
   },
   "policy_description_DisplayMenuBar": {
-    "message": "Zeige die Menüleiste"
+    "message": "Menüleiste anzeigen"
   },
   "policy_description_DisplayMenuBar_always": {
     "message": "Die Menüleiste wird immer angezeigt und kann nicht ausgeblendet werden"
@@ -876,7 +876,7 @@
     "message": "Automatische Aktualisierung von Erweiterungen aktivieren"
   },
   "policy_description_FirefoxHome": {
-    "message": "Den Firefox-Startbildschirm anpassen"
+    "message": "Firefox-Startbildschirm anpassen"
   },
   "policy_description_FirefoxHome_Highlights": {
     "message": "Neueste Aktivität anzeigen"
@@ -1374,7 +1374,7 @@
     "message": "Website-Einstellungen"
   },
   "policy_description_SearchBar": {
-    "message": "Legt fest, ob die Suchleiste mit der Adressleiste kombiniert oder separat ist"
+    "message": "Festlegen, ob die Suchleiste mit der Adressleiste kombiniert oder separat ist"
   },
   "policy_description_SearchBar_options_separate": {
     "message": "Es gibt eine separate Suchleiste"
