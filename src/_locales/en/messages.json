@@ -600,7 +600,7 @@
     "message": "Prevent Firefox from installing and running studies and contextual feature recommendations"
   },
   "policy_description_DisableForgetButton": {
-    "message": "Disable the “Forget” toolbar button which can be used to forget the last browsing history"
+    "message": "Disable the “Forget” toolbar button which can be used to forget browsing data"
   },
   "policy_description_DisableFormHistory": {
     "message": "Disable the form and search bar history"

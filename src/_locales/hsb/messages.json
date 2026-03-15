@@ -600,7 +600,7 @@
     "message": "Firefox při instalowanju a wuwjedźenju studijow kaž tež so na kontekst poćahowacych doporučenjow za funkcije haćić"
   },
   "policy_description_DisableForgetButton": {
-    "message": "Tłóčatko „Zabyć“ znjemóžnić, kotrež so ma wužiwać, zo by historiju zhašało"
+    "message": "Disable the “Forget” toolbar button which can be used to forget browsing data"
   },
   "policy_description_DisableFormHistory": {
     "message": "Formularnu a pytansku historiju znjemóžnić"

@@ -600,7 +600,7 @@
     "message": "Empêcher Firefox d'installer ou de lire des éxamens ou encore des recommendations de fonctions contextuelles"
   },
   "policy_description_DisableForgetButton": {
-    "message": "Désactiver le bouton \"Oublier\" de la barre d'outils qui permet d'oublier le dernier historique de navigation"
+    "message": "Disable the \"Forget\" toolbar button which can be used to forget browsing data"
   },
   "policy_description_DisableFormHistory": {
     "message": "Désactiver le formulaire et l'historique de la barre de recherche"

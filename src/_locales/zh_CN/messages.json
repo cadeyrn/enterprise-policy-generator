@@ -600,7 +600,7 @@
     "message": "阻止 Firefox 安装并运行一些实验项目和上下文特性推荐 (contextual feature recommendations)"
   },
   "policy_description_DisableForgetButton": {
-    "message": "禁用“抹去足迹”工具栏按钮，阻止用它清除最近的浏览历史"
+    "message": "Disable the “Forget” toolbar button which can be used to forget browsing data"
   },
   "policy_description_DisableFormHistory": {
     "message": "禁用表单和搜索栏历史"
