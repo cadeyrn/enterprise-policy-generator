@@ -146,8 +146,14 @@
   "non_allowed_preference_label": {
     "message": "Название параметра не разрешено"
   },
+  "policy_category_authentication": {
+    "message": "Authentication"
+  },
   "policy_category_block_access": {
     "message": "Заблокировать доступ"
+  },
+  "policy_category_bookmarks": {
+    "message": "Bookmarks"
   },
   "policy_category_customization": {
     "message": "Настройки"
@@ -155,11 +161,17 @@
   "policy_category_disable_features": {
     "message": "Отключить функции"
   },
+  "policy_category_downloads": {
+    "message": "Downloads"
+  },
   "policy_category_network": {
-    "message": "Сеть"
+    "message": "Network security"
   },
   "policy_category_others": {
     "message": "Другие политики"
+  },
+  "policy_category_printing": {
+    "message": "PDF and printing"
   },
   "policy_category_privacy": {
     "message": "Приватность"
@@ -169,6 +181,9 @@
   },
   "policy_category_updates_and_data": {
     "message": "Обновления и сбор данных"
+  },
+  "policy_category_website": {
+    "message": "Website settings"
   },
   "policy_description_3rdParty": {
     "message": "Предварительная настройка параметров для расширений, использующих chrome.storage.managed"

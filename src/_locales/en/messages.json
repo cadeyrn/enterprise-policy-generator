@@ -146,8 +146,14 @@
   "non_allowed_preference_label": {
     "message": "Preference name not allowed"
   },
+  "policy_category_authentication": {
+    "message": "Authentication"
+  },
   "policy_category_block_access": {
     "message": "Block access"
+  },
+  "policy_category_bookmarks": {
+    "message": "Bookmarks"
   },
   "policy_category_customization": {
     "message": "Customization"
@@ -155,11 +161,17 @@
   "policy_category_disable_features": {
     "message": "Disable features"
   },
+  "policy_category_downloads": {
+    "message": "Downloads"
+  },
   "policy_category_network": {
-    "message": "Network"
+    "message": "Network security"
   },
   "policy_category_others": {
     "message": "Other policies"
+  },
+  "policy_category_printing": {
+    "message": "PDF and printing"
   },
   "policy_category_privacy": {
     "message": "Privacy"
@@ -169,6 +181,9 @@
   },
   "policy_category_updates_and_data": {
     "message": "Updates & data collection"
+  },
+  "policy_category_website": {
+    "message": "Website settings"
   },
   "policy_description_3rdParty": {
     "message": "Preconfiguration of settings for extensions that use chrome.storage.managed"

@@ -45,6 +45,8 @@
   possible: Press <kbd>Space</kbd> to pick up an item. Use <kbd>Arrow Up</kbd> and <kbd>Arrow Down</kbd> to move it.
   Press <kbd>Space</kbd> or <kbd>Enter</kbd> to drop. Press <kbd>Escape</kbd> to cancel, see
   [#361](https://github.com/cadeyrn/enterprise-policy-generator/issues/361)
+- Additional categories have been added, and policies have been reorganized to improve the usability, see
+  [#370](https://github.com/cadeyrn/enterprise-policy-generator/issues/370)
 - Added validation for fields that expect a specific placeholder, see
   [#306](https://github.com/cadeyrn/enterprise-policy-generator/issues/306)
 - The generated code is now displayed with syntax highlighting and line numbers (Firefox 148 and later), see

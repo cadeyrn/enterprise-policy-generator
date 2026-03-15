@@ -146,8 +146,14 @@
   "non_allowed_preference_label": {
     "message": "Preference name not allowed"
   },
+  "policy_category_authentication": {
+    "message": "Authentication"
+  },
   "policy_category_block_access": {
     "message": "阻止访问"
+  },
+  "policy_category_bookmarks": {
+    "message": "Bookmarks"
   },
   "policy_category_customization": {
     "message": "定制"
@@ -155,11 +161,17 @@
   "policy_category_disable_features": {
     "message": "禁用功能"
   },
+  "policy_category_downloads": {
+    "message": "Downloads"
+  },
   "policy_category_network": {
-    "message": "网络"
+    "message": "Network security"
   },
   "policy_category_others": {
     "message": "其他策略"
+  },
+  "policy_category_printing": {
+    "message": "PDF and printing"
   },
   "policy_category_privacy": {
     "message": "隐私"
@@ -169,6 +181,9 @@
   },
   "policy_category_updates_and_data": {
     "message": "更新和数据收集"
+  },
+  "policy_category_website": {
+    "message": "Website settings"
   },
   "policy_description_3rdParty": {
     "message": "Preconfiguration of settings for extensions that use chrome.storage.managed"

@@ -401,8 +401,8 @@
               "type": "array",
               "items": {
                 "enum": [
-                  "block-access", "customization", "disable-features", "network", "privacy", "security",
-                  "updates-and-data", "others"
+                  "authentication", "block-access", "bookmarks", "customization", "disable-features", "downloads",
+                  "network", "others", "printing", "privacy", "security", "updates-and-data", "website"
                 ]
               },
               "minItems": 1,

@@ -146,8 +146,14 @@
   "non_allowed_preference_label": {
     "message": "Einstellungsname nicht erlaubt"
   },
+  "policy_category_authentication": {
+    "message": "Authentifizierung"
+  },
   "policy_category_block_access": {
     "message": "Zugriff blockieren"
+  },
+  "policy_category_bookmarks": {
+    "message": "Lesezeichen"
   },
   "policy_category_customization": {
     "message": "Anpassung"
@@ -155,11 +161,17 @@
   "policy_category_disable_features": {
     "message": "Funktionen deaktivieren"
   },
+  "policy_category_downloads": {
+    "message": "Downloads"
+  },
   "policy_category_network": {
-    "message": "Netzwerk"
+    "message": "Netzwerk-Sicherheit"
   },
   "policy_category_others": {
     "message": "Sonstige Richtlinien"
+  },
+  "policy_category_printing": {
+    "message": "PDF und Drucken"
   },
   "policy_category_privacy": {
     "message": "Privatsphäre"
@@ -169,6 +181,9 @@
   },
   "policy_category_updates_and_data": {
     "message": "Updates & Datenerhebung"
+  },
+  "policy_category_website": {
+    "message": "Website-Einstellungen"
   },
   "policy_description_3rdParty": {
     "message": "Vorkonfiguration der Einstellungen für Erweiterungen, die chrome.storage.managed verwenden"
