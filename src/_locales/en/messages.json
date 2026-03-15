@@ -816,7 +816,7 @@
     "message": "Pinned to the navigation toolbar"
   },
   "policy_description_ExtensionSettings_install_sources": {
-    "message": "Allowed installation sources. Both the location of the *.xpi file and the page where the download is started from must be allowed. Match patterns are allowed; see the info link."
+    "message": "Allowed installation sources. Both the location of the *.xpi file and the page where the download is started from must be allowed. Match patterns are allowed, see the info link."
   },
   "policy_description_ExtensionSettings_install_url": {
     "message": "Install URL. If installing from the local file system, use a file:/// URI."
