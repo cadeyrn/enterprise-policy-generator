@@ -615,7 +615,7 @@
     "message": "Firefox při instalowanju a wuwjedźenju studijow kaž tež so na kontekst poćahowacych doporučenjow za funkcije haćić"
   },
   "policy_description_DisableForgetButton": {
-    "message": "Disable the “Forget” toolbar button which can be used to forget browsing data"
+    "message": "Tłóčatko „Zabyć“ znjemóžnić, kotrež so ma wužiwać, zo by daty wobhladowaka zhašało"
   },
   "policy_description_DisableFormHistory": {
     "message": "Formularnu a pytansku historiju znjemóžnić"
@@ -633,7 +633,7 @@
     "message": "Firefox při tym haćić, funkcije, wukon a stabilnosć mjez aktualizacijemi polěpšić"
   },
   "policy_description_DisableSafeMode": {
-    "message": "Menijowy zapisk znjemóžnić, zo by so Firefox ze znjemóžnjenymi rozšěrjenjemi znowa startował (wěsty modus)"
+    "message": "Menijowy zapisk znjemóžnić, zo by so Firefox ze znjemóžnjenymi rozšěrjenjemi znowa startował (modus za rozrisowanje problemow)"
   },
   "policy_description_DisableSecurityBypass": {
     "message": "Zadźěwać, zo so wěstotne warnowanja wobeńdu"
@@ -1065,10 +1065,10 @@
     "message": "Žane standardne zapołožki inkluziwnje inteligentne zapołožki (najhusćišo wopytane strony, njedawno wužite klučowe słowa) wutworić. Pokazka: tuta směrnica je jenož skutkowna, hdyž so před prěnim wužiwanjom profila Firefox nałožuje"
   },
   "policy_description_OfferToSaveLogins": {
-    "message": "Firefox dowolić, spomjatkowanje přizjewjenjow a hesłow poskićić (njeda so přepisać)"
+    "message": "Firefox dowolić, spomjatkowanje přizjewjenjow a hesłow poskićić (njeda so změnić)"
   },
   "policy_description_OfferToSaveLoginsDefault": {
-    "message": "Firefox dowolić, spomjatkowanje přizjewjenjow a hesłow poskićić (da so wot wužiwarja přepisać)"
+    "message": "Firefox dowolić, spomjatkowanje přizjewjenjow a hesłow poskićić (da so wot wužiwarja změnić)"
   },
   "policy_description_OverrideFirstRunPage": {
     "message": "Stronu přepisać, kotraž so při prěnim starće jewi. Prózdne zapodawanske polo stronu dospołnje znjemóžnja."
@@ -1191,16 +1191,16 @@
     "message": "Modus wobraz-we-wobrazu za wideja zmóžnić abo znjemóžnić"
   },
   "policy_description_PopupBlocking": {
-    "message": "Block pop-ups and third-party redirects (Firefox 144+)"
+    "message": "Wuskakowace wokna a dalesposrědkowanja třećich poskićowarjow (Firefox 144+) blokować"
   },
   "policy_description_PopupBlocking_Allow": {
-    "message": "Domains for which pop-ups and third-party redirects are allowed"
+    "message": "Domeny, za kotrež wuskakowace wokna a dalesposrědkowanja třećich poskićowarjow su dowolene"
   },
   "policy_description_PopupBlocking_Default_false": {
-    "message": "Pop-ups and third-party redirects are allowed by default"
+    "message": "Wuskakowace wokna a dalesposrědkowanja třećich poskićowarjow su po standardźe dowolene"
   },
   "policy_description_PopupBlocking_Default_true": {
-    "message": "Pop-ups and third-party redirects are blocked by default"
+    "message": "Wuskakowace wokna a dalesposrědkowanja třećich poskićowarjow so po standardźe blokuja"
   },
   "policy_description_PostQuantumKeyAgreementEnabled": {
     "message": "Wuběr postkwantowych klučow za TLS zmóžnić"
