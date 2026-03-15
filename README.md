@@ -11,9 +11,9 @@ Enterprise Policy Generator. Thank you very much!**
 
 Generates enterprise policies for Firefox.
 
-With Firefox 60 and Firefox ESR 60, Mozilla introduced the Enterprise Policy Engine. The Enterprise Policy
-Engine allows administrators to configure Firefox using a configuration file. The advantage of this configuration file
-over Group Policy Objects (GPO) is that this method works across Windows, macOS, and Linux.
+With Firefox 60, Mozilla introduced enterprise policies. One way to configure Firefox using enterprise policies is
+through a file named policies.json. The advantage of this file over Group Policy Objects (GPO) is that this method works
+across Windows, macOS, and Linux.
 
 While this extension is not directly related to CCK2 Wizard, it shares the same idea for enterprise policies in
 Firefox 60 and later. The Enterprise Policy Generator helps you create the configuration file, without studying all
