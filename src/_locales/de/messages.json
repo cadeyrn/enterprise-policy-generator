@@ -600,7 +600,7 @@
     "message": "Firefox an der Installation und Ausführung von Studien sowie kontextbezogenen Feature-Empfehlungen hindern"
   },
   "policy_description_DisableForgetButton": {
-    "message": "Deaktiviere die „Vergessen“ Schaltfläche, welche benutzt werden kann, um die Chronik zu löschen"
+    "message": "Deaktiviere die „Vergessen“ Schaltfläche, welche benutzt werden kann, um Browser-Daten zu löschen"
   },
   "policy_description_DisableFormHistory": {
     "message": "Deaktiviere die Formular- und Such-Chronik"
@@ -1329,7 +1329,7 @@
     "message": "Sprachkürzel"
   },
   "policy_description_SanitizeOnShutdown": {
-    "message": "Browsing-Daten löschen, wenn Firefox geschlossen wird"
+    "message": "Browser-Daten löschen, wenn Firefox geschlossen wird"
   },
   "policy_description_SanitizeOnShutdown_Cache": {
     "message": "Temporäre Dateien und Seiten im Cache"
