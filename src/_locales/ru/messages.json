@@ -30,19 +30,19 @@
     "message": "URL"
   },
   "configuration_export": {
-    "message": "экспорт конфигурации"
+    "message": "Экспорт конфигурации"
   },
   "configuration_import": {
-    "message": "импорт конфигурации"
+    "message": "Импорт конфигурации"
   },
   "configuration_incompatible_btn_get_in_touch": {
-    "message": "Получить перенесённую конфигурацию"
+    "message": "Запросить перенос конфигурации"
   },
   "configuration_incompatible_bullet_1": {
     "message": "Самостоятельно пересоздать и сохранить конфигурацию."
   },
   "configuration_incompatible_bullet_2": {
-    "message": "Связаться с нами и получить перенесённую версию конфигурации – совершенно бесплатно."
+    "message": "Связаться с нами, чтобы получить перенесённую версию конфигурации (совершенно бесплатно)."
   },
   "configuration_incompatible_bullet_3": {
     "message": "Пользоваться текущей конфигурацией в более старых версиях \"Генератора политик\"."
@@ -54,37 +54,37 @@
     "message": "Несовместимая конфигурация"
   },
   "enum_value_block_no": {
-    "message": "не блокировать"
+    "message": "Не блокировать"
   },
   "enum_value_block_yes": {
-    "message": "блокировать"
+    "message": "Блокировать"
   },
   "enum_value_enable_no": {
-    "message": "отключить"
+    "message": "Отключить"
   },
   "enum_value_enable_yes": {
-    "message": "включить"
+    "message": "Включить"
   },
   "enum_value_no": {
-    "message": "нет"
+    "message": "Нет"
   },
   "enum_value_no_preference": {
-    "message": "нет параметров"
+    "message": "Нет параметров"
   },
   "enum_value_yes": {
-    "message": "да"
+    "message": "Да"
   },
   "explanation_about_policies": {
-    "message": "По адресу about:policies находится обзор всех активных политик и ошибок в файле \"policies.json\"."
+    "message": "Обзор всех активных политик и ошибок можно посмотреть на странице about:policies."
   },
   "explanation_headline_usage": {
     "message": "Использование"
   },
   "explanation_intro": {
-    "message": "При нажатии на кнопку будет сгенерирован код. Этот код должен храниться в файле \"policies.json\" в папке \"distribution\", находящейся в каталоге установки."
+    "message": "Нажмите кнопку, чтобы сгенерировать код. Сохраните его в файле с именем \"policies.json\" в папке \"distribution\"."
   },
   "explanation_intro_linux": {
-    "message": "Создайте папку \"distribution\" в каталоге установки Firefox и поместите туда файл \"policies.json\". Также можно задать общесистемную политику, поместив файл в /etc/firefox/policies."
+    "message": "Создайте папку \"distribution\" в каталоге установки Firefox и поместите туда файл \"policies.json\". Также можно задать общесистемные политики, поместив файл в /etc/firefox/policies."
   },
   "explanation_intro_macos": {
     "message": "Создайте папку \"distribution\" в каталоге /Contents/Resources/ пакета приложения Firefox поместите туда файл \"policies.json\". Чтобы открыть пакет приложения, нажмите правой кнопкой мыши на приложении Firefox в Finder и выберите \"Показать содержимое пакета\" из контекстного меню."
@@ -111,19 +111,19 @@
     "message": "Выбор политик"
   },
   "link_copy_to_clipboard": {
-    "message": "копировать в буфер обмена"
+    "message": "Копировать в буфер обмена"
   },
   "link_download": {
-    "message": "загрузить policies.json"
+    "message": "Загрузить policies.json"
   },
   "link_learn_more": {
-    "message": "больше информации"
+    "message": "Больше информации"
   },
   "link_load_configuration": {
-    "message": "загрузить конфигурацию"
+    "message": "Загрузить конфигурацию"
   },
   "link_save_configuration": {
-    "message": "сохранить конфигурацию"
+    "message": "Сохранить конфигурацию"
   },
   "list_dialog_no_saved_configurations": {
     "message": "Конфигурация ещё не сохранена."
@@ -147,13 +147,13 @@
     "message": "Название параметра не разрешено"
   },
   "policy_category_authentication": {
-    "message": "Authentication"
+    "message": "Аутентификация"
   },
   "policy_category_block_access": {
     "message": "Заблокировать доступ"
   },
   "policy_category_bookmarks": {
-    "message": "Bookmarks"
+    "message": "Закладки"
   },
   "policy_category_customization": {
     "message": "Настройки"
@@ -162,16 +162,16 @@
     "message": "Отключить функции"
   },
   "policy_category_downloads": {
-    "message": "Downloads"
+    "message": "Загрузки"
   },
   "policy_category_network": {
-    "message": "Network security"
+    "message": "Сетевая безопасность"
   },
   "policy_category_others": {
     "message": "Другие политики"
   },
   "policy_category_printing": {
-    "message": "PDF and printing"
+    "message": "Печать и PDF"
   },
   "policy_category_privacy": {
     "message": "Приватность"
@@ -183,7 +183,7 @@
     "message": "Обновления и сбор данных"
   },
   "policy_category_website": {
-    "message": "Website settings"
+    "message": "Настройки сайта"
   },
   "policy_description_3rdParty": {
     "message": "Предварительная настройка параметров для расширений, использующих chrome.storage.managed"
@@ -318,13 +318,13 @@
     "message": "Настройка сертификатов"
   },
   "policy_description_Certificates_ImportEnterpriseRoots": {
-    "message": "чтение сертификатов из хранилища сертификатов системы (только Windows и MacOS)"
+    "message": "Чтение сертификатов из хранилища сертификатов системы (только Windows и MacOS)"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_false": {
-    "message": "не читать сертификаты из хранилища сертификатов системы"
+    "message": "Не читать сертификаты из хранилища сертификатов системы"
   },
   "policy_description_Certificates_ImportEnterpriseRoots_true": {
-    "message": "читать сертификаты из хранилища сертификатов системы"
+    "message": "Читать сертификаты из хранилища сертификатов системы"
   },
   "policy_description_Certificates_Install": {
     "message": "Импорт сертификатов (Windows: %USERPROFILE%\\AppData\\Local\\Mozilla\\Certificates или %USERPROFILE%\\AppData\\Roaming\\Mozilla\\Certificates, macOS: /Library/Application Support/Mozilla/Certificates или ~/Library/Application Support/Mozilla/Certificates, Linux: /usr/lib/mozilla/certificates, /usr/lib64/mozilla/certificates или ~/.mozilla/certificates)"
@@ -495,10 +495,10 @@
     "message": "Канал, созданный агентом DLP, является"
   },
   "policy_description_ContentAnalysis_IsPerUser_per_system": {
-    "message": "системным"
+    "message": "Системным"
   },
   "policy_description_ContentAnalysis_IsPerUser_per_user": {
-    "message": "пользовательским (по умолчанию)"
+    "message": "Пользовательским (по умолчанию)"
   },
   "policy_description_ContentAnalysis_MaxConnectionsCount_label": {
     "message": "Максимальное количество одновременных подключений к агенту DLP"
@@ -516,7 +516,7 @@
     "message": "Показывать уведомление при отклонении запроса DLP"
   },
   "policy_description_ContentAnalysis_TimeoutResult": {
-    "message": "Действие для DLP-запросов, если агент DLP не отвечает на запрос менее чем за указанное количество секунд"
+    "message": "Действие для DLP-запросов, если агент DLP не отвечает в течение указанного количества секунд"
   },
   "policy_description_Cookies": {
     "message": "Разрешить или запретить сайтам установку куки"
@@ -615,7 +615,7 @@
     "message": "Запретить установку и запуск исследований и рекомендаций"
   },
   "policy_description_DisableForgetButton": {
-    "message": "Disable the \"Forget\" toolbar button which can be used to forget browsing data"
+    "message": "Отключить кнопку \"Забыть\" на панели инструментов, с помощью которой можно удалить историю просмотров"
   },
   "policy_description_DisableFormHistory": {
     "message": "Отключить историю форм и поиска"
@@ -633,7 +633,7 @@
     "message": "Запретить Firefox применять изменения производительности, стабильности и функционала между обновлениями"
   },
   "policy_description_DisableSafeMode": {
-    "message": "Отключить пункт меню \"Перезапустить без дополнений\""
+    "message": "Отключить пункт меню \"Перезапустить без дополнений\" (безопасный режим)"
   },
   "policy_description_DisableSecurityBypass": {
     "message": "Запретить обход некоторых предупреждений безопасности"
@@ -642,19 +642,19 @@
     "message": "Запретить добавление исключения для недопустимого сертификата"
   },
   "policy_description_DisableSecurityBypass_InvalidCertificate_false": {
-    "message": "не запрещать"
+    "message": "Не запрещать"
   },
   "policy_description_DisableSecurityBypass_InvalidCertificate_true": {
-    "message": "запретить"
+    "message": "Запретить"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing": {
     "message": "Запретить посещение вредоносных сайтов и обход предупреждений"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_false": {
-    "message": "не запрещать"
+    "message": "Не запрещать"
   },
   "policy_description_DisableSecurityBypass_SafeBrowsing_true": {
-    "message": "запретить"
+    "message": "Запретить"
   },
   "policy_description_DisableSetDesktopBackground": {
     "message": "Отключить функцию установки изображений обоями рабочего стола"
@@ -801,7 +801,7 @@
     "message": "Отображаемое сообщение об ошибке при попытке установить заблокированное расширение"
   },
   "policy_description_ExtensionSettings_blocked_install_message_placeholder": {
-    "message": "сообщение об ошибке"
+    "message": "Сообщение об ошибке"
   },
   "policy_description_ExtensionSettings_blocked_install_message_single": {
     "message": "Отображаемое сообщение об ошибке при попытке установить заблокированное расширение"
@@ -822,25 +822,25 @@
     "message": "URL установки. При установке с диска: file:/// URI."
   },
   "policy_description_ExtensionSettings_installation_mode": {
-    "message": "установка"
+    "message": "Установка"
   },
   "policy_description_ExtensionSettings_installation_mode_allowed_all": {
-    "message": "установка расширений разрешена"
+    "message": "Установка расширений разрешена"
   },
   "policy_description_ExtensionSettings_installation_mode_allowed_single": {
-    "message": "установка этого расширения разрешена"
+    "message": "Установка этого расширения разрешена"
   },
   "policy_description_ExtensionSettings_installation_mode_blocked_all": {
-    "message": "установка расширений пользователю не разрешена, уже установленные расширения будут удалены с устройства"
+    "message": "Установка расширений пользователю не разрешена, уже установленные расширения будут удалены с устройства"
   },
   "policy_description_ExtensionSettings_installation_mode_blocked_single": {
-    "message": "установка этого расширения пользователю не разрешена, уже установленное расширение будет удалено с устройства"
+    "message": "Установка этого расширения пользователю не разрешена, уже установленное расширение будет удалено с устройства"
   },
   "policy_description_ExtensionSettings_installation_mode_force_installed": {
-    "message": "расширение устанавливается автоматически и не может быть удалено пользователем (требуется URL установки)"
+    "message": "Расширение устанавливается автоматически и не может быть удалено пользователем (требуется URL установки)"
   },
   "policy_description_ExtensionSettings_installation_mode_normal_installed": {
-    "message": "расширение устанавливается автоматически, но может быть отключено пользователем (требуется URL установки)"
+    "message": "Расширение устанавливается автоматически, но может быть отключено пользователем (требуется URL установки)"
   },
   "policy_description_ExtensionSettings_key": {
     "message": "ID расширения"
@@ -918,7 +918,7 @@
     "message": "Включить или отключить все функции ниже"
   },
   "policy_description_GenerativeAI_LinkPreviews": {
-    "message": "Предварительный обзор ссылок"
+    "message": "Предварительный обзор ссылок ИИ"
   },
   "policy_description_GenerativeAI_TabGroups": {
     "message": "Предложения для групп вкладок (имя группы, вкладки)"
@@ -936,10 +936,10 @@
     "message": "Сохранить на диск"
   },
   "policy_description_Handlers_property_action_useHelperApp": {
-    "message": "открыть в приложении"
+    "message": "Открыть в приложении"
   },
   "policy_description_Handlers_property_action_useSystemDefault": {
-    "message": "использовать системную настройку"
+    "message": "Использовать системную настройку"
   },
   "policy_description_Handlers_property_ask": {
     "message": "Запрашивать пользователя о действии с файлом"
@@ -1041,7 +1041,7 @@
     "message": "Имя папки"
   },
   "policy_description_ManagedBookmarks_folders": {
-    "message": "Папка"
+    "message": "Папки"
   },
   "policy_description_ManagedBookmarks_name": {
     "message": "Имя закладки"
@@ -1065,10 +1065,10 @@
     "message": "Не создавать закладки по умолчанию Firefox, включая смарт-закладки (самые посещаемые, последние теги).\nПримечание: только для нового профиля"
   },
   "policy_description_OfferToSaveLogins": {
-    "message": "Разрешить Firefox предлагать запоминать логины и пароли (не могут быть перезаписаны)"
+    "message": "Разрешить Firefox предлагать запоминать логины и пароли (не могут быть изменены)"
   },
   "policy_description_OfferToSaveLoginsDefault": {
-    "message": "Разрешить Firefox предлагать запоминать логины и пароли (могут быть перезаписаны пользователем)"
+    "message": "Разрешить Firefox предлагать запоминать логины и пароли (могут быть изменены пользователем)"
   },
   "policy_description_OverrideFirstRunPage": {
     "message": "Переопределить страницу первого запуска. Если пусто, то отключена."
@@ -1191,16 +1191,16 @@
     "message": "Включить или отключить функцию картинка-в-картинке для видео"
   },
   "policy_description_PopupBlocking": {
-    "message": "Block pop-ups and third-party redirects (Firefox 144+)"
+    "message": "Блокировать всплывающие окна и сторонние перенаправления (Firefox 144+)"
   },
   "policy_description_PopupBlocking_Allow": {
-    "message": "Domains for which pop-ups and third-party redirects are allowed"
+    "message": "Домены, для которых разрешены всплывающие окна и сторонние перенаправления"
   },
   "policy_description_PopupBlocking_Default_false": {
-    "message": "Pop-ups and third-party redirects are allowed by default"
+    "message": "Всплывающие окна и сторонние перенаправления по умолчанию разрешены"
   },
   "policy_description_PopupBlocking_Default_true": {
-    "message": "Pop-ups and third-party redirects are blocked by default"
+    "message": "Всплывающие окна и сторонние перенаправления по умолчанию заблокированы"
   },
   "policy_description_PostQuantumKeyAgreementEnabled": {
     "message": "Использовать постквантовое согласование ключей для TLS"
@@ -1278,7 +1278,7 @@
     "message": "Запрос аутентификации"
   },
   "policy_description_Proxy_AutoLogin_false": {
-    "message": "запрос аутентификации"
+    "message": "Запрос аутентификации"
   },
   "policy_description_Proxy_AutoLogin_true": {
     "message": "Не запрашивать аутентификацию"
@@ -1293,16 +1293,16 @@
     "message": "URL автоматической настройки прокси"
   },
   "policy_description_Proxy_Mode_autoDetect": {
-    "message": "автоопределение настроек прокси для этой сети"
+    "message": "Автоопределение настроек прокси для этой сети"
   },
   "policy_description_Proxy_Mode_manual": {
-    "message": "ручная настройка прокси"
+    "message": "Ручная настройка прокси"
   },
   "policy_description_Proxy_Mode_none": {
-    "message": "без прокси"
+    "message": "Без прокси"
   },
   "policy_description_Proxy_Mode_system": {
-    "message": "системные настройки прокси"
+    "message": "Системные настройки прокси"
   },
   "policy_description_Proxy_Passthrough": {
     "message": "Нет прокси для…"
@@ -1320,19 +1320,19 @@
     "message": "SSL-прокси. Чтобы настроить номера портов, добавьте \":\", а затем номер порта"
   },
   "policy_description_Proxy_UseHTTPProxyForAllProtocols_false": {
-    "message": "не использовать этот прокси для всех протоколов"
+    "message": "Не использовать этот прокси для всех протоколов"
   },
   "policy_description_Proxy_UseHTTPProxyForAllProtocols_true": {
-    "message": "использовать этот прокси для всех протоколов"
+    "message": "Использовать этот прокси для всех протоколов"
   },
   "policy_description_Proxy_UseProxyForDNS": {
     "message": "Проксирование DNS для SOCKS v5"
   },
   "policy_description_Proxy_UseProxyForDNS_false": {
-    "message": "не использовать проксирование DNS"
+    "message": "Не использовать проксирование DNS"
   },
   "policy_description_Proxy_UseProxyForDNS_true": {
-    "message": "использовать проксирование DNS"
+    "message": "Использовать проксирование DNS"
   },
   "policy_description_RequestedLocales": {
     "message": "Изменить язык интерфейса Firefox"
@@ -1377,10 +1377,10 @@
     "message": "Строка поиска - единая или отдельная"
   },
   "policy_description_SearchBar_options_separate": {
-    "message": "отдельная строка поиска"
+    "message": "Отдельная строка поиска"
   },
   "policy_description_SearchBar_options_unified": {
-    "message": "объединена со строкой адреса"
+    "message": "Объединена со строкой адреса"
   },
   "policy_description_SearchEngines": {
     "message": "Изменить список поисковых систем, встроенных в Firefox"
@@ -1428,10 +1428,10 @@
     "message": "Запретить установку новых поисковых систем"
   },
   "policy_description_SearchEngines_PreventInstalls_false": {
-    "message": "не запрещать"
+    "message": "Не запрещать"
   },
   "policy_description_SearchEngines_PreventInstalls_true": {
-    "message": "запретить"
+    "message": "Запретить"
   },
   "policy_description_SearchEngines_Remove": {
     "message": "Удалить поисковые системы"
@@ -1518,7 +1518,7 @@
     "message": "Включить или отключить обратный поиск изображений через Google Объектив"
   },
   "policy_description_WebsiteFilter": {
-    "message": "Блокировать посещение сайтов. Используйте \"<all_urls>\" для блокировки всех URL. Поддерживаются только HTTPS и HTTP."
+    "message": "Блокировать доступ к сайтам. Используйте \"<all_urls>\" для блокировки всех URL. Все допустимые записи см. по информационной ссылке, но поддерживаются только HTTPS и HTTP."
   },
   "policy_description_WebsiteFilter_Block": {
     "message": "Блокировать следующие URL"
@@ -1536,13 +1536,13 @@
     "message": "Расширение бесплатное. Ваше добровольное пожертвование позволит мне продолжить интеграцию новых функций и корпоративных политик."
   },
   "requirement_macOS": {
-    "message": "работает только в macOS"
+    "message": "Работает только в macOS"
   },
   "requirement_windows": {
-    "message": "работает только в Windows"
+    "message": "Работает только в Windows"
   },
   "requirement_windows_or_linux": {
-    "message": "работает только в Windows и Linux"
+    "message": "Работает только в Windows и Linux"
   },
   "save_dialog_btn_ok": {
     "message": "Сохранить конфигурацию"
@@ -1554,19 +1554,19 @@
     "message": "Сохранить конфигурацию"
   },
   "title_add_item": {
-    "message": "добавить элемент"
+    "message": "Добавить элемент"
   },
   "title_apply_configuration": {
-    "message": "загрузить конфигурацию"
+    "message": "Загрузить конфигурацию"
   },
   "title_move_item": {
-    "message": "переместить элемент"
+    "message": "Переместить элемент"
   },
   "title_remove_configuration": {
-    "message": "удалить конфигурацию"
+    "message": "Удалить конфигурацию"
   },
   "title_remove_item": {
-    "message": "удалить элемент"
+    "message": "Удалить элемент"
   },
   "validation_invalid_json": {
     "message": "неправильный JSON"
@@ -1581,18 +1581,18 @@
     "message": "неправильная версия шаблона"
   },
   "validation_missing_placeholder_s": {
-    "message": "Отсутствует заполнитель \"%s\""
+    "message": "отсутствует заполнитель \"%s\""
   },
   "validation_missing_placeholder_searchterms": {
-    "message": "Отсутствует заполнитель \"{searchterms}\""
+    "message": "отсутствует заполнитель \"{searchterms}\""
   },
   "validation_required": {
-    "message": "обязательный"
+    "message": "требуется"
   },
   "version_or_higher": {
     "message": "или выше"
   },
   "version_required": {
-    "message": "требует, по крайней мере"
+    "message": "требуется по крайней мере"
   }
 }
