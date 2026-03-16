@@ -664,7 +664,7 @@ input, textarea {
 
 dialog {
   padding: 0;
-  width: 550px;
+  min-width: 550px;
   max-width: 90%;
   max-height: 90vh;
   border-width: 0;
@@ -858,12 +858,13 @@ dialog {
   }
 
   .time {
-    width: 220px;
+    width: 190px;
   }
 
   .actions {
     padding-right: 10px;
     text-align: right;
+    white-space: nowrap;
 
     button {
       + button {
@@ -1184,6 +1185,11 @@ dialog {
 }
 
 @media screen and (max-width: 779px) {
+  dialog {
+    min-width: unset;
+    width: 550px;
+  }
+
   #filter-wrapper {
     display: none;
   }

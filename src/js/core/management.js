@@ -170,7 +170,9 @@ class Management {
 
       // time column
       const $timeColumn = document.createElement('td');
-      $timeColumn.textContent = configuration.time.toLocaleString();
+      $timeColumn.textContent = new Intl.DateTimeFormat('default', {
+        day : '2-digit', month : '2-digit', year : 'numeric', hour: '2-digit', minute: '2-digit'
+      }).format(configuration.time);
       $row.appendChild($timeColumn);
 
       // icon column
