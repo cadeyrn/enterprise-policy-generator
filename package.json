@@ -23,7 +23,7 @@
   "devDependencies": {
     "@eslint/json": "1.1.0",
     "@html-eslint/eslint-plugin": "0.58.1",
-    "@sourcemeta/jsonschema": "14.14.2",
+    "@sourcemeta/jsonschema": "14.16.0",
     "@stylistic/eslint-plugin": "5.10.0",
     "eslint": "10.0.3",
     "eslint-plugin-jsdoc": "62.8.0",
