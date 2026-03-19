@@ -28,7 +28,7 @@
     "eslint": "10.0.3",
     "eslint-plugin-jsdoc": "62.8.0",
     "eslint-plugin-xss": "0.1.12",
-    "stylelint": "17.4.0",
+    "stylelint": "17.5.0",
     "stylelint-order": "8.1.1",
     "web-ext": "10.0.0"
   },
