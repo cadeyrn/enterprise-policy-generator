@@ -121,7 +121,7 @@
 **This is the last release with support for Firefox 128.**
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v7.2.0...v7.3.0)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-7.3.0)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -145,7 +145,7 @@
 - Updated web-ext from version 8.10.0 to 9.1.0
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v7.1.0...v7.2.0)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-7.2.0)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -172,7 +172,7 @@
 - Updated web-ext from version 8.9.0 to 8.10.0
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v7.0.0...v7.1.0)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-7.1.0)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -236,7 +236,7 @@
 - Updated stylistic/eslint-plugin from version 5.2.3 to 5.3.1
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v6.6.0...v7.0.0)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-7.0.0)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -285,7 +285,7 @@
 **This is the last release with support for Firefox 115.**
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v6.5.0...v6.6.0)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-6.6.0)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -355,7 +355,7 @@
 - Removed stylelint-csstree-validator
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v6.4.0...v6.5.0)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-6.5.0)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -386,7 +386,7 @@
 - Updated web-ext from version 8.4.0 to 8.6.0
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v6.3.0...v6.4.0)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-6.4.0)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -439,7 +439,7 @@
 - Updated stylistic/eslint-plugin-js from version 4.1.0 to 4.2.0
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v6.2.0...v6.3.0)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-6.3.0)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -496,7 +496,7 @@
 - Updated web-ext from version 8.2.0 to 8.4.0
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v6.1.0...v6.2.0)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-6.2.0)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -554,7 +554,7 @@
 - Updated gulp-eslint-new from version 2.1.0 to 2.3.0
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v6.0.0...v6.1.0)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-6.1.0)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -696,7 +696,7 @@
 - Removed eslint-plugin-promise
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v5.1.0...v6.0.0)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-6.0.0)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -753,7 +753,7 @@
 - Updated web-ext from version 3.2.0 to 4.1.0
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v5.0.0...v5.1.0)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-5.1.0)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -886,7 +886,7 @@
 - Updated web-ext from version 3.0.0 to 3.2.0
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v4.4.0...v5.0.0)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-5.0.0)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -918,7 +918,7 @@
 - Updated web-ext from version 2.9.3 to 3.0.0
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v4.3.0...v4.4.0)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-4.4.0)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -947,7 +947,7 @@
 - Updated web-ext from version 2.9.2 to 2.9.3
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v4.2.0...v4.3.0)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-4.3.0)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -975,7 +975,7 @@
 - Updated stylelint-order from version 1.0.0 to 2.0.0
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v4.1.1...4.2.0)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-4.2.0)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -997,7 +997,7 @@
 - Updated web-ext from version 2.9.1 to 2.9.2
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v4.1.0...v4.1.1)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-4.1.1)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -1035,7 +1035,7 @@
 - Updated stylelint from version 9.5.0 to 9.7.1
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v4.0.0...v4.1.0)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-4.1.0)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -1084,7 +1084,7 @@
 - Updated web-ext from version 2.8.0 to 2.9.1
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v3.1.1...v4.0.0)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-4.0.0)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -1096,7 +1096,7 @@
 - Fixed typo in English translation
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v3.1.0...v3.1.1)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-3.1.1)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -1125,7 +1125,7 @@
 - Updated web-ext from version 2.7.0 to 2.8.0
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v3.0.0...v3.1.0)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-3.1.0)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -1190,7 +1190,7 @@
 - Updated gulp-eslint from version 4.0.2 to 5.0.0
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v2.0.0...v3.0.0)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-3.0.0)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -1223,7 +1223,7 @@
 - Updated stylelint-csstree-validator from version 9.2.1 to 9.3.0
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v1.1.0...v2.0.0)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-2.0.0)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -1252,7 +1252,7 @@
 - Updated web-ext from version 2.6.0 to 2.7.0
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v1.0.1...v1.1.0)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-1.1.0)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -1263,7 +1263,7 @@
 - Fixed typo in English translation
 
 [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v1.0.0...v1.0.1)<br />
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-1.0.1)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
@@ -1279,4 +1279,4 @@
 - Special marking of policies that only work with Firefox ESR
 - Info links for some policies to get additional information
 
-[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/?page=1#version-1.0.0)
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
