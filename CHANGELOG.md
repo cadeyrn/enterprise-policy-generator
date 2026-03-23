@@ -73,7 +73,7 @@
   [#283](https://github.com/cadeyrn/enterprise-policy-generator/issues/283)
 - Updated the description for the `PopupBlocking` policy to reflect the inclusion of the third-party redirect blocking
   in Firefox 144 and later, [#369](https://github.com/cadeyrn/enterprise-policy-generator/issues/369)
-- Removed support for the `Extensions` policy as there is the `ExtensionSettings` policy which provides more features,
+- Removed support for the `Extensions` policy as there is the `ExtensionSettings` policy that provides more features,
   [#170](https://github.com/cadeyrn/enterprise-policy-generator/issues/170)
 - Options that used the legacy version of the `Preferences` policy have been removed. These can all be replaced by the
   newer `Preferences` policy, see [#306](https://github.com/cadeyrn/enterprise-policy-generator/issues/306)
