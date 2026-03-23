@@ -1114,7 +1114,7 @@
 
 #### Code Quality
 
-- Use flexbox for two column layout instead of floats, fixed by
+- Use flexbox for two column layout instead of floats, see
   [#33](https://github.com/cadeyrn/enterprise-policy-generator/issues/33)
 - Use CSS variables for most colors, see [#34](https://github.com/cadeyrn/enterprise-policy-generator/issues/34)
 
@@ -1273,10 +1273,10 @@
 
 #### Features of the first version
 
-- Click together the desired Enterprise Policies
+- Configure all enterprise policies via an intuitive user interface
 - Supports all policies that are supported by Firefox 60
-- Validation for mandatory fields
-- Special marking of policies that only work with Firefox ESR
-- Info links for some policies to get additional information
+- Validates fields that require specific values
+- Highlights policies that only work with Firefox ESR
+- Shows additional information or links where appropriate
 
 [Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
