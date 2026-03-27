@@ -52,14 +52,14 @@
         }
       ]
     },
-    "VisualSearchEnabled": {
-      "availability": { "mainstream": "144.0", "esr": null },
+    "TranslateEnabled": {
+      "availability": { "mainstream": "126.0", "esr": "128.0" },
       "tags": ["disable-features"],
       "schema": "enum",
       "preset": "enable"
     },
-    "TranslateEnabled": {
-      "availability": { "mainstream": "126.0", "esr": "128.0" },
+    "VisualSearchEnabled": {
+      "availability": { "mainstream": "144.0", "esr": null },
       "tags": ["disable-features"],
       "schema": "enum",
       "preset": "enable"
