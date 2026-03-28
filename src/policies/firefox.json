@@ -123,7 +123,7 @@
       "availability": { "mainstream": "144.0", "esr": "140.4" },
       "tags": ["disable-features"],
       "exclude": ["AIControls"],
-      "deprecation": "policy_description_GenerativeAI_deprecation",
+      "deprecation": "policy_description_AIControls_deprecation",
       "schema": "object",
       "lockable": true,
       "properties": [
