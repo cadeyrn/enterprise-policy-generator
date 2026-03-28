@@ -198,25 +198,25 @@
     "message": "ID расширения"
   },
   "policy_description_AIControls": {
-    "message": "Enable or disable AI features"
+    "message": "Включить или отключить функций ИИ"
   },
   "policy_description_AIControls_Default": {
-    "message": "Allow or block current and future AI features"
+    "message": "Разрешить или блокировать текущие и будущие функции ИИ"
   },
   "policy_description_AIControls_deprecation": {
-    "message": "This policy should only be used if Firefox ESR 140 needs to be supported. Otherwise, the newer AIControls policy should be used."
+    "message": "Данная политика должна использоваться только при необходимости поддержки Firefox ESR 140. В противном случае следует использовать новую политику AIControls."
   },
   "policy_description_AIControls_LinkPreviewKeyPoints": {
-    "message": "Summary for link preview"
+    "message": "Предварительный обзор ссылок"
   },
   "policy_description_AIControls_option_available": {
-    "message": "Available"
+    "message": "Разрешить"
   },
   "policy_description_AIControls_option_blocked": {
-    "message": "Blocked"
+    "message": "Блокировать"
   },
   "policy_description_AIControls_PDFAltText": {
-    "message": "Alternative text generated for images in the PDF viewer"
+    "message": "Распознание текста на изображениях в PDF-файлах"
   },
   "policy_description_AIControls_SidebarChatbot": {
     "message": "Поставщик ИИ (например, ChatGPT, Google Gemini или Microsoft Copilot)"
@@ -225,10 +225,10 @@
     "message": "Предложения для групп вкладок (имя группы, вкладки)"
   },
   "policy_description_AIControls_SmartWindow": {
-    "message": "Smart Window AI assistent"
+    "message": "Помощник AI Window "
   },
   "policy_description_AIControls_Translations": {
-    "message": "Local translations"
+    "message": "Встроенный переводчик"
   },
   "policy_description_AllowedDomainsForApps": {
     "message": "Домены, для которых разрешён доступ к Google Workspace"
@@ -1056,7 +1056,7 @@
     "message": "Включён и пользователь не может отключить"
   },
   "policy_description_IPProtectionAvailable": {
-    "message": "Disable VPN integration"
+    "message": "Отключить встроенный VPN"
   },
   "policy_description_LegacySameSiteCookieBehaviorEnabled": {
     "message": "Восстановить старое поведение куков SameSite"
