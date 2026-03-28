@@ -1,6 +1,6 @@
 'use strict';
 
-/* global Dom, I18n, Output, Sortable */
+/* global Dom, I18n, Output, PolicyManager, Sortable */
 
 /** @type {browser.permissions.Permissions} */
 const DOWNLOAD_PERMISSION = { permissions: ['downloads'] };
