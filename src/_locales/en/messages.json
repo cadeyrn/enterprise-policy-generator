@@ -1022,6 +1022,9 @@
   "policy_description_HttpsOnlyMode_force_enabled": {
     "message": "On and the user can’t turn it off"
   },
+  "policy_description_IPProtectionAvailable": {
+    "message": "Disable VPN integration"
+  },
   "policy_description_LegacySameSiteCookieBehaviorEnabled": {
     "message": "Enable the legacy default behavior for SameSite cookies"
   },

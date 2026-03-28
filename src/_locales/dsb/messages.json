@@ -1022,6 +1022,9 @@
   "policy_description_HttpsOnlyMode_force_enabled": {
     "message": "Zmóžnjony a wužywaŕ njamóžo jen znjemóžniś"
   },
+  "policy_description_IPProtectionAvailable": {
+    "message": "Disable VPN integration"
+  },
   "policy_description_LegacySameSiteCookieBehaviorEnabled": {
     "message": "Zestarjone standardne zaźaržanje cookiejow SameSite zmóžniś"
   },

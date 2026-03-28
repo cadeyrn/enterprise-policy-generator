@@ -1022,6 +1022,9 @@
   "policy_description_HttpsOnlyMode_force_enabled": {
     "message": "Включён и пользователь не может отключить"
   },
+  "policy_description_IPProtectionAvailable": {
+    "message": "Disable VPN integration"
+  },
   "policy_description_LegacySameSiteCookieBehaviorEnabled": {
     "message": "Восстановить старое поведение куков SameSite"
   },

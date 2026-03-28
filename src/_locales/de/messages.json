@@ -1022,6 +1022,9 @@
   "policy_description_HttpsOnlyMode_force_enabled": {
     "message": "Eingeschaltet und der Benutzer kann diesen nicht ausschalten"
   },
+  "policy_description_IPProtectionAvailable": {
+    "message": "VPN-Integration deaktivieren"
+  },
   "policy_description_LegacySameSiteCookieBehaviorEnabled": {
     "message": "Veraltetes Standard-Verhalten von SameSite-Cookies aktivieren"
   },

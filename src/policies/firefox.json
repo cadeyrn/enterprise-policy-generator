@@ -64,6 +64,12 @@
       "schema": "enum",
       "preset": "enable"
     },
+    "IPProtectionAvailable": {
+      "availability": { "mainstream": "149.0.1", "esr": null },
+      "tags": ["disable-features"],
+      "schema": "boolean",
+      "inverse": true
+    },
     "DisableFirefoxScreenshots": {
       "availability": { "mainstream": "60.0", "esr": "60.0" },
       "tags": ["disable-features"],
