@@ -197,6 +197,39 @@
   "policy_description_3rdparty_key": {
     "message": "Erweiterungs-ID"
   },
+  "policy_description_AIControls": {
+    "message": "KI-Funktionen aktivieren oder deaktivieren"
+  },
+  "policy_description_AIControls_Default": {
+    "message": "Aktuelle und zukünftige KI-Funktionen erlauben oder blockieren"
+  },
+  "policy_description_AIControls_deprecation": {
+    "message": "Diese Richtlinie sollte nur verwendet werden, wenn Firefox ESR 140 unterstützt werden muss. Ansonsten sollte die neuere AIControls-Richtlinie verwendet werden."
+  },
+  "policy_description_AIControls_LinkPreviewKeyPoints": {
+    "message": "Zusammenfassung für Link-Vorschau"
+  },
+  "policy_description_AIControls_option_available": {
+    "message": "Verfügbar"
+  },
+  "policy_description_AIControls_option_blocked": {
+    "message": "Blockiert"
+  },
+  "policy_description_AIControls_PDFAltText": {
+    "message": "Generierte Alternativ-Texte für Grafiken im PDF-Betrachter"
+  },
+  "policy_description_AIControls_SidebarChatbot": {
+    "message": "LLM-Chatbot (zum Beispiel ChatGPT, Google Gemini, Microsoft Copilot)"
+  },
+  "policy_description_AIControls_SmartTabGroups": {
+    "message": "Vorschläge für Tab-Gruppen (Name der Gruppe, Tabs)"
+  },
+  "policy_description_AIControls_SmartWindow": {
+    "message": "Smart Window KI-Assistent"
+  },
+  "policy_description_AIControls_Translations": {
+    "message": "Lokale Übersetzungen"
+  },
   "policy_description_AllowedDomainsForApps": {
     "message": "Domains festlegen, die auf Google Workspace zugreifen dürfen"
   },

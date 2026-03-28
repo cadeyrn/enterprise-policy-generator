@@ -197,6 +197,39 @@
   "policy_description_3rdparty_key": {
     "message": "Add-on ID"
   },
+  "policy_description_AIControls": {
+    "message": "Enable or disable AI features"
+  },
+  "policy_description_AIControls_Default": {
+    "message": "Allow or block current and future AI features"
+  },
+  "policy_description_AIControls_deprecation": {
+    "message": "This policy should only be used if Firefox ESR 140 needs to be supported. Otherwise, the newer AIControls policy should be used."
+  },
+  "policy_description_AIControls_LinkPreviewKeyPoints": {
+    "message": "Summary for link preview"
+  },
+  "policy_description_AIControls_option_available": {
+    "message": "Available"
+  },
+  "policy_description_AIControls_option_blocked": {
+    "message": "Blocked"
+  },
+  "policy_description_AIControls_PDFAltText": {
+    "message": "Alternative text generated for images in the PDF viewer"
+  },
+  "policy_description_AIControls_SidebarChatbot": {
+    "message": "LLM chatbot (e.g., ChatGPT, Google Gemini, Microsoft Copilot)"
+  },
+  "policy_description_AIControls_SmartTabGroups": {
+    "message": "Suggestions for tab groups (group name, tabs)"
+  },
+  "policy_description_AIControls_SmartWindow": {
+    "message": "Smart Window AI assistent"
+  },
+  "policy_description_AIControls_Translations": {
+    "message": "Local translations"
+  },
   "policy_description_AllowedDomainsForApps": {
     "message": "Define domains allowed to access Google Workspace"
   },

@@ -67,10 +67,12 @@
 
 #### Enterprise Policies
 
-- Added support for the `ContentAnalysis` policy to configure the use of a Data Loss Prevention (DLP) solution, see
-  [#259](https://github.com/cadeyrn/enterprise-policy-generator/issues/259)
+- Added support for the `AIControls` policy to enable or disable current and future AI features, see
+  [#374](https://github.com/cadeyrn/enterprise-policy-generator/issues/374)
 - Added support for the `IPProtectionAvailable` policy to disable the VPN integration, see
   [#373](https://github.com/cadeyrn/enterprise-policy-generator/issues/373)
+- Added support for the `ContentAnalysis` policy to configure the use of a Data Loss Prevention (DLP) solution, see
+  [#259](https://github.com/cadeyrn/enterprise-policy-generator/issues/259)
 - The `ManagedBookmarks` policy now also supports the creation of bookmark folders, see
   [#283](https://github.com/cadeyrn/enterprise-policy-generator/issues/283)
 - Updated the description for the `PopupBlocking` policy to reflect the inclusion of the third-party redirect blocking
