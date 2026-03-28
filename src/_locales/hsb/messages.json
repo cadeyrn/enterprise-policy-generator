@@ -198,25 +198,25 @@
     "message": "ID přidatka"
   },
   "policy_description_AIControls": {
-    "message": "Enable or disable AI features"
+    "message": "KI-funkcije zmóžnić abo znjemóžnić"
   },
   "policy_description_AIControls_Default": {
-    "message": "Allow or block current and future AI features"
+    "message": "Aktualne a přichodne KI-funkcije dowolić abo blokować"
   },
   "policy_description_AIControls_deprecation": {
-    "message": "This policy should only be used if Firefox ESR 140 needs to be supported. Otherwise, the newer AIControls policy should be used."
+    "message": "Tuta směrnica měła so jenož wužiwać, jeli Firefox ESR 140.0 dyrbi so podpěrać. Hewak měła so nowša směrnica AIControls wužiwać."
   },
   "policy_description_AIControls_LinkPreviewKeyPoints": {
-    "message": "Summary for link preview"
+    "message": "Zjeće za přehlad wotkazow"
   },
   "policy_description_AIControls_option_available": {
-    "message": "Available"
+    "message": "K dispoziciji"
   },
   "policy_description_AIControls_option_blocked": {
-    "message": "Blocked"
+    "message": "Blokowany"
   },
   "policy_description_AIControls_PDFAltText": {
-    "message": "Alternative text generated for images in the PDF viewer"
+    "message": "Generowane alternatiwne teksty za grafiki w PDF-wobhladowaku"
   },
   "policy_description_AIControls_SidebarChatbot": {
     "message": "Chatbot LLM (na přikład ChatGPT, Google Gemini, Microsoft Copilot)"
@@ -225,10 +225,10 @@
     "message": "Namjety za skupiny rajtarkow (mjeno skupiny, rajtarki)"
   },
   "policy_description_AIControls_SmartWindow": {
-    "message": "Smart Window AI assistent"
+    "message": "KI asistent Smart Window"
   },
   "policy_description_AIControls_Translations": {
-    "message": "Local translations"
+    "message": "Lokalne přełožki"
   },
   "policy_description_AllowedDomainsForApps": {
     "message": "Domeny postajić, kotrež maja přistup ke Google Workspace"
@@ -1056,7 +1056,7 @@
     "message": "Zmóžnjeny a wužiwar njemóže jón znjemóžnić"
   },
   "policy_description_IPProtectionAvailable": {
-    "message": "Disable VPN integration"
+    "message": "Integraciju VPN znjemóžnić"
   },
   "policy_description_LegacySameSiteCookieBehaviorEnabled": {
     "message": "Zestarjene standardne zadźerženje plackow SameSite zmóžnić"
