@@ -1338,7 +1338,7 @@ class Configurator {
   static async #downloadPolicy () {
     await browser.downloads.download({
       saveAs: true,
-      url: URL.createObjectURL(new Blob([$policyOutput.textContent])),
+      url: URL.createObjectURL(new Blob([PolicyManager.getConfiguration()])),
       filename: 'policies.json'
     });
   }
