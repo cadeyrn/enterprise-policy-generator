@@ -676,7 +676,7 @@ dialog {
   transition: all 300ms ease-in-out allow-discrete;
 
   &.restricted-width {
-    width: 500px;
+    width: 550px;
   }
 
   &:open {
