@@ -227,6 +227,9 @@ class Sortable {
     e.preventDefault();
 
     const rect = $item.getBoundingClientRect();
+    const style = getComputedStyle($item);
+    const width = style.width;
+    const height = style.height;
     const drag = this.dragState;
 
     drag.$item = $item;
@@ -254,8 +257,8 @@ class Sortable {
     $item.style.position = 'fixed';
     $item.style.left = `${rect.left}px`;
     $item.style.top = `${rect.top}px`;
-    $item.style.width = `${rect.width}px`;
-    $item.style.height = `${rect.height}px`;
+    $item.style.width = width;
+    $item.style.height = height;
     $item.style.transform = 'translate3d(0, 0, 0)';
     $item.style.zIndex = 1000;
     $item.style.pointerEvents = 'none';
