@@ -22,7 +22,7 @@
     },
     "AIControls": {
       "availability": { "mainstream": "149.0.1", "esr": null },
-      "tags": ["disable-features"],
+      "tags": ["features"],
       "exclude": ["GenerativeAI", "TranslateEnabled"],
       "schema": "object",
       "properties": [
@@ -121,7 +121,7 @@
     },
     "GenerativeAI": {
       "availability": { "mainstream": "144.0", "esr": "140.4" },
-      "tags": ["disable-features"],
+      "tags": ["features"],
       "exclude": ["AIControls"],
       "deprecation": "policy_description_AIControls_deprecation",
       "schema": "object",
@@ -155,7 +155,7 @@
     },
     "TranslateEnabled": {
       "availability": { "mainstream": "126.0", "esr": "128.0" },
-      "tags": ["disable-features"],
+      "tags": ["features"],
       "exclude": ["AIControls"],
       "deprecation": "policy_description_AIControls_deprecation",
       "schema": "enum",
@@ -163,59 +163,59 @@
     },
     "VisualSearchEnabled": {
       "availability": { "mainstream": "144.0", "esr": null },
-      "tags": ["disable-features"],
+      "tags": ["features"],
       "schema": "enum",
       "preset": "enable"
     },
     "IPProtectionAvailable": {
       "availability": { "mainstream": "149.0.1", "esr": null },
-      "tags": ["disable-features"],
+      "tags": ["features"],
       "schema": "boolean",
       "inverse": true
     },
     "DisableFirefoxScreenshots": {
       "availability": { "mainstream": "60.0", "esr": "60.0" },
-      "tags": ["disable-features"],
+      "tags": ["features"],
       "schema": "boolean"
     },
     "DisableDeveloperTools": {
       "availability": { "mainstream": "60.0", "esr": "60.0" },
-      "tags": ["disable-features"],
+      "tags": ["features"],
       "schema": "boolean"
     },
     "DisableAccounts": {
       "availability": { "mainstream": "119.0", "esr": "128.0" },
-      "tags": ["disable-features"],
+      "tags": ["features"],
       "schema": "boolean"
     },
     "DisableSetDesktopBackground": {
       "availability": { "mainstream": "60.0", "esr": "60.0" },
-      "tags": ["disable-features"],
+      "tags": ["features"],
       "schema": "boolean"
     },
     "DisableProfileImport": {
       "availability": { "mainstream": "60.0", "esr": "60.0" },
-      "tags": ["disable-features"],
+      "tags": ["features"],
       "schema": "boolean"
     },
     "DisableSafeMode": {
       "availability": { "mainstream": "60.0", "esr": "60.0" },
-      "tags": ["disable-features"],
+      "tags": ["features"],
       "schema": "boolean"
     },
     "DisableFeedbackCommands": {
       "availability": { "mainstream": "60.0", "esr": "60.0" },
-      "tags": ["disable-features"],
+      "tags": ["features"],
       "schema": "boolean"
     },
     "DisableProfileRefresh": {
       "availability": { "mainstream": "60.0", "esr": "60.0" },
-      "tags": ["disable-features"],
+      "tags": ["features"],
       "schema": "boolean"
     },
     "UserMessaging": {
       "availability": { "mainstream": "75.0", "esr": "68.7" },
-      "tags": ["disable-features"],
+      "tags": ["features"],
       "schema": "object",
       "lockable": true,
       "properties": [
@@ -259,7 +259,7 @@
     },
     "AllowFileSelectionDialogs": {
       "availability": { "mainstream": "124.0", "esr": "128.0" },
-      "tags": ["disable-features"],
+      "tags": ["features"],
       "schema": "boolean",
       "inverse": true
     },
@@ -3385,7 +3385,7 @@
   },
   "tags": [
     "block-access",
-    "disable-features",
+    "features",
     "customization",
     "bookmarks",
     "downloads",

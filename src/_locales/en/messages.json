@@ -158,11 +158,11 @@
   "policy_category_customization": {
     "message": "Customization"
   },
-  "policy_category_disable_features": {
-    "message": "Disable features"
-  },
   "policy_category_downloads": {
     "message": "Downloads"
+  },
+  "policy_category_features": {
+    "message": "Features"
   },
   "policy_category_network": {
     "message": "Network security"

@@ -158,11 +158,11 @@
   "policy_category_customization": {
     "message": "Настройки"
   },
-  "policy_category_disable_features": {
-    "message": "Отключить функции"
-  },
   "policy_category_downloads": {
     "message": "Загрузки"
+  },
+  "policy_category_features": {
+    "message": "Функции"
   },
   "policy_category_network": {
     "message": "Сетевая безопасность"

@@ -158,11 +158,11 @@
   "policy_category_customization": {
     "message": "Pśiměrjenje"
   },
-  "policy_category_disable_features": {
-    "message": "Funkcije znjemóžniś"
-  },
   "policy_category_downloads": {
     "message": "Ześěgnjenja"
+  },
+  "policy_category_features": {
+    "message": "Funkcije"
   },
   "policy_category_network": {
     "message": "Seśowa wěstota"

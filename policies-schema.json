@@ -401,7 +401,7 @@
               "type": "array",
               "items": {
                 "enum": [
-                  "authentication", "block-access", "bookmarks", "customization", "disable-features", "downloads",
+                  "authentication", "block-access", "bookmarks", "customization", "downloads", "features",
                   "network", "others", "printing", "privacy", "security", "updates-and-data", "website"
                 ]
               },

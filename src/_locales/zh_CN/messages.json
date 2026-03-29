@@ -158,11 +158,11 @@
   "policy_category_customization": {
     "message": "定制"
   },
-  "policy_category_disable_features": {
-    "message": "禁用功能"
-  },
   "policy_category_downloads": {
     "message": "Downloads"
+  },
+  "policy_category_features": {
+    "message": "Features"
   },
   "policy_category_network": {
     "message": "Network security"
