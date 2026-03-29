@@ -675,6 +675,10 @@ dialog {
   opacity: 0;
   transition: all 300ms ease-in-out allow-discrete;
 
+  &.restricted-width {
+    width: 500px;
+  }
+
   &:open {
     transform: scale(1);
     opacity: 1;
