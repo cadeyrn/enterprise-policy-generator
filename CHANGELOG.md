@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### Version 8.0.0 (Work in Progress)
+### [Version 8.0.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v8.0.0) (2026-03-30)
 
 > [!IMPORTANT]
 > Important note for existing users: For technical reasons, it is not possible to load or import configurations that
@@ -95,6 +95,9 @@
 - Replaced htmllint and gulp-htmllint with html-eslint
 - Removed eslint-plugin-sort-requires, gulp, gulp-eslint-new, gulp-jsdoc3, jsdoc, jsdoc-strip-async-await, and
   npm-run-all
+
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v7.3.0...v8.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
