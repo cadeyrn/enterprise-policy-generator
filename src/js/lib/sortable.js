@@ -228,8 +228,7 @@ class Sortable {
 
     const rect = $item.getBoundingClientRect();
     const style = getComputedStyle($item);
-    const width = style.width;
-    const height = style.height;
+    const { width, height } = style;
     const drag = this.dragState;
 
     drag.$item = $item;
