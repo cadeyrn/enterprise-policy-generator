@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### [Version 8.0.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v8.0.0) (2026-03-30)
+### [Version 8.0.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v8.0.0) (2026-04-01)
 
 > [!IMPORTANT]
 > Important note for existing users: For technical reasons, it is not possible to load or import configurations that
@@ -91,7 +91,7 @@
 - Updated stylelint from version 17.0.0 to 17.6.0
 - Updated stylelint-order from version 7.0.1 to 8.1.1
 - Updated stylistic/eslint-plugin from version 5.7.1 to 5.10.0
-- Updated web-ext from version 9.2.0 to 10.0.0
+- Updated web-ext from version 9.2.0 to 10.1.0
 - Replaced htmllint and gulp-htmllint with html-eslint
 - Removed eslint-plugin-sort-requires, gulp, gulp-eslint-new, gulp-jsdoc3, jsdoc, jsdoc-strip-async-await, and
   npm-run-all
