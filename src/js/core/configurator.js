@@ -1030,6 +1030,7 @@ class Configurator {
     const $label = document.createElement('label');
     $label.setAttribute('for', parentName + '_Locked');
     $label.textContent = I18n.getMessage('lock_preference');
+
     $options.appendChild($label);
   }
 

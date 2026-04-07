@@ -11,7 +11,12 @@
     <div id="page-container">
       <header id="header">
         <div id="logo">
-          <img src="../images/logo-large.webp" width="450" height="68" alt="">
+
+          <picture>
+            <source srcset="../images/logo-large.webp" media="(prefers-color-scheme: light)"/>
+            <source srcset="../images/logo-large-dark.webp"  media="(prefers-color-scheme: dark)"/>
+            <img src="../images/logo-large.webp" width="450" height="68" alt="">
+          </picture>
         </div>
         <search id="filter-wrapper">
           <label for="filter" data-i18n="filter_field"></label>
