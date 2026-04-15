@@ -752,7 +752,20 @@
             "name": "updates_disabled",
             "label": "policy_description_ExtensionSettings_updates_disabled",
             "schema": "enum",
-            "preset": "boolean_inverted_optional"
+            "options": [
+              {
+                "label": "enum_value_no_preference",
+                "value": null
+              },
+              {
+                "label": "enum_value_yes",
+                "value": false
+              },
+              {
+                "label": "enum_value_no",
+                "value": true
+              }
+            ]
           },
           {
             "name": "private_browsing",
@@ -3342,20 +3355,6 @@
       {
         "label": "enum_value_no",
         "value": false
-      }
-    ],
-    "boolean_inverted_optional": [
-      {
-        "label": "enum_value_no_preference",
-        "value": null
-      },
-      {
-        "label": "enum_value_yes",
-        "value": false
-      },
-      {
-        "label": "enum_value_no",
-        "value": true
       }
     ],
     "enable": [
