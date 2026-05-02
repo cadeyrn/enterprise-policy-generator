@@ -285,7 +285,10 @@ class Output {
     const outputFilter = $el.getAttribute('data-output-filter');
     let { value } = $el;
 
-    if (value && !$el.classList.contains('invalid-input-style')) {
+    if (
+      (value || $el.getAttribute('data-empty-value-allowed')) &&
+      !$el.classList.contains('invalid-input-style')
+    ) {
       // update the value based on a filter method
       if (outputFilter) {
         if (outputFilter === 'ends_with_dot' && !value.endsWith('.')) {

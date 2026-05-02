@@ -10,6 +10,8 @@
   fixed see [#379](https://github.com/cadeyrn/enterprise-policy-generator/issues/379)
 - It was not possible to set the value of the `OverrideFirstRunPage` policy to an empty string, even though it is
   supported, see [#378](https://github.com/cadeyrn/enterprise-policy-generator/issues/378)
+- It was not possible to set the value of the `OverridePostUpdatePage` policy to an empty string, even though it is
+  supported, see [#382](https://github.com/cadeyrn/enterprise-policy-generator/issues/382)
 
 ---
 

@@ -693,6 +693,11 @@ class Configurator {
       $input.setAttribute('data-validations', validations.join(','));
     }
 
+    // an empty value is allowed
+    if (object.allow_empty_value) {
+      $input.setAttribute('data-empty-value-allowed', 'true');
+    }
+
     // filter to customize the output
     if (object.output_filter) {
       $input.setAttribute('data-output-filter', object.output_filter);

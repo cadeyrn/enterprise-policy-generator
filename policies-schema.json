@@ -364,6 +364,9 @@
               },
               "required": ["pattern", "error"]
             },
+            "allow_empty_value": {
+              "type": "boolean"
+            },
             "output_filter": {
               "type": "string"
             }

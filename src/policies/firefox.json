@@ -3205,7 +3205,8 @@
       "tags": ["others"],
       "schema": "string",
       "placeholder": "common_url",
-      "validations": ["url"]
+      "validations": ["url"],
+      "allow_empty_value": true
     },
     "SupportMenu": {
       "availability": { "mainstream": "67.0", "esr": "60.7" },
