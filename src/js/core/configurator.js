@@ -171,7 +171,7 @@ class Configurator {
     $grantDownloadPermissionLink.addEventListener('click', async () => {
       const granted = await browser.permissions.request(DOWNLOAD_PERMISSION);
 
-      // immediately prompt for download after the downloads permission has been granted
+      // immediately prompt for download after the "downloads" permission has been granted
       if (granted) {
         Configurator.#downloadPolicy();
       }
@@ -705,7 +705,7 @@ class Configurator {
   /**
    * Initializes a sortable interaction for the given array wrapper element.
    *
-   * @param {HTMLElement} $wrapper - the wrapper element containing sortable items.
+   * @param {HTMLElement} $wrapper - the wrapper element containing sortable items
    *
    * @returns {void}
    */
@@ -1217,7 +1217,7 @@ class Configurator {
   }
 
   /**
-   * Validation for URL field.
+   * Validation for an URL field.
    *
    * @param {string} string - the string to check
    * @param {boolean} secure - whether url must start with https://
@@ -1243,7 +1243,7 @@ class Configurator {
   }
 
   /**
-   * Validation for number field.
+   * Validation for a number field.
    *
    * @param {string} value - the value to check
    *
@@ -1256,7 +1256,7 @@ class Configurator {
   }
 
   /**
-   * Validation for preference field.
+   * Validation for a preference field.
    *
    * @param {string} name - the preference name to check
    *
@@ -1281,7 +1281,7 @@ class Configurator {
   }
 
   /**
-   * Validation for string field by RegExp pattern.
+   * Validation for a string field by RegExp pattern.
    *
    * @param {string} text - the string to check
    * @param {string} pattern - the string to check
@@ -1295,7 +1295,7 @@ class Configurator {
   }
 
   /**
-   * Validation for JSON field.
+   * Validation for a JSON field.
    *
    * @param {string} content - the text content to check
    *
@@ -1314,7 +1314,7 @@ class Configurator {
   }
 
   /**
-   * Test if the downloads permission has been granted. If granted, the link for granting the permission will be
+   * Test if the "downloads" permission has been granted. If granted, the link for granting the permission will be
    * hidden and the real download link will be shown.
    *
    * @returns {void}
@@ -1322,7 +1322,7 @@ class Configurator {
   static async #testDownloadPermission () {
     const granted = await browser.permissions.contains(DOWNLOAD_PERMISSION);
 
-    // if the downloads permission is granted, hide the link for granting permission and show the
+    // if the "downloads" permission is granted, hide the link for granting permission and show the
     // real download link instead
     if (granted) {
       $grantDownloadPermissionLink.classList.add('hidden');

@@ -139,7 +139,7 @@ class Management {
   static async #listConfigurations () {
     const { configurations } = await browser.storage.local.get({ configurations: [] });
 
-    // show notice if no configurations are saved, otherwise show the configurations table
+    // show notice if no configurations are saved, otherwise show the table of configurations
     if (configurations.length === 0) {
       $noSavedConfigurations.classList.remove('hidden');
       $configurationTable.classList.add('hidden');
@@ -300,7 +300,7 @@ class Management {
   }
 
   /**
-   * Test if the downloads permission has been granted or not. If granted, the link for granting the permission
+   * Test if the "downloads" permission has been granted or not. If granted, the link for granting the permission
    * will be hidden and the real export link will be shown.
    *
    * @returns {void}
@@ -308,7 +308,7 @@ class Management {
   static async #testDownloadPermission () {
     const granted = await browser.permissions.contains(DOWNLOAD_PERMISSION);
 
-    // if the downloads permission is granted, hide the link for granting permission and show the
+    // if the "downloads" permission is granted, hide the link for granting permission and show the
     // real export link instead
     if (granted) {
       const $fakeExportLink = document.querySelector('.fake-export-link');
@@ -334,7 +334,7 @@ class Management {
   static async #grantDownloadPermission (e) {
     const granted = await browser.permissions.request(DOWNLOAD_PERMISSION);
 
-    // immediately prompt for download after the downloads permission has been granted
+    // immediately prompt for download after the "downloads" permission has been granted
     if (granted) {
       Management.#exportConfiguration(e);
     }

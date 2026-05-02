@@ -189,7 +189,7 @@ class Output {
   }
 
   /**
-   * Add the value of a enum field to the output.
+   * Add the value of an enum field to the output.
    *
    * @param {HTMLSelectElement} $el - the DOM element of the select element
    *

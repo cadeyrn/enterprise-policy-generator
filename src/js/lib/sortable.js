@@ -284,7 +284,7 @@ class Sortable {
   #onPointerMove (e) {
     const drag = this.dragState;
 
-    // ignore unrelated pointers (e.g. multi-touch) during an active drag
+    // ignore unrelated pointers (e.g., multitouch) during an active drag
     if (drag.activePointerId !== null && e.pointerId !== drag.activePointerId) {
       return;
     }
@@ -316,7 +316,7 @@ class Sortable {
   #onPointerUp (e) {
     const drag = this.dragState;
 
-    // ignore unrelated pointers (e.g. multi-touch) during an active drag
+    // ignore unrelated pointers (e.g., multitouch) during an active drag
     if (drag.activePointerId !== null && e.pointerId !== drag.activePointerId) {
       return;
     }

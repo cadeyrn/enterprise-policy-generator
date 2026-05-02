@@ -18,7 +18,7 @@ class Background {
   }
 
   /**
-   * Open the options page when the toolbar icon is clicked.
+   * Open the user interface when the toolbar icon is clicked.
    *
    * @returns {void}
    */
