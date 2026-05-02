@@ -119,7 +119,7 @@ class PolicyManager {
 
       return object;
     }
-    else if (typeof object !== 'object') {
+    else if (object === null || typeof object !== 'object') {
       return object;
     }
 

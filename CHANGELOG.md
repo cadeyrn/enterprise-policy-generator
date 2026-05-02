@@ -18,6 +18,8 @@
   [#380](https://github.com/cadeyrn/enterprise-policy-generator/issues/380)
 - Fixed the drag and drop behavior in the `ManagedBookmarks` policy, see
   [#380](https://github.com/cadeyrn/enterprise-policy-generator/issues/380)
+- If there were properties in the `3rdParty` policy with a value of "null", the generation of that policy and all later
+  policies could fail, see [#385](https://github.com/cadeyrn/enterprise-policy-generator/issues/385)
 
 #### Enterprise Policies
 
