@@ -2,6 +2,15 @@
 
 ## Release Notes
 
+### Version 8.1.0 (Work in Progress)
+
+#### Bugfixes
+
+- The bug where the value of the `updates_disabled` option in the `ExtensionSettings` policy was reversed has been
+  fixed see [#379](https://github.com/cadeyrn/enterprise-policy-generator/issues/379)
+
+---
+
 ### [Version 8.0.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v8.0.0) (2026-04-01)
 
 > [!IMPORTANT]
