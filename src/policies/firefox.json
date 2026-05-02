@@ -3196,6 +3196,7 @@
         "schema": "string",
         "placeholder": "common_domain",
         "validations": ["url"],
+        "allow_empty_value": true,
         "join": "|"
       }
     },
