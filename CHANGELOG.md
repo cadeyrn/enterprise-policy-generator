@@ -15,6 +15,11 @@
 - It was not possible to set the value of the `OverridePostUpdatePage` policy to an empty string, see
   [#382](https://github.com/cadeyrn/enterprise-policy-generator/issues/382)
 
+#### Enterprise Policies
+
+- Added `devtools.` and `sidebar.` to the validation for allowed preferences in the `Preferences` policy, see
+  [#384](https://github.com/cadeyrn/enterprise-policy-generator/issues/384)
+
 #### Dependencies
 
 - Updated eslint from version 10.1.0 to 10.3.0
