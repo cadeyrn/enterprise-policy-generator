@@ -225,7 +225,7 @@
     "message": "Namjety za skupiny rajtarkow (mjeno skupiny, rajtarki)"
   },
   "policy_description_AIControls_SmartWindow": {
-    "message": "KI asistent Smart Window"
+    "message": "KI asistent Smart Window (Firefox 150+)"
   },
   "policy_description_AIControls_Translations": {
     "message": "Lokalne přełožki"

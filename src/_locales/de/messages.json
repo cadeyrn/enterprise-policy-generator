@@ -225,7 +225,7 @@
     "message": "Vorschläge für Tab-Gruppen (Name der Gruppe, Tabs)"
   },
   "policy_description_AIControls_SmartWindow": {
-    "message": "Smart Window KI-Assistent"
+    "message": "Smart Window KI-Assistent (Firefox 150+)"
   },
   "policy_description_AIControls_Translations": {
     "message": "Lokale Übersetzungen"

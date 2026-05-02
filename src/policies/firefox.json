@@ -21,7 +21,7 @@
       "schema": "boolean"
     },
     "AIControls": {
-      "availability": { "mainstream": "149.0.1", "esr": null },
+      "availability": { "mainstream": "149.0.2", "esr": null },
       "tags": ["features"],
       "exclude": ["GenerativeAI", "TranslateEnabled"],
       "schema": "object",
@@ -168,7 +168,7 @@
       "preset": "enable"
     },
     "IPProtectionAvailable": {
-      "availability": { "mainstream": "149.0.1", "esr": null },
+      "availability": { "mainstream": "149.0.2", "esr": null },
       "tags": ["features"],
       "schema": "boolean",
       "inverse": true
