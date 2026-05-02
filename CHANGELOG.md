@@ -21,6 +21,7 @@
 - Updated eslint-plugin-jsdoc from version 62.8.1 to 62.9.0
 - Updated html-eslint/eslint-plugin from version 0.58.1 to 0.60.0
 - Updated sourcemeta/jsonschema from version 14.17.0 to 15.2.0
+- Updated stylelint from version 17.6.0 to 17.9.1
 
 ---
 
