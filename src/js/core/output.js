@@ -81,18 +81,23 @@ class Output {
     const $keyWrappers = $el.querySelectorAll('.key-wrapper');
     const items = $keyWrappers.length > 0 ? {} : [];
 
-    $el.querySelectorAll(':scope > :is(.additional-item, .array-container)').forEach($el => {
-      if (!Output.#hasInvalidFields($el)) {
+    $el.querySelectorAll(':scope > :is(.additional-item, .array-container)').forEach($child => {
+      if (!Output.#hasInvalidFields($child)) {
         // array fields
-        $el.querySelectorAll(':scope > .array-wrapper').forEach($el => {
+        $child.querySelectorAll(':scope > .array-wrapper').forEach($el => {
           const value = Output.#addArrayValue($el);
           if (value !== null) {
-            items.push(value);
+            if (Array.isArray(items) && $child.classList.contains('additional-item') && Array.isArray(value)) {
+              items.push(...value);
+            }
+            else {
+              items.push(value);
+            }
           }
         });
 
         // boolean fields
-        $el.querySelectorAll(':scope > .boolean-wrapper input').forEach($el => {
+        $child.querySelectorAll(':scope > .boolean-wrapper input').forEach($el => {
           const value = Output.#addBooleanValue($el);
           if (value) {
             items.push(value);
@@ -100,7 +105,7 @@ class Output {
         });
 
         // input fields
-        $el.querySelectorAll(':scope > .input-wrapper > input').forEach($el => {
+        $child.querySelectorAll(':scope > .input-wrapper > input').forEach($el => {
           const value = Output.#addStringValue($el);
           if (value !== null) {
             if ($keyWrappers.length > 0) {
@@ -116,7 +121,7 @@ class Output {
         });
 
         // object fields
-        $el.querySelectorAll(':scope > .object-wrapper').forEach($el => {
+        $child.querySelectorAll(':scope > .object-wrapper').forEach($el => {
           const obj = Output.#addObjectValue($el);
           if (obj !== null) {
             const $container = $el.querySelector(':scope > .key-wrapper');
@@ -133,7 +138,7 @@ class Output {
         });
 
         // textarea fields
-        $el.querySelectorAll(':scope > .input-wrapper > textarea').forEach($el => {
+        $child.querySelectorAll(':scope > .input-wrapper > textarea').forEach($el => {
           const obj = Output.#addStringValue($el);
           if (obj !== null) {
             const $container = $el.parentElement.parentElement.querySelector(':scope > .key-wrapper');
