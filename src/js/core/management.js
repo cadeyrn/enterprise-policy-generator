@@ -2,6 +2,8 @@
 
 /* global DOWNLOAD_PERMISSION, I18n, Migrator, Output, Serializer */
 
+const BASE64_BINARY_CHUNK_SIZE = 8192;
+
 const $configurationTable = document.getElementById('list-configurations-table');
 const $importConfigurationButton = document.getElementById('import-configuration');
 const $importConfigurationDialog = document.getElementById('import-configuration-dialog');
@@ -350,7 +352,16 @@ class Management {
   static async #exportConfiguration (e) {
     const { configurations } = await browser.storage.local.get({ configurations: [] });
     const configuration = configurations[e.target.getAttribute('data-idx')];
-    const serializedConfig = window.btoa(JSON.stringify(configuration));
+    const bytes = new TextEncoder().encode(JSON.stringify(configuration));
+    const bytesLength = bytes.length;
+    let binary = '';
+
+    // keep the intermediate string chunks small to avoid argument length limits
+    for (let i = 0; i < bytesLength; i += BASE64_BINARY_CHUNK_SIZE) {
+      binary += String.fromCharCode(...bytes.subarray(i, i + BASE64_BINARY_CHUNK_SIZE));
+    }
+
+    const serializedConfig = window.btoa(binary);
 
     await browser.downloads.download({
       saveAs: true,
@@ -428,7 +439,18 @@ class Management {
     reader.addEventListener('loadend', async () => {
       const { configurations } = await browser.storage.local.get({ configurations: [] });
       const file = reader.result.toString();
-      const data = JSON.parse(window.atob(file));
+      const binary = window.atob(file);
+      const bytes = Uint8Array.from(binary, character => character.charCodeAt(0));
+      let decoded = null;
+
+      try {
+        decoded = new TextDecoder('utf-8', { fatal: true }).decode(bytes);
+      }
+      catch {
+        decoded = binary;
+      }
+
+      const data = JSON.parse(decoded);
 
       // configurations saved before EPG 8.0 did not have the schema key, and we don't want to import them
       if (!data.schema) {
