@@ -384,9 +384,14 @@ class Sortable {
       }
     }
 
-    if (!inserted && this.$container.lastElementChild !== drag.$placeholder) {
-      this.$container.appendChild(drag.$placeholder);
-      this.#cacheSiblingRects();
+    if (!inserted) {
+      const $lastSortableItem = this.#getItems().at(-1);
+      const $afterLastSortableItem = $lastSortableItem?.nextElementSibling ?? null;
+
+      if ($afterLastSortableItem !== drag.$placeholder) {
+        this.$container.insertBefore(drag.$placeholder, $afterLastSortableItem);
+        this.#cacheSiblingRects();
+      }
     }
   }
 

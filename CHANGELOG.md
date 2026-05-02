@@ -16,6 +16,8 @@
   [#382](https://github.com/cadeyrn/enterprise-policy-generator/issues/382)
 - Fixed the JSON generation for bookmark folders in the `ManagedBookmarks` policy, see
   [#380](https://github.com/cadeyrn/enterprise-policy-generator/issues/380)
+- Fixed the drag and drop behavior in the `ManagedBookmarks` policy, see
+  [#380](https://github.com/cadeyrn/enterprise-policy-generator/issues/380)
 
 #### Enterprise Policies
 
