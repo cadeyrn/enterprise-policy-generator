@@ -394,8 +394,8 @@ export default [
       'html/class-spacing': 'error',
       'html/css-no-empty-blocks': 'error',
       'html/element-newline': ['error', { "inline": ['$inline'] }],
-      'html/id-naming-convention': ['error', 'kebab-case'],
       'html/head-order': 'error',
+      'html/id-naming-convention': ['error', 'kebab-case'],
       'html/indent': ['error', 2],
       'html/lowercase': 'error',
       'html/max-element-depth': ['error', { 'max': 9 }],
@@ -408,7 +408,7 @@ export default [
       'html/no-duplicate-id': 'error',
       'html/no-duplicate-in-head': 'error',
       'html/no-empty-headings': 'off',
-      'html/no-extra-spacing-attrs': 'error',
+      'html/no-extra-spacing-tags': 'error',
       'html/no-extra-spacing-text': 'error',
       'html/no-heading-inside-button': 'error',
       'html/no-ineffective-attrs': 'error',
@@ -438,6 +438,7 @@ export default [
       'html/require-attrs': 'off',
       'html/require-button-type': 'off',
       'html/require-closing-tags': 'error',
+      'html/require-content': 'off',
       'html/require-doctype': 'error',
       'html/require-explicit-size': 'error',
       'html/require-form-method': 'off',
@@ -451,6 +452,7 @@ export default [
       'html/require-meta-viewport': 'error',
       'html/require-open-graph-protocol': 'off',
       'html/sort-attrs': 'off',
+      'html/svg-require-viewbox': 'error',
       'html/use-baseline': ['error', { 'available': 'newly' }]
     }
   }

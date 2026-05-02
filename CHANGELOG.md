@@ -17,6 +17,8 @@
 
 #### Dependencies
 
+- Updated html-eslint/eslint-plugi from version 0.58.1 to 0.60.0
+
 ---
 
 ### [Version 8.0.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v8.0.0) (2026-04-01)
