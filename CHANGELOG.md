@@ -17,7 +17,8 @@
 
 #### Dependencies
 
-- Updated html-eslint/eslint-plugi from version 0.58.1 to 0.60.0
+- Updated html-eslint/eslint-plugin from version 0.58.1 to 0.60.0
+- Updated sourcemeta/jsonschema from version 14.17.0 to 15.2.0
 
 ---
 
