@@ -8,7 +8,7 @@
 
 - Importing configurations exported from EPG 8.0 did not work correctly, see
   [#383](https://github.com/cadeyrn/enterprise-policy-generator/issues/383)
-- Exporting configurations might fail if, for example, emojis were used in fields, see
+- Exporting configurations could fail if, for example, emojis were used in fields, see
   [#386](https://github.com/cadeyrn/enterprise-policy-generator/issues/386)
 - The value of the `updates_disabled` option in the `ExtensionSettings` policy was reversed, see
   [#379](https://github.com/cadeyrn/enterprise-policy-generator/issues/379)
