@@ -439,6 +439,8 @@ class Management {
       }
 
       const configuration = {
+        schema: data.schema,
+        product: data.product,
         name: name,
         time: new Date(),
         configuration: data.configuration

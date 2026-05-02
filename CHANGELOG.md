@@ -6,8 +6,10 @@
 
 #### Bugfixes
 
+- Importing configurations exported from EPG 8.0 did not work correctly, see
+  see [#383](https://github.com/cadeyrn/enterprise-policy-generator/issues/383)
 - The bug where the value of the `updates_disabled` option in the `ExtensionSettings` policy was reversed has been
-  fixed see [#379](https://github.com/cadeyrn/enterprise-policy-generator/issues/379)
+  fixed, see [#379](https://github.com/cadeyrn/enterprise-policy-generator/issues/379)
 - It was not possible to set the value of the `OverrideFirstRunPage` policy to an empty string, even though it is
   supported, see [#378](https://github.com/cadeyrn/enterprise-policy-generator/issues/378)
 - It was not possible to set the value of the `OverridePostUpdatePage` policy to an empty string, even though it is
