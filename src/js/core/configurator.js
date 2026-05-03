@@ -8,6 +8,9 @@ const DOWNLOAD_PERMISSION = { permissions: ['downloads'] };
 /** @type {int} */
 const FILTER_ANIMATION_DELAY_IN_MS = 1500;
 
+/** @type {int} */
+const POPOVER_DURATION_IN_MS = 4000;
+
 /** @type {number} */
 const MINIMUM_SUPPORTED_VERSION = 140.0;
 
@@ -18,6 +21,7 @@ const $grantDownloadPermissionLink = document.getElementById('grant-download-per
 const $policyGeneratorButton = document.getElementById('generate');
 const $policyOutput = document.getElementById('policy-output');
 const $copyToClipboardButton = document.getElementById('copy-to-clipboard');
+const $copyToClipboardPopover = document.getElementById('copy-to-clipboard-popover');
 
 class Configurator {
   /**
@@ -57,6 +61,7 @@ class Configurator {
     const resource = await fetch(browser.runtime.getURL('policies/firefox.json'));
     const json = await resource.json();
     const { policies, preferences, presets, tags } = json;
+    let copyToClipboardPopoverTimeout = null;
 
     Configurator.#allowedPreferences = preferences.allowed;
     Configurator.#disallowedPreferences = preferences.disallowed;
@@ -154,17 +159,34 @@ class Configurator {
       }
     });
 
-    // add the event listener for the "copy to clipboard" button
-    $copyToClipboardButton.addEventListener('click', () => {
-      // select code
-      const selection = window.getSelection();
-      const range = document.createRange();
-      range.selectNodeContents($policyOutput);
-      selection.removeAllRanges();
-      selection.addRange(range);
+    // copy policies.json output to clipboard
+    $copyToClipboardButton.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText($policyOutput.innerText);
 
-      // copy code to clipboard
-      navigator.clipboard.writeText($policyOutput.innerText);
+        if ($copyToClipboardPopover.matches(':popover-open')) {
+          $copyToClipboardPopover.hidePopover();
+        }
+
+        $copyToClipboardPopover.showPopover();
+
+        if (copyToClipboardPopoverTimeout) {
+          window.clearTimeout(copyToClipboardPopoverTimeout);
+        }
+
+        copyToClipboardPopoverTimeout = window.setTimeout(() => {
+          $copyToClipboardPopover.hidePopover();
+          copyToClipboardPopoverTimeout = null;
+        }, POPOVER_DURATION_IN_MS);
+      }
+      catch {
+        // select output as fallback action
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents($policyOutput);
+        selection.removeAllRanges();
+        selection.addRange(range);
+      }
     });
 
     // add the event listener for the "download policies.json" button if downloads permission is not granted

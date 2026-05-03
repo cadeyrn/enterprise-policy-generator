@@ -2,6 +2,15 @@
 
 ## Release Notes
 
+### Version 8.2.0 (Work in Progress)
+
+#### Enhancements
+
+- After copying the generated policies.json output to the clipboard, a confirmation popover will now appear, see
+  [#387](https://github.com/cadeyrn/enterprise-policy-generator/issues/387)
+
+---
+
 ### [Version 8.1.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v8.0.0) (2026-05-02)
 
 #### Bugfixes

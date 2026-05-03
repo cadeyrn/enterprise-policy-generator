@@ -53,6 +53,9 @@
   "configuration_incompatible_title": {
     "message": "Configuration not compatible"
   },
+  "copy_to_clipboard_success": {
+    "message": "Code copied to clipboard"
+  },
   "enum_value_block_no": {
     "message": "Ne pas bloquer"
   },
