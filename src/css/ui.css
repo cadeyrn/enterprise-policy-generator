@@ -1,6 +1,7 @@
 :root {
   --border-radius-box: 6px;
   --border-radius-control: 4px;
+  --border-radius-pill: 999px;
   --color-black: rgb(33, 37, 42);
   --color-blue: rgb(5, 116, 228);
   --color-blue-dark: rgb(0, 87, 191);
@@ -9,6 +10,7 @@
   --color-dark-border: rgb(54, 57, 89);
   --color-green: rgb(16, 138, 3);
   --color-green-dark: rgb(14, 117, 3);
+  --color-muted: rgb(86, 99, 123);
   --color-red: rgb(215, 0, 34);
   --color-red-dark: rgb(183, 0, 29);
   --color-separator: rgb(210, 210, 210);
@@ -18,6 +20,7 @@
   --color-token-number: rgb(188, 56, 66);
   --color-token-string: rgb(27, 127, 107);
   --color-white: rgb(255, 255, 255);
+  --shadow-soft: 0 16px 28px rgba(41, 52, 79, .06);
 }
 
 ::selection {
@@ -831,7 +834,7 @@ dialog {
   max-width: calc(100vw - 32px);
   transform: translate(-50%, 50%);
   border: 1px solid rgba(16, 138, 3, .12);
-  border-radius: 999px;
+  border-radius: var(--border-radius-pill);
   font-weight: 700;
   font-size: .8rem;
   background-image: linear-gradient(135deg, rgba(240, 250, 244, .98) 0%, rgba(236, 245, 255, .98) 100%);
@@ -1099,13 +1102,13 @@ dialog {
   border: 1px solid rgba(16, 138, 3, .18);
   border-radius: 18px;
   background-image: linear-gradient(135deg, rgba(244, 252, 242, .96) 0%, rgba(250, 253, 255, .96) 100%);
-  box-shadow: 0 16px 28px rgba(41, 52, 79, .06);
+  box-shadow: var(--shadow-soft);
   font-size: .9rem;
 
   p {
     margin: 0;
     line-height: 1.6;
-    color: rgb(86, 99, 123);
+    color: var(--color-muted);
   }
 
   form {
