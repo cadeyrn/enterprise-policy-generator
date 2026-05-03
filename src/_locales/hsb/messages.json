@@ -80,8 +80,8 @@
   "explanation_about_policies": {
     "message": "Pod about:policies je přehlad wo wšěch aktiwnych prawidłach kaž tež wo zmylkach w dataji „policies.json“."
   },
-  "explanation_headline_usage": {
-    "message": "Nałoženje"
+  "explanation_headline": {
+    "message": "What do I do with the output?"
   },
   "explanation_intro": {
     "message": "Z kliknjenjom na tłóčatko so kod generuje. Tutón kod dyrbi so w dataji „policies.json“ do rjadowaka „distribution“ składować."
@@ -148,6 +148,9 @@
   },
   "non_allowed_preference_label": {
     "message": "Mjeno nastajenja dowolene njeje"
+  },
+  "output_headline": {
+    "message": "Policies output"
   },
   "policy_category_authentication": {
     "message": "Awtentifikacija"

@@ -865,6 +865,91 @@ dialog {
   }
 }
 
+.output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 17px 0 6px;
+
+  h2 {
+    margin: 0;
+    font-size: 1.125rem;
+    line-height: normal;
+    color: var(--color-dark-border);
+  }
+
+  .button {
+    flex-shrink: 0;
+  }
+}
+
+.help-box {
+  margin-top: 15px;
+  border: 1px solid var(--color-surface-border);
+  border-radius: var(--border-radius-box);
+  background-image: linear-gradient(135deg, rgba(250, 253, 255, .96) 0%, rgba(244, 252, 242, .72) 100%);
+  color: var(--color-muted);
+  font-size: .875rem;
+  overflow: hidden;
+
+  &[open] {
+    box-shadow: var(--shadow-soft);
+  }
+
+  summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 14px;
+    color: var(--color-dark-border);
+    font-weight: 500;
+    list-style: none;
+    cursor: pointer;
+
+    &:focus-visible {
+      border-radius: var(--border-radius-control);
+      outline: 2px solid var(--color-blue);
+      outline-offset: -4px;
+    }
+
+    &::after {
+      content: '';
+      flex-shrink: 0;
+      width: 7px;
+      height: 7px;
+      transform: rotate(45deg);
+      border-right: 2px solid var(--color-green);
+      border-bottom: 2px solid var(--color-green);
+      transition: transform ease 250ms;
+    }
+  }
+
+  &[open] summary {
+    border-bottom: 1px solid var(--color-surface-border);
+
+    &::after {
+      transform: rotate(225deg);
+    }
+  }
+
+  > div {
+    padding: 0 14px 14px;
+    line-height: 1.55;
+  }
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+#action-links.hidden + .help-box {
+  margin-top: 0;
+}
+
 .popover {
   display: none;
   position: fixed;
@@ -1284,6 +1369,12 @@ dialog {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  #generator-form > .options-block-container:first-child h3 {
+    margin-top: 23px;
+  }
+}
+
 @media screen and (max-width: 779px) {
   dialog {
     min-width: unset;
@@ -1314,6 +1405,11 @@ dialog {
       padding-left: 0;
       background: none;
     }
+  }
+
+  .output-header {
+    flex-direction: column;
+    align-items: start;
   }
 
   .promo-box {

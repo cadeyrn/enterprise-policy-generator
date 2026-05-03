@@ -80,8 +80,8 @@
   "explanation_about_policies": {
     "message": "Обзор всех активных политик и ошибок можно посмотреть на странице about:policies."
   },
-  "explanation_headline_usage": {
-    "message": "Использование"
+  "explanation_headline": {
+    "message": "What do I do with the output?"
   },
   "explanation_intro": {
     "message": "Нажмите кнопку, чтобы сгенерировать код. Сохраните его в файле с именем \"policies.json\" в папке \"distribution\"."
@@ -148,6 +148,9 @@
   },
   "non_allowed_preference_label": {
     "message": "Название параметра не разрешено"
+  },
+  "output_headline": {
+    "message": "Policies output"
   },
   "policy_category_authentication": {
     "message": "Аутентификация"

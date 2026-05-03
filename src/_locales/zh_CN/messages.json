@@ -80,8 +80,8 @@
   "explanation_about_policies": {
     "message": "所有活跃的策略和错误都会在 about:policies 页面对应的“policies.json”文件中显示一个摘要。"
   },
-  "explanation_headline_usage": {
-    "message": "使用方法"
+  "explanation_headline": {
+    "message": "What do I do with the output?"
   },
   "explanation_intro": {
     "message": "点击下方的按钮会生成一段代码。该代码需要保存在一个名为 “policies.json” 的文件里，放在 distribution 目录。"
@@ -148,6 +148,9 @@
   },
   "non_allowed_preference_label": {
     "message": "Preference name not allowed"
+  },
+  "output_headline": {
+    "message": "Policies output"
   },
   "policy_category_authentication": {
     "message": "Authentication"

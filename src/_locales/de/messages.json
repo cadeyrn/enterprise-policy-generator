@@ -80,8 +80,8 @@
   "explanation_about_policies": {
     "message": "Unter about:policies gibt es eine Übersicht über alle aktiven Richtlinien sowie Fehler in der Datei „policies.json“."
   },
-  "explanation_headline_usage": {
-    "message": "Anwendung"
+  "explanation_headline": {
+    "message": "Was mache ich mit der Ausgabe?"
   },
   "explanation_intro": {
     "message": "Per Klick auf den Button wird ein Code generiert. Dieser muss in einer Datei „policies.json“ gespeichert werden, welche im Distributionsverzeichnis abgelegt werden muss."
@@ -148,6 +148,9 @@
   },
   "non_allowed_preference_label": {
     "message": "Einstellungsname nicht erlaubt"
+  },
+  "output_headline": {
+    "message": "Richtlinien-Ausgabe"
   },
   "policy_category_authentication": {
     "message": "Authentifizierung"

@@ -80,8 +80,8 @@
   "explanation_about_policies": {
     "message": "You can view an overview of all active policies and errors at about:policies."
   },
-  "explanation_headline_usage": {
-    "message": "Usage"
+  "explanation_headline": {
+    "message": "What do I do with the output?"
   },
   "explanation_intro": {
     "message": "Click the button to generate the code. Save it in a file named “policies.json” in the distribution directory."
@@ -148,6 +148,9 @@
   },
   "non_allowed_preference_label": {
     "message": "Preference name not allowed"
+  },
+  "output_headline": {
+    "message": "Policies output"
   },
   "policy_category_authentication": {
     "message": "Authentication"

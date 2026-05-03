@@ -80,8 +80,8 @@
   "explanation_about_policies": {
     "message": "Pód about:policies jo pśeglěd wó wšych aktiwnych pšawidłach ako teke wó zmólkach w dataji „policies.json“."
   },
-  "explanation_headline_usage": {
-    "message": "Nałoženje"
+  "explanation_headline": {
+    "message": "What do I do with the output?"
   },
   "explanation_intro": {
     "message": "Z kliknjenim na tłocašk se kod generěrujo. Toś ten kod musy se w dataji „policies.json“ do zarědnika „distribution“ składowaś."
@@ -148,6 +148,9 @@
   },
   "non_allowed_preference_label": {
     "message": "Mě nastajenja njejo dowólone"
+  },
+  "output_headline": {
+    "message": "Policies output"
   },
   "policy_category_authentication": {
     "message": "Awtentifikacija"

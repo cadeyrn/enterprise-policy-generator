@@ -24,15 +24,10 @@
         <h2 class="visually-hidden" data-i18n="generate_headline"></h2>
         <form id="generator-form" tabindex="-1" novalidate></form>
         <section id="secondary-section" tabindex="-1">
-          <h2 data-i18n="explanation_headline_usage"></h2>
-          <p data-i18n="explanation_intro"></p>
-          <p>
-            <strong>Microsoft Windows:</strong> <span data-i18n="explanation_intro_windows"></span><br><br>
-            <strong>Apple macOS:</strong> <span data-i18n="explanation_intro_macos"></span><br><br>
-            <strong>Linux:</strong> <span data-i18n="explanation_intro_linux"></span>
-          </p>
-          <p data-i18n="explanation_about_policies"></p>
-          <button type="button" id="generate" class="button" data-i18n="generate_button" aria-keyshortcuts="Shift+G"></button>
+          <div class="output-header">
+            <h2 data-i18n="output_headline"></h2>
+            <button type="button" id="generate" class="button" data-i18n="generate_button" aria-keyshortcuts="Shift+G"></button>
+          </div>
           <pre id="policy-output-wrapper"><code id="policy-output"></code></pre>
           <div id="action-links" class="action-links hidden">
             <button type="button" id="copy-to-clipboard">
@@ -53,6 +48,18 @@
               <span data-i18n="link_save_configuration"></span>
             </button>
           </div>
+          <details class="help-box">
+            <summary data-i18n="explanation_headline"></summary>
+            <div>
+              <p data-i18n="explanation_intro"></p>
+              <p>
+                <strong>Microsoft Windows:</strong> <span data-i18n="explanation_intro_windows"></span><br><br>
+                <strong>Apple macOS:</strong> <span data-i18n="explanation_intro_macos"></span><br><br>
+                <strong>Linux:</strong> <span data-i18n="explanation_intro_linux"></span>
+              </p>
+              <p data-i18n="explanation_about_policies"></p>
+            </div>
+          </details>
           <hr>
           <div class="action-links">
             <button type="button" id="list-configurations">
