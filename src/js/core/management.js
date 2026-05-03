@@ -188,15 +188,13 @@ class Management {
       $removeButton.setAttribute('title', I18n.getMessage('title_remove_configuration'));
       $removeButton.setAttribute('data-idx', idx.toString());
       $removeButton.classList.add('icon', 'trash-icon');
+
+
       $removeButton.addEventListener('click', Management.#removeConfiguration);
       $iconColumn.appendChild($removeButton);
 
-      const $removeIcon = document.createElement('img');
-      $removeIcon.src = '/images/trash.svg';
-      $removeIcon.width = 18;
-      $removeIcon.height = 18;
-      $removeIcon.alt = I18n.getMessage('title_remove_configuration');
-      $removeButton.appendChild($removeIcon);
+      $removeButton.innerHTML += `<svg height="476" viewBox="-7.5 0 16.96 19.04" width="424" xmlns="http://www.w3.org/2000/svg"><path d="m8.58 3.48h-4.28v-.84c0-1.44-1.12-2.64-2.48-2.64h-1.72c-1.36 0-2.48 1.2-2.48 2.64v.84h-4.28c-.48 0-.84.4-.84.84 0 .48.36.84.84.84h.84v11.16c0 1.48 1.2 2.72 2.72 2.72h8.16c1.48 0 2.72-1.2 2.72-2.72v-11.16h.84c.48 0 .84-.36.84-.84-.04-.44-.44-.84-.88-.84zm-9.28-.84c0-.52.36-.96.8-.96h1.72c.44 0 .8.44.8.96v.84h-3.32zm6.76 13.68c0 .56-.48 1.04-1.04 1.04h-8.16c-.56 0-1.04-.48-1.04-1.04v-11.16h1.8v8.24c0 .48.36.84.84.84s.84-.36.84-.84v-8.24h3.28v8.24c0 .48.36.84.84.84s.84-.36.84-.84v-8.24h1.8z"/></svg>`;
+      $removeButton.innerHTML += `<span data-i18n="title_remove_configuration"></span>`;
 
       // fake export icon (permission not yet granted)
       const $fakeExportButton = document.createElement('button');
@@ -207,12 +205,8 @@ class Management {
       $fakeExportButton.addEventListener('click', Management.#grantDownloadPermission);
       $iconColumn.appendChild($fakeExportButton);
 
-      const $fakeExportIcon = document.createElement('img');
-      $fakeExportIcon.src = '/images/export.svg';
-      $fakeExportIcon.width = 18;
-      $fakeExportIcon.height = 18;
-      $fakeExportIcon.alt = I18n.getMessage('configuration_export');
-      $fakeExportButton.appendChild($fakeExportIcon);
+      $fakeExportButton.innerHTML += `<svg height="444" viewBox="-9 0 14.32 17.76" width="358" xmlns="http://www.w3.org/2000/svg"><path d="m4.48 10.48c-.48 0-.84.36-.84.84v3.92c0 .48-.36.84-.84.84h-9.28c-.48 0-.84-.36-.84-.84v-3.92c0-.44-.36-.84-.84-.84s-.84.4-.84.84v3.92c0 1.4 1.12 2.52 2.52 2.52h9.28c1.4 0 2.52-1.12 2.52-2.52v-3.92c0-.44-.36-.84-.84-.84zm-6.92.88c.04.04.2.28.6.28s.56-.24.6-.28l3.52-3.52c.32-.32.32-.84 0-1.2-.32-.32-.84-.32-1.2 0l-2.08 2.12v-7.92c0-.48-.36-.84-.84-.84s-.84.36-.84.84v7.92l-2.08-2.08c-.32-.32-.84-.32-1.2 0-.32.32-.32.84 0 1.2z"/></svg>`;
+      $fakeExportButton.innerHTML += `<span data-i18n="configuration_export"></span>`;
 
       // export icon
       const $exportButton = document.createElement('button');
@@ -223,12 +217,8 @@ class Management {
       $exportButton.addEventListener('click', Management.#exportConfiguration);
       $iconColumn.appendChild($exportButton);
 
-      const $exportIcon = document.createElement('img');
-      $exportIcon.src = '/images/export.svg';
-      $exportIcon.width = 18;
-      $exportIcon.height = 18;
-      $exportIcon.alt = I18n.getMessage('configuration_export');
-      $exportButton.appendChild($exportIcon);
+      $exportButton.innerHTML += `<svg height="444" viewBox="-9 0 14.32 17.76" width="358" xmlns="http://www.w3.org/2000/svg"><path d="m4.48 10.48c-.48 0-.84.36-.84.84v3.92c0 .48-.36.84-.84.84h-9.28c-.48 0-.84-.36-.84-.84v-3.92c0-.44-.36-.84-.84-.84s-.84.4-.84.84v3.92c0 1.4 1.12 2.52 2.52 2.52h9.28c1.4 0 2.52-1.12 2.52-2.52v-3.92c0-.44-.36-.84-.84-.84zm-6.92.88c.04.04.2.28.6.28s.56-.24.6-.28l3.52-3.52c.32-.32.32-.84 0-1.2-.32-.32-.84-.32-1.2 0l-2.08 2.12v-7.92c0-.48-.36-.84-.84-.84s-.84.36-.84.84v7.92l-2.08-2.08c-.32-.32-.84-.32-1.2 0-.32.32-.32.84 0 1.2z"/></svg>`;
+      $exportButton.innerHTML += `<span data-i18n="configuration_export"></span>`;
 
       // load icon
       const $loadButton = document.createElement('button');
