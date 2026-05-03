@@ -161,9 +161,9 @@ input, textarea {
 
 #header {
   flex-shrink: 0;
-  height: 100px;
-  background: var(--color-white);
-  border-bottom: 1px solid var(--color-separator);
+  height: 82px;
+  border-bottom: 1px solid var(--color-surface-border);
+  background-image: linear-gradient(180deg, var(--color-white) 0%, var(--color-surface) 100%);
   transition: height 250ms ease-in-out;
 }
 
@@ -171,7 +171,7 @@ input, textarea {
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  padding: 25px;
+  padding: 0 25px;
   height: 100%;
 
   img {
@@ -200,8 +200,8 @@ input, textarea {
   height: 64px;
   line-height: 64px;
   font-size: .875rem;
-  border-top: 1px solid var(--color-separator);
-  background: var(--color-white);
+  border-top: 1px solid var(--color-surface-border);
+  background-image: linear-gradient(180deg, var(--color-surface) 0%, var(--color-white) 100%);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -213,7 +213,7 @@ input, textarea {
     background-repeat: no-repeat;
     background-size: 32px 32px;
     background-position: left center;
-    color: var(--color-black);
+    color: var(--color-muted);
     text-decoration: none;
   }
 }

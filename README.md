@@ -1,6 +1,6 @@
 # Firefox Add-on: Enterprise Policy Generator
 
-<img src="src/images/logo-large.webp" alt="Logo" width="450" border="0" />
+<img src="src/images/logo-large.webp" alt="Logo" width="305" border="0" />
 
 ## Support the development
 
