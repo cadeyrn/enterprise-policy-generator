@@ -35,46 +35,34 @@
           <button type="button" id="generate" class="button" data-i18n="generate_button" aria-keyshortcuts="Shift+G"></button>
           <pre id="policy-output-wrapper"><code id="policy-output"></code></pre>
           <div id="action-links" class="action-links hidden">
-            <div>
-              <button type="button" id="copy-to-clipboard" class="icon">
-                <img src="../images/cursor.svg" width="20" height="20" alt="">
-                <span data-i18n="link_copy_to_clipboard"></span>
-              </button>
-              <div id="copy-to-clipboard-popover" class="popover" popover="manual" role="status" aria-live="polite" aria-atomic="true" data-i18n="copy_to_clipboard_success"></div>
-            </div>
-            <div>
-              <button type="button" id="grant-download-permission" class="icon">
-                <img src="../images/download.svg" width="20" height="20" alt="">
-                <span data-i18n="link_download"></span>
-              </button>
-            </div>
-            <div>
-              <button type="button" id="download" class="icon hidden">
-                <img src="../images/download.svg" width="20" height="20" alt="">
-                <span data-i18n="link_download"></span>
-              </button>
-            </div>
-            <div>
-              <button type="button" id="save-configuration" class="icon">
-                <img src="../images/save.svg" width="20" height="20" alt="">
-                <span data-i18n="link_save_configuration"></span>
-              </button>
-            </div>
+            <button type="button" id="copy-to-clipboard">
+              <img src="../images/cursor.svg" width="20" height="20" alt="">
+              <span data-i18n="link_copy_to_clipboard"></span>
+            </button>
+            <div id="copy-to-clipboard-popover" class="popover" popover="manual" role="status" aria-live="polite" aria-atomic="true" data-i18n="copy_to_clipboard_success"></div>
+            <button type="button" id="grant-download-permission">
+              <img src="../images/download.svg" width="20" height="20" alt="">
+              <span data-i18n="link_download"></span>
+            </button>
+            <button type="button" id="download" class="hidden">
+              <img src="../images/download.svg" width="20" height="20" alt="">
+              <span data-i18n="link_download"></span>
+            </button>
+            <button type="button" id="save-configuration">
+              <img src="../images/save.svg" width="20" height="20" alt="">
+              <span data-i18n="link_save_configuration"></span>
+            </button>
           </div>
           <hr>
           <div class="action-links">
-            <div>
-              <button type="button" id="list-configurations" class="icon">
-                <img src="../images/settings.svg" width="20" height="20" alt="">
-                <span data-i18n="link_load_configuration"></span>
-              </button>
-            </div>
-            <div>
-              <button type="button" id="import-configuration" class="icon">
-                <img src="../images/export.svg" width="20" height="20" alt="">
-                <span data-i18n="configuration_import"></span>
-              </button>
-            </div>
+            <button type="button" id="list-configurations">
+              <img src="../images/settings.svg" width="20" height="20" alt="">
+              <span data-i18n="link_load_configuration"></span>
+            </button>
+            <button type="button" id="import-configuration">
+              <img src="../images/export.svg" width="20" height="20" alt="">
+              <span data-i18n="configuration_import"></span>
+            </button>
           </div>
           <div class="promo-box">
             <p data-i18n="promo_box_text"></p>

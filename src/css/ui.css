@@ -821,13 +821,46 @@ dialog {
 }
 
 .action-links {
-  .icon {
-    margin-bottom: 5px;
+  &:not(.hidden) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+  }
+
+  button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-sizing: border-box;
+    padding: 8px 12px;
+    border: 1px solid var(--color-surface-border);
+    border-radius: var(--border-radius-pill);
+    background-color: var(--color-white);
+    box-shadow: 0 8px 18px rgba(41, 52, 79, .05);
+    transition: border-color ease 250ms, background-color ease-in-out 250ms, box-shadow ease-in-out 250ms;
+
+    &.hidden {
+      display: none;
+    }
+
+    img {
+      width: 18px;
+      height: 18px;
+      vertical-align: middle;
+    }
+
+    span {
+      color: var(--color-dark-border);
+      font-size: .813rem;
+      font-weight: 500;
+    }
 
     &:hover {
-      span {
-        text-decoration: underline;
-      }
+      border-color: rgba(5, 116, 228, .28);
+      background-color: var(--color-surface);
+      box-shadow: 0 12px 22px rgba(41, 52, 79, .08);
     }
   }
 }
@@ -880,15 +913,9 @@ dialog {
 }
 
 #import-configuration {
-  margin-bottom: 5px;
-
   img {
     transform: rotate(180deg);
   }
-}
-
-#list-configurations {
-  margin-bottom: 10px;
 }
 
 #no-saved-configurations {
