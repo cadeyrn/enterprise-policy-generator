@@ -54,7 +54,7 @@
     "message": "Konfiguracija njejo kompatibelna"
   },
   "copy_to_clipboard_success": {
-    "message": "Kod jo se do mjazywótkłada kopěrował"
+    "message": "Code copied to clipboard"
   },
   "enum_value_block_no": {
     "message": "njeblokěrowaś"
@@ -114,7 +114,7 @@
     "message": "Wuběrk směrnicow"
   },
   "link_copy_to_clipboard": {
-    "message": "Code copied to clipboard"
+    "message": "Do mjazywótkłada kopěrowaś"
   },
   "link_download": {
     "message": "policies.json ześěgnuś"
