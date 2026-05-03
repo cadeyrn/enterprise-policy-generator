@@ -14,6 +14,8 @@
   --color-red: rgb(215, 0, 34);
   --color-red-dark: rgb(183, 0, 29);
   --color-separator: rgb(210, 210, 210);
+  --color-surface: rgb(250, 253, 255);
+  --color-surface-border: rgba(84, 107, 147, .16);
   --color-token-boolean: rgb(169, 93, 26);
   --color-token-delimiter: rgb(107, 114, 128);
   --color-token-key: rgb(74, 117, 190);
@@ -612,14 +614,19 @@ input, textarea {
 #policy-output-wrapper {
   --line-number-width: 3ch;
   position: relative;
+  margin-top: 0;
   background-color: var(--color-code-background);
   white-space: pre;
   counter-reset: line;
+  overflow-x: auto;
 
   &:has(code:not(:empty)) {
+    margin-top: 15px;
     padding: 15px 15px 15px var(--line-number-width);
+    border: 1px solid var(--color-surface-border);
     border-radius: var(--border-radius-box);
-    border: 1px solid var(--color-separator);
+    background-image: linear-gradient(180deg, var(--color-surface) 0%, var(--color-code-background) 100%);
+    box-shadow: var(--shadow-soft);
   }
 
   &.no-syntax-highlighting {
