@@ -165,6 +165,7 @@
     "selector-max-universal": 0,
     "selector-nested-pattern": null,
     "selector-no-deprecated": true,
+    "selector-no-invalid": true,
     "selector-no-qualifying-type": null,
     "selector-no-vendor-prefix": true,
     "selector-not-notation": "complex",
@@ -181,8 +182,10 @@
     "time-min-milliseconds": 100,
     "unit-allowed-list": null,
     "unit-disallowed-list": null,
+    "unit-layout-mappings": null,
     "unit-no-unknown": true,
     "value-keyword-case": "lower",
+    "value-keyword-layout-mappings": null,
     "value-no-vendor-prefix": true
   }
 }

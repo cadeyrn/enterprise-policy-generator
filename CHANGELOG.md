@@ -9,6 +9,10 @@
 - After copying the generated policies.json output to the clipboard, a confirmation popover will now appear, see
   [#387](https://github.com/cadeyrn/enterprise-policy-generator/issues/387)
 
+#### Dependencies
+
+- Updated stylelint from version 17.9.1 to 17.10.0
+
 ---
 
 ### [Version 8.1.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v8.0.0) (2026-05-02)
