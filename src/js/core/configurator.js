@@ -6,9 +6,6 @@
 const DOWNLOAD_PERMISSION = { permissions: ['downloads'] };
 
 /** @type {int} */
-const FILTER_ANIMATION_DELAY_IN_MS = 1500;
-
-/** @type {int} */
 const POPOVER_DURATION_IN_MS = 4000;
 
 /** @type {number} */
@@ -1378,58 +1375,66 @@ class Configurator {
   static #filterField () {
     const $filterWrapper = document.getElementById('filter-wrapper');
     const $filter = $filterWrapper.querySelector('input');
-    const $styleHelper = $filterWrapper.querySelector('button');
+    const $openButton = $filterWrapper.querySelector('.open-filter');
+    const $closeButton = $filterWrapper.querySelector('.close-filter');
 
     // re-apply active filter on reload
     Configurator.#applySearchFieldFilter($filter);
 
-    if ($filter.value) {
-      $filterWrapper.classList.add('open');
-    }
+    const updateFilterState = () => {
+      const isOpen = $filterWrapper.classList.contains('open');
 
-    const close = () => {
+      $filter.tabIndex = isOpen ? 0 : -1;
+      $openButton.tabIndex = isOpen ? -1 : 0;
+      $closeButton.tabIndex = isOpen ? 0 : -1;
+      $filter.setAttribute('aria-hidden', (!isOpen).toString());
+      $openButton.setAttribute('aria-expanded', isOpen.toString());
+      $openButton.setAttribute('aria-hidden', isOpen.toString());
+      $closeButton.setAttribute('aria-hidden', (!isOpen).toString());
+    };
+
+    const open = () => {
+      $filterWrapper.classList.add('open');
+      updateFilterState();
+      $filter.focus();
+    };
+
+    const close = restoreFocus => {
       if (!$filterWrapper.classList.contains('open')) {
         return;
       }
 
       $filter.value = '';
-
-      $filterWrapper.classList.add('close');
       $filterWrapper.classList.remove('open');
-
-      setTimeout(() => {
-        $filterWrapper.classList.remove('close');
-      }, FILTER_ANIMATION_DELAY_IN_MS);
-
+      updateFilterState();
       Configurator.#applySearchFieldFilter($filter);
+
+      if (restoreFocus) {
+        $openButton.focus();
+      }
     };
 
-    $filter.addEventListener('focus', () => {
-      if ($filterWrapper.classList.contains('open')) {
-        return;
-      }
+    if ($filter.value) {
+      $filterWrapper.classList.add('open');
+    }
 
-      $filterWrapper.classList.add('in');
+    updateFilterState();
 
-      setTimeout(() => {
-        $filterWrapper.classList.add('open');
-        $filterWrapper.classList.remove('in');
-      }, FILTER_ANIMATION_DELAY_IN_MS);
-    });
+    $openButton.addEventListener('click', open);
 
     window.addEventListener('keydown', e => {
       if (e.shiftKey && e.key === 'F' && !['text', 'textarea', 'url'].includes(document.activeElement.type)) {
         e.preventDefault();
-        $filter.focus();
+        open();
       }
       else if (e.key === 'Escape' && document.activeElement === $filter) {
-        close();
+        close(false);
         $filter.blur();
       }
     });
 
-    $styleHelper.addEventListener('click', () => {
-      close();
+    $closeButton.addEventListener('click', () => {
+      close(true);
     });
 
     $filter.addEventListener('input', () => {

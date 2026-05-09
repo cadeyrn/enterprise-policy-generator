@@ -107,6 +107,9 @@
   "filter_field_close": {
     "message": "Filter schließen"
   },
+  "filter_field_open": {
+    "message": "Filter öffnen"
+  },
   "generate_button": {
     "message": "Richtlinien generieren"
   },

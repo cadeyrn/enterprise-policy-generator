@@ -107,6 +107,9 @@
   "filter_field_close": {
     "message": "Close filter"
   },
+  "filter_field_open": {
+    "message": "Open filter"
+  },
   "generate_button": {
     "message": "Générer des politiques"
   },
