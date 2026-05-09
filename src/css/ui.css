@@ -1011,10 +1011,6 @@ dialog {
 }
 
 .output-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
   margin: 17px 0 6px;
 
   h2 {
@@ -1023,9 +1019,18 @@ dialog {
     line-height: normal;
     color: var(--color-dark-border);
   }
+}
+
+.output-action {
+  display: flex;
+  justify-content: end;
+  margin-top: -34px;
+  margin-bottom: 6px;
+  pointer-events: none;
 
   .button {
     flex-shrink: 0;
+    pointer-events: auto;
   }
 }
 
@@ -1267,6 +1272,12 @@ dialog {
   #generator-form > .options-block-container:first-child h3 {
     margin-top: 23px;
   }
+
+  .output-action {
+    position: sticky;
+    z-index: 2;
+    top: 12px;
+  }
 }
 
 @media screen and (max-width: 779px) {
@@ -1302,8 +1313,13 @@ dialog {
   }
 
   .output-header {
-    flex-direction: column;
-    align-items: start;
+    margin-bottom: 10px;
+  }
+
+  .output-action {
+    justify-content: start;
+    margin-top: 0;
+    margin-bottom: 10px;
   }
 
   .promo-box {
