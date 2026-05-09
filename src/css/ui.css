@@ -29,8 +29,14 @@
   background: var(--color-blue-translucent);
 }
 
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   margin: 0;
+  height: 100%;
   font-family: Verdana, sans-serif;
   font-size: 1rem;
   background: var(--color-white);
@@ -156,7 +162,7 @@ input, textarea {
 #page-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
 }
 
 #header {
