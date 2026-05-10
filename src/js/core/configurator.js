@@ -1398,10 +1398,13 @@ class Configurator {
       $closeButton.setAttribute('aria-hidden', (!isOpen).toString());
     };
 
-    const open = () => {
+    const open = (focus = true) => {
       $filterWrapper.classList.add('open');
       updateFilterState();
-      $filter.focus();
+
+      if (focus) {
+        $filter.focus();
+      }
     };
 
     const close = restoreFocus => {
@@ -1420,10 +1423,16 @@ class Configurator {
     };
 
     if ($filter.value) {
-      $filterWrapper.classList.add('open');
-    }
+      $filterWrapper.classList.add('no-transition');
+      open(false);
 
-    updateFilterState();
+      window.requestAnimationFrame(() => {
+        $filterWrapper.classList.remove('no-transition');
+      });
+    }
+    else {
+      updateFilterState();
+    }
 
     $openButton.addEventListener('click', open);
 
