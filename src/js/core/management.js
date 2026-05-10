@@ -3,6 +3,7 @@
 /* global DOWNLOAD_PERMISSION, I18n, Migrator, Output, Serializer */
 
 const BASE64_BINARY_CHUNK_SIZE = 8192;
+const DIALOG_CLOSE_ANIMATION_DURATION_IN_MS = 300;
 
 const $configurationTable = document.getElementById('list-configurations-table');
 const $importConfigurationButton = document.getElementById('import-configuration');
@@ -28,6 +29,7 @@ class Management {
    * @returns {void}
    */
   static init () {
+    Management.#setupDialogAnimations();
     Management.#setupSaveConfigurationDialog();
     Management.#setupListConfigurationsDialog();
     Management.#setupImportConfigurationDialog();
@@ -44,6 +46,70 @@ class Management {
 
     $importConfigurationButton.addEventListener('click', () => {
       $importConfigurationDialog.showModal();
+    });
+  }
+
+  /**
+   * Set up the animated dialog closing.
+   *
+   * @returns {void}
+   */
+  static #setupDialogAnimations () {
+    document.querySelectorAll('dialog').forEach($dialog => {
+      $dialog.addEventListener('cancel', e => {
+        e.preventDefault();
+        void Management.#closeDialog($dialog);
+      });
+
+      $dialog.addEventListener('close', () => {
+        $dialog.classList.remove('closing');
+      });
+    });
+  }
+
+  /**
+   * Close a dialog after the CSS exit transition has finished.
+   *
+   * @param {HTMLDialogElement} $dialog - the dialog to close
+   *
+   * @returns {Promise<void>}
+   */
+  static #closeDialog ($dialog) {
+    if (!$dialog.open) {
+      return Promise.resolve();
+    }
+
+    if ($dialog.classList.contains('closing')) {
+      return new Promise(resolve => {
+        $dialog.addEventListener('close', resolve, { once: true });
+      });
+    }
+
+    $dialog.classList.add('closing');
+
+    return new Promise(resolve => {
+      let didClose = false;
+      const close = () => {
+        if (didClose) {
+          return;
+        }
+
+        didClose = true;
+        $dialog.close();
+      };
+
+      const onTransitionEnd = e => {
+        if (e.target === $dialog && e.propertyName === 'opacity') {
+          close();
+        }
+      };
+
+      window.setTimeout(close, DIALOG_CLOSE_ANIMATION_DURATION_IN_MS);
+      $dialog.addEventListener('close', () => {
+        $dialog.removeEventListener('transitionend', onTransitionEnd);
+        resolve();
+      }, { once: true });
+      $dialog.addEventListener('transitionend', onTransitionEnd);
     });
   }
 
@@ -75,13 +141,13 @@ class Management {
 
     // close the dialog by clicking the cancel button
     $closeButton.addEventListener('click', () => {
-      $saveConfigurationDialog.close();
+      void Management.#closeDialog($saveConfigurationDialog);
     });
 
     // submit button
     $submitButton.addEventListener('click', () => {
       Management.#saveConfiguration($name.value);
-      $saveConfigurationDialog.close();
+      void Management.#closeDialog($saveConfigurationDialog);
     });
 
     // save configuration by pressing Enter
@@ -91,7 +157,7 @@ class Management {
 
         if ($name.value) {
           Management.#saveConfiguration($name.value);
-          $saveConfigurationDialog.close();
+          void Management.#closeDialog($saveConfigurationDialog);
         }
       }
     });
@@ -129,7 +195,7 @@ class Management {
     // close the dialog by clicking the cancel button
     const $closeButton = $listConfigurationDialog.querySelector('#button-list-dialog-cancel');
     $closeButton.addEventListener('click', () => {
-      $listConfigurationDialog.close();
+      void Management.#closeDialog($listConfigurationDialog);
     });
   }
 
@@ -245,8 +311,9 @@ class Management {
       else {
         $loadButton.addEventListener('click', () => {
           Management.previousDialog = $listConfigurationDialog;
-          $listConfigurationDialog.close();
-          $incompatibleConfigurationDialog.showModal();
+          Management.#closeDialog($listConfigurationDialog).then(() => {
+            $incompatibleConfigurationDialog.showModal();
+          });
         });
       }
 
@@ -273,7 +340,7 @@ class Management {
     const $policyOutput = document.getElementById('policy-output');
 
     Serializer.unserialize(configurations[e.target.getAttribute('data-idx')].configuration);
-    $listConfigurationDialog.close();
+    void Management.#closeDialog($listConfigurationDialog);
 
     // only supported in Firefox 148+
     if ('Sanitizer' in window) {
@@ -402,7 +469,7 @@ class Management {
 
     // close the dialog by clicking the cancel button
     $closeButton.addEventListener('click', () => {
-      $importConfigurationDialog.close();
+      void Management.#closeDialog($importConfigurationDialog);
     });
 
     // import configuration by pressing Enter, close the dialog by pressing ESC
@@ -412,7 +479,7 @@ class Management {
 
         if ($name.value && $fileInput.value) {
           Management.#importConfiguration($name.value, $fileInput);
-          $importConfigurationDialog.close();
+          void Management.#closeDialog($importConfigurationDialog);
         }
       }
     });
@@ -420,7 +487,7 @@ class Management {
     // submit button
     $submitButton.addEventListener('click', () => {
       Management.#importConfiguration($name.value, $fileInput);
-      $importConfigurationDialog.close();
+      void Management.#closeDialog($importConfigurationDialog);
     });
   }
 
@@ -498,7 +565,7 @@ class Management {
 
     // close the dialog by clicking the cancel button
     $closeButton.addEventListener('click', () => {
-      $incompatibleConfigurationDialog.close();
+      void Management.#closeDialog($incompatibleConfigurationDialog);
     });
   }
 }

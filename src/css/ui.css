@@ -104,7 +104,7 @@ button {
   color: var(--color-white);
   font-size: .9rem;
   overflow: hidden;
-  transition: background-color ease 350ms, color ease 350ms;
+  transition: background-color ease 350ms;
 
   &::before {
     content: '';
@@ -115,8 +115,8 @@ button {
     background: var(--color-blue-dark);
     transform-origin: 0 50%;
     transition-property: transform;
-    transition-duration: 500ms;
-    transition-timing-function: ease-out;
+    transition-duration: 350ms;
+    transition-timing-function: ease-in-out;
   }
 
   &:hover {
@@ -124,7 +124,6 @@ button {
 
     &::before {
       transform: scaleX(1);
-      transition-timing-function: cubic-bezier(.52, 1.64, .37, .66);
     }
   }
 }
@@ -1119,48 +1118,83 @@ input, textarea {
 
 dialog {
   padding: 0;
-  min-width: 550px;
-  max-width: 90%;
-  max-height: 90vh;
-  border-width: 0;
-  border-radius: var(--border-radius-box);
-  transform: scale(.7);
-  background-color: var(--color-white);
-  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .3);
+  width: min(640px, calc(100vw - 40px));
+  max-width: 90vw;
+  max-height: calc(100vh - 40px);
+  transform: translateY(10px) scale(.98);
+  border: 1px solid var(--color-surface-border);
+  border-radius: var(--border-radius-card-large);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, .98) 0%, rgba(250, 253, 255, .95) 100%);
+  color: var(--color-black);
+  box-shadow: 0 24px 60px rgba(33, 37, 42, .22), 0 8px 20px rgba(41, 52, 79, .10);
+  overflow: hidden;
   opacity: 0;
-  transition: all 300ms ease-in-out allow-discrete;
+  transition:
+    opacity 260ms ease-in-out,
+    transform 260ms ease-in-out,
+    overlay 260ms ease-in-out allow-discrete,
+    display 260ms ease-in-out allow-discrete;
 
   &.restricted-width {
     width: 550px;
   }
 
   &:open {
-    transform: scale(1);
+    transform: translateY(0) scale(1);
     opacity: 1;
 
     @starting-style {
-      transform: scale(.7);
+      transform: translateY(10px) scale(.98);
       opacity: 0;
     }
   }
 
+  &.closing {
+    transform: translateY(10px) scale(.98);
+    opacity: 0;
+  }
+
   &::backdrop {
-    background-color: rgba(0, 0, 0, .8);
-    transition: background-color 300ms ease-in-out allow-discrete;
+    background-color: rgba(33, 37, 42, .62);
+    transition:
+      background-color 260ms ease-in-out,
+      overlay 260ms ease-in-out allow-discrete,
+      display 260ms ease-in-out allow-discrete;
 
     @starting-style {
-      background-color: rgba(0, 0, 0, 0);
+      background-color: rgba(33, 37, 42, 0);
     }
   }
 
+  &.closing::backdrop {
+    background-color: rgba(33, 37, 42, 0);
+  }
+
   header {
-    padding: 10px 15px;
-    background-color: var(--color-blue);
-    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--color-surface-border);
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, .96) 0%, rgba(250, 253, 255, .86) 100%);
+    color: var(--color-dark-border);
+    font-size: .95rem;
+    font-weight: 700;
+
+    &::before {
+      content: '';
+      flex-shrink: 0;
+      width: 8px;
+      height: 24px;
+      border-radius: var(--border-radius-pill);
+      background-image: linear-gradient(180deg, var(--color-blue) 0%, rgb(99, 169, 238) 100%);
+      box-shadow: 0 6px 14px var(--color-accent-border-soft);
+    }
   }
 
   .content {
-    padding: 30px 15px;
+    padding: 22px;
+    color: var(--color-muted);
 
     &.text-only {
       :first-child {
@@ -1184,26 +1218,59 @@ dialog {
 
     label {
       display: block;
-      margin-bottom: 5px;
+      margin-bottom: 7px;
       font-size: .875rem;
+      color: var(--color-dark-border);
+    }
+
+    input[type='text'] {
+      border: 1px solid var(--color-surface-border);
+      border-radius: var(--border-radius-field);
+      background-color: var(--color-white);
+      box-shadow: var(--shadow-field);
+
+      &:focus-visible {
+        border-color: var(--color-focus-border);
+        box-shadow: var(--focus-ring);
+      }
     }
   }
 
   aside {
     display: flex;
     justify-content: end;
-    gap: 5px 10px;
+    gap: 8px;
     flex-wrap: wrap;
-    padding: 15px;
-    background-color: rgb(240, 240, 240);
+    padding: 14px 20px 18px;
+    border-top: 1px solid var(--color-surface-border);
+    background-image: linear-gradient(180deg, rgba(250, 253, 255, .72) 0%, rgba(255, 255, 255, .96) 100%);
   }
 
   .button {
+    display: inline-grid;
+    place-items: center;
+    padding: 8px 14px;
     border: 1px solid transparent;
+    border-radius: var(--border-radius-pill);
+    font-weight: 500;
+    isolation: isolate;
+
+    &::before {
+      z-index: 0;
+    }
+
+    > span {
+      grid-area: 1 / 1;
+      position: relative;
+      z-index: 1;
+    }
 
     &[disabled] {
-      background-color: transparent;
+      border-color: var(--color-surface-border);
+      background-color: var(--color-white);
+      color: var(--color-muted);
       cursor: not-allowed;
+      opacity: .72;
 
       &::before {
         display: none;
@@ -1213,10 +1280,10 @@ dialog {
 
   .primary-action {
     border-color: var(--color-green);
-    background-color: var(--color-green);
+    background-image: linear-gradient(135deg, rgb(38, 162, 24) 0%, var(--color-green) 100%);
 
     &[disabled] {
-      color: var(--color-black);
+      background-image: none;
     }
 
     &::before {
@@ -1229,15 +1296,39 @@ dialog {
   }
 
   .secondary-action {
-    border-color: var(--color-red);
-    background-color: var(--color-red);
+    border-color: rgba(215, 0, 34, .22);
+    background-color: var(--color-white);
+    color: var(--color-red);
 
     &[disabled] {
-      color: var(--color-black);
+      color: var(--color-muted);
+
+      > span {
+        color: inherit;
+      }
     }
 
     &::before {
       background: var(--color-red-dark);
+    }
+
+    > span {
+      color: var(--color-red);
+    }
+
+    > span[aria-hidden='true'] {
+      color: var(--color-white);
+      clip-path: inset(0 100% 0 0);
+      transition: clip-path 360ms ease-in-out;
+    }
+
+    &:hover {
+      border-color: rgba(215, 0, 34, .32);
+      color: var(--color-red);
+
+      > span[aria-hidden='true'] {
+        clip-path: inset(0);
+      }
     }
 
     &:focus {
@@ -1457,6 +1548,36 @@ dialog {
 
 .file-input-wrapper {
   margin-top: 20px;
+
+  input[type='file'] {
+    box-sizing: border-box;
+    padding: 8px 12px 8px 8px;
+    width: 100%;
+    border: 1px dashed rgba(84, 107, 147, .28);
+    border-radius: var(--border-radius-field);
+    background-color: rgba(250, 253, 255, .82);
+    color: var(--color-muted);
+    cursor: pointer;
+
+    &::file-selector-button {
+      margin-right: 12px;
+      padding: 7px 12px;
+      font: inherit;
+      border: 1px solid var(--color-accent-border);
+      border-radius: var(--border-radius-pill);
+      background-color: var(--color-white);
+      color: var(--color-blue);
+      font-weight: 500;
+      cursor: pointer;
+      transition: border-color ease 220ms, background-color ease 220ms, color ease 220ms;
+    }
+
+    &:hover::file-selector-button {
+      border-color: var(--color-blue);
+      background-color: var(--color-blue-translucent);
+      color: var(--color-blue-dark);
+    }
+  }
 }
 
 #import-configuration {
@@ -1466,20 +1587,45 @@ dialog {
 }
 
 #no-saved-configurations {
+  padding: 14px;
+  border: 1px solid var(--color-surface-border);
+  border-radius: var(--border-radius-field);
+  background-color: rgba(250, 253, 255, .86);
+  color: var(--color-muted);
   font-size: .875rem;
 }
 
 #list-configurations-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: var(--color-muted);
+  font-size: .85rem;
 
   tr {
-    border-bottom: 1px solid rgb(150, 150, 150);
+    transition: background-color ease 200ms;
+
+    &:hover {
+      background-color: rgba(250, 253, 255, .86);
+    }
   }
 
   th, td {
-    padding: 10px 0;
+    padding: 11px 0;
+    border-bottom: 1px solid rgba(84, 107, 147, .14);
     text-align: left;
+  }
+
+  tbody tr:last-child td {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  th {
+    padding-top: 0;
+    color: var(--color-dark-border);
+    font-size: .75rem;
+    font-weight: 700;
   }
 
   td:first-child {
@@ -1513,10 +1659,11 @@ dialog {
   .icon {
     padding: 5px;
     border-radius: 50%;
-    transition: background-color ease-in-out 250ms;
+    transition: background-color ease-in-out 250ms, color ease-in-out 250ms;
 
     &:hover {
-      background-color: rgb(235, 235, 235);
+      background-color: var(--color-blue-translucent);
+      color: var(--color-blue);
     }
   }
 }

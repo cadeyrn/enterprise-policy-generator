@@ -119,8 +119,13 @@
         </form>
       </div>
       <aside>
-        <button type="button" id="button-save-dialog-cancel" class="button secondary-action" data-i18n="common_dialog_btn_cancel"></button>
-        <button type="button" id="button-save-dialog-ok" class="button primary-action" data-i18n="save_dialog_btn_ok" disabled></button>
+        <button type="button" id="button-save-dialog-cancel" class="button secondary-action">
+          <span data-i18n="common_dialog_btn_cancel"></span>
+          <span aria-hidden="true" data-i18n="common_dialog_btn_cancel"></span>
+        </button>
+        <button type="button" id="button-save-dialog-ok" class="button primary-action" disabled>
+          <span data-i18n="save_dialog_btn_ok"></span>
+        </button>
       </aside>
     </dialog>
     <dialog id="configuration-list-dialog" aria-labelledby="configuration-list-dialog-header">
@@ -141,7 +146,10 @@
         </table>
       </div>
       <aside>
-        <button type="button" id="button-list-dialog-cancel" class="button secondary-action" data-i18n="common_dialog_btn_cancel" autofocus></button>
+        <button type="button" id="button-list-dialog-cancel" class="button secondary-action" autofocus>
+          <span data-i18n="common_dialog_btn_cancel"></span>
+          <span aria-hidden="true" data-i18n="common_dialog_btn_cancel"></span>
+        </button>
       </aside>
     </dialog>
     <dialog id="import-configuration-dialog" aria-labelledby="import-configuration-dialog-header">
@@ -160,8 +168,13 @@
         </form>
       </div>
       <aside>
-        <button type="button" id="button-import-config-cancel" class="button secondary-action" data-i18n="common_dialog_btn_cancel"></button>
-        <button type="button" id="button-import-config-ok" class="button primary-action" data-i18n="configuration_import" disabled></button>
+        <button type="button" id="button-import-config-cancel" class="button secondary-action">
+          <span data-i18n="common_dialog_btn_cancel"></span>
+          <span aria-hidden="true" data-i18n="common_dialog_btn_cancel"></span>
+        </button>
+        <button type="button" id="button-import-config-ok" class="button primary-action" disabled>
+          <span data-i18n="configuration_import"></span>
+        </button>
       </aside>
     </dialog>
     <dialog id="incompatible-configuration-dialog" class="restricted-width" aria-labelledby="incompatible-configuration-dialog-header">
@@ -177,8 +190,13 @@
         </ul>
       </div>
       <aside>
-        <button type="button" id="button-incompatible-config-cancel" class="button secondary-action" data-i18n="common_dialog_btn_cancel"></button>
-        <button type="button" id="button-incompatible-config-ok" class="button primary-action" data-i18n="configuration_incompatible_btn_get_in_touch"></button>
+        <button type="button" id="button-incompatible-config-cancel" class="button secondary-action">
+          <span data-i18n="common_dialog_btn_cancel"></span>
+          <span aria-hidden="true" data-i18n="common_dialog_btn_cancel"></span>
+        </button>
+        <button type="button" id="button-incompatible-config-ok" class="button primary-action">
+          <span data-i18n="configuration_incompatible_btn_get_in_touch"></span>
+        </button>
       </aside>
     </dialog>
     <script src="../js/lib/i18n.js"></script>
