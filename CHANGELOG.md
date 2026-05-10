@@ -6,6 +6,7 @@
 
 #### Enhancements
 
+- New and modern design, see [#388](https://github.com/cadeyrn/enterprise-policy-generator/issues/388)
 - After copying the generated policies.json output to the clipboard, a confirmation popover will now appear, see
   [#387](https://github.com/cadeyrn/enterprise-policy-generator/issues/387)
 
