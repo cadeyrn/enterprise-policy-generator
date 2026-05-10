@@ -403,6 +403,11 @@ class Configurator {
     $container.setAttribute('role', 'listitem');
     $container.classList.add('array-container');
 
+    // add a class to simple arrays, so the action buttons attach cleanly
+    if (['enum', 'string'].includes(object.items?.schema)) {
+      $container.classList.add('simple-array-container');
+    }
+
     // optional label
     if (object.label) {
       Configurator.#addLabel($el, object.label);

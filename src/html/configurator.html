@@ -34,32 +34,36 @@
         <h2 class="visually-hidden" data-i18n="generate_headline"></h2>
         <form id="generator-form" tabindex="-1" novalidate></form>
         <section id="secondary-section" tabindex="-1">
-          <div class="output-header">
-            <h2 data-i18n="output_headline"></h2>
-          </div>
-          <div class="output-action">
-            <button type="button" id="generate" class="button" data-i18n="generate_button" aria-keyshortcuts="Shift+G"></button>
-          </div>
-          <pre id="policy-output-wrapper"><code id="policy-output"></code></pre>
-          <div id="action-links" class="action-links hidden">
-            <button type="button" id="copy-to-clipboard">
-              <img src="../images/cursor.svg" width="20" height="20" alt="">
-              <span data-i18n="link_copy_to_clipboard"></span>
-            </button>
-            <div id="copy-to-clipboard-popover" class="popover" popover="manual" role="status" aria-live="polite" aria-atomic="true" data-i18n="copy_to_clipboard_success"></div>
-            <button type="button" id="grant-download-permission">
-              <img src="../images/download.svg" width="20" height="20" alt="">
-              <span data-i18n="link_download"></span>
-            </button>
-            <button type="button" id="download" class="hidden">
-              <img src="../images/download.svg" width="20" height="20" alt="">
-              <span data-i18n="link_download"></span>
-            </button>
-            <button type="button" id="save-configuration">
-              <img src="../images/save.svg" width="20" height="20" alt="">
-              <span data-i18n="link_save_configuration"></span>
-            </button>
-          </div>
+          <section class="output-panel" aria-labelledby="policy-output-title">
+            <div class="output-toolbar">
+              <div class="output-header">
+                <h2 id="policy-output-title" data-i18n="output_headline"></h2>
+              </div>
+            </div>
+            <div class="output-action">
+              <button type="button" id="generate" class="button" data-i18n="generate_button" aria-keyshortcuts="Shift+G"></button>
+            </div>
+            <pre id="policy-output-wrapper"><code id="policy-output"></code><span class="output-placeholder" data-i18n="output_placeholder"></span></pre>
+            <div id="action-links" class="action-links hidden">
+              <button type="button" id="copy-to-clipboard">
+                <img src="../images/cursor.svg" width="20" height="20" alt="">
+                <span data-i18n="link_copy_to_clipboard"></span>
+              </button>
+              <div id="copy-to-clipboard-popover" class="popover" popover="manual" role="status" aria-live="polite" aria-atomic="true" data-i18n="copy_to_clipboard_success"></div>
+              <button type="button" id="grant-download-permission">
+                <img src="../images/download.svg" width="20" height="20" alt="">
+                <span data-i18n="link_download"></span>
+              </button>
+              <button type="button" id="download" class="hidden">
+                <img src="../images/download.svg" width="20" height="20" alt="">
+                <span data-i18n="link_download"></span>
+              </button>
+              <button type="button" id="save-configuration">
+                <img src="../images/save.svg" width="20" height="20" alt="">
+                <span data-i18n="link_save_configuration"></span>
+              </button>
+            </div>
+          </section>
           <details class="help-box">
             <summary data-i18n="explanation_headline"></summary>
             <div>
@@ -72,17 +76,19 @@
               <p data-i18n="explanation_about_policies"></p>
             </div>
           </details>
-          <hr>
-          <div class="action-links">
-            <button type="button" id="list-configurations">
-              <img src="../images/settings.svg" width="20" height="20" alt="">
-              <span data-i18n="link_load_configuration"></span>
-            </button>
-            <button type="button" id="import-configuration">
-              <img src="../images/export.svg" width="20" height="20" alt="">
-              <span data-i18n="configuration_import"></span>
-            </button>
-          </div>
+          <section class="configuration-panel" aria-labelledby="configuration-panel-title">
+            <h2 id="configuration-panel-title" data-i18n="configuration_management_headline"></h2>
+            <div class="action-links">
+              <button type="button" id="list-configurations">
+                <img src="../images/settings.svg" width="20" height="20" alt="">
+                <span data-i18n="link_load_configuration"></span>
+              </button>
+              <button type="button" id="import-configuration">
+                <img src="../images/export.svg" width="20" height="20" alt="">
+                <span data-i18n="configuration_import"></span>
+              </button>
+            </div>
+          </section>
           <div class="promo-box">
             <p data-i18n="promo_box_text"></p>
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">

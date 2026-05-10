@@ -53,6 +53,9 @@
   "configuration_incompatible_title": {
     "message": "Configuration not compatible"
   },
+  "configuration_management_headline": {
+    "message": "Manage configurations"
+  },
   "copy_to_clipboard_success": {
     "message": "Code copied to clipboard"
   },
@@ -154,6 +157,9 @@
   },
   "output_headline": {
     "message": "Policies output"
+  },
+  "output_placeholder": {
+    "message": "No policies generated yet"
   },
   "policy_category_authentication": {
     "message": "Authentication"

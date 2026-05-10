@@ -53,6 +53,9 @@
   "configuration_incompatible_title": {
     "message": "Konfiguration nicht kompatibel"
   },
+  "configuration_management_headline": {
+    "message": "Konfigurationen verwalten"
+  },
   "copy_to_clipboard_success": {
     "message": "Code wurde in die Zwischenablage kopiert"
   },
@@ -154,6 +157,9 @@
   },
   "output_headline": {
     "message": "Richtlinien-Ausgabe"
+  },
+  "output_placeholder": {
+    "message": "Noch keine Richtlinien generiert"
   },
   "policy_category_authentication": {
     "message": "Authentifizierung"
