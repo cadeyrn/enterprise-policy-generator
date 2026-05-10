@@ -99,7 +99,7 @@ button {
   padding: 8px 15px;
   transform: perspective(1px) translateZ(0);
   border: none;
-  border-radius: var(--border-radius-control);
+  border-radius: var(--border-radius-pill);
   background: var(--color-blue);
   color: var(--color-white);
   font-size: .9rem;
@@ -1319,7 +1319,7 @@ dialog {
     > span[aria-hidden='true'] {
       color: var(--color-white);
       clip-path: inset(0 100% 0 0);
-      transition: clip-path 360ms ease-in-out;
+      transition: clip-path 350ms ease-in-out;
     }
 
     &:hover {
@@ -1419,6 +1419,7 @@ dialog {
   pointer-events: none;
 
   .button {
+    border-radius: var(--border-radius-field);
     flex-shrink: 0;
     pointer-events: auto;
   }
@@ -1692,6 +1693,7 @@ dialog {
 
   .button {
     border-color: var(--color-green);
+    border-radius: var(--border-radius-field);
     background-image: linear-gradient(135deg, rgb(38, 162, 24) 0%, var(--color-green) 100%);
 
     &::before {
