@@ -996,6 +996,7 @@
     "NoDefaultBookmarks": {
       "availability": { "mainstream": "60.0", "esr": "60.0" },
       "tags": ["bookmarks"],
+      "note": "policy_description_NoDefaultBookmarks_note",
       "schema": "boolean"
     },
     "Bookmarks": {

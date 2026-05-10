@@ -1107,7 +1107,10 @@
     "message": "Bok, kótaryž se pśi wócynjanju nowego rejtarka pokazujo, zmóžniś abo znjemóžniś"
   },
   "policy_description_NoDefaultBookmarks": {
-    "message": "Žedne standardne cytańske znamjenja inkluziwnje inteligentne cytańske znamjenja (nejcesćej woglědane boki, njedawno wužyte klucowe słowa) napóraś. Pokazka: toś ta směrnica jo jano statkowna, gaž se pśed prědnym wužywanim profila Firefox nałožujo"
+    "message": "Žedne standardne cytańske znamjenja inkluziwnje inteligentne cytańske znamjenja (nejcesćej woglědane boki, njedawno wužyte klucowe słowa) napóraś"
+  },
+  "policy_description_NoDefaultBookmarks_note": {
+    "message": "Toś ta směrnica jo jano statkowna, gaž se pśed prědnym wužywanim profila Firefox nałožujo."
   },
   "policy_description_OfferToSaveLogins": {
     "message": "Firefox dowóliś, spomnjenje pśizjawjenjow a gronidłow póbitowaś (njedajo se změniś)"

@@ -1107,7 +1107,10 @@
     "message": "Strona, kotraž so při wočinjenju noweho rajtarka jewi, zmóžnić abo znjemóžnić"
   },
   "policy_description_NoDefaultBookmarks": {
-    "message": "Žane standardne zapołožki inkluziwnje inteligentne zapołožki (najhusćišo wopytane strony, njedawno wužite klučowe słowa) wutworić. Pokazka: tuta směrnica je jenož skutkowna, hdyž so před prěnim wužiwanjom profila Firefox nałožuje"
+    "message": "Žane standardne zapołožki inkluziwnje inteligentne zapołožki (najhusćišo wopytane strony, njedawno wužite klučowe słowa) wutworić"
+  },
+  "policy_description_NoDefaultBookmarks_note": {
+    "message": "Tuta směrnica je jenož skutkowna, hdyž so před prěnim wužiwanjom profila Firefox nałožuje."
   },
   "policy_description_OfferToSaveLogins": {
     "message": "Firefox dowolić, spomjatkowanje přizjewjenjow a hesłow poskićić (njeda so změnić)"

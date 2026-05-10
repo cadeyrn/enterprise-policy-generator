@@ -1107,7 +1107,10 @@
     "message": "启用或禁用打开新标签页时显示的页面"
   },
   "policy_description_NoDefaultBookmarks": {
-    "message": "不创建默认的书签集，包括智能书签（最常访问、最近的标签）。注意：该策略仅在配置文件首次启用时生效"
+    "message": "不创建默认的书签集，包括智能书签（最常访问、最近的标签）。注意"
+  },
+  "policy_description_NoDefaultBookmarks_note": {
+    "message": "该策略仅在配置文件首次启用时生效 。"
   },
   "policy_description_OfferToSaveLogins": {
     "message": "Allow Firefox to offer to remember logins and passwords (cannot be changed)"
