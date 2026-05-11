@@ -35,6 +35,7 @@
   --form-element-gap: 5px;
   --form-heading-gap: 10px;
   --form-section-gap: 15px;
+  --layout-card-gap: 16px;
   --shadow-card: 0 10px 22px rgba(41, 52, 79, .05);
   --shadow-control: 0 8px 18px rgba(41, 52, 79, .05);
   --shadow-field: 0 6px 16px rgba(41, 52, 79, .04);
@@ -409,7 +410,7 @@ input, textarea {
 }
 
 .options-block-container {
-  margin-top: 16px;
+  margin-top: var(--layout-card-gap);
   padding: 12px 16px 16px;
   border: 1px solid var(--color-surface-border);
   border-radius: var(--border-radius-card);
@@ -421,7 +422,7 @@ input, textarea {
   }
 
   + .options-block-container {
-    margin-top: 14px;
+    margin-top: var(--layout-card-gap);
   }
 
   h3 {
@@ -646,7 +647,7 @@ input, textarea {
 .object-label {
   box-sizing: border-box;
   margin-top: var(--form-section-gap);
-  margin-bottom: var(--form-heading-gap);
+  margin-bottom: var(--form-section-gap);
   padding-left: 5px;
   width: 100%;
   font-weight: 700;
@@ -661,6 +662,10 @@ input, textarea {
 
 .array-container + .additional-item .object-label:first-child {
   margin-top: var(--form-section-gap);
+}
+
+.object-label:has(+ .object-wrapper > .key-wrapper[data-value]) {
+  margin-bottom: var(--form-heading-gap);
 }
 
 .label + .array-wrapper > .array-container:first-child {
@@ -708,6 +713,14 @@ input, textarea {
   position: relative;
   margin: var(--form-element-gap) 0;
   width: 100%;
+}
+
+.key-wrapper[data-value] {
+  margin: 0;
+}
+
+.key-wrapper[data-value]:first-child + .label {
+  margin-top: 0;
 }
 
 .input-wrapper:has(> .invalid-input-label:not(.hidden)) > input,
@@ -884,7 +897,12 @@ input, textarea {
   }
 
   &.simple-array-container {
+    padding-block: 15px;
     border-bottom-right-radius: 0;
+
+    .input-wrapper, .key-wrapper, .enum-wrapper {
+      margin: 0;
+    }
   }
 
   &:has(> .boolean-wrapper) {
@@ -998,7 +1016,7 @@ input, textarea {
 .output-panel {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  margin-top: 17px;
+  margin-top: var(--layout-card-gap);
   padding: 14px;
   border: 1px solid var(--color-surface-border);
   border-radius: var(--border-radius-card-large);
@@ -1431,7 +1449,7 @@ dialog {
 }
 
 .help-box {
-  margin-top: 15px;
+  margin-top: var(--layout-card-gap);
   border: 1px solid var(--color-surface-border);
   border-radius: var(--border-radius-card);
   background-image: linear-gradient(135deg, rgba(255, 255, 255, .98) 0%, rgba(240, 250, 244, .86) 100%);
@@ -1493,7 +1511,7 @@ dialog {
 }
 
 .configuration-panel {
-  margin-top: 16px;
+  margin-top: var(--layout-card-gap);
   padding: 14px;
   border: 1px solid var(--color-surface-border);
   border-radius: var(--border-radius-card);
@@ -1678,7 +1696,7 @@ dialog {
   display: flex;
   align-items: center;
   gap: 24px;
-  margin-top: 18px;
+  margin-top: var(--layout-card-gap);
   padding: 18px 20px;
   border: 1px solid rgba(16, 138, 3, .18);
   border-radius: var(--border-radius-card);
@@ -1721,7 +1739,7 @@ dialog {
 
 @media screen and (min-width: 1200px) {
   #generator-form > .options-block-container:first-child {
-    margin-top: 17px;
+    margin-top: var(--layout-card-gap);
   }
 
   .output-action {
