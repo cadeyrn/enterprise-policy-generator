@@ -655,6 +655,10 @@ input, textarea {
   margin-top: 0;
 }
 
+.array-container + .additional-item .object-label:first-child {
+  margin-top: 15px;
+}
+
 .label {
   display: block;
   box-sizing: border-box;
