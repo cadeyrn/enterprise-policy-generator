@@ -32,6 +32,9 @@
   --focus-ring: 0 0 0 2px var(--focus-ring-color);
   --focus-ring-color: rgba(5, 116, 228, .42);
   --focus-ring-strong: 0 0 0 2px var(--color-white), 0 0 0 4px rgba(5, 116, 228, .5);
+  --form-element-gap: 5px;
+  --form-heading-gap: 10px;
+  --form-section-gap: 15px;
   --shadow-card: 0 10px 22px rgba(41, 52, 79, .05);
   --shadow-control: 0 8px 18px rgba(41, 52, 79, .05);
   --shadow-field: 0 6px 16px rgba(41, 52, 79, .04);
@@ -445,9 +448,10 @@ input, textarea {
 }
 
 .policy-container {
+  --policy-container-block-padding: 7px;
   position: relative;
   margin-bottom: 0;
-  padding: 7px 10px 7px 40px;
+  padding: var(--policy-container-block-padding) 10px var(--policy-container-block-padding) 40px;
   border: 1px solid transparent;
   border-radius: var(--border-radius-surface);
   background-color: rgba(255, 255, 255, .78);
@@ -467,6 +471,10 @@ input, textarea {
     box-shadow: 0 12px 24px rgba(41, 52, 79, .08);
   }
 
+  &:has(> .policy-checkbox:checked ~ .options > :first-child) {
+    padding-bottom: 0;
+  }
+
   &.excluded {
     cursor: not-allowed;
     opacity: .5;
@@ -478,8 +486,8 @@ input, textarea {
 
   > label {
     display: block;
-    margin: -7px -10px -7px -42px;
-    padding: 7px 36px 7px 40px;
+    margin: calc(-1 * var(--policy-container-block-padding)) -10px calc(-1 * var(--policy-container-block-padding)) -42px;
+    padding: var(--policy-container-block-padding) 36px var(--policy-container-block-padding) 40px;
     line-height: 1.35;
     color: var(--color-dark-border);
   }
@@ -488,7 +496,7 @@ input, textarea {
     margin-top: 10px;
     margin-bottom: 0;
     margin-left: -28px;
-    padding: 10px 0 2px;
+    padding: var(--form-heading-gap) 0;
     border: 0;
     border-top: 1px solid rgba(84, 107, 147, .12);
     border-radius: 0;
@@ -637,16 +645,12 @@ input, textarea {
 
 .object-label {
   box-sizing: border-box;
-  margin-top: 15px;
-  margin-bottom: 10px;
+  margin-top: var(--form-section-gap);
+  margin-bottom: var(--form-heading-gap);
   padding-left: 5px;
   width: 100%;
   font-weight: 700;
   font-size: .875rem;
-
-  &:has(+ .array-container) {
-    margin-bottom: 15px;
-  }
 }
 
 .options > .object-label:first-child,
@@ -656,21 +660,25 @@ input, textarea {
 }
 
 .array-container + .additional-item .object-label:first-child {
-  margin-top: 15px;
+  margin-top: var(--form-section-gap);
+}
+
+.label + .array-wrapper > .array-container:first-child {
+  margin-top: var(--form-element-gap);
 }
 
 .label {
   display: block;
   box-sizing: border-box;
-  margin-top: 10px;
-  margin-bottom: 5px;
+  margin-top: var(--form-heading-gap);
+  margin-bottom: var(--form-element-gap);
   padding-left: 5px;
   width: 100%;
   font-size: .875rem;
   color: var(--color-muted);
 
   + select {
-    margin-bottom: 5px;
+    margin-bottom: var(--form-element-gap);
   }
 }
 
@@ -698,11 +706,8 @@ input, textarea {
 
 .input-wrapper, .key-wrapper {
   position: relative;
+  margin: var(--form-element-gap) 0;
   width: 100%;
-
-  + .input-wrapper {
-    margin-top: 5px;
-  }
 }
 
 .input-wrapper:has(> .invalid-input-label:not(.hidden)) > input,
@@ -715,7 +720,7 @@ input, textarea {
   display: block;
   position: relative;
   box-sizing: border-box;
-  margin: 5px 0;
+  margin: var(--form-element-gap) 0;
   width: 100%;
   height: 34px;
   border: 1px solid var(--color-surface-border);
@@ -770,8 +775,8 @@ input, textarea {
 .info-text {
   position: relative;
   box-sizing: border-box;
-  margin-top: 5px;
-  margin-bottom: 6px;
+  margin-top: var(--form-element-gap);
+  margin-bottom: var(--form-element-gap);
   padding: 8px 10px 8px 34px;
   width: 100%;
   border: 1px solid var(--color-surface-border);
@@ -795,20 +800,16 @@ input, textarea {
   }
 
   &:has(+ :not(.info-text)) {
-    margin-bottom: 15px;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
+    margin-bottom: var(--form-section-gap);
   }
 }
 
 .label + .array-wrapper > .info-text:first-child {
-  margin-top: 10px;
+  margin-top: var(--form-heading-gap);
 }
 
 .options > .info-text:first-child {
-  margin-top: 0;
+  margin-top: var(--form-element-gap);
 }
 
 .lock-checkbox {
@@ -870,7 +871,7 @@ input, textarea {
   --array-border-color: rgb(228, 231, 238);
   position: relative;
   box-sizing: border-box;
-  margin: 12px 0 6px;
+  margin: var(--form-heading-gap) 0;
   padding: 14px 14px 14px 48px;
   width: calc(100% - 32px);
   border: 1px solid var(--array-border-color);
