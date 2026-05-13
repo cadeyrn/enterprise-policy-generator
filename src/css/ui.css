@@ -388,12 +388,12 @@ input, textarea {
     min-width: 0;
     max-width: 100%;
     min-height: 42px;
-    padding: 0 10px 0 44px;
+    padding-left: 40px;
     border-radius: var(--border-radius-surface);
     background-image: url('../images/sh-at.webp');
     background-repeat: no-repeat;
     background-size: 32px 32px;
-    background-position: 8px center;
+    background-position: 0 center;
     color: var(--color-muted);
     text-decoration: none;
     overflow: hidden;
