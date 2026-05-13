@@ -32,7 +32,7 @@
   --focus-ring: 0 0 0 2px var(--focus-ring-color);
   --focus-ring-color: rgba(5, 116, 228, .42);
   --focus-ring-strong: 0 0 0 2px var(--color-white), 0 0 0 4px rgba(5, 116, 228, .5);
-  --form-element-gap: 5px;
+  --form-element-gap: 7px;
   --form-heading-gap: 10px;
   --form-section-gap: 15px;
   --layout-card-gap: 16px;
@@ -655,8 +655,12 @@ input, textarea {
 }
 
 .options > .object-label:first-child,
-.array-wrapper > .object-label:first-child,
+.object-wrapper > .object-label:first-child,
 .additional-item > .object-label:first-child {
+  margin-top: 0;
+}
+
+.object-wrapper > .array-wrapper:first-child > .object-label:first-child {
   margin-top: 0;
 }
 
@@ -685,6 +689,10 @@ input, textarea {
   + select {
     margin-bottom: var(--form-element-gap);
   }
+}
+
+.options > .object-wrapper > .label:first-child {
+  margin-top: calc(var(--form-heading-gap) - 5px);
 }
 
 .invalid-input-label {
@@ -721,6 +729,10 @@ input, textarea {
 
 .key-wrapper[data-value]:first-child + .label {
   margin-top: 0;
+}
+
+.object-wrapper > .boolean-wrapper:last-child {
+  margin-bottom: var(--form-heading-gap);
 }
 
 .input-wrapper:has(> .invalid-input-label:not(.hidden)) > input,
@@ -900,7 +912,13 @@ input, textarea {
     padding-block: 15px;
     border-bottom-right-radius: 0;
 
-    .input-wrapper, .key-wrapper, .enum-wrapper {
+    &:not(:has(.key-wrapper:not([data-value]))) {
+      .input-wrapper, .key-wrapper, .enum-wrapper {
+        margin: 0;
+      }
+    }
+
+    .key-wrapper {
       margin: 0;
     }
   }
@@ -1006,11 +1024,14 @@ input, textarea {
 }
 
 .sortable-placeholder {
-  box-sizing: border-box;
-  margin: 10px 0 5px;
-  border: 2px dashed var(--color-blue);
-  border-radius: var(--border-radius-box);
+  border-color: var(--color-blue);
+  border-style: dashed;
   background: var(--color-blue-translucent);
+  box-shadow: none;
+}
+
+.array-container.sortable-placeholder {
+  border-radius: var(--border-radius-surface);
 }
 
 .output-panel {

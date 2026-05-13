@@ -246,7 +246,8 @@ class Sortable {
     $item.setPointerCapture(e.pointerId);
 
     drag.$placeholder = document.createElement($item.tagName);
-    drag.$placeholder.className = this.placeholderClass;
+    drag.$placeholder.className = $item.className;
+    drag.$placeholder.classList.add(this.placeholderClass);
     drag.$placeholder.style.height = `${rect.height}px`;
     drag.$placeholder.style.width = `${rect.width}px`;
     drag.$placeholder.setAttribute('aria-hidden', 'true');
@@ -263,6 +264,7 @@ class Sortable {
     $item.style.pointerEvents = 'none';
     $item.style.willChange = 'transform';
 
+    document.body.appendChild($item);
     document.body.style.userSelect = 'none';
 
     this.#cacheSiblingRects();
@@ -385,7 +387,7 @@ class Sortable {
     }
 
     if (!inserted) {
-      const $lastSortableItem = this.#getItems().at(-1);
+      const $lastSortableItem = $siblings.at(-1);
       const $afterLastSortableItem = $lastSortableItem?.nextElementSibling ?? null;
 
       if ($afterLastSortableItem !== drag.$placeholder) {
