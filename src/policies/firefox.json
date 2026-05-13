@@ -1121,6 +1121,7 @@
     "DefaultDownloadDirectory": {
       "availability": { "mainstream": "68.0", "esr": "68.0" },
       "tags": ["downloads"],
+      "exclude": ["DownloadDirectory"],
       "schema": "string",
       "placeholder": "policy_description_DefaultDownloadDirectory_Label",
       "validations": ["required"]
@@ -1128,6 +1129,7 @@
     "DownloadDirectory": {
       "availability": { "mainstream": "68.0", "esr": "68.0" },
       "tags": ["downloads"],
+      "exclude": ["DefaultDownloadDirectory"],
       "schema": "string",
       "placeholder": "policy_description_DownloadDirectory_Label",
       "validations": ["required"]
