@@ -218,6 +218,7 @@ class Management {
       $deleteConfigurationDialog.querySelector('#delete-configuration-dialog-text').textContent = '';
 
       if (shouldRestoreListDialog) {
+        $listConfigurationDialog.inert = false;
         $listConfigurationDialog.classList.remove('covered-by-confirmation');
         Management.#listConfigurations();
       }
@@ -423,8 +424,11 @@ class Management {
     $deleteConfigurationDialog.setAttribute('data-idx', idx.toString());
     $deleteConfigurationDialog.setAttribute('data-restore-list-dialog', '');
     Management.#setDeleteConfigurationDialogText(configuration.name);
+
+    // keep the list dialog open for a stable backdrop, but remove it semantically while covered
     $listConfigurationDialog.classList.add('covered-by-confirmation');
     $deleteConfigurationDialog.showModal();
+    $listConfigurationDialog.inert = true;
   }
 
   /**
