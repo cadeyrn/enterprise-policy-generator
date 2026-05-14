@@ -21,6 +21,15 @@ export default [
       ecmaVersion: 'latest',
       sourceType: 'script'
     },
+    settings: {
+      jsdoc: {
+        structuredTags: {
+          rejects: {
+            required: ['type']
+          }
+        }
+      }
+    },
     files: ['**/*.js'],
     rules: {
       '@stylistic/array-bracket-newline': ['error', { multiline: true }],

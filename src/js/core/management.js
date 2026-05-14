@@ -1,6 +1,6 @@
 'use strict';
 
-/* global DOWNLOAD_PERMISSION, I18n, Migrator, Output, POPOVER_DURATION_IN_MS, Serializer */
+/* global DOWNLOAD_PERMISSION, I18n, Migrator, Output, POPOVER_DURATION_IN_MS, Sanitizer, Serializer */
 
 const BASE64_BINARY_CHUNK_SIZE = 8192;
 const DIALOG_CLOSE_ANIMATION_DURATION_IN_MS = 300;
@@ -50,7 +50,7 @@ class Management {
 
     $listConfigurationsButton.addEventListener('click', () => {
       $listConfigurationDialog.showModal();
-      Management.#listConfigurations();
+      void Management.#listConfigurations();
     });
 
     $importConfigurationButton.addEventListener('click', () => {
@@ -257,7 +257,7 @@ class Management {
       if (shouldRestoreListDialog) {
         $listConfigurationDialog.inert = false;
         $listConfigurationDialog.classList.remove('covered-by-confirmation');
-        Management.#listConfigurations();
+        void Management.#listConfigurations();
       }
     });
 
@@ -474,7 +474,7 @@ class Management {
     $deleteConfigurationDialog.setAttribute('data-restore-list-dialog', '');
     Management.#setDeleteConfigurationDialogText(configuration.name);
 
-    // keep the list dialog open for a stable backdrop, but remove it semantically while covered
+    // keep the list dialog open for a stable backdrop but remove it semantically while covered
     $listConfigurationDialog.classList.add('covered-by-confirmation');
     $deleteConfigurationDialog.showModal();
     $listConfigurationDialog.inert = true;
@@ -590,13 +590,58 @@ class Management {
   static #setupImportConfigurationDialog () {
     const $name = $importConfigurationDialog.querySelector('#import-dialog-name');
     const $fileInput = $importConfigurationDialog.querySelector('#import-file-input');
+    const $error = $importConfigurationDialog.querySelector('#import-configuration-error');
     const $submitButton = $importConfigurationDialog.querySelector('#button-import-config-ok');
     const $closeButton = $importConfigurationDialog.querySelector('#button-import-config-cancel');
+
+    const hideImportError = () => {
+      $error.classList.add('hidden');
+      $fileInput.setAttribute('aria-describedby', 'import-file-help');
+      $fileInput.removeAttribute('aria-invalid');
+    };
+
+    const showImportError = () => {
+      $error.classList.remove('hidden');
+      $fileInput.setAttribute('aria-describedby', 'import-file-help import-configuration-error');
+      $fileInput.setAttribute('aria-invalid', 'true');
+      $fileInput.focus();
+    };
+
+    const importConfiguration = async () => {
+      if (!$name.value || !$fileInput.value) {
+        return;
+      }
+
+      hideImportError();
+      Management.previousDialog = $importConfigurationDialog;
+      $submitButton.setAttribute('disabled', 'disabled');
+
+      try {
+        const configurationWasImported = await Management.#importConfiguration($name.value, $fileInput);
+
+        if (!configurationWasImported) {
+          await Management.#closeDialog($importConfigurationDialog);
+          $incompatibleConfigurationDialog.showModal();
+
+          return;
+        }
+
+        await Management.#closeDialog($importConfigurationDialog);
+        $listConfigurationDialog.showModal();
+        await Management.#listConfigurations();
+        Management.#showStatusPopover(document.getElementById('import-configuration-popover'));
+      }
+      catch {
+        showImportError();
+        $submitButton.removeAttribute('disabled');
+      }
+    };
 
     $importConfigurationDialog.addEventListener('close', () => {
       $importConfigurationDialog.querySelector('#import-dialog-name').value = '';
       $importConfigurationDialog.querySelector('#import-file-input').value = '';
       $submitButton.setAttribute('disabled', 'disabled');
+      hideImportError();
     });
 
     const disableSubmitButton = () => {
@@ -610,7 +655,10 @@ class Management {
 
     // the name and the file input field must not be empty
     $name.addEventListener('input', disableSubmitButton);
-    $fileInput.addEventListener('input', disableSubmitButton);
+    $fileInput.addEventListener('input', () => {
+      hideImportError();
+      disableSubmitButton();
+    });
 
     // close the dialog by clicking the cancel button
     $closeButton.addEventListener('click', () => {
@@ -622,17 +670,13 @@ class Management {
       if ($importConfigurationDialog.open && e.key === 'Enter') {
         e.preventDefault();
 
-        if ($name.value && $fileInput.value) {
-          Management.#importConfiguration($name.value, $fileInput);
-          void Management.#closeDialog($importConfigurationDialog);
-        }
+        void importConfiguration();
       }
     });
 
     // submit button
     $submitButton.addEventListener('click', () => {
-      Management.#importConfiguration($name.value, $fileInput);
-      void Management.#closeDialog($importConfigurationDialog);
+      void importConfiguration();
     });
   }
 
@@ -642,16 +686,55 @@ class Management {
    * @param {string} name - the name of the configuration
    * @param {HTMLInputElement} $localFile - the DOM element of the configuration file input
    *
-   * @returns {void}
+   * @returns {Promise<boolean>} true if the configuration was imported, otherwise false
    */
-  static #importConfiguration (name, $localFile) {
-    const reader = new FileReader();
+  static async #importConfiguration (name, $localFile) {
+    const data = await Management.#readConfigurationFile($localFile);
 
-    reader.readAsText($localFile.files[0]);
-    reader.addEventListener('loadend', async () => {
-      const { configurations } = await browser.storage.local.get({ configurations: [] });
-      const file = reader.result.toString();
-      const binary = window.atob(file);
+    // configurations saved before EPG 8.0 did not have the schema key, and we don't want to import them
+    if (!data.schema) {
+      return false;
+    }
+
+    const { configurations } = await browser.storage.local.get({ configurations: [] });
+
+    const configuration = {
+      schema: data.schema,
+      product: data.product,
+      name: name,
+      time: new Date(),
+      configuration: data.configuration
+    };
+
+    configurations.push(configuration);
+
+    // migrate old configuration files
+    await browser.storage.local.set({ configurations: configurations, schema: 2, version: 1 });
+    Migrator.migrate();
+
+    return true;
+  }
+
+  /**
+   * Read and decode a configuration file.
+   *
+   * @param {HTMLInputElement} $localFile - the DOM element of the configuration file input
+   *
+   * @returns {Promise<object>} the decoded configuration data
+   * @throws {Error} if the file cannot be read or decoded
+   * @rejects {Error} if the file cannot be read or decoded
+   */
+  static async #readConfigurationFile ($localFile) {
+    const file = $localFile.files[0];
+
+    if (!file) {
+      throw new Error();
+    }
+
+    const content = await file.text();
+
+    try {
+      const binary = window.atob(content);
       const bytes = Uint8Array.from(binary, character => character.charCodeAt(0));
       let decoded = null;
 
@@ -662,34 +745,11 @@ class Management {
         decoded = binary;
       }
 
-      const data = JSON.parse(decoded);
-
-      // configurations saved before EPG 8.0 did not have the schema key, and we don't want to import them
-      if (!data.schema) {
-        Management.previousDialog = $importConfigurationDialog;
-        $incompatibleConfigurationDialog.showModal();
-
-        return;
-      }
-
-      const configuration = {
-        schema: data.schema,
-        product: data.product,
-        name: name,
-        time: new Date(),
-        configuration: data.configuration
-      };
-
-      configurations.push(configuration);
-
-      // migrate old configuration files
-      await browser.storage.local.set({ configurations: configurations, schema: 2, version: 1 });
-      await Migrator.migrate();
-
-      $listConfigurationDialog.showModal();
-      await Management.#listConfigurations();
-      Management.#showStatusPopover(document.getElementById('import-configuration-popover'));
-    });
+      return JSON.parse(decoded);
+    }
+    catch {
+      throw new Error();
+    }
   }
 
   /**

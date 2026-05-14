@@ -47,6 +47,9 @@
   "configuration_import": {
     "message": "Konfiguration importieren"
   },
+  "configuration_import_error": {
+    "message": "Die Konfigurationsdatei konnte nicht importiert werden. Bitte wählen Sie eine gültige .policy-Datei aus."
+  },
   "configuration_import_file": {
     "message": "Konfigurationsdatei"
   },

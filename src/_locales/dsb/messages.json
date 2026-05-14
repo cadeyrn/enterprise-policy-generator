@@ -47,6 +47,9 @@
   "configuration_import": {
     "message": "konfiguraciju importěrowaś"
   },
+  "configuration_import_error": {
+    "message": "The configuration file could not be imported. Choose a valid .policy file."
+  },
   "configuration_import_file": {
     "message": "Configuration file"
   },

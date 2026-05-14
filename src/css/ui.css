@@ -1345,6 +1345,39 @@ dialog {
       color: var(--color-muted);
     }
 
+    .dialog-error {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-top: 12px;
+      padding: 10px 12px;
+      font-size: .813rem;
+      line-height: 1.45;
+      border: 1px solid rgba(215, 0, 34, .18);
+      border-radius: var(--border-radius-field);
+      background-color: rgba(215, 0, 34, .06);
+      color: var(--color-red);
+
+      &.hidden {
+        display: none;
+      }
+
+      &::before {
+        content: '!';
+        display: inline-grid;
+        place-items: center;
+        flex-shrink: 0;
+        margin-top: 1px;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        background-color: var(--color-red);
+        color: var(--color-white);
+        font-size: .688rem;
+        font-weight: 700;
+      }
+    }
+
     input[type='text'] {
       border: 1px solid var(--color-surface-border);
       border-radius: var(--border-radius-field);
