@@ -1825,12 +1825,6 @@ dialog.output-fullscreen-dialog {
   }
 }
 
-#import-configuration {
-  img {
-    transform: rotate(180deg);
-  }
-}
-
 #list-configurations-table {
   width: 100%;
   border-collapse: separate;

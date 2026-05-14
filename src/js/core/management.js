@@ -386,7 +386,7 @@ class Management {
 
       const $fakeExportIcon = document.createElement('img');
       $fakeExportIcon.src = '/images/export.svg';
-      $fakeExportIcon.width = 18;
+      $fakeExportIcon.width = 20;
       $fakeExportIcon.height = 18;
       $fakeExportIcon.alt = '';
       $fakeExportButton.appendChild($fakeExportIcon);
