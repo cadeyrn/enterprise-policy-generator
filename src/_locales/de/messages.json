@@ -38,6 +38,9 @@
   "configuration_action_load": {
     "message": "Konfiguration $1 laden"
   },
+  "configuration_action_rename": {
+    "message": "Konfiguration $1 umbenennen"
+  },
   "configuration_action_show_incompatible": {
     "message": "Informationen zur inkompatiblen Konfiguration $1 anzeigen"
   },
@@ -82,6 +85,9 @@
   },
   "configuration_management_headline": {
     "message": "Konfigurationen verwalten"
+  },
+  "configuration_renamed_success": {
+    "message": "Konfiguration wurde umbenannt"
   },
   "configuration_saved_success": {
     "message": "Konfiguration wurde gespeichert"
@@ -1648,6 +1654,9 @@
   },
   "promo_box_text": {
     "message": "Die Erweiterung ist kostenlos. Ihre freiwillige Spende ermöglicht es, die Integration neuer Funktionen und Unternehmensrichtlinien fortzuführen."
+  },
+  "rename_configuration_dialog_title": {
+    "message": "Konfiguration umbenennen"
   },
   "requirement_macOS": {
     "message": "Funktioniert nur auf macOS"

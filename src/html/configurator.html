@@ -101,7 +101,7 @@
                 <span data-i18n="link_load_configuration"></span>
               </button>
               <button type="button" id="import-configuration">
-                <img src="../images/import.svg" width="20" height="18" class="configuration-transfer-icon" alt="">
+                <img src="../images/import.svg" width="20" height="18" alt="">
                 <span data-i18n="configuration_import"></span>
               </button>
             </div>
@@ -126,6 +126,7 @@
     <div id="delete-configuration-popover" class="popover" popover="manual" role="status" aria-live="polite" aria-atomic="true" data-i18n="configuration_deleted_success"></div>
     <div id="import-configuration-popover" class="popover" popover="manual" role="status" aria-live="polite" aria-atomic="true" data-i18n="configuration_imported_success"></div>
     <div id="load-configuration-popover" class="popover" popover="manual" role="status" aria-live="polite" aria-atomic="true" data-i18n="configuration_loaded_success"></div>
+    <div id="rename-configuration-popover" class="popover" popover="manual" role="status" aria-live="polite" aria-atomic="true" data-i18n="configuration_renamed_success"></div>
     <div id="save-configuration-popover" class="popover" popover="manual" role="status" aria-live="polite" aria-atomic="true" data-i18n="configuration_saved_success"></div>
     <dialog id="policy-output-fullscreen-dialog" class="output-fullscreen-dialog" aria-labelledby="policy-output-fullscreen-title">
       <header>
@@ -191,6 +192,28 @@
         <button type="button" id="button-list-dialog-cancel" class="button secondary-action" autofocus>
           <span data-i18n="common_dialog_btn_cancel"></span>
           <span aria-hidden="true" data-i18n="common_dialog_btn_cancel"></span>
+        </button>
+      </aside>
+    </dialog>
+    <dialog id="rename-configuration-dialog" class="restricted-width" aria-labelledby="rename-configuration-dialog-header">
+      <header>
+        <div id="rename-configuration-dialog-header" data-i18n="rename_configuration_dialog_title"></div>
+      </header>
+      <div class="content">
+        <form>
+          <div>
+            <label for="rename-dialog-name" data-i18n="save_dialog_form_name"></label>
+            <input type="text" name="rename-dialog-name" id="rename-dialog-name" autofocus>
+          </div>
+        </form>
+      </div>
+      <aside>
+        <button type="button" id="button-rename-config-cancel" class="button secondary-action">
+          <span data-i18n="common_dialog_btn_cancel"></span>
+          <span aria-hidden="true" data-i18n="common_dialog_btn_cancel"></span>
+        </button>
+        <button type="button" id="button-rename-config-ok" class="button primary-action" disabled>
+          <span data-i18n="rename_configuration_dialog_title"></span>
         </button>
       </aside>
     </dialog>

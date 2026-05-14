@@ -1,6 +1,6 @@
 'use strict';
 
-/* global DOWNLOAD_PERMISSION, I18n, Migrator, Output, POPOVER_DURATION_IN_MS, Sanitizer, Serializer */
+/* global DOWNLOAD_PERMISSION, I18n, Migrator, Output, POPOVER_DURATION_IN_MS, Serializer */
 
 const BASE64_BINARY_CHUNK_SIZE = 8192;
 const DIALOG_CLOSE_ANIMATION_DURATION_IN_MS = 300;
@@ -13,6 +13,7 @@ const $listConfigurationsButton = document.getElementById('list-configurations')
 const $listConfigurationDialog = document.getElementById('configuration-list-dialog');
 const $noSavedConfigurations = document.getElementById('no-saved-configurations');
 const $deleteConfigurationDialog = document.getElementById('delete-configuration-dialog');
+const $renameConfigurationDialog = document.getElementById('rename-configuration-dialog');
 const $saveConfigurationButton = document.getElementById('save-configuration');
 const $saveConfigurationDialog = document.getElementById('save-configuration-dialog');
 
@@ -40,6 +41,7 @@ class Management {
     Management.#setupDialogAnimations();
     Management.#setupSaveConfigurationDialog();
     Management.#setupListConfigurationsDialog();
+    Management.#setupRenameConfigurationDialog();
     Management.#setupDeleteConfigurationDialog();
     Management.#setupImportConfigurationDialog();
     Management.#setupIncompatibleConfigurationDialog();
@@ -239,6 +241,85 @@ class Management {
   }
 
   /**
+   * Show a secondary configuration dialog while keeping the list dialog backdrop stable.
+   *
+   * @param {HTMLDialogElement} $dialog - the dialog shown above the list dialog
+   *
+   * @returns {void}
+   */
+  static #showDialogOverConfigurationList ($dialog) {
+    $dialog.setAttribute('data-restore-list-dialog', '');
+    $listConfigurationDialog.classList.add('covered-by-subdialog');
+    $dialog.showModal();
+    $listConfigurationDialog.inert = true;
+  }
+
+  /**
+   * Restore the configuration list dialog after a secondary dialog has been closed.
+   *
+   * @param {HTMLDialogElement} $dialog - the dialog that has been closed
+   *
+   * @returns {void}
+   */
+  static #restoreConfigurationListDialog ($dialog) {
+    const shouldRestoreListDialog = $dialog.hasAttribute('data-restore-list-dialog');
+
+    $dialog.removeAttribute('data-restore-list-dialog');
+
+    if (shouldRestoreListDialog) {
+      $listConfigurationDialog.inert = false;
+      $listConfigurationDialog.classList.remove('covered-by-subdialog');
+      void Management.#listConfigurations();
+    }
+  }
+
+  /**
+   * Set up the event listeners for the "rename configuration" dialog.
+   *
+   * @returns {void}
+   */
+  static #setupRenameConfigurationDialog () {
+    const $name = $renameConfigurationDialog.querySelector('#rename-dialog-name');
+    const $submitButton = $renameConfigurationDialog.querySelector('#button-rename-config-ok');
+    const $closeButton = $renameConfigurationDialog.querySelector('#button-rename-config-cancel');
+
+    const updateSubmitButton = () => {
+      if ($name.value && $name.value !== ($renameConfigurationDialog.getAttribute('data-original-name') ?? '')) {
+        $submitButton.removeAttribute('disabled');
+      }
+      else {
+        $submitButton.setAttribute('disabled', 'disabled');
+      }
+    };
+
+    $renameConfigurationDialog.addEventListener('close', () => {
+      $renameConfigurationDialog.removeAttribute('data-idx');
+      $renameConfigurationDialog.removeAttribute('data-original-name');
+      $name.value = '';
+      $submitButton.setAttribute('disabled', 'disabled');
+      Management.#restoreConfigurationListDialog($renameConfigurationDialog);
+    });
+
+    $name.addEventListener('input', updateSubmitButton);
+
+    $closeButton.addEventListener('click', () => {
+      void Management.#closeDialog($renameConfigurationDialog);
+    });
+
+    $submitButton.addEventListener('click', () => {
+      void Management.#renameSelectedConfiguration();
+    });
+
+    window.addEventListener('keydown', e => {
+      if ($renameConfigurationDialog.open && e.key === 'Enter') {
+        e.preventDefault();
+
+        void Management.#renameSelectedConfiguration();
+      }
+    });
+  }
+
+  /**
    * Set up the event listeners for the "delete configuration" confirmation dialog.
    *
    * @returns {void}
@@ -248,17 +329,9 @@ class Management {
     const $closeButton = $deleteConfigurationDialog.querySelector('#button-delete-config-cancel');
 
     $deleteConfigurationDialog.addEventListener('close', () => {
-      const shouldRestoreListDialog = $deleteConfigurationDialog.hasAttribute('data-restore-list-dialog');
-
       $deleteConfigurationDialog.removeAttribute('data-idx');
-      $deleteConfigurationDialog.removeAttribute('data-restore-list-dialog');
       $deleteConfigurationDialog.querySelector('#delete-configuration-dialog-text').textContent = '';
-
-      if (shouldRestoreListDialog) {
-        $listConfigurationDialog.inert = false;
-        $listConfigurationDialog.classList.remove('covered-by-confirmation');
-        void Management.#listConfigurations();
-      }
+      Management.#restoreConfigurationListDialog($deleteConfigurationDialog);
     });
 
     // close the dialog by clicking the cancel button
@@ -368,7 +441,7 @@ class Management {
 
       const $loadIcon = document.createElement('img');
       $loadIcon.src = `/images/${configuration.schema ? 'checkmark' : 'warning'}.svg`;
-      $loadIcon.width = 18;
+      $loadIcon.width = configuration.schema ? 19 : 18;
       $loadIcon.height = 18;
       $loadIcon.alt = '';
       $loadButton.appendChild($loadIcon);
@@ -408,6 +481,24 @@ class Management {
       $exportIcon.alt = '';
       $exportButton.appendChild($exportIcon);
 
+      // rename icon
+      const $renameButton = document.createElement('button');
+      const renameConfigurationLabel = I18n.getMessage('configuration_action_rename', [configuration.name]);
+      $renameButton.setAttribute('type', 'button');
+      $renameButton.setAttribute('title', renameConfigurationLabel);
+      $renameButton.setAttribute('aria-label', renameConfigurationLabel);
+      $renameButton.setAttribute('data-idx', idx.toString());
+      $renameButton.classList.add('icon');
+      $renameButton.addEventListener('click', Management.#renameConfiguration);
+      $iconColumn.appendChild($renameButton);
+
+      const $renameIcon = document.createElement('img');
+      $renameIcon.src = '/images/rename.svg';
+      $renameIcon.width = 18;
+      $renameIcon.height = 15;
+      $renameIcon.alt = '';
+      $renameButton.appendChild($renameIcon);
+
       // delete icon
       const $deleteButton = document.createElement('button');
       const deleteConfigurationLabel = I18n.getMessage('configuration_action_delete', [configuration.name]);
@@ -421,8 +512,8 @@ class Management {
 
       const $deleteIcon = document.createElement('img');
       $deleteIcon.src = '/images/trash.svg';
-      $deleteIcon.width = 18;
-      $deleteIcon.height = 18;
+      $deleteIcon.width = 15;
+      $deleteIcon.height = 17;
       $deleteIcon.alt = '';
       $deleteButton.appendChild($deleteIcon);
     }
@@ -459,6 +550,59 @@ class Management {
   }
 
   /**
+   * Open the dialog for renaming a configuration.
+   *
+   * @param {MouseEvent} e - the mouse event
+   *
+   * @returns {Promise<void>}
+   */
+  static async #renameConfiguration (e) {
+    const idx = Number(e.currentTarget.getAttribute('data-idx'));
+    const { configurations } = await browser.storage.local.get({ configurations: [] });
+    const configuration = configurations[idx];
+
+    if (!configuration) {
+      return;
+    }
+
+    const $name = $renameConfigurationDialog.querySelector('#rename-dialog-name');
+
+    $renameConfigurationDialog.setAttribute('data-idx', idx.toString());
+    $renameConfigurationDialog.setAttribute('data-original-name', configuration.name);
+    $name.value = configuration.name;
+    Management.#showDialogOverConfigurationList($renameConfigurationDialog);
+    $name.focus();
+    $name.select();
+  }
+
+  /**
+   * Rename the selected configuration.
+   *
+   * @returns {Promise<void>}
+   */
+  static async #renameSelectedConfiguration () {
+    const $name = $renameConfigurationDialog.querySelector('#rename-dialog-name');
+
+    if (!$name.value || $name.value === ($renameConfigurationDialog.getAttribute('data-original-name') ?? '')) {
+      return;
+    }
+
+    const { configurations } = await browser.storage.local.get({ configurations: [] });
+    const idx = Number($renameConfigurationDialog.getAttribute('data-idx'));
+
+    if (!configurations[idx]) {
+      void Management.#closeDialog($renameConfigurationDialog);
+
+      return;
+    }
+
+    configurations[idx].name = $name.value;
+    await browser.storage.local.set({ configurations: configurations });
+    await Management.#closeDialog($renameConfigurationDialog);
+    Management.#showStatusPopover(document.getElementById('rename-configuration-popover'));
+  }
+
+  /**
    * Delete the selected configuration.
    *
    * @param {MouseEvent} e - the mouse event
@@ -471,13 +615,8 @@ class Management {
     const configuration = configurations[idx];
 
     $deleteConfigurationDialog.setAttribute('data-idx', idx.toString());
-    $deleteConfigurationDialog.setAttribute('data-restore-list-dialog', '');
     Management.#setDeleteConfigurationDialogText(configuration.name);
-
-    // keep the list dialog open for a stable backdrop but remove it semantically while covered
-    $listConfigurationDialog.classList.add('covered-by-confirmation');
-    $deleteConfigurationDialog.showModal();
-    $listConfigurationDialog.inert = true;
+    Management.#showDialogOverConfigurationList($deleteConfigurationDialog);
   }
 
   /**

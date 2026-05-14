@@ -38,6 +38,9 @@
   "configuration_action_load": {
     "message": "Load configuration $1"
   },
+  "configuration_action_rename": {
+    "message": "Rename configuration $1"
+  },
   "configuration_action_show_incompatible": {
     "message": "Show information about incompatible configuration $1"
   },
@@ -82,6 +85,9 @@
   },
   "configuration_management_headline": {
     "message": "Manage configurations"
+  },
+  "configuration_renamed_success": {
+    "message": "Configuration renamed"
   },
   "configuration_saved_success": {
     "message": "Configuration saved"
@@ -1648,6 +1654,9 @@
   },
   "promo_box_text": {
     "message": "Расширение бесплатное. Ваше добровольное пожертвование позволит мне продолжить интеграцию новых функций и корпоративных политик."
+  },
+  "rename_configuration_dialog_title": {
+    "message": "Rename configuration"
   },
   "requirement_macOS": {
     "message": "Работает только в macOS"
