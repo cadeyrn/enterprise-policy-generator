@@ -303,21 +303,33 @@ class Management {
       $iconColumn.classList.add('actions');
       $row.appendChild($iconColumn);
 
-      // delete icon
-      const $deleteButton = document.createElement('button');
-      $deleteButton.setAttribute('type', 'button');
-      $deleteButton.setAttribute('title', I18n.getMessage('title_delete_configuration'));
-      $deleteButton.setAttribute('data-idx', idx.toString());
-      $deleteButton.classList.add('icon', 'trash-icon');
-      $deleteButton.addEventListener('click', Management.#deleteConfiguration);
-      $iconColumn.appendChild($deleteButton);
+      // load icon
+      const $loadButton = document.createElement('button');
+      $loadButton.setAttribute('type', 'button');
+      $loadButton.setAttribute('title', I18n.getMessage('title_apply_configuration'));
+      $loadButton.setAttribute('data-idx', idx.toString());
+      $loadButton.classList.add('icon');
+      $iconColumn.appendChild($loadButton);
 
-      const $deleteIcon = document.createElement('img');
-      $deleteIcon.src = '/images/trash.svg';
-      $deleteIcon.width = 18;
-      $deleteIcon.height = 18;
-      $deleteIcon.alt = I18n.getMessage('title_delete_configuration');
-      $deleteButton.appendChild($deleteIcon);
+      // configurations saved before EPG 8.0 did not have the schema key and are not compatible
+      if (configuration.schema) {
+        $loadButton.addEventListener('click', Management.#applyConfiguration);
+      }
+      else {
+        $loadButton.addEventListener('click', () => {
+          Management.previousDialog = $listConfigurationDialog;
+          Management.#closeDialog($listConfigurationDialog).then(() => {
+            $incompatibleConfigurationDialog.showModal();
+          });
+        });
+      }
+
+      const $loadIcon = document.createElement('img');
+      $loadIcon.src = `/images/${configuration.schema ? 'checkmark' : 'warning'}.svg`;
+      $loadIcon.width = 18;
+      $loadIcon.height = 18;
+      $loadIcon.alt = I18n.getMessage('title_apply_configuration');
+      $loadButton.appendChild($loadIcon);
 
       // fake export icon (permission not yet granted)
       const $fakeExportButton = document.createElement('button');
@@ -351,33 +363,21 @@ class Management {
       $exportIcon.alt = I18n.getMessage('configuration_export');
       $exportButton.appendChild($exportIcon);
 
-      // load icon
-      const $loadButton = document.createElement('button');
-      $loadButton.setAttribute('type', 'button');
-      $loadButton.setAttribute('title', I18n.getMessage('title_apply_configuration'));
-      $loadButton.setAttribute('data-idx', idx.toString());
-      $loadButton.classList.add('icon');
-      $iconColumn.appendChild($loadButton);
+      // delete icon
+      const $deleteButton = document.createElement('button');
+      $deleteButton.setAttribute('type', 'button');
+      $deleteButton.setAttribute('title', I18n.getMessage('title_delete_configuration'));
+      $deleteButton.setAttribute('data-idx', idx.toString());
+      $deleteButton.classList.add('icon', 'trash-icon');
+      $deleteButton.addEventListener('click', Management.#deleteConfiguration);
+      $iconColumn.appendChild($deleteButton);
 
-      // configurations saved before EPG 8.0 did not have the schema key and are not compatible
-      if (configuration.schema) {
-        $loadButton.addEventListener('click', Management.#applyConfiguration);
-      }
-      else {
-        $loadButton.addEventListener('click', () => {
-          Management.previousDialog = $listConfigurationDialog;
-          Management.#closeDialog($listConfigurationDialog).then(() => {
-            $incompatibleConfigurationDialog.showModal();
-          });
-        });
-      }
-
-      const $loadIcon = document.createElement('img');
-      $loadIcon.src = `/images/${configuration.schema ? 'checkmark' : 'warning'}.svg`;
-      $loadIcon.width = 18;
-      $loadIcon.height = 18;
-      $loadIcon.alt = I18n.getMessage('title_apply_configuration');
-      $loadButton.appendChild($loadIcon);
+      const $deleteIcon = document.createElement('img');
+      $deleteIcon.src = '/images/trash.svg';
+      $deleteIcon.width = 18;
+      $deleteIcon.height = 18;
+      $deleteIcon.alt = I18n.getMessage('title_delete_configuration');
+      $deleteButton.appendChild($deleteIcon);
     }
 
     Management.#testDownloadPermission();
