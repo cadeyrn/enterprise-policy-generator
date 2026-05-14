@@ -305,10 +305,13 @@ class Management {
 
       // load icon
       const $loadButton = document.createElement('button');
-      const applyConfigurationLabel = I18n.getMessage('title_apply_configuration');
+      const loadConfigurationLabel = I18n.getMessage(
+        configuration.schema ? 'configuration_action_load' : 'configuration_action_show_incompatible',
+        [configuration.name]
+      );
       $loadButton.setAttribute('type', 'button');
-      $loadButton.setAttribute('title', applyConfigurationLabel);
-      $loadButton.setAttribute('aria-label', applyConfigurationLabel);
+      $loadButton.setAttribute('title', loadConfigurationLabel);
+      $loadButton.setAttribute('aria-label', loadConfigurationLabel);
       $loadButton.setAttribute('data-idx', idx.toString());
       $loadButton.classList.add('icon');
       $iconColumn.appendChild($loadButton);
@@ -335,7 +338,7 @@ class Management {
 
       // fake export icon (permission not yet granted)
       const $fakeExportButton = document.createElement('button');
-      const exportConfigurationLabel = I18n.getMessage('configuration_export');
+      const exportConfigurationLabel = I18n.getMessage('configuration_action_export', [configuration.name]);
       $fakeExportButton.setAttribute('type', 'button');
       $fakeExportButton.setAttribute('title', exportConfigurationLabel);
       $fakeExportButton.setAttribute('aria-label', exportConfigurationLabel);
@@ -370,7 +373,7 @@ class Management {
 
       // delete icon
       const $deleteButton = document.createElement('button');
-      const deleteConfigurationLabel = I18n.getMessage('title_delete_configuration');
+      const deleteConfigurationLabel = I18n.getMessage('configuration_action_delete', [configuration.name]);
       $deleteButton.setAttribute('type', 'button');
       $deleteButton.setAttribute('title', deleteConfigurationLabel);
       $deleteButton.setAttribute('aria-label', deleteConfigurationLabel);

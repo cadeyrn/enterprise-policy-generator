@@ -29,8 +29,17 @@
   "common_url": {
     "message": "URL"
   },
-  "configuration_export": {
-    "message": "导出配置"
+  "configuration_action_delete": {
+    "message": "Delete configuration $1"
+  },
+  "configuration_action_export": {
+    "message": "Export configuration $1"
+  },
+  "configuration_action_load": {
+    "message": "Load configuration $1"
+  },
+  "configuration_action_show_incompatible": {
+    "message": "Show information about incompatible configuration $1"
   },
   "configuration_import": {
     "message": "导入配置"
@@ -1627,9 +1636,6 @@
   },
   "title_add_item": {
     "message": "Add item"
-  },
-  "title_apply_configuration": {
-    "message": "载入配置"
   },
   "title_delete_configuration": {
     "message": "删除配置"

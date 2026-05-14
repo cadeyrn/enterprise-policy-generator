@@ -29,8 +29,17 @@
   "common_url": {
     "message": "URL"
   },
-  "configuration_export": {
-    "message": "Konfiguration exportieren"
+  "configuration_action_delete": {
+    "message": "Konfiguration $1 löschen"
+  },
+  "configuration_action_export": {
+    "message": "Konfiguration $1 exportieren"
+  },
+  "configuration_action_load": {
+    "message": "Konfiguration $1 laden"
+  },
+  "configuration_action_show_incompatible": {
+    "message": "Informationen zur inkompatiblen Konfiguration $1 anzeigen"
   },
   "configuration_import": {
     "message": "Konfiguration importieren"
@@ -1627,9 +1636,6 @@
   },
   "title_add_item": {
     "message": "Eintrag hinzufügen"
-  },
-  "title_apply_configuration": {
-    "message": "Konfiguration laden"
   },
   "title_delete_configuration": {
     "message": "Konfiguration löschen"

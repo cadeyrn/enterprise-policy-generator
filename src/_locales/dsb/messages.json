@@ -29,8 +29,17 @@
   "common_url": {
     "message": "URL"
   },
-  "configuration_export": {
-    "message": "konfiguraciju eksportěrowaś"
+  "configuration_action_delete": {
+    "message": "Delete configuration $1"
+  },
+  "configuration_action_export": {
+    "message": "Export configuration $1"
+  },
+  "configuration_action_load": {
+    "message": "Load configuration $1"
+  },
+  "configuration_action_show_incompatible": {
+    "message": "Show information about incompatible configuration $1"
   },
   "configuration_import": {
     "message": "konfiguraciju importěrowaś"
@@ -1627,9 +1636,6 @@
   },
   "title_add_item": {
     "message": "Zapisk ćidać"
-  },
-  "title_apply_configuration": {
-    "message": "Konfiguaraciju zacytaś"
   },
   "title_delete_configuration": {
     "message": "Konfiguraciju wótwónoźeś"

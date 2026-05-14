@@ -29,8 +29,17 @@
   "common_url": {
     "message": "URL"
   },
-  "configuration_export": {
-    "message": "Экспорт конфигурации"
+  "configuration_action_delete": {
+    "message": "Delete configuration $1"
+  },
+  "configuration_action_export": {
+    "message": "Export configuration $1"
+  },
+  "configuration_action_load": {
+    "message": "Load configuration $1"
+  },
+  "configuration_action_show_incompatible": {
+    "message": "Show information about incompatible configuration $1"
   },
   "configuration_import": {
     "message": "Импорт конфигурации"
@@ -1627,9 +1636,6 @@
   },
   "title_add_item": {
     "message": "Добавить элемент"
-  },
-  "title_apply_configuration": {
-    "message": "Загрузить конфигурацию"
   },
   "title_delete_configuration": {
     "message": "Удалить конфигурацию"
