@@ -1411,9 +1411,9 @@ dialog {
   }
 
   .secondary-action {
-    border-color: rgba(215, 0, 34, .22);
+    border-color: rgba(5, 116, 228, .28);
     background-color: var(--color-white);
-    color: var(--color-red);
+    color: var(--color-dark-border);
 
     &[disabled] {
       color: var(--color-muted);
@@ -1424,26 +1424,42 @@ dialog {
     }
 
     &::before {
+      background: var(--color-blue-translucent);
+    }
+
+    > span {
+      color: inherit;
+    }
+
+    > span[aria-hidden='true'] {
+      display: none;
+    }
+
+    &:hover {
+      border-color: rgba(5, 116, 228, .42);
+      color: var(--color-dark-border);
+    }
+
+    &:focus {
+      outline-color: var(--focus-ring-color);
+    }
+  }
+
+  .destructive-action {
+    border-color: var(--color-red);
+    background-color: var(--color-red);
+
+    &::before {
       background: var(--color-red-dark);
     }
 
     > span {
-      color: var(--color-red);
-    }
-
-    > span[aria-hidden='true'] {
       color: var(--color-white);
-      clip-path: inset(0 100% 0 0);
-      transition: clip-path 350ms ease-in-out;
     }
 
     &:hover {
-      border-color: rgba(215, 0, 34, .32);
-      color: var(--color-red);
-
-      > span[aria-hidden='true'] {
-        clip-path: inset(0);
-      }
+      border-color: var(--color-red-dark);
+      color: var(--color-white);
     }
 
     &:focus {
@@ -1759,19 +1775,18 @@ dialog.output-fullscreen-dialog {
       margin-right: 12px;
       padding: 7px 12px;
       font: inherit;
-      border: 1px solid var(--color-accent-border);
+      border: 1px solid rgba(5, 116, 228, .28);
       border-radius: var(--border-radius-pill);
       background-color: var(--color-white);
-      color: var(--color-blue);
+      color: var(--color-dark-border);
       font-weight: 500;
       cursor: pointer;
-      transition: border-color ease 220ms, background-color ease 220ms, color ease 220ms;
+      transition: border-color 350ms ease-in-out, background-color 350ms ease-in-out;
     }
 
     &:hover::file-selector-button {
-      border-color: var(--color-blue);
+      border-color: rgba(5, 116, 228, .42);
       background-color: var(--color-blue-translucent);
-      color: var(--color-blue-dark);
     }
   }
 }
