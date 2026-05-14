@@ -12,6 +12,8 @@
   [#387](https://github.com/cadeyrn/enterprise-policy-generator/issues/387)
 - Added a fullscreen mode for the policies.json output, see
   [#389](https://github.com/cadeyrn/enterprise-policy-generator/issues/389)
+- A confirmation dialog now appears when deleting saved configurations, see
+  [#390](https://github.com/cadeyrn/enterprise-policy-generator/issues/390)
 
 #### Enterprise Policies
 

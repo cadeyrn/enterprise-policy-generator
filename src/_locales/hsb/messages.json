@@ -1595,6 +1595,12 @@
   "promo_box_text": {
     "message": "Rozšěrjenje je darmotne. Waš dobrowólny dar zmóžnja, integraciju nowych funkcijow a předewzaćelskich směrnicow dale wjesć."
   },
+  "remove_configuration_dialog_intro": {
+    "message": "Are you sure you want to remove the configuration $1?"
+  },
+  "remove_configuration_dialog_title": {
+    "message": "Remove configuration?"
+  },
   "requirement_macOS": {
     "message": "funguje jenož na macOS"
   },

@@ -1595,6 +1595,12 @@
   "promo_box_text": {
     "message": "Die Erweiterung ist kostenlos. Ihre freiwillige Spende ermöglicht es, die Integration neuer Funktionen und Unternehmensrichtlinien fortzuführen."
   },
+  "remove_configuration_dialog_intro": {
+    "message": "Soll die Konfiguration $1 wirklich gelöscht werden?"
+  },
+  "remove_configuration_dialog_title": {
+    "message": "Konfiguration entfernen?"
+  },
   "requirement_macOS": {
     "message": "Funktioniert nur auf macOS"
   },

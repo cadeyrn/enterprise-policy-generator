@@ -1257,6 +1257,12 @@ dialog {
     opacity: 0;
   }
 
+  &.covered-by-confirmation:open {
+    opacity: 0;
+    pointer-events: none;
+    transition: none;
+  }
+
   &::backdrop {
     background-color: rgba(33, 37, 42, .62);
     transition:
@@ -1271,6 +1277,11 @@ dialog {
 
   &.closing::backdrop {
     background-color: rgba(33, 37, 42, 0);
+  }
+
+  &[data-restore-list-dialog]::backdrop {
+    background-color: transparent;
+    transition: none;
   }
 
   header {

@@ -12,6 +12,7 @@ const $incompatibleConfigurationDialog = document.getElementById('incompatible-c
 const $listConfigurationsButton = document.getElementById('list-configurations');
 const $listConfigurationDialog = document.getElementById('configuration-list-dialog');
 const $noSavedConfigurations = document.getElementById('no-saved-configurations');
+const $removeConfigurationDialog = document.getElementById('remove-configuration-dialog');
 const $saveConfigurationButton = document.getElementById('save-configuration');
 const $saveConfigurationDialog = document.getElementById('save-configuration-dialog');
 
@@ -32,6 +33,7 @@ class Management {
     Management.#setupDialogAnimations();
     Management.#setupSaveConfigurationDialog();
     Management.#setupListConfigurationsDialog();
+    Management.#setupRemoveConfigurationDialog();
     Management.#setupImportConfigurationDialog();
     Management.#setupIncompatibleConfigurationDialog();
 
@@ -200,6 +202,58 @@ class Management {
   }
 
   /**
+   * Set up the event listeners for the "remove configuration" confirmation dialog.
+   *
+   * @returns {void}
+   */
+  static #setupRemoveConfigurationDialog () {
+    const $submitButton = $removeConfigurationDialog.querySelector('#button-remove-config-ok');
+    const $closeButton = $removeConfigurationDialog.querySelector('#button-remove-config-cancel');
+
+    $removeConfigurationDialog.addEventListener('close', () => {
+      const shouldRestoreListDialog = $removeConfigurationDialog.hasAttribute('data-restore-list-dialog');
+
+      $removeConfigurationDialog.removeAttribute('data-idx');
+      $removeConfigurationDialog.removeAttribute('data-restore-list-dialog');
+      $removeConfigurationDialog.querySelector('#remove-configuration-dialog-text').textContent = '';
+
+      if (shouldRestoreListDialog) {
+        $listConfigurationDialog.classList.remove('covered-by-confirmation');
+        Management.#listConfigurations();
+      }
+    });
+
+    // close the dialog by clicking the cancel button
+    $closeButton.addEventListener('click', () => {
+      void Management.#closeDialog($removeConfigurationDialog);
+    });
+
+    $submitButton.addEventListener('click', () => {
+      void Management.#removeConfirmedConfiguration();
+    });
+  }
+
+  /**
+   * Set the remove confirmation text and highlight the configuration name.
+   *
+   * @param {string} configurationName - the name of the configuration
+   *
+   * @returns {void}
+   */
+  static #setRemoveConfigurationDialogText (configurationName) {
+    const $text = $removeConfigurationDialog.querySelector('#remove-configuration-dialog-text');
+    const placeholder = '__CONFIGURATION_NAME__';
+    const [messageStart, messageEnd] = I18n.getMessage(
+      'remove_configuration_dialog_intro',
+      [placeholder]
+    ).split(placeholder);
+    const $configurationName = document.createElement('strong');
+
+    $configurationName.textContent = configurationName;
+    $text.replaceChildren(messageStart, $configurationName, messageEnd);
+  }
+
+  /**
    * List the saved configurations.
    *
    * @returns {void}
@@ -362,10 +416,35 @@ class Management {
    * @returns {void}
    */
   static async #removeConfiguration (e) {
+    const idx = Number(e.currentTarget.getAttribute('data-idx'));
     const { configurations } = await browser.storage.local.get({ configurations: [] });
-    configurations.splice(e.target.getAttribute('data-idx'), 1);
+    const configuration = configurations[idx];
+
+    $removeConfigurationDialog.setAttribute('data-idx', idx.toString());
+    $removeConfigurationDialog.setAttribute('data-restore-list-dialog', '');
+    Management.#setRemoveConfigurationDialogText(configuration.name);
+    $listConfigurationDialog.classList.add('covered-by-confirmation');
+    $removeConfigurationDialog.showModal();
+  }
+
+  /**
+   * Remove the selected configuration after the confirmation dialog has been accepted.
+   *
+   * @returns {void}
+   */
+  static async #removeConfirmedConfiguration () {
+    const { configurations } = await browser.storage.local.get({ configurations: [] });
+    const idx = Number($removeConfigurationDialog.getAttribute('data-idx'));
+
+    if (!configurations[idx]) {
+      void Management.#closeDialog($removeConfigurationDialog);
+
+      return;
+    }
+
+    configurations.splice(idx, 1);
     await browser.storage.local.set({ configurations: configurations });
-    Management.#listConfigurations();
+    void Management.#closeDialog($removeConfigurationDialog);
   }
 
   /**
