@@ -15,6 +15,11 @@
 - A confirmation dialog now appears when deleting saved configurations, see
   [#390](https://github.com/cadeyrn/enterprise-policy-generator/issues/390)
 
+#### Bugfixes
+
+- A potential error that occurred when entering text in the filter field has been fixed, see
+  [#395](https://github.com/cadeyrn/enterprise-policy-generator/issues/395)
+
 #### Enterprise Policies
 
 The `DefaultDownloadDirectory` and `DownloadDirectory` policies exclude each other now, see

@@ -1505,7 +1505,8 @@ class Configurator {
    * @returns {void}
    */
   static #applySearchFieldFilter ($filter) {
-    const matcher = new RegExp($filter.value, 'i');
+    const filterValue = $filter.value.toLocaleLowerCase();
+    const matchesFilter = text => text.toLocaleLowerCase().includes(filterValue);
 
     document.querySelectorAll('.policy-container').forEach($policy => {
       $policy.querySelectorAll(':scope > label').forEach($label => {
@@ -1513,7 +1514,7 @@ class Configurator {
         let hasMatch = false;
 
         // top level matches
-        if (matcher.test(name) || matcher.test($label.textContent)) {
+        if (matchesFilter(name) || matchesFilter($label.textContent)) {
           hasMatch = true;
         }
         // search through the options
@@ -1522,7 +1523,7 @@ class Configurator {
             const name = $el.getAttribute('data-name');
             const $label = $policy.querySelector(`[for="${$el.id}"]`);
 
-            if (matcher.test(name) || matcher.test($label?.textContent)) {
+            if (matchesFilter(name) || ($label && matchesFilter($label.textContent))) {
               hasMatch = true;
             }
           });
