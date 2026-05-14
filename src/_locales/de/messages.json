@@ -155,6 +155,12 @@
   "non_allowed_preference_label": {
     "message": "Einstellungsname nicht erlaubt"
   },
+  "output_fullscreen_close": {
+    "message": "Vollbildansicht schließen"
+  },
+  "output_fullscreen_open": {
+    "message": "Vollbildansicht öffnen"
+  },
   "output_headline": {
     "message": "Richtlinien-Ausgabe"
   },

@@ -10,6 +10,8 @@
   enjoyable experience, see [#388](https://github.com/cadeyrn/enterprise-policy-generator/issues/388)
 - After copying the generated policies.json output to the clipboard, a confirmation popover will now appear, see
   [#387](https://github.com/cadeyrn/enterprise-policy-generator/issues/387)
+- Added a fullscreen mode for the policies.json output, see
+  [#389](https://github.com/cadeyrn/enterprise-policy-generator/issues/389)
 
 #### Enterprise Policies
 

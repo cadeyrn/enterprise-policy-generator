@@ -155,6 +155,12 @@
   "non_allowed_preference_label": {
     "message": "Название параметра не разрешено"
   },
+  "output_fullscreen_close": {
+    "message": "Close fullscreen view"
+  },
+  "output_fullscreen_open": {
+    "message": "Open fullscreen view"
+  },
   "output_headline": {
     "message": "Policies output"
   },

@@ -44,7 +44,21 @@
             <div class="output-action">
               <button type="button" id="generate" class="button" data-i18n="generate_button" aria-keyshortcuts="Shift+G"></button>
             </div>
-            <pre id="policy-output-wrapper"><code id="policy-output"></code><span class="output-placeholder" data-i18n="output_placeholder"></span></pre>
+            <div class="policy-output-container">
+              <pre id="policy-output-wrapper" class="policy-output-code"><code id="policy-output"></code><span class="output-placeholder" data-i18n="output_placeholder"></span></pre>
+              <button type="button" id="show-policy-output-fullscreen" class="output-fullscreen-button" data-i18n-title="output_fullscreen_open" aria-controls="policy-output-fullscreen-dialog">
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M4.5 8V4.5H8"></path>
+                  <path d="M4.5 4.5 8.5 8.5"></path>
+                  <path d="M12 4.5h3.5V8"></path>
+                  <path d="M15.5 4.5l-4 4"></path>
+                  <path d="M8 15.5H4.5V12"></path>
+                  <path d="M4.5 15.5l4-4"></path>
+                  <path d="M15.5 12v3.5H12"></path>
+                  <path d="M15.5 15.5l-4-4"></path>
+                </svg>
+              </button>
+            </div>
             <div id="action-links" class="action-links hidden">
               <button type="button" id="copy-to-clipboard">
                 <img src="../images/clipboard.svg" width="20" height="20" alt="">
@@ -106,6 +120,26 @@
         </a>
       </footer>
     </div>
+    <dialog id="policy-output-fullscreen-dialog" class="output-fullscreen-dialog" aria-labelledby="policy-output-fullscreen-title">
+      <header>
+        <div id="policy-output-fullscreen-title" data-i18n="output_headline"></div>
+        <div class="output-fullscreen-actions">
+          <button type="button" id="copy-to-clipboard-fullscreen" class="output-fullscreen-copy" data-i18n-title="link_copy_to_clipboard">
+            <img src="../images/clipboard.svg" width="20" height="20" alt="">
+          </button>
+          <button type="button" id="close-policy-output-fullscreen" class="output-fullscreen-close" data-i18n-title="output_fullscreen_close">
+            <span class="visually-hidden" data-i18n="output_fullscreen_close"></span>
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path d="m5 5 10 10"></path>
+              <path d="m15 5-10 10"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <div class="content">
+        <pre id="policy-output-fullscreen-wrapper" class="policy-output-code"><code id="policy-output-fullscreen"></code></pre>
+      </div>
+    </dialog>
     <dialog id="save-configuration-dialog" aria-labelledby="save-configuration-dialog-header">
       <header id="save-configuration-dialog-header">
         <div data-i18n="save_dialog_window_title"></div>

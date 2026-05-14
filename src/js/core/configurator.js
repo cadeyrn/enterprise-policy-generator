@@ -17,6 +17,13 @@ const $generatorForm = document.getElementById('generator-form');
 const $grantDownloadPermissionLink = document.getElementById('grant-download-permission');
 const $policyGeneratorButton = document.getElementById('generate');
 const $policyOutput = document.getElementById('policy-output');
+const $policyOutputFullscreenButton = document.getElementById('show-policy-output-fullscreen');
+const $policyOutputFullscreenCloseButton = document.getElementById('close-policy-output-fullscreen');
+const $policyOutputFullscreenCopyButton = document.getElementById('copy-to-clipboard-fullscreen');
+const $policyOutputFullscreenDialog = document.getElementById('policy-output-fullscreen-dialog');
+const $policyOutputFullscreen = document.getElementById('policy-output-fullscreen');
+const $policyOutputFullscreenWrapper = document.getElementById('policy-output-fullscreen-wrapper');
+const $policyOutputWrapper = document.getElementById('policy-output-wrapper');
 const $copyToClipboardButton = document.getElementById('copy-to-clipboard');
 const $copyToClipboardPopover = document.getElementById('copy-to-clipboard-popover');
 
@@ -59,6 +66,37 @@ class Configurator {
     const json = await resource.json();
     const { policies, preferences, presets, tags } = json;
     let copyToClipboardPopoverTimeout = null;
+
+    const copyPolicyOutputToClipboard = async $source => {
+      try {
+        await navigator.clipboard.writeText($source.innerText);
+      }
+      catch {
+        // select output as fallback action
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents($source);
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        return;
+      }
+
+      if ($copyToClipboardPopover.matches(':popover-open')) {
+        $copyToClipboardPopover.hidePopover();
+      }
+
+      $copyToClipboardPopover.showPopover();
+
+      if (copyToClipboardPopoverTimeout) {
+        window.clearTimeout(copyToClipboardPopoverTimeout);
+      }
+
+      copyToClipboardPopoverTimeout = window.setTimeout(() => {
+        $copyToClipboardPopover.hidePopover();
+        copyToClipboardPopoverTimeout = null;
+      }, POPOVER_DURATION_IN_MS);
+    };
 
     Configurator.#allowedPreferences = preferences.allowed;
     Configurator.#disallowedPreferences = preferences.disallowed;
@@ -132,7 +170,8 @@ class Configurator {
     // only supported in Firefox 148+
     if (!('Sanitizer' in window)) {
       // remove the gap for the line numbers if syntax highlighting is disabled
-      $policyOutput.parentElement.classList.add('no-syntax-highlighting');
+      $policyOutputWrapper.classList.add('no-syntax-highlighting');
+      $policyOutputFullscreenWrapper.classList.add('no-syntax-highlighting');
     }
 
     // add the event listener for the "generate policies" button
@@ -156,34 +195,36 @@ class Configurator {
       }
     });
 
+    // show policies.json output in a fullscreen overlay
+    $policyOutputFullscreenButton.addEventListener('click', () => {
+      // clone the rendered output so syntax highlighting stays exactly as shown in the regular code field
+      const $outputNodes = Array.from($policyOutput.childNodes).map(
+        $node => $node.cloneNode(true)
+      );
+      const lineNumberWidth = getComputedStyle($policyOutputWrapper)
+        .getPropertyValue('--line-number-width');
+
+      $policyOutputFullscreen.replaceChildren(...$outputNodes);
+      $policyOutputFullscreenWrapper.style.setProperty('--line-number-width', lineNumberWidth);
+      $policyOutputFullscreenDialog.showModal();
+    });
+
+    // close the fullscreen output dialog via the same cancel path as pressing Escape
+    $policyOutputFullscreenCloseButton.addEventListener('click', () => {
+      const cancelEvent = new Event('cancel', { cancelable: true });
+
+      if ($policyOutputFullscreenDialog.dispatchEvent(cancelEvent)) {
+        $policyOutputFullscreenDialog.close();
+      }
+    });
+
     // copy policies.json output to clipboard
-    $copyToClipboardButton.addEventListener('click', async () => {
-      try {
-        await navigator.clipboard.writeText($policyOutput.innerText);
+    $copyToClipboardButton.addEventListener('click', () => {
+      void copyPolicyOutputToClipboard($policyOutput);
+    });
 
-        if ($copyToClipboardPopover.matches(':popover-open')) {
-          $copyToClipboardPopover.hidePopover();
-        }
-
-        $copyToClipboardPopover.showPopover();
-
-        if (copyToClipboardPopoverTimeout) {
-          window.clearTimeout(copyToClipboardPopoverTimeout);
-        }
-
-        copyToClipboardPopoverTimeout = window.setTimeout(() => {
-          $copyToClipboardPopover.hidePopover();
-          copyToClipboardPopoverTimeout = null;
-        }, POPOVER_DURATION_IN_MS);
-      }
-      catch {
-        // select output as fallback action
-        const selection = window.getSelection();
-        const range = document.createRange();
-        range.selectNodeContents($policyOutput);
-        selection.removeAllRanges();
-        selection.addRange(range);
-      }
+    $policyOutputFullscreenCopyButton.addEventListener('click', () => {
+      void copyPolicyOutputToClipboard($policyOutputFullscreen);
     });
 
     // add the event listener for the "download policies.json" button if downloads permission is not granted
