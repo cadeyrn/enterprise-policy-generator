@@ -59,6 +59,12 @@
   "copy_to_clipboard_success": {
     "message": "Code copied to clipboard"
   },
+  "delete_configuration_dialog_intro": {
+    "message": "Are you sure you want to delete the configuration $1?"
+  },
+  "delete_configuration_dialog_title": {
+    "message": "Delete configuration?"
+  },
   "enum_value_block_no": {
     "message": "Не блокировать"
   },
@@ -1595,12 +1601,6 @@
   "promo_box_text": {
     "message": "Расширение бесплатное. Ваше добровольное пожертвование позволит мне продолжить интеграцию новых функций и корпоративных политик."
   },
-  "remove_configuration_dialog_intro": {
-    "message": "Are you sure you want to remove the configuration $1?"
-  },
-  "remove_configuration_dialog_title": {
-    "message": "Remove configuration?"
-  },
   "requirement_macOS": {
     "message": "Работает только в macOS"
   },
@@ -1625,11 +1625,11 @@
   "title_apply_configuration": {
     "message": "Загрузить конфигурацию"
   },
+  "title_delete_configuration": {
+    "message": "Удалить конфигурацию"
+  },
   "title_move_item": {
     "message": "Переместить элемент"
-  },
-  "title_remove_configuration": {
-    "message": "Удалить конфигурацию"
   },
   "title_remove_item": {
     "message": "Удалить элемент"

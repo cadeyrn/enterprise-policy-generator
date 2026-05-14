@@ -59,6 +59,12 @@
   "copy_to_clipboard_success": {
     "message": "Code copied to clipboard"
   },
+  "delete_configuration_dialog_intro": {
+    "message": "Are you sure you want to delete the configuration $1?"
+  },
+  "delete_configuration_dialog_title": {
+    "message": "Delete configuration?"
+  },
   "enum_value_block_no": {
     "message": "不屏蔽"
   },
@@ -1595,12 +1601,6 @@
   "promo_box_text": {
     "message": "The extension is free of charge. Your voluntary donation enables me to continue integrating new features and enterprise policies."
   },
-  "remove_configuration_dialog_intro": {
-    "message": "Are you sure you want to remove the configuration $1?"
-  },
-  "remove_configuration_dialog_title": {
-    "message": "Remove configuration?"
-  },
   "requirement_macOS": {
     "message": "Works only on macOS"
   },
@@ -1625,11 +1625,11 @@
   "title_apply_configuration": {
     "message": "载入配置"
   },
+  "title_delete_configuration": {
+    "message": "删除配置"
+  },
   "title_move_item": {
     "message": "Move item"
-  },
-  "title_remove_configuration": {
-    "message": "移除配置"
   },
   "title_remove_item": {
     "message": "Remove item"

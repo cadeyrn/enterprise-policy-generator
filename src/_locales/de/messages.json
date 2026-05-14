@@ -59,6 +59,12 @@
   "copy_to_clipboard_success": {
     "message": "Code wurde in die Zwischenablage kopiert"
   },
+  "delete_configuration_dialog_intro": {
+    "message": "Soll die Konfiguration $1 wirklich gelöscht werden?"
+  },
+  "delete_configuration_dialog_title": {
+    "message": "Konfiguration löschen?"
+  },
   "enum_value_block_no": {
     "message": "Nicht blockieren"
   },
@@ -1595,12 +1601,6 @@
   "promo_box_text": {
     "message": "Die Erweiterung ist kostenlos. Ihre freiwillige Spende ermöglicht es, die Integration neuer Funktionen und Unternehmensrichtlinien fortzuführen."
   },
-  "remove_configuration_dialog_intro": {
-    "message": "Soll die Konfiguration $1 wirklich gelöscht werden?"
-  },
-  "remove_configuration_dialog_title": {
-    "message": "Konfiguration entfernen?"
-  },
   "requirement_macOS": {
     "message": "Funktioniert nur auf macOS"
   },
@@ -1625,11 +1625,11 @@
   "title_apply_configuration": {
     "message": "Konfiguration laden"
   },
+  "title_delete_configuration": {
+    "message": "Konfiguration löschen"
+  },
   "title_move_item": {
     "message": "Eintrag verschieben"
-  },
-  "title_remove_configuration": {
-    "message": "Konfiguration entfernen"
   },
   "title_remove_item": {
     "message": "Eintrag entfernen"

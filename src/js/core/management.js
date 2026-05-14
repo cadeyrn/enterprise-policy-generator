@@ -12,7 +12,7 @@ const $incompatibleConfigurationDialog = document.getElementById('incompatible-c
 const $listConfigurationsButton = document.getElementById('list-configurations');
 const $listConfigurationDialog = document.getElementById('configuration-list-dialog');
 const $noSavedConfigurations = document.getElementById('no-saved-configurations');
-const $removeConfigurationDialog = document.getElementById('remove-configuration-dialog');
+const $deleteConfigurationDialog = document.getElementById('delete-configuration-dialog');
 const $saveConfigurationButton = document.getElementById('save-configuration');
 const $saveConfigurationDialog = document.getElementById('save-configuration-dialog');
 
@@ -33,7 +33,7 @@ class Management {
     Management.#setupDialogAnimations();
     Management.#setupSaveConfigurationDialog();
     Management.#setupListConfigurationsDialog();
-    Management.#setupRemoveConfigurationDialog();
+    Management.#setupDeleteConfigurationDialog();
     Management.#setupImportConfigurationDialog();
     Management.#setupIncompatibleConfigurationDialog();
 
@@ -202,20 +202,20 @@ class Management {
   }
 
   /**
-   * Set up the event listeners for the "remove configuration" confirmation dialog.
+   * Set up the event listeners for the "delete configuration" confirmation dialog.
    *
    * @returns {void}
    */
-  static #setupRemoveConfigurationDialog () {
-    const $submitButton = $removeConfigurationDialog.querySelector('#button-remove-config-ok');
-    const $closeButton = $removeConfigurationDialog.querySelector('#button-remove-config-cancel');
+  static #setupDeleteConfigurationDialog () {
+    const $submitButton = $deleteConfigurationDialog.querySelector('#button-delete-config-ok');
+    const $closeButton = $deleteConfigurationDialog.querySelector('#button-delete-config-cancel');
 
-    $removeConfigurationDialog.addEventListener('close', () => {
-      const shouldRestoreListDialog = $removeConfigurationDialog.hasAttribute('data-restore-list-dialog');
+    $deleteConfigurationDialog.addEventListener('close', () => {
+      const shouldRestoreListDialog = $deleteConfigurationDialog.hasAttribute('data-restore-list-dialog');
 
-      $removeConfigurationDialog.removeAttribute('data-idx');
-      $removeConfigurationDialog.removeAttribute('data-restore-list-dialog');
-      $removeConfigurationDialog.querySelector('#remove-configuration-dialog-text').textContent = '';
+      $deleteConfigurationDialog.removeAttribute('data-idx');
+      $deleteConfigurationDialog.removeAttribute('data-restore-list-dialog');
+      $deleteConfigurationDialog.querySelector('#delete-configuration-dialog-text').textContent = '';
 
       if (shouldRestoreListDialog) {
         $listConfigurationDialog.classList.remove('covered-by-confirmation');
@@ -225,26 +225,26 @@ class Management {
 
     // close the dialog by clicking the cancel button
     $closeButton.addEventListener('click', () => {
-      void Management.#closeDialog($removeConfigurationDialog);
+      void Management.#closeDialog($deleteConfigurationDialog);
     });
 
     $submitButton.addEventListener('click', () => {
-      void Management.#removeConfirmedConfiguration();
+      void Management.#deleteConfirmedConfiguration();
     });
   }
 
   /**
-   * Set the remove confirmation text and highlight the configuration name.
+   * Set the delete confirmation text and highlight the configuration name.
    *
    * @param {string} configurationName - the name of the configuration
    *
    * @returns {void}
    */
-  static #setRemoveConfigurationDialogText (configurationName) {
-    const $text = $removeConfigurationDialog.querySelector('#remove-configuration-dialog-text');
+  static #setDeleteConfigurationDialogText (configurationName) {
+    const $text = $deleteConfigurationDialog.querySelector('#delete-configuration-dialog-text');
     const placeholder = '__CONFIGURATION_NAME__';
     const [messageStart, messageEnd] = I18n.getMessage(
-      'remove_configuration_dialog_intro',
+      'delete_configuration_dialog_intro',
       [placeholder]
     ).split(placeholder);
     const $configurationName = document.createElement('strong');
@@ -302,21 +302,21 @@ class Management {
       $iconColumn.classList.add('actions');
       $row.appendChild($iconColumn);
 
-      // remove icon
-      const $removeButton = document.createElement('button');
-      $removeButton.setAttribute('type', 'button');
-      $removeButton.setAttribute('title', I18n.getMessage('title_remove_configuration'));
-      $removeButton.setAttribute('data-idx', idx.toString());
-      $removeButton.classList.add('icon', 'trash-icon');
-      $removeButton.addEventListener('click', Management.#removeConfiguration);
-      $iconColumn.appendChild($removeButton);
+      // delete icon
+      const $deleteButton = document.createElement('button');
+      $deleteButton.setAttribute('type', 'button');
+      $deleteButton.setAttribute('title', I18n.getMessage('title_delete_configuration'));
+      $deleteButton.setAttribute('data-idx', idx.toString());
+      $deleteButton.classList.add('icon', 'trash-icon');
+      $deleteButton.addEventListener('click', Management.#deleteConfiguration);
+      $iconColumn.appendChild($deleteButton);
 
-      const $removeIcon = document.createElement('img');
-      $removeIcon.src = '/images/trash.svg';
-      $removeIcon.width = 18;
-      $removeIcon.height = 18;
-      $removeIcon.alt = I18n.getMessage('title_remove_configuration');
-      $removeButton.appendChild($removeIcon);
+      const $deleteIcon = document.createElement('img');
+      $deleteIcon.src = '/images/trash.svg';
+      $deleteIcon.width = 18;
+      $deleteIcon.height = 18;
+      $deleteIcon.alt = I18n.getMessage('title_delete_configuration');
+      $deleteButton.appendChild($deleteIcon);
 
       // fake export icon (permission not yet granted)
       const $fakeExportButton = document.createElement('button');
@@ -409,42 +409,42 @@ class Management {
   }
 
   /**
-   * Remove the selected configuration.
+   * Delete the selected configuration.
    *
    * @param {MouseEvent} e - the mouse event
    *
    * @returns {void}
    */
-  static async #removeConfiguration (e) {
+  static async #deleteConfiguration (e) {
     const idx = Number(e.currentTarget.getAttribute('data-idx'));
     const { configurations } = await browser.storage.local.get({ configurations: [] });
     const configuration = configurations[idx];
 
-    $removeConfigurationDialog.setAttribute('data-idx', idx.toString());
-    $removeConfigurationDialog.setAttribute('data-restore-list-dialog', '');
-    Management.#setRemoveConfigurationDialogText(configuration.name);
+    $deleteConfigurationDialog.setAttribute('data-idx', idx.toString());
+    $deleteConfigurationDialog.setAttribute('data-restore-list-dialog', '');
+    Management.#setDeleteConfigurationDialogText(configuration.name);
     $listConfigurationDialog.classList.add('covered-by-confirmation');
-    $removeConfigurationDialog.showModal();
+    $deleteConfigurationDialog.showModal();
   }
 
   /**
-   * Remove the selected configuration after the confirmation dialog has been accepted.
+   * Delete the selected configuration after the confirmation dialog has been accepted.
    *
    * @returns {void}
    */
-  static async #removeConfirmedConfiguration () {
+  static async #deleteConfirmedConfiguration () {
     const { configurations } = await browser.storage.local.get({ configurations: [] });
-    const idx = Number($removeConfigurationDialog.getAttribute('data-idx'));
+    const idx = Number($deleteConfigurationDialog.getAttribute('data-idx'));
 
     if (!configurations[idx]) {
-      void Management.#closeDialog($removeConfigurationDialog);
+      void Management.#closeDialog($deleteConfigurationDialog);
 
       return;
     }
 
     configurations.splice(idx, 1);
     await browser.storage.local.set({ configurations: configurations });
-    void Management.#closeDialog($removeConfigurationDialog);
+    void Management.#closeDialog($deleteConfigurationDialog);
   }
 
   /**

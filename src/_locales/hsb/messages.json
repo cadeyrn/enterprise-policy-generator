@@ -59,6 +59,12 @@
   "copy_to_clipboard_success": {
     "message": "Code copied to clipboard"
   },
+  "delete_configuration_dialog_intro": {
+    "message": "Are you sure you want to delete the configuration $1?"
+  },
+  "delete_configuration_dialog_title": {
+    "message": "Delete configuration?"
+  },
   "enum_value_block_no": {
     "message": "njeblokować"
   },
@@ -1595,12 +1601,6 @@
   "promo_box_text": {
     "message": "Rozšěrjenje je darmotne. Waš dobrowólny dar zmóžnja, integraciju nowych funkcijow a předewzaćelskich směrnicow dale wjesć."
   },
-  "remove_configuration_dialog_intro": {
-    "message": "Are you sure you want to remove the configuration $1?"
-  },
-  "remove_configuration_dialog_title": {
-    "message": "Remove configuration?"
-  },
   "requirement_macOS": {
     "message": "funguje jenož na macOS"
   },
@@ -1625,11 +1625,11 @@
   "title_apply_configuration": {
     "message": "Konfiguaraciju začitać"
   },
+  "title_delete_configuration": {
+    "message": "Konfiguraciju wotstronić"
+  },
   "title_move_item": {
     "message": "Zapisk přesunyć"
-  },
-  "title_remove_configuration": {
-    "message": "Konfiguraciju wotstronić"
   },
   "title_remove_item": {
     "message": "Zapisk wotstronić"
