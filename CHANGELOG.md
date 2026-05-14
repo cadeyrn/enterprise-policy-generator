@@ -6,9 +6,15 @@
 
 #### Enhancements
 
-- New and modern design, see [#388](https://github.com/cadeyrn/enterprise-policy-generator/issues/388)
+- A completely new design that is significantly more modern and makes using the Enterprise Policy Generator a more
+  enjoyable experience, see [#388](https://github.com/cadeyrn/enterprise-policy-generator/issues/388)
 - After copying the generated policies.json output to the clipboard, a confirmation popover will now appear, see
   [#387](https://github.com/cadeyrn/enterprise-policy-generator/issues/387)
+
+#### Enterprise Policies
+
+The `DefaultDownloadDirectory` and `DownloadDirectory` policies exclude each other now, see
+[#391](https://github.com/cadeyrn/enterprise-policy-generator/issues/391)
 
 #### Dependencies
 
