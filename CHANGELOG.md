@@ -28,7 +28,7 @@
 
 - The `DefaultDownloadDirectory` and `DownloadDirectory` policies exclude each other now, see
 [#391](https://github.com/cadeyrn/enterprise-policy-generator/issues/391)
-- Because the DisabledCiphers policy has so many options, they have been grouped by security characteristics, see
+- Because the `DisabledCiphers` policy has so many options, they have been grouped by security characteristics, see
   [#397](https://github.com/cadeyrn/enterprise-policy-generator/issues/397)
 
 #### Dependencies
