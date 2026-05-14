@@ -403,7 +403,7 @@ class Management {
 
       const $exportIcon = document.createElement('img');
       $exportIcon.src = '/images/export.svg';
-      $exportIcon.width = 18;
+      $exportIcon.width = 20;
       $exportIcon.height = 18;
       $exportIcon.alt = '';
       $exportButton.appendChild($exportIcon);

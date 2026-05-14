@@ -820,8 +820,6 @@ input, textarea {
     position: absolute;
     top: 8px;
     left: 10px;
-    width: 18px;
-    height: 18px;
   }
 
   a {
@@ -876,9 +874,9 @@ input, textarea {
 
     &::before {
       content: '';
-      width: 18px;
+      width: 16px;
       height: 18px;
-      background: url('../images/unlocked.svg') center center / 18px 18px no-repeat transparent;
+      background: url('../images/unlocked.svg') center center / contain no-repeat transparent;
       cursor: pointer;
     }
 
@@ -1577,8 +1575,6 @@ dialog.output-fullscreen-dialog {
   }
 
   img {
-    width: 18px;
-    height: 18px;
     pointer-events: none;
   }
 
@@ -1602,8 +1598,6 @@ dialog.output-fullscreen-dialog {
   }
 
   img {
-    width: 20px;
-    height: 20px;
     vertical-align: top;
   }
 
@@ -1636,12 +1630,6 @@ dialog.output-fullscreen-dialog {
 
     &.hidden {
       display: none;
-    }
-
-    img {
-      width: 18px;
-      height: 18px;
-      vertical-align: middle;
     }
 
     span {
@@ -1898,8 +1886,6 @@ dialog.output-fullscreen-dialog {
     }
 
     img {
-      width: 18px;
-      height: 18px;
       pointer-events: none;
     }
   }
