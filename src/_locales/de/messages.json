@@ -686,6 +686,24 @@
   "policy_description_DisabledCiphers": {
     "message": "Bestimmte kryptographische Chiffren aktivieren oder deaktivieren"
   },
+  "policy_description_DisabledCiphers_heading_tls12_dhe_cbc_forward_secrecy": {
+    "message": "TLS 1.2: DHE mit CBC und Forward Secrecy"
+  },
+  "policy_description_DisabledCiphers_heading_tls12_ecdhe_aead_forward_secrecy": {
+    "message": "TLS 1.2: ECDHE mit AEAD und Forward Secrecy"
+  },
+  "policy_description_DisabledCiphers_heading_tls12_ecdhe_cbc_forward_secrecy": {
+    "message": "TLS 1.2: ECDHE mit CBC und Forward Secrecy"
+  },
+  "policy_description_DisabledCiphers_heading_tls12_rsa_3des": {
+    "message": "TLS 1.2: 3DES ohne Forward Secrecy"
+  },
+  "policy_description_DisabledCiphers_heading_tls12_rsa_aes": {
+    "message": "TLS 1.2: RSA ohne Forward Secrecy"
+  },
+  "policy_description_DisabledCiphers_heading_tls13_aead_forward_secrecy": {
+    "message": "TLS 1.3: AEAD mit integrierter Forward Secrecy"
+  },
   "policy_description_DisableDefaultBrowserAgent": {
     "message": "Den Standardbrowser-Agent deaktivieren"
   },

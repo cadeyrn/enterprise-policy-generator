@@ -16,6 +16,8 @@
   [#390](https://github.com/cadeyrn/enterprise-policy-generator/issues/390)
 - Show an error message for invalid configurations in the import dialog, see
   [#396](https://github.com/cadeyrn/enterprise-policy-generator/issues/396)
+- Added option to add headings within policy options without affecting the generated output, see
+  [#398](https://github.com/cadeyrn/enterprise-policy-generator/issues/398)
 
 #### Bugfixes
 
@@ -24,8 +26,10 @@
 
 #### Enterprise Policies
 
-The `DefaultDownloadDirectory` and `DownloadDirectory` policies exclude each other now, see
+- The `DefaultDownloadDirectory` and `DownloadDirectory` policies exclude each other now, see
 [#391](https://github.com/cadeyrn/enterprise-policy-generator/issues/391)
+- Because the DisabledCiphers policy has so many options, they have been grouped by security characteristics, see
+  [#397](https://github.com/cadeyrn/enterprise-policy-generator/issues/397)
 
 #### Dependencies
 

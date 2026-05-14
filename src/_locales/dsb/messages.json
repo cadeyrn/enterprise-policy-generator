@@ -126,7 +126,7 @@
     "message": "Z kliknjenim na tłocašk se kod generěrujo. Toś ten kod musy se w dataji „policies.json“ do zarědnika „distribution“ składowaś."
   },
   "explanation_intro_linux": {
-    "message":  "Napórajśo zarědnik z mjenim „distribution“ w zarědniku, w kótaremž jo Firefox a składujśo tam dataju „policies.json“. Móžośo teke systemadaloke směrnice póstajiś, gaž dataju w /etc/firefox/policies składujośo."
+    "message": "Napórajśo zarědnik z mjenim „distribution“ w zarědniku, w kótaremž jo Firefox a składujśo tam dataju „policies.json“. Móžośo teke systemadaloke směrnice póstajiś, gaž dataju w /etc/firefox/policies składujośo."
   },
   "explanation_intro_macos": {
     "message": "Napórajśo zapis z mjenim „distribution“ w zapisu /Contents/Resources/ w nałožeńskem pakeśe Firefox a placěrujśo tam dataju „policies.json“. Aby nałožeński paket wócynił, klikniśo z pšaweju tastu myški na nałoženje Firefox w Finder a wubjeŕśo „Paketinhalt zeigen“ z kontekstowego menija."
@@ -685,6 +685,24 @@
   },
   "policy_description_DisabledCiphers": {
     "message": "Wěste kryptografiske šyfry zmóžniś abo znjemóžniś"
+  },
+  "policy_description_DisabledCiphers_heading_tls12_dhe_cbc_forward_secrecy": {
+    "message": "TLS 1.2: DHE with CBC and forward secrecy"
+  },
+  "policy_description_DisabledCiphers_heading_tls12_ecdhe_aead_forward_secrecy": {
+    "message": "TLS 1.2: ECDHE with AEAD and forward secrecy"
+  },
+  "policy_description_DisabledCiphers_heading_tls12_ecdhe_cbc_forward_secrecy": {
+    "message": "TLS 1.2: ECDHE with CBC and forward secrecy"
+  },
+  "policy_description_DisabledCiphers_heading_tls12_rsa_3des": {
+    "message": "TLS 1.2: 3DES without forward secrecy"
+  },
+  "policy_description_DisabledCiphers_heading_tls12_rsa_aes": {
+    "message": "TLS 1.2: RSA without forward secrecy"
+  },
+  "policy_description_DisabledCiphers_heading_tls13_aead_forward_secrecy": {
+    "message": "TLS 1.3: AEAD with integrated forward secrecy"
   },
   "policy_description_DisableDefaultBrowserAgent": {
     "message": "Standardny agent wobglědowaka znjemóžniś"

@@ -686,6 +686,24 @@
   "policy_description_DisabledCiphers": {
     "message": "Включить или отключить определённые криптографические шифры"
   },
+  "policy_description_DisabledCiphers_heading_tls12_dhe_cbc_forward_secrecy": {
+    "message": "TLS 1.2: DHE with CBC and forward secrecy"
+  },
+  "policy_description_DisabledCiphers_heading_tls12_ecdhe_aead_forward_secrecy": {
+    "message": "TLS 1.2: ECDHE with AEAD and forward secrecy"
+  },
+  "policy_description_DisabledCiphers_heading_tls12_ecdhe_cbc_forward_secrecy": {
+    "message": "TLS 1.2: ECDHE with CBC and forward secrecy"
+  },
+  "policy_description_DisabledCiphers_heading_tls12_rsa_3des": {
+    "message": "TLS 1.2: 3DES without forward secrecy"
+  },
+  "policy_description_DisabledCiphers_heading_tls12_rsa_aes": {
+    "message": "TLS 1.2: RSA without forward secrecy"
+  },
+  "policy_description_DisabledCiphers_heading_tls13_aead_forward_secrecy": {
+    "message": "TLS 1.3: AEAD with integrated forward secrecy"
+  },
   "policy_description_DisableDefaultBrowserAgent": {
     "message": "Отключить агент браузера по умолчанию"
   },
