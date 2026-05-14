@@ -398,7 +398,7 @@ export default [
       'html/id-naming-convention': ['error', 'kebab-case'],
       'html/indent': ['error', 2],
       'html/lowercase': 'error',
-      'html/max-element-depth': ['error', { 'max': 9 }],
+      'html/max-element-depth': ['error', { 'max': 10 }],
       'html/no-abstract-roles': 'error',
       'html/no-accesskey-attrs': 'error',
       'html/no-aria-hidden-body': 'error',
