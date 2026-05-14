@@ -35,6 +35,12 @@
   "configuration_import": {
     "message": "导入配置"
   },
+  "configuration_import_file": {
+    "message": "Configuration file"
+  },
+  "configuration_import_file_help": {
+    "message": "Choose a previously exported .policy file."
+  },
   "configuration_incompatible_btn_get_in_touch": {
     "message": "Request migrated configuration"
   },

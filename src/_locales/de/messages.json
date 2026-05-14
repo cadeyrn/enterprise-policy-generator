@@ -35,6 +35,12 @@
   "configuration_import": {
     "message": "Konfiguration importieren"
   },
+  "configuration_import_file": {
+    "message": "Konfigurationsdatei"
+  },
+  "configuration_import_file_help": {
+    "message": "Wählen Sie eine zuvor exportierte .policy-Datei aus."
+  },
   "configuration_incompatible_btn_get_in_touch": {
     "message": "Migrierte Konfiguration erhalten"
   },

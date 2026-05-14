@@ -1338,6 +1338,13 @@ dialog {
       color: var(--color-dark-border);
     }
 
+    .field-help {
+      margin-top: 7px;
+      font-size: .813rem;
+      line-height: 1.45;
+      color: var(--color-muted);
+    }
+
     input[type='text'] {
       border: 1px solid var(--color-surface-border);
       border-radius: var(--border-radius-field);
