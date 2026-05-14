@@ -41,6 +41,9 @@
   "configuration_action_show_incompatible": {
     "message": "Informationen zur inkompatiblen Konfiguration $1 anzeigen"
   },
+  "configuration_deleted_success": {
+    "message": "Konfiguration wurde gelöscht"
+  },
   "configuration_import": {
     "message": "Konfiguration importieren"
   },
@@ -49,6 +52,9 @@
   },
   "configuration_import_file_help": {
     "message": "Wählen Sie eine zuvor exportierte .policy-Datei aus."
+  },
+  "configuration_imported_success": {
+    "message": "Konfiguration wurde importiert"
   },
   "configuration_incompatible_btn_get_in_touch": {
     "message": "Migrierte Konfiguration erhalten"
@@ -68,8 +74,14 @@
   "configuration_incompatible_title": {
     "message": "Konfiguration nicht kompatibel"
   },
+  "configuration_loaded_success": {
+    "message": "Konfiguration wurde geladen"
+  },
   "configuration_management_headline": {
     "message": "Konfigurationen verwalten"
+  },
+  "configuration_saved_success": {
+    "message": "Konfiguration wurde gespeichert"
   },
   "copy_to_clipboard_success": {
     "message": "Code wurde in die Zwischenablage kopiert"

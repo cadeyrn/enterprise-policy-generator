@@ -1,6 +1,6 @@
 'use strict';
 
-/* global DOWNLOAD_PERMISSION, I18n, Migrator, Output, Serializer */
+/* global DOWNLOAD_PERMISSION, I18n, Migrator, Output, POPOVER_DURATION_IN_MS, Serializer */
 
 const BASE64_BINARY_CHUNK_SIZE = 8192;
 const DIALOG_CLOSE_ANIMATION_DURATION_IN_MS = 300;
@@ -23,6 +23,13 @@ class Management {
    * @type {HTMLDialogElement}
    */
   static previousDialog;
+
+  /**
+   * Timeout for hiding the currently visible status popover.
+   *
+   * @type {?number}
+   */
+  static #statusPopoverTimeout = null;
 
   /**
    * Set up the event listeners for the configuration management buttons.
@@ -116,6 +123,30 @@ class Management {
   }
 
   /**
+   * Show a temporary status popover.
+   *
+   * @param {HTMLElement} $popover - the popover to show
+   *
+   * @returns {void}
+   */
+  static #showStatusPopover ($popover) {
+    document.querySelectorAll('.popover:popover-open').forEach($openPopover => {
+      $openPopover.hidePopover();
+    });
+
+    $popover.showPopover();
+
+    if (Management.#statusPopoverTimeout) {
+      window.clearTimeout(Management.#statusPopoverTimeout);
+    }
+
+    Management.#statusPopoverTimeout = window.setTimeout(() => {
+      $popover.hidePopover();
+      Management.#statusPopoverTimeout = null;
+    }, POPOVER_DURATION_IN_MS);
+  }
+
+  /**
    * Set up the event listeners for the "save configuration" dialog.
    *
    * @returns {void}
@@ -124,6 +155,16 @@ class Management {
     const $name = $saveConfigurationDialog.querySelector('#save-dialog-name');
     const $submitButton = $saveConfigurationDialog.querySelector('#button-save-dialog-ok');
     const $closeButton = $saveConfigurationDialog.querySelector('#button-save-dialog-cancel');
+
+    const saveConfiguration = async () => {
+      if (!$name.value) {
+        return;
+      }
+
+      await Management.#saveConfiguration($name.value);
+      await Management.#closeDialog($saveConfigurationDialog);
+      Management.#showStatusPopover(document.getElementById('save-configuration-popover'));
+    };
 
     // do things on the dialog close
     $saveConfigurationDialog.addEventListener('close', () => {
@@ -148,8 +189,7 @@ class Management {
 
     // submit button
     $submitButton.addEventListener('click', () => {
-      Management.#saveConfiguration($name.value);
-      void Management.#closeDialog($saveConfigurationDialog);
+      void saveConfiguration();
     });
 
     // save configuration by pressing Enter
@@ -157,10 +197,7 @@ class Management {
       if ($saveConfigurationDialog.open && e.key === 'Enter') {
         e.preventDefault();
 
-        if ($name.value) {
-          Management.#saveConfiguration($name.value);
-          void Management.#closeDialog($saveConfigurationDialog);
-        }
+        void saveConfiguration();
       }
     });
   }
@@ -170,7 +207,7 @@ class Management {
    *
    * @param {string} name - the name of the configuration
    *
-   * @returns {void}
+   * @returns {Promise<void>}
    */
   static async #saveConfiguration (name) {
     const { configurations } = await browser.storage.local.get({ configurations: [] });
@@ -257,7 +294,7 @@ class Management {
   /**
    * List the saved configurations.
    *
-   * @returns {void}
+   * @returns {Promise<void>}
    */
   static async #listConfigurations () {
     const { configurations } = await browser.storage.local.get({ configurations: [] });
@@ -398,14 +435,14 @@ class Management {
    *
    * @param {MouseEvent} e - the mouse event
    *
-   * @returns {void}
+   * @returns {Promise<void>}
    */
   static async #applyConfiguration (e) {
+    const idx = Number(e.currentTarget.getAttribute('data-idx'));
     const { configurations } = await browser.storage.local.get({ configurations: [] });
     const $policyOutput = document.getElementById('policy-output');
 
-    Serializer.unserialize(configurations[e.target.getAttribute('data-idx')].configuration);
-    void Management.#closeDialog($listConfigurationDialog);
+    Serializer.unserialize(configurations[idx].configuration);
 
     // only supported in Firefox 148+
     if ('Sanitizer' in window) {
@@ -417,6 +454,8 @@ class Management {
     }
 
     document.getElementById('action-links').classList.remove('hidden');
+    await Management.#closeDialog($listConfigurationDialog);
+    Management.#showStatusPopover(document.getElementById('load-configuration-popover'));
   }
 
   /**
@@ -444,7 +483,7 @@ class Management {
   /**
    * Delete the selected configuration after the confirmation dialog has been accepted.
    *
-   * @returns {void}
+   * @returns {Promise<void>}
    */
   static async #deleteConfirmedConfiguration () {
     const { configurations } = await browser.storage.local.get({ configurations: [] });
@@ -458,7 +497,8 @@ class Management {
 
     configurations.splice(idx, 1);
     await browser.storage.local.set({ configurations: configurations });
-    void Management.#closeDialog($deleteConfigurationDialog);
+    await Management.#closeDialog($deleteConfigurationDialog);
+    Management.#showStatusPopover(document.getElementById('delete-configuration-popover'));
   }
 
   /**
@@ -491,14 +531,15 @@ class Management {
    *
    * @param {MouseEvent} e - the mouse event
    *
-   * @returns {void}
+   * @returns {Promise<void>}
    */
   static async #grantDownloadPermission (e) {
+    const idx = Number(e.currentTarget.getAttribute('data-idx'));
     const granted = await browser.permissions.request(DOWNLOAD_PERMISSION);
 
     // immediately prompt for download after the "downloads" permission has been granted
     if (granted) {
-      Management.#exportConfiguration(e);
+      await Management.#exportConfigurationByIndex(idx);
     }
   }
 
@@ -507,11 +548,22 @@ class Management {
    *
    * @param {MouseEvent} e - event
    *
-   * @returns {void}
+   * @returns {Promise<void>}
    */
   static async #exportConfiguration (e) {
+    await Management.#exportConfigurationByIndex(Number(e.currentTarget.getAttribute('data-idx')));
+  }
+
+  /**
+   * Exports a configuration by its index.
+   *
+   * @param {number} idx - the configuration index
+   *
+   * @returns {Promise<void>}
+   */
+  static async #exportConfigurationByIndex (idx) {
     const { configurations } = await browser.storage.local.get({ configurations: [] });
-    const configuration = configurations[e.target.getAttribute('data-idx')];
+    const configuration = configurations[idx];
     const bytes = new TextEncoder().encode(JSON.stringify(configuration));
     const bytesLength = bytes.length;
     let binary = '';
@@ -632,10 +684,11 @@ class Management {
 
       // migrate old configuration files
       await browser.storage.local.set({ configurations: configurations, schema: 2, version: 1 });
-      Migrator.migrate();
+      await Migrator.migrate();
 
       $listConfigurationDialog.showModal();
-      Management.#listConfigurations();
+      await Management.#listConfigurations();
+      Management.#showStatusPopover(document.getElementById('import-configuration-popover'));
     });
   }
 

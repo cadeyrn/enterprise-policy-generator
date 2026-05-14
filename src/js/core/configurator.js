@@ -82,9 +82,9 @@ class Configurator {
         return;
       }
 
-      if ($copyToClipboardPopover.matches(':popover-open')) {
-        $copyToClipboardPopover.hidePopover();
-      }
+      document.querySelectorAll('.popover:popover-open').forEach($popover => {
+        $popover.hidePopover();
+      });
 
       $copyToClipboardPopover.showPopover();
 

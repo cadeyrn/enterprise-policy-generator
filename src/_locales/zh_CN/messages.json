@@ -41,6 +41,9 @@
   "configuration_action_show_incompatible": {
     "message": "Show information about incompatible configuration $1"
   },
+  "configuration_deleted_success": {
+    "message": "Configuration deleted"
+  },
   "configuration_import": {
     "message": "导入配置"
   },
@@ -49,6 +52,9 @@
   },
   "configuration_import_file_help": {
     "message": "Choose a previously exported .policy file."
+  },
+  "configuration_imported_success": {
+    "message": "Configuration imported"
   },
   "configuration_incompatible_btn_get_in_touch": {
     "message": "Request migrated configuration"
@@ -68,8 +74,14 @@
   "configuration_incompatible_title": {
     "message": "Configuration not compatible"
   },
+  "configuration_loaded_success": {
+    "message": "Configuration loaded"
+  },
   "configuration_management_headline": {
     "message": "Manage configurations"
+  },
+  "configuration_saved_success": {
+    "message": "Configuration saved"
   },
   "copy_to_clipboard_success": {
     "message": "Code copied to clipboard"
