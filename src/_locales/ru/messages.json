@@ -144,7 +144,7 @@
     "message": "Конфигурация ещё не сохранена."
   },
   "list_dialog_window_title": {
-    "message": "Загрузить конфигурацию"
+    "message": "Saved configurations"
   },
   "list_table_actions": {
     "message": "Действия"
