@@ -55,6 +55,9 @@
           "enum": ["array", "boolean", "object", "string"]
         },
         "object": {
+          "enum": ["array", "boolean", "enum", "heading", "object", "string"]
+        },
+        "policy": {
           "enum": ["array", "boolean", "enum", "object", "string"]
         }
       }
@@ -200,6 +203,15 @@
             }
           }
         },
+        "heading": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string"
+            }
+          },
+          "required": ["label"]
+        },
         "enum": {
           "type": "object",
           "properties": {
@@ -299,6 +311,18 @@
                     "if": {
                       "properties": {
                         "schema": {
+                          "const": "heading"
+                        }
+                      }
+                    },
+                    "then": {
+                      "$ref": "#/$defs/schemas/properties/heading"
+                    }
+                  },
+                  {
+                    "if": {
+                      "properties": {
+                        "schema": {
                           "const": "object"
                         }
                       }
@@ -318,9 +342,23 @@
                     "then": {
                       "$ref": "#/$defs/schemas/properties/string"
                     }
+                  },
+                  {
+                    "if": {
+                      "properties": {
+                        "schema": {
+                          "not": {
+                            "const": "heading"
+                          }
+                        }
+                      }
+                    },
+                    "then": {
+                      "required": ["name"]
+                    }
                   }
                 ],
-                "required": ["name", "schema"],
+                "required": ["schema"],
                 "unevaluatedProperties": false
               },
               "minItems": 1,
@@ -428,7 +466,7 @@
               "type": "string"
             },
             "schema": {
-              "$ref": "#/$defs/allowed_schemas/properties/object"
+              "$ref": "#/$defs/allowed_schemas/properties/policy"
             }
           },
           "allOf": [

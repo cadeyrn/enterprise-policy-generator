@@ -407,6 +407,9 @@ class Configurator {
       case 'enum':
         Configurator.#addEnumProperty($el, parentName, object);
         break;
+      case 'heading':
+        Configurator.#addHeadingProperty($el, object);
+        break;
       case 'object':
         Configurator.#addObjectProperty($el, parentName, object);
         break;
@@ -416,6 +419,21 @@ class Configurator {
       default:
         // do nothing
     }
+  }
+
+  /**
+   * Add a property of the type "heading".
+   *
+   * @param {HTMLElement} $el - the DOM element where the option should be inserted
+   * @param {object} object - the object to add
+   *
+   * @returns {void}
+   */
+  static #addHeadingProperty ($el, object) {
+    const $heading = document.createElement('div');
+    $heading.classList.add('object-label', 'option-heading');
+    $heading.textContent = I18n.getMessage(object.label);
+    $el.appendChild($heading);
   }
 
   /**
@@ -646,7 +664,7 @@ class Configurator {
     // add properties
     if (object.properties) {
       for (const property of object.properties) {
-        const name = parentName + '_' + property.name;
+        const name = property.name ?? parentName + '_' + property.name;
         Configurator.#addProperty($wrapper, name, property);
       }
     }

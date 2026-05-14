@@ -672,6 +672,12 @@ input, textarea {
   margin-bottom: var(--form-heading-gap);
 }
 
+.option-heading {
+  + .label {
+    margin-top: 0;
+  }
+}
+
 .label + .array-wrapper > .array-container:first-child {
   margin-top: var(--form-element-gap);
 }
