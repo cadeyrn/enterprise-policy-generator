@@ -305,8 +305,10 @@ class Management {
 
       // load icon
       const $loadButton = document.createElement('button');
+      const applyConfigurationLabel = I18n.getMessage('title_apply_configuration');
       $loadButton.setAttribute('type', 'button');
-      $loadButton.setAttribute('title', I18n.getMessage('title_apply_configuration'));
+      $loadButton.setAttribute('title', applyConfigurationLabel);
+      $loadButton.setAttribute('aria-label', applyConfigurationLabel);
       $loadButton.setAttribute('data-idx', idx.toString());
       $loadButton.classList.add('icon');
       $iconColumn.appendChild($loadButton);
@@ -328,13 +330,15 @@ class Management {
       $loadIcon.src = `/images/${configuration.schema ? 'checkmark' : 'warning'}.svg`;
       $loadIcon.width = 18;
       $loadIcon.height = 18;
-      $loadIcon.alt = I18n.getMessage('title_apply_configuration');
+      $loadIcon.alt = '';
       $loadButton.appendChild($loadIcon);
 
       // fake export icon (permission not yet granted)
       const $fakeExportButton = document.createElement('button');
+      const exportConfigurationLabel = I18n.getMessage('configuration_export');
       $fakeExportButton.setAttribute('type', 'button');
-      $fakeExportButton.setAttribute('title', I18n.getMessage('configuration_export'));
+      $fakeExportButton.setAttribute('title', exportConfigurationLabel);
+      $fakeExportButton.setAttribute('aria-label', exportConfigurationLabel);
       $fakeExportButton.setAttribute('data-idx', idx.toString());
       $fakeExportButton.classList.add('icon', 'fake-export-link');
       $fakeExportButton.addEventListener('click', Management.#grantDownloadPermission);
@@ -344,13 +348,14 @@ class Management {
       $fakeExportIcon.src = '/images/export.svg';
       $fakeExportIcon.width = 18;
       $fakeExportIcon.height = 18;
-      $fakeExportIcon.alt = I18n.getMessage('configuration_export');
+      $fakeExportIcon.alt = '';
       $fakeExportButton.appendChild($fakeExportIcon);
 
       // export icon
       const $exportButton = document.createElement('button');
       $exportButton.setAttribute('type', 'button');
-      $exportButton.setAttribute('title', I18n.getMessage('configuration_export'));
+      $exportButton.setAttribute('title', exportConfigurationLabel);
+      $exportButton.setAttribute('aria-label', exportConfigurationLabel);
       $exportButton.setAttribute('data-idx', idx.toString());
       $exportButton.classList.add('icon', 'export-link', 'hidden');
       $exportButton.addEventListener('click', Management.#exportConfiguration);
@@ -360,13 +365,15 @@ class Management {
       $exportIcon.src = '/images/export.svg';
       $exportIcon.width = 18;
       $exportIcon.height = 18;
-      $exportIcon.alt = I18n.getMessage('configuration_export');
+      $exportIcon.alt = '';
       $exportButton.appendChild($exportIcon);
 
       // delete icon
       const $deleteButton = document.createElement('button');
+      const deleteConfigurationLabel = I18n.getMessage('title_delete_configuration');
       $deleteButton.setAttribute('type', 'button');
-      $deleteButton.setAttribute('title', I18n.getMessage('title_delete_configuration'));
+      $deleteButton.setAttribute('title', deleteConfigurationLabel);
+      $deleteButton.setAttribute('aria-label', deleteConfigurationLabel);
       $deleteButton.setAttribute('data-idx', idx.toString());
       $deleteButton.classList.add('icon', 'trash-icon');
       $deleteButton.addEventListener('click', Management.#deleteConfiguration);
@@ -376,7 +383,7 @@ class Management {
       $deleteIcon.src = '/images/trash.svg';
       $deleteIcon.width = 18;
       $deleteIcon.height = 18;
-      $deleteIcon.alt = I18n.getMessage('title_delete_configuration');
+      $deleteIcon.alt = '';
       $deleteButton.appendChild($deleteIcon);
     }
 

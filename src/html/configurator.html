@@ -18,11 +18,13 @@
           <label for="filter" data-i18n="filter_field"></label>
           <input type="text" id="filter" data-i18n-placeholder="filter_field" aria-keyshortcuts="Shift+F" tabindex="-1">
           <button type="button" class="filter-button open-filter" data-i18n-title="filter_field_open" aria-controls="filter" aria-expanded="false" aria-keyshortcuts="Shift+F">
+            <span class="visually-hidden" data-i18n="filter_field_open"></span>
             <svg class="filter-icon filter-icon-search" viewBox="0 0 20 20" aria-hidden="true">
               <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd"></path>
             </svg>
           </button>
           <button type="button" class="filter-button close-filter" data-i18n-title="filter_field_close" aria-keyshortcuts="Escape" tabindex="-1">
+            <span class="visually-hidden" data-i18n="filter_field_close"></span>
             <svg class="filter-icon" viewBox="0 0 24 24" aria-hidden="true">
               <path d="m6 6 12 12"></path>
               <path d="m18 6-12 12"></path>
@@ -47,6 +49,7 @@
             <div class="policy-output-container">
               <pre id="policy-output-wrapper" class="policy-output-code"><code id="policy-output"></code><span class="output-placeholder" data-i18n="output_placeholder"></span></pre>
               <button type="button" id="show-policy-output-fullscreen" class="output-fullscreen-button" data-i18n-title="output_fullscreen_open" aria-controls="policy-output-fullscreen-dialog">
+                <span class="visually-hidden" data-i18n="output_fullscreen_open"></span>
                 <svg viewBox="0 0 20 20" aria-hidden="true">
                   <path d="M4.5 8V4.5H8"></path>
                   <path d="M4.5 4.5 8.5 8.5"></path>
@@ -125,6 +128,7 @@
         <div id="policy-output-fullscreen-title" data-i18n="output_headline"></div>
         <div class="output-fullscreen-actions">
           <button type="button" id="copy-to-clipboard-fullscreen" class="output-fullscreen-copy" data-i18n-title="link_copy_to_clipboard">
+            <span class="visually-hidden" data-i18n="link_copy_to_clipboard"></span>
             <img src="../images/clipboard.svg" width="20" height="20" alt="">
           </button>
           <button type="button" id="close-policy-output-fullscreen" class="output-fullscreen-close" data-i18n-title="output_fullscreen_close">

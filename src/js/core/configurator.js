@@ -812,6 +812,7 @@ class Configurator {
     const $removeButton = document.createElement('button');
     $removeButton.setAttribute('type', 'button');
     $removeButton.setAttribute('data-action', 'remove');
+    $removeButton.setAttribute('aria-label', I18n.getMessage('title_remove_item'));
     $removeButton.setAttribute('aria-disabled', 'true');
     $removeButton.setAttribute('tabindex', '-1');
     $removeButton.classList.add('array-action', 'disabled-button');
@@ -821,16 +822,18 @@ class Configurator {
     $removeIcon.src = '/images/minus.svg';
     $removeIcon.width = 10;
     $removeIcon.height = 2;
-    $removeIcon.alt = I18n.getMessage('title_remove_item');
+    $removeIcon.alt = '';
     $removeIcon.classList.add('action-img');
     $removeButton.appendChild($removeIcon);
 
     // add button
     const $addButton = document.createElement('button');
+    const addItemLabel = I18n.getMessage('title_add_item');
     $addButton.setAttribute('type', 'button');
     $addButton.setAttribute('data-action', 'add');
     $addButton.setAttribute('data-name', parentName);
-    $addButton.setAttribute('title', I18n.getMessage('title_add_item'));
+    $addButton.setAttribute('title', addItemLabel);
+    $addButton.setAttribute('aria-label', addItemLabel);
     $addButton.classList.add('array-action');
     $container.appendChild($addButton);
 
@@ -839,7 +842,7 @@ class Configurator {
     $addIcon.classList.add('action-img');
     $addIcon.width = 10;
     $addIcon.height = 10;
-    $addIcon.alt = I18n.getMessage('title_add_item');
+    $addIcon.alt = '';
     $addButton.appendChild($addIcon);
   }
 
