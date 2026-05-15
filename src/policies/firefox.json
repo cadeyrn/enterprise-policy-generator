@@ -1535,6 +1535,262 @@
       "schema": "enum",
       "preset": "enable"
     },
+    "Permissions": {
+      "availability": { "mainstream": "62.0", "esr": "60.2" },
+      "tags": ["website"],
+      "schema": "object",
+      "properties": [
+        {
+          "name": "Location",
+          "label": "policy_description_Permissions_Location",
+          "schema": "object",
+          "lockable": true,
+          "properties": [
+            {
+              "name": "Allow",
+              "label": "policy_description_Permissions_Location_Allow",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "Block",
+              "label": "policy_description_Permissions_Location_Block",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "BlockNewRequests",
+              "label": "policy_description_Permissions_Location_BlockNewRequests",
+              "schema": "boolean"
+            }
+          ]
+        },
+        {
+          "name": "Camera",
+          "label": "policy_description_Permissions_Camera",
+          "schema": "object",
+          "lockable": true,
+          "properties": [
+            {
+              "name": "Allow",
+              "label": "policy_description_Permissions_Camera_Allow",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "Block",
+              "label": "policy_description_Permissions_Camera_Block",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "BlockNewRequests",
+              "label": "policy_description_Permissions_Camera_BlockNewRequests",
+              "schema": "boolean"
+            }
+          ]
+        },
+        {
+          "name": "Microphone",
+          "label": "policy_description_Permissions_Microphone",
+          "schema": "object",
+          "lockable": true,
+          "properties": [
+            {
+              "name": "Allow",
+              "label": "policy_description_Permissions_Microphone_Allow",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "Block",
+              "label": "policy_description_Permissions_Microphone_Block",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "BlockNewRequests",
+              "label": "policy_description_Permissions_Microphone_BlockNewRequests",
+              "schema": "boolean"
+            }
+          ]
+        },
+        {
+          "name": "Notifications",
+          "label": "policy_description_Permissions_Notifications",
+          "schema": "object",
+          "lockable": true,
+          "properties": [
+            {
+              "name": "Allow",
+              "label": "policy_description_Permissions_Notifications_Allow",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "Block",
+              "label": "policy_description_Permissions_Notifications_Block",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "BlockNewRequests",
+              "label": "policy_description_Permissions_Notifications_BlockNewRequests",
+              "schema": "boolean"
+            }
+          ]
+        },
+        {
+          "name": "Autoplay",
+          "label": "policy_description_Permissions_Autoplay",
+          "schema": "object",
+          "lockable": true,
+          "properties": [
+            {
+              "name": "Default",
+              "label": "policy_description_Permissions_Autoplay_Default",
+              "schema": "enum",
+              "options": [
+                {
+                  "label": "enum_value_no_preference",
+                  "value": null
+                },
+                {
+                  "label": "policy_description_Permissions_Autoplay_Default_allow_audio_video",
+                  "value": "allow-audio-video"
+                },
+                {
+                  "label": "policy_description_Permissions_Autoplay_Default_block_audio",
+                  "value": "block-audio"
+                },
+                {
+                  "label": "policy_description_Permissions_Autoplay_Default_block_audio_video",
+                  "value": "block-audio-video"
+                }
+              ]
+            },
+            {
+              "name": "Allow",
+              "label": "policy_description_Permissions_Autoplay_Allow",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "Block",
+              "label": "policy_description_Permissions_Autoplay_Block",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "ScreenShare",
+          "label": "policy_description_Permissions_ScreenShare",
+          "schema": "object",
+          "lockable": true,
+          "properties": [
+            {
+              "name": "Allow",
+              "label": "policy_description_Permissions_ScreenShare_Allow",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "Block",
+              "label": "policy_description_Permissions_ScreenShare_Block",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "BlockNewRequests",
+              "label": "policy_description_Permissions_ScreenShare_BlockNewRequests",
+              "schema": "boolean"
+            }
+          ]
+        },
+        {
+          "name": "VirtualReality",
+          "label": "policy_description_Permissions_VirtualReality",
+          "schema": "object",
+          "lockable": true,
+          "properties": [
+            {
+              "name": "Allow",
+              "label": "policy_description_Permissions_VirtualReality_Allow",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "Block",
+              "label": "policy_description_Permissions_VirtualReality_Block",
+              "schema": "array",
+              "items": {
+                "schema": "string",
+                "placeholder": "common_url",
+                "validations": ["url"]
+              }
+            },
+            {
+              "name": "BlockNewRequests",
+              "label": "policy_description_Permissions_VirtualReality_BlockNewRequests",
+              "schema": "boolean"
+            }
+          ]
+        }
+      ]
+    },
     "Handlers": {
       "availability": { "mainstream": "78.0", "esr": "78.0" },
       "tags": ["website"],
@@ -1844,262 +2100,6 @@
           }
         ]
       }
-    },
-    "Permissions": {
-      "availability": { "mainstream": "62.0", "esr": "60.2" },
-      "tags": ["website"],
-      "schema": "object",
-      "properties": [
-        {
-          "name": "Location",
-          "label": "policy_description_Permissions_Location",
-          "schema": "object",
-          "lockable": true,
-          "properties": [
-            {
-              "name": "Allow",
-              "label": "policy_description_Permissions_Location_Allow",
-              "schema": "array",
-              "items": {
-                "schema": "string",
-                "placeholder": "common_url",
-                "validations": ["url"]
-              }
-            },
-            {
-              "name": "Block",
-              "label": "policy_description_Permissions_Location_Block",
-              "schema": "array",
-              "items": {
-                "schema": "string",
-                "placeholder": "common_url",
-                "validations": ["url"]
-              }
-            },
-            {
-              "name": "BlockNewRequests",
-              "label": "policy_description_Permissions_Location_BlockNewRequests",
-              "schema": "boolean"
-            }
-          ]
-        },
-        {
-          "name": "Camera",
-          "label": "policy_description_Permissions_Camera",
-          "schema": "object",
-          "lockable": true,
-          "properties": [
-            {
-              "name": "Allow",
-              "label": "policy_description_Permissions_Camera_Allow",
-              "schema": "array",
-              "items": {
-                "schema": "string",
-                "placeholder": "common_url",
-                "validations": ["url"]
-              }
-            },
-            {
-              "name": "Block",
-              "label": "policy_description_Permissions_Camera_Block",
-              "schema": "array",
-              "items": {
-                "schema": "string",
-                "placeholder": "common_url",
-                "validations": ["url"]
-              }
-            },
-            {
-              "name": "BlockNewRequests",
-              "label": "policy_description_Permissions_Camera_BlockNewRequests",
-              "schema": "boolean"
-            }
-          ]
-        },
-        {
-          "name": "Microphone",
-          "label": "policy_description_Permissions_Microphone",
-          "schema": "object",
-          "lockable": true,
-          "properties": [
-            {
-              "name": "Allow",
-              "label": "policy_description_Permissions_Microphone_Allow",
-              "schema": "array",
-              "items": {
-                "schema": "string",
-                "placeholder": "common_url",
-                "validations": ["url"]
-              }
-            },
-            {
-              "name": "Block",
-              "label": "policy_description_Permissions_Microphone_Block",
-              "schema": "array",
-              "items": {
-                "schema": "string",
-                "placeholder": "common_url",
-                "validations": ["url"]
-              }
-            },
-            {
-              "name": "BlockNewRequests",
-              "label": "policy_description_Permissions_Microphone_BlockNewRequests",
-              "schema": "boolean"
-            }
-          ]
-        },
-        {
-          "name": "Notifications",
-          "label": "policy_description_Permissions_Notifications",
-          "schema": "object",
-          "lockable": true,
-          "properties": [
-            {
-              "name": "Allow",
-              "label": "policy_description_Permissions_Notifications_Allow",
-              "schema": "array",
-              "items": {
-                "schema": "string",
-                "placeholder": "common_url",
-                "validations": ["url"]
-              }
-            },
-            {
-              "name": "Block",
-              "label": "policy_description_Permissions_Notifications_Block",
-              "schema": "array",
-              "items": {
-                "schema": "string",
-                "placeholder": "common_url",
-                "validations": ["url"]
-              }
-            },
-            {
-              "name": "BlockNewRequests",
-              "label": "policy_description_Permissions_Notifications_BlockNewRequests",
-              "schema": "boolean"
-            }
-          ]
-        },
-        {
-          "name": "Autoplay",
-          "label": "policy_description_Permissions_Autoplay",
-          "schema": "object",
-          "lockable": true,
-          "properties": [
-            {
-              "name": "Default",
-              "label": "policy_description_Permissions_Autoplay_Default",
-              "schema": "enum",
-              "options": [
-                {
-                  "label": "enum_value_no_preference",
-                  "value": null
-                },
-                {
-                  "label": "policy_description_Permissions_Autoplay_Default_allow_audio_video",
-                  "value": "allow-audio-video"
-                },
-                {
-                  "label": "policy_description_Permissions_Autoplay_Default_block_audio",
-                  "value": "block-audio"
-                },
-                {
-                  "label": "policy_description_Permissions_Autoplay_Default_block_audio_video",
-                  "value": "block-audio-video"
-                }
-              ]
-            },
-            {
-              "name": "Allow",
-              "label": "policy_description_Permissions_Autoplay_Allow",
-              "schema": "array",
-              "items": {
-                "schema": "string",
-                "placeholder": "common_url",
-                "validations": ["url"]
-              }
-            },
-            {
-              "name": "Block",
-              "label": "policy_description_Permissions_Autoplay_Block",
-              "schema": "array",
-              "items": {
-                "schema": "string",
-                "placeholder": "common_url",
-                "validations": ["url"]
-              }
-            }
-          ]
-        },
-        {
-          "name": "ScreenShare",
-          "label": "policy_description_Permissions_ScreenShare",
-          "schema": "object",
-          "lockable": true,
-          "properties": [
-            {
-              "name": "Allow",
-              "label": "policy_description_Permissions_ScreenShare_Allow",
-              "schema": "array",
-              "items": {
-                "schema": "string",
-                "placeholder": "common_url",
-                "validations": ["url"]
-              }
-            },
-            {
-              "name": "Block",
-              "label": "policy_description_Permissions_ScreenShare_Block",
-              "schema": "array",
-              "items": {
-                "schema": "string",
-                "placeholder": "common_url",
-                "validations": ["url"]
-              }
-            },
-            {
-              "name": "BlockNewRequests",
-              "label": "policy_description_Permissions_ScreenShare_BlockNewRequests",
-              "schema": "boolean"
-            }
-          ]
-        },
-        {
-          "name": "VirtualReality",
-          "label": "policy_description_Permissions_VirtualReality",
-          "schema": "object",
-          "lockable": true,
-          "properties": [
-            {
-              "name": "Allow",
-              "label": "policy_description_Permissions_VirtualReality_Allow",
-              "schema": "array",
-              "items": {
-                "schema": "string",
-                "placeholder": "common_url",
-                "validations": ["url"]
-              }
-            },
-            {
-              "name": "Block",
-              "label": "policy_description_Permissions_VirtualReality_Block",
-              "schema": "array",
-              "items": {
-                "schema": "string",
-                "placeholder": "common_url",
-                "validations": ["url"]
-              }
-            },
-            {
-              "name": "BlockNewRequests",
-              "label": "policy_description_Permissions_VirtualReality_BlockNewRequests",
-              "schema": "boolean"
-            }
-          ]
-        }
-      ]
     },
     "PopupBlocking": {
       "availability": { "mainstream": "60.0", "esr": "60.0" },
