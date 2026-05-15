@@ -1688,6 +1688,12 @@
   "policy_description_WindowsSSO": {
     "message": "Allow Windows single sign-on for Microsoft, work, and school accounts"
   },
+  "policy_description_XSLTEnabled": {
+    "message": "Enable or disable XSLT support"
+  },
+  "policy_description_XSLTEnabled_note": {
+    "message": "XSLT support on the web platform is planned for removal. This policy exists to control support during the transition period."
+  },
   "promo_box_button": {
     "message": "Donate now"
   },

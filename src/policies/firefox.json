@@ -2160,6 +2160,13 @@
         }
       ]
     },
+    "XSLTEnabled": {
+      "availability": { "mainstream": "151.0", "esr": "153.0" },
+      "tags": ["website"],
+      "note": "policy_description_XSLTEnabled_note",
+      "schema": "enum",
+      "preset": "enable"
+    },
     "Authentication": {
       "availability": { "mainstream": "62.0", "esr": "60.0" },
       "tags": ["authentication"],

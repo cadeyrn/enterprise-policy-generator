@@ -1688,6 +1688,12 @@
   "policy_description_WindowsSSO": {
     "message": "Windows Single Sign-On za konta Microsoft, źěłowe konta a šulske konta pśizwóliś"
   },
+  "policy_description_XSLTEnabled": {
+    "message": "Enable or disable XSLT support"
+  },
+  "policy_description_XSLTEnabled_note": {
+    "message": "XSLT support on the web platform is planned for removal. This policy exists to control support during the transition period."
+  },
   "promo_box_button": {
     "message": "Něnto pósćiś"
   },

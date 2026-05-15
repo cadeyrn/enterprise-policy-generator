@@ -34,6 +34,8 @@
   [#340](https://github.com/cadeyrn/enterprise-policy-generator/issues/340)
 - Added support for the `SitePolicies` policy, see
   [#392](https://github.com/cadeyrn/enterprise-policy-generator/issues/392)
+- Added support for the `XSLTEnabled` policy, see
+  [#401](https://github.com/cadeyrn/enterprise-policy-generator/issues/401)
 - The `DefaultDownloadDirectory` and `DownloadDirectory` policies exclude each other now, see
   [#391](https://github.com/cadeyrn/enterprise-policy-generator/issues/391)
 - Because the `DisabledCiphers` policy has so many options, they have been grouped by security characteristics, see

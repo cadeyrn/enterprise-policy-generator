@@ -1688,6 +1688,12 @@
   "policy_description_WindowsSSO": {
     "message": "Разрешить единый вход Windows для учётных записей Microsoft, учётных записей на работе и в учебных заведениях"
   },
+  "policy_description_XSLTEnabled": {
+    "message": "Enable or disable XSLT support"
+  },
+  "policy_description_XSLTEnabled_note": {
+    "message": "XSLT support on the web platform is planned for removal. This policy exists to control support during the transition period."
+  },
   "promo_box_button": {
     "message": "Пожертвовать"
   },
