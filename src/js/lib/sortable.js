@@ -7,6 +7,7 @@
  * @property {string} [itemSelector='.sortable-item'] - CSS selector for sortable items (must be direct children)
  * @property {string} [handleSelector='.sortable-handle'] - CSS selector for the drag handle inside each item
  * @property {string} [placeholderClass='sortable-placeholder'] - class name applied to the temporary placeholder
+ * @property {(item: HTMLElement) => HTMLElement} [getDragElementContainer] - optional container for the dragged item
  * @property {number} [overlapThreshold=0.2] - reorder trigger threshold (0..1), direction-aware
  * @property {(items: HTMLElement[]) => void} onUpdate - callback fired after a completed reorder
  */
@@ -19,11 +20,11 @@
  * @property {number} frame - active requestAnimationFrame id
  * @property {number} fixedLeft - fixed X position for vertical-only dragging
  * @property {number} startTop - initial top position when drag started
+ * @property {number} height - dragged item height
  * @property {number} currentTranslateY -current translateY offset during drag
  * @property {number} lastPointerY -last pointer Y for direction detection
  * @property {'down'|'up'} moveDir - last significant movement direction
  * @property {?number} activePointerId - pointer id captured for this drag
- * @property {Map<HTMLElement, DOMRect>} cachedRects - cached sibling rects for reorder checks
  */
 
 class Sortable {
@@ -39,6 +40,7 @@ class Sortable {
     this.handleSelector = options.handleSelector ?? '.sortable-handle';
     this.itemSelector = options.itemSelector ?? '.sortable-item';
     this.placeholderClass = options.placeholderClass ?? 'sortable-placeholder';
+    this.getDragElementContainer = typeof options.getDragElementContainer === 'function' ? options.getDragElementContainer : null;
     this.onUpdate = typeof options.onUpdate === 'function' ? options.onUpdate : null;
 
     // eslint-disable-next-line no-magic-numbers
@@ -104,11 +106,11 @@ class Sortable {
       frame: 0,
       fixedLeft: 0,
       startTop: 0,
+      height: 0,
       currentTranslateY: 0,
       lastPointerY: 0,
       moveDir: 'down',
-      activePointerId: null,
-      cachedRects: new Map()
+      activePointerId: null
     };
   }
 
@@ -135,7 +137,7 @@ class Sortable {
     this.$liveRegion.setAttribute('aria-atomic', 'true');
     this.$liveRegion.classList.add('visually-hidden');
 
-    this.$container.appendChild(this.$liveRegion);
+    document.body.appendChild(this.$liveRegion);
 
     this.lastAnnouncementAt = null;
   }
@@ -186,23 +188,6 @@ class Sortable {
   }
 
   /**
-   * Cache sibling bounds for an inexpensive overlap check during dragging.
-   *
-   * @returns {void}
-   */
-  #cacheSiblingRects () {
-    const drag = this.dragState;
-    const $siblings = this.#getItems().filter(
-      $el => $el !== drag.$item && $el !== drag.$placeholder
-    );
-
-    drag.cachedRects.clear();
-    for (const $el of $siblings) {
-      drag.cachedRects.set($el, $el.getBoundingClientRect());
-    }
-  }
-
-  /**
    * Handle drag start for pointer interactions.
    *
    * @param {PointerEvent} e - pointer event
@@ -237,6 +222,7 @@ class Sortable {
     drag.pointer.y = e.clientY;
     drag.fixedLeft = rect.left;
     drag.startTop = rect.top;
+    drag.height = rect.height;
     drag.currentTranslateY = 0;
     drag.lastPointerY = e.clientY;
     drag.moveDir = 'down';
@@ -253,10 +239,23 @@ class Sortable {
     drag.$placeholder.setAttribute('aria-hidden', 'true');
 
     $item.after(drag.$placeholder);
+    $item.classList.add('sortable-dragging');
 
-    $item.style.position = 'fixed';
-    $item.style.left = `${rect.left}px`;
-    $item.style.top = `${rect.top}px`;
+    const $dragElementContainer = this.getDragElementContainer?.($item) ?? document.body;
+    let containerRect = { left: 0, top: 0 };
+
+    if ($dragElementContainer !== document.body) {
+      containerRect = $dragElementContainer.getBoundingClientRect();
+      containerRect = {
+        left: containerRect.left + $dragElementContainer.clientLeft,
+        top: containerRect.top + $dragElementContainer.clientTop
+      };
+    }
+
+    drag.fixedLeft = rect.left - containerRect.left;
+    $item.style.position = $dragElementContainer === document.body ? 'fixed' : 'absolute';
+    $item.style.left = `${drag.fixedLeft}px`;
+    $item.style.top = `${rect.top - containerRect.top}px`;
     $item.style.width = width;
     $item.style.height = height;
     $item.style.transform = 'translate3d(0, 0, 0)';
@@ -264,10 +263,10 @@ class Sortable {
     $item.style.pointerEvents = 'none';
     $item.style.willChange = 'transform';
 
-    document.body.appendChild($item);
+    $dragElementContainer.appendChild($item);
+    document.documentElement.style.userSelect = 'none';
     document.body.style.userSelect = 'none';
-
-    this.#cacheSiblingRects();
+    document.getSelection()?.removeAllRanges();
 
     document.addEventListener('pointermove', this.onPointerMoveHandler, { passive: true });
     document.addEventListener('pointerup', this.onPointerUpHandler, { passive: true });
@@ -363,22 +362,24 @@ class Sortable {
     drag.$item.style.transform = `translate3d(0, ${drag.currentTranslateY}px, 0)`;
 
     const dragTop = drag.startTop + drag.currentTranslateY;
+    const dragEdge = drag.moveDir === 'down' ? dragTop + drag.height : dragTop;
     const $siblings = this.#getItems().filter(
       $el => $el !== drag.$item && $el !== drag.$placeholder
     );
     let inserted = false;
+    let placeholderMoved = false;
 
     for (const $el of $siblings) {
-      const rect = drag.cachedRects.get($el) || $el.getBoundingClientRect();
+      const rect = $el.getBoundingClientRect();
 
       // eslint-disable-next-line no-magic-numbers
       const overlapPx = Math.min(rect.height * this.overlapThreshold, 100);
       const triggerY = drag.moveDir === 'down' ? rect.top + overlapPx : rect.bottom - overlapPx;
 
-      if (dragTop < triggerY) {
+      if (dragEdge < triggerY) {
         if (drag.$placeholder.nextSibling !== $el) {
           this.$container.insertBefore(drag.$placeholder, $el);
-          this.#cacheSiblingRects();
+          placeholderMoved = true;
         }
 
         inserted = true;
@@ -392,8 +393,13 @@ class Sortable {
 
       if ($afterLastSortableItem !== drag.$placeholder) {
         this.$container.insertBefore(drag.$placeholder, $afterLastSortableItem);
-        this.#cacheSiblingRects();
+        placeholderMoved = true;
       }
+    }
+
+    if (placeholderMoved) {
+      // a moved placeholder changes sibling positions, so validate once more after layout settles
+      drag.frame = requestAnimationFrame(this.renderDragHandler);
     }
   }
 
@@ -413,9 +419,10 @@ class Sortable {
     document.removeEventListener('pointermove', this.onPointerMoveHandler);
     document.removeEventListener('pointerup', this.onPointerUpHandler);
     document.removeEventListener('pointercancel', this.onPointerUpHandler);
-    document.body.style.userSelect = '';
+    document.documentElement.style.userSelect = '';
 
     if (drag.$item) {
+      drag.$item.classList.remove('sortable-dragging');
       drag.$item.style.position = '';
       drag.$item.style.left = '';
       drag.$item.style.top = '';
@@ -454,7 +461,7 @@ class Sortable {
    */
   #onKeyDown (e) {
     const $handle = e.target.closest(this.handleSelector);
-    if (!$handle || !this.$container.contains($handle)) {
+    if (!$handle || $handle.classList.contains('disabled') || !this.$container.contains($handle)) {
       return;
     }
 
