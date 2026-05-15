@@ -14,6 +14,8 @@
   [#389](https://github.com/cadeyrn/enterprise-policy-generator/issues/389)
 - A confirmation dialog now appears when deleting saved configurations, see
   [#390](https://github.com/cadeyrn/enterprise-policy-generator/issues/390)
+- Added option to rename saved configurations, see
+  [#399](https://github.com/cadeyrn/enterprise-policy-generator/issues/399)
 - Show an error message for invalid configurations in the import dialog, see
   [#396](https://github.com/cadeyrn/enterprise-policy-generator/issues/396)
 - Added option to add headings within policy options without affecting the generated output, see
