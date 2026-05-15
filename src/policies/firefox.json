@@ -21,7 +21,7 @@
       "schema": "boolean"
     },
     "AIControls": {
-      "availability": { "mainstream": "149.0.2", "esr": null },
+      "availability": { "mainstream": "149.0.2", "esr": "153.0" },
       "tags": ["features"],
       "exclude": ["GenerativeAI", "TranslateEnabled"],
       "schema": "object",
@@ -162,13 +162,13 @@
       "preset": "enable"
     },
     "VisualSearchEnabled": {
-      "availability": { "mainstream": "144.0", "esr": null },
+      "availability": { "mainstream": "144.0", "esr": "153.0" },
       "tags": ["features"],
       "schema": "enum",
       "preset": "enable"
     },
     "IPProtectionAvailable": {
-      "availability": { "mainstream": "149.0.2", "esr": null },
+      "availability": { "mainstream": "149.0.2", "esr": "153.0" },
       "tags": ["features"],
       "schema": "boolean",
       "inverse": true
@@ -2472,7 +2472,7 @@
       }
     },
     "LocalNetworkAccess": {
-      "availability": { "mainstream": "150.0", "esr": null },
+      "availability": { "mainstream": "150.0", "esr": "153.0" },
       "tags": ["network"],
       "schema": "object",
       "lockable": true,
@@ -3176,7 +3176,7 @@
       "schema": "boolean"
     },
     "DisableRemoteImprovements": {
-      "availability": { "mainstream": "148.0", "esr": null },
+      "availability": { "mainstream": "148.0", "esr": "153.0" },
       "tags": ["updates-and-data"],
       "schema": "boolean"
     },
@@ -3197,7 +3197,7 @@
       "schema": "boolean"
     },
     "BrowserDataBackup": {
-      "availability": { "mainstream": "145.0", "esr": null },
+      "availability": { "mainstream": "145.0", "esr": "153.0" },
       "tags": ["others"],
       "schema": "object",
       "properties": [
