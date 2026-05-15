@@ -1089,19 +1089,19 @@
     "message": "File extension"
   },
   "policy_description_Handlers_type_file_extension_placeholder": {
-    "message": "e.g. “pdf”"
+    "message": "e.g., “pdf”"
   },
   "policy_description_Handlers_type_mime_type": {
     "message": "MIME type"
   },
   "policy_description_Handlers_type_mime_type_placeholder": {
-    "message": "e.g. “application/msword”"
+    "message": "e.g., “application/msword”"
   },
   "policy_description_Handlers_type_schema": {
     "message": "Scheme"
   },
   "policy_description_Handlers_type_schema_placeholder": {
-    "message": "e.g. “mailto”"
+    "message": "e.g., “mailto”"
   },
   "policy_description_HardwareAcceleration": {
     "message": "Désactiver l'accélération matérielle"
@@ -1478,6 +1478,24 @@
   "policy_description_Proxy_UseProxyForDNS_true": {
     "message": "Utiliser Proxy DNS"
   },
+  "policy_description_RelaunchRequired": {
+    "message": "Require Firefox to relaunch within a specified period after an update"
+  },
+  "policy_description_RelaunchRequired_NotificationPeriodHours": {
+    "message": "Minimum number of hours before users are notified of the required relaunch"
+  },
+  "policy_description_RelaunchRequired_NotificationPeriodHours_placeholder": {
+    "message": "e.g., 24"
+  },
+  "policy_description_RelaunchRequired_RestartTimeOfDay": {
+    "message": "Relaunch time"
+  },
+  "policy_description_RelaunchRequired_RestartTimeOfDay_Hour_placeholder": {
+    "message": "Hour (0 – 23)"
+  },
+  "policy_description_RelaunchRequired_RestartTimeOfDay_Minute_placeholder": {
+    "message": "Minute (0 – 59)"
+  },
   "policy_description_RequestedLocales": {
     "message": "Changer l'interface de language de Firefox"
   },
@@ -1557,7 +1575,7 @@
     "message": "Nom"
   },
   "policy_description_SearchEngines_Add_PostData": {
-    "message": "Données POST (si la méthode POST a été sélectionnée; e.g. q={searchTerms}&anotherParam=yes)"
+    "message": "Données POST (si la méthode POST a été sélectionnée; e.g., q={searchTerms}&anotherParam=yes)"
   },
   "policy_description_SearchEngines_Add_SuggestURLTemplate": {
     "message": "Adresse pour les suggestions. Veuillez utiliser {conditions de recherche} comme caractère de remplacement pour le terme de recherche"

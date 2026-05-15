@@ -38,6 +38,8 @@
   [#401](https://github.com/cadeyrn/enterprise-policy-generator/issues/401)
 - Added support for the `DefaultSerialGuardSetting` policy, see
   [#402](https://github.com/cadeyrn/enterprise-policy-generator/issues/402)
+- Added support for the `RelaunchRequired` policy, see
+  [#403](https://github.com/cadeyrn/enterprise-policy-generator/issues/403)
 - The `DefaultDownloadDirectory` and `DownloadDirectory` policies exclude each other now, see
   [#391](https://github.com/cadeyrn/enterprise-policy-generator/issues/391)
 - Because the `DisabledCiphers` policy has so many options, they have been grouped by security characteristics, see

@@ -1478,6 +1478,24 @@
   "policy_description_Proxy_UseProxyForDNS_true": {
     "message": "Use Proxy DNS"
   },
+  "policy_description_RelaunchRequired": {
+    "message": "Require Firefox to relaunch within a specified period after an update"
+  },
+  "policy_description_RelaunchRequired_NotificationPeriodHours": {
+    "message": "Minimum number of hours before users are notified of the required relaunch"
+  },
+  "policy_description_RelaunchRequired_NotificationPeriodHours_placeholder": {
+    "message": "e.g., 24"
+  },
+  "policy_description_RelaunchRequired_RestartTimeOfDay": {
+    "message": "Relaunch time"
+  },
+  "policy_description_RelaunchRequired_RestartTimeOfDay_Hour_placeholder": {
+    "message": "Hour (0 – 23)"
+  },
+  "policy_description_RelaunchRequired_RestartTimeOfDay_Minute_placeholder": {
+    "message": "Minute (0 – 59)"
+  },
   "policy_description_RequestedLocales": {
     "message": "Change interface language of Firefox"
   },

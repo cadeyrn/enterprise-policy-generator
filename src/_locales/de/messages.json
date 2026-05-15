@@ -1478,6 +1478,24 @@
   "policy_description_Proxy_UseProxyForDNS_true": {
     "message": "Proxy-DNS verwenden"
   },
+  "policy_description_RelaunchRequired": {
+    "message": "Firefox-Neustart innerhalb eines bestimmten Zeitraums nach einem Update erzwingen"
+  },
+  "policy_description_RelaunchRequired_NotificationPeriodHours": {
+    "message": "Mindestanzahl der Stunden, bevor Nutzer über den erforderlichen Neustart benachrichtigt werden"
+  },
+  "policy_description_RelaunchRequired_NotificationPeriodHours_placeholder": {
+    "message": "z.B. 24"
+  },
+  "policy_description_RelaunchRequired_RestartTimeOfDay": {
+    "message": "Zeitpunkt für den Neustart"
+  },
+  "policy_description_RelaunchRequired_RestartTimeOfDay_Hour_placeholder": {
+    "message": "Stunde (0 – 23)"
+  },
+  "policy_description_RelaunchRequired_RestartTimeOfDay_Minute_placeholder": {
+    "message": "Minute (0 – 59)"
+  },
   "policy_description_RequestedLocales": {
     "message": "Oberflächen-Sprache von Firefox ändern"
   },
@@ -1626,7 +1644,7 @@
     "message": "Durch diese Regel angewendete Richtlinien"
   },
   "policy_description_SitePolicies_site": {
-    "message": "Domain-Muster (z. B. *.example.com oder *)"
+    "message": "Domain-Muster (z.B. *.example.com oder *)"
   },
   "policy_description_SkipTermsOfUse": {
     "message": "Nutzungsbedingungen und Datenschutzhinweis beim ersten Start von Firefox anzeigen. Werden diese nicht angezeigt, wird damit erklärt, dass die Nutzungsbedingungen im Namen aller Personen akzeptiert werden, die Zugriff auf den Browser haben, und dass die Berechtigung besteht, diese stellvertretend zu akzeptieren."

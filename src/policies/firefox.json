@@ -3174,7 +3174,7 @@
     "DisableAppUpdate": {
       "availability": { "mainstream": "62.0", "esr": "60.0" },
       "tags": ["updates-and-data"],
-      "exclude": ["AppAutoUpdate", "AppUpdatePin", "AppUpdateURL", "BackgroundAppUpdate", "ManualAppUpdateOnly"],
+      "exclude": ["AppAutoUpdate", "AppUpdatePin", "AppUpdateURL", "BackgroundAppUpdate", "ManualAppUpdateOnly", "RelaunchRequired"],
       "schema": "boolean"
     },
     "AppAutoUpdate": {
@@ -3219,6 +3219,48 @@
       "schema": "string",
       "placeholder": "common_url",
       "validations": ["required", "url"]
+    },
+    "RelaunchRequired": {
+      "availability": { "mainstream": "151.0", "esr": "153.0" },
+      "tags": ["updates-and-data"],
+      "exclude": ["DisableAppUpdate"],
+      "schema": "object",
+      "properties": [
+        {
+          "name": "NotificationPeriodHours",
+          "label": "policy_description_RelaunchRequired_NotificationPeriodHours",
+          "schema": "string",
+          "placeholder": "policy_description_RelaunchRequired_NotificationPeriodHours_placeholder",
+          "validations": ["number"]
+        },
+        {
+          "name": "RestartTimeOfDay",
+          "label": "policy_description_RelaunchRequired_RestartTimeOfDay",
+          "schema": "object",
+          "properties": [
+            {
+              "name": "Hour",
+              "schema": "string",
+              "placeholder": "policy_description_RelaunchRequired_RestartTimeOfDay_Hour_placeholder",
+              "validations": ["number"],
+              "regex": {
+                "pattern": "^(?:2[0-3]|1\\d|\\d)$",
+                "error": "validation_invalid_number"
+              }
+            },
+            {
+              "name": "Minute",
+              "schema": "string",
+              "placeholder": "policy_description_RelaunchRequired_RestartTimeOfDay_Minute_placeholder",
+              "validations": ["number"],
+              "regex": {
+                "pattern": "^(?:[1-5]?\\d)$",
+                "error": "validation_invalid_number"
+              }
+            }
+          ]
+        }
+      ]
     },
     "ExtensionUpdate": {
       "availability": { "mainstream": "67.0", "esr": "60.7" },
