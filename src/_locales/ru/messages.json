@@ -57,7 +57,7 @@
     "message": "Configuration file"
   },
   "configuration_import_file_help": {
-    "message": "Choose a previously exported .policy file."
+    "message": "Select a .policy file previously exported from the Enterprise Policy Generator. A policies.json file used by Firefox cannot be imported."
   },
   "configuration_imported_success": {
     "message": "Configuration imported"
