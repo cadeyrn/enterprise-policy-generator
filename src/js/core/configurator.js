@@ -128,6 +128,10 @@ class Configurator {
       }
     }
 
+    // preload the icon to avoid flicker once needed
+    const lockedIcon = new Image();
+    lockedIcon.src = browser.runtime.getURL('images/locked.svg');
+
     // test if the download permission is granted
     Configurator.#testDownloadPermission();
 
