@@ -359,11 +359,13 @@ input, textarea {
     border-radius: var(--border-radius-field);
     background-color: var(--color-white);
     box-shadow: var(--shadow-field);
-    transition: border-color ease 220ms, box-shadow ease 220ms;
+    outline: 2px solid transparent;
+    outline-offset: -1px;
+    transition: border-color ease 220ms, outline-color ease 220ms;
 
     &:focus-visible {
       border-color: var(--color-focus-border);
-      box-shadow: var(--focus-ring);
+      outline-color: var(--focus-ring-color);
     }
   }
 }
@@ -758,14 +760,17 @@ input, textarea {
   border-radius: var(--border-radius-field);
   background-color: var(--color-white);
   box-shadow: var(--shadow-field);
+  outline: 2px solid transparent;
+  outline-offset: -1px;
   overflow: hidden;
+  transition: border-color ease 220ms, outline-color ease 220ms;
 
   &:has(select:focus) {
     border-color: var(--color-focus-border);
   }
 
   &:has(select:focus-visible) {
-    box-shadow: var(--focus-ring);
+    outline-color: var(--focus-ring-color);
   }
 
   &::after {
