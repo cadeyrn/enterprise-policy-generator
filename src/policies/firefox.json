@@ -1802,6 +1802,49 @@
         }
       ]
     },
+    "SitePolicies": {
+      "availability": { "mainstream": "150.0", "esr": "153.0" },
+      "tags": ["website"],
+      "schema": "array",
+      "note": "policy_description_SitePolicies_note",
+      "items": {
+        "schema": "object",
+        "label": "policy_description_SitePolicies_label_rules",
+        "properties": [
+          {
+            "name": "Match",
+            "label": "policy_description_SitePolicies_Match",
+            "schema": "array",
+            "items": {
+              "schema": "string",
+              "placeholder": "policy_description_SitePolicies_site"
+            }
+          },
+          {
+            "name": "Exceptions",
+            "label": "policy_description_SitePolicies_Exceptions",
+            "schema": "array",
+            "items": {
+              "schema": "string",
+              "placeholder": "policy_description_SitePolicies_site"
+            }
+          },
+          {
+            "name": "Policies",
+            "label": "policy_description_SitePolicies_Policies",
+            "schema": "object",
+            "properties": [
+              {
+                "name": "DisableJit",
+                "label": "policy_description_SitePolicies_DisableJit",
+                "schema": "enum",
+                "preset": "boolean_optional"
+              }
+            ]
+          }
+        ]
+      }
+    },
     "Permissions": {
       "availability": { "mainstream": "62.0", "esr": "60.2" },
       "tags": ["website"],

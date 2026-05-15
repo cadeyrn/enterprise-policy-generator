@@ -1595,6 +1595,30 @@
   "policy_description_ShowHomeButton": {
     "message": "Startseiten-Schaltfläche in der Symbolleiste anzeigen"
   },
+  "policy_description_SitePolicies": {
+    "message": "Website-spezifische Richtlinien konfigurieren"
+  },
+  "policy_description_SitePolicies_DisableJit": {
+    "message": "JavaScript-JIT-Compiler für zutreffende Websites deaktivieren"
+  },
+  "policy_description_SitePolicies_Exceptions": {
+    "message": "Von dieser Regel ausgenommene Websites"
+  },
+  "policy_description_SitePolicies_label_rules": {
+    "message": "Regeln"
+  },
+  "policy_description_SitePolicies_Match": {
+    "message": "Websites, für welche diese Regel gilt"
+  },
+  "policy_description_SitePolicies_note": {
+    "message": "Regeln werden der Reihe nach ausgewertet. Lassen Sie „Websites, für welche diese Regel gilt“ leer, um die Regel auf alle Websites anzuwenden."
+  },
+  "policy_description_SitePolicies_Policies": {
+    "message": "Durch diese Regel angewendete Richtlinien"
+  },
+  "policy_description_SitePolicies_site": {
+    "message": "Domain-Muster (z. B. *.example.com oder *)"
+  },
   "policy_description_SkipTermsOfUse": {
     "message": "Nutzungsbedingungen und Datenschutzhinweis beim ersten Start von Firefox anzeigen. Werden diese nicht angezeigt, wird damit erklärt, dass die Nutzungsbedingungen im Namen aller Personen akzeptiert werden, die Zugriff auf den Browser haben, und dass die Berechtigung besteht, diese stellvertretend zu akzeptieren."
   },

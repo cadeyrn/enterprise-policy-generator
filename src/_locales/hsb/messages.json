@@ -1595,6 +1595,30 @@
   "policy_description_ShowHomeButton": {
     "message": "Tłóčatko startoweje strony w symbolowej lajsće pokazać"
   },
+  "policy_description_SitePolicies": {
+    "message": "Configure website-specific policies"
+  },
+  "policy_description_SitePolicies_DisableJit": {
+    "message": "Disable the JavaScript JIT compiler for matching websites"
+  },
+  "policy_description_SitePolicies_Exceptions": {
+    "message": "Websites excluded from this rule"
+  },
+  "policy_description_SitePolicies_label_rules": {
+    "message": "Rules"
+  },
+  "policy_description_SitePolicies_Match": {
+    "message": "Websites this rule applies to"
+  },
+  "policy_description_SitePolicies_note": {
+    "message": "Rules are evaluated in order. Leave “Websites this rule applies to” empty to apply the rule to all websites."
+  },
+  "policy_description_SitePolicies_Policies": {
+    "message": "Policies applied by this rule"
+  },
+  "policy_description_SitePolicies_site": {
+    "message": "Domain pattern (for example *.example.com or *)"
+  },
   "policy_description_SkipTermsOfUse": {
     "message": "Wužiwanske wuměnjenja a pokazku škita datow při prěnim starće Firefox pokazać. Jeli so njepokazuja, so z tym deklaruje, zo so wužiwanske wuměnjenja w mjenje wšěch wosobow akceptuja, kotrež přistup k wobhladowakej maja a zo prawo wobsteji, te w zastupnistwje akceptować."
   },

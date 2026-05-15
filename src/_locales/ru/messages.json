@@ -1595,6 +1595,30 @@
   "policy_description_ShowHomeButton": {
     "message": "Показывать кнопку \"Домой\" на панели инструментов"
   },
+  "policy_description_SitePolicies": {
+    "message": "Configure website-specific policies"
+  },
+  "policy_description_SitePolicies_DisableJit": {
+    "message": "Disable the JavaScript JIT compiler for matching websites"
+  },
+  "policy_description_SitePolicies_Exceptions": {
+    "message": "Websites excluded from this rule"
+  },
+  "policy_description_SitePolicies_label_rules": {
+    "message": "Rules"
+  },
+  "policy_description_SitePolicies_Match": {
+    "message": "Websites this rule applies to"
+  },
+  "policy_description_SitePolicies_note": {
+    "message": "Rules are evaluated in order. Leave “Websites this rule applies to” empty to apply the rule to all websites."
+  },
+  "policy_description_SitePolicies_Policies": {
+    "message": "Policies applied by this rule"
+  },
+  "policy_description_SitePolicies_site": {
+    "message": "Domain pattern (for example *.example.com or *)"
+  },
   "policy_description_SkipTermsOfUse": {
     "message": "Показывать условия использования и уведомление о конфиденциальности при первом запуске Firefox. Если отключить, это будет означать, что условия использования принимаются от имени всех лиц, имеющих доступ к браузеру, и что вы имеете право принимать эти условия от их имени."
   },

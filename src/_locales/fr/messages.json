@@ -1595,6 +1595,30 @@
   "policy_description_ShowHomeButton": {
     "message": "Show the home button on the toolbar"
   },
+  "policy_description_SitePolicies": {
+    "message": "Configure website-specific policies"
+  },
+  "policy_description_SitePolicies_DisableJit": {
+    "message": "Disable the JavaScript JIT compiler for matching websites"
+  },
+  "policy_description_SitePolicies_Exceptions": {
+    "message": "Websites excluded from this rule"
+  },
+  "policy_description_SitePolicies_label_rules": {
+    "message": "Rules"
+  },
+  "policy_description_SitePolicies_Match": {
+    "message": "Websites this rule applies to"
+  },
+  "policy_description_SitePolicies_note": {
+    "message": "Rules are evaluated in order. Leave “Websites this rule applies to” empty to apply the rule to all websites."
+  },
+  "policy_description_SitePolicies_Policies": {
+    "message": "Policies applied by this rule"
+  },
+  "policy_description_SitePolicies_site": {
+    "message": "Domain pattern (for example *.example.com or *)"
+  },
   "policy_description_SkipTermsOfUse": {
     "message": "Show terms of use and privacy notice when Firefox is started for the first time. If you disable it, it means that the terms of use are accepted on behalf of all persons who have access to the browser, and that you have the authority to accept them on their behalf."
   },
