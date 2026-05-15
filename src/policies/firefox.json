@@ -768,6 +768,13 @@
             ]
           },
           {
+            "name": "update_url",
+            "label": "policy_description_ExtensionSettings_update_url",
+            "schema": "string",
+            "placeholder": "common_url",
+            "validations": ["url"]
+          },
+          {
             "name": "private_browsing",
             "label": "policy_description_ExtensionSettings_private_browsing",
             "schema": "enum",

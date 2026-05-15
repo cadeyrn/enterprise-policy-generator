@@ -986,6 +986,9 @@
   "policy_description_ExtensionSettings_temporarily_allow_weak_signatures_single": {
     "message": "Instalacija rozšěrjenja ze słabym signaturowym algoritmusom dopušćić"
   },
+  "policy_description_ExtensionSettings_update_url": {
+    "message": "Update URL (Firefox 151+)"
+  },
   "policy_description_ExtensionSettings_updates_disabled": {
     "message": "Awtomatiske aktualizacije dowolić"
   },
