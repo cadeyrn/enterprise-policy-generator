@@ -653,7 +653,7 @@ class Management {
       $policyOutput.textContent = Output.generatePoliciesOutput();
     }
 
-    document.getElementById('action-links').classList.remove('hidden');
+    document.getElementById('action-buttons').classList.remove('hidden');
     await Management.#closeDialog($listConfigurationDialog);
     Management.#showStatusPopover(document.getElementById('load-configuration-popover'));
   }

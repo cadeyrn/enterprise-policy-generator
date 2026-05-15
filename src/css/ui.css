@@ -1607,7 +1607,7 @@ dialog.output-fullscreen-dialog {
   }
 }
 
-.action-links {
+.action-buttons {
   &:not(.hidden) {
     display: flex;
     align-items: center;
@@ -1621,7 +1621,8 @@ dialog.output-fullscreen-dialog {
     align-items: center;
     gap: 8px;
     box-sizing: border-box;
-    padding: 8px 12px;
+    padding: 0 12px;
+    height: 34px;
     border: 1px solid var(--color-surface-border);
     border-radius: var(--border-radius-pill);
     background-color: var(--color-white);
@@ -1744,7 +1745,7 @@ dialog.output-fullscreen-dialog {
     margin: 0 0 14px 1px;
   }
 
-  .action-links:not(.hidden) {
+  .action-buttons:not(.hidden) {
     margin-top: 0;
   }
 }

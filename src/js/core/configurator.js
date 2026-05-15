@@ -11,8 +11,8 @@ const POPOVER_DURATION_IN_MS = 4000;
 /** @type {number} */
 const MINIMUM_SUPPORTED_VERSION = 140.0;
 
-const $actionLinks = document.getElementById('action-links');
-const $downloadLink = document.getElementById('download');
+const $actionButtons = document.getElementById('action-buttons');
+const $downloadButton = document.getElementById('download');
 const $generatorForm = document.getElementById('generator-form');
 const $grantDownloadPermissionLink = document.getElementById('grant-download-permission');
 const $policyGeneratorButton = document.getElementById('generate');
@@ -189,7 +189,7 @@ class Configurator {
         $policyOutput.textContent = Output.generatePoliciesOutput();
       }
 
-      $actionLinks.classList.remove('hidden');
+      $actionButtons.classList.remove('hidden');
     });
 
     // focus the "generate policies" button via keyboard shortcut
@@ -242,7 +242,7 @@ class Configurator {
     });
 
     // add the event listener for the "download policies.json" link if downloads permission is granted
-    $downloadLink.addEventListener('click', () => {
+    $downloadButton.addEventListener('click', () => {
       Configurator.#downloadPolicy();
     });
 
@@ -1421,7 +1421,7 @@ class Configurator {
     // real download link instead
     if (granted) {
       $grantDownloadPermissionLink.classList.add('hidden');
-      $downloadLink.classList.remove('hidden');
+      $downloadButton.classList.remove('hidden');
     }
   }
 
