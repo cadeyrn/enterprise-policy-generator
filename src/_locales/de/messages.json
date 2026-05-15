@@ -182,13 +182,13 @@
   "list_dialog_window_title": {
     "message": "Gespeicherte Konfigurationen"
   },
-  "list_table_actions": {
+  "list_header_actions": {
     "message": "Aktionen"
   },
-  "list_table_name": {
+  "list_header_name": {
     "message": "Name"
   },
-  "list_table_time": {
+  "list_header_time": {
     "message": "Zeitpunkt"
   },
   "lock_preference": {

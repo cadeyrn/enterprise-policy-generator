@@ -1,6 +1,6 @@
 'use strict';
 
-/* global DOWNLOAD_PERMISSION, I18n, Migrator, Output, POPOVER_DURATION_IN_MS, Serializer */
+/* global DOWNLOAD_PERMISSION, I18n, Migrator, Output, POPOVER_DURATION_IN_MS, Serializer, Sortable */
 
 const BASE64_BINARY_CHUNK_SIZE = 8192;
 const DIALOG_CLOSE_ANIMATION_DURATION_IN_MS = 300;
@@ -238,6 +238,15 @@ class Management {
     $closeButton.addEventListener('click', () => {
       void Management.#closeDialog($listConfigurationDialog);
     });
+
+    new Sortable($configurationTable.querySelector('.configuration-list-body'), {
+      itemSelector: '.configuration-row',
+      getDragElementContainer: $item => $item.parentElement,
+      overlapThreshold: 0.5,
+      onUpdate: items => {
+        void Management.#reorderConfigurations(items);
+      }
+    });
   }
 
   /**
@@ -382,34 +391,49 @@ class Management {
       $configurationTable.classList.remove('hidden');
     }
 
-    // tbody element, configuration rows will be added here
-    const $tableBody = $configurationTable.querySelector('tbody');
+    // configuration list items will be added here
+    const $configurationList = $configurationTable.querySelector('.configuration-list-body');
 
     // remove old content
-    while ($tableBody.firstChild) {
-      $tableBody.removeChild($tableBody.firstChild);
+    while ($configurationList.firstChild) {
+      $configurationList.removeChild($configurationList.firstChild);
     }
 
-    // add configurations to the table
+    // add configurations to the list
     for (const [idx, configuration] of configurations.entries()) {
-      // row
-      const $row = document.createElement('tr');
-      $tableBody.appendChild($row);
+      // list item
+      const $row = document.createElement('div');
+      $row.classList.add('configuration-row');
+      $row.setAttribute('role', 'listitem');
+      $row.setAttribute('data-idx', idx.toString());
+      $configurationList.appendChild($row);
+
+      // reorder column
+      const $reorderColumn = document.createElement('div');
+      $reorderColumn.classList.add('reorder');
+      $row.appendChild($reorderColumn);
+
+      const $reorderButton = document.createElement('button');
+      $reorderButton.setAttribute('type', 'button');
+      $reorderButton.classList.add('sortable-handle', 'configuration-sortable-handle');
+      $reorderColumn.appendChild($reorderButton);
 
       // name column
-      const $nameColumn = document.createElement('td');
+      const $nameColumn = document.createElement('div');
+      $nameColumn.classList.add('name');
       $nameColumn.textContent = configuration.name;
       $row.appendChild($nameColumn);
 
       // time column
-      const $timeColumn = document.createElement('td');
+      const $timeColumn = document.createElement('div');
+      $timeColumn.classList.add('time');
       $timeColumn.textContent = new Intl.DateTimeFormat('default', {
         day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'
       }).format(configuration.time);
       $row.appendChild($timeColumn);
 
       // icon column
-      const $iconColumn = document.createElement('td');
+      const $iconColumn = document.createElement('div');
       $iconColumn.classList.add('actions');
       $row.appendChild($iconColumn);
 
@@ -441,6 +465,7 @@ class Management {
 
       const $loadIcon = document.createElement('img');
       $loadIcon.src = `/images/${configuration.schema ? 'checkmark' : 'warning'}.svg`;
+      // eslint-disable-next-line no-magic-numbers
       $loadIcon.width = configuration.schema ? 19 : 18;
       $loadIcon.height = 18;
       $loadIcon.alt = '';
@@ -518,7 +543,91 @@ class Management {
       $deleteButton.appendChild($deleteIcon);
     }
 
+    Management.#updateConfigurationRowIndices();
     Management.#testDownloadPermission();
+  }
+
+  /**
+   * Store the manually reordered configuration list.
+   *
+   * @param {HTMLElement[]} items - configuration rows in their new order
+   *
+   * @returns {Promise<void>}
+   */
+  static async #reorderConfigurations (items) {
+    const order = items.map($row => Number($row.getAttribute('data-idx')));
+    const { configurations } = await browser.storage.local.get({ configurations: [] });
+
+    if (
+      order.length !== configurations.length ||
+      new Set(order).size !== configurations.length ||
+      order.some(idx => !Number.isInteger(idx) || idx < 0 || idx >= configurations.length)
+    ) {
+      return;
+    }
+
+    await browser.storage.local.set({
+      configurations: order.map(idx => configurations[idx])
+    });
+
+    Management.#updateConfigurationRowIndices();
+  }
+
+  /**
+   * Update row and action indexes after configurations have been reordered.
+   *
+   * @returns {void}
+   */
+  static #updateConfigurationRowIndices () {
+    const $rows = $configurationTable.querySelectorAll('.configuration-list-body .configuration-row');
+    const disableReorder = $rows.length <= 1;
+
+    $rows.forEach(($row, idx) => {
+      $row.setAttribute('data-idx', idx.toString());
+
+      $row.querySelectorAll('[data-idx]').forEach($action => {
+        $action.setAttribute('data-idx', idx.toString());
+      });
+
+      Management.#updateConfigurationReorderButton(
+        $row.querySelector('.configuration-sortable-handle'),
+        idx,
+        disableReorder
+      );
+    });
+  }
+
+  /**
+   * Update the accessible label and state for a configuration reorder button.
+   *
+   * @param {?Element} $button - the reorder button
+   * @param {number} idx - the current row index
+   * @param {boolean} disabled - whether reordering is unavailable
+   *
+   * @returns {void}
+   */
+  static #updateConfigurationReorderButton ($button, idx, disabled) {
+    if (!$button) {
+      return;
+    }
+
+    const label = I18n.getMessage('array_sort_a11y_drag_handle_label', [(idx + 1).toString()]);
+
+    $button.setAttribute('aria-label', label);
+
+    if (disabled) {
+      $button.setAttribute('aria-disabled', 'true');
+      $button.setAttribute('tabindex', '-1');
+      $button.removeAttribute('title');
+      $button.classList.add('disabled');
+
+      return;
+    }
+
+    $button.removeAttribute('aria-disabled');
+    $button.removeAttribute('tabindex');
+    $button.setAttribute('title', label);
+    $button.classList.remove('disabled');
   }
 
   /**

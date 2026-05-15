@@ -182,13 +182,13 @@
   "list_dialog_window_title": {
     "message": "Saved configurations"
   },
-  "list_table_actions": {
+  "list_header_actions": {
     "message": "Akcije"
   },
-  "list_table_name": {
+  "list_header_name": {
     "message": "Mjeno"
   },
-  "list_table_time": {
+  "list_header_time": {
     "message": "Časowy dypk"
   },
   "lock_preference": {

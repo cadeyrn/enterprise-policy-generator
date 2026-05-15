@@ -177,16 +177,15 @@
       </header>
       <div class="content">
         <div id="no-saved-configurations" class="hidden" data-i18n="list_dialog_no_saved_configurations"></div>
-        <table id="list-configurations-table" class="hidden">
-          <thead>
-            <tr>
-              <th data-i18n="list_table_name"></th>
-              <th class="time" data-i18n="list_table_time"></th>
-              <th class="actions" data-i18n="list_table_actions"></th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
+        <div id="list-configurations-table" class="configuration-list hidden">
+          <div class="configuration-list-header" aria-hidden="true">
+            <div class="reorder"></div>
+            <div class="name" data-i18n="list_header_name"></div>
+            <div class="time" data-i18n="list_header_time"></div>
+            <div class="actions" data-i18n="list_header_actions"></div>
+          </div>
+          <div class="configuration-list-body" role="list" aria-labelledby="configuration-list-dialog-header"></div>
+        </div>
       </div>
       <aside>
         <button type="button" id="button-list-dialog-cancel" class="button secondary-action" autofocus>
