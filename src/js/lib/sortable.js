@@ -265,7 +265,6 @@ class Sortable {
 
     $dragElementContainer.appendChild($item);
     document.documentElement.style.userSelect = 'none';
-    document.body.style.userSelect = 'none';
     document.getSelection()?.removeAllRanges();
 
     document.addEventListener('pointermove', this.onPointerMoveHandler, { passive: true });
