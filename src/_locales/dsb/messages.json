@@ -1148,6 +1148,21 @@
   "policy_description_LocalFileLinks": {
     "message": "Wěstym websedłam dowóliś, na lokalne dataje wótkazaś"
   },
+  "policy_description_LocalNetworkAccess": {
+    "message": "Configure security features for local network resource access"
+  },
+  "policy_description_LocalNetworkAccess_BlockTrackers": {
+    "message": "Block third-party trackers from accessing localhost and local network resources"
+  },
+  "policy_description_LocalNetworkAccess_Enabled": {
+    "message": "Enforce security checks for local network access"
+  },
+  "policy_description_LocalNetworkAccess_EnablePrompting": {
+    "message": "Ask users for permission before websites can access local network resources"
+  },
+  "policy_description_LocalNetworkAccess_SkipDomains": {
+    "message": "Domains for which local network access checks are skipped"
+  },
   "policy_description_ManagedBookmarks": {
     "message": "Zastojane cytańske znamjenja (wót wužywarja njezměnjobne abo njelašujobne)"
   },

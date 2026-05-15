@@ -1148,6 +1148,21 @@
   "policy_description_LocalFileLinks": {
     "message": "Bestimmten Websites erlauben, lokale Dateien zu verlinken"
   },
+  "policy_description_LocalNetworkAccess": {
+    "message": "Sicherheitsfunktionen für den Zugriff auf lokale Netzwerkressourcen konfigurieren"
+  },
+  "policy_description_LocalNetworkAccess_BlockTrackers": {
+    "message": "Zugriffe von Drittanbieter-Trackern auf localhost und lokale Netzwerkressourcen blockieren"
+  },
+  "policy_description_LocalNetworkAccess_Enabled": {
+    "message": "Sicherheitsprüfungen für lokale Netzwerkzugriffe erzwingen"
+  },
+  "policy_description_LocalNetworkAccess_EnablePrompting": {
+    "message": "Benutzer um Erlaubnis fragen, bevor Websites auf lokale Netzwerkressourcen zugreifen dürfen"
+  },
+  "policy_description_LocalNetworkAccess_SkipDomains": {
+    "message": "Domains, für welche die Prüfung des lokalen Netzwerkzugriffs übersprungen wird"
+  },
   "policy_description_ManagedBookmarks": {
     "message": "Verwaltete Lesezeichen (nicht durch den Benutzer veränderbar oder löschbar)"
   },

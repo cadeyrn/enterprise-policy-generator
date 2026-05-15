@@ -2471,6 +2471,42 @@
         "validations": ["required"]
       }
     },
+    "LocalNetworkAccess": {
+      "availability": { "mainstream": "150.0", "esr": null },
+      "tags": ["network"],
+      "schema": "object",
+      "lockable": true,
+      "properties": [
+        {
+          "name": "Enabled",
+          "label": "policy_description_LocalNetworkAccess_Enabled",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "BlockTrackers",
+          "label": "policy_description_LocalNetworkAccess_BlockTrackers",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "EnablePrompting",
+          "label": "policy_description_LocalNetworkAccess_EnablePrompting",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
+          "name": "SkipDomains",
+          "label": "policy_description_LocalNetworkAccess_SkipDomains",
+          "schema": "array",
+          "items": {
+            "schema": "string",
+            "placeholder": "common_domain",
+            "validations": ["required"]
+          }
+        }
+      ]
+    },
     "Certificates": {
       "availability": { "mainstream": "60.0", "esr": "60.0" },
       "tags": ["network"],
