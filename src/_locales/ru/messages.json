@@ -680,6 +680,15 @@
   "policy_description_DefaultDownloadDirectory_Label": {
     "message": "Для домашнего каталога ОС используйте ${home}"
   },
+  "policy_description_DefaultSerialGuardSetting": {
+    "message": "Set the behavior for the Web Serial API"
+  },
+  "policy_description_DefaultSerialGuardSetting_Allow": {
+    "message": "Allow access to the Web Serial API"
+  },
+  "policy_description_DefaultSerialGuardSetting_Block": {
+    "message": "Block access to the Web Serial API"
+  },
   "policy_description_DisableAccounts": {
     "message": "Отключить сервисы на основе аккаунта Mozilla, такие как Firefox Sync"
   },

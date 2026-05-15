@@ -680,6 +680,15 @@
   "policy_description_DefaultDownloadDirectory_Label": {
     "message": "对于原生的主目录可使用 ${home}"
   },
+  "policy_description_DefaultSerialGuardSetting": {
+    "message": "Set the behavior for the Web Serial API"
+  },
+  "policy_description_DefaultSerialGuardSetting_Allow": {
+    "message": "Allow access to the Web Serial API"
+  },
+  "policy_description_DefaultSerialGuardSetting_Block": {
+    "message": "Block access to the Web Serial API"
+  },
   "policy_description_DisableAccounts": {
     "message": "Disable Mozilla account-based services like Firefox Sync"
   },

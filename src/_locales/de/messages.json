@@ -680,6 +680,15 @@
   "policy_description_DefaultDownloadDirectory_Label": {
     "message": "Der Platzhalter ${home} kann für das native Benutzerverzeichnis verwendet werden"
   },
+  "policy_description_DefaultSerialGuardSetting": {
+    "message": "Verhalten für die Web Serial API festlegen"
+  },
+  "policy_description_DefaultSerialGuardSetting_Allow": {
+    "message": "Zugriff auf die Web Serial API erlauben"
+  },
+  "policy_description_DefaultSerialGuardSetting_Block": {
+    "message": "Zugriff auf die Web Serial API blockieren"
+  },
   "policy_description_DisableAccounts": {
     "message": "Auf dem Mozilla-Konto basierende Dienste wie Firefox Sync deaktivieren"
   },

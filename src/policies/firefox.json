@@ -2160,6 +2160,21 @@
         ]
       }
     },
+    "DefaultSerialGuardSetting": {
+      "availability": { "mainstream": "151.0", "esr": "153.0" },
+      "tags": ["website"],
+      "schema": "enum",
+      "options": [
+        {
+          "label": "policy_description_DefaultSerialGuardSetting_Block",
+          "value": 2
+        },
+        {
+          "label": "policy_description_DefaultSerialGuardSetting_Allow",
+          "value": 3
+        }
+      ]
+    },
     "XSLTEnabled": {
       "availability": { "mainstream": "151.0", "esr": "153.0" },
       "tags": ["website"],

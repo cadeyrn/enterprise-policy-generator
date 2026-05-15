@@ -680,6 +680,15 @@
   "policy_description_DefaultDownloadDirectory_Label": {
     "message": "Zastupujucy symbol ${home} dajo se za natiwny wužywarski zapis wužywaś"
   },
+  "policy_description_DefaultSerialGuardSetting": {
+    "message": "Set the behavior for the Web Serial API"
+  },
+  "policy_description_DefaultSerialGuardSetting_Allow": {
+    "message": "Allow access to the Web Serial API"
+  },
+  "policy_description_DefaultSerialGuardSetting_Block": {
+    "message": "Block access to the Web Serial API"
+  },
   "policy_description_DisableAccounts": {
     "message": "Słužby ako Firefox Sync znjemóžniś, kótarež na konśe Mozilla bazěruju"
   },
