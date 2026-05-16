@@ -1635,7 +1635,7 @@
     "message": "Configure website-specific policies"
   },
   "policy_description_SitePolicies_DisableJit": {
-    "message": "Disable the JavaScript JIT compiler for matching websites"
+    "message": "Disable the JavaScript JIT compiler"
   },
   "policy_description_SitePolicies_Exceptions": {
     "message": "Websites excluded from this rule"

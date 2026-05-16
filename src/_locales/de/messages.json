@@ -1635,7 +1635,7 @@
     "message": "Website-spezifische Richtlinien konfigurieren"
   },
   "policy_description_SitePolicies_DisableJit": {
-    "message": "JavaScript-JIT-Compiler für zutreffende Websites deaktivieren"
+    "message": "JavaScript-JIT-Compiler deaktivieren"
   },
   "policy_description_SitePolicies_Exceptions": {
     "message": "Von dieser Regel ausgenommene Websites"
