@@ -749,6 +749,57 @@ input, textarea {
   padding-right: 92px;
 }
 
+.number-wrapper {
+  > input {
+    padding-right: 68px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &:has(> .invalid-input-label:not(.hidden)) {
+    > input {
+      padding-right: 150px;
+    }
+
+    > .invalid-input-label {
+      right: 64px;
+    }
+  }
+}
+
+.number-input-controls {
+  display: grid;
+  grid-template-columns: repeat(2, 26px);
+  gap: 2px;
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  right: 3px;
+}
+
+.number-input-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .95rem;
+  line-height: 1;
+  border: 1px solid var(--color-surface-border);
+  border-radius: calc(var(--border-radius-field) - 2px);
+  background-color: var(--color-surface);
+  color: var(--color-muted);
+  transition: border-color ease 180ms, background-color ease 180ms, color ease 180ms;
+
+  &:hover {
+    border-color: var(--color-accent-border);
+    background-color: var(--color-blue-translucent);
+    color: var(--color-blue);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--focus-ring-color);
+    outline-offset: -1px;
+  }
+}
+
 .enum-wrapper {
   display: block;
   position: relative;

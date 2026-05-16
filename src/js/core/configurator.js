@@ -166,6 +166,9 @@ class Configurator {
       Dom.addEventListener($el, 'input', Configurator.#validateInputField);
     });
 
+    $generatorForm.addEventListener('mousedown', Configurator.#preserveNumberInputFocus);
+    $generatorForm.addEventListener('click', Configurator.#executeNumberInputAction);
+
     // add event listeners for array actions (add / remove buttons)
     document.querySelectorAll('.array-action').forEach($el => {
       Dom.addEventListener($el, 'click', Configurator.#executeArrayActions);
@@ -723,9 +726,18 @@ class Configurator {
       }
     }
     else if (type === 'number') {
+      $wrapper.classList.add('number-wrapper');
       $input.setAttribute('type', 'text');
       $input.setAttribute('inputmode', 'numeric');
       $input.setAttribute('pattern', '[0-9]*');
+
+      if (object.minimum) {
+        $input.setAttribute('data-minimum', object.minimum);
+      }
+
+      if (object.maximum) {
+        $input.setAttribute('data-maximum', object.maximum);
+      }
 
       // number validation
       Configurator.#addInvalidLabel($wrapper, 'number', 'validation_invalid_number');
@@ -791,7 +803,92 @@ class Configurator {
     }
 
     $wrapper.appendChild($input);
+
+    if (type === 'number') {
+      Configurator.#addNumberInputControls($wrapper);
+    }
+
     $el.appendChild($wrapper);
+  }
+
+  /**
+   * Add custom controls for numeric text fields.
+   *
+   * @param {HTMLElement} $wrapper - the wrapper of the input element
+   *
+   * @returns {void}
+   */
+  static #addNumberInputControls ($wrapper) {
+    const $controls = document.createElement('div');
+    $controls.classList.add('number-input-controls');
+    $wrapper.appendChild($controls);
+
+    for (const action of ['decrement', 'increment']) {
+      const $button = document.createElement('button');
+      const label = I18n.getMessage('number_input_' + action);
+
+      $button.setAttribute('type', 'button');
+      $button.setAttribute('aria-label', label);
+      $button.setAttribute('title', label);
+      $button.setAttribute('data-action', action);
+      $button.classList.add('number-input-control');
+      $controls.appendChild($button);
+
+      const $icon = document.createElement('img');
+      $icon.src = action === 'decrement' ? '/images/minus.svg' : '/images/plus.svg';
+      $icon.width = 10;
+      // eslint-disable-next-line no-magic-numbers
+      $icon.height = action === 'decrement' ? 2 : 10;
+      $icon.alt = '';
+      $icon.classList.add('action-img');
+      $button.appendChild($icon);
+    }
+  }
+
+  /**
+   * Keep pointer clicks on number controls from stealing focus from the input field.
+   *
+   * @param {MouseEvent} e - event object
+   *
+   * @returns {void}
+   */
+  static #preserveNumberInputFocus (e) {
+    if (e.target.closest('.number-input-control')) {
+      e.preventDefault();
+    }
+  }
+
+  /**
+   * Increment or decrement a numeric text field.
+   *
+   * @param {PointerEvent} e - event object
+   *
+   * @returns {void}
+   */
+  static #executeNumberInputAction (e) {
+    const $button = e.target.closest('.number-input-control');
+
+    if (!$button) {
+      return;
+    }
+
+    const $input = $button.closest('.number-wrapper').querySelector('input');
+    const min = parseInt($input.getAttribute('data-minimum') ?? '0');
+    const max = $input.hasAttribute('data-maximum') ? parseInt($input.getAttribute('data-maximum')) : null;
+    let value = Configurator.#isValidNumber($input.value) ? parseInt($input.value) : 0;
+
+    e.preventDefault();
+
+    value += $button.getAttribute('data-action') === 'increment' ? 1 : -1;
+    value = Math.max(value, min);
+
+    if (max !== null) {
+      value = Math.min(value, max);
+    }
+
+    $input.value = value.toString();
+    $input.dispatchEvent(new Event('input'));
+    $input.focus();
   }
 
   /**
@@ -1264,7 +1361,9 @@ class Configurator {
     }
 
     if (validations.includes('number')) {
-      if (value && !Configurator.#isValidNumber(value)) {
+      if (value && !Configurator.#isValidNumber(
+        value, $el.getAttribute('data-minimum'), $el.getAttribute('data-maximum')
+      )) {
         $parentEl.querySelector('.invalid-input-label[data-type=number]').classList.remove('hidden');
         valid = false;
       }
@@ -1341,13 +1440,29 @@ class Configurator {
    * Validation for a number field.
    *
    * @param {string} value - the value to check
+   * @param {?string} min - the minimum allowed value
+   * @param {?string} max - the maximum allowed value
    *
    * @returns {boolean} - whether the given name is a valid number
    */
-  static #isValidNumber (value) {
+  static #isValidNumber (value, min = null, max = null) {
     const regexp = new RegExp(/^\d+$/, 'gi');
 
-    return regexp.test(value);
+    if (!regexp.test(value)) {
+      return false;
+    }
+
+    const number = parseInt(value);
+
+    if (min !== null && number < parseInt(min)) {
+      return false;
+    }
+
+    if (max !== null && number > parseInt(max)) {
+      return false;
+    }
+
+    return true;
   }
 
   /**

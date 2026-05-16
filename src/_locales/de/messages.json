@@ -197,6 +197,12 @@
   "non_allowed_preference_label": {
     "message": "Einstellungsname nicht erlaubt"
   },
+  "number_input_decrement": {
+    "message": "Wert verringern"
+  },
+  "number_input_increment": {
+    "message": "Wert erhöhen"
+  },
   "output_fullscreen_close": {
     "message": "Vollbildansicht schließen"
   },

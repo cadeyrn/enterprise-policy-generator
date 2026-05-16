@@ -382,6 +382,12 @@
             "placeholder": {
               "type": "string"
             },
+            "minimum": {
+              "type": "integer"
+            },
+            "maximum": {
+              "type": "integer"
+            },
             "validations": {
               "type": "array",
               "items": {
@@ -407,6 +413,28 @@
             },
             "output_filter": {
               "type": "string"
+            }
+          },
+          "dependentSchemas": {
+            "minimum": {
+              "properties": {
+                "validations": {
+                  "contains": {
+                    "const": "number"
+                  }
+                }
+              },
+              "required": ["validations"]
+            },
+            "maximum": {
+              "properties": {
+                "validations": {
+                  "contains": {
+                    "const": "number"
+                  }
+                }
+              },
+              "required": ["validations"]
             }
           },
           "required": ["placeholder"]

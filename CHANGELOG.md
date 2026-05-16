@@ -20,6 +20,8 @@
   [#400](https://github.com/cadeyrn/enterprise-policy-generator/issues/400)
 - Show an error message for invalid configurations in the import dialog, see
   [#396](https://github.com/cadeyrn/enterprise-policy-generator/issues/396)
+- Added controls for number fields to allow users to change numbers using buttons, see
+  [#405](https://github.com/cadeyrn/enterprise-policy-generator/issues/405)
 - Added option to add headings within policy options without affecting the generated output, see
   [#398](https://github.com/cadeyrn/enterprise-policy-generator/issues/398)
 

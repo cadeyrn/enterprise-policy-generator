@@ -197,6 +197,12 @@
   "non_allowed_preference_label": {
     "message": "Preference name not allowed"
   },
+  "number_input_decrement": {
+    "message": "Decrease value"
+  },
+  "number_input_increment": {
+    "message": "Increase value"
+  },
   "output_fullscreen_close": {
     "message": "Close fullscreen view"
   },
