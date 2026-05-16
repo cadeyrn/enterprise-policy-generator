@@ -51,7 +51,7 @@
 
 #### Dependencies
 
-- Updated sourcemeta/jsonschema from version 15.2.0 to 15.6.1
+- Updated sourcemeta/jsonschema from version 15.2.0 to 15.6.2
 - Updated stylelint from version 17.9.1 to 17.11.0
 
 ---
