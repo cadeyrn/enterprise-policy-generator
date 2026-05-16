@@ -30,37 +30,37 @@
     "message": "URL"
   },
   "configuration_action_delete": {
-    "message": "Delete configuration $1"
+    "message": "Konfiguraciju $1 zhašeć"
   },
   "configuration_action_export": {
-    "message": "Export configuration $1"
+    "message": "Konfiguraciju $1 eksportować"
   },
   "configuration_action_load": {
-    "message": "Load configuration $1"
+    "message": "Konfiguraciju $1 začitać"
   },
   "configuration_action_rename": {
-    "message": "Rename configuration $1"
+    "message": "Konfiguraciju $1 přemjenować"
   },
   "configuration_action_show_incompatible": {
-    "message": "Show information about incompatible configuration $1"
+    "message": "Informacije wo inkompatibelnej konfiguraciji $1 pokazać"
   },
   "configuration_deleted_success": {
-    "message": "Configuration deleted"
+    "message": "Konfiguracija je so zhašała"
   },
   "configuration_import": {
     "message": "konfiguraciju importować"
   },
   "configuration_import_error": {
-    "message": "The configuration file could not be imported. Choose a valid .policy file."
+    "message": "Konfiguraciska dataja njeda so importować. Prošu wubjerće płaćiwu dataju .policy."
   },
   "configuration_import_file": {
-    "message": "Configuration file"
+    "message": "Konfiguraciska dataja"
   },
   "configuration_import_file_help": {
-    "message": "Select a .policy file previously exported from the Enterprise Policy Generator. A policies.json file used by Firefox cannot be imported."
+    "message": "Wubjerće dataju .policy, kotraž je so do toho z Enterprise Policy Generator eksportowała. Dataja policies.json, kotraž so přez Firefox wužiwa, njeda so importować."
   },
   "configuration_imported_success": {
-    "message": "Configuration imported"
+    "message": "Konfiguracija je so importowała"
   },
   "configuration_incompatible_btn_get_in_touch": {
     "message": "Migrowanu konfiguraciju dóstać"
@@ -81,25 +81,25 @@
     "message": "Konfiguracija kompatibelna njeje"
   },
   "configuration_loaded_success": {
-    "message": "Configuration loaded"
+    "message": "Konfiguracija je so začitała"
   },
   "configuration_management_headline": {
-    "message": "Manage configurations"
+    "message": "Konfiguraciju rjadować"
   },
   "configuration_renamed_success": {
-    "message": "Configuration renamed"
+    "message": "Konfiguracija je so přemjenowała"
   },
   "configuration_saved_success": {
-    "message": "Configuration saved"
+    "message": "Konfiguracija je so składowała"
   },
   "copy_to_clipboard_success": {
-    "message": "Code copied to clipboard"
+    "message": "Kod je so do mjezyskłada kopěrował"
   },
   "delete_configuration_dialog_intro": {
-    "message": "Are you sure you want to delete the configuration $1?"
+    "message": "Ma so konfiguracija $1 woprawdźe zhašeć?"
   },
   "delete_configuration_dialog_title": {
-    "message": "Delete configuration?"
+    "message": "Konfiguraciju zhašeć?"
   },
   "enum_value_block_no": {
     "message": "njeblokować"
@@ -126,7 +126,7 @@
     "message": "Pod about:policies je přehlad wo wšěch aktiwnych prawidłach kaž tež wo zmylkach w dataji „policies.json“."
   },
   "explanation_headline": {
-    "message": "What do I do with the output?"
+    "message": "Što činju z wudaćom?"
   },
   "explanation_intro": {
     "message": "Z kliknjenjom na tłóčatko so kod generuje. Tutón kod dyrbi so w dataji „policies.json“ do rjadowaka „distribution“ składować."
@@ -153,7 +153,7 @@
     "message": "Filter začinić"
   },
   "filter_field_open": {
-    "message": "Open filter"
+    "message": "Filter wočinić"
   },
   "generate_button": {
     "message": "Směrnicy generować"
@@ -180,7 +180,7 @@
     "message": "Konfiguracije hišće njejsu so składowali."
   },
   "list_dialog_window_title": {
-    "message": "Saved configurations"
+    "message": "Składowane konfiguracije"
   },
   "list_header_actions": {
     "message": "Akcije"
@@ -198,22 +198,22 @@
     "message": "Mjeno nastajenja dowolene njeje"
   },
   "number_input_decrement": {
-    "message": "Decrease value"
+    "message": "Hódnotu pomjeńšić"
   },
   "number_input_increment": {
-    "message": "Increase value"
+    "message": "Hódnotu powjetšić"
   },
   "output_fullscreen_close": {
-    "message": "Close fullscreen view"
+    "message": "Napohlad połneje wobrazowki začinić"
   },
   "output_fullscreen_open": {
-    "message": "Open fullscreen view"
+    "message": "Napohlad połneje wobrazowki wočinić"
   },
   "output_headline": {
-    "message": "Policies output"
+    "message": "Směrnicowe wudaće"
   },
   "output_placeholder": {
-    "message": "No policies generated yet"
+    "message": "Hišće směrnicy generowane njejsu"
   },
   "policy_category_authentication": {
     "message": "Awtentifikacija"
@@ -687,13 +687,13 @@
     "message": "Zastupowacy symbol ${home} da so za natiwny wužiwarski zapis wužiwać"
   },
   "policy_description_DefaultSerialGuardSetting": {
-    "message": "Set the behavior for the Web Serial API"
+    "message": "Zadźerženje za Web Serial API postajić"
   },
   "policy_description_DefaultSerialGuardSetting_Allow": {
-    "message": "Allow access to the Web Serial API"
+    "message": "Přistup k Web Serial API dowolić"
   },
   "policy_description_DefaultSerialGuardSetting_Block": {
-    "message": "Block access to the Web Serial API"
+    "message": "Přistup k Web Serial API blokować"
   },
   "policy_description_DisableAccounts": {
     "message": "Słužby kaž Firefox Sync znjemóžnić, kotrež na konće Mozilla bazuja"
@@ -708,22 +708,22 @@
     "message": "Wěste kryptografiske šifry zmóžnić abo znjemóžnić"
   },
   "policy_description_DisabledCiphers_heading_tls12_dhe_cbc_forward_secrecy": {
-    "message": "TLS 1.2: DHE with CBC and forward secrecy"
+    "message": "TLS 1.2: DHE z CBC a Forward Secrecy"
   },
   "policy_description_DisabledCiphers_heading_tls12_ecdhe_aead_forward_secrecy": {
-    "message": "TLS 1.2: ECDHE with AEAD and forward secrecy"
+    "message": "TLS 1.2: ECDHE z AEAD a Forward Secrecy"
   },
   "policy_description_DisabledCiphers_heading_tls12_ecdhe_cbc_forward_secrecy": {
-    "message": "TLS 1.2: ECDHE with CBC and forward secrecy"
+    "message": "TLS 1.2: ECDHE z CBC a Forward Secrecy"
   },
   "policy_description_DisabledCiphers_heading_tls12_rsa_3des": {
-    "message": "TLS 1.2: 3DES without forward secrecy"
+    "message": "TLS 1.2: 3DES bjez Forward Secrecy"
   },
   "policy_description_DisabledCiphers_heading_tls12_rsa_aes": {
-    "message": "TLS 1.2: RSA without forward secrecy"
+    "message": "TLS 1.2: RSA bjez Forward Secrecy"
   },
   "policy_description_DisabledCiphers_heading_tls13_aead_forward_secrecy": {
-    "message": "TLS 1.3: AEAD with integrated forward secrecy"
+    "message": "TLS 1.3: AEAD z integrowanej Forward Secrecy"
   },
   "policy_description_DisableDefaultBrowserAgent": {
     "message": "Standardny agent wobhladowaka znjemóžnić"
@@ -993,7 +993,7 @@
     "message": "Instalacija rozšěrjenja ze słabym signaturowym algoritmusom dopušćić"
   },
   "policy_description_ExtensionSettings_update_url": {
-    "message": "Update URL (Firefox 151+)"
+    "message": "URL aktualizacije (Firefox 151+)"
   },
   "policy_description_ExtensionSettings_updates_disabled": {
     "message": "Awtomatiske aktualizacije dowolić"
@@ -1167,19 +1167,19 @@
     "message": "Wěstym websydłam dowolić, na lokalne dataje wotkazać"
   },
   "policy_description_LocalNetworkAccess": {
-    "message": "Configure security features for local network resource access"
+    "message": "Wěstotne funkcije za přistup k lokalnym syćowym resursam konfigurować"
   },
   "policy_description_LocalNetworkAccess_BlockTrackers": {
-    "message": "Block third-party trackers from accessing localhost and local network resources"
+    "message": "Přistupy přesćěhowakow třećich poskićowarjow k localhost a lokalnym syćowym resursam blokować"
   },
   "policy_description_LocalNetworkAccess_Enabled": {
-    "message": "Enforce security checks for local network access"
+    "message": "Wěstotne přepruwowanja za lokalne syćowe přistupy wunuzować"
   },
   "policy_description_LocalNetworkAccess_EnablePrompting": {
-    "message": "Ask users for permission before websites can access local network resources"
+    "message": "Wužiwarja wo dowolnosć prosyć, prjedy hač websydła smědźa přistup k lokalnym syćowym resursam dóstać"
   },
   "policy_description_LocalNetworkAccess_SkipDomains": {
-    "message": "Domains for which local network access checks are skipped"
+    "message": "Domeny, za kotrež so přepruwowanje lokalneho syćoweho přistupa přeskakuje."
   },
   "policy_description_ManagedBookmarks": {
     "message": "Zrjadowane zapołožki (wot wužiwarja njezměnjomne abo njezhašomne)"
@@ -1488,22 +1488,22 @@
     "message": "Proksy-DNS wužiwać"
   },
   "policy_description_RelaunchRequired": {
-    "message": "Require Firefox to relaunch within a specified period after an update"
+    "message": "Nowy start Firefox za wěsty čas po aktualizaciji wunuzować"
   },
   "policy_description_RelaunchRequired_NotificationPeriodHours": {
-    "message": "Minimum number of hours before users are notified of the required relaunch"
+    "message": "Minimalna ličba hodźin, prjedy hač wužiwarjo zdźělenku wo trěbnym nowym starće dóstawaja"
   },
   "policy_description_RelaunchRequired_NotificationPeriodHours_placeholder": {
-    "message": "e.g., 24"
+    "message": "na př. 24"
   },
   "policy_description_RelaunchRequired_RestartTimeOfDay": {
-    "message": "Relaunch time"
+    "message": "Časowy dypk za nowy start"
   },
   "policy_description_RelaunchRequired_RestartTimeOfDay_Hour_placeholder": {
-    "message": "Hour (0 – 23)"
+    "message": "Hodźina (0 – 23)"
   },
   "policy_description_RelaunchRequired_RestartTimeOfDay_Minute_placeholder": {
-    "message": "Minute (0 – 59)"
+    "message": "Mjeńšina (0 – 59)"
   },
   "policy_description_RequestedLocales": {
     "message": "Rěč powjercha Firefox změnić"
@@ -1632,28 +1632,28 @@
     "message": "Tłóčatko startoweje strony w symbolowej lajsće pokazać"
   },
   "policy_description_SitePolicies": {
-    "message": "Configure website-specific policies"
+    "message": "Specifiske směrnicy websydła konfigurować"
   },
   "policy_description_SitePolicies_DisableJit": {
-    "message": "Disable the JavaScript JIT compiler"
+    "message": "Kompilowak JavaScript JIT znjemóžnić"
   },
   "policy_description_SitePolicies_Exceptions": {
-    "message": "Websites excluded from this rule"
+    "message": "Websydła, kotrež su z tutoho prawidła wuwzate"
   },
   "policy_description_SitePolicies_label_rules": {
-    "message": "Rules"
+    "message": "Prawidła"
   },
   "policy_description_SitePolicies_Match": {
-    "message": "Websites this rule applies to"
+    "message": "Websydła, za kotrež tute prawidło płaći"
   },
   "policy_description_SitePolicies_note": {
-    "message": "Rules are evaluated in order. Leave “Websites this rule applies to” empty to apply the rule to all websites."
+    "message": "Prawidła so jedne po druhim wuhódnoćeja. Wostajće „Websydła, za kotrež tute prawidło płaći“ prózdne, zo byšće prawidło na wšě websydła nałožił."
   },
   "policy_description_SitePolicies_Policies": {
-    "message": "Policies applied by this rule"
+    "message": "Směrnicy, kotrež so přez tute prawidło nałožuja"
   },
   "policy_description_SitePolicies_site": {
-    "message": "Domain pattern (for example *.example.com or *)"
+    "message": "Muster domeny (na př. *.example.com abo *)"
   },
   "policy_description_SkipTermsOfUse": {
     "message": "Wužiwanske wuměnjenja a pokazku škita datow při prěnim starće Firefox pokazać. Jeli so njepokazuja, so z tym deklaruje, zo so wužiwanske wuměnjenja w mjenje wšěch wosobow akceptuja, kotrež přistup k wobhladowakej maja a zo prawo wobsteji, te w zastupnistwje akceptować."
@@ -1725,10 +1725,10 @@
     "message": "Windows Single Sign-On za konta Microsoft, dźěłowe konta a šulske konta dopušćić"
   },
   "policy_description_XSLTEnabled": {
-    "message": "Enable or disable XSLT support"
+    "message": "Podpěru XSLT zmóžnić abo znjemóžnić"
   },
   "policy_description_XSLTEnabled_note": {
-    "message": "XSLT support on the web platform is planned for removal. This policy exists to control support during the transition period."
+    "message": "Podpěra XSLT webplatformy ke za wotstronjenje předwidźana. Tuta směrnica k tomu słuži, podpěru za přechodnu fazu wodźić."
   },
   "promo_box_button": {
     "message": "Nětko darić"
@@ -1737,7 +1737,7 @@
     "message": "Rozšěrjenje je darmotne. Waš dobrowólny dar zmóžnja, integraciju nowych funkcijow a předewzaćelskich směrnicow dale wjesć."
   },
   "rename_configuration_dialog_title": {
-    "message": "Rename configuration"
+    "message": "Konfiguraciju přemjenować"
   },
   "requirement_macOS": {
     "message": "funguje jenož na macOS"
@@ -1761,7 +1761,7 @@
     "message": "Zapisk přidać"
   },
   "title_delete_configuration": {
-    "message": "Konfiguraciju wotstronić"
+    "message": "Konfiguraciju zhašeć"
   },
   "title_move_item": {
     "message": "Zapisk přesunyć"
