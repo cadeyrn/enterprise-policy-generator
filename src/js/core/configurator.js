@@ -671,7 +671,7 @@ class Configurator {
     // add properties
     if (object.properties) {
       for (const property of object.properties) {
-        const name = property.name ?? parentName + '_' + property.name;
+        const name = property.name ? parentName + '_' + property.name : parentName;
         Configurator.#addProperty($wrapper, name, property);
       }
     }
