@@ -2625,19 +2625,19 @@
         },
         {
           "name": "TLS_AES_128_GCM_SHA256",
-          "label": "TLS_AES_128_GCM_SHA256 (Firefox 138+, Firefox ESR 128.10+)",
+          "label": "TLS_AES_128_GCM_SHA256",
           "schema": "enum",
           "preset": "enable_inverted_optional"
         },
         {
           "name": "TLS_AES_256_GCM_SHA384",
-          "label": "TLS_AES_256_GCM_SHA384 (Firefox 138+, Firefox ESR 128.10+)",
+          "label": "TLS_AES_256_GCM_SHA384",
           "schema": "enum",
           "preset": "enable_inverted_optional"
         },
         {
           "name": "TLS_CHACHA20_POLY1305_SHA256",
-          "label": "TLS_CHACHA20_POLY1305_SHA256 (Firefox 138+, Firefox ESR 128.10+)",
+          "label": "TLS_CHACHA20_POLY1305_SHA256",
           "schema": "enum",
           "preset": "enable_inverted_optional"
         },
