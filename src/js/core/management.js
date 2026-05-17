@@ -956,7 +956,7 @@ class Management {
     };
 
     // migrate old configuration files before adding them to the current storage
-    await Migrator.migrateConfiguration(configuration);
+    Migrator.migrateConfiguration(configuration);
     configurations.push(configuration);
     await browser.storage.local.set({ configurations: configurations, schema: 2 });
 

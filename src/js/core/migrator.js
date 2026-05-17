@@ -28,15 +28,15 @@ class Migrator {
    *
    * @param {object} configuration - the configuration to migrate
    *
-   * @returns {Promise<void>}
+   * @returns {void}
    */
-  static async migrateConfiguration (configuration) {
+  static migrateConfiguration (configuration) {
     const storage = {
       configurations: [configuration],
       version: configuration.version ?? 1
     };
 
-    await Migrator.#migrateStorage(storage);
+    Migrator.#migrateStorage(storage);
     Migrator.#updateConfigurationVersions(storage);
   }
 
@@ -49,7 +49,7 @@ class Migrator {
     const storage = await browser.storage.local.get({ configurations: [], version: 1 });
     const originalVersion = storage.version;
 
-    await Migrator.#migrateStorage(storage);
+    Migrator.#migrateStorage(storage);
     const configurationsWereUpdated = Migrator.#updateConfigurationVersions(storage);
 
     if (storage.version !== originalVersion || configurationsWereUpdated) {
@@ -65,15 +65,14 @@ class Migrator {
    *
    * @param {object} storage - the storage data to migrate
    *
-   * @returns {Promise<void>}
+   * @returns {void}
    */
-  static async #migrateStorage (storage) {
+  static #migrateStorage (storage) {
     let migration = Migrator.#migrations[storage.version];
 
     while (typeof migration === 'function') {
       // migrations must run sequentially because each version builds on the previous one
-      // eslint-disable-next-line no-await-in-loop
-      await migration(storage);
+      migration(storage);
       storage.version++;
       migration = Migrator.#migrations[storage.version];
     }
