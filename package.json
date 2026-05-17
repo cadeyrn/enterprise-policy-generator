@@ -40,7 +40,7 @@
     "lint:js": "eslint ./src/js/**/*.js ./src/_locales/**/*.json || true",
     "lint:policies-schema": "jsonschema lint policies-schema.json --exclude top_level_title --exclude top_level_description --exclude top_level_examples --exclude unnecessary_allof_wrapper || true",
     "lint:policies": "jsonschema validate policies-schema.json src/policies/*.json || true",
-    "lint:web-ext": "NO_UPDATE_NOTIFIER=1 web-ext lint --source-dir ./src || true",
+    "lint:web-ext": "web-ext lint --source-dir ./src --boring || true",
     "run:nightly": "web-ext run --source-dir ./src --firefox=nightly",
     "run:beta": "web-ext run --source-dir ./src --firefox=beta",
     "run:stable": "web-ext run --source-dir ./src --firefox=firefox",
