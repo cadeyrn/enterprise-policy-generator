@@ -450,6 +450,52 @@ input, textarea {
   gap: 4px;
 }
 
+.filter-highlight {
+  border-radius: 4px;
+  background-color: rgba(255, 207, 92, .38);
+  box-shadow: 0 0 0 2px rgba(255, 207, 92, .38);
+  box-decoration-break: clone;
+  color: inherit;
+}
+
+.filter-match-badge-wrapper {
+  white-space: normal;
+}
+
+.filter-match-badge {
+  display: inline-block;
+  padding: 0 5px;
+  line-height: 1.2;
+  border: 1px solid rgba(214, 154, 41, .28);
+  border-radius: var(--border-radius-pill);
+  background-color: rgba(255, 207, 92, .22);
+  color: rgb(104, 69, 18);
+  font-size: .65rem;
+  vertical-align: .125em;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.input-wrapper, .key-wrapper, .enum-wrapper {
+  > .filter-match-badge-wrapper {
+    position: absolute;
+    z-index: 1;
+    top: -9px;
+    right: 6px;
+    line-height: 1;
+    pointer-events: none;
+
+    .filter-match-badge {
+      background-color: rgb(255, 242, 195);
+      box-shadow: 0 1px 3px rgba(104, 69, 18, .12);
+    }
+  }
+}
+
+.number-wrapper > .filter-match-badge-wrapper {
+  right: 64px;
+}
+
 .policy-container {
   --policy-container-block-padding: 7px;
   position: relative;

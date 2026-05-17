@@ -1645,26 +1645,42 @@ class Configurator {
    * @returns {void}
    */
   static #applySearchFieldFilter ($filter) {
-    const filterValue = $filter.value.toLocaleLowerCase();
-    const matchesFilter = text => text.toLocaleLowerCase().includes(filterValue);
+    const filterValue = $filter.value.trim();
+    const normalizedFilterValue = filterValue.toLocaleLowerCase();
+    const matchesFilter = text => text.toLocaleLowerCase().includes(normalizedFilterValue);
 
     document.querySelectorAll('.policy-container').forEach($policy => {
+      Configurator.#clearFilterMatches($policy);
+
       $policy.querySelectorAll(':scope > label').forEach($label => {
         const name = $policy.getAttribute('data-name');
-        let hasMatch = false;
+        let hasMatch = normalizedFilterValue === '';
+        let hasTopLevelMatch = false;
 
-        // top level matches
-        if (matchesFilter(name) || matchesFilter($label.textContent)) {
-          hasMatch = true;
-        }
-        // search through the options
-        else {
-          $policy.querySelectorAll('.options [data-name]').forEach($el => {
-            const name = $el.getAttribute('data-name');
-            const $label = $policy.querySelector(`[for="${$el.id}"]`);
+        if (normalizedFilterValue) {
+          const hasLabelMatch = Configurator.#highlightFilterText($label, filterValue);
+          const hasNameMatch = matchesFilter(name);
+          hasTopLevelMatch = hasLabelMatch || hasNameMatch;
+          hasMatch = hasTopLevelMatch;
 
-            if (matchesFilter(name) || ($label && matchesFilter($label.textContent))) {
+          if (hasNameMatch) {
+            Configurator.#addFilterMatchBadge($label, name);
+          }
+
+          // search through the options
+          $policy.querySelectorAll('.options [data-name]:not(.array-action)').forEach($el => {
+            const optionName = $el.getAttribute('data-name');
+            const $optionTarget = Configurator.#getFilterMatchTarget($policy, $el);
+            const hasOptionLabelMatch = $optionTarget?.matches('.label, .object-label, label') &&
+              Configurator.#highlightFilterText($optionTarget, filterValue);
+            const hasOptionNameMatch = matchesFilter(optionName);
+
+            if (hasOptionNameMatch || hasOptionLabelMatch) {
               hasMatch = true;
+
+              if ($optionTarget) {
+                Configurator.#addFilterMatchBadge($optionTarget, optionName);
+              }
             }
           });
         }
@@ -1677,6 +1693,135 @@ class Configurator {
         }
       });
     });
+  }
+
+  /**
+   * Remove filter highlights and badges from an element.
+   *
+   * @param {HTMLElement} $el - the element to clean up
+   *
+   * @returns {void}
+   */
+  static #clearFilterMatches ($el) {
+    $el.querySelectorAll('.filter-match-badge-wrapper').forEach($badge => $badge.remove());
+    $el.querySelectorAll('.filter-match-badge').forEach($badge => $badge.remove());
+
+    $el.querySelectorAll('.filter-highlight').forEach($highlight => {
+      const $parent = $highlight.parentNode;
+      $highlight.replaceWith(document.createTextNode($highlight.textContent));
+      $parent.normalize();
+    });
+  }
+
+  /**
+   * Highlight matching visible text inside an element.
+   *
+   * @param {HTMLElement} $el - the element containing visible text
+   * @param {string} filterValue - the text to highlight
+   *
+   * @returns {boolean} - whether a match was highlighted
+   */
+  static #highlightFilterText ($el, filterValue) {
+    if ($el.querySelector('.filter-highlight')) {
+      return true;
+    }
+
+    const textNodes = [];
+    const walker = document.createTreeWalker($el, NodeFilter.SHOW_TEXT, {
+      acceptNode: node => {
+        if (node.parentElement.closest('.filter-match-badge-wrapper')) {
+          return NodeFilter.FILTER_REJECT;
+        }
+
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    const normalizedFilterValue = filterValue.toLocaleLowerCase();
+    let node = walker.nextNode();
+    let hasMatch = false;
+
+    while (node) {
+      textNodes.push(node);
+      node = walker.nextNode();
+    }
+
+    textNodes.forEach(textNode => {
+      const text = textNode.textContent;
+      const normalizedText = text.toLocaleLowerCase();
+      const matchIndex = normalizedText.indexOf(normalizedFilterValue);
+
+      if (matchIndex === -1) {
+        return;
+      }
+
+      const fragment = document.createDocumentFragment();
+      const $highlight = document.createElement('mark');
+      $highlight.classList.add('filter-highlight');
+      $highlight.textContent = text.substring(matchIndex, matchIndex + filterValue.length);
+      fragment.append(
+        document.createTextNode(text.substring(0, matchIndex)),
+        $highlight,
+        document.createTextNode(text.substring(matchIndex + filterValue.length))
+      );
+      textNode.replaceWith(fragment);
+      hasMatch = true;
+    });
+
+    return hasMatch;
+  }
+
+  /**
+   * Find the visible target that best represents a filter match.
+   *
+   * @param {HTMLElement} $policy - the policy container
+   * @param {HTMLElement} $el - the matching element
+   *
+   * @returns {?HTMLElement} - the target element or null
+   */
+  static #getFilterMatchTarget ($policy, $el) {
+    if ($el.id) {
+      const $label = Array.from($policy.querySelectorAll('label')).find($label => $label.htmlFor === $el.id);
+
+      if ($label) {
+        return $label;
+      }
+    }
+
+    if ($el.previousElementSibling?.matches('.label, .object-label')) {
+      return $el.previousElementSibling;
+    }
+
+    const $innerLabel = $el.querySelector(':scope .label, :scope .object-label');
+
+    if ($innerLabel) {
+      return $innerLabel;
+    }
+
+    const $fieldWrapper = $el.closest('.input-wrapper, .key-wrapper, .enum-wrapper');
+
+    if ($fieldWrapper) {
+      return $fieldWrapper;
+    }
+
+    return null;
+  }
+
+  /**
+   * Add a badge for matches that come from technical property names.
+   *
+   * @param {HTMLElement} $el - the element the badge should be appended to
+   * @param {string} text - the badge text
+   *
+   * @returns {void}
+   */
+  static #addFilterMatchBadge ($el, text) {
+    const $wrapper = document.createElement('span');
+    const $badge = document.createElement('span');
+    $wrapper.classList.add('filter-match-badge-wrapper');
+    $badge.classList.add('filter-match-badge');
+    $badge.textContent = text;
+    $wrapper.append(document.createTextNode(' '), $badge);
+    $el.appendChild($wrapper);
   }
 }
 

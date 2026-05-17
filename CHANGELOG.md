@@ -22,6 +22,8 @@
   [#396](https://github.com/cadeyrn/enterprise-policy-generator/issues/396)
 - Added controls for number fields to allow users to change numbers using buttons, see
   [#405](https://github.com/cadeyrn/enterprise-policy-generator/issues/405)
+- Filter matches are now highlighted in the user interface, including matches in policy option names, see
+  [#409](https://github.com/cadeyrn/enterprise-policy-generator/issues/409)
 - Added option to add headings within policy options without affecting the generated output, see
   [#398](https://github.com/cadeyrn/enterprise-policy-generator/issues/398)
 
