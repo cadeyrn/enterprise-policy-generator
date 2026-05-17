@@ -81,7 +81,8 @@ class Serializer {
 
     // arrays
     for (const group of Object.entries(data.arrays)) {
-      const $el = document.querySelector(`.array-action[data-name="${group[0]}"]`);
+      const $el = Array.from(document.querySelectorAll('.array-action[data-name]'))
+        .find($el => $el.getAttribute('data-name') === group[0]);
 
       if ($el) {
         for (let i = 1; i <= group[1]; i++) {
@@ -101,10 +102,12 @@ class Serializer {
 
     // enum fields
     for (const id of Object.keys(data.selects)) {
-      const $el = document.querySelector(`#${id} [value="${data.selects[id]}"]`);
+      const $select = document.getElementById(id);
+      const $option = Array.from($select?.options ?? [])
+        .find($option => $option.value === data.selects[id]);
 
-      if ($el) {
-        $el.selected = true;
+      if ($option) {
+        $option.selected = true;
       }
     }
 
