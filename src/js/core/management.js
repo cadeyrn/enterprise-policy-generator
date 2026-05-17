@@ -456,10 +456,7 @@ class Management {
       }
       else {
         $loadButton.addEventListener('click', () => {
-          Management.previousDialog = $listConfigurationDialog;
-          Management.#closeDialog($listConfigurationDialog).then(() => {
-            $incompatibleConfigurationDialog.showModal();
-          });
+          Management.#showDialogOverConfigurationList($incompatibleConfigurationDialog);
         });
       }
 
@@ -1014,7 +1011,12 @@ class Management {
     });
 
     $incompatibleConfigurationDialog.addEventListener('close', () => {
-      Management.previousDialog.showModal();
+      Management.#restoreConfigurationListDialog($incompatibleConfigurationDialog);
+
+      if (Management.previousDialog) {
+        Management.previousDialog.showModal();
+        Management.previousDialog = null;
+      }
     });
 
     // close the dialog by clicking the cancel button
