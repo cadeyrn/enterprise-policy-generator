@@ -462,10 +462,12 @@ class Management {
       }
 
       const $loadIcon = document.createElement('img');
+      const checkmarkIconWidth = 19;
+      const warningIconSize = 18;
+
       $loadIcon.src = `/images/${configuration.schema ? 'checkmark' : 'warning'}.svg`;
-      // eslint-disable-next-line no-magic-numbers
-      $loadIcon.width = configuration.schema ? 19 : 18;
-      $loadIcon.height = 18;
+      $loadIcon.width = configuration.schema ? checkmarkIconWidth : warningIconSize;
+      $loadIcon.height = warningIconSize;
       $loadIcon.alt = '';
       $loadButton.appendChild($loadIcon);
 

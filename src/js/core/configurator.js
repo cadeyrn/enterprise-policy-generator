@@ -823,6 +823,9 @@ class Configurator {
    */
   static #addNumberInputControls ($wrapper) {
     const $controls = document.createElement('div');
+    const iconSize = 10;
+    const decrementIconHeight = 2;
+
     $controls.classList.add('number-input-controls');
     $wrapper.appendChild($controls);
 
@@ -839,9 +842,8 @@ class Configurator {
 
       const $icon = document.createElement('img');
       $icon.src = action === 'decrement' ? '/images/minus.svg' : '/images/plus.svg';
-      $icon.width = 10;
-      // eslint-disable-next-line no-magic-numbers
-      $icon.height = action === 'decrement' ? 2 : 10;
+      $icon.width = iconSize;
+      $icon.height = action === 'decrement' ? decrementIconHeight : iconSize;
       $icon.alt = '';
       $icon.classList.add('action-img');
       $button.appendChild($icon);

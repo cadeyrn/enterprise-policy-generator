@@ -43,8 +43,16 @@ class Sortable {
     this.getDragElementContainer = typeof options.getDragElementContainer === 'function' ? options.getDragElementContainer : null;
     this.onUpdate = typeof options.onUpdate === 'function' ? options.onUpdate : null;
 
-    // eslint-disable-next-line no-magic-numbers
-    this.overlapThreshold = this.#clampNumber(options.overlapThreshold, 0.2, 0.01, 0.99);
+    const defaultOverlapThreshold = 0.2;
+    const minOverlapThreshold = 0.01;
+    const maxOverlapThreshold = 0.99;
+
+    this.overlapThreshold = this.#clampNumber(
+      options.overlapThreshold,
+      defaultOverlapThreshold,
+      minOverlapThreshold,
+      maxOverlapThreshold
+    );
 
     /** @type {DragState} */
     this.dragState = this.#createInitialDragState();
@@ -293,8 +301,9 @@ class Sortable {
     drag.lastPointerY = e.clientY;
 
     // dead zone avoids rapid direction flip noise from tiny pointer jitter
-    // eslint-disable-next-line no-magic-numbers
-    if (Math.abs(dragY) >= 3) {
+    const pointerDirectionDeadZoneInPx = 3;
+
+    if (Math.abs(dragY) >= pointerDirectionDeadZoneInPx) {
       drag.moveDir = dragY > 0 ? 'down' : 'up';
     }
 
@@ -367,12 +376,12 @@ class Sortable {
     );
     let inserted = false;
     let placeholderMoved = false;
+    const maxOverlapTriggerOffsetInPx = 100;
 
     for (const $el of $siblings) {
       const rect = $el.getBoundingClientRect();
 
-      // eslint-disable-next-line no-magic-numbers
-      const overlapPx = Math.min(rect.height * this.overlapThreshold, 100);
+      const overlapPx = Math.min(rect.height * this.overlapThreshold, maxOverlapTriggerOffsetInPx);
       const triggerY = drag.moveDir === 'down' ? rect.top + overlapPx : rect.bottom - overlapPx;
 
       if (dragEdge < triggerY) {
