@@ -701,13 +701,16 @@ class Configurator {
       Configurator.#addObjectKey($el, parentName, object.key);
     }
 
+    // input field
+    const $input = document.createElement(object.textarea ? 'textarea' : 'input');
+
     // label
     if (object.label) {
       Configurator.#addLabel($el, object.label, domName);
     }
-
-    // input field
-    const $input = document.createElement(object.textarea ? 'textarea' : 'input');
+    else {
+      $input.setAttribute('aria-label', I18n.getMessage(object.placeholder));
+    }
 
     if (type === 'url') {
       $input.setAttribute('type', 'url');
