@@ -24,6 +24,8 @@
   [#405](https://github.com/cadeyrn/enterprise-policy-generator/issues/405)
 - Filter matches are now highlighted in the user interface, including matches in policy option names, see
   [#409](https://github.com/cadeyrn/enterprise-policy-generator/issues/409)
+- Improved the implementation of the configuration migrations during extension updates and when importing older
+  configurations, see [#410](https://github.com/cadeyrn/enterprise-policy-generator/issues/410)
 - Added option to add headings within policy options without affecting the generated output, see
   [#398](https://github.com/cadeyrn/enterprise-policy-generator/issues/398)
 

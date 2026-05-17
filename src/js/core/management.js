@@ -216,6 +216,7 @@ class Management {
 
     const configuration = {
       schema: 2,
+      version: Migrator.storageVersion,
       product: 'firefox',
       name: name,
       time: new Date(),
@@ -945,17 +946,17 @@ class Management {
 
     const configuration = {
       schema: data.schema,
+      version: data.version,
       product: data.product,
       name: name,
       time: new Date(),
       configuration: data.configuration
     };
 
+    // migrate old configuration files before adding them to the current storage
+    await Migrator.migrateConfiguration(configuration);
     configurations.push(configuration);
-
-    // migrate old configuration files
-    await browser.storage.local.set({ configurations: configurations, schema: 2, version: 1 });
-    Migrator.migrate();
+    await browser.storage.local.set({ configurations: configurations, schema: 2 });
 
     return true;
   }

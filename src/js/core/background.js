@@ -1,6 +1,6 @@
 'use strict';
 
-/* global I18n, Migrator */
+/* global Migrator */
 
 class Background {
   /**
@@ -9,18 +9,18 @@ class Background {
    *
    * @param {runtime.OnInstalledReason} details - contains the reason why this event is being dispatched
    *
-   * @returns {void}
+   * @returns {Promise<void>}
    */
-  static onInstalledHandler (details) {
+  static async onInstalledHandler (details) {
     if (details.reason === 'update') {
-      Migrator.migrate();
+      await Migrator.migrate();
     }
   }
 
   /**
    * Open the user interface when the toolbar icon is clicked.
    *
-   * @returns {void}
+   * @returns {Promise<void>}
    */
   static async openUserInterface () {
     await browser.runtime.openOptionsPage();
@@ -33,7 +33,7 @@ browser.action.onClicked.addListener(Background.openUserInterface);
 browser.runtime.onInstalled.addListener(() => {
   browser.menus.create({
     id: 'epg-tools-menu-entry',
-    title: I18n.getMessage('extension_name'),
+    title: browser.i18n.getMessage('extension_name'),
     contexts: ['tools_menu'],
     command: '_execute_action'
   });
