@@ -1551,11 +1551,18 @@ class Configurator {
    * @returns {void}
    */
   static async #downloadPolicy () {
-    await browser.downloads.download({
-      saveAs: true,
-      url: URL.createObjectURL(new Blob([PolicyManager.getConfiguration()])),
-      filename: 'policies.json'
-    });
+    const url = URL.createObjectURL(new Blob([PolicyManager.getConfiguration()]));
+
+    try {
+      await browser.downloads.download({
+        saveAs: true,
+        url: url,
+        filename: 'policies.json'
+      });
+    }
+    finally {
+      URL.revokeObjectURL(url);
+    }
   }
 
   /**

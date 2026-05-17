@@ -771,12 +771,18 @@ class Management {
     }
 
     const serializedConfig = window.btoa(binary);
+    const url = URL.createObjectURL(new Blob([serializedConfig]));
 
-    await browser.downloads.download({
-      saveAs: true,
-      url: URL.createObjectURL(new Blob([serializedConfig])),
-      filename: 'policy-export-' + configuration.time.getTime() + '.policy'
-    });
+    try {
+      await browser.downloads.download({
+        saveAs: true,
+        url: url,
+        filename: 'policy-export-' + configuration.time.getTime() + '.policy'
+      });
+    }
+    finally {
+      URL.revokeObjectURL(url);
+    }
   }
 
   /**
