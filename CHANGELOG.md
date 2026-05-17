@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### Version 9.0.0 (Work in Progress)
+### [Version 9.0.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v8.0.0) (2026-05-17)
 
 #### Enhancements
 
@@ -61,6 +61,9 @@
 - Updated eslint from version 10.3.0 to 10.4.0
 - Updated sourcemeta/jsonschema from version 15.2.0 to 15.6.2
 - Updated stylelint from version 17.9.1 to 17.11.1
+
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v8.1.0...v9.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
