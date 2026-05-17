@@ -6,27 +6,28 @@
 
 #### Enhancements
 
-- A completely new design that is significantly more modern and makes using the Enterprise Policy Generator a more
-  enjoyable experience, see [#388](https://github.com/cadeyrn/enterprise-policy-generator/issues/388)
-- A confirmation popover now appears after copying the policies.json output to the clipboard, as well as after saving,
-  loading, and importing a configuration, see [#387](https://github.com/cadeyrn/enterprise-policy-generator/issues/387)
-- Added a fullscreen mode for the policies.json output, see
+- The user interface has been redesigned to look more modern and make the Enterprise Policy Generator more pleasant to
+  use, see [#388](https://github.com/cadeyrn/enterprise-policy-generator/issues/388)
+- Short confirmation popovers now provide clear feedback after common actions such as copying the policies.json output
+  to the clipboard, and saving, loading, renaming, deleting, or importing configurations, see
+  [#387](https://github.com/cadeyrn/enterprise-policy-generator/issues/387)
+- The policies.json output can now be viewed in fullscreen mode, see
   [#389](https://github.com/cadeyrn/enterprise-policy-generator/issues/389)
-- A confirmation dialog now appears when deleting saved configurations, see
-  [#390](https://github.com/cadeyrn/enterprise-policy-generator/issues/390)
-- Added option to rename saved configurations, see
+- Saved configurations can now be renamed, see
   [#399](https://github.com/cadeyrn/enterprise-policy-generator/issues/399)
-- Added option to sort saved configurations by drag and drop, see
+- Saved configurations can now be reordered using drag and drop, see
   [#400](https://github.com/cadeyrn/enterprise-policy-generator/issues/400)
-- Show an error message for invalid configurations in the import dialog, see
+- A confirmation dialog helps prevent accidental deletion of saved configurations, see
+  [#390](https://github.com/cadeyrn/enterprise-policy-generator/issues/390)
+- The import dialog now shows an error message if a selected configuration file is invalid, see
   [#396](https://github.com/cadeyrn/enterprise-policy-generator/issues/396)
-- Added controls for number fields to allow users to change numbers using buttons, see
+- Number fields now provide controls to increase or decrease values without typing, see
   [#405](https://github.com/cadeyrn/enterprise-policy-generator/issues/405)
 - Filter matches are now highlighted in the user interface, including matches in policy option names, see
   [#409](https://github.com/cadeyrn/enterprise-policy-generator/issues/409)
-- Improved the implementation of the configuration migrations during extension updates and when importing older
-  configurations, see [#410](https://github.com/cadeyrn/enterprise-policy-generator/issues/410)
-- Added option to add headings within policy options without affecting the generated output, see
+- Configuration migrations during extension updates and when importing older configurations have been improved, see
+  [#410](https://github.com/cadeyrn/enterprise-policy-generator/issues/410)
+- Policy options can now contain explanatory headings without affecting the generated policies.json output, see
   [#398](https://github.com/cadeyrn/enterprise-policy-generator/issues/398)
 
 #### Bugfixes
@@ -36,21 +37,23 @@
 
 #### Enterprise Policies
 
-- Added support for the `LocalNetworkAccess` policy, see
-  [#340](https://github.com/cadeyrn/enterprise-policy-generator/issues/340)
-- Added support for the `SitePolicies` policy, see
-  [#392](https://github.com/cadeyrn/enterprise-policy-generator/issues/392)
-- Added support for the `XSLTEnabled` policy, see
+- Added support for the `LocalNetworkAccess` policy to configure security checks for access to localhost and local
+  network resources, see [#340](https://github.com/cadeyrn/enterprise-policy-generator/issues/340)
+- Added support for the `SitePolicies` policy to configure website-specific policies, currently including the option to
+  disable the JavaScript JIT compiler, see [#392](https://github.com/cadeyrn/enterprise-policy-generator/issues/392)
+- Added support for the `XSLTEnabled` policy to enable or disable XSLT support during the transition period before its
+  planned removal from the web platform, see
   [#401](https://github.com/cadeyrn/enterprise-policy-generator/issues/401)
-- Added support for the `DefaultSerialGuardSetting` policy, see
+- Added support for the `DefaultSerialGuardSetting` policy to set the default behavior for the Web Serial API, see
   [#402](https://github.com/cadeyrn/enterprise-policy-generator/issues/402)
-- Added support for the `RelaunchRequired` policy, see
-  [#403](https://github.com/cadeyrn/enterprise-policy-generator/issues/403)
-- Added support for the `update_url` option in the `ExtensionSettings` policy, see
-  [#404](https://github.com/cadeyrn/enterprise-policy-generator/issues/404)
-- The `DefaultDownloadDirectory` and `DownloadDirectory` policies exclude each other now, see
+- Added support for the `RelaunchRequired` policy to require Firefox to relaunch within a specified period after an
+  update, see [#403](https://github.com/cadeyrn/enterprise-policy-generator/issues/403)
+- Added support for the `update_url` option in the `ExtensionSettings` policy to configure a custom update URL for
+  extensions, see [#404](https://github.com/cadeyrn/enterprise-policy-generator/issues/404)
+- The `DefaultDownloadDirectory` and `DownloadDirectory` policies now exclude each other to avoid configurations that
+  define both download directory policies at the same time, see
   [#391](https://github.com/cadeyrn/enterprise-policy-generator/issues/391)
-- Because the `DisabledCiphers` policy has so many options, they have been grouped by security characteristics, see
+- The long list of options in the `DisabledCiphers` policy is now grouped by security characteristics, see
   [#397](https://github.com/cadeyrn/enterprise-policy-generator/issues/397)
 
 #### Dependencies
