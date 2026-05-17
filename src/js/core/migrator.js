@@ -7,7 +7,11 @@ class Migrator {
    * @type {object}
    */
   static #migrations = {
-
+    1: storage => {
+      for (const configuration of storage.configurations) {
+        Migrator.#removeConflictingDownloadDirectory(configuration);
+      }
+    }
   };
 
   /**
@@ -93,5 +97,25 @@ class Migrator {
     }
 
     return updated;
+  }
+
+  /**
+   * Removes DownloadDirectory if DefaultDownloadDirectory is also set in an old configuration.
+   *
+   * @param {object} configuration - the configuration to migrate
+   *
+   * @returns {void}
+   */
+  static #removeConflictingDownloadDirectory (configuration) {
+    if (
+      configuration.configuration?.inputs?.DefaultDownloadDirectory_input &&
+      configuration.configuration?.inputs?.DownloadDirectory_input
+    ) {
+      delete configuration.configuration.inputs.DownloadDirectory_input;
+
+      if (configuration.configuration.checkboxes) {
+        delete configuration.configuration.checkboxes.DownloadDirectory;
+      }
+    }
   }
 }
