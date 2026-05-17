@@ -2,7 +2,7 @@ import globals from 'globals';
 import html from '@html-eslint/eslint-plugin';
 import jsdoc from 'eslint-plugin-jsdoc';
 import json from '@eslint/json';
-import stylistic from '@stylistic/eslint-plugin'
+import stylistic from '@stylistic/eslint-plugin';
 import xss from 'eslint-plugin-xss';
 
 export default [
@@ -269,7 +269,7 @@ export default [
       'no-lonely-if': 'error',
       'no-loop-func': 'error',
       'no-loss-of-precision': 'error',
-      'no-magic-numbers': ['error', { 'enforceConst': true, 'ignore': [-1, 0, 1, 2, 5, 36], 'ignoreArrayIndexes': true }],
+      'no-magic-numbers': ['error', { 'enforceConst': true, 'ignore': [-1, 0, 1, 2], 'ignoreArrayIndexes': true }],
       'no-misleading-character-class': 'error',
       'no-multi-assign': 'error',
       'no-multi-str': 'error',
@@ -445,7 +445,7 @@ export default [
       'html/prefer-https': 'error',
       'html/quotes': ['error', 'double'],
       'html/require-attrs': 'off',
-      'html/require-button-type': 'off',
+      'html/require-button-type': 'error',
       'html/require-closing-tags': 'error',
       'html/require-content': 'off',
       'html/require-doctype': 'error',
