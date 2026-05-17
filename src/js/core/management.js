@@ -4,6 +4,8 @@
 
 const BASE64_BINARY_CHUNK_SIZE = 8192;
 const DIALOG_CLOSE_ANIMATION_DURATION_IN_MS = 300;
+const SCHEMA_VERSION_CURRENT = 2;
+const SCHEMA_VERSION_MIN_SUPPORTED = 2;
 
 const $configurationTable = document.getElementById('list-configurations-table');
 const $importConfigurationButton = document.getElementById('import-configuration');
@@ -215,7 +217,7 @@ class Management {
     const { configurations } = await browser.storage.local.get({ configurations: [] });
 
     const configuration = {
-      schema: 2,
+      schema: SCHEMA_VERSION_CURRENT,
       version: Migrator.storageVersion,
       product: 'firefox',
       name: name,
@@ -402,6 +404,8 @@ class Management {
 
     // add configurations to the list
     for (const [idx, configuration] of configurations.entries()) {
+      const isConfigurationCompatible = Management.#isSupportedConfigurationSchema(configuration.schema);
+
       // list item
       const $row = document.createElement('div');
       $row.classList.add('configuration-row');
@@ -441,7 +445,7 @@ class Management {
       // load icon
       const $loadButton = document.createElement('button');
       const loadConfigurationLabel = I18n.getMessage(
-        configuration.schema ? 'configuration_action_load' : 'configuration_action_show_incompatible',
+        isConfigurationCompatible ? 'configuration_action_load' : 'configuration_action_show_incompatible',
         [configuration.name]
       );
       $loadButton.setAttribute('type', 'button');
@@ -451,8 +455,8 @@ class Management {
       $loadButton.classList.add('icon');
       $iconColumn.appendChild($loadButton);
 
-      // configurations saved before EPG 8.0 did not have the schema key and are not compatible
-      if (configuration.schema) {
+      // configurations outside the supported schema range cannot be loaded safely
+      if (isConfigurationCompatible) {
         $loadButton.addEventListener('click', Management.#applyConfiguration);
       }
       else {
@@ -465,8 +469,8 @@ class Management {
       const checkmarkIconWidth = 19;
       const warningIconSize = 18;
 
-      $loadIcon.src = `/images/${configuration.schema ? 'checkmark' : 'warning'}.svg`;
-      $loadIcon.width = configuration.schema ? checkmarkIconWidth : warningIconSize;
+      $loadIcon.src = `/images/${isConfigurationCompatible ? 'checkmark' : 'warning'}.svg`;
+      $loadIcon.width = isConfigurationCompatible ? checkmarkIconWidth : warningIconSize;
       $loadIcon.height = warningIconSize;
       $loadIcon.alt = '';
       $loadButton.appendChild($loadIcon);
@@ -884,8 +888,8 @@ class Management {
   static async #importConfiguration (name, $localFile) {
     const data = await Management.#readConfigurationFile($localFile);
 
-    // configurations saved before EPG 8.0 did not have the schema key, and we don't want to import them
-    if (!data.schema) {
+    // configurations outside the supported schema range cannot be migrated safely
+    if (!Management.#isSupportedConfigurationSchema(data.schema)) {
       return false;
     }
 
@@ -903,9 +907,22 @@ class Management {
     // migrate old configuration files before adding them to the current storage
     Migrator.migrateConfiguration(configuration);
     configurations.push(configuration);
-    await browser.storage.local.set({ configurations: configurations, schema: 2 });
+    await browser.storage.local.set({ configurations: configurations, schema: SCHEMA_VERSION_CURRENT });
 
     return true;
+  }
+
+  /**
+   * Check whether a configuration schema can be loaded or migrated by this version.
+   *
+   * @param {number} schema - the configuration schema version
+   *
+   * @returns {boolean} whether the schema version is supported
+   */
+  static #isSupportedConfigurationSchema (schema) {
+    return Number.isInteger(schema) &&
+      schema >= SCHEMA_VERSION_MIN_SUPPORTED &&
+      schema <= SCHEMA_VERSION_CURRENT;
   }
 
   /**
