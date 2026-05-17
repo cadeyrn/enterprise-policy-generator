@@ -471,31 +471,14 @@ class Management {
       $loadIcon.alt = '';
       $loadButton.appendChild($loadIcon);
 
-      // fake export icon (permission not yet granted)
-      const $fakeExportButton = document.createElement('button');
-      const exportConfigurationLabel = I18n.getMessage('configuration_action_export', [configuration.name]);
-      $fakeExportButton.setAttribute('type', 'button');
-      $fakeExportButton.setAttribute('title', exportConfigurationLabel);
-      $fakeExportButton.setAttribute('aria-label', exportConfigurationLabel);
-      $fakeExportButton.setAttribute('data-idx', idx.toString());
-      $fakeExportButton.classList.add('icon', 'fake-export-link');
-      $fakeExportButton.addEventListener('click', Management.#grantDownloadPermission);
-      $iconColumn.appendChild($fakeExportButton);
-
-      const $fakeExportIcon = document.createElement('img');
-      $fakeExportIcon.src = '/images/export.svg';
-      $fakeExportIcon.width = 20;
-      $fakeExportIcon.height = 18;
-      $fakeExportIcon.alt = '';
-      $fakeExportButton.appendChild($fakeExportIcon);
-
       // export icon
+      const exportConfigurationLabel = I18n.getMessage('configuration_action_export', [configuration.name]);
       const $exportButton = document.createElement('button');
       $exportButton.setAttribute('type', 'button');
       $exportButton.setAttribute('title', exportConfigurationLabel);
       $exportButton.setAttribute('aria-label', exportConfigurationLabel);
       $exportButton.setAttribute('data-idx', idx.toString());
-      $exportButton.classList.add('icon', 'export-link', 'hidden');
+      $exportButton.classList.add('icon');
       $exportButton.addEventListener('click', Management.#exportConfiguration);
       $iconColumn.appendChild($exportButton);
 
@@ -544,7 +527,6 @@ class Management {
     }
 
     Management.#updateConfigurationRowIndices();
-    Management.#testDownloadPermission();
   }
 
   /**
@@ -750,48 +732,6 @@ class Management {
   }
 
   /**
-   * Test if the "downloads" permission has been granted or not. If granted, the link for granting the permission
-   * will be hidden and the real export link will be shown.
-   *
-   * @returns {void}
-   */
-  static async #testDownloadPermission () {
-    const granted = await browser.permissions.contains(DOWNLOAD_PERMISSION);
-
-    // if the "downloads" permission is granted, hide the link for granting permission and show the
-    // real export link instead
-    if (granted) {
-      const $fakeExportLink = document.querySelector('.fake-export-link');
-      const $exportLink = document.querySelector('.export-link');
-
-      if ($fakeExportLink) {
-        $fakeExportLink.classList.add('hidden');
-      }
-
-      if ($exportLink) {
-        $exportLink.classList.remove('hidden');
-      }
-    }
-  }
-
-  /**
-   * Grant the download permission and exports the configuration once granted.
-   *
-   * @param {MouseEvent} e - the mouse event
-   *
-   * @returns {Promise<void>}
-   */
-  static async #grantDownloadPermission (e) {
-    const idx = Number(e.currentTarget.getAttribute('data-idx'));
-    const granted = await browser.permissions.request(DOWNLOAD_PERMISSION);
-
-    // immediately prompt for download after the "downloads" permission has been granted
-    if (granted) {
-      await Management.#exportConfigurationByIndex(idx);
-    }
-  }
-
-  /**
    * Exports a configuration.
    *
    * @param {MouseEvent} e - event
@@ -799,7 +739,12 @@ class Management {
    * @returns {Promise<void>}
    */
   static async #exportConfiguration (e) {
-    await Management.#exportConfigurationByIndex(Number(e.currentTarget.getAttribute('data-idx')));
+    const idx = Number(e.currentTarget.getAttribute('data-idx'));
+    const granted = await browser.permissions.request(DOWNLOAD_PERMISSION);
+
+    if (granted) {
+      await Management.#exportConfigurationByIndex(idx);
+    }
   }
 
   /**
