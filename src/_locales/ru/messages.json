@@ -30,37 +30,37 @@
     "message": "URL"
   },
   "configuration_action_delete": {
-    "message": "Delete configuration $1"
+    "message": "Удалить конфигурацию $1"
   },
   "configuration_action_export": {
-    "message": "Export configuration $1"
+    "message": "Экспортировать конфигурацию $1"
   },
   "configuration_action_load": {
-    "message": "Load configuration $1"
+    "message": "Загрузить конфигурацию $1"
   },
   "configuration_action_rename": {
-    "message": "Rename configuration $1"
+    "message": "Переименовать конфигурацию $1"
   },
   "configuration_action_show_incompatible": {
-    "message": "Show information about incompatible configuration $1"
+    "message": "Показать информацию о несовместимости конфигурации $1"
   },
   "configuration_deleted_success": {
-    "message": "Configuration deleted"
+    "message": "Конфигурация удалена"
   },
   "configuration_import": {
-    "message": "Импорт конфигурации"
+    "message": "Импортировать конфигурацию"
   },
   "configuration_import_error": {
-    "message": "The configuration file could not be imported. Choose a valid .policy file."
+    "message": "Невозможно импортировать файл конфигурации. Выберите правильный файл .policy."
   },
   "configuration_import_file": {
-    "message": "Configuration file"
+    "message": "Файл конфигурации"
   },
   "configuration_import_file_help": {
-    "message": "Select a .policy file previously exported from the Enterprise Policy Generator. A policies.json file used by Firefox cannot be imported."
+    "message": "Выберите файл .policy, ранее экспортированный из \"Генератора политик\". Используемый в Firefox файл policies.json импортировать невозможно."
   },
   "configuration_imported_success": {
-    "message": "Configuration imported"
+    "message": "Конфигурация импортирована"
   },
   "configuration_incompatible_btn_get_in_touch": {
     "message": "Запросить перенос конфигурации"
@@ -81,25 +81,25 @@
     "message": "Несовместимая конфигурация"
   },
   "configuration_loaded_success": {
-    "message": "Configuration loaded"
+    "message": "Конфигурация загружена"
   },
   "configuration_management_headline": {
-    "message": "Manage configurations"
+    "message": "Управление конфигурациями"
   },
   "configuration_renamed_success": {
-    "message": "Configuration renamed"
+    "message": "Конфигурация переименована"
   },
   "configuration_saved_success": {
-    "message": "Configuration saved"
+    "message": "Конфигурация сохранена"
   },
   "copy_to_clipboard_success": {
-    "message": "Code copied to clipboard"
+    "message": "Код скопирован в буфер обмена"
   },
   "delete_configuration_dialog_intro": {
-    "message": "Are you sure you want to delete the configuration $1?"
+    "message": "Удалить конфигурацию $1?"
   },
   "delete_configuration_dialog_title": {
-    "message": "Delete configuration?"
+    "message": "Удалить конфигурацию?"
   },
   "enum_value_block_no": {
     "message": "Не блокировать"
@@ -117,7 +117,7 @@
     "message": "Нет"
   },
   "enum_value_no_preference": {
-    "message": "Нет параметров"
+    "message": "Не настроено"
   },
   "enum_value_yes": {
     "message": "Да"
@@ -126,7 +126,7 @@
     "message": "Обзор всех активных политик и ошибок можно посмотреть на странице about:policies."
   },
   "explanation_headline": {
-    "message": "What do I do with the output?"
+    "message": "Что делать с созданными политиками?"
   },
   "explanation_intro": {
     "message": "Нажмите кнопку, чтобы сгенерировать код. Сохраните его в файле с именем \"policies.json\" в папке \"distribution\"."
@@ -141,7 +141,7 @@
     "message": "Создайте папку \"distribution\" в каталоге с файлом firefox.exe и поместите туда файл \"policies.json\"."
   },
   "extension_description": {
-    "message": "Генерирует корпоративные политики для Firefox."
+    "message": "Создаёт корпоративные политики для Firefox."
   },
   "extension_name": {
     "message": "Генератор политик"
@@ -153,7 +153,7 @@
     "message": "Закрыть фильтр"
   },
   "filter_field_open": {
-    "message": "Open filter"
+    "message": "Открыть фильтр"
   },
   "generate_button": {
     "message": "Создать политики"
@@ -165,7 +165,7 @@
     "message": "Копировать в буфер обмена"
   },
   "link_download": {
-    "message": "Загрузить policies.json"
+    "message": "Сохранить policies.json"
   },
   "link_learn_more": {
     "message": "Больше информации"
@@ -177,10 +177,10 @@
     "message": "Сохранить конфигурацию"
   },
   "list_dialog_no_saved_configurations": {
-    "message": "Конфигурация ещё не сохранена."
+    "message": "Нет сохранённых конфигураций."
   },
   "list_dialog_window_title": {
-    "message": "Saved configurations"
+    "message": "Сохранённые конфигурации"
   },
   "list_header_actions": {
     "message": "Действия"
@@ -198,22 +198,22 @@
     "message": "Название параметра не разрешено"
   },
   "number_input_decrement": {
-    "message": "Decrease value"
+    "message": "Уменьшить значение"
   },
   "number_input_increment": {
-    "message": "Increase value"
+    "message": "Увеличить значение"
   },
   "output_fullscreen_close": {
-    "message": "Close fullscreen view"
+    "message": "Закрыть полноэкранный режим"
   },
   "output_fullscreen_open": {
-    "message": "Open fullscreen view"
+    "message": "Открыть полноэкранный режим"
   },
   "output_headline": {
-    "message": "Policies output"
+    "message": "Созданные политики"
   },
   "output_placeholder": {
-    "message": "No policies generated yet"
+    "message": "Политики ещё не созданы"
   },
   "policy_category_authentication": {
     "message": "Аутентификация"
@@ -687,13 +687,13 @@
     "message": "Для домашнего каталога ОС используйте ${home}"
   },
   "policy_description_DefaultSerialGuardSetting": {
-    "message": "Set the behavior for the Web Serial API"
+    "message": "Поведение API Web Serial"
   },
   "policy_description_DefaultSerialGuardSetting_Allow": {
-    "message": "Allow access to the Web Serial API"
+    "message": "Разрешить доступ к API Web Serial"
   },
   "policy_description_DefaultSerialGuardSetting_Block": {
-    "message": "Block access to the Web Serial API"
+    "message": "Блокировать доступ к API Web Serial"
   },
   "policy_description_DisableAccounts": {
     "message": "Отключить сервисы на основе аккаунта Mozilla, такие как Firefox Sync"
@@ -708,22 +708,22 @@
     "message": "Включить или отключить определённые криптографические шифры"
   },
   "policy_description_DisabledCiphers_heading_tls12_dhe_cbc_forward_secrecy": {
-    "message": "TLS 1.2: DHE with CBC and forward secrecy"
+    "message": "TLS 1.2: DHE с CBC и прямой секретностью"
   },
   "policy_description_DisabledCiphers_heading_tls12_ecdhe_aead_forward_secrecy": {
-    "message": "TLS 1.2: ECDHE with AEAD and forward secrecy"
+    "message": "TLS 1.2: ECDHE с AEAD и прямой секретностью"
   },
   "policy_description_DisabledCiphers_heading_tls12_ecdhe_cbc_forward_secrecy": {
-    "message": "TLS 1.2: ECDHE with CBC and forward secrecy"
+    "message": "TLS 1.2: ECDHE с CBC и прямой секретностью"
   },
   "policy_description_DisabledCiphers_heading_tls12_rsa_3des": {
-    "message": "TLS 1.2: 3DES without forward secrecy"
+    "message": "TLS 1.2: 3DES без прямой секретности"
   },
   "policy_description_DisabledCiphers_heading_tls12_rsa_aes": {
-    "message": "TLS 1.2: RSA without forward secrecy"
+    "message": "TLS 1.2: RSA без прямой секретности"
   },
   "policy_description_DisabledCiphers_heading_tls13_aead_forward_secrecy": {
-    "message": "TLS 1.3: AEAD with integrated forward secrecy"
+    "message": "TLS 1.3: AEAD со встроенной прямой секретностью"
   },
   "policy_description_DisableDefaultBrowserAgent": {
     "message": "Отключить агент браузера по умолчанию"
@@ -993,7 +993,7 @@
     "message": "Разрешить установку расширения со слабым алгоритмом подписи"
   },
   "policy_description_ExtensionSettings_update_url": {
-    "message": "Update URL (Firefox 151+)"
+    "message": "URL обновления (Firefox 151+)"
   },
   "policy_description_ExtensionSettings_updates_disabled": {
     "message": "Разрешить автоматическое обновление"
@@ -1140,16 +1140,16 @@
     "message": "Сайты, которые не будут автоматически переключаться на HTTPS"
   },
   "policy_description_HttpsOnlyMode": {
-    "message": "Настройка режима Только HTTPS"
+    "message": "Настройка режима \"Только HTTPS\""
   },
   "policy_description_HttpsOnlyMode_allowed": {
-    "message": "Отключён по умолчанию , но пользователь может включить"
+    "message": "Отключён по умолчанию, но пользователь может включить"
   },
   "policy_description_HttpsOnlyMode_disallowed": {
     "message": "Отключён и пользователь не может включить"
   },
   "policy_description_HttpsOnlyMode_enabled": {
-    "message": "Включён по умолчанию , но пользователь может отключить"
+    "message": "Включён по умолчанию, но пользователь может отключить"
   },
   "policy_description_HttpsOnlyMode_force_enabled": {
     "message": "Включён и пользователь не может отключить"
@@ -1167,19 +1167,19 @@
     "message": "Разрешить определённым сайтам ссылку на локальные файлы"
   },
   "policy_description_LocalNetworkAccess": {
-    "message": "Configure security features for local network resource access"
+    "message": "Настройка доступа к ресурсам локальной сети"
   },
   "policy_description_LocalNetworkAccess_BlockTrackers": {
-    "message": "Block third-party trackers from accessing localhost and local network resources"
+    "message": "Блокировать сторонним трекерам доступ к localhost и ресурсам локальной сети"
   },
   "policy_description_LocalNetworkAccess_Enabled": {
-    "message": "Enforce security checks for local network access"
+    "message": "Требовать проверку безопасности для доступа к локальной сети"
   },
   "policy_description_LocalNetworkAccess_EnablePrompting": {
-    "message": "Ask users for permission before websites can access local network resources"
+    "message": "Запрашивать у пользователя разрешение на доступ сайта к ресурсам локальной сети"
   },
   "policy_description_LocalNetworkAccess_SkipDomains": {
-    "message": "Domains for which local network access checks are skipped"
+    "message": "Домены, для которых проверка доступа к локальной сети не производится"
   },
   "policy_description_ManagedBookmarks": {
     "message": "Управляемые закладки (не могут быть изменены или удалены пользователем)"
@@ -1488,22 +1488,22 @@
     "message": "Использовать проксирование DNS"
   },
   "policy_description_RelaunchRequired": {
-    "message": "Require Firefox to relaunch within a specified period after an update"
+    "message": "Требовать перезапуск Firefox в течение указанного периода времени после обновления"
   },
   "policy_description_RelaunchRequired_NotificationPeriodHours": {
-    "message": "Minimum number of hours before users are notified of the required relaunch"
+    "message": "Минимальное количество часов до уведомления пользователей о необходимости перезапуска"
   },
   "policy_description_RelaunchRequired_NotificationPeriodHours_placeholder": {
-    "message": "e.g., 24"
+    "message": "например, 24"
   },
   "policy_description_RelaunchRequired_RestartTimeOfDay": {
-    "message": "Relaunch time"
+    "message": "Время перезапуска"
   },
   "policy_description_RelaunchRequired_RestartTimeOfDay_Hour_placeholder": {
-    "message": "Hour (0 – 23)"
+    "message": "Часы (0…23)"
   },
   "policy_description_RelaunchRequired_RestartTimeOfDay_Minute_placeholder": {
-    "message": "Minute (0 – 59)"
+    "message": "Минуты (0…59)"
   },
   "policy_description_RequestedLocales": {
     "message": "Изменить язык интерфейса Firefox"
@@ -1632,28 +1632,28 @@
     "message": "Показывать кнопку \"Домой\" на панели инструментов"
   },
   "policy_description_SitePolicies": {
-    "message": "Configure website-specific policies"
+    "message": "Настройка политик для конкретных сайтов"
   },
   "policy_description_SitePolicies_DisableJit": {
-    "message": "Disable the JavaScript JIT compiler"
+    "message": "Отключить JIT-компилятор JavaScript"
   },
   "policy_description_SitePolicies_Exceptions": {
-    "message": "Websites excluded from this rule"
+    "message": "Сайты, исключённые из этого правила"
   },
   "policy_description_SitePolicies_label_rules": {
-    "message": "Rules"
+    "message": "Правила"
   },
   "policy_description_SitePolicies_Match": {
-    "message": "Websites this rule applies to"
+    "message": "Сайты, к которым применяется это правило"
   },
   "policy_description_SitePolicies_note": {
-    "message": "Rules are evaluated in order. Leave “Websites this rule applies to” empty to apply the rule to all websites."
+    "message": "Правила рассматриваются по порядку. Оставьте пустым поле \"Сайты, к которым применяется это правило\", чтобы правило применялось ко всем сайтам."
   },
   "policy_description_SitePolicies_Policies": {
-    "message": "Policies applied by this rule"
+    "message": "Политики, применяемые этим правилом"
   },
   "policy_description_SitePolicies_site": {
-    "message": "Domain pattern (for example *.example.com or *)"
+    "message": "Шаблон домена (например, *.example.com или *)"
   },
   "policy_description_SkipTermsOfUse": {
     "message": "Показывать условия использования и уведомление о конфиденциальности при первом запуске Firefox. Если отключить, это будет означать, что условия использования принимаются от имени всех лиц, имеющих доступ к браузеру, и что вы имеете право принимать эти условия от их имени."
@@ -1725,10 +1725,10 @@
     "message": "Разрешить единый вход Windows для учётных записей Microsoft, учётных записей на работе и в учебных заведениях"
   },
   "policy_description_XSLTEnabled": {
-    "message": "Enable or disable XSLT support"
+    "message": "Включить или отключить поддержку XSLT"
   },
   "policy_description_XSLTEnabled_note": {
-    "message": "XSLT support on the web platform is planned for removal. This policy exists to control support during the transition period."
+    "message": "Поддержку XSLT на веб-платформе планируется удалить. Эта политика существует для управления поддержкой в течение переходного периода."
   },
   "promo_box_button": {
     "message": "Пожертвовать"
@@ -1737,7 +1737,7 @@
     "message": "Расширение бесплатное. Ваше добровольное пожертвование позволит мне продолжить интеграцию новых функций и корпоративных политик."
   },
   "rename_configuration_dialog_title": {
-    "message": "Rename configuration"
+    "message": "Переименование конфигурации"
   },
   "requirement_macOS": {
     "message": "Работает только в macOS"
@@ -1755,7 +1755,7 @@
     "message": "Имя"
   },
   "save_dialog_window_title": {
-    "message": "Сохранить конфигурацию"
+    "message": "Сохранение конфигурации"
   },
   "title_add_item": {
     "message": "Добавить элемент"
