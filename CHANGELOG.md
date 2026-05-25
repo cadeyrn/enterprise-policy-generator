@@ -2,6 +2,14 @@
 
 ## Release Notes
 
+### Version 9.1.0 (Work in Progress)
+
+#### Dependencies
+
+- Updated web-ext from version 10.1.0 to 10.2.0
+
+---
+
 ### [Version 9.0.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v8.0.0) (2026-05-17)
 
 #### Enhancements
