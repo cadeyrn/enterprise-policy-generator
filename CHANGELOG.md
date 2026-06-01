@@ -6,6 +6,7 @@
 
 #### Dependencies
 
+- Updated html-eslint/eslint-plugin from version 0.60.0 to 0.61.0
 - Updated web-ext from version 10.1.0 to 10.2.0
 
 ---
