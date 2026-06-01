@@ -26,7 +26,7 @@
     "@sourcemeta/jsonschema": "15.6.3",
     "@stylistic/eslint-plugin": "5.10.0",
     "eslint": "10.4.1",
-    "eslint-plugin-jsdoc": "62.9.0",
+    "eslint-plugin-jsdoc": "63.0.1",
     "eslint-plugin-xss": "0.1.12",
     "stylelint": "17.11.1",
     "stylelint-order": "8.1.1",
