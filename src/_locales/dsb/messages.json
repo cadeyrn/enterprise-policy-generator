@@ -1233,7 +1233,7 @@
     "message": "Cytańske"
   },
   "policy_description_ManagedBookmarks_favicon": {
-    "message": "Favicon-URL"
+    "message": "Favicon URL (Firefox 152+)"
   },
   "policy_description_ManagedBookmarks_folder_name": {
     "message": "Mě zarědnika"
