@@ -8,6 +8,8 @@
 
 - Added `Weather` option to `FirefoxHome` policy to enable or disable the weather widget on the home page, see
   [#407](https://github.com/cadeyrn/enterprise-policy-generator/issues/407)
+- Added `favicon` option to `ManagedBookmarks` policy to set a favicon for your bookmarks, see
+  [#408](https://github.com/cadeyrn/enterprise-policy-generator/issues/408)
 
 #### Dependencies
 

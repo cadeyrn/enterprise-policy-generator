@@ -1232,6 +1232,9 @@
   "policy_description_ManagedBookmarks_bookmarks": {
     "message": "Zapołožki"
   },
+  "policy_description_ManagedBookmarks_favicon": {
+    "message": "Favicon-URL"
+  },
   "policy_description_ManagedBookmarks_folder_name": {
     "message": "Mjeno rjadowaka"
   },

@@ -1079,6 +1079,12 @@
             "schema": "string",
             "placeholder": "common_url",
             "validations": ["required", "url"]
+          },
+          {
+            "name": "favicon",
+            "schema": "string",
+            "placeholder": "policy_description_ManagedBookmarks_favicon",
+            "validations": ["url-or-data"]
           }
         ],
         "additions": {
@@ -1121,6 +1127,12 @@
                         "schema": "string",
                         "placeholder": "common_url",
                         "validations": ["required", "url"]
+                      },
+                      {
+                        "name": "favicon",
+                        "schema": "string",
+                        "placeholder": "policy_description_ManagedBookmarks_favicon",
+                        "validations": ["url-or-data"]
                       }
                     ]
                   }
