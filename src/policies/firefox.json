@@ -365,6 +365,12 @@
           "preset": "boolean_optional"
         },
         {
+          "name": "Weather",
+          "label": "policy_description_FirefoxHome_Weather",
+          "schema": "enum",
+          "preset": "boolean_optional"
+        },
+        {
           "name": "TopSites",
           "label": "policy_description_FirefoxHome_TopSites",
           "schema": "enum",

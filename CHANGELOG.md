@@ -4,6 +4,11 @@
 
 ### Version 9.1.0 (Work in Progress)
 
+#### Enterprise Policies
+
+- Added `Weather` option to `FirefoxHome` policy to enable or disable the weather widget on the home page, see
+  [#407](https://github.com/cadeyrn/enterprise-policy-generator/issues/407)
+
 #### Dependencies
 
 - Updated eslint from version 10.4.0 to 10.4.1

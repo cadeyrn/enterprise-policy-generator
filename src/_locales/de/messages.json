@@ -20,6 +20,9 @@
   "common_dialog_btn_cancel": {
     "message": "Abbrechen"
   },
+  "common_dialog_btn_close": {
+    "message": "Schließen"
+  },
   "common_domain": {
     "message": "Domain"
   },
@@ -48,16 +51,55 @@
     "message": "Konfiguration wurde gelöscht"
   },
   "configuration_import": {
+    "message": "Datei importieren"
+  },
+  "configuration_import_btn_configuration": {
     "message": "Konfiguration importieren"
   },
+  "configuration_import_btn_policies_json": {
+    "message": "Richtlinien importieren"
+  },
   "configuration_import_error": {
-    "message": "Die Konfigurationsdatei konnte nicht importiert werden. Bitte wählen Sie eine gültige .policy-Datei aus."
+    "message": "Die Datei konnte nicht importiert werden. Bitte wählen Sie eine gültige .policy- oder policies.json-Datei aus."
   },
   "configuration_import_file": {
-    "message": "Konfigurationsdatei"
+    "message": "Importdatei"
   },
   "configuration_import_file_help": {
-    "message": "Wählen Sie eine zuvor aus dem Enterprise Policy Generator exportierte .policy-Datei aus. Eine von Firefox verwendete policies.json-Datei kann nicht importiert werden."
+    "message": "Wählen Sie eine aus dem Enterprise Policy Generator exportierte .policy-Datei oder eine von Firefox verwendete policies.json-Datei aus. Der Dateityp wird automatisch erkannt."
+  },
+  "configuration_import_policies_json_report_empty_section": {
+    "message": "Keine Einträge"
+  },
+  "configuration_import_policies_json_report_imported": {
+    "message": "Vollständig übernommen"
+  },
+  "configuration_import_policies_json_report_intro": {
+    "message": "Einige Inhalte konnten nicht unverändert übernommen werden. Der Bericht vergleicht die ausgewählte Datei mit der policies.json-Ausgabe, die aus der importierten gespeicherten Konfiguration erzeugt werden kann."
+  },
+  "configuration_import_policies_json_report_partial": {
+    "message": "Teilweise übernommen"
+  },
+  "configuration_import_policies_json_report_reason_unknown_policy": {
+    "message": "Unbekannte Richtlinie"
+  },
+  "configuration_import_policies_json_report_reason_unsupported_value": {
+    "message": "Konnte nicht durch die aktuellen Formularfelder abgebildet werden"
+  },
+  "configuration_import_policies_json_report_result": {
+    "message": "Erzeugte Ausgabe"
+  },
+  "configuration_import_policies_json_report_skipped": {
+    "message": "Nicht übernommen"
+  },
+  "configuration_import_policies_json_report_source": {
+    "message": "Quelldatei"
+  },
+  "configuration_import_policies_json_report_summary": {
+    "message": "$1 von $2 Richtlinien vollständig übernommen, $3 teilweise übernommen, $4 nicht übernommen."
+  },
+  "configuration_import_policies_json_report_title": {
+    "message": "Importbericht für policies.json"
   },
   "configuration_imported_success": {
     "message": "Konfiguration wurde importiert"
@@ -1027,6 +1069,9 @@
   },
   "policy_description_FirefoxHome_TopSites": {
     "message": "Verknüpfungen anzeigen"
+  },
+  "policy_description_FirefoxHome_Weather": {
+    "message": "Wetter anzeigen (Firefox 152+, Firefox ESR 140.12+)"
   },
   "policy_description_FirefoxSuggest": {
     "message": "Firefox Suggest konfigurieren"

@@ -20,6 +20,9 @@
   "common_dialog_btn_cancel": {
     "message": "取消"
   },
+  "common_dialog_btn_close": {
+    "message": "Close"
+  },
   "common_domain": {
     "message": "域名"
   },
@@ -48,16 +51,55 @@
     "message": "Configuration deleted"
   },
   "configuration_import": {
-    "message": "导入配置"
+    "message": "Import file"
+  },
+  "configuration_import_btn_configuration": {
+    "message": "Import configuration"
+  },
+  "configuration_import_btn_policies_json": {
+    "message": "Import policies"
   },
   "configuration_import_error": {
-    "message": "The configuration file could not be imported. Choose a valid .policy file."
+    "message": "The file could not be imported. Choose a valid .policy or policies.json file."
   },
   "configuration_import_file": {
-    "message": "Configuration file"
+    "message": "File to import"
   },
   "configuration_import_file_help": {
-    "message": "Select a .policy file previously exported from the Enterprise Policy Generator. A policies.json file used by Firefox cannot be imported."
+    "message": "Select a .policy file exported from the Enterprise Policy Generator or a policies.json file used by Firefox. The file type will be detected automatically."
+  },
+  "configuration_import_policies_json_report_empty_section": {
+    "message": "No entries"
+  },
+  "configuration_import_policies_json_report_imported": {
+    "message": "Fully imported"
+  },
+  "configuration_import_policies_json_report_intro": {
+    "message": "Some content could not be imported unchanged. This report compares the selected file with the policies.json output that can be generated from the imported saved configuration."
+  },
+  "configuration_import_policies_json_report_partial": {
+    "message": "Partially imported"
+  },
+  "configuration_import_policies_json_report_reason_unknown_policy": {
+    "message": "Unknown policy"
+  },
+  "configuration_import_policies_json_report_reason_unsupported_value": {
+    "message": "Could not be represented by the current form fields"
+  },
+  "configuration_import_policies_json_report_result": {
+    "message": "Generated output"
+  },
+  "configuration_import_policies_json_report_skipped": {
+    "message": "Not imported"
+  },
+  "configuration_import_policies_json_report_source": {
+    "message": "Source file"
+  },
+  "configuration_import_policies_json_report_summary": {
+    "message": "$1 of $2 policies fully imported, $3 partially imported, $4 not imported."
+  },
+  "configuration_import_policies_json_report_title": {
+    "message": "policies.json import report"
   },
   "configuration_imported_success": {
     "message": "Configuration imported"
@@ -1027,6 +1069,9 @@
   },
   "policy_description_FirefoxHome_TopSites": {
     "message": "Show shortcuts"
+  },
+  "policy_description_FirefoxHome_Weather": {
+    "message": "Show weather (Firefox 152+, Firefox ESR 140.12+)"
   },
   "policy_description_FirefoxSuggest": {
     "message": "Configure Firefox Suggest"
