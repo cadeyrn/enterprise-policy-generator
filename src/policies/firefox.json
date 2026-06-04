@@ -3303,6 +3303,11 @@
       "tags": ["updates-and-data"],
       "schema": "boolean"
     },
+    "DisableRemoteSettingsAndAcceptSecurityConsequences": {
+      "availability": { "mainstream": "153.0", "esr": "153.0" },
+      "tags": ["updates-and-data"],
+      "schema": "boolean"
+    },
     "DisableFirefoxStudies": {
       "availability": { "mainstream": "60.0", "esr": "60.0" },
       "tags": ["updates-and-data"],

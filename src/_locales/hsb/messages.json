@@ -803,6 +803,9 @@
   "policy_description_DisableRemoteImprovements": {
     "message": "Firefox při tym haćić, funkcije, wukon a stabilnosć mjez aktualizacijemi polěpšić"
   },
+  "policy_description_DisableRemoteSettingsAndAcceptSecurityConsequences": {
+    "message": "Prevent Firefox from applying external settings. Warning: Using this policy may have a negative impact on security."
+  },
   "policy_description_DisableSafeMode": {
     "message": "Menijowy zapisk znjemóžnić, zo by so Firefox ze znjemóžnjenymi rozšěrjenjemi znowa startował (modus za rozrisowanje problemow)"
   },

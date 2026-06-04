@@ -803,6 +803,9 @@
   "policy_description_DisableRemoteImprovements": {
     "message": "Firefox daran hindern, Funktionen, Leistung und Stabilität zwischen den Updates zu verbessern"
   },
+  "policy_description_DisableRemoteSettingsAndAcceptSecurityConsequences": {
+    "message": "Firefox daran hindern, externe Einstellungen anzuwenden. Achtung: Die Verwendung dieser Richtlinie kann negative Auswirkungen auf die Sicherheit haben."
+  },
   "policy_description_DisableSafeMode": {
     "message": "Menü-Eintrag deaktivieren, um Firefox mit deaktivierten Erweiterungen neu zu starten (Fehlerbehebungsmodus)"
   },

@@ -803,6 +803,9 @@
   "policy_description_DisableRemoteImprovements": {
     "message": "Prevent Firefox from applying performance, stability, and feature changes between updates"
   },
+  "policy_description_DisableRemoteSettingsAndAcceptSecurityConsequences": {
+    "message": "Prevent Firefox from applying external settings. Warning: Using this policy may have a negative impact on security."
+  },
   "policy_description_DisableSafeMode": {
     "message": "Disable the menu item to restart Firefox with add-ons disabled (troubleshoot mode)"
   },

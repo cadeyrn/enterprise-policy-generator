@@ -803,6 +803,9 @@
   "policy_description_DisableRemoteImprovements": {
     "message": "Запретить Firefox применять изменения производительности, стабильности и функционала между обновлениями"
   },
+  "policy_description_DisableRemoteSettingsAndAcceptSecurityConsequences": {
+    "message": "Prevent Firefox from applying external settings. Warning: Using this policy may have a negative impact on security."
+  },
   "policy_description_DisableSafeMode": {
     "message": "Отключить пункт меню \"Перезапустить без дополнений\" (безопасный режим)"
   },
