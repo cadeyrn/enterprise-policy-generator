@@ -1617,7 +1617,7 @@
     "message": "Encoding (Default: UTF-8)"
   },
   "policy_description_SearchEngines_Add_IconURL": {
-    "message": "Icône URL ou data:image…"
+    "message": "Icône URL ou data:image"
   },
   "policy_description_SearchEngines_Add_Method": {
     "message": "Méthode de demande"

@@ -1617,7 +1617,7 @@
     "message": "Kodierung (Standard: UTF-8)"
   },
   "policy_description_SearchEngines_Add_IconURL": {
-    "message": "Icon-URL oder data:image …"
+    "message": "Icon-URL oder data:image"
   },
   "policy_description_SearchEngines_Add_Method": {
     "message": "Anfrage-Methode"

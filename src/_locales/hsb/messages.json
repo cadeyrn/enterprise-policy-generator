@@ -1617,7 +1617,7 @@
     "message": "Kodowanje (standard: UTF-8)"
   },
   "policy_description_SearchEngines_Add_IconURL": {
-    "message": "Symbolowy URL abo data:image…"
+    "message": "Symbolowy URL abo data:image"
   },
   "policy_description_SearchEngines_Add_Method": {
     "message": "Naprašowanska metoda"
