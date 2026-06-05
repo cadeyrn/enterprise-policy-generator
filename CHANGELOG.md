@@ -12,6 +12,8 @@
   [#407](https://github.com/cadeyrn/enterprise-policy-generator/issues/407)
 - Added `favicon` option to `ManagedBookmarks` policy to set a favicon for your bookmarks, see
   [#408](https://github.com/cadeyrn/enterprise-policy-generator/issues/408)
+- Added support for `javascript:` URIs in `ManagedBookmarks` policy to allow so-called bookmarklets, see
+  [#416](https://github.com/cadeyrn/enterprise-policy-generator/issues/416)
 
 #### Developer Experience
 
