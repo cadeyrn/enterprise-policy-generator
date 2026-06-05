@@ -1080,7 +1080,7 @@
             "schema": "string",
             "placeholder": "common_url",
             "validations": ["required", "url"],
-            "url_schemes": ["file", "http", "https"]
+            "url_schemes": ["file", "http", "https", "javascript"]
           },
           {
             "name": "favicon",
@@ -1130,7 +1130,7 @@
                         "schema": "string",
                         "placeholder": "common_url",
                         "validations": ["required", "url"],
-                        "url_schemes": ["file", "http", "https"]
+                        "url_schemes": ["file", "http", "https", "javascript"]
                       },
                       {
                         "name": "favicon",
