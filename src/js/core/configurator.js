@@ -72,13 +72,6 @@ class Configurator {
         await navigator.clipboard.writeText($source.innerText);
       }
       catch {
-        // select output as fallback action
-        const selection = window.getSelection();
-        const range = document.createRange();
-        range.selectNodeContents($source);
-        selection.removeAllRanges();
-        selection.addRange(range);
-
         return;
       }
 
