@@ -2,8 +2,9 @@ import { spawnSync } from 'node:child_process'
 
 const lintCommands = [
   'lint:html',
-  'lint:js',
   'lint:css',
+  'lint:js',
+  'lint:locales',
   'lint:policies-schema',
   'lint:policies',
   'lint:web-ext'

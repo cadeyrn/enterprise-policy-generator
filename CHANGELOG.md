@@ -21,6 +21,7 @@
 #### Developer Experience
 
 - Improved API for URL fields, see [#417](https://github.com/cadeyrn/enterprise-policy-generator/issues/417)
+- Added a lint script to detect missing translations across locale files
 
 #### Dependencies
 

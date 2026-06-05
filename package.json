@@ -38,6 +38,7 @@
     "lint:css": "stylelint ./src/css/**/*.css",
     "lint:html": "eslint ./src/html/**/*.html",
     "lint:js": "eslint ./src/js/**/*.js ./src/_locales/**/*.json",
+    "lint:locales": "node lint-locales.mjs",
     "lint:policies-schema": "jsonschema lint policies-schema.json --exclude top_level_title --exclude top_level_description --exclude top_level_examples --exclude unnecessary_allof_wrapper",
     "lint:policies": "jsonschema validate policies-schema.json src/policies/*.json",
     "lint:web-ext": "web-ext lint --source-dir ./src",
