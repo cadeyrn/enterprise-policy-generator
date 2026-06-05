@@ -1031,6 +1031,15 @@
   "policy_description_ExtensionSettings_restricted_domains": {
     "message": "Domains, auf denen Content-Scripts nicht ausgeführt werden können"
   },
+  "policy_description_ExtensionSettings_runtime_allowed_hosts": {
+    "message": "Websites, mit denen Erweiterungen trotz Blockierung interagieren dürfen (Firefox 153+)"
+  },
+  "policy_description_ExtensionSettings_runtime_blocked_hosts": {
+    "message": "Websites, mit denen Erweiterungen nicht interagieren und die sie nicht ändern dürfen (Firefox 153+)"
+  },
+  "policy_description_ExtensionSettings_runtime_hosts_placeholder": {
+    "message": "Host-Muster ohne Pfad (z.B. *://*.beispiel.de oder <all_urls>)"
+  },
   "policy_description_ExtensionSettings_temporarily_allow_weak_signatures": {
     "message": "Installation von Erweiterungen mit einem schwachen Signaturalgorithmus zulassen"
   },

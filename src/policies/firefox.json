@@ -805,6 +805,24 @@
                 "value": "navbar"
               }
             ]
+          },
+          {
+            "name": "runtime_allowed_hosts",
+            "label": "policy_description_ExtensionSettings_runtime_allowed_hosts",
+            "schema": "array",
+            "items": {
+              "schema": "string",
+              "placeholder": "policy_description_ExtensionSettings_runtime_hosts_placeholder"
+            }
+          },
+          {
+            "name": "runtime_blocked_hosts",
+            "label": "policy_description_ExtensionSettings_runtime_blocked_hosts",
+            "schema": "array",
+            "items": {
+              "schema": "string",
+              "placeholder": "policy_description_ExtensionSettings_runtime_hosts_placeholder"
+            }
           }
         ],
         "additions": {
@@ -892,6 +910,24 @@
                 "items": {
                   "schema": "string",
                   "placeholder": "common_url"
+                }
+              },
+              {
+                "name": "runtime_allowed_hosts",
+                "label": "policy_description_ExtensionSettings_runtime_allowed_hosts",
+                "schema": "array",
+                "items": {
+                  "schema": "string",
+                  "placeholder": "policy_description_ExtensionSettings_runtime_hosts_placeholder"
+                }
+              },
+              {
+                "name": "runtime_blocked_hosts",
+                "label": "policy_description_ExtensionSettings_runtime_blocked_hosts",
+                "schema": "array",
+                "items": {
+                  "schema": "string",
+                  "placeholder": "policy_description_ExtensionSettings_runtime_hosts_placeholder"
                 }
               }
             ]

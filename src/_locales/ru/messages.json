@@ -1031,6 +1031,15 @@
   "policy_description_ExtensionSettings_restricted_domains": {
     "message": "Домены, для которых запрещено выполнять скрипты"
   },
+  "policy_description_ExtensionSettings_runtime_allowed_hosts": {
+    "message": "Websites that extensions can interact with despite being blocked (Firefox 153+)"
+  },
+  "policy_description_ExtensionSettings_runtime_blocked_hosts": {
+    "message": "Websites that extensions cannot interact with or modify (Firefox 153+)"
+  },
+  "policy_description_ExtensionSettings_runtime_hosts_placeholder": {
+    "message": "Host pattern without path (for example *://*.example.com or <all_urls>)"
+  },
   "policy_description_ExtensionSettings_temporarily_allow_weak_signatures": {
     "message": "Разрешить установку расширений со слабым алгоритмом подписи"
   },

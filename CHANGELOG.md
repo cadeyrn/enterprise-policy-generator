@@ -14,6 +14,9 @@
   [#408](https://github.com/cadeyrn/enterprise-policy-generator/issues/408)
 - Added support for `javascript:` URIs in `ManagedBookmarks` policy to allow so-called bookmarklets, see
   [#416](https://github.com/cadeyrn/enterprise-policy-generator/issues/416)
+- Added `runtime_allowed_hosts` and `runtime_blocked_hosts` options to the `ExtensionSettings` policy to configure which
+  websites extensions can interact with or are prevented from interacting with or modifying, see
+  [#418](https://github.com/cadeyrn/enterprise-policy-generator/issues/418)
 
 #### Developer Experience
 
