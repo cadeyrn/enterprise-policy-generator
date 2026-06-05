@@ -690,7 +690,7 @@ class Configurator {
     const $wrapper = document.createElement('div');
     $wrapper.classList.add('input-wrapper');
 
-    const isUrlType = object.validations?.some(type => ['secure-url', 'url', 'url-or-data'].includes(type));
+    const isUrlType = object.validations?.includes('url');
     const isNumberType = object.validations?.includes('number');
     const type = isUrlType ? 'url' : isNumberType ? 'number' : 'text';
     const validations = [];
@@ -719,13 +719,8 @@ class Configurator {
       Configurator.#addInvalidLabel($wrapper, 'url', 'validation_invalid_url');
       validations.push('url');
 
-      if (object.validations) {
-        if (object.validations.includes('secure-url')) {
-          $input.setAttribute('data-secure', 'true');
-        }
-        else if (object.validations.includes('url-or-data')) {
-          $input.setAttribute('data-data-uri-allowed', 'true');
-        }
+      if (object.url_schemes) {
+        $input.setAttribute('data-url-schemes', object.url_schemes.join(','));
       }
     }
     else if (type === 'number') {
@@ -1353,10 +1348,9 @@ class Configurator {
     }
 
     if (validations.includes('url')) {
-      const dataUriAllowed = $el.getAttribute('data-data-uri-allowed') === 'true';
-      const secure = $el.getAttribute('data-secure') === 'true';
+      const schemes = $el.getAttribute('data-url-schemes')?.split(',') || ['file', 'http', 'https'];
 
-      if (value && !Configurator.#isValidURL(value, secure, dataUriAllowed)) {
+      if (value && !Configurator.#isValidURL(value, schemes)) {
         $parentEl.querySelector('.invalid-input-label[data-type=url]').classList.remove('hidden');
         valid = false;
       }
@@ -1419,26 +1413,27 @@ class Configurator {
    * Validation for an URL field.
    *
    * @param {string} string - the string to check
-   * @param {boolean} secure - whether url must start with https://
-   * @param {boolean} dataUriAllowed - whether data URIs are allowed
+   * @param {Array.<string>} schemes - the allowed URL schemes
    *
    * @returns {boolean} - whether the given string is a valid URL
    */
-  static #isValidURL (string, secure, dataUriAllowed) {
-    let pattern = null;
+  static #isValidURL (string, schemes) {
+    const normalizedString = string.toLowerCase();
+    const schemesRequiringSlashes = ['file', 'http', 'https'];
 
-    if (secure) {
-      return string.toLowerCase().startsWith('https://');
-    }
+    return schemes.some(scheme => {
+      const normalizedScheme = scheme.toLowerCase();
 
-    if (dataUriAllowed) {
-      pattern = new RegExp(/^((https?|file):\/\/|data:image\/)/, 'gi');
-    }
-    else {
-      pattern = new RegExp(/^(https?|file):\/\//, 'gi');
-    }
+      if (normalizedScheme === 'data') {
+        return normalizedString.startsWith('data:image/');
+      }
 
-    return pattern.test(encodeURI(string));
+      if (schemesRequiringSlashes.includes(normalizedScheme)) {
+        return normalizedString.startsWith(`${normalizedScheme}://`);
+      }
+
+      return normalizedString.startsWith(`${normalizedScheme}:`);
+    });
   }
 
   /**

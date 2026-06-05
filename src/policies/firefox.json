@@ -605,7 +605,8 @@
                 "name": "IconURL",
                 "schema": "string",
                 "placeholder": "policy_description_SearchEngines_Add_IconURL",
-                "validations": ["url-or-data"]
+                "validations": ["url"],
+                "url_schemes": ["data", "http", "https"]
               },
               {
                 "name": "Alias",

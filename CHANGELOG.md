@@ -13,6 +13,10 @@
 - Added `favicon` option to `ManagedBookmarks` policy to set a favicon for your bookmarks, see
   [#408](https://github.com/cadeyrn/enterprise-policy-generator/issues/408)
 
+#### Developer Experience
+
+- Improved API for URL fields, see [#417](https://github.com/cadeyrn/enterprise-policy-generator/issues/417)
+
 #### Dependencies
 
 - Updated eslint from version 10.4.0 to 10.4.1

@@ -391,7 +391,15 @@
             "validations": {
               "type": "array",
               "items": {
-                "enum": ["json", "number", "required", "secure-url", "url", "url-or-data"]
+                "enum": ["json", "number", "required", "url"]
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "url_schemes": {
+              "type": "array",
+              "items": {
+                "enum": ["data", "file", "http", "https", "javascript"]
               },
               "minItems": 1,
               "uniqueItems": true
@@ -431,6 +439,16 @@
                 "validations": {
                   "contains": {
                     "const": "number"
+                  }
+                }
+              },
+              "required": ["validations"]
+            },
+            "url_schemes": {
+              "properties": {
+                "validations": {
+                  "contains": {
+                    "const": "url"
                   }
                 }
               },
