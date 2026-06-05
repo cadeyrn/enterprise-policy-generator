@@ -1079,13 +1079,15 @@
             "name": "url",
             "schema": "string",
             "placeholder": "common_url",
-            "validations": ["required", "url"]
+            "validations": ["required", "url"],
+            "url_schemes": ["file", "http", "https"]
           },
           {
             "name": "favicon",
             "schema": "string",
             "placeholder": "policy_description_ManagedBookmarks_favicon",
-            "validations": ["url-or-data"]
+            "validations": ["url"],
+            "url_schemes": ["data", "http", "https"]
           }
         ],
         "additions": {
@@ -1127,13 +1129,15 @@
                         "name": "url",
                         "schema": "string",
                         "placeholder": "common_url",
-                        "validations": ["required", "url"]
+                        "validations": ["required", "url"],
+                        "url_schemes": ["file", "http", "https"]
                       },
                       {
                         "name": "favicon",
                         "schema": "string",
                         "placeholder": "policy_description_ManagedBookmarks_favicon",
-                        "validations": ["url-or-data"]
+                        "validations": ["url"],
+                        "url_schemes": ["data", "http", "https"]
                       }
                     ]
                   }
@@ -1887,7 +1891,8 @@
                       "name": "uriTemplate",
                       "schema": "string",
                       "placeholder": "policy_description_Handlers_property_handlers_uriTemplate",
-                      "validations": ["secure-url"],
+                      "validations": ["url"],
+                      "url_schemes": ["https"],
                       "regex": {
                         "pattern": "%s",
                         "error": "validation_missing_placeholder_s"
@@ -1965,7 +1970,8 @@
                       "name": "uriTemplate",
                       "schema": "string",
                       "placeholder": "policy_description_Handlers_property_handlers_uriTemplate",
-                      "validations": ["secure-url"],
+                      "validations": ["url"],
+                      "url_schemes": ["https"],
                       "regex": {
                         "pattern": "%s",
                         "error": "validation_missing_placeholder_s"
@@ -2043,7 +2049,8 @@
                       "name": "uriTemplate",
                       "schema": "string",
                       "placeholder": "policy_description_Handlers_property_handlers_uriTemplate",
-                      "validations": ["secure-url"],
+                      "validations": ["url"],
+                      "url_schemes": ["https"],
                       "regex": {
                         "pattern": "%s",
                         "error": "validation_missing_placeholder_s"
