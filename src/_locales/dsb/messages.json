@@ -21,7 +21,7 @@
     "message": "Pśetergnuś"
   },
   "common_dialog_btn_close": {
-    "message": "Close"
+    "message": "Zacyniś"
   },
   "common_domain": {
     "message": "Domena"
@@ -51,49 +51,49 @@
     "message": "Konfiguracija jo se wualšowała"
   },
   "configuration_import": {
-    "message": "Import file"
+    "message": "Dataju importěrowaś"
   },
   "configuration_import_error": {
-    "message": "The file could not be imported. Choose a valid .policy or policies.json file."
+    "message": "Dataja njedajo so importěrowaś. Pšosym wubjeŕśo płaśiwu dataju .policy abo policies.json."
   },
   "configuration_import_file": {
-    "message": "File to import"
+    "message": "Importowa dataja"
   },
   "configuration_import_file_help": {
-    "message": "Select a .policy file exported from the Enterprise Policy Generator or a policies.json file used by Firefox. The file type will be detected automatically."
+    "message": "Wubjeŕśo dataju .policy, eksportěrowanu z Enterprise Policy Generator abo dataju policies.json, kótaraž se pśez Firefox wužywa. Datajowy typ se awtomatiski spóznawa."
   },
   "configuration_import_policies_json_report_empty_section": {
-    "message": "No entries"
+    "message": "Žedne zapiski"
   },
   "configuration_import_policies_json_report_imported": {
-    "message": "Fully imported"
+    "message": "Dopołnje pśewzete"
   },
   "configuration_import_policies_json_report_intro": {
-    "message": "Some content could not be imported unchanged. This report compares the selected file with the policies.json output that can be generated from the imported saved configuration."
+    "message": "Někotare wopśimjeśa njejsu dali se bźez změny pśewześ. Rozpšawa wubranu dataju z wudaśim policies.json pśirownujo, kótarež dajo se z importěrowaneje skłaźoneje konfiguracije generěrowaś."
   },
   "configuration_import_policies_json_report_partial": {
-    "message": "Partially imported"
+    "message": "Pó źělach pśewzete"
   },
   "configuration_import_policies_json_report_reason_unknown_policy": {
-    "message": "Unknown policy"
+    "message": "Njeznata směrnica"
   },
   "configuration_import_policies_json_report_reason_unsupported_value": {
-    "message": "Could not be represented by the current form fields"
+    "message": "Njedajo se pśez aktualne formularowe póla zwobrazniś"
   },
   "configuration_import_policies_json_report_result": {
-    "message": "Generated output"
+    "message": "Generěrowane wudaśe"
   },
   "configuration_import_policies_json_report_skipped": {
-    "message": "Not imported"
+    "message": "Njepśewzete"
   },
   "configuration_import_policies_json_report_source": {
-    "message": "Source file"
+    "message": "Žrědłowa dataja"
   },
   "configuration_import_policies_json_report_summary": {
-    "message": "$1 of $2 policies fully imported, $3 partially imported, $4 not imported."
+    "message": "Dopołnje pśewzety: $1 z $2 směrnicow, pó źělach pśewzety: $3, njepśewzety: $4."
   },
   "configuration_import_policies_json_report_title": {
-    "message": "policies.json import report"
+    "message": "Importowa rozpšawa za policies.json"
   },
   "configuration_imported_success": {
     "message": "Konfiguracija jo se importěrowała"
@@ -798,7 +798,7 @@
     "message": "Firefox zawoboraś, funkcije, wugbaśe a stabilnosć mjazy aktualizacijami pólěpšyś"
   },
   "policy_description_DisableRemoteSettingsAndAcceptSecurityConsequences": {
-    "message": "Prevent Firefox from applying external settings"
+    "message": "Firefox zawoboraś, eksterne nastajenja nałožyś"
   },
   "policy_description_DisableSafeMode": {
     "message": "Menijowy zapisk znjemóžniś, aby se Firefox ze znjemóžnjonymi rozšyrjenjemi znowego startował (modus za rozwězowanje problemow)"
@@ -1026,13 +1026,13 @@
     "message": "Domeny, na kótarychž wopśimjeśowe skripty njedaju se wuwjasć"
   },
   "policy_description_ExtensionSettings_runtime_allowed_hosts": {
-    "message": "Websites that extensions can interact with despite being blocked (Firefox 153+)"
+    "message": "Websedła, z kótarymiž rozšyrjenja směju njeglědajucy na blokěrowanje interagěrowaś (Firefox 153+)"
   },
   "policy_description_ExtensionSettings_runtime_blocked_hosts": {
-    "message": "Websites that extensions cannot interact with or modify (Firefox 153+)"
+    "message": "Websedła, z kótarymiž rozšyrjenja njesměju interagěrowaś a kótarež njesměju změniś (Firefox 153+)"
   },
   "policy_description_ExtensionSettings_runtime_hosts_placeholder": {
-    "message": "Host pattern without path (for example *://*.example.com or <all_urls>)"
+    "message": "Hostowy muster bźez sćažki (na pś. *://*.pśikład.de abo <all_urls>)"
   },
   "policy_description_ExtensionSettings_temporarily_allow_weak_signatures": {
     "message": "Instalaciju rozšyrjenjow ze słabym signaturowym algoritmusom dopušćiś"
@@ -1077,7 +1077,7 @@
     "message": "Zwězanja pokazaś"
   },
   "policy_description_FirefoxHome_Weather": {
-    "message": "Show weather (Firefox 152+, Firefox ESR 140.12+)"
+    "message": "Wjedro pokazaś (Firefox 152+, Firefox ESR 140.12+)"
   },
   "policy_description_FirefoxSuggest": {
     "message": "Firefox Suggest konfigurěrowaś"
@@ -1239,7 +1239,7 @@
     "message": "Cytańske"
   },
   "policy_description_ManagedBookmarks_favicon": {
-    "message": "Favicon URL (Firefox 152+)"
+    "message": "Fawikonowy URL (Firefox 152+)"
   },
   "policy_description_ManagedBookmarks_folder_name": {
     "message": "Mě zarědnika"
@@ -1785,7 +1785,7 @@
     "message": "Pódpěra XSLT webplatformy jo za wótwónoźenje pśedwiźona. Toś ta směrnica k tomu słužy, pódpěru za pśechadnu fazu wóźiś."
   },
   "policy_security_warning": {
-    "message": "Enabling this policy can reduce security. Only use the policy if you understand the impact."
+    "message": "Aktiwěrowanje toś teje směrnice móžo wěstotu reducěrowaś. Wužywajśo směrnicu jano, gaž wustatkowanja rozmějośo."
   },
   "promo_box_button": {
     "message": "Něnto pósćiś"
