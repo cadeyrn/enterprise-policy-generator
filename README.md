@@ -33,10 +33,10 @@ Firefox 140 or later.**
 - Get clear confirmation feedback after common actions such as copying, saving, loading, importing, or deleting
 - Search policy names, options, and descriptions, with matching results highlighted
 - Validate fields that require specific values, including URLs, required values
-- Use drag and drop for fields and saved configurations that support reordering
+- Drag and drop for fields and saved configurations that support reordering
 - Get version notices, additional information, links, and security warnings where appropriate
-- Use keyboard shortcuts and accessible controls throughout the interface
-- Use controls for number fields to increase or decrease values without typing
+- Keyboard shortcuts and accessible controls throughout the interface
+- Controls for number fields to increase or decrease values without typing
 
 ### Keyboard shortcuts
 
