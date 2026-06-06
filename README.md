@@ -24,16 +24,19 @@ Firefox 140 or later.**
 
 ### Features
 
-- Configure all enterprise policies via an intuitive user interface
-- Validates fields that require specific values
-- Accessibility has been taken into account
-- Keyboard support
-- Highlights policies that require a newer Firefox version than the current ESR version
-- Shows additional information or links where appropriate
-- Drag and drop for fields that accept multiple values
-- View generated code with syntax highlighting, fullscreen mode, download it as policies.json file, or copy it to the clipboard
-- Save, load, rename, delete, reorder, export, and import configurations
-- A filter field lets you search in policy names, options, and descriptions, with matching results highlighted
+- Configure Firefox enterprise policies via an intuitive user interface
+- Import existing `policies.json` files and continue editing supported policies in Enterprise Policy Generator, with an
+  import report when a file cannot be fully converted
+- View generated output with syntax highlighting or fullscreen mode, download it as `policies.json`, or copy it to the
+  clipboard
+- Save, load, rename, delete, reorder, export, and import generator configurations
+- Get clear confirmation feedback after common actions such as copying, saving, loading, importing, or deleting
+- Search policy names, options, and descriptions, with matching results highlighted
+- Validate fields that require specific values, including URLs, required values
+- Use drag and drop for fields and saved configurations that support reordering
+- Get version notices, additional information, links, and security warnings where appropriate
+- Use keyboard shortcuts and accessible controls throughout the interface
+- Use controls for number fields to increase or decrease values without typing
 
 ### Keyboard shortcuts
 
