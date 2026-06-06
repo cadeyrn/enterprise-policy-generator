@@ -1,0 +1,6 @@
+{
+  "policies": {
+    "AllowedDomainsForApps": "example.com,internal.example.org"
+  }
+}
+

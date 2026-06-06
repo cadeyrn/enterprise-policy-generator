@@ -1,0 +1,34 @@
+{
+  "policies": {
+    "Certificates": {
+      "ImportEnterpriseRoots": true
+    },
+    "DNSOverHTTPS": {
+      "Enabled": true,
+      "ExcludedDomains": [
+        "https://intranet.example.com/",
+        "https://internal.example.org/"
+      ],
+      "Fallback": false,
+      "ProviderURL": "https://dns.example.com/dns-query"
+    },
+    "PopupBlocking": {
+      "Allow": [
+        "https://auth.example.com/",
+        "https://payments.example.com/"
+      ],
+      "Default": true,
+      "Locked": true
+    },
+    "SanitizeOnShutdown": {
+      "Cache": true,
+      "Cookies": true,
+      "FormData": true,
+      "History": true,
+      "Locked": false,
+      "Sessions": true,
+      "SiteSettings": false
+    }
+  }
+}
+

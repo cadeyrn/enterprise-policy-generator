@@ -1,0 +1,15 @@
+{
+  "policies": {
+    "3rdparty": {
+      "Extensions": {
+        "addon@example.com": {
+          "enabled": true,
+          "nested": {
+            "answer": 42
+          },
+          "string": "value"
+        }
+      }
+    }
+  }
+}

@@ -36,6 +36,9 @@
 - Improved API for URL fields, see [#417](https://github.com/cadeyrn/enterprise-policy-generator/issues/417)
 - Added a lint script to detect missing translations across locale files, see
   [#419](https://github.com/cadeyrn/enterprise-policy-generator/issues/419)
+- Added automated tests to make sure policies.json imports, saved configurations, and exported .policy files
+  continue to preserve configuration data correctly, see
+  [#412](https://github.com/cadeyrn/enterprise-policy-generator/issues/412)
 
 #### Dependencies
 

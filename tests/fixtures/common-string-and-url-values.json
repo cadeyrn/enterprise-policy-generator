@@ -1,0 +1,16 @@
+{
+  "policies": {
+    "DefaultDownloadDirectory": "D:\\Downloads",
+    "Homepage": {
+      "Additional": [
+        "https://intranet.example.com/",
+        "https://status.example.com/"
+      ],
+      "StartPage": "homepage",
+      "URL": "https://www.example.com/"
+    },
+    "OverrideFirstRunPage": "",
+    "OverridePostUpdatePage": ""
+  }
+}
+

@@ -1,0 +1,27 @@
+{
+  "policies": {
+    "SitePolicies": [
+      {
+        "Exceptions": [
+          "https://trusted.example.com"
+        ],
+        "Match": [
+          "https://*.example.com",
+          "https://internal.example.org"
+        ],
+        "Policies": {
+          "DisableJit": true
+        }
+      },
+      {
+        "Match": [
+          "https://legacy.example.net"
+        ],
+        "Policies": {
+          "DisableJit": false
+        }
+      }
+    ]
+  }
+}
+

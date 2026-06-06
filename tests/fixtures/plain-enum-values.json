@@ -1,0 +1,8 @@
+{
+  "policies": {
+    "SSLVersionMax": "tls1.3",
+    "SSLVersionMin": "tls1.2",
+    "SearchBar": "separate"
+  }
+}
+

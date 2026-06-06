@@ -1,0 +1,15 @@
+{
+  "policies": {
+    "ContentAnalysis": {
+      "AgentName": "Example DLP Agent",
+      "AgentTimeout": 120,
+      "AllowUrlRegexList": "https://allowed.example.com/ https://trusted.example.org/",
+      "DefaultResult": 1,
+      "DenyUrlRegexList": "https://blocked.example.com/ https://malware.example.org/",
+      "Enabled": true,
+      "MaxConnectionsCount": 12,
+      "ShowBlockedResult": true
+    },
+    "OverrideFirstRunPage": "https://welcome.example.com/|https://docs.example.com/"
+  }
+}

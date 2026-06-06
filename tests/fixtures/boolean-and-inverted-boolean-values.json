@@ -1,0 +1,11 @@
+{
+  "policies": {
+    "AllowFileSelectionDialogs": false,
+    "DisableFeedbackCommands": true,
+    "DisableFirefoxStudies": true,
+    "DisableTelemetry": true,
+    "HardwareAcceleration": false,
+    "IPProtectionAvailable": false
+  }
+}
+

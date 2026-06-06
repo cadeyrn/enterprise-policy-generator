@@ -1,0 +1,23 @@
+{
+  "input": {
+    "policies": {
+      "DefaultDownloadDirectory": "D:\\DefaultDownloads",
+      "DownloadDirectory": "D:\\ManagedDownloads"
+    }
+  },
+  "expected": {
+    "imported": [],
+    "partial": [],
+    "skipped": [
+      {
+        "name": "DefaultDownloadDirectory",
+        "reason": "configuration_import_policies_json_report_reason_unsupported_value"
+      },
+      {
+        "name": "DownloadDirectory",
+        "reason": "configuration_import_policies_json_report_reason_unsupported_value"
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,14 @@
+{
+  "policies": {
+    "WebsiteFilter": {
+      "Block": [
+        "<all_urls>",
+        "*://*.blocked.example/*"
+      ],
+      "Exceptions": [
+        "https://trusted.example.com/*"
+      ]
+    }
+  }
+}
+

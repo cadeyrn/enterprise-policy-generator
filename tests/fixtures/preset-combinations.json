@@ -1,0 +1,23 @@
+{
+  "policies": {
+    "EnableTrackingProtection": {
+      "BaselineExceptions": false,
+      "Category": "strict",
+      "ConvenienceExceptions": true,
+      "Cryptomining": true,
+      "EmailTracking": false,
+      "Exceptions": [
+        "https://tracking-exception.example.com/"
+      ],
+      "Fingerprinting": true,
+      "Locked": true,
+      "SuspectedFingerprinting": false,
+      "Value": true
+    },
+    "PDFjs": {
+      "EnablePermissions": true,
+      "Enabled": false
+    },
+    "PromptForDownloadLocation": false
+  }
+}

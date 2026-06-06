@@ -1,0 +1,49 @@
+{
+  "policies": {
+    "ExtensionSettings": {
+      "*": {
+        "blocked_install_message": "This add-on can not be installed. Please ask your administrator.",
+        "installation_mode": "blocked",
+        "runtime_allowed_hosts": [
+          "*://allowed.example"
+        ],
+        "runtime_blocked_hosts": [
+          "<all_urls>"
+        ]
+      },
+      "addon@example.com": {
+        "install_url": "https://example.com/addon/latest.xpi",
+        "installation_mode": "force_installed",
+        "runtime_allowed_hosts": [
+          "*://allowed.blocked.example"
+        ],
+        "runtime_blocked_hosts": [
+          "*://*.blocked.example"
+        ],
+        "updates_disabled": true
+      },
+      "{12345678-1234-1234-1234-123456789abc}": {
+        "blocked_install_message": "Only managed installations are allowed.",
+        "install_url": "https://example.com/managed/latest.xpi",
+        "installation_mode": "normal_installed"
+      }
+    },
+    "Preferences": {
+      "browser.search.update": {
+        "Status": "locked",
+        "Type": "boolean",
+        "Value": false
+      },
+      "dom.disable_window_move_resize": {
+        "Status": "locked",
+        "Type": "boolean",
+        "Value": true
+      },
+      "media.gmp-gmpopenh264.enabled": {
+        "Status": "default",
+        "Type": "boolean",
+        "Value": true
+      }
+    }
+  }
+}

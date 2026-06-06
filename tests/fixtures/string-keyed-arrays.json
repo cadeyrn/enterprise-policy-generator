@@ -1,0 +1,12 @@
+{
+  "policies": {
+    "SecurityDevices": {
+      "Add": {
+        "Example PKCS#11 Module": "/Library/Example/libexample-pkcs11.dylib"
+      },
+      "Delete": [
+        "Legacy PKCS#11 Module"
+      ]
+    }
+  }
+}

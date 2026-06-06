@@ -1,0 +1,9 @@
+{
+  "policies": {
+    "DisabledCiphers": {
+      "TLS_AES_128_GCM_SHA256": false,
+      "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256": false,
+      "TLS_RSA_WITH_3DES_EDE_CBC_SHA": true
+    }
+  }
+}

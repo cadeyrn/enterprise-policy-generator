@@ -1,0 +1,33 @@
+{
+  "policies": {
+    "SearchEngines": {
+      "Add": [
+        {
+          "Alias": "@docs",
+          "Description": "Example documentation search",
+          "IconURL": "https://example.com/favicon.ico",
+          "Method": "GET",
+          "Name": "Example Docs",
+          "SuggestURLTemplate": "https://example.com/suggest?q={searchTerms}",
+          "URLTemplate": "https://example.com/search?q={searchTerms}"
+        },
+        {
+          "Alias": "@private",
+          "Description": "Private search",
+          "IconURL": "data:image/png;base64,iVBORw0KGgo=",
+          "Method": "GET",
+          "Name": "Private Search",
+          "URLTemplate": "https://search.example.com/?q={searchTerms}"
+        }
+      ],
+      "Default": "Example Docs",
+      "PreventInstalls": true,
+      "Remove": [
+        "DuckDuckGo",
+        "eBay",
+        "Wikipedia"
+      ]
+    }
+  }
+}
+

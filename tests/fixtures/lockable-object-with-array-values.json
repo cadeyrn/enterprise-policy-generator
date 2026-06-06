@@ -1,0 +1,15 @@
+{
+  "policies": {
+    "LocalNetworkAccess": {
+      "BlockTrackers": true,
+      "EnablePrompting": true,
+      "Enabled": true,
+      "Locked": true,
+      "SkipDomains": [
+        "localhost",
+        "printer.local"
+      ]
+    }
+  }
+}
+

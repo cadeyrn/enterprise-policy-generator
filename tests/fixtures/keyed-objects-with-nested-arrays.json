@@ -1,0 +1,53 @@
+{
+  "policies": {
+    "Handlers": {
+      "extensions": {
+        "epub": {
+          "action": "useHelperApp",
+          "ask": true,
+          "handlers": [
+            {
+              "name": "EPUB Viewer",
+              "uriTemplate": "https://viewer.example.com/open/%s"
+            }
+          ]
+        },
+        "pdf": {
+          "action": "saveToDisk",
+          "ask": false,
+          "handlers": [
+            {}
+          ]
+        }
+      },
+      "mimeTypes": {
+        "application/pdf": {
+          "action": "useHelperApp",
+          "ask": false,
+          "handlers": [
+            {
+              "name": "PDF Viewer",
+              "path": "/usr/local/bin/pdf-viewer"
+            },
+            {
+              "name": "Web Viewer",
+              "uriTemplate": "https://viewer.example.com/?url=%s"
+            }
+          ]
+        }
+      },
+      "schemes": {
+        "mailto": {
+          "action": "useSystemDefault",
+          "ask": true,
+          "handlers": [
+            {
+              "name": "Webmail",
+              "uriTemplate": "https://mail.example.com/?to=%s"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

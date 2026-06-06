@@ -1,0 +1,165 @@
+{
+  "policies": {
+    "Certificates": {
+      "ImportEnterpriseRoots": true
+    },
+    "DNSOverHTTPS": {
+      "Enabled": true
+    },
+    "DefaultDownloadDirectory": "D:\\Downloads",
+    "DisableAppUpdate": true,
+    "DisableFeedbackCommands": true,
+    "DisableFirefoxStudies": true,
+    "DisableProfileImport": true,
+    "DisableSystemAddonUpdate": true,
+    "DisableTelemetry": true,
+    "DontCheckDefaultBrowser": true,
+    "EnableTrackingProtection": {
+      "Cryptomining": true,
+      "Fingerprinting": true,
+      "Value": true
+    },
+    "ExtensionSettings": {
+      "*": {
+        "blocked_install_message": "This add-on can not be installed. Please ask your administrator.",
+        "installation_mode": "blocked"
+      },
+      "amazon@search.mozilla.org": {
+        "installation_mode": "blocked"
+      },
+      "enterprise-policy-generator@agenedia.com": {
+        "blocked_install_message": "This add-on can not be installed. Please ask your administrator.",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/enterprise-policy-generator/latest.xpi",
+        "installation_mode": "normal_installed"
+      },
+      "idcac-pub@guus.ninja": {
+        "blocked_install_message": "This add-on can not be installed. Please ask your administrator.",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/istilldontcareaboutcookies/latest.xpi",
+        "installation_mode": "normal_installed"
+      },
+      "printedit-we@DW-dev": {
+        "blocked_install_message": "This add-on can not be installed. Please ask your administrator.",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/print-edit-we/latest.xpi",
+        "installation_mode": "normal_installed"
+      },
+      "uBlock0@raymondhill.net": {
+        "blocked_install_message": "This add-on can not be installed. Please ask your administrator.",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi",
+        "installation_mode": "normal_installed"
+      },
+      "{0d20e3ac-ee5b-4db9-bd3f-8ed745f569a7}": {
+        "blocked_install_message": "This add-on can not be installed. Please ask your administrator.",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/view-image-context-menu-item/latest.xpi",
+        "installation_mode": "normal_installed"
+      },
+      "{bd97f89b-17ba-4539-9fec-06852d07f917}": {
+        "blocked_install_message": "This add-on can not be installed. Please ask your administrator.",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/checkmarks-web-ext/latest.xpi",
+        "installation_mode": "normal_installed"
+      }
+    },
+    "ExtensionUpdate": true,
+    "FirefoxHome": {
+      "Highlights": false,
+      "Pocket": false,
+      "Search": true,
+      "TopSites": false
+    },
+    "Homepage": {
+      "StartPage": "homepage",
+      "URL": "https://www.google.com/#cns=0"
+    },
+    "NoDefaultBookmarks": true,
+    "OfferToSaveLoginsDefault": false,
+    "OverrideFirstRunPage": "",
+    "OverridePostUpdatePage": "",
+    "PopupBlocking": {
+      "Default": true,
+      "Locked": true
+    },
+    "Preferences": {
+      "browser.search.update": {
+        "Status": "locked",
+        "Type": "boolean",
+        "Value": false
+      },
+      "dom.disable_window_flip": {
+        "Status": "locked",
+        "Type": "boolean",
+        "Value": true
+      },
+      "dom.disable_window_move_resize": {
+        "Status": "locked",
+        "Type": "boolean",
+        "Value": true
+      },
+      "dom.event.contextmenu.enabled": {
+        "Status": "locked",
+        "Type": "boolean",
+        "Value": false
+      },
+      "media.gmp-gmpopenh264.enabled": {
+        "Status": "locked",
+        "Type": "boolean",
+        "Value": true
+      }
+    },
+    "PrimaryPassword": false,
+    "PromptForDownloadLocation": false,
+    "SSLVersionMax": "tls1.3",
+    "SSLVersionMin": "tls1",
+    "SanitizeOnShutdown": {
+      "Cache": true,
+      "Cookies": true,
+      "FormData": true,
+      "History": true,
+      "Locked": false,
+      "Sessions": true,
+      "SiteSettings": false
+    },
+    "SearchBar": "separate",
+    "SearchEngines": {
+      "Add": [
+        {
+          "Alias": "@wikipediade",
+          "Description": "Wikipedia, die freie Enzyklopädie",
+          "IconURL": "https://de.wikipedia.org/favicon.ico",
+          "Method": "GET",
+          "Name": "Wikipedia (de)",
+          "SuggestURLTemplate": "https://de.wikipedia.org/w/api.php?action=opensearch&search={searchTerms}",
+          "URLTemplate": "https://de.wikipedia.org/wiki/Special:Search?search={searchTerms}&sourceid=Mozilla-search"
+        },
+        {
+          "Alias": "@wikipedia",
+          "Description": "Wikipedia, the Free Encyclopedia",
+          "IconURL": "https://en.wikipedia.org/favicon.ico",
+          "Method": "GET",
+          "Name": "Wikipedia (en)",
+          "SuggestURLTemplate": "https://en.wikipedia.org/w/api.php?action=opensearch&search={searchTerms}",
+          "URLTemplate": "https://en.wikipedia.org/wiki/Special:Search?search={searchTerms}&sourceid=Mozilla-search"
+        },
+        {
+          "Alias": "@startpage",
+          "Description": "The world's most private search engine",
+          "IconURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADb0lEQVRYhb2VXWgUVxiGv2gtWHrXBqExO2d2z5leWC80ilRKDTHunAPWhEi0gYY2mZkorYm7Z260oCiiFaQ3/RNqG/CvqAheKLSUUgpWqBdCKdbc+XMji4mhmk2MXTdvL9r4U+dsZtasH3x3877v852/IapUuzDHz6HF0/jU1/g10CgEIUq+xoMgxLAf4qIX4ksvj3c6O/FiRa8k1dyMF4IQm/0QV4MQiNkFP4+P+/rw0jOFewN4I9D4PUHwk61xrSePVVWF9+agAo2xqsMfdcnLwU8U7ufQHGhMzkL4dJe9EN3xwrdiga9xq4LZXV/jkK+xsTePZT05LPXzaPvvcBZMOj/EvQ/yWDwzgMZRo4nG0a4+vGrSduYxP9DYF4QoG/QXKoa/349M8O+1ippgb6wlJCIvh25fY8rgs6bS9LuiRJ7GT0SoiwtARORpfG5YhWNGURDifJSoR2NlknAiop5+1Psh7kdczYJR5IcYiRAMJw1/OJDGL1EDdYWGc7R9LyY/+QzlLwYxdfgkcPoscO5H/FYtwMQ9HBmfAMaKwOhfwPBt4GYBuH4ddqQAQBFP1+VqAQCcifADgAaT4HLExyXAfPXM1TSvvTNX6NiQH29bPzC2tr2/uLZ9y/i6joERAHMjJVeGrn79/Q/ncejb09i95yA2fbQHbeu3YsmKjTuTxltc9dqOwv+bOfJno6iRq2ykSKiJVCbbFDc8lWpNM0eORHlZXH5YSVtnO+oPA/mIlVEtMSZfYgt1I8rDFvJWfX3zy5UNMqqFCVU2rESZCXU8lZZvEdHj+1hncXcpE+qg7ci/I8MdBYu78f6KjLv7TSaPYOQ4E3KICfWnLdSdGb935KlY4dMTMaEGZzJN0kzI74hoTiIIW7g7bEeVZg/C/SoJABERNablcsbdC7MFYXEV+6/6JIjIvs2EGmRCFcz7rEYZd0+kuHyPOfKmESLjhlVBTJdlZe1GvibLHPkuE7LLymTVa7Z8nR7b44Xp1sXMUaOG8zBl8WzvM0HEAuXyTebIomElSpaQHTWHaOTStR113wAxmUq7rTWHSHF3AxPqQTSEHGMiu6LmECwjNzEhpwyP1O0UdxfVHoLLbRUeqks1ByAisoQ8YNiK0nMBICKyufzmqbdByHPPDYCI5jIu99lCDTNHFhl3TzQ0rH7lHy2g5RVQKFbLAAAAAElFTkSuQmCC",
+          "Method": "GET",
+          "Name": "StartPage",
+          "SuggestURLTemplate": "https://www.startpage.com/sp/search?query={searchTerms}",
+          "URLTemplate": "https://www.startpage.com/sp/search?query={searchTerms}"
+        }
+      ],
+      "Default": "Google",
+      "PreventInstalls": true,
+      "Remove": [
+        "DuckDuckGo",
+        "DuckDuckGo Lite",
+        "eBay",
+        "LEO Eng-Deu",
+        "Ecosia",
+        "MetaGer",
+        "SearXNG"
+      ]
+    },
+    "TranslateEnabled": false
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "policies": {
+    "Proxy": {
+      "AutoConfigURL": "https://proxy.example.com/proxy.pac",
+      "AutoLogin": true,
+      "HTTPProxy": "proxy.example.com:8080",
+      "Locked": true,
+      "Mode": "autoConfig",
+      "SOCKSVersion": 5,
+      "UseHTTPProxyForAllProtocols": true,
+      "UseProxyForDNS": false
+    }
+  }
+}

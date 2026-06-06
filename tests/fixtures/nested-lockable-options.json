@@ -1,0 +1,16 @@
+{
+  "policies": {
+    "AIControls": {
+      "Default": {
+        "Locked": true,
+        "Value": "blocked"
+      },
+      "PDFAltText": {
+        "Value": "available"
+      },
+      "Translations": {
+        "Value": "available"
+      }
+    }
+  }
+}

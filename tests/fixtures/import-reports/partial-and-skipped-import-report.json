@@ -1,0 +1,37 @@
+{
+  "input": {
+    "policies": {
+      "Homepage": {
+        "StartPage": "homepage",
+        "URL": "https://www.example.com/",
+        "Unsupported": true
+      },
+      "WebsiteFilter": {
+        "Block": [
+          "<all_urls>"
+        ]
+      },
+      "DisableTelemetry": false,
+      "UnknownPolicy": true
+    }
+  },
+  "expected": {
+    "imported": [
+      "WebsiteFilter"
+    ],
+    "partial": [
+      "Homepage"
+    ],
+    "skipped": [
+      {
+        "name": "DisableTelemetry",
+        "reason": "configuration_import_policies_json_report_reason_unsupported_value"
+      },
+      {
+        "name": "UnknownPolicy",
+        "reason": "configuration_import_policies_json_report_reason_unknown_policy"
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,18 @@
+{
+  "policies": {
+    "Containers": {
+      "Default": [
+        {
+          "color": "turquoise",
+          "icon": "fingerprint",
+          "name": "Work"
+        },
+        {
+          "color": "purple",
+          "icon": "briefcase",
+          "name": "Private"
+        }
+      ]
+    }
+  }
+}

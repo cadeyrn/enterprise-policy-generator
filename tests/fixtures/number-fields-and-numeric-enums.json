@@ -1,0 +1,12 @@
+{
+  "policies": {
+    "DefaultSerialGuardSetting": 2,
+    "RelaunchRequired": {
+      "NotificationPeriodHours": 48,
+      "RestartTimeOfDay": {
+        "Hour": 3,
+        "Minute": 30
+      }
+    }
+  }
+}

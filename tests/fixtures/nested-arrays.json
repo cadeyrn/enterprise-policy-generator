@@ -1,0 +1,55 @@
+{
+  "policies": {
+    "Bookmarks": [
+      {
+        "Favicon": "https://example.com/favicon.ico",
+        "Folder": "Company",
+        "Placement": "toolbar",
+        "Title": "Company Portal",
+        "URL": "https://portal.example.com/"
+      },
+      {
+        "Folder": "Company",
+        "Placement": "menu",
+        "Title": "Status",
+        "URL": "https://status.example.com/"
+      },
+      {
+        "Folder": "Company",
+        "Placement": "toolbar",
+        "Title": "Local Help",
+        "URL": "file:///Users/Shared/firefox-help.html"
+      }
+    ],
+    "ManagedBookmarks": [
+      {
+        "toplevel_name": "Managed"
+      },
+      {
+        "name": "Documentation",
+        "url": "https://docs.example.com/"
+      },
+      {
+        "name": "Bookmarklet",
+        "url": "javascript:alert('EPG')"
+      },
+      {
+        "children": [
+          {
+            "name": "Intranet",
+            "url": "https://intranet.example.com/"
+          },
+          {
+            "name": "Local Guide",
+            "url": "file:///Users/Shared/firefox-guide.html"
+          },
+          {
+            "name": "Support",
+            "url": "https://support.example.com/"
+          }
+        ],
+        "name": "Internal"
+      }
+    ]
+  }
+}
