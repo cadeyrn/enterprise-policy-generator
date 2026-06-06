@@ -2,12 +2,13 @@
 
 ## Release Notes
 
-### Version 10.0.0 (Work in Progress)
+### [Version 10.0.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v10.0.0) (2026-06-06)
 
 #### Enhancements
 
 - Enterprise Policy Generator can now import existing policies.json files, making it possible to bring real-world
-  Firefox policy files into the generator and continue editing them there, see
+  Firefox policy files into the generator and continue editing them there. A detailed import report explains which
+  policies were fully imported, partially converted, or skipped when a policies.json file cannot be fully converted, see
   [#413](https://github.com/cadeyrn/enterprise-policy-generator/issues/413)
 - Policies that will reduce security now show a warning in the user interface, see
   [#420](https://github.com/cadeyrn/enterprise-policy-generator/issues/420)
@@ -51,9 +52,12 @@
 - Updated stylelint from version 17.11.1 to 17.13.0
 - Updated web-ext from version 10.1.0 to 10.3.0
 
+  [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v9.0.0...v10.0.0)<br />
+  [Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
+
 ---
 
-### [Version 9.0.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v8.0.0) (2026-05-17)
+### [Version 9.0.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v9.0.0) (2026-05-17)
 
 #### Enhancements
 
@@ -118,7 +122,7 @@
 
 ---
 
-### [Version 8.1.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v8.0.0) (2026-05-02)
+### [Version 8.1.0](https://github.com/cadeyrn/enterprise-policy-generator/releases/tag/v8.1.0) (2026-05-02)
 
 #### Bugfixes
 
