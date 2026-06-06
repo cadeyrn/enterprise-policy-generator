@@ -1,6 +1,6 @@
 'use strict';
 
-/* global DOWNLOAD_PERMISSION, I18n, Migrator, Output, POPOVER_DURATION_IN_MS, Serializer, Sortable */
+/* global DOWNLOAD_PERMISSION, I18n, Migrator, Output, PolicyManager, POPOVER_DURATION_IN_MS, Serializer, Sortable */
 
 const BASE64_BINARY_CHUNK_SIZE = 8192;
 const DIALOG_CLOSE_ANIMATION_DURATION_IN_MS = 300;
@@ -10,6 +10,7 @@ const SCHEMA_VERSION_MIN_SUPPORTED = 2;
 const $configurationTable = document.getElementById('list-configurations-table');
 const $importConfigurationButton = document.getElementById('import-configuration');
 const $importConfigurationDialog = document.getElementById('import-configuration-dialog');
+const $importPoliciesJsonReportDialog = document.getElementById('import-policies-json-report-dialog');
 const $incompatibleConfigurationDialog = document.getElementById('incompatible-configuration-dialog');
 const $listConfigurationsButton = document.getElementById('list-configurations');
 const $listConfigurationDialog = document.getElementById('configuration-list-dialog');
@@ -46,6 +47,7 @@ class Management {
     Management.#setupRenameConfigurationDialog();
     Management.#setupDeleteConfigurationDialog();
     Management.#setupImportConfigurationDialog();
+    Management.#setupImportPoliciesJsonReportDialog();
     Management.#setupIncompatibleConfigurationDialog();
 
     $saveConfigurationButton.addEventListener('click', () => {
@@ -148,6 +150,29 @@ class Management {
       $popover.hidePopover();
       Management.#statusPopoverTimeout = null;
     }, POPOVER_DURATION_IN_MS);
+  }
+
+  /**
+   * Render the generated policies output.
+   *
+   * @returns {object} the generated top-level policies object
+   */
+  static #renderPolicyOutput () {
+    const $policyOutput = document.getElementById('policy-output');
+    let output = null;
+
+    // only supported in Firefox 148+
+    if ('Sanitizer' in window) {
+      const sanitizer = new Sanitizer({ elements: ['span'], attributes: ['class'] });
+      $policyOutput.setHTML(Output.generatePoliciesOutput(true), { sanitizer });
+      output = PolicyManager.getConfiguration();
+    }
+    else {
+      output = Output.generatePoliciesOutput();
+      $policyOutput.textContent = output;
+    }
+
+    return JSON.parse(output).policies;
   }
 
   /**
@@ -275,14 +300,29 @@ class Management {
    */
   static #restoreConfigurationListDialog ($dialog) {
     const shouldRestoreListDialog = $dialog.hasAttribute('data-restore-list-dialog');
+    const shouldRefreshListDialog = !$dialog.hasAttribute('data-skip-list-refresh');
 
     $dialog.removeAttribute('data-restore-list-dialog');
+    $dialog.removeAttribute('data-skip-list-refresh');
 
     if (shouldRestoreListDialog) {
       $listConfigurationDialog.inert = false;
       $listConfigurationDialog.classList.remove('covered-by-subdialog');
-      void Management.#listConfigurations();
+
+      if (shouldRefreshListDialog) {
+        void Management.#listConfigurations();
+      }
     }
+  }
+
+  /**
+   * Show the incompatible configuration dialog after a failed import.
+   *
+   * @returns {void}
+   */
+  static #showIncompatibleConfigurationAfterImport () {
+    Management.previousDialog = $importConfigurationDialog;
+    $incompatibleConfigurationDialog.showModal();
   }
 
   /**
@@ -626,19 +666,9 @@ class Management {
   static async #applyConfiguration (e) {
     const idx = Number(e.currentTarget.getAttribute('data-idx'));
     const { configurations } = await browser.storage.local.get({ configurations: [] });
-    const $policyOutput = document.getElementById('policy-output');
 
     Serializer.unserialize(configurations[idx].configuration);
-
-    // only supported in Firefox 148+
-    if ('Sanitizer' in window) {
-      const sanitizer = new Sanitizer({ elements: ['span'], attributes: ['class'] });
-      $policyOutput.setHTML(Output.generatePoliciesOutput(true), { sanitizer });
-    }
-    else {
-      $policyOutput.textContent = Output.generatePoliciesOutput();
-    }
-
+    Management.#renderPolicyOutput();
     document.getElementById('action-buttons').classList.remove('hidden');
     await Management.#closeDialog($listConfigurationDialog);
     Management.#showStatusPopover(document.getElementById('load-configuration-popover'));
@@ -786,45 +816,125 @@ class Management {
   }
 
   /**
-   * Set up the event listeners for the "import configuration" dialog.
+   * Set up the event listeners for the unified import dialog.
    *
    * @returns {void}
    */
   static #setupImportConfigurationDialog () {
-    const $name = $importConfigurationDialog.querySelector('#import-dialog-name');
+    const importTypeConfiguration = 'configuration';
+    const importTypePoliciesJson = 'policies-json';
     const $fileInput = $importConfigurationDialog.querySelector('#import-file-input');
     const $error = $importConfigurationDialog.querySelector('#import-configuration-error');
     const $submitButton = $importConfigurationDialog.querySelector('#button-import-config-ok');
     const $closeButton = $importConfigurationDialog.querySelector('#button-import-config-cancel');
 
+    const updateFileDescription = () => {
+      const descriptions = ['import-file-help'];
+
+      if (!$error.classList.contains('hidden')) {
+        descriptions.push('import-configuration-error');
+      }
+
+      $fileInput.setAttribute('aria-describedby', descriptions.join(' '));
+    };
+
     const hideImportError = () => {
       $error.classList.add('hidden');
-      $fileInput.setAttribute('aria-describedby', 'import-file-help');
       $fileInput.removeAttribute('aria-invalid');
+      updateFileDescription();
     };
 
     const showImportError = () => {
       $error.classList.remove('hidden');
-      $fileInput.setAttribute('aria-describedby', 'import-file-help import-configuration-error');
       $fileInput.setAttribute('aria-invalid', 'true');
       $fileInput.focus();
+      updateFileDescription();
     };
 
-    const importConfiguration = async () => {
-      if (!$name.value || !$fileInput.value) {
+    const resetImportType = () => {
+      $importConfigurationDialog.removeAttribute('data-import-type');
+    };
+
+    const updateSubmitButton = () => {
+      if ($importConfigurationDialog.hasAttribute('data-import-type') && $fileInput.files[0]) {
+        $submitButton.removeAttribute('disabled');
+      }
+      else {
+        $submitButton.setAttribute('disabled', 'disabled');
+      }
+    };
+
+    const setImportType = type => {
+      $importConfigurationDialog.setAttribute('data-import-type', type);
+
+      updateFileDescription();
+      updateSubmitButton();
+    };
+
+    const detectImportType = async () => {
+      const file = $fileInput.files[0];
+
+      hideImportError();
+      resetImportType();
+      updateSubmitButton();
+
+      if (!file) {
+        return;
+      }
+
+      try {
+        await Management.#readConfigurationFile($fileInput);
+        setImportType(importTypeConfiguration);
+
+        return;
+      }
+      catch {
+        // keep trying the policies.json format
+      }
+
+      try {
+        Management.#getPoliciesJsonPolicies(JSON.parse(await file.text()));
+        setImportType(importTypePoliciesJson);
+      }
+      catch {
+        showImportError();
+      }
+    };
+
+    const importFile = async () => {
+      const importType = $importConfigurationDialog.getAttribute('data-import-type');
+
+      if (!importType || !$fileInput.value) {
         return;
       }
 
       hideImportError();
-      Management.previousDialog = $importConfigurationDialog;
       $submitButton.setAttribute('disabled', 'disabled');
 
       try {
-        const configurationWasImported = await Management.#importConfiguration($name.value, $fileInput);
+        if (importType === importTypeConfiguration) {
+          const configurationWasImported = await Management.#importConfiguration($fileInput);
 
-        if (!configurationWasImported) {
+          if (!configurationWasImported) {
+            await Management.#closeDialog($importConfigurationDialog);
+            Management.#showIncompatibleConfigurationAfterImport();
+
+            return;
+          }
+
           await Management.#closeDialog($importConfigurationDialog);
-          $incompatibleConfigurationDialog.showModal();
+          $listConfigurationDialog.showModal();
+          await Management.#listConfigurations();
+          Management.#showStatusPopover(document.getElementById('import-configuration-popover'));
+
+          return;
+        }
+
+        const report = await Management.#importPoliciesJson($fileInput.files[0]);
+
+        if (report.partial.length > 0 || report.skipped.length > 0) {
+          await Management.#replaceImportDialogWithConfigurationList();
+          Management.#showPoliciesJsonImportReport(report, true);
 
           return;
         }
@@ -836,62 +946,85 @@ class Management {
       }
       catch {
         showImportError();
-        $submitButton.removeAttribute('disabled');
+        updateSubmitButton();
       }
     };
 
     $importConfigurationDialog.addEventListener('close', () => {
-      $importConfigurationDialog.querySelector('#import-dialog-name').value = '';
-      $importConfigurationDialog.querySelector('#import-file-input').value = '';
+      $fileInput.value = '';
       $submitButton.setAttribute('disabled', 'disabled');
+      resetImportType();
       hideImportError();
     });
 
-    const disableSubmitButton = () => {
-      if ($name.value && $fileInput.value) {
-        $submitButton.removeAttribute('disabled');
-      }
-      else {
-        $submitButton.setAttribute('disabled', 'disabled');
-      }
+    const handleFileSelection = () => {
+      void detectImportType();
     };
 
-    // the name and the file input field must not be empty
-    $name.addEventListener('input', disableSubmitButton);
-    $fileInput.addEventListener('input', () => {
-      hideImportError();
-      disableSubmitButton();
-    });
+    $fileInput.addEventListener('input', handleFileSelection);
+    $fileInput.addEventListener('change', handleFileSelection);
 
-    // close the dialog by clicking the cancel button
     $closeButton.addEventListener('click', () => {
       void Management.#closeDialog($importConfigurationDialog);
     });
 
-    // import configuration by pressing Enter, close the dialog by pressing ESC
     window.addEventListener('keydown', e => {
       if ($importConfigurationDialog.open && e.key === 'Enter') {
         e.preventDefault();
 
-        void importConfiguration();
+        void importFile();
       }
     });
 
-    // submit button
     $submitButton.addEventListener('click', () => {
-      void importConfiguration();
+      void importFile();
     });
   }
 
   /**
-   * Import a configuration file.
+   * Set up the event listeners for the "policies.json import report" dialog.
    *
-   * @param {string} name - the name of the configuration
+   * @returns {void}
+   */
+  static #setupImportPoliciesJsonReportDialog () {
+    $importPoliciesJsonReportDialog
+      .querySelector('#button-import-policies-json-report-close')
+      .addEventListener('click', () => {
+        void Management.#closeDialog($importPoliciesJsonReportDialog);
+      });
+
+    $importPoliciesJsonReportDialog.addEventListener('close', () => {
+      Management.#restoreConfigurationListDialog($importPoliciesJsonReportDialog);
+    });
+  }
+
+  /**
+   * Replace the import dialog with the configuration list while keeping the backdrop stable.
+   *
+   * @returns {Promise<void>}
+   */
+  static async #replaceImportDialogWithConfigurationList () {
+    $importConfigurationDialog.classList.add('covered-by-subdialog');
+    $importConfigurationDialog.inert = true;
+    $listConfigurationDialog.classList.add('covered-by-subdialog');
+    $listConfigurationDialog.setAttribute('data-stable-backdrop', '');
+    $listConfigurationDialog.showModal();
+    $listConfigurationDialog.inert = true;
+    await Management.#listConfigurations();
+    $importConfigurationDialog.close();
+    $importConfigurationDialog.inert = false;
+    $importConfigurationDialog.classList.remove('covered-by-subdialog');
+    $listConfigurationDialog.removeAttribute('data-stable-backdrop');
+  }
+
+  /**
+   * Import an exported EPG configuration file.
+   *
    * @param {HTMLInputElement} $localFile - the DOM element of the configuration file input
    *
    * @returns {Promise<boolean>} true if the configuration was imported, otherwise false
    */
-  static async #importConfiguration (name, $localFile) {
+  static async #importConfiguration ($localFile) {
     const data = await Management.#readConfigurationFile($localFile);
 
     // configurations outside the supported schema range cannot be migrated safely
@@ -905,7 +1038,7 @@ class Management {
       schema: data.schema,
       version: data.version,
       product: data.product,
-      name: name,
+      name: data.name ?? $localFile.files[0].name.replace(/\.policy$/i, ''),
       time: new Date(),
       configuration: data.configuration
     };
@@ -916,6 +1049,307 @@ class Management {
     await browser.storage.local.set({ configurations: configurations, schema: SCHEMA_VERSION_CURRENT });
 
     return true;
+  }
+
+  /**
+   * Import a policies.json file as a saved configuration.
+   *
+   * @param {File} file - selected policies.json file
+   *
+   * @returns {Promise<object>} detailed import report
+   */
+  static async #importPoliciesJson (file) {
+    const data = JSON.parse(await file.text());
+    const sourcePolicies = Management.#getPoliciesJsonPolicies(data);
+    const currentConfiguration = Serializer.serialize();
+    let generatedPolicies = {};
+    let importedConfiguration = {};
+
+    try {
+      Serializer.unserializePoliciesJson(sourcePolicies);
+      generatedPolicies = JSON.parse(Output.generatePoliciesOutput()).policies;
+      importedConfiguration = Serializer.serialize();
+    }
+    finally {
+      Serializer.unserialize(currentConfiguration);
+    }
+
+    const { configurations } = await browser.storage.local.get({ configurations: [] });
+
+    configurations.push({
+      schema: SCHEMA_VERSION_CURRENT,
+      version: Migrator.storageVersion,
+      product: 'firefox',
+      name: file.name.replace(/\.json$/i, ''),
+      time: new Date(),
+      configuration: importedConfiguration
+    });
+    await browser.storage.local.set({ configurations: configurations, schema: SCHEMA_VERSION_CURRENT });
+
+    return Management.#createPoliciesJsonImportReport(sourcePolicies, generatedPolicies);
+  }
+
+  /**
+   * Extract the top-level policies object from a parsed policies.json file.
+   *
+   * @param {object} data - parsed policies.json data
+   *
+   * @returns {object} top-level policies object
+   * @throws {Error} if no policies object exists
+   */
+  static #getPoliciesJsonPolicies (data) {
+    const policies = data?.policies ?? data;
+
+    if (!policies || typeof policies !== 'object' || Array.isArray(policies)) {
+      throw new Error();
+    }
+
+    return policies;
+  }
+
+  /**
+   * Create a detailed import report by comparing source and generated policies.
+   *
+   * @param {object} sourcePolicies - policies from the selected policies.json file
+   * @param {object} generatedPolicies - policies generated after applying the import
+   *
+   * @returns {object} import report
+   */
+  static #createPoliciesJsonImportReport (sourcePolicies, generatedPolicies) {
+    const report = {
+      imported: [],
+      partial: [],
+      skipped: [],
+      total: Object.keys(sourcePolicies).length
+    };
+
+    for (const [name, sourceValue] of Object.entries(sourcePolicies)) {
+      if (!document.querySelector(`.policy-container[data-name="${CSS.escape(name)}"]`)) {
+        report.skipped.push({
+          name: name,
+          reason: I18n.getMessage('configuration_import_policies_json_report_reason_unknown_policy')
+        });
+      }
+      else if (!Object.hasOwn(generatedPolicies, name)) {
+        report.skipped.push({
+          name: name,
+          reason: I18n.getMessage('configuration_import_policies_json_report_reason_unsupported_value')
+        });
+      }
+      else if (Management.#valuesAreEqual(sourceValue, generatedPolicies[name])) {
+        report.imported.push(name);
+      }
+      else {
+        report.partial.push({
+          name: name,
+          source: sourceValue,
+          result: generatedPolicies[name]
+        });
+      }
+    }
+
+    return report;
+  }
+
+  /**
+   * Show the detailed policies.json import report.
+   *
+   * @param {object} report - import report
+   * @param {boolean} skipListRefresh - whether the configuration list has already been refreshed
+   *
+   * @returns {void}
+   */
+  static #showPoliciesJsonImportReport (report, skipListRefresh = false) {
+    document.getElementById('import-policies-json-report-summary').textContent = I18n.getMessage(
+      'configuration_import_policies_json_report_summary',
+      [
+        report.imported.length.toString(),
+        report.total.toString(),
+        report.partial.length.toString(),
+        report.skipped.length.toString()
+      ]
+    );
+
+    const $details = document.getElementById('import-policies-json-report-details');
+    $details.replaceChildren();
+
+    Management.#addPoliciesJsonImportReportSection(
+      $details, 'configuration_import_policies_json_report_imported', report.imported, Management.#createReportNameEntry
+    );
+    Management.#addPoliciesJsonImportReportSection(
+      $details, 'configuration_import_policies_json_report_partial', report.partial, Management.#createReportPartialEntry
+    );
+    Management.#addPoliciesJsonImportReportSection(
+      $details, 'configuration_import_policies_json_report_skipped', report.skipped, Management.#createReportSkippedEntry
+    );
+
+    if ($listConfigurationDialog.open) {
+      if (skipListRefresh) {
+        $importPoliciesJsonReportDialog.setAttribute('data-skip-list-refresh', '');
+      }
+
+      Management.#showDialogOverConfigurationList($importPoliciesJsonReportDialog);
+    }
+    else {
+      $importPoliciesJsonReportDialog.showModal();
+    }
+  }
+
+  /**
+   * Add a section to the policies.json import report.
+   *
+   * @param {HTMLElement} $container - report container
+   * @param {string} headline - headline message key
+   * @param {Array<*>} items - section items
+   * @param {Function} createEntry - callback for creating an entry
+   *
+   * @returns {void}
+   */
+  static #addPoliciesJsonImportReportSection ($container, headline, items, createEntry) {
+    const $section = document.createElement('section');
+    const $headline = document.createElement('h3');
+    const $list = document.createElement('ul');
+
+    $section.classList.add('import-report-section');
+    $headline.textContent = `${I18n.getMessage(headline)} (${items.length})`;
+    $list.classList.add('import-report-list');
+
+    if (items.length > 0) {
+      for (const item of items) {
+        $list.appendChild(createEntry(item));
+      }
+    }
+    else {
+      const $entry = document.createElement('li');
+      $entry.classList.add('import-report-empty');
+      $entry.textContent = I18n.getMessage('configuration_import_policies_json_report_empty_section');
+      $list.appendChild($entry);
+    }
+
+    $section.appendChild($headline);
+    $section.appendChild($list);
+    $container.appendChild($section);
+  }
+
+  /**
+   * Create a report entry that only contains a policy name.
+   *
+   * @param {string} name - policy name
+   *
+   * @returns {HTMLLIElement} report entry
+   */
+  static #createReportNameEntry (name) {
+    const $entry = document.createElement('li');
+    $entry.classList.add('import-report-name-entry');
+    $entry.textContent = name;
+
+    return $entry;
+  }
+
+  /**
+   * Create a report entry for a partially imported policy.
+   *
+   * @param {object} item - report item
+   *
+   * @returns {HTMLLIElement} report entry
+   */
+  static #createReportPartialEntry (item) {
+    const $entry = document.createElement('li');
+    const $details = document.createElement('details');
+    const $summary = document.createElement('summary');
+
+    $details.classList.add('import-report-entry');
+    $summary.textContent = item.name;
+    $details.appendChild($summary);
+    $details.appendChild(Management.#createReportCodeBlock(
+      I18n.getMessage('configuration_import_policies_json_report_source'), item.source
+    ));
+    $details.appendChild(Management.#createReportCodeBlock(
+      I18n.getMessage('configuration_import_policies_json_report_result'), item.result
+    ));
+    $entry.appendChild($details);
+
+    return $entry;
+  }
+
+  /**
+   * Create a report entry for a skipped policy.
+   *
+   * @param {object} item - report item
+   *
+   * @returns {HTMLLIElement} report entry
+   */
+  static #createReportSkippedEntry (item) {
+    const $entry = document.createElement('li');
+    const $name = document.createElement('strong');
+    const $reason = document.createElement('span');
+
+    $entry.classList.add('import-report-skipped-entry');
+    $name.textContent = item.name;
+    $reason.classList.add('import-report-reason');
+    $reason.textContent = item.reason;
+    $entry.appendChild($name);
+    $entry.appendChild($reason);
+
+    return $entry;
+  }
+
+  /**
+   * Create a labeled JSON code block for the import report.
+   *
+   * @param {string} label - block label
+   * @param {any} value - value to render as JSON
+   *
+   * @returns {HTMLDivElement} report code block
+   */
+  static #createReportCodeBlock (label, value) {
+    const $wrapper = document.createElement('div');
+    const $label = document.createElement('div');
+    const $code = document.createElement('pre');
+
+    $wrapper.classList.add('import-report-code-wrapper');
+    $label.classList.add('import-report-code-label');
+    $label.textContent = label;
+    $code.classList.add('import-report-code');
+    $code.textContent = JSON.stringify(value, null, 2);
+    $wrapper.appendChild($label);
+    $wrapper.appendChild($code);
+
+    return $wrapper;
+  }
+
+  /**
+   * Compare two values independent from object key order.
+   *
+   * @param {any} source - source value
+   * @param {any} result - generated value
+   *
+   * @returns {boolean} whether the values are equal
+   */
+  static #valuesAreEqual (source, result) {
+    return JSON.stringify(Management.#normalizeForComparison(source)) ===
+      JSON.stringify(Management.#normalizeForComparison(result));
+  }
+
+  /**
+   * Normalize object keys before values are compared.
+   *
+   * @param {any} value - value to normalize
+   *
+   * @returns {any} normalized value
+   */
+  static #normalizeForComparison (value) {
+    if (Array.isArray(value)) {
+      return value.map(item => Management.#normalizeForComparison(item));
+    }
+
+    if (value && typeof value === 'object') {
+      return Object.fromEntries(
+        Object.keys(value).sort().map(key => [key, Management.#normalizeForComparison(value[key])])
+      );
+    }
+
+    return value;
   }
 
   /**

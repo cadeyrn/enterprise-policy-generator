@@ -2,10 +2,13 @@
 
 ## Release Notes
 
-### Version 9.1.0 (Work in Progress)
+### Version 10.0.0 (Work in Progress)
 
 #### Enhancements
 
+- Enterprise Policy Generator can now import existing policies.json files, making it possible to bring real-world
+  Firefox policy files into the generator and continue editing them there, see
+  [#413](https://github.com/cadeyrn/enterprise-policy-generator/issues/413)
 - Policies that will reduce security now show a warning in the user interface, see
   [#420](https://github.com/cadeyrn/enterprise-policy-generator/issues/420)
 

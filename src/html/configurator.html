@@ -238,13 +238,9 @@
       </header>
       <div class="content">
         <form>
-          <div>
-            <label for="import-dialog-name" data-i18n="save_dialog_form_name"></label>
-            <input type="text" name="import-dialog-name" id="import-dialog-name" autofocus>
-          </div>
           <div class="file-input-wrapper">
             <label for="import-file-input" class="visually-hidden" data-i18n="configuration_import_file"></label>
-            <input type="file" id="import-file-input" accept=".policy" aria-describedby="import-file-help">
+            <input type="file" id="import-file-input" accept=".policy,.json,application/json" aria-describedby="import-file-help" autofocus>
             <div id="import-file-help" class="field-help" data-i18n="configuration_import_file_help"></div>
             <div id="import-configuration-error" class="dialog-error hidden" role="alert" data-i18n="configuration_import_error"></div>
           </div>
@@ -257,6 +253,22 @@
         </button>
         <button type="button" id="button-import-config-ok" class="button primary-action" disabled>
           <span data-i18n="configuration_import"></span>
+        </button>
+      </aside>
+    </dialog>
+    <dialog id="import-policies-json-report-dialog" class="import-report-dialog" aria-labelledby="import-policies-json-report-dialog-header">
+      <header>
+        <div id="import-policies-json-report-dialog-header" data-i18n="configuration_import_policies_json_report_title"></div>
+      </header>
+      <div class="content import-report-content">
+        <p class="import-report-intro" data-i18n="configuration_import_policies_json_report_intro"></p>
+        <p id="import-policies-json-report-summary" class="dialog-error import-report-summary"></p>
+        <div id="import-policies-json-report-details"></div>
+      </div>
+      <aside>
+        <button type="button" id="button-import-policies-json-report-close" class="button secondary-action" autofocus>
+          <span data-i18n="common_dialog_btn_close"></span>
+          <span aria-hidden="true" data-i18n="common_dialog_btn_close"></span>
         </button>
       </aside>
     </dialog>

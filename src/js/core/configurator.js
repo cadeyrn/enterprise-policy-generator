@@ -1131,29 +1131,66 @@ class Configurator {
    */
   static #updateArrayIndices ($wrapper) {
     const $containers = $wrapper.querySelectorAll(':scope > .array-container');
+    const parentName = $containers[0]?.querySelector(':scope > .array-action[data-name]')?.getAttribute('data-name');
 
     $containers.forEach(($container, idx) => {
       const $handleButton = $container.querySelector(':scope > .sortable-handle');
       const label = I18n.getMessage('array_sort_a11y_drag_handle_label', (idx + 1).toString());
       $handleButton.setAttribute('aria-label', label);
 
-      $container.querySelectorAll(':scope > div > [id], :scope > div > div > [id]').forEach($el => {
-        // update the index of the last occurrence
-        $el.id = $el.id.replace(/(_array_)\d+(_)(?!.*\1)/, `$1${idx + 1}$2`);
-      });
+      if (parentName) {
+        const index = (idx + 1).toString();
 
-      // for nested arrays, update the first array index
-      $container.querySelectorAll('.array-container')?.forEach($el => {
-        $el.querySelectorAll(':scope > div > [id], :scope > div > div > [id]').forEach($el => {
-          $el.id = $el.id.replace(/(_array_)\d+(_)/, `$1${idx + 1}$2`);
+        $container.querySelectorAll('[id]').forEach($el => {
+          $el.id = Configurator.#replaceArrayIndex($el.id, parentName, index);
         });
 
-        $el.querySelectorAll(':scope > .array-action[data-name]').forEach($el => {
-          const name = $el.getAttribute('data-name');
-          $el.setAttribute('data-name', name.replace(/(_array_)\d+(_)/, `$1${idx + 1}$2`));
+        $container.querySelectorAll('label[for]').forEach($el => {
+          $el.setAttribute(
+            'for',
+            Configurator.#replaceArrayIndex($el.getAttribute('for'), parentName, index)
+          );
         });
-      });
+
+        $container.querySelectorAll('input[name]').forEach($el => {
+          $el.name = Configurator.#replaceArrayIndex($el.name, parentName, index);
+        });
+
+        $container.querySelectorAll('.array-action[data-name]').forEach($el => {
+          $el.setAttribute(
+            'data-name',
+            Configurator.#replaceArrayIndex($el.getAttribute('data-name'), parentName, index)
+          );
+        });
+      }
     });
+  }
+
+  /**
+   * Replace the array index for a specific array level in a generated DOM identifier.
+   *
+   * @param {string} value - DOM identifier or data-name value
+   * @param {string} parentName - generated name of the array wrapper
+   * @param {string} index - new one-based array index
+   *
+   * @returns {string} - identifier with the array index replaced
+   */
+  static #replaceArrayIndex (value, parentName, index) {
+    const marker = `${parentName}_array_`;
+    const markerStart = value.indexOf(marker);
+
+    if (markerStart === -1) {
+      return value;
+    }
+
+    const indexStart = markerStart + marker.length;
+    const indexEnd = value.indexOf('_', indexStart);
+
+    if (indexEnd === -1) {
+      return value;
+    }
+
+    return value.slice(0, indexStart) + index + value.slice(indexEnd);
   }
 
   /**

@@ -1397,6 +1397,11 @@ dialog {
     transition: none;
   }
 
+  &[data-stable-backdrop]::backdrop {
+    background-color: rgba(33, 37, 42, .62);
+    transition: none;
+  }
+
   header {
     display: flex;
     align-items: center;
@@ -1648,6 +1653,116 @@ dialog.output-fullscreen-dialog {
     min-height: 0;
     padding: 14px;
   }
+}
+
+.import-report-dialog {
+  width: min(760px, calc(100vw - 40px));
+}
+
+.import-report-content {
+  max-height: min(62vh, 620px);
+  overflow: hidden auto;
+}
+
+.import-report-intro {
+  margin-top: 0;
+  line-height: 1.55;
+}
+
+.import-report-summary {
+  margin: 14px 0 0;
+}
+
+.import-report-section {
+  margin-top: 18px;
+
+  h3 {
+    margin: 0 0 8px;
+    color: var(--color-dark-border);
+    font-size: .9rem;
+  }
+}
+
+.import-report-list {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    min-width: 0;
+  }
+}
+
+.import-report-empty {
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+.import-report-entry {
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--color-surface-border);
+  border-radius: var(--border-radius-field);
+  background-color: rgba(255, 255, 255, .72);
+
+  summary {
+    color: var(--color-dark-border);
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+.import-report-name-entry,
+.import-report-skipped-entry {
+  padding: 10px 12px;
+  border: 1px solid var(--color-surface-border);
+  border-radius: var(--border-radius-field);
+  background-color: rgba(255, 255, 255, .72);
+}
+
+.import-report-name-entry {
+  color: var(--color-dark-border);
+  font-weight: 600;
+}
+
+.import-report-reason {
+  display: block;
+  margin-top: 2px;
+  font-size: .813rem;
+  color: var(--color-muted);
+}
+
+.import-report-code-label {
+  margin-top: 12px;
+  color: var(--color-dark-border);
+  font-size: .813rem;
+  font-weight: 600;
+}
+
+.import-report-code-wrapper {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.import-report-code {
+  display: block;
+  box-sizing: border-box;
+  margin: 6px 0 0;
+  padding: 10px 12px;
+  width: 100%;
+  max-width: 100%;
+  max-height: 190px;
+  line-height: 1.45;
+  border: 1px solid var(--color-surface-border);
+  border-radius: var(--border-radius-field);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-size: .813rem;
+  white-space: pre;
+  overflow: auto;
 }
 
 .output-fullscreen-actions {
@@ -1902,8 +2017,6 @@ dialog.output-fullscreen-dialog {
 }
 
 .file-input-wrapper {
-  margin-top: 20px;
-
   input[type='file'] {
     box-sizing: border-box;
     padding: 8px 12px 8px 8px;

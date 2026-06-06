@@ -53,12 +53,6 @@
   "configuration_import": {
     "message": "Import file"
   },
-  "configuration_import_btn_configuration": {
-    "message": "Import configuration"
-  },
-  "configuration_import_btn_policies_json": {
-    "message": "Import policies"
-  },
   "configuration_import_error": {
     "message": "The file could not be imported. Choose a valid .policy or policies.json file."
   },
