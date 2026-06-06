@@ -39,6 +39,7 @@
 - Added automated tests to make sure policies.json imports, saved configurations, and exported .policy files
   continue to preserve configuration data correctly, see
   [#412](https://github.com/cadeyrn/enterprise-policy-generator/issues/412)
+- Added contribution docs, see [#103](https://github.com/cadeyrn/enterprise-policy-generator/issues/103)
 
 #### Dependencies
 

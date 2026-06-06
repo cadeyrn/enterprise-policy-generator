@@ -64,6 +64,12 @@ The add-on is currently available in the following languages:
 You can view the roadmap and request new features in the
 [issues tracker](https://github.com/cadeyrn/enterprise-policy-generator/issues).
 
+### Contributing
+
+Contributions are welcome. If you want to add or change Firefox policies, see the
+[policy documentation](docs/README.md) for details about the structure of `src/policies/firefox.json`, supported schema
+types, validations, localization, and tests.
+
 ### Permissions
 
 Enterprise Policy Generator requires several permissions to work properly.
