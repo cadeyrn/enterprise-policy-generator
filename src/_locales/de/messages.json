@@ -834,7 +834,7 @@
     "message": "Funktion, um eine Grafik als Hintergrundbild zu verwenden, deaktivieren"
   },
   "policy_description_DisableSystemAddonUpdate": {
-    "message": "Firefox an der Installation und am Aktualisieren von System-Erweiterungen hindern"
+    "message": "Firefox an der Installation und Aktualisierung von System-Erweiterungen hindern"
   },
   "policy_description_DisableTelemetry": {
     "message": "Firefox hindern, Daten zu technischen Details und Interaktionen an Mozilla zu senden (Telemetrie)"
