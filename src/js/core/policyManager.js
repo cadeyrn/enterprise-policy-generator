@@ -57,7 +57,7 @@ class PolicyManager {
       const content = match[0];
       let type = null;
 
-      output += configuration.slice(last, index);
+      output += PolicyManager.#escapeHTML(configuration.slice(last, index));
 
       if (groups.delimiter) {
         type = 'delimiter';
@@ -75,13 +75,13 @@ class PolicyManager {
       }
 
       if (type) {
-        output += `<span class="token-${type}">${content}</span>`;
+        output += `<span class="token-${type}">${PolicyManager.#escapeHTML(content)}</span>`;
       }
 
       last = index + content.length;
     }
 
-    output += configuration.slice(last);
+    output += PolicyManager.#escapeHTML(configuration.slice(last));
 
     // add the line numbers
     output = output.split('\n').map(line => `<span class="line">${line}</span>`).join('');
@@ -92,6 +92,20 @@ class PolicyManager {
     $codeContainer.style.setProperty('--line-number-width', `${digits + 1}ch`);
 
     return output;
+  }
+
+  /**
+   * Escapes text before inserting it into the syntax-highlighted HTML output.
+   *
+   * @param {string} text - the text to escape
+   *
+   * @returns {string} - the escaped text
+   */
+  static #escapeHTML (text) {
+    return text
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;');
   }
 
   /**

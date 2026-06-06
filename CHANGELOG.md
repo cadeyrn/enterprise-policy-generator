@@ -9,6 +9,11 @@
 - Policies that will reduce security now show a warning in the user interface, see
   [#420](https://github.com/cadeyrn/enterprise-policy-generator/issues/420)
 
+#### Bugfixes
+
+- The syntax-highlighted policies.json output now correctly preserves values that look like HTML tags, such as
+  `<all_urls>`, see [#421](https://github.com/cadeyrn/enterprise-policy-generator/issues/421)
+
 #### Enterprise Policies
 
 - Added support for the `DisableRemoteSettingsAndAcceptSecurityConsequences` policy to prevent Firefox from applying
