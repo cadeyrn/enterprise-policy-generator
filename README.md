@@ -47,11 +47,6 @@ Fields that allow multiple values can be moved using the keyboard: Press <kbd>Sp
 <kbd>Arrow Up</kbd> and <kbd>Arrow Down</kbd> to move it. Press <kbd>Space</kbd> or <kbd>Enter</kbd> to drop. Press
 <kbd>Escape</kbd> to cancel.
 
-### Roadmap
-
-You can view the roadmap and request new features in the
-[issues tracker](https://github.com/cadeyrn/enterprise-policy-generator/issues).
-
 ### Languages
 
 The add-on is currently available in the following languages:
@@ -63,6 +58,11 @@ The add-on is currently available in the following languages:
 - Russian (Thanks, wvxwxvw and solokot!)
 - Upper Sorbian (Thanks, milupo!)
 - Lower Sorbian (Thanks, milupo!)
+
+### Roadmap
+
+You can view the roadmap and request new features in the
+[issues tracker](https://github.com/cadeyrn/enterprise-policy-generator/issues).
 
 ### Permissions
 
