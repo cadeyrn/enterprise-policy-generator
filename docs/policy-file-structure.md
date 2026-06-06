@@ -48,6 +48,10 @@ Each policy must define at least:
 
 `allowed` contains allowed names or prefixes. `disallowed` contains explicit exceptions.
 
+An entry that ends with `.` matches all preferences below that prefix, but not the prefix itself. For example,
+`browser.` allows `browser.startup.homepage`, but not `browser.` as a preference name. An entry without a trailing `.`
+matches only that exact preference name.
+
 ## `presets`
 
 `presets` defines reusable select options for `enum` fields.
@@ -56,9 +60,18 @@ Each policy must define at least:
 {
   "presets": {
     "boolean_optional": [
-      { "label": "enum_value_no_preference", "value": null },
-      { "label": "enum_value_yes", "value": true },
-      { "label": "enum_value_no", "value": false }
+      {
+        "label": "enum_value_no_preference",
+        "value": null
+      },
+      {
+        "label": "enum_value_yes",
+        "value": true
+      },
+      {
+        "label": "enum_value_no",
+        "value": false
+      }
     ]
   }
 }
