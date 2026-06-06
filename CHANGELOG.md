@@ -27,7 +27,7 @@
 #### Dependencies
 
 - Updated eslint from version 10.4.0 to 10.4.1
-- Updated eslint-plugin-jsdoc from version 62.9.0 to 63.0.1
+- Updated eslint-plugin-jsdoc from version 62.9.0 to 63.0.2
 - Updated eslint/json from version 1.2.0 to 2.0.0
 - Updated html-eslint/eslint-plugin from version 0.60.0 to 0.61.0
 - Updated sourcemeta/jsonschema from version 15.6.2 to 15.8.0
