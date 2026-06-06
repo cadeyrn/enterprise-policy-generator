@@ -372,6 +372,11 @@ class Configurator {
       Configurator.#addInfoText($options, I18n.getMessage(policy.deprecation), 'warning');
     }
 
+    // security warning
+    if (policy.security_warning) {
+      Configurator.#addInfoText($options, I18n.getMessage('policy_security_warning'), 'warning', 'security-warning');
+    }
+
     // additional note
     if (policy.note) {
       Configurator.#addInfoText($options, I18n.getMessage(policy.note), 'warning');
@@ -1245,12 +1250,18 @@ class Configurator {
    * @param {HTMLElement} $container - the DOM element of the container
    * @param {string} message - text content
    * @param {string} icon - icon file name
+   * @param {string} className - additional class name
    *
    * @returns {void}
    */
-  static #addInfoText ($container, message, icon) {
+  static #addInfoText ($container, message, icon, className = '') {
     const $wrapper = document.createElement('div');
     $wrapper.classList.add('info-text');
+
+    if (className) {
+      $wrapper.classList.add(className);
+    }
+
     $container.appendChild($wrapper);
 
     const $image = document.createElement('img');

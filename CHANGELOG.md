@@ -4,6 +4,11 @@
 
 ### Version 9.1.0 (Work in Progress)
 
+#### Enhancements
+
+- Policies that will reduce security now show a warning in the user interface, see
+  [#420](https://github.com/cadeyrn/enterprise-policy-generator/issues/420)
+
 #### Enterprise Policies
 
 - Added support for the `DisableRemoteSettingsAndAcceptSecurityConsequences` policy to prevent Firefox from applying

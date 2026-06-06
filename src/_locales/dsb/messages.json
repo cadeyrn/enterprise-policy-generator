@@ -804,7 +804,7 @@
     "message": "Firefox zawoboraś, funkcije, wugbaśe a stabilnosć mjazy aktualizacijami pólěpšyś"
   },
   "policy_description_DisableRemoteSettingsAndAcceptSecurityConsequences": {
-    "message": "Prevent Firefox from applying external settings. Warning: Using this policy may have a negative impact on security."
+    "message": "Prevent Firefox from applying external settings"
   },
   "policy_description_DisableSafeMode": {
     "message": "Menijowy zapisk znjemóžniś, aby se Firefox ze znjemóžnjonymi rozšyrjenjemi znowego startował (modus za rozwězowanje problemow)"
@@ -1789,6 +1789,9 @@
   },
   "policy_description_XSLTEnabled_note": {
     "message": "Pódpěra XSLT webplatformy jo za wótwónoźenje pśedwiźona. Toś ta směrnica k tomu słužy, pódpěru za pśechadnu fazu wóźiś."
+  },
+  "policy_security_warning": {
+    "message": "Enabling this policy can reduce security. Only use the policy if you understand the impact."
   },
   "promo_box_button": {
     "message": "Něnto pósćiś"

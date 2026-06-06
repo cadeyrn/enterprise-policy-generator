@@ -918,6 +918,12 @@ input, textarea {
   font-size: .8rem;
   color: var(--color-muted);
 
+  &.security-warning {
+    border-color: rgba(215, 0, 34, .24);
+    background-color: rgba(255, 247, 248, .96);
+    color: var(--color-black);
+  }
+
   img {
     position: absolute;
     top: 8px;

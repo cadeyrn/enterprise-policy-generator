@@ -508,6 +508,9 @@
             "note": {
               "type": "string"
             },
+            "security_warning": {
+              "type": "boolean"
+            },
             "link": {
               "type": "string"
             },

@@ -804,7 +804,7 @@
     "message": "Firefox daran hindern, Funktionen, Leistung und Stabilität zwischen den Updates zu verbessern"
   },
   "policy_description_DisableRemoteSettingsAndAcceptSecurityConsequences": {
-    "message": "Firefox daran hindern, externe Einstellungen anzuwenden. Achtung: Die Verwendung dieser Richtlinie kann negative Auswirkungen auf die Sicherheit haben."
+    "message": "Firefox daran hindern, externe Einstellungen anzuwenden"
   },
   "policy_description_DisableSafeMode": {
     "message": "Menü-Eintrag deaktivieren, um Firefox mit deaktivierten Erweiterungen neu zu starten (Fehlerbehebungsmodus)"
@@ -1789,6 +1789,9 @@
   },
   "policy_description_XSLTEnabled_note": {
     "message": "Die XSLT-Unterstützung der Webplattform ist zur Entfernung vorgesehen. Diese Richtlinie dient dazu, die Unterstützung während der Übergangsphase zu steuern."
+  },
+  "policy_security_warning": {
+    "message": "Die Aktivierung dieser Richtlinie kann die Sicherheit reduzieren. Verwenden Sie die Richtlinie nur, wenn Sie die Auswirkungen verstehen."
   },
   "promo_box_button": {
     "message": "Jetzt spenden"

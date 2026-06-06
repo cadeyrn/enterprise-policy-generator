@@ -804,7 +804,7 @@
     "message": "Prevent Firefox from applying performance, stability, and feature changes between updates"
   },
   "policy_description_DisableRemoteSettingsAndAcceptSecurityConsequences": {
-    "message": "Prevent Firefox from applying external settings. Warning: Using this policy may have a negative impact on security."
+    "message": "Prevent Firefox from applying external settings"
   },
   "policy_description_DisableSafeMode": {
     "message": "Désactivez l'option du menu pour redémarrer Firefox avec les add-ons désactivés. (mode sans échec)"
@@ -1789,6 +1789,9 @@
   },
   "policy_description_XSLTEnabled_note": {
     "message": "XSLT support on the web platform is planned for removal. This policy exists to control support during the transition period."
+  },
+  "policy_security_warning": {
+    "message": "Enabling this policy can reduce security. Only use the policy if you understand the impact."
   },
   "promo_box_button": {
     "message": "Donate now"
