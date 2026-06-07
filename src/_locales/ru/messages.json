@@ -21,7 +21,7 @@
     "message": "Отмена"
   },
   "common_dialog_btn_close": {
-    "message": "Close"
+    "message": "Закрыть"
   },
   "common_domain": {
     "message": "Домен"
@@ -51,49 +51,49 @@
     "message": "Конфигурация удалена"
   },
   "configuration_import": {
-    "message": "Import file"
+    "message": "Импортировать файл"
   },
   "configuration_import_error": {
-    "message": "The file could not be imported. Choose a valid .policy or policies.json file."
+    "message": "Невозможно импортировать файл. Выберите правильный файл .policy или policies.json."
   },
   "configuration_import_file": {
-    "message": "File to import"
+    "message": "Файл для импорта"
   },
   "configuration_import_file_help": {
-    "message": "Select a .policy file exported from the Enterprise Policy Generator or a policies.json file used by Firefox. The file type will be detected automatically."
+    "message": "Выберите файл .policy, экспортированный из \"Генератора политик\", или файл policies.json, используемый Firefox. Тип файла будет определён автоматически."
   },
   "configuration_import_policies_json_report_empty_section": {
-    "message": "No entries"
+    "message": "Нет записей"
   },
   "configuration_import_policies_json_report_imported": {
-    "message": "Fully imported"
+    "message": "Импортировано полностью"
   },
   "configuration_import_policies_json_report_intro": {
-    "message": "Some content could not be imported unchanged. This report compares the selected file with the policies.json output that can be generated from the imported saved configuration."
+    "message": "Часть содержимого невозможно импортировать без изменений. В этом отчёте сравнивается выбранный файл с файлом policies.json, который может быть сгенерирован на основе импортированной сохранённой конфигурации."
   },
   "configuration_import_policies_json_report_partial": {
-    "message": "Partially imported"
+    "message": "Импортировано частично"
   },
   "configuration_import_policies_json_report_reason_unknown_policy": {
-    "message": "Unknown policy"
+    "message": "Неизвестная политика"
   },
   "configuration_import_policies_json_report_reason_unsupported_value": {
-    "message": "Could not be represented by the current form fields"
+    "message": "Невозможно представить текущими полями формы"
   },
   "configuration_import_policies_json_report_result": {
-    "message": "Generated output"
+    "message": "Отчёт об импорте"
   },
   "configuration_import_policies_json_report_skipped": {
-    "message": "Not imported"
+    "message": "Не импортировано"
   },
   "configuration_import_policies_json_report_source": {
-    "message": "Source file"
+    "message": "Исходный файл"
   },
   "configuration_import_policies_json_report_summary": {
-    "message": "$1 of $2 policies fully imported, $3 partially imported, $4 not imported."
+    "message": "Полностью импортировано политик: $1 из $2, частично импортировано: $3, не импортировано: $4."
   },
   "configuration_import_policies_json_report_title": {
-    "message": "policies.json import report"
+    "message": "Отчёт об импорте policies.json"
   },
   "configuration_imported_success": {
     "message": "Конфигурация импортирована"
@@ -798,7 +798,7 @@
     "message": "Запретить Firefox применять изменения производительности, стабильности и функционала между обновлениями"
   },
   "policy_description_DisableRemoteSettingsAndAcceptSecurityConsequences": {
-    "message": "Prevent Firefox from applying external settings"
+    "message": "Запретить Firefox применять внешние настройки"
   },
   "policy_description_DisableSafeMode": {
     "message": "Отключить пункт меню \"Перезапустить без дополнений\" (безопасный режим)"
@@ -1026,13 +1026,13 @@
     "message": "Домены, для которых запрещено выполнять скрипты"
   },
   "policy_description_ExtensionSettings_runtime_allowed_hosts": {
-    "message": "Websites that extensions can interact with despite being blocked (Firefox 153+)"
+    "message": "Сайты, с которыми расширения могут взаимодействовать, несмотря на блокировку (Firefox 153+)"
   },
   "policy_description_ExtensionSettings_runtime_blocked_hosts": {
-    "message": "Websites that extensions cannot interact with or modify (Firefox 153+)"
+    "message": "Сайты, с которыми расширения не могут взаимодействовать или изменять (Firefox 153+)"
   },
   "policy_description_ExtensionSettings_runtime_hosts_placeholder": {
-    "message": "Host pattern without path (for example *://*.example.com or <all_urls>)"
+    "message": "Шаблон узла без пути (например, *://*.example.com или <all_urls>)"
   },
   "policy_description_ExtensionSettings_temporarily_allow_weak_signatures": {
     "message": "Разрешить установку расширений со слабым алгоритмом подписи"
@@ -1077,7 +1077,7 @@
     "message": "Показывать ярлыки"
   },
   "policy_description_FirefoxHome_Weather": {
-    "message": "Show weather (Firefox 152+, Firefox ESR 140.12+)"
+    "message": "Показывать погоду (Firefox 152+, Firefox ESR 140.12+)"
   },
   "policy_description_FirefoxSuggest": {
     "message": "Настройка Firefox Suggest"
@@ -1239,7 +1239,7 @@
     "message": "Закладки"
   },
   "policy_description_ManagedBookmarks_favicon": {
-    "message": "Favicon URL (Firefox 152+)"
+    "message": "URL значка (Firefox 152+)"
   },
   "policy_description_ManagedBookmarks_folder_name": {
     "message": "Имя папки"
@@ -1785,7 +1785,7 @@
     "message": "Поддержку XSLT на веб-платформе планируется удалить. Эта политика существует для управления поддержкой в течение переходного периода."
   },
   "policy_security_warning": {
-    "message": "Enabling this policy can reduce security. Only use the policy if you understand the impact."
+    "message": "Включение данной политики может снизить уровень безопасности. Используйте эту политику, только если понимаете последствия."
   },
   "promo_box_button": {
     "message": "Пожертвовать"
