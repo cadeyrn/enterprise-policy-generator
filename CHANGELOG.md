@@ -8,6 +8,7 @@
 
 - Updated html-eslint/eslint-plugin from version 0.61.0 to 0.62.0
 - Updated sourcemeta/jsonschema from version 15.8.0 to 15.10.1
+- Updated web-ext from version 10.3.0 to 10.4.0
 
 ---
 
