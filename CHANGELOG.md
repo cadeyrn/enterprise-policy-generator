@@ -63,8 +63,8 @@
 - Updated stylelint from version 17.11.1 to 17.13.0
 - Updated web-ext from version 10.1.0 to 10.3.0
 
-  [All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v9.0.0...v10.0.0)<br />
-  [Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
+[All Changes](https://github.com/cadeyrn/enterprise-policy-generator/compare/v9.0.0...v10.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/versions/)
 
 ---
 
