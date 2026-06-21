@@ -7,6 +7,7 @@
 #### Dependencies
 
 - Updated eslint from version 10.4.1 to 10.5.0
+- Updated eslint-plugin-jsdoc from version 63.0.2 to 63.0.7
 - Updated html-eslint/eslint-plugin from version 0.61.0 to 0.62.0
 - Updated sourcemeta/jsonschema from version 15.8.0 to 15.11.0
 - Updated web-ext from version 10.3.0 to 10.4.0
