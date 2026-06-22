@@ -1,4 +1,6 @@
 :root {
+  color-scheme: light dark;
+
   --border-radius-box: 6px;
   --border-radius-card: 18px;
   --border-radius-card-large: 22px;
@@ -12,7 +14,7 @@
   --color-blue: rgb(5, 116, 228);
   --color-blue-dark: rgb(0, 87, 191);
   --color-blue-translucent: rgba(5, 116, 228, .1);
-  --color-code-background: rgb(253, 253, 253);
+  --color-code-background: light-dark(rgb(253, 253, 253), rgb(7, 7, 7));
   --color-dark-border: rgb(54, 57, 89);
   --color-focus-border: rgba(5, 116, 228, .55);
   --color-green: rgb(16, 138, 3);
@@ -21,8 +23,8 @@
   --color-red: rgb(215, 0, 34);
   --color-red-dark: rgb(183, 0, 29);
   --color-separator: rgb(210, 210, 210);
-  --color-surface: rgb(250, 253, 255);
-  --color-surface-border: rgba(84, 107, 147, .16);
+  --color-surface: light-dark(rgb(250, 253, 255), rgb(6, 3, 2));
+  --color-surface-border: light-dark(rgba(84, 107, 147, .16), rgba(84, 107, 147, .36));
   --color-token-boolean: rgb(169, 93, 26);
   --color-token-delimiter: rgb(107, 114, 128);
   --color-token-key: rgb(72, 115, 188);
@@ -37,7 +39,7 @@
   --form-section-gap: 15px;
   --layout-card-gap: 16px;
   --shadow-card: 0 10px 22px rgba(41, 52, 79, .05);
-  --shadow-control: 0 8px 18px rgba(41, 52, 79, .05);
+  --shadow-control: 0 8px 18px light-dark(rgba(41, 52, 79, .05), rgba(41, 52, 79, .25));
   --shadow-field: 0 6px 16px rgba(41, 52, 79, .04);
   --shadow-soft: 0 16px 28px rgba(41, 52, 79, .06);
 }
@@ -56,8 +58,8 @@ body {
   height: 100%;
   font-family: Verdana, sans-serif;
   font-size: 1rem;
-  background: var(--color-white);
-  color: var(--color-black);
+  background: light-dark(var(---color-white), var(--color-black));
+  color: light-dark(var(--color-black), var(--color-white));
   overflow: hidden;
 }
 
@@ -191,7 +193,11 @@ input, textarea {
   position: relative;
   height: 82px;
   border-bottom: 1px solid var(--color-surface-border);
-  background-image: linear-gradient(180deg, var(--color-white) 0%, var(--color-surface) 100%);
+  background-image:
+    light-dark(
+      linear-gradient(180deg, var(--color-white) 0%, var(--color-surface) 100%),
+      linear-gradient(180deg, var(--color-black) 0%, var(--color-surface) 100%)
+    );
   transition: height 250ms ease-in-out;
 }
 
@@ -259,10 +265,10 @@ input, textarea {
     width: 100%;
     height: 36px;
     font-size: .875rem;
-    border: 2px solid var(--color-dark-border);
+    border: 2px solid light-dark(var(--color-dark-border), rgb(214, 215, 221));
     border-radius: 25px;
     background: none;
-    color: var(--color-black);
+    color: light-dark(var(--color-black), var(--color-white));
     opacity: 0;
     pointer-events: none;
     transition: opacity ease-in-out 180ms, border-color ease-in-out 250ms;
@@ -318,26 +324,30 @@ input, textarea {
   .filter-icon-search {
     width: 24px;
     height: 24px;
-    fill: currentcolor;
+    fill: light-dark(currentcolor, rgb(214, 215, 221));
     stroke: none;
   }
 
   .close-filter {
     transform: rotate(-90deg) scale(.7);
-    color: var(--color-dark-border);
+    color: light-dark(var(--color-dark-border), rgb(214, 215, 221));
     opacity: 0;
     pointer-events: none;
   }
 }
 
 #main {
+  --background-image-light:
+    radial-gradient(circle at 0 0, rgba(5, 116, 228, .08) 0, rgba(5, 116, 228, 0) 360px),
+    linear-gradient(180deg, rgba(250, 253, 255, .92) 0%, var(--color-white) 340px);
+  --background-image-dark:
+    radial-gradient(circle at 0 0, rgba(5, 116, 228, .08) 0, rgba(5, 116, 228, 0) 360px),
+    linear-gradient(180deg, rgba(0, 3, 5, .92) 0%, var(--color-black) 340px);
   flex: 1 1 auto;
   overflow-y: auto;
   overscroll-behavior: none;
   display: flex;
-  background-image:
-    radial-gradient(circle at 0 0, rgba(5, 116, 228, .08) 0, rgba(5, 116, 228, 0) 360px),
-    linear-gradient(180deg, rgba(250, 253, 255, .92) 0%, var(--color-white) 340px);
+  background-image: light-dark(var(--background-image-light), var(--background-image-dark));
 }
 
 #generator-form, #secondary-section {
@@ -378,7 +388,11 @@ input, textarea {
   height: 64px;
   font-size: .875rem;
   border-top: 1px solid var(--color-surface-border);
-  background-image: linear-gradient(180deg, var(--color-surface) 0%, var(--color-white) 100%);
+  background-image:
+    light-dark(
+      linear-gradient(180deg, var(--color-surface) 0%, var(--color-white) 100%),
+      linear-gradient(180deg, var(--color-surface) 0%, var(--color-dark) 100%)
+    );
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -396,7 +410,7 @@ input, textarea {
     background-repeat: no-repeat;
     background-size: 32px 32px;
     background-position: 0 center;
-    color: var(--color-muted);
+    color: light-dark(var(--color-muted), rgb(238, 239, 241));
     text-decoration: none;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -408,7 +422,7 @@ input, textarea {
 .configuration-panel h2 {
   line-height: 1.35;
   font-size: .95rem;
-  color: var(--color-dark-border);
+  color: light-dark(var(--color-dark-border), var(-color-white));
 }
 
 .options-block-container {
@@ -416,7 +430,10 @@ input, textarea {
   padding: 12px 16px 16px;
   border: 1px solid var(--color-surface-border);
   border-radius: var(--border-radius-card);
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, .98) 0%, rgba(250, 253, 255, .94) 100%);
+  background-image:
+    light-dark(
+      linear-gradient(180deg, rgba(255, 255, 255, .98) 0%, rgba(250, 253, 255, .94) 100%),
+      linear-gradient(180deg, rgba(0, 0, 0, .98) 0%, rgba(6, 3, 2, .94) 100%));
   box-shadow: var(--shadow-soft);
 
   &:not(:has(.policy-container:not(.hidden))) {
@@ -428,6 +445,7 @@ input, textarea {
   }
 
   h3 {
+    color: light-dark(var(--color-black), rgb(238, 239, 241));
     display: flex;
     align-items: center;
     gap: 10px;
@@ -503,20 +521,25 @@ input, textarea {
   padding: var(--policy-container-block-padding) 10px var(--policy-container-block-padding) 40px;
   border: 1px solid transparent;
   border-radius: var(--border-radius-surface);
-  background-color: rgba(255, 255, 255, .78);
+  background-color: light-dark(rgba(255, 255, 255, .78), rgba(30, 29, 36, .58));
+  color: light-dark(var(--color-black), rgb(238, 239, 241));
   transition: border-color ease 220ms, background-color ease 220ms, box-shadow ease 220ms;
 
   &:hover {
     z-index: 1;
     border-color: var(--color-accent-border-soft);
-    background-color: var(--color-white);
+    background-color: light-dark(var(--color-white), rgba(255, 255, 255, .25));
+    background-color: light-dark(var(--color-white), rgba(30, 29, 36, .98));
     box-shadow: 0 10px 22px rgba(41, 52, 79, .07);
   }
 
   &:has(> .policy-checkbox:checked) {
     z-index: 2;
     border-color: var(--color-accent-border);
-    background-image: linear-gradient(135deg, rgba(236, 245, 255, .92) 0%, rgba(250, 253, 255, .96) 100%);
+    background-image: light-dark(
+      linear-gradient(135deg, rgba(236, 245, 255, .92) 0%, rgba(250, 253, 255, .96) 100%),
+      linear-gradient(135deg, rgba(36, 45, 55, .92) 0%, rgba(0, 3, 55, .96) 100%);
+    );
     box-shadow: 0 12px 24px rgba(41, 52, 79, .08);
   }
 
@@ -538,7 +561,7 @@ input, textarea {
     margin: calc(-1 * var(--policy-container-block-padding)) -10px calc(-1 * var(--policy-container-block-padding)) -42px;
     padding: var(--policy-container-block-padding) 36px var(--policy-container-block-padding) 40px;
     line-height: 1.35;
-    color: var(--color-dark-border);
+    color: light-dark(var(--color-dark-border), var(--color-white));
   }
 
   > .options:not(:empty) {
@@ -621,9 +644,9 @@ input, textarea {
     &::before {
       box-sizing: border-box;
       margin-top: 0;
-      border: 2px solid rgba(54, 57, 89, .34);
+      border: 2px solid light-dark(rgba(54, 57, 89, .34), rgba(250, 250, 250, .54));
       border-radius: 6px;
-      background-color: var(--color-white);
+      background-color: light-dark(var(--color-white), var(--color-black));
     }
 
     &::after {
@@ -669,7 +692,7 @@ input, textarea {
       width: 18px;
       height: 18px;
       transform: none;
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .72);
+      box-shadow: inset 0 0 0 1px light-dark(rgba(255, 255, 255, .72), rgba(255, 255, 255, .15));
       transition: border-color ease 180ms, background-image ease 180ms;
     }
 
@@ -738,7 +761,7 @@ input, textarea {
   padding-left: 5px;
   width: 100%;
   font-size: .875rem;
-  color: var(--color-muted);
+  color: light-dark(var(--color-muted), rgb(238, 239, 241));
 
   + select {
     margin-bottom: var(--form-element-gap);
@@ -855,7 +878,7 @@ input, textarea {
   height: 34px;
   border: 1px solid var(--color-surface-border);
   border-radius: var(--border-radius-field);
-  background-color: var(--color-white);
+  background-color: light-dark(var(--color-white), rgba(0, 0, 0, 1));
   box-shadow: var(--shadow-field);
   outline: 2px solid transparent;
   outline-offset: -1px;
@@ -879,7 +902,7 @@ input, textarea {
     width: 32px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-    background-color: var(--color-white);
+    background-color: light-dark(var(--color-white), rgba(0, 0, 0, 1));
     background-image: url('../images/chevron.svg');
     background-size: 12px;
     background-position: center;
@@ -914,9 +937,9 @@ input, textarea {
   width: 100%;
   border: 1px solid var(--color-surface-border);
   border-radius: var(--border-radius-field);
-  background-color: rgba(250, 253, 255, .9);
+  background-color: light-dark(rgba(250, 253, 255, .9), rgba(6, 3, 2, .3));
   font-size: .8rem;
-  color: var(--color-muted);
+  color: light-dark(var(--color-muted), rgb(238, 239, 241));
 
   &.security-warning {
     border-color: rgba(215, 0, 34, .24);
@@ -1153,7 +1176,11 @@ input, textarea {
   padding: 14px;
   border: 1px solid var(--color-surface-border);
   border-radius: var(--border-radius-card-large);
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, .98) 0%, rgba(250, 253, 255, .94) 100%);
+  background-image:
+    light-dark(
+      linear-gradient(180deg, rgba(255, 255, 255, .98) 0%, rgba(250, 253, 255, .94) 100%),
+      linear-gradient(180deg, rgba(0, 0, 0, .98) 0%, rgba(6, 3, 2, .94) 100%)
+    );
   box-shadow: var(--shadow-soft);
 
   > :not(.output-action) {
@@ -1171,7 +1198,11 @@ input, textarea {
   padding: 12px 200px 12px 14px;
   border-bottom: 1px solid var(--color-surface-border);
   border-radius: calc(var(--border-radius-card-large) - 1px) calc(var(--border-radius-card-large) - 1px) 0 0;
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, .96) 0%, rgba(250, 253, 255, .82) 100%);
+  background-image:
+    light-dark(
+      linear-gradient(180deg, rgba(255, 255, 255, .96) 0%, rgba(250, 253, 255, .82) 100%),
+      linear-gradient(180deg, rgba(0, 0, 0, .96) 0%, rgba(6, 3, 2, .18) 100%)
+    );
 }
 
 .policy-output-code {
@@ -1235,7 +1266,7 @@ input, textarea {
   position: relative;
   padding: 12px 0;
   min-height: 88px;
-  border: 1px dashed rgba(84, 107, 147, .32);
+  border: 1px dashed light-dark(rgba(84, 107, 147, .32), rgba(84, 107, 147, .82));
   overflow-x: auto;
 
   &:has(code:not(:empty)) {
@@ -1254,7 +1285,7 @@ input, textarea {
     height: 38px;
     border: 1px solid var(--color-surface-border);
     border-radius: var(--border-radius-surface);
-    background-color: var(--color-white);
+    background-color: light-dark(var(--color-white), rgba(0, 0, 0, 1));
     color: var(--color-token-delimiter);
     font-size: 1.125rem;
     box-shadow: var(--shadow-control);
@@ -1295,7 +1326,7 @@ input, textarea {
   height: 34px;
   border: 1px solid var(--color-surface-border);
   border-radius: var(--border-radius-field);
-  background-color: rgba(255, 255, 255, .92);
+  background-color: light-dark(rgba(255, 255, 255, .92), rgba(30, 29, 36, .92));
   color: var(--color-dark-border);
   box-shadow: var(--shadow-control);
   transition: border-color ease 220ms, background-color ease 220ms, color ease 220ms, box-shadow ease 220ms;
@@ -1315,7 +1346,7 @@ input, textarea {
     width: 18px;
     height: 18px;
     fill: none;
-    stroke: currentcolor;
+    stroke: light-dark(currentcolor, rgb(214, 215, 221));
     stroke-width: 1.6;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -1846,9 +1877,9 @@ dialog.output-fullscreen-dialog {
     box-sizing: border-box;
     padding: 0 12px;
     height: 34px;
-    border: 1px solid var(--color-surface-border);
+    border: 1px solid light-dark(var(--color-surface-border), rgba(84, 107, 147, .82));
     border-radius: var(--border-radius-pill);
-    background-color: var(--color-white);
+    background-color: light-dark(var(--color-white), rgb(0, 0, 0)));
     box-shadow: var(--shadow-control);
     transition: border-color ease 250ms, background-color ease-in-out 250ms, box-shadow ease-in-out 250ms;
 
@@ -1857,7 +1888,7 @@ dialog.output-fullscreen-dialog {
     }
 
     span {
-      color: var(--color-dark-border);
+      color: light-dark(var(--color-dark-border), rgb(234, 235, 238));
       font-size: .813rem;
       font-weight: 500;
     }
@@ -1898,8 +1929,12 @@ dialog.output-fullscreen-dialog {
   margin-top: var(--layout-card-gap);
   border: 1px solid var(--color-surface-border);
   border-radius: var(--border-radius-card);
-  background-image: linear-gradient(135deg, rgba(255, 255, 255, .98) 0%, rgba(240, 250, 244, .86) 100%);
-  color: var(--color-muted);
+  background-image:
+    light-dark(
+      linear-gradient(135deg, rgba(255, 255, 255, .98) 0%, rgba(240, 250, 244, .86) 100%),
+      linear-gradient(135deg, rgba(0, 0, 0, .98) 0%, rgba(20, 25, 24, .86) 100%)
+    );
+  color: light-dark(var(--color-muted), rgb(238, 239, 241));
   font-size: .875rem;
   box-shadow: var(--shadow-card);
   overflow: hidden;
@@ -1914,7 +1949,7 @@ dialog.output-fullscreen-dialog {
     align-items: center;
     gap: 12px;
     padding: 12px 16px;
-    color: var(--color-dark-border);
+    color: light-dark(var(--color-dark-border), rgb(194, 195, 205));
     font-weight: 500;
     list-style: none;
     cursor: pointer;
@@ -1961,10 +1996,15 @@ dialog.output-fullscreen-dialog {
   padding: 14px;
   border: 1px solid var(--color-surface-border);
   border-radius: var(--border-radius-card);
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, .96) 0%, rgba(250, 253, 255, .9) 100%);
+  background-image:
+    light-dark(
+      linear-gradient(180deg, rgba(255, 255, 255, .96) 0%, rgba(250, 253, 255, .9) 100%),
+      linear-gradient(180deg, rgba(0, 0, 0, .96) 0%, rgba(6, 3, 2, .9) 100%)
+    );
   box-shadow: var(--shadow-card);
 
   h2 {
+    color: light-dark(var(--color-black), rgb(238, 239, 241));
     margin: 0 0 14px 1px;
   }
 
@@ -2224,14 +2264,18 @@ dialog.output-fullscreen-dialog {
   padding: 18px 20px;
   border: 1px solid rgba(16, 138, 3, .18);
   border-radius: var(--border-radius-card);
-  background-image: linear-gradient(135deg, rgba(244, 252, 242, .96) 0%, rgba(250, 253, 255, .96) 100%);
+  background-image:
+    light-dark(
+      linear-gradient(135deg, rgba(244, 252, 242, .96) 0%, rgba(250, 253, 255, .96) 100%),
+      linear-gradient(135deg, rgba(44, 52, 42, .16) 0%, rgba(6, 3, 2, .16) 100%)
+    );
   box-shadow: var(--shadow-soft);
   font-size: .9rem;
 
   p {
     margin: 0;
     line-height: 1.6;
-    color: var(--color-muted);
+    color: light-dark(var(--color-muted), rgb(238, 239, 241));
   }
 
   form {
